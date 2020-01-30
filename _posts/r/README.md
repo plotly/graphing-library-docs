@@ -1,11 +1,11 @@
 # Contribute to Plotly's [R Documentation](https://plot.ly/r/)
 ## Initial Steps:
-1. Clone the repo and then check out the source-design-merge branch:
+1. Clone the repo and then check out the master branch:
 
   ```
-  $ git clone git@github.com:plotly/documentation.git
+  $ git clone git@github.com:plotly/graphing-library-docs.git
   $ git fetch origin
-  $ git checkout source-design-merge
+  $ git checkout master
   ```
 
 2. Check Ruby version `$ ruby --version`. We recommend using the same ruby version as gh-pages: https://pages.github.com/versions/. Note [RVM](https://rvm.io/rvm/install) is helpful for installing and managing ruby versions.
@@ -107,7 +107,7 @@
 ##### In the terminal in `documentation`
 4. Make a PR
 
-  - Ready for your changes to be reviewed? Make a pull request against the `source-design-merge` branch!
+  - Ready for your changes to be reviewed? Make a pull request against the `master` branch!
   Create a feature branch and use `git status` to list changed files.
   ```
   git checkout -b your_feature_branch
@@ -120,9 +120,9 @@
   git commit -m 'message about your changes'
   git push origin your_feature_branch
   ```
-  - Visit the [documentation repo](https://github.com/plotly/documentation) and open a pull request against the `source-design-merge` branch. You can then tag **@cldougl** and **@bcdunbar** for a review.
+  - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@cldougl** and **@bcdunbar** for a review.
 
-5. To proof your work follow these steps: https://github.com/plotly/documentation/blob/source-design-merge/Contributing.md#rendering-the-pages-locally
+5. To proof your work follow these steps: https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md#rendering-the-pages-locally
 
 ##### At https://plot.ly/r
 6. Your changes haven't been deployed yet so they won't be online. That said, <b>PLEASE</b> visit https://plot.ly/r/your-tutorial and make sure everything looks correct once they have been deployed by either **@cldougl** or **@bcdunbar**.
@@ -133,6 +133,6 @@
 
 ## Search
 
-We now have search via algolia implemented on our index and reference documentation pages! Please refer to our [make README](https://github.com/plotly/documentation/blob/source-design-merge/make_instructions.txt) for more information on how search works and instructions on how to update or edit Plotly search indices.
+We now have search via algolia implemented on our index and reference documentation pages! Please refer to our [make README](https://github.com/plotly/graphing-library-docs/blob/master/make_instructions.txt) for more information on how search works and instructions on how to update or edit Plotly search indices.
 
 Thanks for contributing to our documentation!!

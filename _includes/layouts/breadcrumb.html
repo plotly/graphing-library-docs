@@ -83,7 +83,7 @@
             <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/plotly.r-docs/edit/master/ggplot2/" }}" >
         {% else %}
             {% assign filename = page.path | split, "/" | last %}
-            <a id="forklink" href= "{{ page.path | remove: filename | prepend: "https://github.com/plotly/documentation/tree/source-design-merge/" }}" >
+            <a id="forklink" href= "{{ page.path | remove: filename | prepend: "https://github.com/plotly/graphing-library-docs/tree/master/" }}" >
         {% endif %}
                 <div class="icon">
                     <svg style="width:24px;height:24px" viewbox="0 0 24 24">

@@ -9,7 +9,7 @@ This repository mainly serves:
 
 - Plotly's JavaScript graphing library documentation at https://plot.ly/javascript
     - Please be aware that **only the content of Plotly's JavaScript graphing library documentation** (hosted at https://plot.ly/javascript) is contained in this repository. You can find the content in the `_posts/plotly_js` directory. 
-    - For information about editing **plotly.js** documentation [click here](https://github.com/plotly/documentation/blob/source-design-merge/_posts/plotly_js/README.md).
+    - For information about editing **plotly.js** documentation [click here](https://github.com/plotly/graphing-library-docs/blob/master_posts/plotly_js/README.md).
 
 - Plotly's Python graphing library documentation at https://plot.ly/python
     - The content for Plotly's Python graphing library documentation (hosted at https://plot.ly/python) **IS NOT** contained in this repository. It is contained in the `plotly.py` repository at https://github.com/plotly/plotly.py/tree/master/doc and is cloned into this repository at build time. 
@@ -35,23 +35,21 @@ For more extensive changes to Ploty's JavaScript documentation, we suggest getti
 
 This involves cloning the repository and installing its dependencies: [Git](https://git-scm.com/), [Ruby]((https://www.ruby-lang.org/en/), [Jekyll](https://jekyllrb.com/), and the [Python `requests` package](https://pypi.org/project/requests/). 
 
-1. Use [`git`](https://git-scm.com/) to [clone](https://git-scm.com/docs/git-clone) the public `plotly/documentation` repository. Then [check out] (https://git-scm.com/docs/git-checkout) the source-design-merge branch of the `git` repository.
+1. Use [`git`](https://git-scm.com/) to [clone](https://git-scm.com/docs/git-clone) the public `plotly/graphing-library-docs` repository. Then [check out] (https://git-scm.com/docs/git-checkout) the master branch of the `git` repository.
 
 To do so, run the following commands in your terminal:
 
 ```sh
-git clone git@github.com:plotly/documentation.git
+git clone git@github.com:plotly/graphing-library-docs.git
 git fetch origin
-git checkout source-design-merge
+git checkout master
 ```
-
-**Note:** For historical reasons, the `source-design-merge` branch is the `master` branch of this repository. 
 
 Running `git status` in your terminal should then output the following:
 
 ```sh
-On branch source-design-merge
-Your branch is up to date with 'origin/source-design-merge'.
+On branch master
+Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
 ```
@@ -62,7 +60,7 @@ nothing to commit, working tree clean
 
 3. Download Jekyll and check your Jekyll version by running the `jekyll -v` command in your terminal. We recommend using the same ruby version as [gh-pages](https://pages.github.com/versions/).
 
-4. Install bundler and dependencies from the Jekyll applicaton's [`Gemfile`](https://github.com/plotly/documentation/blob/source-design-merge/Gemfile) by running the following commands in your terminal:
+4. Install bundler and dependencies from the Jekyll applicaton's [`Gemfile`](https://github.com/plotly/graphing-library-docs/blob/masterGemfile) by running the following commands in your terminal:
 
 ```sh
 gem install bundler
@@ -110,7 +108,7 @@ Whenever a pull request is made, a continuous integration workflow is initiated.
 
 Making sure that a pull request passes every continuous integration test is a part of the code review process. 
 
-**For more information about the build process, inspect the CircleCI configuration file in this repository at https://github.com/plotly/documentation/blob/source-design-merge/.circleci/config.yml.**
+**For more information about the build process, inspect the CircleCI configuration file in this repository at https://github.com/plotly/graphing-library-docs/blob/master.circleci/config.yml.**
 
 ## Other Documentation
 

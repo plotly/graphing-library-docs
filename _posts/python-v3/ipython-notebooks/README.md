@@ -1,11 +1,11 @@
 # Contribute to Plotly's [Python Documentation](https://plot.ly/python/)
 ## Initial Steps:
-1. Clone the repo and then check out the source-design-merge branch:
+1. Clone the repo and then check out the master branch:
 
   ```
-  $ git clone git@github.com:plotly/documentation.git
+  $ git clone git@github.com:plotly/graphing-library-docs.git
   $ git fetch origin
-  $ git checkout source-design-merge
+  $ git checkout master
   ```
 
 2. Check Ruby version `$ ruby --version`. We recommend using `version 2.3.3` or the same ruby version as gh-pages: https://pages.github.com/versions/. Note [RVM](https://rvm.io/rvm/install) is helpful for installing and managing ruby versions.
@@ -108,7 +108,7 @@ Our python tutorials are written in [ipython notebooks](http://ipython.org/noteb
     - 'financial' = https://plot.ly/python/#financial-charts
     - 'maps' = https://plot.ly/python/#maps
     - '3d_charts' = https://plot.ly/python/#3d-charts
-    - See additional options [HERE](https://github.com/plotly/documentation/blob/source-design-merge/_includes/documentation_eg.html#L1)
+    - See additional options [HERE](https://github.com/plotly/graphing-library-docs/blob/master/_includes/documentation_eg.html#L1)
   - `order` defines the order in which the tutorials appear on plot.ly/python. Please take a look at https://plot.ly/python/ and order your tutorial next to similar chart types. <b>Note</b> `order` can be a float.
   - `uses_plotly_offline` is an optional argument, include as `True` if you're creating an offline doc.
 
@@ -116,7 +116,7 @@ Our python tutorials are written in [ipython notebooks](http://ipython.org/noteb
   - There is a button in our side navigation bar of the python docs so users can click the button and see the notebook hosted on plot.ly where they can download it and run it to follow along with the documentation.
   - Use the bubble chart doc: https://plot.ly/python/bubble-charts/ as an example.
   - Here are step by step instructions of how to enable the `Download THIS Notebook` button:
-    1. Copy the notebook from the folder. For example from the [bubble folder](https://github.com/plotly/documentation/tree/source-design-merge/_posts/python/bubble), copy `bubble.ipynb`.
+    1. Copy the notebook from the folder. For example from the [bubble folder](https://github.com/plotly/graphing-library-docs/tree/master/_posts/python/v3/bubble), copy `bubble.ipynb`.
     2. Run `ipython notebook` or `jupyter notebook` and remove the publisher cell from your copy. (The publisher cell is the last cell that we add to our doc notebooks to convert the `.ipynb` to `html`. We do not need to upload this. _Do not remove this cell from the .ipynb in the doc repo_). Save.
     3. Upload the copy to the `notebook_demo` Plotly account.
     4. View the notebook: the link is: https://plot.ly/~notebook_demo/1/new-to-plotly-plotlys-python-library-i/ Grab the username + file id # from the link: `~notebook_demo/1` and add it to the publisher cell in the original .ipynb file in the doc repo. See example publisher cell below.
@@ -133,7 +133,7 @@ Our python tutorials are written in [ipython notebooks](http://ipython.org/noteb
 ##### In the terminal in `documentation`
 9. Make a PR
 
-  - Ready for your changes to be reviewed? Make a pull request against the `source-design-merge` branch!
+  - Ready for your changes to be reviewed? Make a pull request against the `master` branch!
   Create a feature branch and use `git status` to list changed files.
   ```
   git checkout -b your_feature_branch
@@ -146,9 +146,9 @@ Our python tutorials are written in [ipython notebooks](http://ipython.org/noteb
   git commit -m 'message about your changes'
   git push origin your_feature_branch
   ```
-  - Visit the [documentation repo](https://github.com/plotly/documentation) and open a pull request against the `source-design-merge` branch. You can then tag **@cldougl** and **@bcdunbar** for a review.
+  - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@cldougl** and **@bcdunbar** for a review.
 
-10. To proof your work follow these steps: https://github.com/plotly/documentation/blob/source/Contributing.md#rendering-the-pages-locally
+10. To proof your work follow these steps: https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md
 
 ##### At https://plot.ly/python
 11. Your changes haven't been deployed yet so they won't be online. That said, <b>PLEASE</b> visit https://plot.ly/python/your-tutorial and make sure everything looks correct once they have been deployed by either **@cldougl** or **@bcdunbar**.
@@ -160,6 +160,6 @@ Our python tutorials are written in [ipython notebooks](http://ipython.org/noteb
 
 ## Search
 
-We now have search via algolia implemented on our index and reference documentation pages! Please refer to our [make README](https://github.com/plotly/documentation/blob/source-design-merge/make_instructions.txt) for more information on how search works and instructions on how to update or edit Plotly search indices.
+We now have search via algolia implemented on our index and reference documentation pages! Please refer to our [make README](https://github.com/plotly/graphing-library-docs/blob/master/make_instructions.txt) for more information on how search works and instructions on how to update or edit Plotly search indices.
 
 Thanks for contributing to our documentation!!
