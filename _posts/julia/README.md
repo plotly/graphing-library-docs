@@ -4,6 +4,7 @@
 
   ```
   $ git clone git@github.com:plotly/graphing-library-docs.git
+  $ cd graphing-library-docs
   $ git fetch origin
   $ git checkout master
   ```

@@ -4,6 +4,7 @@
 
   ```
   $ git clone git@github.com:plotly/graphing-library-docs.git
+  $ cd graphing-library-docs
   $ git fetch origin
   $ git checkout master
   ```
@@ -91,9 +92,9 @@
 
 
 2. Convert the `.Rmd` file to a `.md` file.
-  - Single `.Rmd` file: convert the `.Rmd` file that you changed to a `.md` file by running: `Rscript -e 'knitr::knit("YOUR_FILE.Rmd")'` in your terminal.
+  - Single `.Rmd` file: convert the `.Rmd` file that you changed to a `.md` file by running: `Rscript -e "rmarkdown::render('YOUR_FILE_.RMD', output_dir='OUTPUT_DIRECTORY')"` in your terminal.
 
-  -Convert all the `.Rmd` files in your current directory: `for (i in dir(pattern = "\\.Rmd")) knitr::knit(i)` Or, in the terminal (`documentation/_posts/r`) with: `Rscript -e 'for (i in dir(pattern = "\\\.Rmd")) knitr::knit(i)'`
+  -Convert all the `.Rmd` files in a given directory:  `for i in R_FILE_PATH/*.Rmd; do Rscript -e "rmarkdown::render('$i', output_dir='OUTPUT_DIRECTORY')"; done` in your terminal.
 
 3. Add Thumbnail Images
   - Thumbnail images should named `your-tutorial-chart.jpg` and be *EXACTLY* 160px X 160px
@@ -120,7 +121,7 @@
   git commit -m 'message about your changes'
   git push origin your_feature_branch
   ```
-  - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@jdamiba** for a review.
+  - Visit the [graphing-library-docs](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@jdamiba** for a review.
 
 5. To proof your work follow these steps: https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md#rendering-the-pages-locally
 

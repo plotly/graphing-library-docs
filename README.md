@@ -41,11 +41,10 @@ To do so, run the following commands in your terminal:
 
 ```sh
 git clone git@github.com:plotly/graphing-library-docs.git
+cd graphing-library-docs
 git fetch origin
 git checkout master
 ```
-
-**Note:** For historical reasons, the `master` branch is the `master` branch of this repository. 
 
 Running `git status` in your terminal should then output the following:
 
