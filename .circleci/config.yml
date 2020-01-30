@@ -106,8 +106,8 @@ jobs:
             rm -f snapshots/*/*/*.bkp
             percy snapshot snapshots --enable_javascript
             rm -rf 'snapshots/'
-            if [ "${CIRCLE_BRANCH}" == "test-gld-ci-setup" ]; then
-              git clone --depth=1 --branch=test-gld-ci-setup https://github.com/plotly/documentation.git
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              git clone --depth=1 --branch=gh-pages https://github.com/plotly/documentation.git
               git config user.name plotlydocbot
               git config user.email accounts@plot.ly
               cp -r _site/* documentation
