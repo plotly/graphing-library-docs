@@ -113,7 +113,7 @@ jobs:
               cp -r _site/* documentation
               cd documentation
               git add .
-              git commit -m "deploying https://github.com/plotly/graphing-libraries-docs/commit/${CIRCLE_SHA1}"
+              git commit -m "deploying https://github.com/plotly/graphing-library-docs/commit/${CIRCLE_SHA1}"
               git push
               cd ..
               rm -rf documentation
