@@ -120,12 +120,12 @@
   git commit -m 'message about your changes'
   git push origin your_feature_branch
   ```
-  - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@cldougl** and **@bcdunbar** for a review.
+  - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@jdamiba** for a review.
 
 5. To proof your work follow these steps: https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md#rendering-the-pages-locally
 
 ##### At https://plot.ly/r
-6. Your changes haven't been deployed yet so they won't be online. That said, <b>PLEASE</b> visit https://plot.ly/r/your-tutorial and make sure everything looks correct once they have been deployed by either **@cldougl** or **@bcdunbar**.
+6. Your changes haven't been deployed yet so they won't be online. That said, <b>PLEASE</b> visit https://plot.ly/r/your-tutorial and make sure everything looks correct once they have been deployed.
 
   - Some common problems that you should check for:
     - Make sure all plots appear!

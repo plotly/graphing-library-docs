@@ -146,12 +146,12 @@ Our python tutorials are written in [ipython notebooks](http://ipython.org/noteb
   git commit -m 'message about your changes'
   git push origin your_feature_branch
   ```
-  - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@cldougl** and **@bcdunbar** for a review.
+  - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@jdamiba** for a review.
 
 10. To proof your work follow these steps: https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md
 
 ##### At https://plot.ly/python
-11. Your changes haven't been deployed yet so they won't be online. That said, <b>PLEASE</b> visit https://plot.ly/python/your-tutorial and make sure everything looks correct once they have been deployed by either **@cldougl** or **@bcdunbar**.
+11. Your changes haven't been deployed yet so they won't be online. That said, <b>PLEASE</b> visit https://plot.ly/python/your-tutorial and make sure everything looks correct once they have been deployed.
 
   - Some common problems that you should check for:
     - Make sure all plots appear! (*you may want to sign out of your Plotly account to ensure you didn't accidentally embed private plots)
