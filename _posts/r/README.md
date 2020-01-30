@@ -36,63 +36,44 @@
       thumbnail: thumbnail/your-tutorial-chart.jpg *see step 2 for further thumbnail instructions*
       language: r
       page_type: example_index
-            display_as: chart_type
-      order: 9 *see below for order instructions*
+      display_as: chart_type
+      order: 3 *see below for order instructions*
       output:
         html_document:
           keep_md: true
       ---
       ```
       *`order` defines the order in which the tutorials appear on plot.ly/r. Please take a look at https://plot.ly/r/ and order your tutorial next to similar chart types.
-      - Under the header, include the following r code snippet. That first line of R code ensures that all subsequent code chunks do not relay message(s) or output results. That's because, in most cases, we want to provide code that produces an "offline" plot, but since [Jekyll and htmlwidgets aren't compatible](https://github.com/yihui/knitr-jekyll/issues/8#issuecomment-104112826), we're forced to embed plots as iframes.
+      - Under the header, include the following r code snippet:
 
       ```
         ```{r, echo = FALSE, message=FALSE}
-            knitr::opts_chunk$set(message = FALSE, warning=FALSE)
-            Sys.setenv("plotly_username"="RPlotBot")
-            Sys.setenv("plotly_api_key"="q0lz6r5efr")```
-      ```
-    - New to Plotly and Version Check sections:
-      ```
-        ### New to Plotly?
-
-        Plotly's R library is free and open source!<br>
-        [Get started](https://plot.ly/r/getting-started/) by downloading the client and [reading the primer](https://plot.ly/r/getting-started/).<br>
-        You can set up Plotly to work in [online](https://plot.ly/r/getting-started/#hosting-graphs-in-your-online-plotly-account) or [offline](https://plot.ly/r/offline/) mode.<br>
-        We also have a quick-reference [cheatsheet](https://images.plot.ly/plotly-documentation/images/r_cheat_sheet.pdf) (new!) to help you get started!
-
-        ### Version Check
-
-        Version 4 of Plotly's R package is now [available](https://plot.ly/r/getting-started/#installation)!<br>
-        Check out [this post](http://moderndata.plot.ly/upgrading-to-plotly-4-0-and-above/) for more information on breaking changes and new features available in this version.
-          ```{r, results = 'hide'}
-          library(plotly)
-          packageVersion('plotly')```
+        knitr::opts_chunk$set(message = FALSE, warning=FALSE)
       ```
 
-    - To include r code and plots in the tutorial format the code snippets and plots in the following format:
+      - If your example needs to authenticate with Chart Studio, use the following R code snippet instead: 
+
+      ```
+        ```{r, echo = FALSE, message=FALSE}
+        knitr::opts_chunk$set(message = FALSE, warning=FALSE)
+        Sys.setenv("plotly_username"="RPlotBot")
+        Sys.setenv("plotly_api_key"="q0lz6r5efr")```
+      ```
+
+      - To include R code and plots in your tutorial, format the code snippets and plots in the following format:
+
+      ```
+        ```{r}
+        library(plotly)
+        #Add your R Code Here i.e.:
+        p <- plot_ly(economics, x = ~date, y = ~uempmed, name = "unemployment")
+        p```
+      ```
 
     ```
-      ```{r, results = 'hide'}
-      library(plotly)
-      #Add your R Code Here i.e.:
-      p <- plot_ly(economics, x = ~date, y = ~uempmed, name = "unemployment")
-      p
-
-      # Create a shareable link to your chart
-      # Set up API credentials: https://plot.ly/r/getting-started
-      chart_link = api_create(p, filename="your-chart-type-your-filename")
-      chart_link```
-    ```
-
-    ```
-      ```{r, echo=FALSE}
-      chart_link```
-    ```
-
 
 2. Convert the `.Rmd` file to a `.md` file.
-  - Single `.Rmd` file: convert the `.Rmd` file that you changed to a `.md` file by running: `Rscript -e "rmarkdown::render('YOUR_FILE_.RMD', output_dir='OUTPUT_DIRECTORY')"` in your terminal.
+  - Single `.Rmd` file: `Rscript -e "rmarkdown::render('YOUR_FILE_.RMD', output_dir='OUTPUT_DIRECTORY')"` in your terminal.
 
   -Convert all the `.Rmd` files in a given directory:  `for i in R_FILE_PATH/*.Rmd; do Rscript -e "rmarkdown::render('$i', output_dir='OUTPUT_DIRECTORY')"; done` in your terminal.
 
@@ -121,7 +102,7 @@
   git commit -m 'message about your changes'
   git push origin your_feature_branch
   ```
-  - Visit the [graphing-library-docs](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@jdamiba** for a review.
+  - Visit the [graphing-library-docs](https://github.com/plotly/graphing-library-docs) repository and open a pull request against the `master` branch. You can then tag **@jdamiba** for a review.
 
 5. To proof your work follow these steps: https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md#rendering-the-pages-locally
 
