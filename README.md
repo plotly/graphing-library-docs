@@ -35,15 +35,13 @@ For more extensive changes to Ploty's JavaScript documentation, we suggest getti
 
 This involves cloning the repository and installing its dependencies: [Git](https://git-scm.com/), [Ruby]((https://www.ruby-lang.org/en/), [Jekyll](https://jekyllrb.com/), and the [Python `requests` package](https://pypi.org/project/requests/). 
 
-1. Use [`git`](https://git-scm.com/) to [clone](https://git-scm.com/docs/git-clone) the public `plotly/graphing-library-docs` repository. Then [check out] (https://git-scm.com/docs/git-checkout) the master branch of the `git` repository.
+1. Use [`git`](https://git-scm.com/) to [clone](https://git-scm.com/docs/git-clone) the public `plotly/graphing-library-docs` repository.
 
 To do so, run the following commands in your terminal:
 
 ```sh
 git clone git@github.com:plotly/graphing-library-docs.git
 cd graphing-library-docs
-git fetch origin
-git checkout master
 ```
 
 Running `git status` in your terminal should then output the following:

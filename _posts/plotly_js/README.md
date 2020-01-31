@@ -6,7 +6,7 @@ Our JavaScript tutorials are written in HTML files in the `_posts/plotly_js` dir
 
 ## Contribute Quickly to Plotly's JavaScript Graphing Library Documentation
   
-To quickly make a contribution to Plotly's JavaScript graphing libraries documentation, simply submit a pull request with the change you would like to suggest to the `master` branch of this repository. This can be done using the GitHub graphical user interface at https://github.com/plotly/graphing-library-docs. 
+To quickly make a contribution to Plotly's JavaScript graphing libraries documentation, simply submit a pull request with the change you would like to suggest. This can be done using the GitHub graphical user interface at https://github.com/plotly/graphing-library-docs. 
 
 The easiest way to do this is to follow the `Edit this page on GitHub` link at the top right of the page you are interested in contributing to:
 
@@ -128,7 +128,7 @@ Plotly.newPlot('myDiv', data);
    - use `var config = {mapboxAccessToken: "your access token"};` if your chart requires Mapbox authentication. `"your access token` will replaced by Plotly's private token at build time. In development mode, you will need to create a `_data/mapboxtoken.yml` file and paste Plotly's non-URL restricted Mapbox key into it. This is available in 1Password.
        
 ## Make a Pull Request
-  - Ready for your changes to be reviewed? Make a pull request against the `master` branch!
+  - Ready for your changes to be reviewed? Make a pull request!
 
     - Create a feature branch and use `git status` to list changed files.
     ```
@@ -142,7 +142,7 @@ Plotly.newPlot('myDiv', data);
     git commit -m 'message about your changes'
     git push origin your_feature_branch
     ```
-    - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request against the `master` branch. You can then tag **@jdamiba** for a review.
+    - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request!. You can then tag **@jdamiba** for a review.
 
 ## Style Edits
 

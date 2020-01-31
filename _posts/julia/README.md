@@ -1,12 +1,10 @@
 # Contribute to Plotly's [Julia Documentation](https://plot.ly/julia/)
 ## Initial Steps:
-0. Clone the repo and then check out the master branch:
+0. Clone the repo.:
 
   ```
   $ git clone git@github.com:plotly/graphing-library-docs.git
   $ cd graphing-library-docs
-  $ git fetch origin
-  $ git checkout master
   ```
 1. Check Ruby version `$ ruby --version`. We recommend using `version 2.3.3` or the same ruby version as gh-pages: https://pages.github.com/versions/. Note [RVM](https://rvm.io/rvm/install) is helpful for installing and managing ruby versions.
 

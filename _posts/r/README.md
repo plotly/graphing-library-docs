@@ -1,12 +1,15 @@
 # Contribute to Plotly's [R Documentation](https://plot.ly/r/)
+
+These are the instructions for contributing to the subset of the documentation for Plotly's R graphing library which deals with Chart Studio. 
+
+In order to contribute to the majority of Plotly's R graphing library documentation (which is not related to Chart Studio), please visit the [plotly.r-docs](https://github.com/plotly/plotly.r-docs) repository. 
+
 ## Initial Steps:
-1. Clone the repo and then check out the master branch:
+1. Clone the repo:
 
   ```
   $ git clone git@github.com:plotly/graphing-library-docs.git
   $ cd graphing-library-docs
-  $ git fetch origin
-  $ git checkout master
   ```
 
 2. Check Ruby version `$ ruby --version`. We recommend using the same ruby version as gh-pages: https://pages.github.com/versions/. Note [RVM](https://rvm.io/rvm/install) is helpful for installing and managing ruby versions.
