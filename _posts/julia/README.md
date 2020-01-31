@@ -1,11 +1,10 @@
 # Contribute to Plotly's [Julia Documentation](https://plot.ly/julia/)
 ## Initial Steps:
-0. Clone the repo and then check out the source-design-merge branch:
+0. Clone the repo.:
 
   ```
-  $ git clone git@github.com:plotly/documentation.git
-  $ git fetch origin
-  $ git checkout source-design-merge
+  $ git clone git@github.com:plotly/graphing-library-docs.git
+  $ cd graphing-library-docs
   ```
 1. Check Ruby version `$ ruby --version`. We recommend using `version 2.3.3` or the same ruby version as gh-pages: https://pages.github.com/versions/. Note [RVM](https://rvm.io/rvm/install) is helpful for installing and managing ruby versions.
 
@@ -46,7 +45,7 @@ Our Julia tutorials are written in HTML files with embedded plot examples.
       - 'financial' = https://plot.ly/julia/#financial-charts
       - 'maps' = https://plot.ly/julia/#maps
       - '3d_charts' = https://plot.ly/julia/#3d-charts
-      - See additional options [HERE](https://github.com/plotly/documentation/blob/source-design-merge/_includes/documentation_eg.html#L1)
+      - See additional options [HERE](https://github.com/plotly/graphing-library-docs/blob/master/_includes/documentation_eg.html#L1)
   - *** `order` defines the order in which the tutorials appear in each section on plot.ly/julia. Please take a look at https://plot.ly/julia/ and order your tutorial next to similar chart types. <b>Note</b> `order` can be a float.
 
 3. Create an example and save it on https://plot.ly/.
@@ -97,10 +96,10 @@ Our Julia tutorials are written in HTML files with embedded plot examples.
 9. Commit and Push your tutorial
   - `git add` your .html files
   - `git commit -m "include a message about the tutorial you're adding"`
-  - `git push origin source-design-merge`
+  - `git push origin master`
 
 10. To proof your work, serve the pages locally by running: `bundle exec jekyll serve --config _config_dev.yml` from the root of the documentation repo.
-For more information see these steps: https://github.com/plotly/documentation/blob/source/Contributing.md#rendering-the-pages-locally
+For more information see these steps: https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md
 
 11. Deploy changes by running `bundle exec rake deploy` from the root of the documentation repo.
 

@@ -6,7 +6,7 @@ Our JavaScript tutorials are written in HTML files in the `_posts/plotly_js` dir
 
 ## Contribute Quickly to Plotly's JavaScript Graphing Library Documentation
   
-To quickly make a contribution to Plotly's JavaScript graphing libraries documentation, simply submit a pull request with the change you would like to suggest to the `source-design-merge` branch of this repository. This can be done using the GitHub graphical user interface at https://github.com/plotly/documentation. 
+To quickly make a contribution to Plotly's JavaScript graphing libraries documentation, simply submit a pull request with the change you would like to suggest. This can be done using the GitHub graphical user interface at https://github.com/plotly/graphing-library-docs. 
 
 The easiest way to do this is to follow the `Edit this page on GitHub` link at the top right of the page you are interested in contributing to:
 
@@ -18,7 +18,7 @@ The easiest way to do this is to follow the `Edit this page on GitHub` link at t
 
 For contributions such as new example posts, we recommend setting up a local development environment so that you can test your changes as you work on them. 
 
-**See the `How To Get The Application Working Locally` section of the [Contributing Guide](https://github.com/plotly/documentation/blob/source-design-merge/Contributing.md)  to learn how to clone this repository to your local development environment and install its dependencies.**
+**See the `How To Get The Application Working Locally` section of the [Contributing Guide](https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md)  to learn how to clone this repository to your local development environment and install its dependencies.**
 
 Then follow these instructions to create or modify a new post. If the post is the first of its chart type, you need to create an index page for it first. 
 
@@ -90,7 +90,7 @@ Plotly.newPlot('myDiv', data);
   - 'financial' = https://plot.ly/javascript/financial-charts
   - 'maps' = https://plot.ly/javascript/maps
   - '3d_charts' = https://plot.ly/javascript/3d-charts
-  - See additional options [HERE](https://github.com/plotly/documentation/blob/b583373f41a5efa78272e0d1cf0ba00ac23458a3/_includes/posts/documentation_eg.html#L1)
+  - See additional options [HERE](https://github.com/plotly/graphing-library-docs/blob/master/_includes/posts/documentation_eg.html#L1)
 
   - `order` defines the order in which the tutorials appear in each section on plot.ly/javascript. 
     - <b>Note</b> The `order` of posts within a `display_as` must be a set of consecutive integers (i.e. [1, 2, 3, 4, 5, 6, ...]). 
@@ -128,7 +128,7 @@ Plotly.newPlot('myDiv', data);
    - use `var config = {mapboxAccessToken: "your access token"};` if your chart requires Mapbox authentication. `"your access token` will replaced by Plotly's private token at build time. In development mode, you will need to create a `_data/mapboxtoken.yml` file and paste Plotly's non-URL restricted Mapbox key into it. This is available in 1Password.
        
 ## Make a Pull Request
-  - Ready for your changes to be reviewed? Make a pull request against the `source-design-merge` branch!
+  - Ready for your changes to be reviewed? Make a pull request!
 
     - Create a feature branch and use `git status` to list changed files.
     ```
@@ -142,10 +142,10 @@ Plotly.newPlot('myDiv', data);
     git commit -m 'message about your changes'
     git push origin your_feature_branch
     ```
-    - Visit the [documentation repo](https://github.com/plotly/documentation) and open a pull request against the `source-design-merge` branch. You can then tag **@jdamiba** for a review.
+    - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request!. You can then tag **@jdamiba** for a review.
 
 ## Style Edits
 
-Please refer to our [Styles README](https://github.com/plotly/documentation/blob/source-design-merge/style_README.md)
+Please refer to our [Styles README](https://github.com/plotly/graphing-library-docs/blob/master/style_README.md)
 
 Thanks for contributing to our documentation!!
