@@ -20,16 +20,6 @@ redirect_from: ggplot2/reference/
   </div>
 </header>
 
-<div class="content container">
-  <div class="search-header">Search</div>
-	<input type="text" class="algolia__input js-algolia__input" autocomplete="off" name="query" placeholder="Search Plotly's R & ggplot2 Docs" />
-	<!-- <nav class="--sidebar-body watch" id="search"> -->
-
-	<div class="algolia__search-content js-algolia__search-content">
-		<div class="posts algolia__results"></div>
-	</div>
-</div>
-
 {% assign languagelist = site.posts | where:"page_type","example_index" | where:"language","ggplot2"  | sort: "order"  %}
 
 {% include posts/documentation_eg.html %}

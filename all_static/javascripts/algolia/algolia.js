@@ -2,109 +2,55 @@
 $(function(config) {
   'use strict';
 
-  var applicationId = config.applicationId;
-  var apiKey = config.apiKey;
-  var indexName = config.indexName;
+  var search = instantsearch({
+    // Replace with your own values
+    appId: config.applicationId,
+    apiKey: config.apiKey,
+    indexName: config.indexName,
+    urlSync: false,
+    searchFunction: function (helper) {
+      if (helper.state.query === '') {
+        document.getElementById('search-results').innerHTML = '';
+        return;
+      }
 
-  var algolia = algoliasearch(applicationId, apiKey);
-  var helper = algoliasearchHelper(algolia, indexName);
-  helper.setQueryParameter('distinct', true);
-  helper.on('result', onResult);
-
-  // Input listening for queries
-  var $searchInput = $('.js-algolia__input');
-  $searchInput.on('keyup', onQueryChange);
-
-  // Content to hide/show when searching
-  var $initialContent = $('.js-algolia__initial-content');
-  var $searchContent = $('.js-algolia__search-content');
-  var $searchContentResults = $searchContent.find('.algolia__results');
-  $searchContentResults.on('click', 'a', onLinkClick);
-  // Rendering templates
-  var templateResult = Hogan.compile($('#algolia__template').html());
-  var templateNoResults = $('#algolia__template--no-results').html();
-
-  var lastQuery;
-
-  // Toggle result page
-  function showResults() {
-    window.scroll(0, 0);
-    $initialContent.addClass('algolia__initial-content--hidden');
-    $searchContent.addClass('algolia__search-content--active');
-
-  }
-  function hideResults() {
-    $initialContent.removeClass('algolia__initial-content--hidden');
-    $searchContent.removeClass('algolia__search-content--active');
-  }
-
-  // Handle typing query
-  function onQueryChange() {
-    lastQuery = $(this).val();
-    if (lastQuery.length === 0) {
-      hideResults();
-      return false;
+      helper.search();
     }
-    helper.setQuery(lastQuery).search();
-    showResults();
-  }
+  });
 
-  function onResult(data) {
-    // Avoid race conditions, discard results that do not match the latest query
-    if (data.query !== lastQuery) {
-      return false;
-    }
-    var content = data.nbHits ? renderResults(data) : templateNoResults;
-    $searchContentResults.html(content);
-  }
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: "#search-input",
+      magnifier: false,
+      reset: false,
+      queryHook: function(query, search) {
+        if (query === "") {
+          search();
+        } else {
+          search(query);
+        }
+      }
+    })
+  );
 
-// return url from search item
-  function renderResults(data) {
-    return $.map(data.hits, function(hit) {
-      hit.full_url = "../" + hit.permalink;
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: '#search-results',
+      hitsPerPage: 10,
+      templates: {
+        empty: '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>',
+        item: '<pre class="hit">{{permalink}}</pre>'
+      },
+      transformData: {
+        item: function(hit) {
+          hit.raw = JSON.stringify(hit, null, 2);
+          console.log(hit)
+          return hit;
+        }
+      }
+    })
+  );
 
-
-
-      return templateResult.render(hit);
-    }).join('');
-  }
-
-  // Scroll page to correct element
-  function getAnchorSelector(hash) {
-    var anchor = hash.substring(1);
-    if (!anchor.match(/^algolia:/)) {
-      return false;
-    }
-    return decodeURI(anchor.replace(/^algolia:/, ''));
-  }
-
-  function scrollPageToSelector(selector) {
-    var target = $('.page,.post').find(selector);
-    var targetOffset = target[0].getBoundingClientRect().top + window.pageYOffset - 20;
-    window.setTimeout(function() {
-      window.scroll(0, targetOffset);
-    }, 100);
-  }
-
-  function onLinkClick(event) {
-    var selector = getAnchorSelector(event.target.hash);
-    // Normal link, going to another page
-    if (event.target.pathname !== window.location.pathname || !selector) {
-      return true;
-    }
-    // Scrolling to a result on the same page
-    hideResults();
-    scrollPageToSelector(selector);
-    event.preventDefault();
-    return false;
-  }
-
-  window.setTimeout(function() {
-    var selector = getAnchorSelector(window.location.hash);
-    if (selector) {
-      scrollPageToSelector(selector);
-    }
-  }, 100);
-
+  search.start();
 
 }(window.ALGOLIA_CONFIG));

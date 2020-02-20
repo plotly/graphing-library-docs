@@ -120,21 +120,13 @@
   }
 </script>
 {% endif %}
- <script id="algolia__template" type="text/template">
-{% raw %}
-  <div class="algolia__result">
-    <a class="algolia__result-link" href="{{ full_url }}">{{{ _highlightResult.name.value }}}</a>
-    <div class="algolia__result-text">{{{ _highlightResult.description.value }}}</div>
-  </div>
-{% endraw %}
-</script>
-<script id="algolia__template--no-results" type="text/template">
-  No results found.
-</script>
-<script src="//cdn.jsdelivr.net/algoliasearch/3.6.0/algoliasearch.min.js"></script>
-<script src="//cdn.jsdelivr.net/algoliasearch.helper/2.1.0/algoliasearch.helper.min.js"></script>
+
 <script src="//cdn.jsdelivr.net/hogan.js/3.0.2/hogan.min.js"></script>
+
+<script src="/all_static/javascripts/algolia/instantsearch.js"></script>
+
 <script src="//cdn.jsdelivr.net/momentjs/2.10.3/moment.min.js"></script>
+
 <script src="/all_static/javascripts/algolia/algolia.js"></script>
 {% endif %}
  <!-- Hash offset Script -->
