@@ -9279,3 +9279,14 @@ pre, code, .hljs {
       opacity: 0.75;
       text-align: left;
       padding-right: 20px; }
+
+.search-results{
+  background: white;
+  position: absolute;
+  top: 150px;
+  right: 0;
+  left: 300px;
+  bottom: 0;
+  height: 800px;
+  width: 600px;
+}

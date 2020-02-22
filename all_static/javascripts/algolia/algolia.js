@@ -39,7 +39,7 @@ $(function(config) {
       hitsPerPage: 10,
       templates: {
         empty: '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>',
-        item: '<pre class="hit">{{permalink}}</pre>'
+        item: document.getElementById('algolia__template').innerHTML,
       },
       transformData: {
         item: function(hit) {
@@ -51,6 +51,17 @@ $(function(config) {
     })
   );
 
+  document.getElementById("search-results").style.zIndex = -99;
+  document.getElementById("search-input").addEventListener("input", function (event){
+    if (document.getElementById("search-input").value == ""){
+      document.getElementById("search-results").style.zIndex = -99;
+
+    } else{
+      document.getElementById("search-results").style.zIndex = 99;
+    }
+  })
+
   search.start();
 
 }(window.ALGOLIA_CONFIG));
+
