@@ -19,6 +19,9 @@ basic:
 statistical:
     reference: 'statistical-charts'
     text: Statistical Charts
+ai_ml:
+    reference: '#ai-ml'
+    text: Artificial Intelligence and Machine Learning
 scientific:
     reference: 'scientific-charts'
     text: Scientific Charts
