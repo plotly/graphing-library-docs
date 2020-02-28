@@ -9287,6 +9287,20 @@ pre, code, .hljs {
   right: 0;
   left: 300px;
   bottom: 0;
-  height: 800px;
+  max-height: calc(90vh - 80px);
   width: 600px;
+}
+
+.ais-hits{
+  background: white;
+  margin: 30px;
+  padding: 20px;
+}
+
+.primary-search-results > .ais-hits::before{
+  content: "Documentation Search Results";
+}
+
+.secondary-search-results > .ais-hits::before{
+  content: "Schema Search Results";
 }

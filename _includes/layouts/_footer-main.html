@@ -122,12 +122,23 @@
 {% endif %}
 <script id="algolia__template" type="text/template">
   {% raw %}
+    
     <div class="algolia__result">
-      <a class="algolia__result-link" href="{{ hit.permalink }}">{{{ _highlightResult.name.value }}}</a>
+      <a class="algolia__result-link" href="{{ permalink }}">{{{ _highlightResult.name.value }}}</a>
       <div class="algolia__result-text">{{{ _highlightResult.description.value }}}</div>
     </div>
   {% endraw %}
 </script>
+<script id="algolia__secondary-template" type="text/template">
+  {% raw %}
+    
+    <div class="algolia__secondary-result">
+      <a class="algolia__result-link" href="{{ permalink }}">{{{ _highlightResult.name.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.description.value }}}</div>
+    </div>
+  {% endraw %}
+</script>
+
 <script id="algolia__template--no-results" type="text/template">
   No results found.
 </script>
