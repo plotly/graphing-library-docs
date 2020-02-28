@@ -9282,13 +9282,15 @@ pre, code, .hljs {
 
 .search-results{
   background: white;
+  display: flex;
+  overflow: scroll;
   position: absolute;
   top: 150px;
   right: 0;
   left: 300px;
   bottom: 0;
   max-height: calc(90vh - 80px);
-  width: 600px;
+  width: 900px;
 }
 
 .ais-hits{
@@ -9303,4 +9305,8 @@ pre, code, .hljs {
 
 .secondary-search-results > .ais-hits::before{
   content: "Schema Search Results";
+}
+
+.primary-search-results, .secondary-search-results {
+ width: 45%;
 }

@@ -3,6 +3,8 @@ $(function(config) {
   'use strict';
 
   
+  var reader = new commonmark.Parser();
+  var writer = new commonmark.HtmlRenderer();
 
   var search = instantsearch({
     // Replace with your own values
@@ -92,6 +94,8 @@ $(function(config) {
       transformData: {
         item: function(hit) {
           hit.raw = JSON.stringify(hit, null, 2);
+          var parsed = reader.parse(hit._highlightResult.description.value);
+          hit._highlightResult.description.value = writer.render(parsed);
           return hit;
         }
       }
