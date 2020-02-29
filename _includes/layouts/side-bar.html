@@ -132,13 +132,13 @@
                 {% endif %}
 
                 <!-- User Guides -->
-                {% if page.language == "r" or page.language == "ggplot2" or page.language == "matlab" or page.language == "scala" %}
+                {% if page.language == "ggplot2" or page.language == "matlab" or page.language == "scala" %}
                 <li class="--sidebar-item">
                     <a href="/{{ page.language }}/user-guide/" class="js-splash--navigation-item">User Guide</a>
                 </li>
                 {% endif %}
 
-                {% if page.language == "matlab" or page.language == "r" %}
+                {% if page.language == "matlab" %}
                 <li class="--sidebar-item">
                     <a href="/{{ page.language }}/offline/" class="js-splash--navigation-item">Use Offline</a>
                 </li>
