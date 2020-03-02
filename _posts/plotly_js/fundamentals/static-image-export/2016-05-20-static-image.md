@@ -1,8 +1,8 @@
 ---
 permalink: javascript/static-image-export/
-description: How to export graphs as static images in JavaScript. The Plotly JavaScript graphing library supports `.jpg`, `.png`, and `.svg` as formats for static image export.
+description: How to display figures as static images in JavaScript. The Plotly JavaScript graphing library supports displaying figures in the `.jpg`, `.png`, and `.svg` formats.
 layout: base
-name: Static Image Export
+name: Display Figures as Static Images
 thumbnail: thumbnail/png-export.png
 language: plotly_js
 display_as: chart_type
@@ -12,7 +12,11 @@ order: 26
 sitemap: false
 ---
 
-You can save graphs created with `plotly.js` to static images and view them in your browser. Consider the following example:
+## Display Figures as Static Images
+
+You can convert figures created with `plotly.js` into static images for display in a web browser or to save figures offline.
+
+Consider the following example JavaScript code:
 
     var d3 = Plotly.d3;
     var img_jpg= d3.select('#jpg-export');
@@ -42,6 +46,7 @@ You can save graphs created with `plotly.js` to static images and view them in y
              }
              )
         });
+
 To view this image in your page include following HTML tag:
 
     <img id="jpg-export"></img>
