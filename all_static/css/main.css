@@ -9287,10 +9287,12 @@ pre, code, .hljs {
 .search-results{
   display:flex;
   overflow-y: scroll;
+  height: 100%;
 }
 
-.modal-content{
-  width: 150%;
+#modal-button{
+  background-color: #00004f;
+  border: none;
 }
 
 .ais-hits{
@@ -9309,11 +9311,47 @@ pre, code, .hljs {
   font-size: 2rem;
 }
 
-.secondary-search-results {
- flex-grow: 2;
+.primary-search-results, .secondary-search-results{
+  width: 45%;
+} 
+
+@media (min-width: 1025px) {
+  .modal > .modal-dialog{
+    width: 1050px;
+    height: 700px;
+    max-width: 1050px;
+  }
+
+  .modal-content{
+    height: 100%;
+  }
+
+  .modal-body{
+    height: 80%;
+  }
+  .search-input{
+    width: 400px;
+    border-radius: 10px; 
+    margin: auto;
+  }
 }
 
-.ais-hits__empty{
-  display:none;
+@media (max-width: 1025px) {
+  .modal > .modal-dialog{
+    width: 80%;
+  }
 
+  .search-input{
+    width: 200px;
+    border-radius: 10px; 
+    margin: auto;
+  }
+  
+  .primary-search-results > .ais-hits::before{
+    font-size: 1rem;
+  }
+  
+  .secondary-search-results > .ais-hits::before{
+    font-size: 1rem;
+  }
 }

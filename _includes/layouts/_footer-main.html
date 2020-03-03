@@ -86,18 +86,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <input style="border-radius: 10px; width: 400px;" id="search-input" class="search-input" type="text" placeholder="   Search..."/>
+        <input id="search-input" class="search-input" type="text" placeholder="   Search..."/>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <div id="search-results" class="search-results">
-          <div id="primary-search-results" class="primary-search-results">
-             
-          </div>
-      
-          <div id="secondary-search-results" class="secondary-search-results">
-            
-          </div>
+          <div id="primary-search-results" class="primary-search-results"></div>
+          <div id="secondary-search-results" class="secondary-search-results"></div>
         </div>
       </div>
     </div>
@@ -143,7 +138,6 @@
 {% endif %}
 <script id="algolia__template" type="text/template">
   {% raw %}
-    
     <div class="algolia__result">
       <a class="algolia__result-link" href="/{{ permalink }}">{{{ _highlightResult.name.value }}}</a>
       <div class="algolia__result-text">{{{ _highlightResult.description.value }}}</div>
@@ -152,17 +146,13 @@
 </script>
 <script id="algolia__secondary-template" type="text/template">
   {% raw %}
-    
     <div class="algolia__secondary-result">
       <a class="algolia__result-link" href="/{{ permalink }}">{{{ _highlightResult.name.value }}}</a>
       <div class="algolia__result-text">{{{ _highlightResult.description.value }}}</div>
     </div>
   {% endraw %}
 </script>
-
-<script id="algolia__template--no-results" type="text/template">
-  No results found.
-</script>
+<script id="algolia__template--no-results" type="text/template">No results found.</script>
 <script src="//cdn.jsdelivr.net/hogan.js/3.0.2/hogan.min.js"></script>
 <script src="//cdn.jsdelivr.net/momentjs/2.10.3/moment.min.js"></script>
 <script src="/all_static/javascripts/algolia/algolia.js"></script>
