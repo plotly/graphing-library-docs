@@ -9280,18 +9280,17 @@ pre, code, .hljs {
       text-align: left;
       padding-right: 20px; }
 
+.modal{
+  top: 100px;
+}
+
 .search-results{
-  background: white;
-  z-index: -99;
-  display: flex;
-  overflow: scroll;
-  position: absolute;
-  top: 150px;
-  right: 0;
-  left: 300px;
-  bottom: 0;
-  max-height: calc(90vh - 80px);
-  width: 900px;
+  display:flex;
+  overflow-y: scroll;
+}
+
+.modal-content{
+  width: 150%;
 }
 
 .ais-hits{
@@ -9302,12 +9301,19 @@ pre, code, .hljs {
 
 .primary-search-results > .ais-hits::before{
   content: "Documentation Search Results";
+  font-size: 2rem;
 }
 
 .secondary-search-results > .ais-hits::before{
   content: "Schema Search Results";
+  font-size: 2rem;
 }
 
-.primary-search-results, .secondary-search-results {
- width: 45%;
+.secondary-search-results {
+ flex-grow: 2;
+}
+
+.ais-hits__empty{
+  display:none;
+
 }

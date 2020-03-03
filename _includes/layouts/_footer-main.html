@@ -82,6 +82,27 @@
 <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2CSafe.js&#038;ver=4.1'></script>
 {% endif %}
  {% if page.layout == "langindex" or page.layout == "base" %}
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <input style="border-radius: 10px; width: 400px;" id="search-input" class="search-input" type="text" placeholder="   Search..."/>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div id="search-results" class="search-results">
+          <div id="primary-search-results" class="primary-search-results">
+             
+          </div>
+      
+          <div id="secondary-search-results" class="secondary-search-results">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- ALGOLIA SEARCH -->
 {% if page.permalink contains "python/" %}
 <script>

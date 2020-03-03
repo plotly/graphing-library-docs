@@ -6,12 +6,15 @@
                 <a href="/graphing-libraries/"><img src="/all_static/images/plotly_graphing_libraries_2.png" style="height: 66px;"/></a>
             </div>
         </div>
+        
         <div class="--wrap-right">
             <nav class="--nav-meta" role="navigation">
                 <ul>
                     {% unless page.permalink == "/api/" %}
                     <li>
-                        <input style="border-radius: 10px; width: 140px" id="search-input" class="search-input" type="text" placeholder="   Search..."/>
+                        <button style="background-color:00004f;" id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
+                            <input id="modal-input" style="border-radius: 10px; width: 140px"  type="text" placeholder="   Search..."/>
+                          </button>
                     </li>
                     {% endunless %}
                     <li><a href="https://go.plot.ly/demo_live" data-mode="1" target="_blank" class="typeform-share button --enterprise-quaternary">DEMO DASH</a></li>

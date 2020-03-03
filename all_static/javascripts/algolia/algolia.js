@@ -1,7 +1,7 @@
 // Init the search box
 $(function(config) {
   'use strict';
-  
+
   var search = instantsearch({
     // Replace with your own values
     appId: config.applicationId,
@@ -13,6 +13,8 @@ $(function(config) {
         document.getElementById('primary-search-results').innerHTML = '';
         return;
       }
+
+      console.log(helper.state)
 
       helper.search();
     }
@@ -96,7 +98,6 @@ $(function(config) {
     }),
   );
 
-
   document.getElementById("search-input").addEventListener("input", function (event){
     if (document.getElementById("search-input").value == ""){
       document.getElementById("search-results").style.zIndex = -99;
@@ -105,24 +106,13 @@ $(function(config) {
       document.getElementById("search-results").style.zIndex = 99;
     }
   })
-  document.getElementById("search-input").addEventListener("click", function (event){
-    document.getElementById("search-results").style.zIndex = 99;
-  })
 
-  function hideOnClickOutside(element) {
-    const outsideClickListener = event => {
-        if (!element.contains(event.target) && isVisible(element)) { // or use: event.target.closest(selector) === null
-          element.style.zIndex = -99;
-        }
-    }
-
-    document.addEventListener('click', outsideClickListener)
-  }
-
-  const isVisible = elem => !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length ) // source (2018-03-11): https://github.com/jquery/jquery/blob/master/src/css/hiddenVisibleSelectors.js 
-  hideOnClickOutside(document.getElementById("search-results"));
   search.start();
   secondarySearch.start();
 
 }(window.ALGOLIA_CONFIG));
+
+document.getElementById("myModal").addEventListener("focus", function(e){
+  document.getElementById("search-input").focus();
+})
 
