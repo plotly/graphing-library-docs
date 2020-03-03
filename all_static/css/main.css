@@ -9306,12 +9306,12 @@ pre, code, .hljs {
   font-size: 2rem;
 }
 
-.secondary-search-results > .ais-hits::before{
+.schema-search-results > .ais-hits::before{
   content: "Schema Search Results";
   font-size: 2rem;
 }
 
-.primary-search-results, .secondary-search-results{
+.primary-search-results, .schema-search-results{
   width: 45%;
 } 
 
@@ -9351,7 +9351,7 @@ pre, code, .hljs {
     font-size: 1rem;
   }
   
-  .secondary-search-results > .ais-hits::before{
+  .schema-search-results > .ais-hits::before{
     font-size: 1rem;
   }
 }

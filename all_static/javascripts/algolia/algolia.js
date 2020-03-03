@@ -2,6 +2,14 @@
 $(function(config) {
   'use strict';
 
+  var searchInput = document.getElementById("search-input");
+  var searchResults = document.getElementById("search-results");
+  var modal = document.getElementById("myModal");
+  var primarySearchResults = document.getElementById('primary-search-results');
+  var schemaSearchResults = document.getElementById('schema-search-results');
+
+  var emptyResult = '<div class="text-center">No results found matching <strong>{{query}}</strong> Try the search on <a target="_blank" href="https://www.google.com/search?q=site%3Aplot.ly+{{query}}">Google</a>.</div>';
+
   var search = instantsearch({
     // Replace with your own values
     appId: config.applicationId,
@@ -10,12 +18,9 @@ $(function(config) {
     urlSync: false,
     searchFunction: function (helper) {
       if (helper.state.query === '') {
-        document.getElementById('primary-search-results').innerHTML = '';
+        primarySearchResults.innerHTML = '';
         return;
       }
-
-      console.log(helper.state)
-
       helper.search();
     }
   });
@@ -39,7 +44,7 @@ $(function(config) {
     instantsearch.widgets.hits({
       container: '#primary-search-results',
       templates: {
-        empty: '<div class="text-center">No results found matching <strong>{{query}}</strong> Try the search on <a target="_blank" href="https://www.google.com/search?q=site%3Aplot.ly+{{query}}">Google</a>.</div>',
+        empty: emptyResult,
         item: document.getElementById('algolia__template').innerHTML,
       },
       transformData: {
@@ -52,17 +57,15 @@ $(function(config) {
   );
 
   var secondarySearch = instantsearch({
-    // Replace with your own values
     appId: config.applicationId,
     apiKey: config.apiKey,
     indexName: 'schema',
     urlSync: false,
     searchFunction: function (helper) {
       if (helper.state.query === '') {
-        document.getElementById('secondary-search-results').innerHTML = '';
+        schemaSearchResults.innerHTML = '';
         return;
       }
-
       helper.search();
     }
   });
@@ -84,9 +87,9 @@ $(function(config) {
 
   secondarySearch.addWidget(
     instantsearch.widgets.hits({
-      container: '#secondary-search-results',
+      container: '#schema-search-results',
       templates: {
-        empty: '<div class="text-center">No results found matching <strong>{{query}}</strong> Try the search on <a target="_blank" href="https://www.google.com/search?q=site%3Aplot.ly+{{query}}">Google</a>.</div>',
+        empty: emptyResult,
         item: document.getElementById('algolia__secondary-template').innerHTML,
       },
       transformData: {
@@ -98,21 +101,20 @@ $(function(config) {
     }),
   );
 
-  document.getElementById("search-input").addEventListener("input", function (event){
-    if (document.getElementById("search-input").value == ""){
-      document.getElementById("search-results").style.zIndex = -99;
+  searchInput.addEventListener("input", function (event){
+    if (searchInput.value == ""){
+      searchResults.style.zIndex = -99;
 
-    } else{
-      document.getElementById("search-results").style.zIndex = 99;
+    } else {
+      searchResults.style.zIndex = 99;
     }
-  })
+  });
+
+  modal.addEventListener("focus", function(e){
+    searchInput.focus();
+  });
 
   search.start();
   secondarySearch.start();
 
 }(window.ALGOLIA_CONFIG));
-
-document.getElementById("myModal").addEventListener("focus", function(e){
-  document.getElementById("search-input").focus();
-})
-
