@@ -81,9 +81,9 @@
 <script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true}});</script>
 <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2CSafe.js&#038;ver=4.1'></script>
 {% endif %}
- {% if page.layout == "langindex" %}
+ {% if page.layout == "langindex" or page.layout == "base" %}
 <!-- ALGOLIA SEARCH -->
-{% if page.permalink == "/python/" %}
+{% if page.permalink contains "python/" %}
 <script>
   window.ALGOLIA_CONFIG = {
     'applicationId': '{{ site.algolia.application_id }}',
@@ -92,7 +92,7 @@
     'baseurl': '/'
   }
 </script>
-{% elsif page.permalink == "/javascript/" %}
+{% elsif page.permalink contains "javascript/" %}
 <script>
   window.ALGOLIA_CONFIG = {
     'applicationId': '{{ site.algolia.application_id }}',
@@ -101,7 +101,7 @@
     'baseurl': '/'
   }
 </script>
-{% elsif page.permalink == "/r/" or page.permalink == "/ggplot2/" %}
+{% elsif page.permalink contains "r/" or page.permalink contains "ggplot2/" %}
 <script>
   window.ALGOLIA_CONFIG = {
     'applicationId': '{{ site.algolia.application_id }}',
@@ -143,7 +143,6 @@
   No results found.
 </script>
 <script src="//cdn.jsdelivr.net/hogan.js/3.0.2/hogan.min.js"></script>
-<script src="/all_static/javascripts/algolia/instantsearch.js"></script>
 <script src="//cdn.jsdelivr.net/momentjs/2.10.3/moment.min.js"></script>
 <script src="/all_static/javascripts/algolia/algolia.js"></script>
 {% endif %}

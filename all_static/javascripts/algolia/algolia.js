@@ -1,11 +1,7 @@
 // Init the search box
 $(function(config) {
   'use strict';
-
   
-  var reader = new commonmark.Parser();
-  var writer = new commonmark.HtmlRenderer();
-
   var search = instantsearch({
     // Replace with your own values
     appId: config.applicationId,
@@ -94,8 +90,6 @@ $(function(config) {
       transformData: {
         item: function(hit) {
           hit.raw = JSON.stringify(hit, null, 2);
-          var parsed = reader.parse(hit._highlightResult.description.value);
-          hit._highlightResult.description.value = writer.render(parsed);
           return hit;
         }
       }
@@ -103,7 +97,6 @@ $(function(config) {
   );
 
 
-  document.getElementById("search-results").style.zIndex = -99;
   document.getElementById("search-input").addEventListener("input", function (event){
     if (document.getElementById("search-input").value == ""){
       document.getElementById("search-results").style.zIndex = -99;
