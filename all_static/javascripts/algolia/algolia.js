@@ -7,6 +7,7 @@ $(function(config) {
   var modal = document.getElementById("myModal");
   var primarySearchResults = document.getElementById('primary-search-results');
   var schemaSearchResults = document.getElementById('schema-search-results');
+  var modalContent = document.getElementById('modal-content');
 
   var emptyResult = '<div class="text-center">No results found matching <strong>{{query}}</strong> Try the search on <a target="_blank" href="https://www.google.com/search?q=site%3Aplot.ly+{{query}}">Google</a>.</div>';
 
@@ -104,9 +105,13 @@ $(function(config) {
   searchInput.addEventListener("input", function (event){
     if (searchInput.value == ""){
       searchResults.style.zIndex = -99;
+      modalContent.style.background = "none";
+      modalContent.style.border = "none";
 
     } else {
       searchResults.style.zIndex = 99;
+      modalContent.style.background = "#fff";
+      modalContent.style.border = "1px solid rgba(0,0,0,.2)";
     }
   });
 
