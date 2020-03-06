@@ -9286,7 +9286,6 @@ pre, code, .hljs {
 
 .search-results{
   display:flex;
-  overflow-y: scroll;
   height: 100%;
 }
 

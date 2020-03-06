@@ -110,11 +110,13 @@ $(function(config) {
   searchInput.addEventListener("input", function (event){
     if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
       searchResults.style.zIndex = -99;
+      searchResults.style.overflowY = "none";
       modalContent.style.background = "none";
       modalContent.style.border = "none";
 
     } else {
       searchResults.style.zIndex = 99;
+      searchResults.style.overflowY = "scroll";
       modalContent.style.background = "#fff";
       modalContent.style.border = "1px solid rgba(0,0,0,.2)";
     }
