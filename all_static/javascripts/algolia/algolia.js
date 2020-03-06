@@ -14,7 +14,7 @@ $(function(config) {
     lang = "javascript"
   }
 
-  var emptyResult = '<div class="text-center"><br><br>No results found matching <strong>{{query}}</strong>.<br><br> Click here to <a class="algolia__result-link" target="_blank" href="https://www.google.com/search?q=site%3Aplot.ly+{{query}}">search for "plotly ' + lang + ' {{query}}" on Google</a>.</div>';
+  var emptyResult = '<div class="text-center"><br><br>No results found matching <strong>{{query}}</strong>.<br><br> Click here to <a class="algolia__result-link" target="_blank" href="https://www.google.com/search?q=plotly+' + lang + '+{{query}}">search for "plotly ' + lang + ' {{query}}" on Google</a>.</div>';
  
   var search = instantsearch({
     // Replace with your own values
