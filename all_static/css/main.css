@@ -9302,8 +9302,16 @@ pre, code, .hljs {
 }
 
 .primary-search-results > .ais-hits::before{
-  content: "Documentation Search Results";
+  content: "Documentation Results";
   font-size: 2rem;
+}
+
+.ais-hits--item:first-of-type{
+  padding-top: 30px;
+}
+
+.algolia__result-link{
+  color: #2391fe !important;
 }
 
 .modal-header {
@@ -9314,8 +9322,12 @@ pre, code, .hljs {
   padding-top: 0;
 }
 
+.modal > a{
+  color: #2391fe;
+}
+
 .schema-search-results > .ais-hits::before{
-  content: "Figure Refrence Search Results";
+  content: "Figure Reference Results";
   font-size: 2rem;
 }
 
@@ -9331,6 +9343,11 @@ pre, code, .hljs {
 .modal-content{
   background: none;
   border: none;
+}
+
+_:-ms-fullscreen, :root .modal-content{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.2);
 }
 
 .ais-hits--item{
