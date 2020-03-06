@@ -8,6 +8,7 @@ $(function(config) {
   var primarySearchResults = document.getElementById('primary-search-results');
   var schemaSearchResults = document.getElementById('schema-search-results');
   var modalContent = document.getElementById('modal-content');
+  var modalBody = document.getElementById('modal-body');
 
   var lang = window.plotly_doc_language;
   if (lang == "plotly_js"){
@@ -107,16 +108,12 @@ $(function(config) {
     })
   );
 
-  if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
-    searchResults.style.overflowY = "none";
-    modalContent.style.display = "none";
-  }
-
   searchInput.addEventListener("input", function (event){
     if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
       searchResults.style.zIndex = -99;
       searchResults.style.overflowY = "none";
       modalContent.style.background = "none";
+      modalBody.style.display = "none";
       modalContent.style.border = "none";
 
     } else {
@@ -124,6 +121,7 @@ $(function(config) {
       modalContent.style.display = "block";
       searchResults.style.overflowY = "scroll";
       modalContent.style.background = "#fff";
+      modalBody.style.display = "block";
       modalContent.style.border = "1px solid rgba(0,0,0,.2)";
     }
   });
