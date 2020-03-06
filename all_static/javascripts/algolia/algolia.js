@@ -107,6 +107,10 @@ $(function(config) {
     })
   );
 
+  if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
+    searchResults.style.overflowY = "none";
+  }
+
   searchInput.addEventListener("input", function (event){
     if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
       searchResults.style.zIndex = -99;
