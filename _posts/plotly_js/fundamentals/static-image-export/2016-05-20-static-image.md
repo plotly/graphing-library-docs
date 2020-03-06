@@ -38,7 +38,6 @@ You can save graphs created with `plotly.js` to static images and view them in y
                  function(url)
              {
                  img_jpg.attr("src", url);
-                 return Plotly.toImage(gd,{format:'jpeg',height:400,width:400});
              }
              )
         });
