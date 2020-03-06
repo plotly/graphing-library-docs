@@ -109,6 +109,7 @@ $(function(config) {
 
   if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
     searchResults.style.overflowY = "none";
+    modalContent.style.display = "none";
   }
 
   searchInput.addEventListener("input", function (event){
@@ -120,6 +121,7 @@ $(function(config) {
 
     } else {
       searchResults.style.zIndex = 99;
+      modalContent.style.display = "block";
       searchResults.style.overflowY = "scroll";
       modalContent.style.background = "#fff";
       modalContent.style.border = "1px solid rgba(0,0,0,.2)";
