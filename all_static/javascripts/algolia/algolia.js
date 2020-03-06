@@ -59,7 +59,7 @@ $(function(config) {
           return hit;
         }
       }
-    }),
+    })
   );
 
   var secondarySearch = instantsearch({
@@ -104,11 +104,11 @@ $(function(config) {
           return hit;
         }
       }
-    }),
+    })
   );
 
   searchInput.addEventListener("input", function (event){
-    if (searchInput.value == ""){
+    if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
       searchResults.style.zIndex = -99;
       modalContent.style.background = "none";
       modalContent.style.border = "none";

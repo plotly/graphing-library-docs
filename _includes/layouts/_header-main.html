@@ -9,13 +9,13 @@
         <div class="--wrap-right">
             <nav class="--nav-meta" role="navigation">
                 <ul>
-                    {% unless page.permalink == "/api/" %}
+                    {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" page.permalink contains "ggplot2/"  %}
                     <li>
                         <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
                             <input id="modal-input" style="border-radius: 10px; width: 140px"  type="text" placeholder="   Search..." readonly/>
                           </button>
                     </li>
-                    {% endunless %}
+                    {% endif %}
                     <li><a href="https://go.plot.ly/demo_live" data-mode="1" target="_blank" class="typeform-share button --enterprise-quaternary">DEMO DASH</a></li>
                 </ul>
             </nav>
