@@ -20,6 +20,7 @@ def insert_whitespace(x):
     for word in ["axis", "scatter", "bar", "group", "show", "tick", "text",
                  "hover", "auto", "reverse", "max", "min", "mode", "anchor", "pad",
                 "prefix", "suffix", "format", "color", "item", "name", "direction", "revision",
+                "mapbox", "polar"
                 ]:
         x = x.replace(word, " " + word + " ").replace("  ", " ")
     return x.strip(" ")

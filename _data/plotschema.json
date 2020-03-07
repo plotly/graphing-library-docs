@@ -328,12 +328,6 @@
           "anim": true,
           "description": "Sets the y coordinate step. See `y0` for more info."
         },
-        "r": {
-          "valType": "data_array",
-          "editType": "calc",
-          "description": "r coordinates in scatter traces are deprecated!Please switch to the *scatterpolar* trace type.Sets the radial coordinatesfor legacy polar chart only.",
-          "role": "data"
-        },
         "rsrc": {
           "valType": "string",
           "role": "info",
@@ -2282,12 +2276,6 @@
           },
           "editType": "calc",
           "role": "object"
-        },
-        "t": {
-          "valType": "data_array",
-          "editType": "calc",
-          "description": "t coordinates in scatter traces are deprecated!Please switch to the *scatterpolar* trace type.Sets the angular coordinatesfor legacy polar chart only.",
-          "role": "data"
         },
         "tsrc": {
           "valType": "string",
@@ -4410,12 +4398,6 @@
           "description": "Sets the source reference on plot.ly for  base .",
           "editType": "none"
         },
-        "r": {
-          "valType": "data_array",
-          "editType": "calc",
-          "description": "r coordinates in scatter traces are deprecated!Please switch to the *scatterpolar* trace type.Sets the radial coordinatesfor legacy polar chart only.",
-          "role": "data"
-        },
         "rsrc": {
           "valType": "string",
           "role": "info",
@@ -5988,12 +5970,6 @@
           "editType": "calc",
           "role": "object"
         },
-        "t": {
-          "valType": "data_array",
-          "editType": "calc",
-          "description": "t coordinates in scatter traces are deprecated!Please switch to the *scatterpolar* trace type.Sets the angular coordinatesfor legacy polar chart only.",
-          "role": "data"
-        },
         "tsrc": {
           "valType": "string",
           "role": "info",
@@ -6749,7 +6725,7 @@
           ],
           "dflt": "auto",
           "editType": "plot",
-          "description": "Determines the orientation of text inside slices. With *auto* the texts may automatically be rotated to fit with the maximum size inside the slice. Using *horizontal* option forces text to be horizontal. Using *radial* option forces text to be radial. Using *tangential* option forces text to be tangential."
+          "description": "Controls the orientation of the text inside chart sectors. When set to *auto*, text may be oriented in any direction in order to be as big as possible in the middle of a sector. The *horizontal* option orients text to be parallel with the bottom of the chart, and may make text smaller in order to achieve that goal. The *radial* option orients text along the radius of the sector. The *tangential* option orients text perpendicular to the radius of the sector."
         },
         "outsidetextfont": {
           "family": {
@@ -10914,7 +10890,7 @@
             "dflt": "center",
             "role": "style",
             "editType": "calc",
-            "description": "Sets the horizontal alignment of the `text` within the box. Has an effect only if `text` spans more two or more lines (i.e. `text` contains one or more <br> HTML tags) or if an explicit width is set to override the text width.",
+            "description": "Sets the horizontal alignment of the `text` within the box. Has an effect only if `text` spans two or more lines (i.e. `text` contains one or more <br> HTML tags) or if an explicit width is set to override the text width.",
             "arrayOk": true
           },
           "line": {
@@ -11091,7 +11067,7 @@
             "dflt": "center",
             "role": "style",
             "editType": "calc",
-            "description": "Sets the horizontal alignment of the `text` within the box. Has an effect only if `text` spans more two or more lines (i.e. `text` contains one or more <br> HTML tags) or if an explicit width is set to override the text width.",
+            "description": "Sets the horizontal alignment of the `text` within the box. Has an effect only if `text` spans two or more lines (i.e. `text` contains one or more <br> HTML tags) or if an explicit width is set to override the text width.",
             "arrayOk": true
           },
           "line": {
@@ -45793,7 +45769,7 @@
           ],
           "dflt": "auto",
           "editType": "plot",
-          "description": "Determines the orientation of text inside slices. With *auto* the texts may automatically be rotated to fit with the maximum size inside the slice. Using *horizontal* option forces text to be horizontal. Using *radial* option forces text to be radial. Using *tangential* option forces text to be tangential."
+          "description": "Controls the orientation of the text inside chart sectors. When set to *auto*, text may be oriented in any direction in order to be as big as possible in the middle of a sector. The *horizontal* option orients text to be parallel with the bottom of the chart, and may make text smaller in order to achieve that goal. The *radial* option orients text along the radius of the sector. The *tangential* option orients text perpendicular to the radius of the sector."
         },
         "outsidetextfont": {
           "family": {
@@ -56921,14 +56897,14 @@
         "role": "style",
         "dflt": "#fff",
         "editType": "plot",
-        "description": "Sets the color of paper where the graph is drawn."
+        "description": "Sets the background color of the paper where the graph is drawn."
       },
       "plot_bgcolor": {
         "valType": "color",
         "role": "style",
         "dflt": "#fff",
         "editType": "layoutstyle",
-        "description": "Sets the color of plotting area in-between x and y axes."
+        "description": "Sets the background color of the plotting area in-between x and y axes."
       },
       "colorscale": {
         "editType": "calc",
@@ -63610,7 +63586,7 @@
                 "dflt": "center",
                 "role": "style",
                 "editType": "calc",
-                "description": "Sets the horizontal alignment of the `text` within the box. Has an effect only if `text` spans more two or more lines (i.e. `text` contains one or more <br> HTML tags) or if an explicit width is set to override the text width."
+                "description": "Sets the horizontal alignment of the `text` within the box. Has an effect only if `text` spans two or more lines (i.e. `text` contains one or more <br> HTML tags) or if an explicit width is set to override the text width."
               },
               "valign": {
                 "valType": "enumerated",
@@ -65906,7 +65882,7 @@
               "dflt": "center",
               "role": "style",
               "editType": "arraydraw",
-              "description": "Sets the horizontal alignment of the `text` within the box. Has an effect only if `text` spans more two or more lines (i.e. `text` contains one or more <br> HTML tags) or if an explicit width is set to override the text width."
+              "description": "Sets the horizontal alignment of the `text` within the box. Has an effect only if `text` spans two or more lines (i.e. `text` contains one or more <br> HTML tags) or if an explicit width is set to override the text width."
             },
             "valign": {
               "valType": "enumerated",
@@ -67314,224 +67290,6 @@
           "editType": "layoutstyle",
           "description": "Former `titlefont` is now the sub-attribute `font` of `title`. To customize title font properties, please use `title.font` now."
         }
-      },
-      "radialaxis": {
-        "range": {
-          "valType": "info_array",
-          "role": "info",
-          "items": [
-            {
-              "valType": "number",
-              "editType": "plot"
-            },
-            {
-              "valType": "number",
-              "editType": "plot"
-            }
-          ],
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Defines the start and end point of this radial axis.",
-          "editType": "plot"
-        },
-        "domain": {
-          "valType": "info_array",
-          "role": "info",
-          "items": [
-            {
-              "valType": "number",
-              "min": 0,
-              "max": 1,
-              "editType": "plot"
-            },
-            {
-              "valType": "number",
-              "min": 0,
-              "max": 1,
-              "editType": "plot"
-            }
-          ],
-          "dflt": [
-            0,
-            1
-          ],
-          "editType": "plot",
-          "description": "Polar chart subplots are not supported yet. This key has currently no effect."
-        },
-        "orientation": {
-          "valType": "number",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the orientation (an angle with respect to the origin) of the radial axis.",
-          "editType": "plot"
-        },
-        "showline": {
-          "valType": "boolean",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Determines whether or not the line bounding this radial axis will be shown on the figure.",
-          "editType": "plot"
-        },
-        "showticklabels": {
-          "valType": "boolean",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Determines whether or not the radial axis ticks will feature tick labels.",
-          "editType": "plot"
-        },
-        "tickorientation": {
-          "valType": "enumerated",
-          "values": [
-            "horizontal",
-            "vertical"
-          ],
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the orientation (from the paper perspective) of the radial axis tick labels.",
-          "editType": "plot"
-        },
-        "ticklen": {
-          "valType": "number",
-          "min": 0,
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the length of the tick lines on this radial axis.",
-          "editType": "plot"
-        },
-        "tickcolor": {
-          "valType": "color",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the color of the tick lines on this radial axis.",
-          "editType": "plot"
-        },
-        "ticksuffix": {
-          "valType": "string",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the length of the tick lines on this radial axis.",
-          "editType": "plot"
-        },
-        "endpadding": {
-          "valType": "number",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots.",
-          "editType": "plot"
-        },
-        "visible": {
-          "valType": "boolean",
-          "role": "info",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Determines whether or not this axis will be visible.",
-          "editType": "plot"
-        },
-        "editType": "plot",
-        "role": "object"
-      },
-      "angularaxis": {
-        "range": {
-          "valType": "info_array",
-          "role": "info",
-          "items": [
-            {
-              "valType": "number",
-              "dflt": 0,
-              "editType": "plot"
-            },
-            {
-              "valType": "number",
-              "dflt": 360,
-              "editType": "plot"
-            }
-          ],
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Defines the start and end point of this angular axis.",
-          "editType": "plot"
-        },
-        "domain": {
-          "valType": "info_array",
-          "role": "info",
-          "items": [
-            {
-              "valType": "number",
-              "min": 0,
-              "max": 1,
-              "editType": "plot"
-            },
-            {
-              "valType": "number",
-              "min": 0,
-              "max": 1,
-              "editType": "plot"
-            }
-          ],
-          "dflt": [
-            0,
-            1
-          ],
-          "editType": "plot",
-          "description": "Polar chart subplots are not supported yet. This key has currently no effect."
-        },
-        "showline": {
-          "valType": "boolean",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Determines whether or not the line bounding this angular axis will be shown on the figure.",
-          "editType": "plot"
-        },
-        "showticklabels": {
-          "valType": "boolean",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Determines whether or not the angular axis ticks will feature tick labels.",
-          "editType": "plot"
-        },
-        "tickorientation": {
-          "valType": "enumerated",
-          "values": [
-            "horizontal",
-            "vertical"
-          ],
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the orientation (from the paper perspective) of the angular axis tick labels.",
-          "editType": "plot"
-        },
-        "ticklen": {
-          "valType": "number",
-          "min": 0,
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the length of the tick lines on this angular axis.",
-          "editType": "plot"
-        },
-        "tickcolor": {
-          "valType": "color",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the color of the tick lines on this angular axis.",
-          "editType": "plot"
-        },
-        "ticksuffix": {
-          "valType": "string",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the length of the tick lines on this angular axis.",
-          "editType": "plot"
-        },
-        "endpadding": {
-          "valType": "number",
-          "role": "style",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots.",
-          "editType": "plot"
-        },
-        "visible": {
-          "valType": "boolean",
-          "role": "info",
-          "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Determines whether or not this axis will be visible.",
-          "editType": "plot"
-        },
-        "editType": "plot",
-        "role": "object"
-      },
-      "direction": {
-        "valType": "enumerated",
-        "values": [
-          "clockwise",
-          "counterclockwise"
-        ],
-        "role": "info",
-        "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Sets the direction corresponding to positive angles in legacy polar charts.",
-        "editType": "plot"
-      },
-      "orientation": {
-        "valType": "angle",
-        "role": "info",
-        "description": "Legacy polar charts are deprecated! Please switch to *polar* subplots. Rotates the entire polar by the given angle in legacy polar charts.",
-        "editType": "plot"
       },
       "editType": "calc"
     }

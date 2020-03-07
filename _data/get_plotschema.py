@@ -5,6 +5,14 @@ orders = json.load(open("orderings.json", "r"))
 
 schema = json.load(urlopen("https://raw.githubusercontent.com/plotly/plotly.js/master/dist/plot-schema.json"))
 del schema["traces"]["area"]
+del schema["traces"]["scatter"]["attributes"]["r"]
+del schema["traces"]["scatter"]["attributes"]["t"]
+del schema["traces"]["bar"]["attributes"]["r"]
+del schema["traces"]["bar"]["attributes"]["t"]
+del schema["layout"]["layoutAttributes"]["radialaxis"]
+del schema["layout"]["layoutAttributes"]["angularaxis"]
+del schema["layout"]["layoutAttributes"]["direction"]
+del schema["layout"]["layoutAttributes"]["orientation"]
 
 def reorder_keys(parent, target, order):
     original = parent[target]
