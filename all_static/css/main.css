@@ -9396,7 +9396,7 @@ _:-ms-fullscreen, :root .modal-content{
   margin-bottom: 0.5em !important;
 }
 
-#installation{
+#installation, #rendering-charts, #note-for-rstudio-users, #download-from-github, #download-from-cran {
   margin-bottom: 0.5em !important;
   margin-top: 0.5em !important;
 }
