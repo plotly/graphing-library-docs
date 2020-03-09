@@ -108,7 +108,7 @@ $(function(config) {
     })
   );
 
-  searchInput.addEventListener("input", function (event){
+  searchInput.addEventListener("keyup", function (event){
     if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
       searchResults.style.zIndex = -99;
       searchResults.style.overflowY = "none";
