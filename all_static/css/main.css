@@ -9392,6 +9392,6 @@ _:-ms-fullscreen, :root .modal-content{
   }
 }
 
-.\--body > h1 {
+.\--body > h1, .\--body > h2 {
   margin-bottom: 0.5em !important;
 }
