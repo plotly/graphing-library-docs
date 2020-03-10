@@ -9281,7 +9281,7 @@ pre, code, .hljs {
       padding-right: 20px; }
 
 .modal{
-  top: 60px;
+  top: 50px;
 }
 
 .search-results{
@@ -9320,7 +9320,7 @@ pre, code, .hljs {
 .modal-body{
   background: white;
   padding: 0 !important;
-  max-height: 400px;
+  max-height: 75vh;
   overflow-y: scroll;
 }
 
