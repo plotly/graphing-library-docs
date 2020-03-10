@@ -8248,7 +8248,7 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
 
 .\--tutorial-index {
   padding-bottom: 20px;
-  padding-top: 60px;
+  padding-top: 20px;
   padding-left: 20px !important;
   padding-right: 20px; }
   .\--tutorial-index.tutorial-content, .\--tutorial-index .tutorial-content {
@@ -9390,13 +9390,4 @@ _:-ms-fullscreen, :root .modal-content{
   .schema-search-results > .ais-hits::before{
     font-size: 1rem;
   }
-}
-
-.\--body > h1, .\--body > h2 {
-  margin-bottom: 0.5em !important;
-}
-
-#installation, #rendering-charts, #note-for-rstudio-users, #download-from-github, #download-from-cran {
-  margin-bottom: 0.5em !important;
-  margin-top: 0.5em !important;
 }
