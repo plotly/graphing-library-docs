@@ -111,14 +111,6 @@ $(function(config) {
     })
   );
 
-  $('myModal').on('focusout', function () {
-      searchResults.style.zIndex = -99;
-      searchResults.style.overflowY = "none";
-      modalContent.style.background = "none";
-      modalBody.style.display = "none";
-      modalContent.style.border = "none";
-  });
-
   searchInput.addEventListener("keyup", function (event){
     if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
       searchResults.style.zIndex = -99;

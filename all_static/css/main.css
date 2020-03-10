@@ -9391,3 +9391,12 @@ _:-ms-fullscreen, :root .modal-content{
     font-size: 1rem;
   }
 }
+
+.\--body > h1, .\--body > h2 {
+  margin-bottom: 0.5em !important;
+}
+
+#installation, #rendering-charts, #note-for-rstudio-users, #download-from-github, #download-from-cran {
+  margin-bottom: 0.5em !important;
+  margin-top: 0.5em !important;
+}
