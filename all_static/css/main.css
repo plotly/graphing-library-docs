@@ -1645,8 +1645,9 @@ aside.\--sidebar-container {
   aside.\--sidebar-container .\--sidebar-fixed {
     width: 219px;
     z-index: 99;
-    max-height: 100%;
+    max-height: calc(100vh - 128px);
     overflow-y: auto;
+    position: fixed;
     overflow-x: hidden; }
     aside.\--sidebar-container .\--sidebar-fixed.affix {
       top: -webkit-calc(80px + 48px) !important;
