@@ -82,11 +82,12 @@
 <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2CSafe.js&#038;ver=4.1'></script>
 {% endif %}
  {% if page.layout == "langindex" or page.layout == "base" %}
- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <span style="float: left; padding-top:10px; padding-right:10px;"><i class="fa fa-search fa-lg"></i></span>
         <input id="search-input" class="search-input" type="text" placeholder=""/>
       </div>
       <div class="modal-body" id="modal-body">

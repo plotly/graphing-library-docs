@@ -9320,6 +9320,8 @@ pre, code, .hljs {
 .modal-body{
   background: white;
   padding: 0 !important;
+  max-height: 400px;
+  overflow-y: scroll;
 }
 
 .primary-search-results, .schema-search-results{
