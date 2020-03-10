@@ -1645,8 +1645,7 @@ aside.\--sidebar-container {
   aside.\--sidebar-container .\--sidebar-fixed {
     width: 219px;
     z-index: 99;
-    max-height: -webkit-calc(100vh - 128px);
-    max-height: calc(100vh - 128px);
+    max-height: 100%;
     overflow-y: auto;
     overflow-x: hidden; }
     aside.\--sidebar-container .\--sidebar-fixed.affix {
@@ -2343,6 +2342,7 @@ ul.\--ref {
   height: 48px;
   min-height: 48px;
   width: 100%;
+  position: fixed;
   border-bottom: 1px solid #e7e7e7;
   padding: 0 20px;
   display: -webkit-box;
@@ -8248,7 +8248,7 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
 
 .\--tutorial-index {
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 60px;
   padding-left: 20px !important;
   padding-right: 20px; }
   .\--tutorial-index.tutorial-content, .\--tutorial-index .tutorial-content {
