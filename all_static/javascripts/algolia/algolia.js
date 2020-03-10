@@ -3,16 +3,9 @@ $(function(config) {
   'use strict';
 
   var searchInput = document.getElementById("search-input");
-  var searchResults = document.getElementById("search-results");
-  var modal = document.getElementById("myModal");
   var primarySearchResults = document.getElementById('primary-search-results');
   var schemaSearchResults = document.getElementById('schema-search-results');
-  var modalContent = document.getElementById('modal-content');
   var modalBody = document.getElementById('modal-body');
-  var modalBackdrops = document.getElementsByClassName('modal-backdrop');
-  var modalInput = document.getElementById('modal-input');
-
-
   var lang = window.plotly_doc_language;
   if (lang == "plotly_js"){
     lang = "javascript"
@@ -21,7 +14,6 @@ $(function(config) {
   var emptyResult = '<div class="text-center"><br><br>No results found matching <strong>{{query}}</strong>.<br><br> Click here to <a class="algolia__result-link" target="_blank" href="https://www.google.com/search?q=plotly+' + lang + '+{{query}}">search for "plotly ' + lang + ' {{query}}" on Google</a>.</div>';
  
   var search = instantsearch({
-    // Replace with your own values
     appId: config.applicationId,
     apiKey: config.apiKey,
     indexName: config.indexName,
@@ -113,24 +105,14 @@ $(function(config) {
 
   searchInput.addEventListener("keyup", function (event){
     if (searchInput.value == "" && !navigator.userAgent.match(/Trident.*rv:11\./)){
-      searchResults.style.zIndex = -99;
-      searchResults.style.overflowY = "none";
-      modalContent.style.background = "none";
       modalBody.style.display = "none";
-      modalContent.style.border = "none";
 
     } else {
-      searchResults.style.zIndex = 99;
-      modalContent.style.display = "block";
-      searchResults.style.overflowY = "scroll";
-      modalContent.style.background = "#fff";
       modalBody.style.display = "block";
-      modalContent.style.border = "1px solid rgba(0,0,0,.2)";
     }
   });
 
-
-  modal.addEventListener("focus", function(e){
+  $('#myModal').on('shown.bs.modal', function () {
     searchInput.focus();
   });
 
