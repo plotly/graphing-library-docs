@@ -2342,7 +2342,6 @@ ul.\--ref {
   height: 48px;
   min-height: 48px;
   width: 100%;
-  position: fixed;
   border-bottom: 1px solid #e7e7e7;
   padding: 0 20px;
   display: -webkit-box;
@@ -8248,7 +8247,7 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
 
 .\--tutorial-index {
   padding-bottom: 20px;
-  padding-top: 60px;
+  padding-top: 20px;
   padding-left: 20px !important;
   padding-right: 20px; }
   .\--tutorial-index.tutorial-content, .\--tutorial-index .tutorial-content {
@@ -9281,12 +9280,11 @@ pre, code, .hljs {
       padding-right: 20px; }
 
 .modal{
-  top: 100px;
+  top: 60px;
 }
 
 .search-results{
   display:flex;
-  height: 100%;
 }
 
 #modal-button{
@@ -9305,6 +9303,11 @@ pre, code, .hljs {
   font-size: 2rem;
 }
 
+.schema-search-results > .ais-hits::before{
+  content: "Figure Reference Results";
+  font-size: 2rem;
+}
+
 .ais-hits--item:first-of-type{
   padding-top: 30px;
 }
@@ -9313,40 +9316,25 @@ pre, code, .hljs {
   color: #2391fe !important;
 }
 
-.modal-header {
-  padding-bottom: 10px;
-}
-
 .modal-body{
-  padding-top: 0;
-}
-
-.modal > a{
-  color: #2391fe;
-}
-
-.schema-search-results > .ais-hits::before{
-  content: "Figure Reference Results";
-  font-size: 2rem;
+  background: white;
+  padding: 0 !important;
 }
 
 .primary-search-results, .schema-search-results{
   width: 45%;
 } 
 
-.ais-search-box{
-  width: 100%;
+.search-input{
+  width: 90%;
+  border: none; 
+  margin: auto;
   font-size: 2rem;
 }
 
 .modal-content{
-  background: none;
-  border: none;
-}
-
-_:-ms-fullscreen, :root .modal-content{
-  background: #fff;
-  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 0px !important;
+  border: none !important;
 }
 
 .ais-hits--item{
@@ -9357,38 +9345,15 @@ _:-ms-fullscreen, :root .modal-content{
   background: #fff;
 }
 
-@media (min-width: 1025px) {
-  .modal > .modal-dialog{
-    width: 1050px;
-    height: 700px;
-    max-width: 1050px;
-  }
-
-  .modal-content{
-    height: 100%;
-  }
-
-  .modal-body{
-    height: 80%;
-  }
-  .search-input{
-    width: 100%;
-    border-radius: 10px; 
-    margin: auto;
-  }
+.modal > .modal-dialog{
+  width: 1050px;
+  height: 700px;
+  max-width: 1050px;
 }
 
 @media (max-width: 1025px) {
   .modal > .modal-dialog{
     width: 80%;
-  }
-  
-  .primary-search-results > .ais-hits::before{
-    font-size: 1rem;
-  }
-  
-  .schema-search-results > .ais-hits::before{
-    font-size: 1rem;
   }
 }
 
