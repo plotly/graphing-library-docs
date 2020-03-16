@@ -614,7 +614,6 @@ html {
 
   h1, h2, h3, h4, h5, h6{
     font-family: "Campaign", serif;
-    color: black;
   }
 
 body {
@@ -7974,7 +7973,7 @@ div#notebook {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 110% 110%;
-  background-image: url(https://plotly-tutorials.s3-us-west-1.amazonaws.com/assets/api/images/api-bg-img.png);
+  background-image: url(https://images.prismic.io/plotly-marketing-website/9f59f272-4658-491f-a618-c8e353eb77c1_homepage-hero-1500.jpg?auto=compress,format);
   width: 100%;
   height: 400px;
   max-height: 500px;
@@ -8027,14 +8026,14 @@ div#notebook {
         margin-top: 110px; } }
     .page.\--home .hero .\--welcome h2 {
       font-size: 28pt;
-      font-family: "Asap", sans-serif;
       margin-bottom: 0;
-      margin-top: 20px; }
+      margin-top: 0;
+    }
     .page.\--home .hero .\--welcome h1, .page.\--home .hero .\--welcome section.section h2, section.section .page.\--home .hero .\--welcome h2 {
       width: 100%;
       margin: 0;
       font-weight: 100;
-      color: #2391fe;
+      color: white;
       padding-top: 10px;
       padding-bottom: 20px; }
       @media (max-width: 584px) {
@@ -9433,4 +9432,16 @@ font-display:auto;font-style:normal;font-weight:700;
 font-family:"campaign";
 src:url("https://use.typekit.net/af/3fc953/00000000000000003b9afbc7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/3fc953/00000000000000003b9afbc7/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/3fc953/00000000000000003b9afbc7/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
 font-display:auto;font-style:italic;font-weight:700;
+}
+
+@media (max-width: 1023px) {
+  .--breadcrumb-container{
+    display: none;
+  }
+  .\--breadcrumb-container.affix ~ main section.\--page-body {
+    padding-top: none;
+  }
+  aside.\--sidebar-container .\--sidebar-fixed.affix {
+    top: 80px !important;
+  }
 }
