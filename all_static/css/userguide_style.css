@@ -10179,7 +10179,7 @@ div#notebook {
 }
 
 @media print {
-    div.cell {
+     {
         display: block;
         page-break-inside: avoid;
     }
