@@ -15,7 +15,6 @@ thumbnail: thumbnail/mixed.jpg
 	<div class="--welcome-body">
 		<!--div.--wrap-inner-->
 		<div class="--title">
-			<div class="--category-img"><img src="https://plot.ly/gh-pages/documentation/static/images/r-small.png" alt=""></div>
 			<div class="--body">
 				<h1>Plotly R Library Basic Charts</h1>
 				<p>{{page.description}}</p>
