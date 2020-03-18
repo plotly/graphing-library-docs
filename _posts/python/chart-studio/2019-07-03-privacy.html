@@ -13,8 +13,7 @@ v4upgrade: True
 
 {% raw %}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js"></script>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Default-Privacy">Default Privacy<a class="anchor-link" href="#Default-Privacy">&#182;</a></h4><p>By default, <code>plotly.iplot()</code> and <code>plotly.plot()</code> create public graphs (which are free to create). With a <a href="https://plot.ly/plans">plotly subscription</a> you can easily make charts private or secret via the sharing argument.</p>
@@ -22,8 +21,7 @@ v4upgrade: True
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Public-Graphs">Public Graphs<a class="anchor-link" href="#Public-Graphs">&#182;</a></h4>
@@ -32,7 +30,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio.plotly</span> <span class="k">as</span> <span class="nn">py</span>
@@ -80,8 +78,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Below is the URL of this public plot.  Anyone can view public plots even if they are not logged into Plotly.  Go ahead and try it out:</p>
@@ -91,7 +88,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;privacy-public&#39;</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">)</span>
@@ -122,8 +119,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Private-Graphs">Private Graphs<a class="anchor-link" href="#Private-Graphs">&#182;</a></h3>
@@ -132,7 +128,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;privacy-private&#39;</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="s1">&#39;private&#39;</span><span class="p">)</span>
@@ -170,8 +166,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Below is the URL of the private plot above. Only the owner can view the private plot. You won't be able to view this plot, try it out:</p>
@@ -181,7 +176,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;privacy-private&#39;</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="s1">&#39;private&#39;</span><span class="p">)</span>
@@ -212,8 +207,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Secret-Graphs">Secret Graphs<a class="anchor-link" href="#Secret-Graphs">&#182;</a></h3>
@@ -222,7 +216,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;privacy-secret&#39;</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="s1">&#39;secret&#39;</span><span class="p">)</span>
@@ -260,8 +254,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Below is the URL of this secret plot. Anyone with the secret link can view this chart. However, it will not appear in the Plotly feed, your profile, or search engines. Go ahead and try it out:</p>
@@ -271,7 +264,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;privacy-secret&#39;</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="s1">&#39;secret&#39;</span><span class="p">)</span>
@@ -302,8 +295,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Make-All-Future-Plots-Private">Make All Future Plots Private<a class="anchor-link" href="#Make-All-Future-Plots-Private">&#182;</a></h3><p>To make all future plots private, you can update your configuration file to create private plots by default:</p>
@@ -313,7 +305,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio</span>
@@ -325,8 +317,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Make-All-Existing-Plots-Private">Make All Existing Plots Private<a class="anchor-link" href="#Make-All-Existing-Plots-Private">&#182;</a></h3><p>This example uses <a href="https://api.plot.ly/v2/">Plotly's REST API</a></p>
@@ -336,7 +327,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -349,8 +340,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Define variables, including YOUR <a href="https://plot.ly/settings/api">USERNAME and API KEY</a></p>
@@ -360,7 +350,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;private_plotly&#39;</span> <span class="c1"># Replace with YOUR USERNAME</span>
@@ -377,8 +367,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Collect filenames of <b>ALL</b> of your plots and <br>update <code>world_readable</code> of each plot with a PATCH request</p>
@@ -388,7 +377,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_pages</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">page_size</span><span class="p">):</span>
@@ -423,8 +412,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Reference">Reference<a class="anchor-link" href="#Reference">&#182;</a></h3>
@@ -433,7 +421,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">)</span>
@@ -449,7 +437,7 @@ v4upgrade: True
 
 <div class="output_area">
 
-<div class="prompt"></div>
+
 
 
 <div class="output_subarea output_stream output_stdout output_text">

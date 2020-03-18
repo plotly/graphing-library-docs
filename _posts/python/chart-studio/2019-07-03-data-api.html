@@ -13,8 +13,7 @@ v4upgrade: True
 
 {% raw %}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js"></script>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Creating-a-Plotly-Grid">Creating a Plotly Grid<a class="anchor-link" href="#Creating-a-Plotly-Grid">&#182;</a></h4><p>You can instantiate a grid with data by either uploading tabular data to Plotly or by creating a Plotly <code>grid</code> using the API. To upload the grid we will use <code>plotly.plotly.grid_ops.upload()</code>. It takes the following arguments:</p>
@@ -31,7 +30,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio</span>
@@ -64,7 +63,7 @@ v4upgrade: True
 
 <div class="output_area">
 
-<div class="prompt"></div>
+
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -77,8 +76,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="View-and-Share-your-Grid">View and Share your Grid<a class="anchor-link" href="#View-and-Share-your-Grid">&#182;</a></h4><p>You can view your newly created grid at the <code>url</code>:</p>
@@ -88,7 +86,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.embed&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;200px&quot;</span><span class="p">,</span> <span class="n">frameBorder</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
@@ -126,8 +124,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You are also able to view the grid in your list of files inside your <a href="https://plot.ly/organize">organize folder</a>.</p>
@@ -135,8 +132,7 @@ v4upgrade: True
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Upload-Dataframes-to-Plotly">Upload Dataframes to Plotly<a class="anchor-link" href="#Upload-Dataframes-to-Plotly">&#182;</a></h4><p>Along with uploading a grid, you can upload a Dataframe as well as convert it to raw data as a grid:</p>
@@ -146,7 +142,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio.plotly</span> <span class="k">as</span> <span class="nn">py</span>
@@ -192,8 +188,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Making-Graphs-from-Grids">Making Graphs from Grids<a class="anchor-link" href="#Making-Graphs-from-Grids">&#182;</a></h4><p>Plotly graphs are usually described with data embedded in them. For example, here we place <code>x</code> and <code>y</code> data directly into our <code>Histogram2dContour</code> object:</p>
@@ -203,7 +198,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -251,8 +246,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can also create graphs based off of references to columns of grids.  Here, we'll upload several <code>column</code>s to our Plotly account:</p>
@@ -262,7 +256,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">column_1</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span> <span class="s1">&#39;column 1&#39;</span><span class="p">)</span>
@@ -285,7 +279,7 @@ v4upgrade: True
 
 <div class="output_area">
 
-<div class="prompt"></div>
+
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -300,7 +294,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.embed&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;200px&quot;</span><span class="p">,</span> <span class="n">frameBorder</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
@@ -338,8 +332,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Make-Graph-from-Raw-Data">Make Graph from Raw Data<a class="anchor-link" href="#Make-Graph-from-Raw-Data">&#182;</a></h4><p>Instead of placing data into <code>x</code> and <code>y</code>, we'll place our Grid columns into <code>xsrc</code> and <code>ysrc</code>:</p>
@@ -349,7 +342,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
@@ -394,8 +387,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So, when you view the data, you'll see your original grid, not just the columns that compose this graph:</p>
@@ -403,8 +395,7 @@ v4upgrade: True
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Attaching-Meta-Data-to-Grids">Attaching Meta Data to Grids<a class="anchor-link" href="#Attaching-Meta-Data-to-Grids">&#182;</a></h4><p>In <a href="https://plot.ly/product/enterprise/">Chart Studio Enterprise</a>, you can upload and assign free-form JSON <code>metadata</code> to any grid object. This means that you can keep all of your raw data in one place, under one grid.</p>
@@ -415,7 +406,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">meta</span> <span class="o">=</span> <span class="p">{</span>
@@ -441,7 +432,7 @@ v4upgrade: True
 
 <div class="output_area">
 
-<div class="prompt"></div>
+
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -454,8 +445,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Reference">Reference<a class="anchor-link" href="#Reference">&#182;</a></h4>
@@ -464,7 +454,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">py</span><span class="o">.</span><span class="n">grid_ops</span><span class="p">)</span>
@@ -480,7 +470,7 @@ v4upgrade: True
 
 <div class="output_area">
 
-<div class="prompt"></div>
+
 
 
 <div class="output_subarea output_stream output_stdout output_text">

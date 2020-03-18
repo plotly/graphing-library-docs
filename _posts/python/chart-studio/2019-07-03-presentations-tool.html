@@ -13,8 +13,7 @@ v4upgrade: True
 
 {% raw %}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js"></script>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Plotly-Presentations">Plotly Presentations<a class="anchor-link" href="#Plotly-Presentations">&#182;</a></h4><p>To use Plotly's Presentations API you will write your presentation code in a string of markdown and then pass that through the Presentations API function <code>pres.Presentation()</code>. This creates a JSON version of your presentation. To upload the presentation online pass it through <code>py.presentation_ops.upload()</code>.</p>
@@ -25,8 +24,7 @@ v4upgrade: True
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Current-Limitations">Current Limitations<a class="anchor-link" href="#Current-Limitations">&#182;</a></h4><p><code>Boldface</code>, <em>italics</em> and <a href="https://www.w3.org/WhatIs.html">hypertext</a> are not supported features of the Presentation API.</p>
@@ -34,8 +32,7 @@ v4upgrade: True
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Display-in-Jupyter">Display in Jupyter<a class="anchor-link" href="#Display-in-Jupyter">&#182;</a></h4><p>The function below generates HTML code to display the presentation in an iframe directly in Jupyter.</p>
@@ -45,7 +42,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">url_to_iframe</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
@@ -77,8 +74,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Simple-Example">Simple Example<a class="anchor-link" href="#Simple-Example">&#182;</a></h4>
@@ -87,7 +83,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio.plotly</span> <span class="k">as</span> <span class="nn">py</span>
@@ -113,8 +109,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://plot.ly/~AdamKulidjian/3700/simple-pres/">https://plot.ly/~AdamKulidjian/3700/simple-pres/</a></p>
@@ -124,7 +119,7 @@ v4upgrade: True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
@@ -170,8 +165,7 @@ v4upgrade: True
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Insert-Plotly-Chart">Insert Plotly Chart<a class="anchor-link" href="#Insert-Plotly-Chart">&#182;</a></h4><p>If you want to insert a Plotly chart into your presentation, all you need to do is write a line in your presentation that takes the form:</p>
@@ -187,7 +181,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio.plotly</span> <span class="k">as</span> <span class="nn">py</span>
@@ -220,8 +214,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://plot.ly/~AdamKulidjian/3710/pres-with-plotly-chart/">https://plot.ly/~AdamKulidjian/3710/pres-with-plotly-chart/</a></p>
@@ -231,7 +224,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
@@ -277,8 +270,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Insert-Web-Images">Insert Web Images<a class="anchor-link" href="#Insert-Web-Images">&#182;</a></h4><p>To insert an image from the web, insert the a <code>Image(url)</code> where url is the image url.</p>
@@ -288,7 +280,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio.plotly</span> <span class="k">as</span> <span class="nn">py</span>
@@ -322,8 +314,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://plot.ly/~AdamKulidjian/3702/pres-with-images/">https://plot.ly/~AdamKulidjian/3702/pres-with-images/</a></p>
@@ -333,7 +324,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
@@ -379,8 +370,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Image-Stretch">Image Stretch<a class="anchor-link" href="#Image-Stretch">&#182;</a></h4><p>If you want to ensure that your image maintains its original width:height ratio, include the parameter <code>imgStretch=False</code> in your <code>pres.Presentation()</code> function call.</p>
@@ -390,7 +380,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio.plotly</span> <span class="k">as</span> <span class="nn">py</span>
@@ -416,8 +406,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://plot.ly/~AdamKulidjian/3703/pres-with-no-imgstretch/">https://plot.ly/~AdamKulidjian/3703/pres-with-no-imgstretch/</a></p>
@@ -427,7 +416,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
@@ -468,8 +457,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Transitions">Transitions<a class="anchor-link" href="#Transitions">&#182;</a></h4><p>You can specify how your want your slides to transition to one another. Just like in the Plotly Presentation Application, there are 4 types of transitions: <code>slide</code>, <code>zoom</code>, <code>fade</code> and <code>spin</code>.</p>
@@ -485,7 +473,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio.plotly</span> <span class="k">as</span> <span class="nn">py</span>
@@ -527,7 +515,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
@@ -573,8 +561,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Reference">Reference<a class="anchor-link" href="#Reference">&#182;</a></h4>
@@ -583,7 +570,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">py</span><span class="o">.</span><span class="n">presentation_ops</span><span class="p">)</span>
@@ -599,7 +586,7 @@ For Plotly charts it is HIGHLY ADVISED that you use a chart that has <code>layou
 
 <div class="output_area">
 
-<div class="prompt"></div>
+
 
 
 <div class="output_subarea output_stream output_stdout output_text">
