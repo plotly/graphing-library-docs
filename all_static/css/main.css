@@ -1163,7 +1163,6 @@ header.header-main {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 20px;
-  padding-left: 43px;
   height: 80px; }
   header.header-main.mobile-menu .\--wrap .\--nav-mobile {
     display: -webkit-box;
@@ -1512,7 +1511,7 @@ header.header-main {
 
 .\--wrap {
   width: 95%;
-  max-width: 2000px;
+  max-width: 1440px;
   margin: auto; }
 
 .plotly-social-media-small li:hover a div.icon {
@@ -2346,7 +2345,6 @@ ul.\--ref {
   width: 100%;
   border-bottom: 1px solid #e7e7e7;
   padding: 0 20px;
-  padding-left: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8717,8 +8715,8 @@ pre {
       border-top: 1px solid #e7e7e7 !important; }
     .page--single .tutorial-content p.last + h3, .page--single .tutorial-content section.section div.last.content-box + h3, section.section .page--single .tutorial-content div.last.content-box + h3 {
       border-top: 1px solid #e7e7e7 !important; }
-  .page--single .tutorial-content a {
-    color: #357e94 !important; }
+  .page--single .tutorial-content a:hover {
+    text-decoration: underline; }
   .page--single .tutorial-content ul li {
     padding: 10px; }
   .page--single .tutorial-content p strong, .page--single .tutorial-content section.section div.content-box strong, section.section .page--single .tutorial-content div.content-box strong {
@@ -8760,6 +8758,7 @@ pre {
     font-size: 2rem; }
   .page--single .tutorial-content h1, .page--single .tutorial-content section.section h2, section.section .page--single .tutorial-content h2, .page--single .tutorial-content h3, .page--single .tutorial-content h4, .page--single .tutorial-content .js-splash--section-title, .page--single .tutorial-content h5 {
     padding: 15px;
+    color: black !important;
     padding-left: 0;
     font-weight: 300;
     display: -webkit-box;
@@ -9393,12 +9392,12 @@ pre, code, .hljs {
   aside.\--sidebar-container .\--sidebar-fixed.affix {
     top: 80px !important;
   }
-
-
 }
 
-.--breadcrumb-container > .\--wrap {
-  margin-left: 0;
+@media (max-width: 585px) {
+  .\--wrap {
+    margin: 0;
+  }
 }
 
 /*
