@@ -6203,7 +6203,8 @@ div.output_unrecognized a:hover {
   background-color: black; }
 
 .rendered_html pre {
-  margin: 1em 2em; }
+  margin: 1em 2em;
+  margin-left: 0; }
 
 .rendered_html pre, .rendered_html code {
   border: 0;
@@ -6213,7 +6214,8 @@ div.output_unrecognized a:hover {
   padding: 0; }
 
 .rendered_html blockquote {
-  margin: 1em 2em; }
+  margin: 1em 2em;
+  margin-left: 0; }
 
 .rendered_html table {
   margin-left: auto;
