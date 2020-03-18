@@ -1192,7 +1192,7 @@ header.header-main {
       text-decoration: none !important; }
   header.header-main.\--default, .header-large--wrap + header.header-main.\--default.affix {
     color: #626262 !important;
-    background-color: #00004f; }
+    background-color: white; }
     header.header-main.\--default a:not(.button):link, header.header-main.\--default a:not(.button):visited, header.header-main.\--default a:not(.button):active {
       color: currentColor !important; }
   header.header-main .\--wrap {
@@ -1510,9 +1510,9 @@ header.header-main {
           padding: 0 5px; }
 
 .\--wrap {
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%; }
+  width: 95%;
+  max-width: 2000px;
+  margin: auto; }
 
 .plotly-social-media-small li:hover a div.icon {
   opacity: 1; }
@@ -1610,7 +1610,7 @@ header.header-main {
     margin-left: -25vw;
     top: 0;
     position: absolute;
-    background: #f4f4f8;
+    background: #e4f5f2;
     z-index: -1; }
 
 .\--page-body {
@@ -1622,7 +1622,7 @@ aside.\--sidebar-container {
   width: 220px;
   min-width: 220px;
   border-right: 1px solid #e7e7e7;
-  background: #f4f4f8; }
+  background: #e4f5f2; }
   @media (max-width: 584px) {
     aside.\--sidebar-container {
       background: white !important;
@@ -1634,10 +1634,8 @@ aside.\--sidebar-container {
         margin-left: 0; } }
   aside.\--sidebar-container header.\--sidebar-header {
     padding: 15px 10px;
-    background: #e8e8f0;
-    border-bottom: 1px solid #e7e7e7;
+    background: #e4f5f2;
     font-weight: 600;
-    border-left: 1px solid #e7e7e7;
     color: rgba(0, 0, 0, 0.7);
     font-weight: bold; }
     aside.\--sidebar-container header.\--sidebar-header:not(:first-of-type) {
@@ -1668,7 +1666,7 @@ aside.\--sidebar-container {
     aside.\--sidebar-container .\--sidebar-body ul li {
       font-size: 1.2rem; }
       aside.\--sidebar-container .\--sidebar-body ul li.\--category-title {
-        background: #f4f4f8;
+        background: #e4f5f2;
         font-weight: 400; }
         aside.\--sidebar-container .\--sidebar-body ul li.\--category-title:hover {
           pointer-events: none; }
@@ -1684,13 +1682,12 @@ aside.\--sidebar-container {
         background: white; }
   aside.\--sidebar-container .\--btn {
     background: transparent;
-    border: 1px solid #e7e7e7;
     width: -webkit-calc(100%);
     width: calc(100%);
+    border: none !important;
     position: relative;
     padding: 10px;
-    background: #eef7ff;
-    background: #fafafc;
+    background: #e4f5f2;
     border-right: 0;
     color: #626262;
     font-weight: 600;
@@ -7970,7 +7967,7 @@ div#notebook {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 110% 110%;
-  background-image: url(https://plotly-tutorials.s3-us-west-1.amazonaws.com/assets/api/images/api-bg-img.png);
+  background-image: url(https://images.prismic.io/plotly-marketing-website/9f59f272-4658-491f-a618-c8e353eb77c1_homepage-hero-1500.jpg?auto=compress,format);
   width: 100%;
   height: 400px;
   max-height: 500px;
@@ -9289,7 +9286,7 @@ pre, code, .hljs {
 }
 
 #modal-button{
-  background-color: #00004f;
+  background-color: white;
   border: none;
 }
 
