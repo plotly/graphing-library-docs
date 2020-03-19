@@ -12,7 +12,7 @@ signal-analysis:
     text: Signal Analysis
 file_settings:
     reference: 'plotly-fundamentals'
-    text: Plotly Fundamentals
+    text: Fundamentals
 basic:
     reference: 'basic-charts'
     text: Basic

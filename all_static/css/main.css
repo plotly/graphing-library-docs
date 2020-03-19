@@ -1589,18 +1589,25 @@ header.header-main {
   color: #626262; }
 
 .subscribe-button {
+  background-color: #f4564e;
+  border-radius: 1.22rem;
+  color: #fff!important;
+  cursor: pointer;
+  display: inline-block;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1.33px;
+  outline: none;
+  padding: .55rem 1.22rem;
+  text-align: center;
   text-decoration: none;
-  padding: 5px;
-  background-color: #119dff;
-  color: white !important;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  margin-top: 11px !important;
-  font-size: 13px; }
+  text-transform: uppercase;
+  transition: background-color .2s ease-in-out; }
 
 .subscribe-button:hover {
   text-decoration: none !important;
-  color: white !important; }
+  color:#20293d !important; }
 
 .subscribe-button:focus {
   text-decoration: none; }
@@ -1627,7 +1634,8 @@ aside.\--sidebar-container {
   width: 220px;
   min-width: 220px;
   border-right: 1px solid #e7e7e7;
-  background: #e4f5f2; }
+  background: #e4f5f2;
+scrollbar-color: #20293d !important; }
   @media (max-width: 584px) {
     aside.\--sidebar-container {
       background: white !important;
@@ -1657,7 +1665,6 @@ aside.\--sidebar-container {
       top: -webkit-calc(80px + 48px) !important;
       top: calc(80px + 48px) !important;
       z-index: 1;
-      padding-right: 50px;
       position: fixed !important; }
     aside.\--sidebar-container .\--sidebar-fixed.affix-top {
       position: absolute;
@@ -1694,7 +1701,6 @@ aside.\--sidebar-container {
     width: calc(100%);
     border: none !important;
     position: relative;
-    padding: 10px;
     background: #e4f5f2;
     border-right: 0;
     color: #626262;
@@ -1709,13 +1715,13 @@ aside.\--sidebar-container {
     -ms-flex-align: center;
     align-items: center;
     text-transform: capitalize;
-    margin-top: 10px; }
+    margin-top: 10px;
+  padding-left: 0; }
     aside.\--sidebar-container .\--btn:hover {
-      background: white; }
+      background: #e4f5f2; }
       aside.\--sidebar-container .\--btn:hover div.icon svg path {
         fill: #2391fe; }
     aside.\--sidebar-container .\--btn .icon {
-      margin-left: 10px;
       margin-right: 5px;
       margin-bottom: -5px; }
       aside.\--sidebar-container .\--btn .icon svg path {
@@ -4826,6 +4832,7 @@ div.traceback-wrapper {
 
 body {
   background-color: #fff;
+  color: #20293d !important;
   position: absolute;
   left: 0;
   right: 0;
@@ -8223,6 +8230,7 @@ div#notebook {
       .page.\--home .\--documentation-categories ul li h2 {
         width: 100%;
         font-size: 1.4rem;
+        font-family: "jubilat", sans-serif;
         line-height: 1.7rem;
         text-align: center;
         font-weight: 500;
@@ -8328,7 +8336,7 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
         font-size: 3rem;
         font-family: "jubilat", sans-serif;
         margin: 0;
-        opacity: 0.7; }
+         }
       .\--tutorial-index .\--welcome .\--title .sub {
         font-size: 1.5rem; }
   .\--tutorial-index .\--section {
@@ -8763,7 +8771,7 @@ pre {
     font-size: 2rem; }
   .page--single .tutorial-content h1, .page--single .tutorial-content section.section h2, section.section .page--single .tutorial-content h2, .page--single .tutorial-content h3, .page--single .tutorial-content h4, .page--single .tutorial-content .js-splash--section-title, .page--single .tutorial-content h5 {
     padding: 15px;
-    color: black !important;
+    color: #20293d !important;
     padding-left: 0;
     font-weight: 300;
     display: -webkit-box;
@@ -9379,7 +9387,7 @@ pre, code, .hljs {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
-  color: black !important;
+  color: #20293d !important;
   font-family: "jubilat", sans-serif;
 }
 
@@ -9470,4 +9478,17 @@ font-display:auto;font-style:normal;font-weight:700;
 font-family:"campaign";
 src:url("https://use.typekit.net/af/3fc953/00000000000000003b9afbc7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/3fc953/00000000000000003b9afbc7/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/3fc953/00000000000000003b9afbc7/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
 font-display:auto;font-style:italic;font-weight:700;
+}
+
+.close {
+  font-size: 30px;
+}
+
+.html-widget-static-bound{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.codepen-submit{
+  color: #506784 !important;
 }

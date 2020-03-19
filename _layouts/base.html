@@ -28,7 +28,7 @@
                             <input id="modal-input" style="border-radius: 10px; width: 140px"  type="text" placeholder="   Search..." readonly/>
                           </button>
                     {% endif %}
-				<header class="--sidebar-header">Navigation</header>
+				<header class="--sidebar-header">On This Page</header>
 				<nav class="--sidebar-body watch"   id="where">
 		  <ul class="--sidebar-list"></ul>
 		  
@@ -99,23 +99,9 @@
 				{% endif %}
 			</section>
 			<!--End Plotly Basics Section-->
-			{% if page.language == "plotly_js" %}
-			<section class="meta">
-				<div class="wrap">
-					<img width="250" src="/all_static/images/browser_support.png">
-					<p style="text-align: center;">
-						<b style="color:#447adb;">plotly.js</b> runs on all SVG-compatible browsers
-					</p>
-				</div>
-			</section>
-			{% endif %}
 		</section>
 	</div>
 </main>
-
-{% if page.permalink contains "/javascript" %}
-{% include layouts/helpbox.html %}
-{% endif %}
 
 {% include layouts/insertSidebarElement.html %}
 
