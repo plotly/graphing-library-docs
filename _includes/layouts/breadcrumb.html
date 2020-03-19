@@ -18,10 +18,6 @@
             Breadcrumb List
         -->
         <ul class="--breadcrumb-list">
-            <li class="--breadcrumb-item">
-                <a href="https://plot.ly/"><span>Plotly</span></a>
-            </li>
-            <li class="--breadcrumb-item"><a href="/graphing-libraries/"><span>Open Source Graphing Libraries</span></a></li>
             {% if page.permalink != "/api/" %}
             <li class="--breadcrumb-item">
                 <a href="/{% if page.permalink contains 'javascript' %}javascript{% else %}{{page.language}}{% endif %}"><span>{% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}</span></a>

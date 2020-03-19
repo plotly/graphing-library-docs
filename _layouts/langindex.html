@@ -13,6 +13,7 @@
 <main class="--page page--single --index">
 
     <div class="--wrap">
+        
         <!-- aside - Main Sidebar-->
         {% if page.page_type == "reference" %}
         {% include layouts/reference-side-nav.html %}
@@ -31,7 +32,9 @@
 
 </main>
 
+{% if page.permalink contains "/javascript" %}
 {% include layouts/helpbox.html %}
+{% endif %}
 
 {% include layouts/_footer-main.html %}
 

@@ -23,9 +23,15 @@
 		<!-- aside - Main Sidebar-->
 		<aside class="--sidebar-container">
 			<div class="--sidebar-fixed reference" data-spy="affix" id="where">
+				{% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" or page.permalink contains "ggplot2/"  %}
+                        <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
+                            <input id="modal-input" style="border-radius: 10px; width: 140px"  type="text" placeholder="   Search..." readonly/>
+                          </button>
+                    {% endif %}
 				<header class="--sidebar-header">Navigation</header>
 				<nav class="--sidebar-body watch"   id="where">
-          <ul class="--sidebar-list"></ul>
+		  <ul class="--sidebar-list"></ul>
+		  
           {% if page.language == "python/v3" %}
 					<button class="--btn back">
 						<div>
@@ -61,46 +67,6 @@
 				<div class="--welcome-body">
 					<!--div.--wrap-inner-->
 					<div class="--title">
-						<div class="--category-img" style="align-self: start">
-
-
-
-
-							{% if page.language == "excel" %}
-							<img src="http://plot.ineffable.co/images/excel-logo.png" alt="">
-							{% endif %}
-							{% if page.language == "python"  %}
-							<img src="https://images.plot.ly/language-icons/api-home/python-logo.png" alt="">
-              {% endif %}
-              {% if page.language == "python/v3"  %}
-							<img src="https://images.plot.ly/language-icons/api-home/python-logo.png" alt="">
-							{% endif %}
-							{% if page.language == "matlab" %}
-							{% endif %}
-							{% if page.language == "julia" %}
-							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Julia_prog_language.svg/2000px-Julia_prog_language.svg.png" alt="">
-							{% endif %}
-							{% if page.language == "r" %}
-							<img src="https://images.plot.ly/language-icons/api-home/r-logo.png" alt="">
-							{% endif %}
-							{% if page.language == "ggplot2" %}
-							<img src="https://images.plot.ly/language-icons/api-home/ggplot2-logo.png" alt="">
-							{% endif %}
-							{% if page.language == "plotly_js" %}
-							<img src="https://images.plot.ly/language-icons/api-home/js-logo.png" alt="Plotly.js">
-							{% endif %}
-							{% if page.language == "nodejs" %}
-							<img src="https://images.plot.ly/language-icons/api-home/nodejs-logo.png" alt="Node.js">
-							{% endif %}
-							{% if page.language == "scala" %}
-							<img src="https://images.plot.ly/plotly-documentation/thumbnail/scala-small.jpg" alt="Scala">
-							{% endif %}
-
-
-
-
-
-						</div>
 						<div class="--body">
 
 							{% unless page.ignore_header %}
@@ -111,9 +77,9 @@
 								{% endunless %}
 							</h1>
 							<p>{{page.description}} </p>
+							<br>
 
 							{% endunless %}
-              {% include layouts/lang-navigation.html %}
 							{% include layouts/new-to-plotly.html %}
 
 						</div>
@@ -147,8 +113,9 @@
 	</div>
 </main>
 
+{% if page.permalink contains "/javascript" %}
 {% include layouts/helpbox.html %}
-
+{% endif %}
 
 {% include layouts/insertSidebarElement.html %}
 
