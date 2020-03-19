@@ -1397,19 +1397,24 @@ header.header-main {
       header.header-main .\--wrap .\--nav-site {
         display: none !important; } }
     header.header-main .\--wrap .button {
+      background-color: #f4564e;
+      border-radius: 1.22rem;
+      color: #fff!important;
+      cursor: pointer;
       display: inline-block;
-      padding: 5px 10px;
-      position: relative;
-      font-size: 12px !important;
-      letter-spacing: 0.5px;
-      font-weight: 600;
-      opacity: 1;
-      background-color: #119dff;
-      -webkit-border-radius: 4px;
-      border-radius: 4px;
-      color: white; }
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 1.33px;
+      outline: none;
+      padding: .55rem 1.22rem;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color .2s ease-in-out; }
       header.header-main .\--wrap .button:hover {
         text-decoration: none;
+        background-color: #20293d;
         color: white !important;
         opacity: 1; }
         header.header-main .\--wrap .button:hover::before {
@@ -1682,7 +1687,7 @@ aside.\--sidebar-container {
         aside.\--sidebar-container .\--sidebar-body ul li a::before {
           display: none !important; }
       aside.\--sidebar-container .\--sidebar-body ul li.\--sidebar-item:hover {
-        background: white; }
+        background: #e4f5f2; }
   aside.\--sidebar-container .\--btn {
     background: transparent;
     width: -webkit-calc(100%);
@@ -8017,17 +8022,18 @@ div#notebook {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     color: #fff;
-    margin-top: 120px;
+    margin-top: 60px;
     max-width: 700px;
     text-align: center; }
     @media (max-width: 584px) {
       .page.\--home .hero .\--welcome {
         margin-top: 110px; } }
     .page.\--home .hero .\--welcome h2 {
-      font-size: 28pt;
-      font-family: "Asap", sans-serif;
+      font-size: 60px;
+      font-family: "jubilat", sans-serif;
       margin-bottom: 0;
-      margin-top: 20px; }
+      color: white !important;
+     }
     .page.\--home .hero .\--welcome h1, .page.\--home .hero .\--welcome section.section h2, section.section .page.\--home .hero .\--welcome h2 {
       width: 100%;
       margin: 0;
@@ -8045,10 +8051,12 @@ div#notebook {
       .page.\--home .hero .\--welcome p, .page.\--home .hero .\--welcome section.section div.content-box, section.section .page.\--home .hero .\--welcome div.content-box {
         padding: 0 40px; } }
     .page.\--home .hero .\--welcome span {
-      color: #fff;
-      font-size: 14pt;
+      color: #20293d;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.2;
       text-transform: uppercase;
-      letter-spacing: 2px; }
+     }
 
 .page.\--home .\--documentation-categories {
   position: relative;
