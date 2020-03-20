@@ -1149,7 +1149,6 @@ header .\-identity {
 header.header-main {
   -webkit-transition: 0.2s ease-in-out all;
   transition: 0.2s ease-in-out all;
-  position: fixed;
   top: 0;
   z-index: 9999;
   border-bottom: 1px solid #e7e7e7;
@@ -1163,7 +1162,9 @@ header.header-main {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 20px;
-  height: 80px; }
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 60px; }
   header.header-main.mobile-menu .\--wrap .\--nav-mobile {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1405,6 +1406,7 @@ header.header-main {
       font-style: italic;
       font-weight: 700;
       line-height: 1.2;
+      font-size: 12.8px;
       letter-spacing: 1.33px;
       outline: none;
       padding: .55rem 1.22rem;
@@ -1596,6 +1598,7 @@ header.header-main {
   display: inline-block;
   font-style: italic;
   font-weight: 700;
+  font-size: 12.8px;
   line-height: 1.2;
   letter-spacing: 1.33px;
   outline: none;
@@ -9521,8 +9524,6 @@ font-display:auto;font-style:italic;font-weight:700;
 .\--btn > .icon:hover {
   background-color: #0FA0CE;
 }
-
-
 
 section > .nav-breadcrumb-container {
   padding-top: 20px;
