@@ -1676,8 +1676,6 @@ aside.\--sidebar-container {
       top: 0; }
     aside.\--sidebar-container .\--sidebar-fixed > *:last-child {
       margin-bottom: 80px; }
-  aside.\--sidebar-container .\--sidebar-body {
-    overflow-y: auto; }
     aside.\--sidebar-container .\--sidebar-body *::before {
       display: none !important; }
     aside.\--sidebar-container .\--sidebar-body a:hover {
@@ -8258,7 +8256,7 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
 .\--tutorial-index {
   padding-bottom: 20px;
   padding-left: 60px !important;
-  padding-right: 20px; }
+   }
   .\--tutorial-index.tutorial-content, .\--tutorial-index .tutorial-content {
     padding: 0 !important; }
   .\--tutorial-index .\--welcome {
@@ -8292,7 +8290,6 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
       -ms-flex-pack: start;
       justify-content: flex-start; }
       .\--tutorial-index .\--welcome .\--title .\--body {
-        padding-right: 100px;
         -webkit-box-flex: 1;
         -webkit-flex: 1;
         -ms-flex: 1;
