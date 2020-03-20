@@ -9492,7 +9492,7 @@ font-display:auto;font-style:italic;font-weight:700;
 
 .html-widget-static-bound{
   padding-top: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .codepen-submit{
