@@ -15,8 +15,6 @@
 
 {% include layouts/_header-main.html %}
 
-{% include layouts/breadcrumb.html %}
-
 <main class="--page page--single --index">
 
 	<div class="--wrap">
@@ -55,7 +53,7 @@
 									  d="M20,10V14H11L14.5,17.5L12.08,19.92L4.16,12L12.08,4.08L14.5,6.5L11,10H20Z"/>
 							</svg>
 						</div>
-						<span><a href="/{% if page.language == "plotly_js" %}javascript{% else %}{{page.language}}{% endif %}/">Back to {% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}
+						<span></span><a href="/{% if page.language == "plotly_js" %}javascript{% else %}{{page.language}}{% endif %}/">Back to {% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}
 						</a></span>
 					</button>
 				</nav>
@@ -68,6 +66,9 @@
 					<!--div.--wrap-inner-->
 					<div class="--title">
 						<div class="--body">
+							<div class="nav-breadcrumb-container">
+								{% include layouts/breadcrumb.html %}
+							</div>
 
 							{% unless page.ignore_header %}
 							<h1>

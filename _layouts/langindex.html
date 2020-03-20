@@ -8,8 +8,6 @@
 
 {% include layouts/_header-main.html %}
 
-{% include layouts/breadcrumb.html %}
-
 <main class="--page page--single --index">
 
     <div class="--wrap">
@@ -24,6 +22,9 @@
         {% endif %}
         <!-- Main-->
         <section class="--page-body --tutorial-index">
+            <div class="nav-breadcrumb-container">
+                {% include layouts/breadcrumb.html %}
+            </div>
             <!-- Start pulling content -->
             {{ content }}
             <!--End content -->
