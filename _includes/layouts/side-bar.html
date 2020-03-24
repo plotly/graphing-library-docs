@@ -90,7 +90,7 @@
     <div class="--sidebar-fixed reference"  data-spy="affix" id="where">
         {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" or page.permalink contains "ggplot2/"  %}
             <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
-                <input id="modal-input" style="border-radius: 10px; width: 140px"  type="text" placeholder="   Search..." readonly/>
+                <input id="modal-input" style="border-radius: 10px; width: 100%;"  type="text" placeholder="   Search..." readonly/>
                 </button>
         {% endif %}
         <header class="--sidebar-header">Quick Start</header>
@@ -596,18 +596,7 @@
 
             </ul>
         </nav>
-        <header class="--sidebar-header">Tools</header>
         <nav class="--sidebar-body watch" id="where">
-            <ul class="--sidebar-list">
-                <li class="--sidebar-item">
-                    <a target="_blank" href="/create/" class="js-splash--navigation-item">Web Editor</a>
-                </li>
-                {% if language == "plotly_js" %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://codepen.io/plotly" class="js-splash--navigation-item">CodePen</a>
-                </li>
-                {% endif %}
-            </ul>
             <button class="--btn back">
                 <div class="icon">
                     <svg style="width:24px;height:24px" viewBox="0 0 24 24">
