@@ -1167,7 +1167,8 @@ header.header-main {
   padding: 20px;
   padding-top: 0;
   padding-bottom: 0;
-  height: 60px; }
+  height: 60px;
+  }
   header.header-main.mobile-menu .\--wrap .\--nav-mobile {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1198,7 +1199,8 @@ header.header-main {
     color: #626262 !important;
     background-color: white; }
     header.header-main.\--default a:not(.button):link, header.header-main.\--default a:not(.button):visited, header.header-main.\--default a:not(.button):active {
-      color: currentColor !important; }
+      color: currentColor !important;
+      }
   header.header-main .\--wrap {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1237,7 +1239,8 @@ header.header-main {
       -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
-      justify-content: flex-start; }
+      justify-content: flex-start;
+      }
       header.header-main .\--wrap .\-identity::before {
         display: none !important; }
       header.header-main .\--wrap .\-identity a.logo {
@@ -8069,7 +8072,7 @@ div#notebook {
       font-size: 20px;
       font-weight: 500;
       line-height: 1.2;
-      text-transform: uppercase;
+      /* text-transform: uppercase; */
      }
 
 .page.\--home .\--documentation-categories {
@@ -8979,6 +8982,7 @@ pre, code, .hljs {
 
 
 .\--tutorial-section:not(.no-image) .\--grid {
+  max-width: 1130px;
   padding-top: 20px; }
   .\--tutorial-section:not(.no-image) .\--grid-list {
     display: -webkit-box;
@@ -9516,7 +9520,7 @@ font-display:auto;font-style:italic;font-weight:700;
 
 .codepen-submit{
   color: white;
-  background-color: #20293d;
+  background-color: #506784;
 }
 
 .nav-breadcrumb-container{
@@ -9544,4 +9548,15 @@ font-display:auto;font-style:italic;font-weight:700;
 
 section > .nav-breadcrumb-container {
   padding-top: 20px;
+}
+
+.-identity a {
+  height: 59px;
+  padding-top: 7px;
+  border-bottom: 2px solid white;
+}
+
+.-identity a:hover {
+  border-bottom: 2px solid #506784;
+
 }
