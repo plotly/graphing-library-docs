@@ -1645,7 +1645,7 @@ aside.\--sidebar-container {
   border-right: 1px solid #e7e7e7;
   background: #e4f5f2;
  }
-  @media (max-width: 584px) {
+  @media (max-width: 767px) {
     aside.\--sidebar-container {
       background: white !important;
       margin-left: -220px;
@@ -9439,7 +9439,7 @@ pre, code, .hljs {
   }
 }
 
-@media (max-width: 585px) {
+@media (max-width: 767px) {
   .\--wrap {
     margin: 0;
   }
@@ -9550,6 +9550,12 @@ section > .nav-breadcrumb-container {
   padding-top: 20px;
 }
 
+@media (max-width: 1025px) {
+  section > .nav-breadcrumb-container {
+    display: none;
+  }
+}
+
 .-identity a {
   height: 59px;
   padding-top: 7px;
@@ -9558,5 +9564,4 @@ section > .nav-breadcrumb-container {
 
 .-identity a:hover {
   border-bottom: 2px solid #506784;
-
 }
