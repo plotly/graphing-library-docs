@@ -9316,6 +9316,7 @@ pre, code, .hljs {
 #modal-input{
   background-color: #fff;
   border-radius: 5px;
+  margin-top: 25px;
   border: 1px solid lightgrey;
   box-sizing: border-box;
   display: block;
