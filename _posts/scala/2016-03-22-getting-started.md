@@ -24,9 +24,9 @@ If you need documentation beyond the tutorials presented here, read either the [
 
 The Scala Plotly client looks for credentials placed in a file called `~/.plotly/.credentials`. If you have already used another Plotly client, for instance the Python client, you probably have this file already and you do not need to do anything else.
 
-Otherwise, start by [creating a free account](https://plot.ly/api_signup) on Plotly to get started. Graphs are saved inside your Plotly account and you control the privacy. Public hosting is free. For private hosting, you can use one of the [paid plans](https://plot.ly/products/cloud).
+Otherwise, start by [creating a free account](https://plotly.com/api_signup) on Plotly to get started. Graphs are saved inside your Plotly account and you control the privacy. Public hosting is free. For private hosting, you can use one of the [paid plans](https://plotly.com/products/cloud).
 
-Once you have an account, generate an [API key](https://plot.ly/settings/api/). Copy the key and create the file `~/.plotly/.credentials` with the following content, replacing the username and API key with your own:
+Once you have an account, generate an [API key](https://plotly.com/settings/api/). Copy the key and create the file `~/.plotly/.credentials` with the following content, replacing the username and API key with your own:
 
 ```
 {
@@ -46,7 +46,7 @@ val plot = Plot().withScatter(xs, ys)
 draw(plot, "my-first-plot")
 ```
 
-<iframe width="900" height="500" frameborder="0" scrolling="no" src="https://plot.ly/~pbugnion/548.embed"></iframe>
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="https://plotly.com/~pbugnion/548.embed"></iframe>
 
 Calling `Plot().withScatter(xs, ys)` constructs a representation of the plot in memory. This representation is dispatched to Plotly with `draw(plot, "my-first-plot")`.
 

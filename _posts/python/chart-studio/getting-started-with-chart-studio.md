@@ -54,7 +54,7 @@ Plotly's Python package is installed alongside the Chart Studio package and it i
 
 
 ### Initialization for Online Plotting
-Chart Studio provides a web-service for hosting graphs! Create a [free account](https://plot.ly/api_signup) to get started. Graphs are saved inside your online Chart Studio account and you control the privacy. Public hosting is free, for private hosting, check out our [paid plans](https://plot.ly/products/cloud/).
+Chart Studio provides a web-service for hosting graphs! Create a [free account](https://plotly.com/api_signup) to get started. Graphs are saved inside your online Chart Studio account and you control the privacy. Public hosting is free, for private hosting, check out our [paid plans](https://plotly.com/products/cloud/).
 <br>
 <br>
 After installing the Chart Studio package, you're ready to fire up python:
@@ -71,8 +71,8 @@ chart_studio.tools.set_credentials_file(username='DemoAccount', api_key='lr1c37z
 ```
 
 <!-- #region -->
-You'll need to replace **'DemoAccount'** and **'lr1c37zw81'** with *your* Plotly username and [API key](https://plot.ly/settings/api).<br>
-Find your API key [here](https://plot.ly/settings/api).
+You'll need to replace **'DemoAccount'** and **'lr1c37zw81'** with *your* Plotly username and [API key](https://plotly.com/settings/api).<br>
+Find your API key [here](https://plotly.com/settings/api).
 <br>
 <br>
 The initialization step places a special **.plotly/.credentials** file in your home directory. Your **~/.plotly/.credentials** file should look something like this:
@@ -93,7 +93,7 @@ Plot can be set to three different type of privacies: public, private or secret.
 - **private**: Only you can view this plot. It will not appear in the Plotly feed, your profile, or search engines. You must be logged in to Plotly to view this graph. You can privately share this graph with other Chart Studio users in your online Chart Studio account and they will need to be logged in to view this plot.
 - **secret**: Anyone with this secret link can view this chart. It will not appear in the Chart Studio feed, your profile, or search engines. If it is embedded inside a webpage or an IPython notebook, anybody who is viewing that page will be able to view the graph. You do not need to be logged in to view this plot.
 
-By default all plots are set to **public**.  Users with free account have the permission to keep one private plot. If you need to save private plots, [upgrade to a pro account](https://plot.ly/plans). If you're a [Personal or Professional user](https://plot.ly/settings/subscription/?modal=true&utm_source=api-docs&utm_medium=support-oss) and would like the default setting for your plots to be private, you can edit your Chart Studio configuration:
+By default all plots are set to **public**.  Users with free account have the permission to keep one private plot. If you need to save private plots, [upgrade to a pro account](https://plotly.com/plans). If you're a [Personal or Professional user](https://plotly.com/settings/subscription/?modal=true&utm_source=api-docs&utm_medium=support-oss) and would like the default setting for your plots to be private, you can edit your Chart Studio configuration:
 
 ```python
 import chart_studio
@@ -101,10 +101,10 @@ chart_studio.tools.set_config_file(world_readable=False,
                              sharing='private')
 ```
 
-For more examples on privacy settings please visit [Python privacy documentation](https://plot.ly/python/privacy/)
+For more examples on privacy settings please visit [Python privacy documentation](https://plotly.com/python/privacy/)
 
 
-### Special Instructions for [Chart Studio Enterprise](https://plot.ly/product/enterprise/) Users
+### Special Instructions for [Chart Studio Enterprise](https://plotly.com/product/enterprise/) Users
 
 
 Your API key for account on the public cloud will be different than the API key in Chart Studio Enterprise. Visit https://plotly.your-company.com/settings/api/ to find your Chart Studio Enterprise API key. Remember to replace "your-company.com" with the URL of your Chart Studio Enterprise server.
@@ -122,7 +122,7 @@ chart_studio.tools.set_config_file(plotly_domain='https://plotly.your-company.co
 Make sure to replace **"your-company.com"** with the URL of *your* Chart Studio Enterprise server.
 
 
-Additionally, you can set your configuration so that you generate **private plots by default**. For more information on privacy settings see: https://plot.ly/python/privacy/<br>
+Additionally, you can set your configuration so that you generate **private plots by default**. For more information on privacy settings see: https://plotly.com/python/privacy/<br>
 <br>
 In python, enter:
 
@@ -219,14 +219,14 @@ data = [trace0, trace1]
 py.iplot(data, filename = 'basic-line')
 ```
 
-See more examples in our [IPython notebook documentation](https://plot.ly/ipython-notebooks/) or check out the `py.iplot()` docstring for more information.
+See more examples in our [IPython notebook documentation](https://plotly.com/ipython-notebooks/) or check out the `py.iplot()` docstring for more information.
 
 ```python
 import chart_studio.plotly as py
 help(py.iplot)
 ```
 
-You can also create plotly graphs with **matplotlib** syntax. Learn more in our [matplotlib documentation](https://plot.ly/matplotlib/).
+You can also create plotly graphs with **matplotlib** syntax. Learn more in our [matplotlib documentation](https://plotly.com/matplotlib/).
 
 
 ### Initialization for Offline Plotting
@@ -234,7 +234,7 @@ Plotly allows you to create graphs offline and save them locally. There are also
 - Use `plotly.io.write_html()` to create and standalone HTML that is saved locally and opened inside your web browser.
 - Use `plotly.io.show()` when working offline in a Jupyter Notebook to display the plot in the notebook.
 
-For information on all of the ways that plotly figures can be displayed, see [*Displaying plotly figures with plotly for Python*](https://plot.ly/python/renderers/).
+For information on all of the ways that plotly figures can be displayed, see [*Displaying plotly figures with plotly for Python*](https://plotly.com/python/renderers/).
 
 
 Copy and paste one of the following examples to create your first offline Plotly graph using the Plotly Python library:
@@ -275,7 +275,7 @@ import plotly
 help(plotly.io.show)
 ```
 
-For more examples on plotting offline with Plotly in python please visit our [offline documentation](https://plot.ly/python/offline/).
+For more examples on plotting offline with Plotly in python please visit our [offline documentation](https://plotly.com/python/offline/).
 
 
 ### Using Plotly with Pandas
@@ -296,5 +296,5 @@ fig.update_yaxes(title_text='Life Expectancy')
 py.iplot(fig, filename='pandas-multiple-scatter')
 ```
 
-### [MORE EXAMPLES](https://plot.ly/python/)
-Check out more examples and tutorials for using Plotly in python [here](https://plot.ly/python)!
+### [MORE EXAMPLES](https://plotly.com/python/)
+Check out more examples and tutorials for using Plotly in python [here](https://plotly.com/python)!

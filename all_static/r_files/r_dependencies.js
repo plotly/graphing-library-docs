@@ -1245,7 +1245,7 @@ if (!!window.navigator.userAgent.match("MSIE 8")) {
               }
               // This isn't an official plotly.js method, but it's the only current way to 
               // change just the configuration of a plot 
-              // https://community.plot.ly/t/update-config-function/9057
+              // https://community.plotly.com/t/update-config-function/9057
               if (msg.method == "reconfig") {
                 Plotly.react(gd, gd.data, gd.layout, msg.args);
                 return;

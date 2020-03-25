@@ -19,7 +19,7 @@ Configuration options for graphs created with the `plotly` R package are overrid
 
 To set configutation options for charts published to Chart STudio, you can edit the plot's embed url. 
 
-Visit our [embed tutorial](http://help.plot.ly/embed-graphs-in-websites/#step-8-customize-the-iframe) for more information on customizing the embed URL to remove the "Edit Chart" link, hide the modebar, or autosize the plot.
+Visit our [embed tutorial](http://help.plotly.com/embed-graphs-in-websites/#step-8-customize-the-iframe) for more information on customizing the embed URL to remove the "Edit Chart" link, hide the modebar, or autosize the plot.
 
 #### Offline Configuration Options 
 

@@ -38,19 +38,19 @@ sitemap: false
 
 <h6>PNG Example:</h6>
 
-<img src="https://plot.ly/~PlotBot/149.png" alt="Example of a MATLAB<sup>&reg;</sup> figure exported to PNG format">
+<img src="https://plotly.com/~PlotBot/149.png" alt="Example of a MATLAB<sup>&reg;</sup> figure exported to PNG format">
 
 <h6>PDF Example:</h6>
 
-<iframe src="https://plot.ly/static/api_docs/image/matlab_user_guide/MatlabImageExample.pdf" scrolling="no" height="550" width="550" frameborder="0"></iframe>
+<iframe src="https://plotly.com/static/api_docs/image/matlab_user_guide/MatlabImageExample.pdf" scrolling="no" height="550" width="550" frameborder="0"></iframe>
 
 <h6>SVG Example:</h6>
 
-<img src="https://plot.ly/~etpinard/199.svg" alt="Example of a MATLAB<sup>&reg;</sup> figure exported to SVG format">
+<img src="https://plotly.com/~etpinard/199.svg" alt="Example of a MATLAB<sup>&reg;</sup> figure exported to SVG format">
 
 <h6>JPEG Example</h6>
 
-<img src="https://plot.ly/~Dreamshot/539.jpeg" alt="Example of a MATLAB<sup>&reg;</sup> figure exported to JPEG format">
+<img src="https://plotly.com/~Dreamshot/539.jpeg" alt="Example of a MATLAB<sup>&reg;</sup> figure exported to JPEG format">
 
 <br>
 </div><br>

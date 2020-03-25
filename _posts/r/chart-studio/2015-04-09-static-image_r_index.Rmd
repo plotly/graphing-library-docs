@@ -23,7 +23,7 @@ Sys.setenv("plotly_api_key"="q0lz6r5efr")
 
 With the `plotly` R package, you can export graphs you create as static images in the `.png` and/or `.jpg`/`.jpeg` file formats for free using the [Chart Studio web service](https://chart-studio.plot.ly/create/#/). 
 
-Currently, exporting graphs you create as static images in the `.eps`, `.svg`, and/or `.pdf` format is a feature that is available only to users of [Chart Studio Enterprise](https://plot.ly/online-chart-maker/).
+Currently, exporting graphs you create as static images in the `.eps`, `.svg`, and/or `.pdf` format is a feature that is available only to users of [Chart Studio Enterprise](https://plotly.com/online-chart-maker/).
 
 **Note:** It is important to be aware that R graphs containing WebGL-based traces (i.e. of type `scattergl`, `heatmapgl`, `contourgl`, `scatter3d`, `surface`, `mesh3d`, `scatterpolargl`, `cone`, `streamtube`, `splom`, and/or `parcoords`) will include encapsulated rasters instead of vectors for some parts of the image if they are exported as static images in a vector format like `.eps`, `.svg`, and/or `.pdf`.
 
@@ -33,7 +33,7 @@ To export your R graphs as static images using the Chart Studio web service, you
 
 #### Create A Chart Studio Account And Get An API Key
 
-To use the `plotly_IMAGE()` function, you will need to have a [Chart Studio account](https://chart-studio.plot.ly/Auth/login/?action=signup#/) and an API key (which can be found [in your Chart Studio account online settings](https://plot.ly/settings/api)). Learn more about [getting started with Chart Studio in R](https://plot.ly/r/getting-started-with-chart-studio). 
+To use the `plotly_IMAGE()` function, you will need to have a [Chart Studio account](https://chart-studio.plot.ly/Auth/login/?action=signup#/) and an API key (which can be found [in your Chart Studio account online settings](https://plotly.com/settings/api)). Learn more about [getting started with Chart Studio in R](https://plotly.com/r/getting-started-with-chart-studio). 
 
 #### Set Environment Variables In Your R Session
 
@@ -68,8 +68,8 @@ plotly_IMAGE(p, format = "png", out_file = "output.png")
 
 #### Local Image Export
 
-As an alternative to using the Chart Studio web service to export your R graphs as static images, you can [use the built-in `orca()` function](https://plot.ly/r/static-image-export) to export images locally. 
+As an alternative to using the Chart Studio web service to export your R graphs as static images, you can [use the built-in `orca()` function](https://plotly.com/r/static-image-export) to export images locally. 
 
 #### Embed R Charts in RMarkdown Documents
 
-See [Embedding Graphs in RMarkdown](https://plot.ly/r/embedding-graphs-in-rmarkdown/) to learn more about embedding R charts in RMarkdown (.Rmd) files.
+See [Embedding Graphs in RMarkdown](https://plotly.com/r/embedding-graphs-in-rmarkdown/) to learn more about embedding R charts in RMarkdown (.Rmd) files.

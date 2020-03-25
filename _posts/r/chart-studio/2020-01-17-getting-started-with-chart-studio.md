@@ -23,13 +23,13 @@ As of version 2.0 (November 17, 2015), R graphs created with the `plotly` R pack
 
 ## Initialization for Online Plotting
 
-You can choose to publish charts you create with the `plotly` R package to the web using [Chart Studio](https://plot.ly/online-chart-maker). In order to do so, follow these steps:
+You can choose to publish charts you create with the `plotly` R package to the web using [Chart Studio](https://plotly.com/online-chart-maker). In order to do so, follow these steps:
 
-1 - [Create a free Chart Studio account](https://plot.ly/api_signup):<br>
+1 - [Create a free Chart Studio account](https://plotly.com/api_signup):<br>
 A Chart Studio account is required to publish R charts to the web using Chart Studio. It's free to get started, and you control the privacy of your charts.
 
 2 - Store your Chart Studio authentication credentials as environment variables in your R session<br>
-Your Chart Studio authentication credentials consist of your Chart Studio username and your Chart Studio API key, which can be found [in your online settings](https://plot.ly/settings/api). 
+Your Chart Studio authentication credentials consist of your Chart Studio username and your Chart Studio API key, which can be found [in your online settings](https://plotly.com/settings/api). 
 
 Use the [`Sys.setenv()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Sys.setenv) function to set these credentials as environment variables in your R session.
 
@@ -63,7 +63,7 @@ api_create(p, filename = "r-docs-midwest-boxplots")
 
 ### Where To Find Your API Key
 
-Your API key for your free Chart Studio account will be different than the API key for your [Chart Studio Enterprise](https://plot.ly/product/enterprise/) account. 
+Your API key for your free Chart Studio account will be different than the API key for your [Chart Studio Enterprise](https://plotly.com/product/enterprise/) account. 
 
 Visit <https://plotly.your-company.com/settings/api/> to find your Chart Studio Enterprise account API key. 
 
@@ -113,17 +113,17 @@ By default all Chart Studio plots you create with the `plotly` R package are set
 
 You can also view the static image version of any public Chart Studio graph by appending `.png` or `.jpeg` to the end of the URL for the graph. 
 
-For example, view the static image of <https://plot.ly/~chris/1638> at <https://plot.ly/~chris/1638.png>. 
+For example, view the static image of <https://plotly.com/~chris/1638> at <https://plotly.com/~chris/1638.png>. 
 
-[Chart Studio Enterprise](https://plot.ly/online_chart_maker) users can also use this method to get static images in the `.pdf`, `.svg`, and `.eps` file formats. 
+[Chart Studio Enterprise](https://plotly.com/online_chart_maker) users can also use this method to get static images in the `.pdf`, `.svg`, and `.eps` file formats. 
 
 ## Private Charts In Chart Studio
 
-If you have private storage needs, please learn more about [Chart Studio Enterprise](https://plot.ly/online-chart-maker/). 
+If you have private storage needs, please learn more about [Chart Studio Enterprise](https://plotly.com/online-chart-maker/). 
 
-If you're a [Chart Studio Enterprise subscriber](https://plot.ly/settings/subscription/?modal=true&utm_source=api-docs&utm_medium=support-oss) and would like the setting for your plots to be private, you can specify sharing as private:
+If you're a [Chart Studio Enterprise subscriber](https://plotly.com/settings/subscription/?modal=true&utm_source=api-docs&utm_medium=support-oss) and would like the setting for your plots to be private, you can specify sharing as private:
 
 ```r
 api_create(filename = "private-graph", sharing = "private")
 ```
-For more information regarding the privacy of plots published to Chart Studio using the `plotly` R package, please visit [our Chart Studio privacy documentation](https://plot.ly/r/privacy/)
+For more information regarding the privacy of plots published to Chart Studio using the `plotly` R package, please visit [our Chart Studio privacy documentation](https://plotly.com/r/privacy/)

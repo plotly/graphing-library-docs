@@ -36,7 +36,7 @@ jupyter:
 ---
 
 #### Default Privacy
-By default, `plotly.iplot()` and `plotly.plot()` create public graphs (which are free to create). With a [plotly subscription](https://plot.ly/plans) you can easily make charts private or secret via the sharing argument.
+By default, `plotly.iplot()` and `plotly.plot()` create public graphs (which are free to create). With a [plotly subscription](https://plotly.com/plans) you can easily make charts private or secret via the sharing argument.
 
 
 #### Public Graphs
@@ -102,7 +102,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 ```
 
-Define variables, including YOUR [USERNAME and API KEY](https://plot.ly/settings/api)
+Define variables, including YOUR [USERNAME and API KEY](https://plotly.com/settings/api)
 
 ```python
 username = 'private_plotly' # Replace with YOUR USERNAME
@@ -139,7 +139,7 @@ def make_all_plots_private(username, page_size=500):
         for x in range(0, len(page['children']['results'])):
             fid = page['children']['results'][x]['fid']
             requests.patch('https://api.plot.ly/v2/files/'+fid, {"world_readable": False}, auth=auth, headers=headers)
-    print('ALL of your plots are now private - visit: https://plot.ly/organize/home to view your private plots!')
+    print('ALL of your plots are now private - visit: https://plotly.com/organize/home to view your private plots!')
 
 make_all_plots_private(username)
 ```
