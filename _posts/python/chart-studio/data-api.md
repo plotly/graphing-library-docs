@@ -71,7 +71,7 @@ You can view your newly created grid at the `url`:
 IFrame(src= url.rstrip('/') + ".embed", width="100%",height="200px", frameBorder="0")
 ```
 
-You are also able to view the grid in your list of files inside your [organize folder](https://plot.ly/organize).
+You are also able to view the grid in your list of files inside your [organize folder](https://plotly.com/organize).
 
 
 #### Upload Dataframes to Plotly
@@ -141,7 +141,7 @@ So, when you view the data, you'll see your original grid, not just the columns 
 
 
 #### Attaching Meta Data to Grids
-In [Chart Studio Enterprise](https://plot.ly/product/enterprise/), you can upload and assign free-form JSON `metadata` to any grid object. This means that you can keep all of your raw data in one place, under one grid.
+In [Chart Studio Enterprise](https://plotly.com/product/enterprise/), you can upload and assign free-form JSON `metadata` to any grid object. This means that you can keep all of your raw data in one place, under one grid.
 
 If you update the original data source, in the workspace or with our API, all of the graphs that are sourced from it will be updated as well. You can make multiple graphs from a single Grid and you can make a graph from multiple grids. You can also add rows and columns to existing grids programatically.
 

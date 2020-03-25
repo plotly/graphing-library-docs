@@ -25,7 +25,7 @@ p <- plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length)
 api_create(p)
 ```
 
-<iframe src="https://plot.ly/~RPlotBot/6092.embed" width="800" height="600" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"> </iframe>
+<iframe src="https://plotly.com/~RPlotBot/6092.embed" width="800" height="600" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"> </iframe>
 
 ### How To Overwrite An Existing Plot
 
@@ -38,21 +38,21 @@ If you would like to overwrite an existing plot in your Chart Studio account and
 api_create(p, filename = "name-of-my-plotly-file")
 ```
 
-<iframe src="https://plot.ly/~RPlotBot/505.embed" width="800" height="600" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"> </iframe>
+<iframe src="https://plotly.com/~RPlotBot/505.embed" width="800" height="600" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"> </iframe>
 
 ### Saving Plots In Folders
 
 If the `filename` parameter contains the character "/", then the `api_create()` function will save that plot in a folder in your Chart Studio account. 
 
-This option is only available for [Chart Studio Enterprise subscribers](https://plot.ly/online-chart-maker/)
+This option is only available for [Chart Studio Enterprise subscribers](https://plotly.com/online-chart-maker/)
 
 
 ```r
 api_create(p, filename="r-docs/name-of-my-chart-studio-file")
 ```
 
-<iframe src="https://plot.ly/~RPlotBot/6029.embed" width="800" height="600" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"> </iframe>
+<iframe src="https://plotly.com/~RPlotBot/6029.embed" width="800" height="600" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"> </iframe>
 
 ### Viewing Saved Plots
 
-View the R graphs you have saved in your Chart Studio account at [https://plot.ly/organize](https://plot.ly/organize).
+View the R graphs you have saved in your Chart Studio account at [https://plotly.com/organize](https://plotly.com/organize).

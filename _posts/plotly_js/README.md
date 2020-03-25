@@ -1,6 +1,6 @@
-# Contribute to Plotly's [JavaScript Documentation](https://plot.ly/javascript/)
+# Contribute to Plotly's [JavaScript Documentation](https://plotly.com/javascript/)
 
-Plotly welcomes contributions to its [open-source JavaScript graphing libraries documentation](https://plot.ly/javascript) from its community of users.
+Plotly welcomes contributions to its [open-source JavaScript graphing libraries documentation](https://plotly.com/javascript) from its community of users.
 
 Our JavaScript tutorials are written in HTML files in the `_posts/plotly_js` directory of this repository. 
 
@@ -83,13 +83,13 @@ Plotly.newPlot('myDiv', data);
 ```
 
 - `display_as` sets where your tutorial is displayed. Make sure to update `_includes/posts/documentation_eg.html` with the new chart type!:
-  - 'file_settings' = https://plot.ly/javascript/plotly-fundamentals
-  - 'basic' = https://plot.ly/javascript/basic-charts
-  - 'statistical' = https://plot.ly/javascript/statistical-charts
-  - 'scientific' = https://plot.ly/javascript/scientific-charts
-  - 'financial' = https://plot.ly/javascript/financial-charts
-  - 'maps' = https://plot.ly/javascript/maps
-  - '3d_charts' = https://plot.ly/javascript/3d-charts
+  - 'file_settings' = https://plotly.com/javascript/plotly-fundamentals
+  - 'basic' = https://plotly.com/javascript/basic-charts
+  - 'statistical' = https://plotly.com/javascript/statistical-charts
+  - 'scientific' = https://plotly.com/javascript/scientific-charts
+  - 'financial' = https://plotly.com/javascript/financial-charts
+  - 'maps' = https://plotly.com/javascript/maps
+  - '3d_charts' = https://plotly.com/javascript/3d-charts
   - See additional options [HERE](https://github.com/plotly/graphing-library-docs/blob/master/_includes/posts/documentation_eg.html#L1)
 
   - `order` defines the order in which the tutorials appear in each section on plot.ly/javascript. 
@@ -100,13 +100,13 @@ Plotly.newPlot('myDiv', data);
 
   - Thumbnail images should named `your-tutorial-chart.jpg` and be *EXACTLY* 160px X 160px.
     - posts in the following `display_as` categories **MUST** have a thumbnail
-      - 'file_settings' = https://plot.ly/javascript/plotly-fundamentals
-      - 'basic' = https://plot.ly/javascript/basic-charts
-      - 'statistical' = https://plot.ly/javascript/statistical-charts
-      - 'scientific' = https://plot.ly/javascript/scientific-charts
-      - 'financial' = https://plot.ly/javascript/financial-charts
-      - 'maps' = https://plot.ly/javascript/maps
-      - '3d_charts' = https://plot.ly/javascript/3d-charts
+      - 'file_settings' = https://plotly.com/javascript/plotly-fundamentals
+      - 'basic' = https://plotly.com/javascript/basic-charts
+      - 'statistical' = https://plotly.com/javascript/statistical-charts
+      - 'scientific' = https://plotly.com/javascript/scientific-charts
+      - 'financial' = https://plotly.com/javascript/financial-charts
+      - 'maps' = https://plotly.com/javascript/maps
+      - '3d_charts' = https://plotly.com/javascript/3d-charts
     - Thumbnail images should be clear and interesting. You do not need to capture the ENTIRE chart, but rather focus on the most interesting part of the chart.
     - Use images.plot.ly for adding new images. The password is in the Plotly 1Password Engineering Vault. 
       - Log-in here: https://661924842005.signin.aws.amazon.com/console

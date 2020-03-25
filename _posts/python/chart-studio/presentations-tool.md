@@ -98,7 +98,7 @@ my_pres = pres.Presentation(markdown_string)
 pres_url_0 = py.presentation_ops.upload(my_pres, filename)
 ```
 
-https://plot.ly/~AdamKulidjian/3700/simple-pres/
+https://plotly.com/~AdamKulidjian/3700/simple-pres/
 
 ```python
 import IPython
@@ -114,7 +114,7 @@ If you want to insert a Plotly chart into your presentation, all you need to do 
 
 where url is a Plotly url. For example:
 
-`Plotly(https://plot.ly/~AdamKulidjian/3564)`
+`Plotly(https://plotly.com/~AdamKulidjian/3564)`
 
 The Plotly url lines should be written on a separate line after your title line. You can put as many images in your slide as you want, as the API will arrange them on the slide automatically, but it is _highly_ encouraged that you use `4 OR FEWER IMAGES PER SLIDE`. This will produce the cleanest look.
 
@@ -133,21 +133,21 @@ markdown_string = """
 ---
 # simple 3d scatterplot
 
-Plotly(https://plot.ly/~AdamKulidjian/3698)
+Plotly(https://plotly.com/~AdamKulidjian/3698)
 ---
 # different colorscales
 
 There are various colorscales and colorschemes to try in Plotly. Check out plotly.colors to find a list of valid and available colorscales.
 
-Plotly(https://plot.ly/~AdamKulidjian/3582)
-Plotly(https://plot.ly/~AdamKulidjian/3698)
+Plotly(https://plotly.com/~AdamKulidjian/3582)
+Plotly(https://plotly.com/~AdamKulidjian/3698)
 """
 
 my_pres = pres.Presentation(markdown_string)
 pres_url_1 = py.presentation_ops.upload(my_pres, filename)
 ```
 
-https://plot.ly/~AdamKulidjian/3710/pres-with-plotly-chart/
+https://plotly.com/~AdamKulidjian/3710/pres-with-plotly-chart/
 
 ```python
 import IPython
@@ -186,7 +186,7 @@ my_pres = pres.Presentation(markdown_string)
 pres_url_2 = py.presentation_ops.upload(my_pres, filename)
 ```
 
-https://plot.ly/~AdamKulidjian/3702/pres-with-images/
+https://plotly.com/~AdamKulidjian/3702/pres-with-images/
 
 ```python
 import IPython
@@ -217,7 +217,7 @@ my_pres = pres.Presentation(markdown_string, imgStretch=False)
 pres_url_3 = py.presentation_ops.upload(my_pres, filename)
 ```
 
-https://plot.ly/~AdamKulidjian/3703/pres-with-no-imgstretch/
+https://plotly.com/~AdamKulidjian/3703/pres-with-no-imgstretch/
 
 ```python
 import IPython

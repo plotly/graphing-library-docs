@@ -25,10 +25,10 @@ which use tiles from a cloud-hosted service, such as Open Street Maps or Mapbox,
 
 #### Is Dash free?
 
-&nbsp;  &nbsp; **Yes.** &nbsp; Plotly's [Dash](https://plot.ly/dash) analytics application framework is also free and open-source software, licensed under the **MIT license**.
+&nbsp;  &nbsp; **Yes.** &nbsp; Plotly's [Dash](https://plotly.com/dash) analytics application framework is also free and open-source software, licensed under the **MIT license**.
 
 #### Does Plotly also make commercial software?
 
-&nbsp;  &nbsp; **Yes.** &nbsp; Plotly has commercial offerings such as [Dash Enterprise](https://plot.ly/dash) and [Chart Studio Enterprise](https://plot.ly/online-chart-maker/).
+&nbsp;  &nbsp; **Yes.** &nbsp; Plotly has commercial offerings such as [Dash Enterprise](https://plotly.com/dash) and [Chart Studio Enterprise](https://plotly.com/online-chart-maker/).
 
 

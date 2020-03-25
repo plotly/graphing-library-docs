@@ -15,7 +15,7 @@ redirect_from: /ipython-notebooks/survival-analysis-r-vs-python/
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this notebook, we introduce survival analysis and we show application examples using both R and Python. We will compare the two programming languages, and leverage Plotly's Python and R APIs to convert static graphics into interactive <code>plotly</code> objects.</p>
-<p><a href="https://plot.ly">Plotly</a> is a platform for making interactive graphs with R, Python, MATLAB, and Excel. You can make graphs and analyze data on Plotly’s free public cloud. For collaboration and sensitive data, you can run Plotly <a href="https://plot.ly/product/enterprise/">on your own servers</a>.</p>
+<p><a href="https://plotly.com">Plotly</a> is a platform for making interactive graphs with R, Python, MATLAB, and Excel. You can make graphs and analyze data on Plotly’s free public cloud. For collaboration and sensitive data, you can run Plotly <a href="https://plotly.com/product/enterprise/">on your own servers</a>.</p>
 <p>For a more in-depth theoretical background in survival analysis, please refer to these sources:</p>
 <ul>
 <li><a href="http://socserv.mcmaster.ca/jfox/Courses/soc761/survival-analysis.pdf">Lecture Notes by John Fox</a></li>
@@ -25,8 +25,8 @@ redirect_from: /ipython-notebooks/survival-analysis-r-vs-python/
 </ul>
 <p>Need help converting Plotly graphs from R or Python?</p>
 <ul>
-<li><a href="https://plot.ly/r/user-guide/">R</a></li>
-<li><a href="https://plot.ly/python/matplotlib-to-plotly-tutorial/">Python</a></li>
+<li><a href="https://plotly.com/r/user-guide/">R</a></li>
+<li><a href="https://plotly.com/python/matplotlib-to-plotly-tutorial/">Python</a></li>
 </ul>
 <p>For this code to run on your machine, you will need several R and Python packages installed.</p>
 <ul>
@@ -35,7 +35,7 @@ redirect_from: /ipython-notebooks/survival-analysis-r-vs-python/
 <li><p>Running <code>install.packages("&lt;package_name&gt;")</code> in your R console will install an R package.</p>
 </li>
 </ul>
-<p>You will also need to create an account with <a href="https://plot.ly/feed/">Plotly</a> to receive your API key.</p>
+<p>You will also need to create an account with <a href="https://plotly.com/feed/">Plotly</a> to receive your API key.</p>
 
 </div>
 </div>
@@ -1083,7 +1083,7 @@ AAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's convert this plot into an interactive plotly object using <a href="https://plot.ly">plotly</a> and <a href="http://ggplot2.org">ggplot2</a>.</p>
+<p>Let's convert this plot into an interactive plotly object using <a href="https://plotly.com">plotly</a> and <a href="http://ggplot2.org">ggplot2</a>.</p>
 <p>First, we will use a helper ggplot function written by <a href="http://www.r-statistics.com/2013/07/creating-good-looking-survival-curves-the-ggsurv-function/">Edwin Thoen</a> to plot pretty survival distributions in R.</p>
 
 </div>
@@ -1677,7 +1677,7 @@ plot.ly <span class="o">&lt;-</span> <span class="kr">function</span><span class
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">R</span> p &lt;- plot.ly(&quot;https://plot.ly/~rmdk/111/survival-vs-time/&quot;)
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">R</span> p &lt;- plot.ly(&quot;https://plotly.com/~rmdk/111/survival-vs-time/&quot;)
 <span class="c1"># pass object to python kernel</span>
 <span class="o">%</span><span class="k">R</span> -o p 
 
@@ -1699,7 +1699,7 @@ plot.ly <span class="o">&lt;-</span> <span class="kr">function</span><span class
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <center><iframe height="600" id="igraph" scrolling="no" seamless="seamless"
-				src="https://plot.ly/~rmdk/111/survival-vs-time/" width="750" frameBorder="0"></iframe></center>
+				src="https://plotly.com/~rmdk/111/survival-vs-time/" width="750" frameBorder="0"></iframe></center>
 </div>
 
 </div>
@@ -2040,8 +2040,8 @@ JUmS1DALLEmSpIZZYEmSJDXs/wP9IQ0XTEh3jQAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we can convert this plot to an interactive <a href="https://plot.ly">Plotly</a> object. However, we will have to augment the legend and filled area manually. Once we create a helper function, the process is simple.</p>
-<p>Please see the Plotly Python <a href="https://plot.ly/python/overview/#in-%5B37%5D">user guide</a> for more insight on how to update plot parameters.</p>
+<p>Now we can convert this plot to an interactive <a href="https://plotly.com">Plotly</a> object. However, we will have to augment the legend and filled area manually. Once we create a helper function, the process is simple.</p>
+<p>Please see the Plotly Python <a href="https://plotly.com/python/overview/#in-%5B37%5D">user guide</a> for more insight on how to update plot parameters.</p>
 <blockquote><p>Don't forget you can also easily edit the chart properties using the Plotly GUI interface by clicking the "Play with this data!" link below the chart.</p>
 </blockquote>
 
@@ -2105,7 +2105,7 @@ JUmS1DALLEmSpIZZYEmSJDXs/wP9IQ0XTEh3jQAAAABJRU5ErkJggg==
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~rmdk/407.embed" height="525" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plotly.com/~rmdk/407.embed" height="525" width="100%"></iframe>
 </div>
 
 </div>
@@ -2594,7 +2594,7 @@ zvwigAACCHhCgADsicVAJRBAAAEEyk2AAFxuS5z5RQABBBDwhAAB2BOLgUoggAACCJSbAAG43JY4
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#%R ggplotly(plt)</span>
 
-<span class="o">%</span><span class="k">R</span> p &lt;- plot.ly(&quot;https://plot.ly/~rmdk/173/lifespans-of-different-tumor-dna-profile/&quot;)
+<span class="o">%</span><span class="k">R</span> p &lt;- plot.ly(&quot;https://plotly.com/~rmdk/173/lifespans-of-different-tumor-dna-profile/&quot;)
 <span class="c1"># pass object to python kernel</span>
 <span class="o">%</span><span class="k">R</span> -o p 
 
@@ -2616,7 +2616,7 @@ zvwigAACCHhCgADsicVAJRBAAAEEyk2AAFxuS5z5RQABBBDwhAAB2BOLgUoggAACCJSbAAG43JY4
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <center><iframe height="600" id="igraph" scrolling="no" seamless="seamless"
-				src="https://plot.ly/~rmdk/173/lifespans-of-different-tumor-dna-profile/" width="750" frameBorder="0"></iframe></center>
+				src="https://plotly.com/~rmdk/173/lifespans-of-different-tumor-dna-profile/" width="750" frameBorder="0"></iframe></center>
 </div>
 
 </div>
@@ -2997,7 +2997,7 @@ JKkyA5YkSVJlfwA92RG2HwIvygAAAABJRU5ErkJggg==
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~rmdk/404.embed" height="525" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plotly.com/~rmdk/404.embed" height="525" width="100%"></iframe>
 </div>
 
 </div>
@@ -3511,7 +3511,7 @@ AQQQQACBxAIE4MRGLIEAAggggEDGBf4faP0yEBSMPvEAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">R</span> p &lt;- plot.ly(&quot;https://plot.ly/~rmdk/185/cumulativehazard-vs-time/&quot;)
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">R</span> p &lt;- plot.ly(&quot;https://plotly.com/~rmdk/185/cumulativehazard-vs-time/&quot;)
 <span class="c1"># pass object to python kernel</span>
 <span class="o">%</span><span class="k">R</span> -o p 
 
@@ -3533,7 +3533,7 @@ AQQQQACBxAIE4MRGLIEAAggggEDGBf4faP0yEBSMPvEAAAAASUVORK5CYII=
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <center><iframe height="600" id="igraph" scrolling="no" seamless="seamless"
-				src="https://plot.ly/~rmdk/185/cumulativehazard-vs-time/" width="750" frameBorder="0"></iframe></center>
+				src="https://plotly.com/~rmdk/185/cumulativehazard-vs-time/" width="750" frameBorder="0"></iframe></center>
 </div>
 
 </div>
@@ -3814,7 +3814,7 @@ pBrZuZIkSaqRnStJkqQa2bmSJEmqkZ0rSZKkGtm5kiRJqpGdK0mSpBrZuZIkSarR/wc9L0tsJjZ9
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~rmdk/405.embed" height="525" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plotly.com/~rmdk/405.embed" height="525" width="100%"></iframe>
 </div>
 
 </div>
