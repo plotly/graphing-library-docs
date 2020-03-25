@@ -616,7 +616,7 @@ iplot(figure_or_data, **plot_options)
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Help on function plot in module plotly.offline.offline:
 
-plot(figure_or_data, show_link=True, link_text=&#39;Export to plot.ly&#39;, validate=True, output_type=&#39;file&#39;, include_plotlyjs=True, filename=&#39;temp-plot.html&#39;, auto_open=True, image=None, image_filename=&#39;plot_image&#39;, image_width=800, image_height=600, config=None, include_mathjax=False)
+plot(figure_or_data, show_link=True, link_text=&#39;Export to plotly.com&#39;, validate=True, output_type=&#39;file&#39;, include_plotlyjs=True, filename=&#39;temp-plot.html&#39;, auto_open=True, image=None, image_filename=&#39;plot_image&#39;, image_width=800, image_height=600, config=None, include_mathjax=False)
     Create a plotly graph locally as an HTML document or string.
 
     Example:
@@ -641,7 +641,7 @@ plot(figure_or_data, show_link=True, link_text=&#39;Export to plot.ly&#39;, vali
     show_link (default=True) -- display a link in the bottom-right corner of
         of the chart that will export the chart to Chart Studio Cloud or
         Chart Studio Enterprise
-    link_text (default=&#39;Export to plot.ly&#39;) -- the text of export link
+    link_text (default=&#39;Export to plotly.com&#39;) -- the text of export link
     validate (default=True) -- validate that all of the keys in the figure
         are valid? omit if your version of plotly.js has become outdated
         with your version of graph_reference.json or if you need to include
@@ -781,7 +781,7 @@ plot(figure_or_data, show_link=True, link_text=&#39;Export to plot.ly&#39;, vali
         require.undef("plotly");
         requirejs.config({
             paths: {
-                'plotly': ['https://cdn.plot.ly/plotly-latest.min']
+                'plotly': ['https://cdn.plotly.com/plotly-latest.min']
             }
         });
         require(['plotly'], function(Plotly) {
@@ -815,7 +815,7 @@ plot(figure_or_data, show_link=True, link_text=&#39;Export to plot.ly&#39;, vali
                         'd905084a-eb6b-4f66-abe5-2abed2541ca6',
                         [{"type": "scatter", "uid": "474125cf-ddc0-433a-a3ec-8f64edf9ca12", "x": [1, 2, 3, 4], "y": [4, 3, 2, 1]}],
                         {"title": {"text": "hello world"}},
-                        {"showLink": false, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plotly.com", "responsive": true}
+                        {"showLink": false, "linkText": "Export to plotly.com", "plotlyServerURL": "https://plotly.com", "responsive": true}
                     ).then(function(){
 
 var gd = document.getElementById('d905084a-eb6b-4f66-abe5-2abed2541ca6');
@@ -878,7 +878,7 @@ if (outputEl) {{
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Help on function iplot in module plotly.offline.offline:
 
-iplot(figure_or_data, show_link=False, link_text=&#39;Export to plot.ly&#39;, validate=True, image=None, filename=&#39;plot_image&#39;, image_width=800, image_height=600, config=None, auto_play=True, animation_opts=None)
+iplot(figure_or_data, show_link=False, link_text=&#39;Export to plotly.com&#39;, validate=True, image=None, filename=&#39;plot_image&#39;, image_width=800, image_height=600, config=None, auto_play=True, animation_opts=None)
     Draw plotly graphs inside an IPython or Jupyter notebook
 
     figure_or_data -- a plotly.graph_objs.Figure or plotly.graph_objs.Data or
@@ -890,7 +890,7 @@ iplot(figure_or_data, show_link=False, link_text=&#39;Export to plot.ly&#39;, va
     show_link (default=False) -- display a link in the bottom-right corner of
                                 of the chart that will export the chart to
                                 Plotly Cloud or Plotly Enterprise
-    link_text (default=&#39;Export to plot.ly&#39;) -- the text of export link
+    link_text (default=&#39;Export to plotly.com&#39;) -- the text of export link
     validate (default=True) -- validate that all of the keys in the figure
                                are valid? omit if your version of plotly.js
                                has become outdated with your version of

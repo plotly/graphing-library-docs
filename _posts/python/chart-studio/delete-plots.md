@@ -36,7 +36,7 @@ jupyter:
 ---
 
 #### Imports and Credentials
-In additional to importing python's `requests` and `json` packages, this tutorial also uses [Plotly's REST API](https://api.plot.ly/v2/)
+In additional to importing python's `requests` and `json` packages, this tutorial also uses [Plotly's REST API](https://api.plotly.com/v2/)
 
 First define YOUR [username and api key](https://plotly.com/settings/api) and create `auth` and `headers` to use with `requests`
 
@@ -57,7 +57,7 @@ headers = {'Plotly-Client-Platform': 'python'}
 chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
 ```
 
-#### [Trash](https://api.plot.ly/v2/files/#trash) and [Restore](https://api.plot.ly/v2/files/#restore)
+#### [Trash](https://api.plotly.com/v2/files/#trash) and [Restore](https://api.plotly.com/v2/files/#restore)
 Create a plot and return the url to see the file id which will be used to delete the plot.
 
 ```python
@@ -79,7 +79,7 @@ fid
 The following request moves the plot from the [organize folder](https://plotly.com/organize/home) into the trash. <br>Note: a successful trash request will return a `Response [200]`.
 
 ```python
-requests.post('https://api.plot.ly/v2/files/'+fid+'/trash', auth=auth, headers=headers)
+requests.post('https://api.plotly.com/v2/files/'+fid+'/trash', auth=auth, headers=headers)
 ```
 
 Now if you visit the url, the plot won't be there. <br>However, at this point, there is the option to restore the plot (i.e. move it out of trash and back to the organize folder) with the following request:
@@ -88,7 +88,7 @@ Now if you visit the url, the plot won't be there. <br>However, at this point, t
 
 
 
-#### [<b>PERMANENT</b> Delete](https://api.plot.ly/v2/files/#permanent_delete)
+#### [<b>PERMANENT</b> Delete](https://api.plotly.com/v2/files/#permanent_delete)
 
 This request <b>CANNOT!!!!!!!</b> be restored.
 Only use `permanent_delete` when <b>absolutely sure the plot is no longer needed</b>.<br>
@@ -109,14 +109,14 @@ fid_permanent_delete
 To <b>PERMANENTLY</b> delete a plot, first move the plot to the trash (as seen above):
 
 ```python
-requests.post('https://api.plot.ly/v2/files/'+fid_permanent_delete+'/trash', auth=auth, headers=headers)
+requests.post('https://api.plotly.com/v2/files/'+fid_permanent_delete+'/trash', auth=auth, headers=headers)
 ```
 
-Then [<b>permanent</b> delete](https://api.plot.ly/v2/files/#permanent_delete).<br>
+Then [<b>permanent</b> delete](https://api.plotly.com/v2/files/#permanent_delete).<br>
 Note: a successful permanent delete request will return a `Response [204]` (No Content).
 
 ```python
-requests.delete('https://api.plot.ly/v2/files/'+fid_permanent_delete+'/permanent_delete', auth=auth, headers=headers)
+requests.delete('https://api.plotly.com/v2/files/'+fid_permanent_delete+'/permanent_delete', auth=auth, headers=headers)
 ```
 
 #### Delete All Plots and Grids PERMANENTLY!
@@ -124,7 +124,7 @@ In order to delete all plots and grids permanently, you need to delete all of yo
 
 ```python
 def get_pages(username, page_size):
-    url = 'https://api.plot.ly/v2/folders/all?user='+username+'&page_size='+str(page_size)
+    url = 'https://api.plotly.com/v2/folders/all?user='+username+'&page_size='+str(page_size)
     response = requests.get(url, auth=auth, headers=headers)
     if response.status_code != 200:
         return
@@ -144,15 +144,15 @@ def permanently_delete_files(username, page_size=500, filetype_to_delete='plot')
     for page in get_pages(username, page_size):
         for x in range(0, len(page['children']['results'])):
             fid = page['children']['results'][x]['fid']
-            res = requests.get('https://api.plot.ly/v2/files/' + fid, auth=auth, headers=headers)
+            res = requests.get('https://api.plotly.com/v2/files/' + fid, auth=auth, headers=headers)
             res.raise_for_status()
             if res.status_code == 200:
                 json_res = json.loads(res.content)
                 if json_res['filetype'] == filetype_to_delete:
                     # move to trash
-                    requests.post('https://api.plot.ly/v2/files/'+fid+'/trash', auth=auth, headers=headers)
+                    requests.post('https://api.plotly.com/v2/files/'+fid+'/trash', auth=auth, headers=headers)
                     # permanently delete
-                    requests.delete('https://api.plot.ly/v2/files/'+fid+'/permanent_delete', auth=auth, headers=headers)
+                    requests.delete('https://api.plotly.com/v2/files/'+fid+'/permanent_delete', auth=auth, headers=headers)
 
 permanently_delete_files(username, filetype_to_delete='plot')
 permanently_delete_files(username, filetype_to_delete='grid')

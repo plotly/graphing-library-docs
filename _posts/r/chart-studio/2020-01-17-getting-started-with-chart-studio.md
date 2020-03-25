@@ -17,7 +17,7 @@ output:
 
 # Getting Started with Chart Studio and the `plotly` R Package
 
-`plotly` is an R package for creating interactive web-based graphs via the open source JavaScript graphing library [plotly.js](http://plot.ly/javascript). 
+`plotly` is an R package for creating interactive web-based graphs via the open source JavaScript graphing library [plotly.js](http://plotly.com/javascript). 
 
 As of version 2.0 (November 17, 2015), R graphs created with the `plotly` R package are, by default, rendered *locally* through the [htmlwidgets](http://www.htmlwidgets.org/) framework.
 

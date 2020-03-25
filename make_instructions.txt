@@ -41,7 +41,7 @@ Overview
               (i.e.: https://plotly.com/javascript/reference,
                https://plotly.com/matlab/reference, https://plotly.com/python/reference
                https://plotly.com/r/reference) 
-            - Includes all schema from plotly.js (https://api.plot.ly/v2/plot-schema)
+            - Includes all schema from plotly.js (https://api.plotly.com/v2/plot-schema)
             - Update by running `make update_ref_search` locally from the root of
               the documentation repo
 
@@ -57,7 +57,7 @@ Setup
     https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md
     Additionally, you will need to set the Algolia API KEY as an environment
     variable on your local machine. This key should remain private, please
-    contact chelsea@plot.ly for the key or more information.
+    contact chelsea@plotly.com for the key or more information.
 
 ################################################################################
 

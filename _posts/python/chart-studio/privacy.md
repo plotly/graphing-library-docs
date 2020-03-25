@@ -94,7 +94,7 @@ chart_studio.tools.set_config_file(world_readable=False, sharing='private')
 ```
 
 ### Make All Existing Plots Private
-This example uses [Plotly's REST API](https://api.plot.ly/v2/)
+This example uses [Plotly's REST API](https://api.plotly.com/v2/)
 
 ```python
 import json
@@ -118,7 +118,7 @@ Collect filenames of <b>ALL</b> of your plots and <br>update `world_readable` of
 
 ```python
 def get_pages(username, page_size):
-    url = 'https://api.plot.ly/v2/folders/all?user='+username+'&filetype=plot&page_size='+str(page_size)
+    url = 'https://api.plotly.com/v2/folders/all?user='+username+'&filetype=plot&page_size='+str(page_size)
     response = requests.get(url, auth=auth, headers=headers)
     if response.status_code != 200:
         return
@@ -138,7 +138,7 @@ def make_all_plots_private(username, page_size=500):
     for page in get_pages(username, page_size):
         for x in range(0, len(page['children']['results'])):
             fid = page['children']['results'][x]['fid']
-            requests.patch('https://api.plot.ly/v2/files/'+fid, {"world_readable": False}, auth=auth, headers=headers)
+            requests.patch('https://api.plotly.com/v2/files/'+fid, {"world_readable": False}, auth=auth, headers=headers)
     print('ALL of your plots are now private - visit: https://plotly.com/organize/home to view your private plots!')
 
 make_all_plots_private(username)

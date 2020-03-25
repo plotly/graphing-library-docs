@@ -327,7 +327,7 @@ redirect_from: /ipython-notebooks/basemap-maps/
         <span class="c1"># convert coordinates to lon/lat by &#39;inverting&#39; the Basemap projection</span>
         <span class="n">lon_cc</span><span class="p">,</span> <span class="n">lat_cc</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">coords_cc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">coords_cc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">inverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
         
-        <span class="c1"># add plot.ly plotting options</span>
+        <span class="c1"># add plotly.com plotting options</span>
         <span class="n">traces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">make_scatter</span><span class="p">(</span><span class="n">lon_cc</span><span class="p">,</span><span class="n">lat_cc</span><span class="p">))</span>
      
     <span class="k">return</span> <span class="n">traces</span>

@@ -46,7 +46,7 @@ Our Julia tutorials are written in HTML files with embedded plot examples.
       - 'maps' = https://plotly.com/julia/#maps
       - '3d_charts' = https://plotly.com/julia/#3d-charts
       - See additional options [HERE](https://github.com/plotly/graphing-library-docs/blob/master/_includes/documentation_eg.html#L1)
-  - *** `order` defines the order in which the tutorials appear in each section on plot.ly/julia. Please take a look at https://plotly.com/julia/ and order your tutorial next to similar chart types. <b>Note</b> `order` can be a float.
+  - *** `order` defines the order in which the tutorials appear in each section on plotly.com/julia. Please take a look at https://plotly.com/julia/ and order your tutorial next to similar chart types. <b>Note</b> `order` can be a float.
 
 3. Create an example and save it on https://plotly.com/.
 
@@ -86,7 +86,7 @@ Our Julia tutorials are written in HTML files with embedded plot examples.
 8. Add Thumbnail Images
   - Thumbnail images should named `your-tutorial-chart.jpg` and be *EXACTLY* 160px X 160px
   - Thumbnail images should be clear and interesting. You do not need to capture the ENTIRE chart, but rather focus on the most interesting part of the chart.
-  - Use images.plot.ly for adding new images.
+  - Use images.plotly.com for adding new images.
     - Log-in here: https://661924842005.signin.aws.amazon.com/console
     - Username: Plotly_Editors
     - From the <b>Amazon Web Services Console</b> select <b>S3 (Scalable Storage in the Cloud)</b> then select <b>plotly-tutorials</b> -> <b>plotly-documentation</b> -> <b>thumbnail</b>

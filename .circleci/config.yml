@@ -50,7 +50,7 @@ jobs:
       - run:
           name: deployment
           command: |
-            git config --global user.email "accounts@plot.ly"
+            git config --global user.email "accounts@plotly.com"
             git config --global user.name "plotlydocbot"
             echo 
             echo "token: ${mapbox_token}" > _data/mapbox_token.yml
@@ -109,7 +109,7 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               git clone --depth=1 --branch=gh-pages https://github.com/plotly/documentation.git
               git config user.name plotlydocbot
-              git config user.email accounts@plot.ly
+              git config user.email accounts@plotly.com
               cp -r _site/* documentation
               cd documentation
               git add .

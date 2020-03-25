@@ -330,7 +330,7 @@ redirect_from: /ipython-notebooks/ukelectionbbg/
         <span class="c1"># gradcolor = Create a graduated color scheme for the lines</span>
         <span class="c1">#</span>
         <span class="c1"># Also see http://nbviewer.ipython.org/gist/nipunreddevil/7734529 for converting dataframe to traces</span>
-        <span class="c1"># Also see http://moderndata.plot.ly/color-scales-in-ipython-notebook/</span>
+        <span class="c1"># Also see http://moderndata.plotly.com/color-scales-in-ipython-notebook/</span>
 
         <span class="n">x</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
 
@@ -686,7 +686,7 @@ redirect_from: /ipython-notebooks/ukelectionbbg/
     <span class="n">title</span> <span class="o">=</span> <span class="n">ticker</span> <span class="o">+</span> <span class="s1">&#39; during UK gen elect - Con wins &#39;</span> <span class="o">+</span> <span class="s1">&#39;&lt;BR&gt;&#39;</span> <span class="o">+</span> <span class="n">source_label</span>
 
     <span class="c1"># also apply graduated color scheme of blues (from light to dark)</span>
-    <span class="c1"># see http://moderndata.plot.ly/color-scales-in-ipython-notebook/ for details on colorlover package</span>
+    <span class="c1"># see http://moderndata.plotly.com/color-scales-in-ipython-notebook/ for details on colorlover package</span>
     <span class="c1"># which allows you to set scales</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">event_plot</span><span class="o">.</span><span class="n">convert_df_plotly</span><span class="p">(</span><span class="n">conservative_wins_spot</span><span class="p">,</span> <span class="n">gradcolor</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">addmarker</span><span class="o">=</span><span class="bp">False</span><span class="p">),</span>
                  <span class="n">layout</span><span class="o">=</span><span class="n">event_plot</span><span class="o">.</span><span class="n">create_layout</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">xaxis</span><span class="p">,</span> <span class="n">yaxis</span><span class="p">),</span>

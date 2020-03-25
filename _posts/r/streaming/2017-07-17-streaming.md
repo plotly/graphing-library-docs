@@ -1,4 +1,4 @@
 ---
 permalink: r/streaming/
-redirect_to: https://dashr.plot.ly
+redirect_to: https://dashr.plotly.com
 ---

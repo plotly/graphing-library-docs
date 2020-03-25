@@ -92,7 +92,7 @@ Plotly.newPlot('myDiv', data);
   - '3d_charts' = https://plotly.com/javascript/3d-charts
   - See additional options [HERE](https://github.com/plotly/graphing-library-docs/blob/master/_includes/posts/documentation_eg.html#L1)
 
-  - `order` defines the order in which the tutorials appear in each section on plot.ly/javascript. 
+  - `order` defines the order in which the tutorials appear in each section on plotly.com/javascript. 
     - <b>Note</b> The `order` of posts within a `display_as` must be a set of consecutive integers (i.e. [1, 2, 3, 4, 5, 6, ...]). 
     - If a post has an `order` less than 5, it **MUST** also have the `page_type: example_index` front-matter so that it gets displayed on the index page.
  
@@ -108,7 +108,7 @@ Plotly.newPlot('myDiv', data);
       - 'maps' = https://plotly.com/javascript/maps
       - '3d_charts' = https://plotly.com/javascript/3d-charts
     - Thumbnail images should be clear and interesting. You do not need to capture the ENTIRE chart, but rather focus on the most interesting part of the chart.
-    - Use images.plot.ly for adding new images. The password is in the Plotly 1Password Engineering Vault. 
+    - Use images.plotly.com for adding new images. The password is in the Plotly 1Password Engineering Vault. 
       - Log-in here: https://661924842005.signin.aws.amazon.com/console
       - From the <b>Amazon Web Services Console</b> select <b>S3 (Scalable Storage in the Cloud)</b> then select <b>plotly-tutorials</b> -> <b>plotly-documentation</b> -> <b>thumbnail</b>
       - Now from <b>All Buckets /plotly-tutorials/plotly-documentation/thumbnail</b> select the <b>Actions</b> dropdown and <b>upload</b> your .jpg file

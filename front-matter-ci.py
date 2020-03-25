@@ -36,7 +36,7 @@ def check_duplicatePermalinks(meta_to_check):
     allPermalinks = []
     for meta in meta_to_check:
         # Check #3 - are there duplicate permalinks/redirect_froms?
-        if "permalink" in meta and meta["permalink"] != "//plot.ly/products/dash/":
+        if "permalink" in meta and meta["permalink"] != "//plotly.com/products/dash/":
             if meta["permalink"] in allPermalinks:
                 failures.append(meta["permalink"])
             else:

@@ -61,7 +61,7 @@ $ echo $HTTPS_PROXY
 
 [Log an issue](https://github.com/plotly/plotly.py)
 
-Contact [support@plot.ly]()
+Contact [support@plotly.com]()
 
 Get in touch with your IT department, and ask them about corporate proxies.
 

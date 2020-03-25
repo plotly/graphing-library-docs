@@ -39,7 +39,7 @@ $ echo $HTTPS_PROXY
 **Still not working?**
 
 - [Log an issue](https://github.com/plotly/python-api)
-- Contact <support@plot.ly>
+- Contact <support@plotly.com>
 - Get in touch with your IT department, and ask them about corporate proxies
 - [Requests documentation on configuring proxies](http://docs.python-requests.org/en/latest/user/advanced/#proxies)
 the requests documentation.

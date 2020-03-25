@@ -16,7 +16,7 @@ import co.theasi.plotly._
 
 implicit val server = new writer.Server {
   val credentials = writer.Credentials("DemoAccount", "lr1c37zw81")
-  val url = "https://api.plot.ly/v2/"
+  val url = "https://api.plotly.com/v2/"
 }
 
 val p = Plot().withScatter(Vector(1, 2), Vector(3, 4))

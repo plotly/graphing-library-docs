@@ -17,8 +17,8 @@ redirect_from: /ipython-notebooks/bioinformatics/
 <p>About the author:
 Oxana is a data scientist based in Stockholm, Sweden. She is studying for a PhD in Bioinformatics, exploring molecular evolution patterns in eukaryotes. You can follow Oxana on Twitter <a href="http://twitter.com/Merenlin">@Merenlin</a> or read <a href="http://merenlin.com">her blog</a>.</p>
 <h4 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h4><p>This notebook will give you the recipes of the most popular data visualizations I encounter in my work as a bioinformatician. If you always wondered what bioinformatics is all about or would like to create interactive
-visualization for your genomic data using <a href="https://plotly.com/python/">plot.ly</a>, this is the place to start.</p>
-<p>We will be working with real <a href="http://en.wikipedia.org/wiki/Gene_expression">gene expression</a> data obtained by <a href="http://en.wikipedia.org/wiki/Cap_analysis_gene_expression">Cap Analysis of Gene Expression(CAGE)</a> from human samples by the <a href="http://fantom.gsc.riken.jp/5/">FANTOM5</a> consortium. We will be following a typical workflow of a bioinformatician exploring new data, looking for the outliers: interesting genes or samples, or general patterns in the data. In the end, you'll get the idea of the challenges and upsides of creating interactive visualizations of biological data using plot.ly Python Open Source Graphing Library.</p>
+visualization for your genomic data using <a href="https://plotly.com/python/">plotly.com</a>, this is the place to start.</p>
+<p>We will be working with real <a href="http://en.wikipedia.org/wiki/Gene_expression">gene expression</a> data obtained by <a href="http://en.wikipedia.org/wiki/Cap_analysis_gene_expression">Cap Analysis of Gene Expression(CAGE)</a> from human samples by the <a href="http://fantom.gsc.riken.jp/5/">FANTOM5</a> consortium. We will be following a typical workflow of a bioinformatician exploring new data, looking for the outliers: interesting genes or samples, or general patterns in the data. In the end, you'll get the idea of the challenges and upsides of creating interactive visualizations of biological data using plotly.com Python Open Source Graphing Library.</p>
 
 </div>
 </div>
@@ -509,7 +509,7 @@ I have picked normalized tpm(tags per million) and annotated data, so we can foc
 <p>There are many different methods of computing the average expression level(A) between the two observations and
 the mean variation(M). To keep things simple, for this example we will just compare the sum on the x-axis vs the minus on the y-axis.
 Our data is already normalized and preprocessed, so this will be enough to find the clear outliers.</p>
-<p>Here lies the firs problem with web-based interactive visualizations. Plot.ly at the moment has a very hard time rendering more than 40k points in a scatter plot. So for the sake of this example, I'll plot a subset of the data.</p>
+<p>Here lies the firs problem with web-based interactive visualizations. plotly.com at the moment has a very hard time rendering more than 40k points in a scatter plot. So for the sake of this example, I'll plot a subset of the data.</p>
 
 </div>
 </div>
@@ -596,7 +596,7 @@ Our data is already normalized and preprocessed, so this will be enough to find 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Another timeless visualization for exploratory data analysis is histogram. Here we don't need to subset our data anymore, for plots like these Plot.ly's capacity is up to 100k points. Let's see how expression breadth(in how many tissues the gene is expressed) and average expression levels look like for all of the samples.</p>
+<p>Another timeless visualization for exploratory data analysis is histogram. Here we don't need to subset our data anymore, for plots like these plotly.com's capacity is up to 100k points. Let's see how expression breadth(in how many tissues the gene is expressed) and average expression levels look like for all of the samples.</p>
 <p>Just use the "domain" variable to regulate where the axis of each subplot are.</p>
 
 </div>
@@ -707,8 +707,8 @@ Our data is already normalized and preprocessed, so this will be enough to find 
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This kind of plot must be the most popular way to visualize a trend in biological data. We seek clear
 and simple patterns demonstrating the relationships between different biological parameters or observations.
-Plot.ly's Python Open Source Graphing Library does not come with out-of-the-box tools for plotting trend lines, but numpy has all we need.</p>
-<p>Let's say we want to plot the relationship between the breadth of expression and the average level. Again, for speed and simplicity, we only take the first 1000 genes in our data frame. Let's try to fit a polinomial function to our data points and plot both at the same time. By using plot.ly it's simple, just send the regression line trace to the same figure.</p>
+plotly.com's Python Open Source Graphing Library does not come with out-of-the-box tools for plotting trend lines, but numpy has all we need.</p>
+<p>Let's say we want to plot the relationship between the breadth of expression and the average level. Again, for speed and simplicity, we only take the first 1000 genes in our data frame. Let's try to fit a polinomial function to our data points and plot both at the same time. By using plotly.com it's simple, just send the regression line trace to the same figure.</p>
 
 </div>
 </div>
@@ -812,9 +812,9 @@ Heatmaps of gene expression can give you good leads to questions like these.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There is one catch with generating a heatmap for biological samples using plot.ly. Labels of the heatmap will actually
+<p>There is one catch with generating a heatmap for biological samples using plotly.com. Labels of the heatmap will actually
 be coordinates on the x and y axis. For the plot to look less cluttered, I have removed the grid and set dtick to 1. Setting autotick to False also proved useful in order to see all the samples correctly labeled.</p>
-<p>To improve readability, one often also needs to process samples names. In our data, as you probably noticed, sample names include everything: tissue name, annotation, donor, age. The name becomes long and impossible to display in a plot. Simple shortening will not work with plot.ly though, since the coordinates must be unique!</p>
+<p>To improve readability, one often also needs to process samples names. In our data, as you probably noticed, sample names include everything: tissue name, annotation, donor, age. The name becomes long and impossible to display in a plot. Simple shortening will not work with plotly.com though, since the coordinates must be unique!</p>
 <p>For this tutorial I've cheated a bit, by just adding an integer to each shortened name, I'm sure you can handle the string processing of your samples names on your own ;-)</p>
 
 </div>

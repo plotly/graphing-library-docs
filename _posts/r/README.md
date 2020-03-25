@@ -46,7 +46,7 @@ In order to contribute to the majority of Plotly's R graphing library documentat
           keep_md: true
       ---
       ```
-      *`order` defines the order in which the tutorials appear on plot.ly/r. Please take a look at https://plotly.com/r/ and order your tutorial next to similar chart types.
+      *`order` defines the order in which the tutorials appear on plotly.com/r. Please take a look at https://plotly.com/r/ and order your tutorial next to similar chart types.
       - Under the header, include the following r code snippet:
 
       ```
@@ -83,7 +83,7 @@ In order to contribute to the majority of Plotly's R graphing library documentat
 3. Add Thumbnail Images
   - Thumbnail images should named `your-tutorial-chart.jpg` and be *EXACTLY* 160px X 160px
   - Thumbnail images should be clear and interesting. You do not need to capture the ENTIRE chart, but rather focus on the most interesting part of the chart.
-  - Use images.plot.ly for adding new images.
+  - Use images.plotly.com for adding new images.
     - Log-in here: https://661924842005.signin.aws.amazon.com/console
     - Username: Plotly_Editors
     - From the <b>Amazon Web Services Console</b> select <b>S3 (Scalable Storage in the Cloud)</b> then select <b>plotly-tutorials</b> -> <b>plotly-documentation</b> -> <b>thumbnail</b>

@@ -329,7 +329,7 @@ v4upgrade: True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Make-All-Existing-Plots-Private">Make All Existing Plots Private<a class="anchor-link" href="#Make-All-Existing-Plots-Private">&#182;</a></h3><p>This example uses <a href="https://api.plot.ly/v2/">Plotly's REST API</a></p>
+<h3 id="Make-All-Existing-Plots-Private">Make All Existing Plots Private<a class="anchor-link" href="#Make-All-Existing-Plots-Private">&#182;</a></h3><p>This example uses <a href="https://api.plotly.com/v2/">Plotly's REST API</a></p>
 
 </div>
 </div>
@@ -392,7 +392,7 @@ v4upgrade: True
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_pages</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">page_size</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.plot.ly/v2/folders/all?user=&#39;</span><span class="o">+</span><span class="n">username</span><span class="o">+</span><span class="s1">&#39;&amp;filetype=plot&amp;page_size=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">page_size</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.plotly.com/v2/folders/all?user=&#39;</span><span class="o">+</span><span class="n">username</span><span class="o">+</span><span class="s1">&#39;&amp;filetype=plot&amp;page_size=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">page_size</span><span class="p">)</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
         <span class="k">return</span>
@@ -412,7 +412,7 @@ v4upgrade: True
     <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">get_pages</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">page_size</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">page</span><span class="p">[</span><span class="s1">&#39;children&#39;</span><span class="p">][</span><span class="s1">&#39;results&#39;</span><span class="p">])):</span>
             <span class="n">fid</span> <span class="o">=</span> <span class="n">page</span><span class="p">[</span><span class="s1">&#39;children&#39;</span><span class="p">][</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="n">x</span><span class="p">][</span><span class="s1">&#39;fid&#39;</span><span class="p">]</span>
-            <span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;https://api.plot.ly/v2/files/&#39;</span><span class="o">+</span><span class="n">fid</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;world_readable&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span> <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+            <span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;https://api.plotly.com/v2/files/&#39;</span><span class="o">+</span><span class="n">fid</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;world_readable&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span> <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ALL of your plots are now private - visit: https://plotly.com/organize/home to view your private plots!&#39;</span><span class="p">)</span>
 
 <span class="n">make_all_plots_private</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>

@@ -334,9 +334,9 @@ fig = dict(data=data, layout=layout)
 py.iplot(fig, filename='Sine Wave Slider')
 ```
 
-Additionally, [IPython widgets](http://moderndata.plot.ly/widgets-in-ipython-notebook-and-plotly/) allow you to add sliders, widgets, search boxes, and more to your Notebook. See the [widget docs](https://ipython.org/ipython-doc/3/api/generated/IPython.html.widgets.interaction.html) for more information. For others to be able to access your work, they'll need IPython. Or, you can use a cloud-based NB option so others can run your work.
+Additionally, [IPython widgets](http://moderndata.plotly.com/widgets-in-ipython-notebook-and-plotly/) allow you to add sliders, widgets, search boxes, and more to your Notebook. See the [widget docs](https://ipython.org/ipython-doc/3/api/generated/IPython.html.widgets.interaction.html) for more information. For others to be able to access your work, they'll need IPython. Or, you can use a cloud-based NB option so others can run your work.
 <br>
-<img src="http://moderndata.plot.ly/wp-content/uploads/2015/01/best_gif_ever.gif"/>
+<img src="http://moderndata.plotly.com/wp-content/uploads/2015/01/best_gif_ever.gif"/>
 
 
 #### Executing R Code
@@ -371,7 +371,7 @@ display(Math(r'F(k) = \int_{-\infty}^{\infty} f(x) e^{2\pi i k} dx'))
 ```
 
 #### Exporting & Publishing Notebooks
-We can export the Notebook as an HTML, PDF, .py, .ipynb, Markdown, and reST file. You can also turn your NB [into a slideshow](http://ipython.org/ipython-doc/2/notebook/nbconvert.html). You can publish Jupyter Notebooks on Plotly. Simply visit [plot.ly](https://plotly.com/organize/home?create=notebook) and select the `+ Create` button in the upper right hand corner. Select Notebook and upload your Jupyter notebook (.ipynb) file!
+We can export the Notebook as an HTML, PDF, .py, .ipynb, Markdown, and reST file. You can also turn your NB [into a slideshow](http://ipython.org/ipython-doc/2/notebook/nbconvert.html). You can publish Jupyter Notebooks on Plotly. Simply visit [plotly.com](https://plotly.com/organize/home?create=notebook) and select the `+ Create` button in the upper right hand corner. Select Notebook and upload your Jupyter notebook (.ipynb) file!
 The notebooks that you upload will be stored in your [Plotly organize folder](https://plotly.com/organize) and hosted at a unique link to make sharing quick and easy.
 See some example notebooks:
 - https://plotly.com/~chelsea_lyn/14066
