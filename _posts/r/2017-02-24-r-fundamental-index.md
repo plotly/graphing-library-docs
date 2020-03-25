@@ -4,7 +4,7 @@ description: Plotly's R graphing library makes interactive, publication-quality 
 display_as: file_settings
 language: r
 layout: langindex
-name: More Plotly Fundamentals
+name: More Fundamentals
 order: 5
 page_type: example_index
 permalink: r/plotly-fundamentals/
@@ -19,7 +19,7 @@ thumbnail: thumbnail/mixed.jpg
 	<div class="--welcome-body">
 		<!--div.--wrap-inner-->
 		<div class="--title">
-			<div class="--category-img"><img src="https://plot.ly/gh-pages/documentation/static/images/r-small.png" alt=""></div>
+			
 			<div class="--body">
 				<h1>Plotly R Library Fundamentals</h1>
 				<p>{{page.description}}</p>

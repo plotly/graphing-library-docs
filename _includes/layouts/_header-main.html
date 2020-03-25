@@ -1,21 +1,14 @@
-<header data-spy="affix" data-offset-top="80" class="header-main --default">
+<header class="header-main --default">
     <div class="--wrap">
         <div class="--wrap-left">
             <div class="-identity">
-                <a href="https://plot.ly/"><img src="/all_static/images/plotly_graphing_libraries_1.png" style="height: 66px;"/></a>
-                <a href="/graphing-libraries/"><img src="/all_static/images/plotly_graphing_libraries_2.png" style="height: 66px;"/></a>
+                <a href="https://plot.ly/"><img src="/all_static/images/plotly_graphing_libraries_1.png" style="height: 45px;"></a>
+                <a href="/graphing-libraries/"><img src="/all_static/images/plotly_graphing_libraries_2.png" style="height: 45px;"></a>
             </div>
         </div>
         <div class="--wrap-right">
             <nav class="--nav-meta" role="navigation">
                 <ul>
-                    {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" or page.permalink contains "ggplot2/"  %}
-                    <li>
-                        <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
-                            <input id="modal-input" style="border-radius: 10px; width: 140px"  type="text" placeholder="   Search..." readonly/>
-                          </button>
-                    </li>
-                    {% endif %}
                     <li><a href="https://plot.ly/get-demo/" data-mode="1" target="_blank" class="typeform-share button --enterprise-quaternary">DEMO DASH</a></li>
                 </ul>
             </nav>

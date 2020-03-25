@@ -11,11 +11,7 @@
 	your browser</a> to improve your experience.</p>
 <![endif]-->
 
-{% include layouts/lang-splash-banner.html %}
-
 {% include layouts/_header-main.html %}
-
-{% include layouts/breadcrumb.html %}
 
 <main class="--page page--single --index">
 
@@ -23,9 +19,15 @@
 		<!-- aside - Main Sidebar-->
 		<aside class="--sidebar-container">
 			<div class="--sidebar-fixed reference" data-spy="affix" id="where">
-				<header class="--sidebar-header">Navigation</header>
+				{% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" or page.permalink contains "ggplot2/"  %}
+                        <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
+                            <input id="modal-input" style="border-radius: 5px; width: 100%;"  type="text" placeholder="   Search..." readonly/>
+                          </button>
+                    {% endif %}
+				<header class="--sidebar-header">On This Page</header>
 				<nav class="--sidebar-body watch"   id="where">
-          <ul class="--sidebar-list"></ul>
+		  <ul class="--sidebar-list"></ul>
+
           {% if page.language == "python/v3" %}
 					<button class="--btn back">
 						<div>
@@ -49,7 +51,7 @@
 									  d="M20,10V14H11L14.5,17.5L12.08,19.92L4.16,12L12.08,4.08L14.5,6.5L11,10H20Z"/>
 							</svg>
 						</div>
-						<span><a href="/{% if page.language == "plotly_js" %}javascript{% else %}{{page.language}}{% endif %}/">Back to {% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}
+						<span></span><a href="/{% if page.language == "plotly_js" %}javascript{% else %}{{page.language}}{% endif %}/">Back to {% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}
 						</a></span>
 					</button>
 				</nav>
@@ -61,47 +63,10 @@
 				<div class="--welcome-body">
 					<!--div.--wrap-inner-->
 					<div class="--title">
-						<div class="--category-img" style="align-self: start">
-
-
-
-
-							{% if page.language == "excel" %}
-							<img src="http://plot.ineffable.co/images/excel-logo.png" alt="">
-							{% endif %}
-							{% if page.language == "python"  %}
-							<img src="https://images.plot.ly/language-icons/api-home/python-logo.png" alt="">
-              {% endif %}
-              {% if page.language == "python/v3"  %}
-							<img src="https://images.plot.ly/language-icons/api-home/python-logo.png" alt="">
-							{% endif %}
-							{% if page.language == "matlab" %}
-							{% endif %}
-							{% if page.language == "julia" %}
-							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Julia_prog_language.svg/2000px-Julia_prog_language.svg.png" alt="">
-							{% endif %}
-							{% if page.language == "r" %}
-							<img src="https://images.plot.ly/language-icons/api-home/r-logo.png" alt="">
-							{% endif %}
-							{% if page.language == "ggplot2" %}
-							<img src="https://images.plot.ly/language-icons/api-home/ggplot2-logo.png" alt="">
-							{% endif %}
-							{% if page.language == "plotly_js" %}
-							<img src="https://images.plot.ly/language-icons/api-home/js-logo.png" alt="Plotly.js">
-							{% endif %}
-							{% if page.language == "nodejs" %}
-							<img src="https://images.plot.ly/language-icons/api-home/nodejs-logo.png" alt="Node.js">
-							{% endif %}
-							{% if page.language == "scala" %}
-							<img src="https://images.plot.ly/plotly-documentation/thumbnail/scala-small.jpg" alt="Scala">
-							{% endif %}
-
-
-
-
-
-						</div>
 						<div class="--body">
+							<div class="nav-breadcrumb-container">
+								{% include layouts/breadcrumb.html %}
+							</div>
 
 							{% unless page.ignore_header %}
 							<h1>
@@ -111,9 +76,9 @@
 								{% endunless %}
 							</h1>
 							<p>{{page.description}} </p>
+							<br>
 
 							{% endunless %}
-              {% include layouts/lang-navigation.html %}
 							{% include layouts/new-to-plotly.html %}
 
 						</div>
@@ -133,22 +98,9 @@
 				{% endif %}
 			</section>
 			<!--End Plotly Basics Section-->
-			{% if page.language == "plotly_js" %}
-			<section class="meta">
-				<div class="wrap">
-					<img width="250" src="/all_static/images/browser_support.png">
-					<p style="text-align: center;">
-						<b style="color:#447adb;">plotly.js</b> runs on all SVG-compatible browsers
-					</p>
-				</div>
-			</section>
-			{% endif %}
 		</section>
 	</div>
 </main>
-
-{% include layouts/helpbox.html %}
-
 
 {% include layouts/insertSidebarElement.html %}
 

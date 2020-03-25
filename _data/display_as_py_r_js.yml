@@ -12,25 +12,25 @@ signal-analysis:
     text: Signal Analysis
 file_settings:
     reference: 'plotly-fundamentals'
-    text: Plotly Fundamentals
+    text: Fundamentals
 basic:
     reference: 'basic-charts'
-    text: Basic
+    text: Basic Charts
 statistical:
     reference: 'statistical-charts'
-    text: Statistical
+    text: Statistical Charts
 scientific:
     reference: 'scientific-charts'
-    text: Scientific
+    text: Scientific Charts
 financial:
     reference: 'financial-charts'
-    text: Financial
+    text: Financial Charts
 maps:
     reference: 'maps'
     text: Maps
 3d_charts:
     reference: '3d-charts'
-    text: 3D
+    text: 3D Charts
 multiple_axes:
     reference: 'subplot-charts'
     text: Subplots

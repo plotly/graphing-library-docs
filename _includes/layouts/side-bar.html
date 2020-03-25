@@ -85,9 +85,18 @@
 {% endif %}
 {%- endfor -%}
 
+{% assign langue = page.language %}
+{% if page.permalink contains 'javascript' %}
+    {% assign langue = 'javascript' %}
+{% endif %}
 
 <aside class="--sidebar-container">
     <div class="--sidebar-fixed reference"  data-spy="affix" id="where">
+        {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" or page.permalink contains "ggplot2/"  %}
+            <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
+                <input id="modal-input" style="border-radius: 5px; width: 100%;"  type="text" placeholder="   Search..." readonly/>
+                </button>
+        {% endif %}
         <header class="--sidebar-header">Quick Start</header>
         <nav class="--sidebar-body watch" id="where">
             <ul class="--sidebar-list">
@@ -147,19 +156,13 @@
                 <!-- JS Specific -->
                 {% if page.language == "plotly_js" %}
                 <li class="--sidebar-item">
-                    <a href="/javascript/getting-started/#plotlyjs-cdn" class="js-splash--navigation-item">CDN</a>
-                </li>
-                <li class="--sidebar-item">
-                    <a href="/javascript/getting-started/#download" class="js-splash--navigation-item">Download</a>
-                </li>
-                <li class="--sidebar-item">
-                    <a href="/javascript/reference" class="js-splash--navigation-item">Full Reference</a>
-                </li>
-                <li class="--sidebar-item">
-                    <a href="/javascript/plotlyjs-events" class="js-splash--navigation-item">Event Reference</a>
+                    <a href="/javascript/reference" class="js-splash--navigation-item">Figure Reference</a>
                 </li>
                 <li class="--sidebar-item">
                     <a href="/javascript/plotlyjs-function-reference/" class="js-splash--navigation-item">Function Reference</a>
+                </li>
+                <li class="--sidebar-item">
+                    <a href="/javascript/plotlyjs-events" class="js-splash--navigation-item">Event Reference</a>
                 </li>
                 <li class="--sidebar-item">
                     <a href="/javascript/configuration-options/" class="js-splash--navigation-item">Configuration Options</a>
@@ -190,138 +193,159 @@
                 </li>
                 {% endif %}
 
+                {% if page.language == 'python' %}
+                <li class="--sidebar-item">
+                    <a target="_blank" href="https://github.com/plotly/plotly.py" class="js-splash--navigation-item">GitHub</a>
+                </li>
+
+                {% elsif page.language == 'matlab' %}
+                <li class="--sidebar-item">
+                    <a target="_blank" href="https://github.com/plotly/matlab-api" class="js-splash--navigation-item">GitHub</a>
+                </li>
+
+                {% elsif page.language == 'julia' %}
+                <li class="--sidebar-item">
+                    <a target="_blank" href="https://github.com/plotly/Julia-API" class="js-splash--navigation-item">GitHub</a>
+                </li>
+
+                {% elsif page.language == 'nodejs' %}
+                <li class="--sidebar-item">
+                    <a target="_blank" href="https://github.com/plotly/plotly-nodejs"
+                   class="js-splash--navigation-item">GitHub</a>
+                </li>
+
+                {% elsif page.language == 'r' or page.language == 'ggplot2' %}
+                <li class="--sidebar-item">
+                    <a target="_blank" href="https://github.com/ropensci/plotly" class="js-splash--navigation-item">GitHub</a>
+                </li>
+
+                {% elsif page.language == 'plotly_js' %}
+                <li class="--sidebar-item">
+                    <a target="_blank" href="https://github.com/plotly/plotly.js/" class="js-splash--navigation-item">GitHub</a>
+                </li>
+
+                {% else %}
+                <li class="--sidebar-item">
+                    <a target="_blank" href="https://github.com/plotly/" class="js-splash--navigation-item">GitHub</a>
+                </li>
+
+                {% endif %}
+                <li class="--sidebar-item">
+                    <a target="_blank" href="http://community.plotly.com/" class="js-splash--navigation-item">community.plotly.com</a>
+                </li>
 
             </ul>
         </nav>
 
         <!-- Examples start -->
-	{% unless display_as %}
         <header class="--sidebar-header">Examples</header>
         <nav class="--sidebar-body watch" id="where">
             <ul class="--sidebar-list">
                 {% if file_settings == true %}
                 <li class="--sidebar-item">
-                    <a href="#fundamentals" class="js-splash--navigation-item">Plotly Fundamentals</a>
+                    <a href="/{{langue}}/plotly-fundamentals/" class="js-splash--navigation-item">Fundamentals</a>
                 </li>
                 {% endif %}
 
                 {% if basic == true %}
                 <li class="--sidebar-item">
-                    <a href="#basic-charts" class="js-splash--navigation-item">Basic</a>
+                    <a href="/{{langue}}/basic-charts/" class="js-splash--navigation-item">Basic Charts</a>
                 </li>
                 {% endif %}
 
                 {% if statistical == true %}
                 <li class="--sidebar-item">
-                    <a href="#statistical-charts" class="js-splash--navigation-item">Statistical</a>
+                    <a href="/{{langue}}/statistical-charts/" class="js-splash--navigation-item">Statistical Charts</a>
                 </li>
                 {% endif %}
 
                 {% if scientific == true %}
                 <li class="--sidebar-item">
-                    <a href="#scientific-charts" class="js-splash--navigation-item">Scientific</a>
+                    <a href="/{{langue}}/scientific-charts/" class="js-splash--navigation-item">Scientific Charts</a>
                 </li>
                 {% endif %}
 
                 {% if financial == true %}
                 <li class="--sidebar-item">
-                    <a href="#financial-charts" class="js-splash--navigation-item">Financial</a>
+                    <a href="/{{langue}}/financial-charts/" class="js-splash--navigation-item">Financial Charts</a>
                 </li>
                 {% endif %}
 
                 {% if maps == true %}
                 <li class="--sidebar-item">
-                    <a href="#maps" class="js-splash--navigation-item">Maps</a>
+                    <a href="/{{langue}}/maps/" class="js-splash--navigation-item">Maps</a>
                 </li>
                 {% endif %}
 
                 {% if 3d_charts == true %}
                 <li class="--sidebar-item">
-                    <a href="#3d-charts" class="js-splash--navigation-item">3D</a>
+                    <a href="/{{langue}}/3d-charts/" class="js-splash--navigation-item">3D Charts</a>
                 </li>
                 {% endif %}
 
                 {% if multiple_axes == true %}
                 <li class="--sidebar-item">
-                    <a href="#multiple-axes-subplots-and-insets" class="js-splash--navigation-item">Subplots</a>
-                </li>
-                {% endif %}
-
-                {% if chart_events == true and language == "python" %}
-                <li class="--sidebar-item">
-                    <a href="#chart-events" class="js-splash--navigation-item">Jupyter Widgets Interaction</a>
+                    <a href="/{{langue}}/subplot-charts/" class="js-splash--navigation-item">Subplots</a>
                 </li>
                 {% endif %}
 
                 {% if language == "plotly_js"%}
                 <li class="--sidebar-item">
-                    <a href="#chart-events" class="js-splash--navigation-item">Chart Events</a>
-                </li>
-                {% endif %}
-
-                {% if transforms == true %}
-                <li class="--sidebar-item">
-                    <a href="#transforms" class="js-splash--navigation-item">Transforms</a>
-                </li>
-                {% endif %}
-
-                {% if controls == true %}
-                <li class="--sidebar-item">
-                    <a href="#controls" class="js-splash--navigation-item">Custom Controls</a>
+                    <a href="/{{langue}}/#chart-events" class="js-splash--navigation-item">Chart Events</a>
                 </li>
                 {% endif %}
 
                 {% if animations == true %}
                 <li class="--sidebar-item">
-                    <a href="#animations" class="js-splash--navigation-item">Animations</a>
+                    <a href="/{{langue}}/#animations" class="js-splash--navigation-item">Animations</a>
                 </li>
                 {% endif %}
 
                 {% if chart_studio == true %}
                 <li class="--sidebar-item">
-                    <a href="#chart-studio" class="js-splash--navigation-item">Chart Studio</a>
+                    <a href="/{{langue}}/#chart-studio" class="js-splash--navigation-item">Chart Studio</a>
                 </li>
                 {% endif %}
 
                 {% if advanced_opt == true %}
                 <li class="--sidebar-item">
-                    <a href="#advanced-options" class="js-splash--navigation-item">Advanced</a>
+                    <a href="/{{langue}}/#advanced-options" class="js-splash--navigation-item">Advanced</a>
                 </li>
                 {% endif %}
 
                 {% if databases == true %}
                 <li class="--sidebar-item">
-                    <a href="#databases" class="js-splash--navigation-item">Connecting to Databases</a>
+                    <a href="/{{langue}}/#databases" class="js-splash--navigation-item">Connecting to Databases</a>
                 </li>
                 {% endif %}
 
                 {% if report_generation == true %}
                 <li class="--sidebar-item">
-                    <a href="#report-generation" class="js-splash--navigation-item">Report Generation</a>
+                    <a href="/{{langue}}/#report-generation" class="js-splash--navigation-item">Report Generation</a>
                 </li>
                 {% endif %}
 
                 {% if style_opt == true %}
                 <li class="--sidebar-item">
-                    <a href="#style-options" class="js-splash--navigation-item">Style Options</a>
+                    <a href="/{{langue}}/#style-options" class="js-splash--navigation-item">Style Options</a>
                 </li>
                 {% endif %}
 
                 {% if layout_opt == true %}
                 <li class="--sidebar-item">
-                    <a href="#layout-options" class="js-splash--navigation-item">Layout Options</a>
+                    <a href="/{{langue}}/#layout-options" class="js-splash--navigation-item">Layout Options</a>
                 </li>
                 {% endif %}
 
                 {% if tutorial == true %}
                 <li class="--sidebar-item">
-                    <a href="#tutorial" class="js-splash--navigation-item">Tutorial</a>
+                    <a href="/{{langue}}/#tutorial" class="js-splash--navigation-item">Tutorial</a>
                 </li>
                 {% endif %}
 
                 {% if get_request == true %}
                 <li class="--sidebar-item">
-                    <a href="#static-image-export" class="js-splash--navigation-item">Image Export &amp; Retrieving Plots</a>
+                    <a href="/{{langue}}/#static-image-export" class="js-splash--navigation-item">Image Export &amp; Retrieving Plots</a>
                 </li>
                 {% endif %}
 
@@ -534,84 +558,6 @@
                 </li>
                 {% endif %}
             </ul>
-        </nav>
-	{% endunless %}
-        <!-- Community -->
-        <header class="--sidebar-header">Community</header>
-        <nav class="--sidebar-body watch" id="where">
-            <ul class="--sidebar-list">
-
-                {% if language == "plotly_js" %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/plotly/plotly.js/blob/master/CONTRIBUTING.md"
-                   class="js-splash--navigation-item">Contributing</a>
-                </li>
-                {% endif %}
-
-                {% if page.language == 'python' %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/plotly/plotly.py" class="js-splash--navigation-item">GitHub</a>
-                </li>
-
-                {% elsif page.language == 'matlab' %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/plotly/matlab-api" class="js-splash--navigation-item">GitHub</a>
-                </li>
-
-                {% elsif page.language == 'julia' %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/plotly/Julia-API" class="js-splash--navigation-item">GitHub</a>
-                </li>
-
-                {% elsif page.language == 'nodejs' %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/plotly/plotly-nodejs"
-                   class="js-splash--navigation-item">GitHub</a>
-                </li>
-
-                {% elsif page.language == 'r' or page.language == 'ggplot2' %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/ropensci/plotly" class="js-splash--navigation-item">GitHub</a>
-                </li>
-
-                {% elsif page.language == 'plotly_js' %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/plotly/plotly.js/" class="js-splash--navigation-item">GitHub</a>
-                </li>
-
-                {% else %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/plotly/" class="js-splash--navigation-item">GitHub</a>
-                </li>
-
-                {% endif %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="http://community.plot.ly/" class="js-splash--navigation-item">community.plot.ly</a>
-                </li>
-
-            </ul>
-        </nav>
-        <header class="--sidebar-header">Tools</header>
-        <nav class="--sidebar-body watch" id="where">
-            <ul class="--sidebar-list">
-                <li class="--sidebar-item">
-                    <a target="_blank" href="/create/" class="js-splash--navigation-item">Web Editor</a>
-                </li>
-                {% if language == "plotly_js" %}
-                <li class="--sidebar-item">
-                    <a target="_blank" href="https://codepen.io/plotly" class="js-splash--navigation-item">CodePen</a>
-                </li>
-                {% endif %}
-            </ul>
-            <button class="--btn back">
-                <div class="icon">
-                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="#000000"
-                              d="M20,10V14H11L14.5,17.5L12.08,19.92L4.16,12L12.08,4.08L14.5,6.5L11,10H20Z"/>
-                    </svg>
-                </div>
-                <span><a href="/graphing-libraries/">Back to Graphing Libraries</a></span>
-            </button>
         </nav>
     </div>
 </aside>

@@ -4,15 +4,12 @@
 <body>
 {% include layouts/google-tag-body.html %}
 
-{% include layouts/lang-splash-banner.html %}
-
 {% include layouts/_header-main.html %}
-
-{% include layouts/breadcrumb.html %}
 
 <main class="--page page--single --index">
 
     <div class="--wrap">
+        
         <!-- aside - Main Sidebar-->
         {% if page.page_type == "reference" %}
         {% include layouts/reference-side-nav.html %}
@@ -23,6 +20,9 @@
         {% endif %}
         <!-- Main-->
         <section class="--page-body --tutorial-index">
+            <div class="nav-breadcrumb-container">
+                {% include layouts/breadcrumb.html %}
+            </div>
             <!-- Start pulling content -->
             {{ content }}
             <!--End content -->
@@ -30,8 +30,6 @@
     </div>
 
 </main>
-
-{% include layouts/helpbox.html %}
 
 {% include layouts/_footer-main.html %}
 
