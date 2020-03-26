@@ -1,4 +1,4 @@
-# Contribute to Plotly's [R Documentation](https://plot.ly/r/)
+# Contribute to Plotly's [R Documentation](https://plotly.com/r/)
 
 These are the instructions for contributing to the subset of the documentation for Plotly's R graphing library which deals with Chart Studio. 
 
@@ -46,7 +46,7 @@ In order to contribute to the majority of Plotly's R graphing library documentat
           keep_md: true
       ---
       ```
-      *`order` defines the order in which the tutorials appear on plot.ly/r. Please take a look at https://plot.ly/r/ and order your tutorial next to similar chart types.
+      *`order` defines the order in which the tutorials appear on plot.ly/r. Please take a look at https://plotly.com/r/ and order your tutorial next to similar chart types.
       - Under the header, include the following r code snippet:
 
       ```
@@ -109,12 +109,12 @@ In order to contribute to the majority of Plotly's R graphing library documentat
 
 5. To proof your work follow these steps: https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md#rendering-the-pages-locally
 
-##### At https://plot.ly/r
-6. Your changes haven't been deployed yet so they won't be online. That said, <b>PLEASE</b> visit https://plot.ly/r/your-tutorial and make sure everything looks correct once they have been deployed.
+##### At https://plotly.com/r
+6. Your changes haven't been deployed yet so they won't be online. That said, <b>PLEASE</b> visit https://plotly.com/r/your-tutorial and make sure everything looks correct once they have been deployed.
 
   - Some common problems that you should check for:
     - Make sure all plots appear!
-    - The thumbnail image appears on: https://plot.ly/r/
+    - The thumbnail image appears on: https://plotly.com/r/
 
 ## Search
 

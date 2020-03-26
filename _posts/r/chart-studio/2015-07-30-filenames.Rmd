@@ -42,7 +42,7 @@ api_create(p, filename = "name-of-my-plotly-file")
 
 If the `filename` parameter contains the character "/", then the `api_create()` function will save that plot in a folder in your Chart Studio account. 
 
-This option is only available for [Chart Studio Enterprise subscribers](https://plot.ly/online-chart-maker/)
+This option is only available for [Chart Studio Enterprise subscribers](https://plotly.com/online-chart-maker/)
 
 ```{r}
 api_create(p, filename="r-docs/name-of-my-chart-studio-file")
@@ -50,4 +50,4 @@ api_create(p, filename="r-docs/name-of-my-chart-studio-file")
 
 ### Viewing Saved Plots
 
-View the R graphs you have saved in your Chart Studio account at [https://plot.ly/organize](https://plot.ly/organize).
+View the R graphs you have saved in your Chart Studio account at [https://plotly.com/organize](https://plotly.com/organize).

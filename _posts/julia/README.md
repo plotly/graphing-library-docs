@@ -1,4 +1,4 @@
-# Contribute to Plotly's [Julia Documentation](https://plot.ly/julia/)
+# Contribute to Plotly's [Julia Documentation](https://plotly.com/julia/)
 ## Initial Steps:
 0. Clone the repo.:
 
@@ -39,30 +39,30 @@ Our Julia tutorials are written in HTML files with embedded plot examples.
   {% include posts/auto_examples.html examples=examples %}
   ```
   - **`display_as` sets where your tutorial is displayed
-      - 'basic' = https://plot.ly/julia/#basic-charts
-      - 'statistical' = https://plot.ly/julia/#statistical-charts
-      - 'scientific' = https://plot.ly/julia/#scientific-charts
-      - 'financial' = https://plot.ly/julia/#financial-charts
-      - 'maps' = https://plot.ly/julia/#maps
-      - '3d_charts' = https://plot.ly/julia/#3d-charts
+      - 'basic' = https://plotly.com/julia/#basic-charts
+      - 'statistical' = https://plotly.com/julia/#statistical-charts
+      - 'scientific' = https://plotly.com/julia/#scientific-charts
+      - 'financial' = https://plotly.com/julia/#financial-charts
+      - 'maps' = https://plotly.com/julia/#maps
+      - '3d_charts' = https://plotly.com/julia/#3d-charts
       - See additional options [HERE](https://github.com/plotly/graphing-library-docs/blob/master/_includes/documentation_eg.html#L1)
-  - *** `order` defines the order in which the tutorials appear in each section on plot.ly/julia. Please take a look at https://plot.ly/julia/ and order your tutorial next to similar chart types. <b>Note</b> `order` can be a float.
+  - *** `order` defines the order in which the tutorials appear in each section on plot.ly/julia. Please take a look at https://plotly.com/julia/ and order your tutorial next to similar chart types. <b>Note</b> `order` can be a float.
 
-3. Create an example and save it on https://plot.ly/.
+3. Create an example and save it on https://plotly.com/.
 
 4. Add an HTML file (`yyyy-mm-dd-example-name.html`) for each example. The HTML file should have a header (template below), followed by the Julia code used to create the example.
   ```
   ---
   name: Basic Bar Chart **
-  plot_url: https://plot.ly/~PlotBot/39
+  plot_url: https://plotly.com/~PlotBot/39
   language: julia
   suite: bar
   order: 1 **
   sitemap: false
   arrangement: horizontal
   ---
-  # Learn about API authentication here: https://plot.ly/julia/getting-started
-  # Find your api_key here: https://plot.ly/settings/api
+  # Learn about API authentication here: https://plotly.com/julia/getting-started
+  # Find your api_key here: https://plotly.com/settings/api
 
   using Plotly
 
@@ -103,12 +103,12 @@ For more information see these steps: https://github.com/plotly/graphing-library
 
 11. Deploy changes by running `bundle exec rake deploy` from the root of the documentation repo.
 
-##### At https://plot.ly/julia
+##### At https://plotly.com/julia
 12. Check your Tutorial!!!! This is a <b>very important</b> step.
-  <b>PLEASE</b> visit https://plot.ly/julia/your-tutorial and make sure everything looks correct :)
+  <b>PLEASE</b> visit https://plotly.com/julia/your-tutorial and make sure everything looks correct :)
 
   - Some common problems that you should check for:
     - Make sure all plots/codepen embeds appear! (*you may want to sign out of your Plotly/codepen account to ensure you didn't accidentally embed private plots)
-    - The thumbnail image appears on: https://plot.ly/julia/
+    - The thumbnail image appears on: https://plotly.com/julia/
 
 Thanks for contributing to our documentation!!

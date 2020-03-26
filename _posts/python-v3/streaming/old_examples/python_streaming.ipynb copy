@@ -5,9 +5,9 @@
    "metadata": {},
    "source": [
     "If you want to skip ahead to other streaming examples, you can go to any of the following links:\n",
-    "- https://plot.ly/python/multiple-trace-streaming/\n",
-    "- https://plot.ly/python/geo-streaming/\n",
-    "- https://plot.ly/python/subplot-streaming"
+    "- https://plotly.com/python/multiple-trace-streaming/\n",
+    "- https://plotly.com/python/geo-streaming/\n",
+    "- https://plotly.com/python/subplot-streaming"
    ]
   },
   {
@@ -79,7 +79,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Before you start streaming, you're going to need some [stream tokens](https://plot.ly/settings/api). You will need **one unique stream token for every `trace object` ** you wish to stream to. Thus if you have two traces that you want to plot and stream, you're going to require two unique stream tokens. Notice that more tokens can be added via the settings section of your Plotly profile: https://plot.ly/settings/api"
+    "Before you start streaming, you're going to need some [stream tokens](https://plotly.com/settings/api). You will need **one unique stream token for every `trace object` ** you wish to stream to. Thus if you have two traces that you want to plot and stream, you're going to require two unique stream tokens. Notice that more tokens can be added via the settings section of your Plotly profile: https://plotly.com/settings/api"
    ]
   },
   {
@@ -93,7 +93,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Now in the same way that you set your credentials, as shown in [Getting Started](https://plot.ly/python/getting-started/), you can add stream tokens to your credentials file. "
+    "Now in the same way that you set your credentials, as shown in [Getting Started](https://plotly.com/python/getting-started/), you can add stream tokens to your credentials file. "
    ]
   },
   {
@@ -500,7 +500,7 @@
     {
      "data": {
       "text/html": [
-       "<iframe id=\"igraph\" scrolling=\"no\" style=\"border:none;\" seamless=\"seamless\" src=\"https://plot.ly/~demo_account/22.embed\" height=\"525px\" width=\"100%\"></iframe>"
+       "<iframe id=\"igraph\" scrolling=\"no\" style=\"border:none;\" seamless=\"seamless\" src=\"https://plotly.com/~demo_account/22.embed\" height=\"525px\" width=\"100%\"></iframe>"
       ],
       "text/plain": [
        "<plotly.tools.PlotlyDisplay object>"
@@ -553,7 +553,7 @@
       " |  Interface to Plotly's real-time graphing API.\n",
       " |  \n",
       " |  Initialize a Stream object with a stream_id\n",
-      " |  found in https://plot.ly/settings.\n",
+      " |  found in https://plotly.com/settings.\n",
       " |  Real-time graphs are initialized with a call to `plot` that embeds\n",
       " |  your unique `stream_id`s in each of the graph's traces. The `Stream`\n",
       " |  interface plots data to these traces, as identified with the unique\n",
@@ -561,14 +561,14 @@
       " |  Every viewer of the graph sees the same data at the same time.\n",
       " |  \n",
       " |  View examples and tutorials here:\n",
-      " |  https://plot.ly/python/streaming/\n",
+      " |  https://plotly.com/python/streaming/\n",
       " |  \n",
       " |  Stream example:\n",
       " |  # Initialize a streaming graph\n",
       " |  # by embedding stream_id's in the graph's traces\n",
       " |  import plotly.plotly as py\n",
       " |  from plotly.graph_objs import Data, Scatter, Stream\n",
-      " |  stream_id = \"your_stream_id\" # See https://plot.ly/settings\n",
+      " |  stream_id = \"your_stream_id\" # See https://plotly.com/settings\n",
       " |  py.plot(Data([Scatter(x=[], y=[],\n",
       " |                        stream=Stream(token=stream_id, maxpoints=100))]))\n",
       " |  # Stream data to the import trace\n",
@@ -580,18 +580,18 @@
       " |  \n",
       " |  __init__(self, stream_id)\n",
       " |      Initialize a Stream object with your unique stream_id.\n",
-      " |      Find your stream_id at https://plot.ly/settings.\n",
+      " |      Find your stream_id at https://plotly.com/settings.\n",
       " |      \n",
       " |      For more help, see: `help(plotly.plotly.Stream)`\n",
       " |      or see examples and tutorials here:\n",
-      " |      https://plot.ly/python/streaming/\n",
+      " |      https://plotly.com/python/streaming/\n",
       " |  \n",
       " |  close(self)\n",
       " |      Close the stream connection to plotly's streaming servers.\n",
       " |      \n",
       " |      For more help, see: `help(plotly.plotly.Stream)`\n",
       " |      or see examples and tutorials here:\n",
-      " |      https://plot.ly/python/streaming/\n",
+      " |      https://plotly.com/python/streaming/\n",
       " |  \n",
       " |  heartbeat(self, reconnect_on=(200, '', 408))\n",
       " |      Keep stream alive. Streams will close after ~1 min of inactivity.\n",
@@ -605,7 +605,7 @@
       " |      \n",
       " |      For more help, see: `help(plotly.plotly.Stream)`\n",
       " |      or see examples and tutorials here:\n",
-      " |      https://plot.ly/python/streaming/\n",
+      " |      https://plotly.com/python/streaming/\n",
       " |  \n",
       " |  write(self, trace, layout=None, validate=True, reconnect_on=(200, '', 408))\n",
       " |      Write to an open stream.\n",
@@ -736,7 +736,7 @@
     {
      "data": {
       "text/html": [
-       "<iframe id=\"igraph\" scrolling=\"no\" style=\"border:none;\" seamless=\"seamless\" src=\"https://plot.ly/~streaming-demos/12.embed\" height=\"525\" width=\"100%\"></iframe>"
+       "<iframe id=\"igraph\" scrolling=\"no\" style=\"border:none;\" seamless=\"seamless\" src=\"https://plotly.com/~streaming-demos/12.embed\" height=\"525\" width=\"100%\"></iframe>"
       ],
       "text/plain": [
        "<plotly.tools.PlotlyDisplay object>"

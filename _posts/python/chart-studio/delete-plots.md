@@ -38,7 +38,7 @@ jupyter:
 #### Imports and Credentials
 In additional to importing python's `requests` and `json` packages, this tutorial also uses [Plotly's REST API](https://api.plot.ly/v2/)
 
-First define YOUR [username and api key](https://plot.ly/settings/api) and create `auth` and `headers` to use with `requests`
+First define YOUR [username and api key](https://plotly.com/settings/api) and create `auth` and `headers` to use with `requests`
 
 ```python
 import chart_studio
@@ -76,7 +76,7 @@ fid = username+':658'
 fid
 ```
 
-The following request moves the plot from the [organize folder](https://plot.ly/organize/home) into the trash. <br>Note: a successful trash request will return a `Response [200]`.
+The following request moves the plot from the [organize folder](https://plotly.com/organize/home) into the trash. <br>Note: a successful trash request will return a `Response [200]`.
 
 ```python
 requests.post('https://api.plot.ly/v2/files/'+fid+'/trash', auth=auth, headers=headers)

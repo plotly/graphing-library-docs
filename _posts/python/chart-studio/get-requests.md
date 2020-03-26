@@ -37,10 +37,10 @@ jupyter:
 
 ```python
 import chart_studio.plotly as py
-# Learn about API authentication here: https://plot.ly/python/getting-started
-# Find your api_key here: https://plot.ly/settings/api
+# Learn about API authentication here: https://plotly.com/python/getting-started
+# Find your api_key here: https://plotly.com/settings/api
 
-fig = py.get_figure("https://plot.ly/~PlotBot/5")
+fig = py.get_figure("https://plotly.com/~PlotBot/5")
 
 fig['layout']['title'] = "Never forget that title!"
 
@@ -52,17 +52,17 @@ py.iplot(fig, filename="python-change_plot")
 ```python
 import chart_studio.plotly as py
 import plotly.graph_objects as go
-# Learn about API authentication here: https://plot.ly/python/getting-started
-# Find your api_key here: https://plot.ly/settings/api
+# Learn about API authentication here: https://plotly.com/python/getting-started
+# Find your api_key here: https://plotly.com/settings/api
 
-data = py.get_figure("https://plot.ly/~PythonPlotBot/3483").data
+data = py.get_figure("https://plotly.com/~PythonPlotBot/3483").data
 distance = [d['y'][0] for d in data]  # check out the data for yourself!
 
 fig = go.Figure()
 fig.add_histogram(y=distance, name="flyby distance", histnorm='probability')
 xaxis = dict(title="Probability for Flyby at this Distance")
 yaxis = dict(title="Distance from Earth (Earth Radii)")
-fig.update_layout(title="data source: https://plot.ly/~AlexHP/68", xaxis=xaxis, yaxis=yaxis)
+fig.update_layout(title="data source: https://plotly.com/~AlexHP/68", xaxis=xaxis, yaxis=yaxis)
 
 plot_url = py.plot(fig, filename="python-get-data")
 ```
@@ -71,10 +71,10 @@ plot_url = py.plot(fig, filename="python-get-data")
 
 ```python
 import chart_studio.plotly as py
-# Learn about API authentication here: https://plot.ly/python/getting-started
-# Find your api_key here: https://plot.ly/settings/api
+# Learn about API authentication here: https://plotly.com/python/getting-started
+# Find your api_key here: https://plotly.com/settings/api
 
-fig = py.get_figure("https://plot.ly/~PlotBot/5")
+fig = py.get_figure("https://plotly.com/~PlotBot/5")
 
 plot_url = py.plot(fig, filename="python-replot1")
 ```
@@ -83,8 +83,8 @@ plot_url = py.plot(fig, filename="python-replot1")
 
 ```python
 import chart_studio.plotly as py
-# Learn about API authentication here: https://plot.ly/python/getting-started
-# Find your api_key here: https://plot.ly/settings/api
+# Learn about API authentication here: https://plotly.com/python/getting-started
+# Find your api_key here: https://plotly.com/settings/api
 
 fig = py.get_figure("PlotBot", 5)
 
