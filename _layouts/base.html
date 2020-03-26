@@ -28,22 +28,6 @@
 				<nav class="--sidebar-body watch"   id="where">
 		  <ul class="--sidebar-list"></ul>
 
-          {% if page.language == "python/v3" %}
-					<button class="--btn back">
-						<div>
-							<img class="--icon-notebook" src="https://plot.ly/gh-pages/documentation/static/images/notebook@2x.png" alt="notebook">
-						</div>
-						<span><a href="/{{page.ipynb}}/">Download <b>THIS</b> Notebook!</a></span>
-					</button>
-					{% endif %}
-					{% if page.display_as == "shiny" %}
-					<ul class="--sidebar-list2">
-						<li class="--sidebar-item">
-						<a href="https://plot.ly/products/dash/">Know Python? Try Dash!
-						</a>
-						</li>
-					</ul>
-					{% endif %}
 					<button class="--btn back">
 						<div class="icon">
 							<svg style="width:24px;height:24px" viewBox="0 0 24 24">
