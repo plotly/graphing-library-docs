@@ -91,10 +91,10 @@ You may want to [reload submodules](http://stackoverflow.com/questions/5364050/r
 
 
 Some useful packages that we'll use in this tutorial include:
-* [Pandas](https://plot.ly/pandas/): import data via a url and create a dataframe to easily handle data for analysis and graphing. See examples of using Pandas here: https://plot.ly/pandas/.
-* [NumPy](https://plot.ly/numpy/): a package for scientific computing with tools for algebra, random number generation, integrating with databases, and managing data. See examples of using NumPy here: https://plot.ly/numpy/.
+* [Pandas](https://plotly.com/pandas/): import data via a url and create a dataframe to easily handle data for analysis and graphing. See examples of using Pandas here: https://plotly.com/pandas/.
+* [NumPy](https://plotly.com/numpy/): a package for scientific computing with tools for algebra, random number generation, integrating with databases, and managing data. See examples of using NumPy here: https://plotly.com/numpy/.
 * [SciPy](http://www.scipy.org/): a Python-based ecosystem of packages for math, science, and engineering.
-* [Plotly](https://plot.ly/python/getting-started): a graphing library for making interactive, publication-quality graphs. See examples of statistic, scientific, 3D charts, and more here: https://plot.ly/python.
+* [Plotly](https://plotly.com/python/getting-started): a graphing library for making interactive, publication-quality graphs. See examples of statistic, scientific, 3D charts, and more here: https://plotly.com/python.
 
 ```python
 import pandas as pd
@@ -104,7 +104,7 @@ import chart_studio.plotly as py
 ```
 
 #### Import Data
-You can use pandas `read_csv()` function to import data. In the example below, we import a csv [hosted on github](https://github.com/plotly/datasets/) and display it in a [table using Plotly](https://plot.ly/python/table/):
+You can use pandas `read_csv()` function to import data. In the example below, we import a csv [hosted on github](https://github.com/plotly/datasets/) and display it in a [table using Plotly](https://plotly.com/python/table/):
 
 ```python
 import chart_studio.plotly as py
@@ -131,7 +131,7 @@ df.std()
 ```
 
 #### Plotting Inline
-You can use [Plotly's python API](https://plot.ly/python) to plot inside your Jupyter Notebook by calling ```plotly.plotly.iplot()``` or ```plotly.offline.iplot()``` if working offline. Plotting in the notebook gives you the advantage of keeping your data analysis and plots in one place. Now we can do a bit of interactive plotting. Head to the [Plotly getting started](https://plot.ly/python/) page to learn how to set your credentials. Calling the plot with ```iplot``` automaticallly generates an interactive version of the plot inside the Notebook in an iframe. See below:
+You can use [Plotly's python API](https://plotly.com/python) to plot inside your Jupyter Notebook by calling ```plotly.plotly.iplot()``` or ```plotly.offline.iplot()``` if working offline. Plotting in the notebook gives you the advantage of keeping your data analysis and plots in one place. Now we can do a bit of interactive plotting. Head to the [Plotly getting started](https://plotly.com/python/) page to learn how to set your credentials. Calling the plot with ```iplot``` automaticallly generates an interactive version of the plot inside the Notebook in an iframe. See below:
 
 ```python
 import chart_studio.plotly as py
@@ -143,7 +143,7 @@ data = [go.Bar(x=df.School,
 py.iplot(data, filename='jupyter-basic_bar')
 ```
 
-Plotting multiple traces and styling the chart with custom colors and titles is simple with Plotly syntax. Additionally, you can control the privacy with [```sharing```](https://plot.ly/python/privacy/) set to ```public```, ```private```, or ```secret```.
+Plotting multiple traces and styling the chart with custom colors and titles is simple with Plotly syntax. Additionally, you can control the privacy with [```sharing```](https://plotly.com/python/privacy/) set to ```public```, ```private```, or ```secret```.
 
 ```python
 import chart_studio.plotly as py
@@ -244,7 +244,7 @@ py.iplot(fig, filename='jupyter-Nuclear Waste Sites on American Campuses')
 ```
 
 #### 3D Plotting
-Using Numpy and Plotly, we can make interactive [3D plots](https://plot.ly/python/#3d) in the Notebook as well.
+Using Numpy and Plotly, we can make interactive [3D plots](https://plotly.com/python/#3d) in the Notebook as well.
 
 ```python
 import chart_studio.plotly as py
@@ -293,8 +293,8 @@ py.iplot(fig, filename='jupyter-parametric_plot')
 ```
 
 #### Animated Plots
-Checkout Plotly's [animation documentation](https://plot.ly/python/#animations) to see how to create animated plots inline in Jupyter notebooks like the Gapminder plot displayed below:
-![https://plot.ly/~PythonPlotBot/231/](https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/anim.gif)
+Checkout Plotly's [animation documentation](https://plotly.com/python/#animations) to see how to create animated plots inline in Jupyter notebooks like the Gapminder plot displayed below:
+![https://plotly.com/~PythonPlotBot/231/](https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/anim.gif)
 
 
 #### Plot Controls & IPython widgets
@@ -344,7 +344,7 @@ IRkernel, an R kernel for Jupyter, allows you to write and execute R code in a J
 
 ![](https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/rkernel.png)
 
-See a full R example Jupyter Notebook here: https://plot.ly/~chelsea_lyn/14069
+See a full R example Jupyter Notebook here: https://plotly.com/~chelsea_lyn/14069
 
 
 #### Additional Embed Features
@@ -371,17 +371,17 @@ display(Math(r'F(k) = \int_{-\infty}^{\infty} f(x) e^{2\pi i k} dx'))
 ```
 
 #### Exporting & Publishing Notebooks
-We can export the Notebook as an HTML, PDF, .py, .ipynb, Markdown, and reST file. You can also turn your NB [into a slideshow](http://ipython.org/ipython-doc/2/notebook/nbconvert.html). You can publish Jupyter Notebooks on Plotly. Simply visit [plot.ly](https://plot.ly/organize/home?create=notebook) and select the `+ Create` button in the upper right hand corner. Select Notebook and upload your Jupyter notebook (.ipynb) file!
-The notebooks that you upload will be stored in your [Plotly organize folder](https://plot.ly/organize) and hosted at a unique link to make sharing quick and easy.
+We can export the Notebook as an HTML, PDF, .py, .ipynb, Markdown, and reST file. You can also turn your NB [into a slideshow](http://ipython.org/ipython-doc/2/notebook/nbconvert.html). You can publish Jupyter Notebooks on Plotly. Simply visit [plot.ly](https://plotly.com/organize/home?create=notebook) and select the `+ Create` button in the upper right hand corner. Select Notebook and upload your Jupyter notebook (.ipynb) file!
+The notebooks that you upload will be stored in your [Plotly organize folder](https://plotly.com/organize) and hosted at a unique link to make sharing quick and easy.
 See some example notebooks:
-- https://plot.ly/~chelsea_lyn/14066
-- https://plot.ly/~notebook_demo/35
-- https://plot.ly/~notebook_demo/85
-- https://plot.ly/~notebook_demo/128
+- https://plotly.com/~chelsea_lyn/14066
+- https://plotly.com/~notebook_demo/35
+- https://plotly.com/~notebook_demo/85
+- https://plotly.com/~notebook_demo/128
 
 
 #### Publishing Dashboards
-Users publishing interactive graphs can also use [Plotly's dashboarding tool](https://plot.ly/dashboard/create) to arrange plots with a drag and drop interface. These dashboards can be published, embedded, and shared. <img src="http://i.imgur.com/hz0eNpH.png" />
+Users publishing interactive graphs can also use [Plotly's dashboarding tool](https://plotly.com/dashboard/create) to arrange plots with a drag and drop interface. These dashboards can be published, embedded, and shared. <img src="http://i.imgur.com/hz0eNpH.png" />
 
 
 ### Publishing Dash Apps
@@ -392,9 +392,9 @@ For users looking to ship and productionize Python apps, [dash](https://github.c
 
 
 ### Jupyter Gallery
-For more Jupyter tutorials, checkout [Plotly's python documentation](https://plot.ly/python/): all documentation is written in jupyter notebooks that you can download and run yourself or checkout these [user submitted examples](https://plot.ly/ipython-notebooks/)!
+For more Jupyter tutorials, checkout [Plotly's python documentation](https://plotly.com/python/): all documentation is written in jupyter notebooks that you can download and run yourself or checkout these [user submitted examples](https://plotly.com/ipython-notebooks/)!
 
-[![IPython Notebook Gallery](http://i.imgur.com/AdElJQx.png)](https://plot.ly/ipython-notebooks/)
+[![IPython Notebook Gallery](http://i.imgur.com/AdElJQx.png)](https://plotly.com/ipython-notebooks/)
 
 ```python
 

@@ -14,7 +14,7 @@ page_type: u-guide
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Streaming-Support">Streaming Support<a class="anchor-link" href="#Streaming-Support">&#182;</a></h3><p><strong>Streaming is no longer supported in Chart Studio Cloud.<br>Streaming is still available as part of <a href="https://plot.ly/products/on-premise/">Chart Studio Enterprise</a>. Additionally, <a href="https://plot.ly/products/dash/">Dash</a> supports streaming, as demonstrated by the <a href="https://github.com/plotly/dash-wind-streaming">Dash Wind Streaming example</a>.</strong></p>
+<h3 id="Streaming-Support">Streaming Support<a class="anchor-link" href="#Streaming-Support">&#182;</a></h3><p><strong>Streaming is no longer supported in Chart Studio Cloud.<br>Streaming is still available as part of <a href="https://plotly.com/products/on-premise/">Chart Studio Enterprise</a>. Additionally, <a href="https://plotly.com/products/dash/">Dash</a> supports streaming, as demonstrated by the <a href="https://github.com/plotly/dash-wind-streaming">Dash Wind Streaming example</a>.</strong></p>
 
 </div>
 </div>
@@ -47,7 +47,7 @@ page_type: u-guide
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Before you start streaming, you're going to need some <a href="https://plot.ly/settings/api">stream tokens</a>. You will need <strong>one unique stream token for every <code>trace object</code> </strong> you wish to stream to. Thus if you have two traces that you want to plot and stream, you're going to require two unique stream tokens. Notice that more tokens can be added via the settings section of your Plotly profile: <a href="https://plot.ly/settings/api">https://plot.ly/settings/api</a></p>
+<p>Before you start streaming, you're going to need some <a href="https://plotly.com/settings/api">stream tokens</a>. You will need <strong>one unique stream token for every <code>trace object</code> </strong> you wish to stream to. Thus if you have two traces that you want to plot and stream, you're going to require two unique stream tokens. Notice that more tokens can be added via the settings section of your Plotly profile: <a href="https://plotly.com/settings/api">https://plotly.com/settings/api</a></p>
 
 </div>
 </div>
@@ -65,7 +65,7 @@ page_type: u-guide
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now in the same way that you set your credentials, as shown in <a href="https://plot.ly/python/getting-started/">Getting Started</a>, you can add stream tokens to your credentials file.</p>
+<p>Now in the same way that you set your credentials, as shown in <a href="https://plotly.com/python/getting-started/">Getting Started</a>, you can add stream tokens to your credentials file.</p>
 
 </div>
 </div>
@@ -552,7 +552,7 @@ class Stream
  |  Interface to Plotly&#39;s real-time graphing API.
  |
  |  Initialize a Stream object with a stream_id
- |  found in https://plot.ly/settings.
+ |  found in https://plotly.com/settings.
  |  Real-time graphs are initialized with a call to `plot` that embeds
  |  your unique `stream_id`s in each of the graph&#39;s traces. The `Stream`
  |  interface plots data to these traces, as identified with the unique
@@ -560,14 +560,14 @@ class Stream
  |  Every viewer of the graph sees the same data at the same time.
  |
  |  View examples and tutorials here:
- |  https://plot.ly/python/streaming/
+ |  https://plotly.com/python/streaming/
  |
  |  Stream example:
  |  # Initialize a streaming graph
  |  # by embedding stream_id&#39;s in the graph&#39;s traces
  |  import plotly.plotly as py
  |  from plotly.graph_objs import Data, Scatter, Stream
- |  stream_id = &#34;your_stream_id&#34; # See https://plot.ly/settings
+ |  stream_id = &#34;your_stream_id&#34; # See https://plotly.com/settings
  |  py.plot(Data([Scatter(x=[], y=[],
  |                        stream=Stream(token=stream_id, maxpoints=100))]))
  |  # Stream data to the import trace
@@ -579,18 +579,18 @@ class Stream
  |
  |  __init__(self, stream_id)
  |      Initialize a Stream object with your unique stream_id.
- |      Find your stream_id at https://plot.ly/settings.
+ |      Find your stream_id at https://plotly.com/settings.
  |
  |      For more help, see: `help(plotly.plotly.Stream)`
  |      or see examples and tutorials here:
- |      https://plot.ly/python/streaming/
+ |      https://plotly.com/python/streaming/
  |
  |  close(self)
  |      Close the stream connection to plotly&#39;s streaming servers.
  |
  |      For more help, see: `help(plotly.plotly.Stream)`
  |      or see examples and tutorials here:
- |      https://plot.ly/python/streaming/
+ |      https://plotly.com/python/streaming/
  |
  |  heartbeat(self, reconnect_on=(200, &#39;&#39;, 408))
  |      Keep stream alive. Streams will close after ~1 min of inactivity.
@@ -604,7 +604,7 @@ class Stream
  |
  |      For more help, see: `help(plotly.plotly.Stream)`
  |      or see examples and tutorials here:
- |      https://plot.ly/python/streaming/
+ |      https://plotly.com/python/streaming/
  |
  |  write(self, trace, layout=None, validate=True, reconnect_on=(200, &#39;&#39;, 408))
  |      Write to an open stream.

@@ -35,7 +35,7 @@ p
 
 Sometimes, you may want to print a _list_ of graphs in an RMarkdown document. 
 
-If, for some reason, you don't want to use the [`subplot()` function](https://plot.ly/r/subplots/), you can render a list of `htmlwidgets` in a single code chunk using the `tagList()` function from the [`htmltools`](https://cran.r-project.org/web/packages/htmltools/index.html) package:
+If, for some reason, you don't want to use the [`subplot()` function](https://plotly.com/r/subplots/), you can render a list of `htmlwidgets` in a single code chunk using the `tagList()` function from the [`htmltools`](https://cran.r-project.org/web/packages/htmltools/index.html) package:
 
 ```{r}
 htmltools::tagList(list(p, p))
@@ -77,4 +77,4 @@ You can control the height and width of that `iframe` through the `height`/`widt
 
 This [post](http://help.plot.ly/embed-graphs-in-websites/) has more details on how to embed Chart Studio graphs within HTML `iframes`, but you could also use Chart Studio's built-in image export by simply adding a `.png` or `.jpeg` file extension to the end of the figure's URL. 
 
-For example, view the static image of <https://plot.ly/~chris/1638> at <https://plot.ly/~chris/1638.png>.
+For example, view the static image of <https://plotly.com/~chris/1638> at <https://plotly.com/~chris/1638.png>.

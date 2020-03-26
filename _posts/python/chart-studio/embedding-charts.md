@@ -33,9 +33,9 @@ jupyter:
     v4upgrade: true
 ---
 
-Plotly graphs can be embedded in any HTML page. This includes [IPython notebooks](https://plot.ly/ipython-notebooks/), [Wordpress sites](https://wordpress.org/plugins/wp-plotly), dashboards, blogs, and more.
+Plotly graphs can be embedded in any HTML page. This includes [IPython notebooks](https://plotly.com/ipython-notebooks/), [Wordpress sites](https://wordpress.org/plugins/wp-plotly), dashboards, blogs, and more.
 
-For more on embedding Plotly graphs in HTML documents, [see our tutorial](https://plot.ly/how-to-embed-plotly-graphs-in-websites).
+For more on embedding Plotly graphs in HTML documents, [see our tutorial](https://plotly.com/how-to-embed-plotly-graphs-in-websites).
 
 From Python, you can generate the HTML code to embed Plotly graphs with the `plotly.tools.get_embed` function.
 
@@ -43,7 +43,7 @@ From Python, you can generate the HTML code to embed Plotly graphs with the `plo
 ```python
 import chart_studio.tools as tls
 
-tls.get_embed('https://plot.ly/~chris/1638')
+tls.get_embed('https://plotly.com/~chris/1638')
 ```
 
 ```python

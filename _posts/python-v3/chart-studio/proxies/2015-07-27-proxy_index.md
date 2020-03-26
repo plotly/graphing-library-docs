@@ -43,5 +43,5 @@ $ echo $HTTPS_PROXY
 - Get in touch with your IT department, and ask them about corporate proxies
 - [Requests documentation on configuring proxies](http://docs.python-requests.org/en/latest/user/advanced/#proxies)
 the requests documentation.
-- Plotly for IPython Notebooks is also [available for offline use](https://plot.ly/python/offline/)
-- [Chart Studio Enterprise](https://plot.ly/product/enterprise) is available for behind-the-firewall corporate installations
+- Plotly for IPython Notebooks is also [available for offline use](https://plotly.com/python/offline/)
+- [Chart Studio Enterprise](https://plotly.com/product/enterprise) is available for behind-the-firewall corporate installations
