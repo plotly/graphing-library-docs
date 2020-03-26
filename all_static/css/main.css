@@ -7992,8 +7992,8 @@ div#notebook {
 
 .page.\--home .hero {
   width: 100%;
-  height: 400px;
-  max-height: 500px;
+  height: 300px;
+  max-height: 400px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8035,13 +8035,12 @@ div#notebook {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     color: #fff;
-    margin-top: 60px;
     max-width: 700px;
     text-align: center; }
     .page.\--home .hero .\--welcome h2 {
       font-size: 60px;
       font-family: "jubilat", sans-serif;
-      margin-bottom: 0;
+      margin-bottom: 15px;
       color: #20293d !important;
      }
     .page.\--home .hero .\--welcome h1, .page.\--home .hero .\--welcome section.section h2, section.section .page.\--home .hero .\--welcome h2 {
