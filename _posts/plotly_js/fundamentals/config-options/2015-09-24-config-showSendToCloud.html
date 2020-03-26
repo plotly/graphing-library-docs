@@ -1,5 +1,5 @@
 ---
-name: Display Edit in Chart Studio Button
+name: Display Edit in Chart Studio Modebar Button
 language: plotly_js
 suite: configuration
 order: 7.1
@@ -13,7 +13,12 @@ var data = [{
 }];
 
 var layout = {
-    title: 'Show Edit in Chart Studio Button'
+    title: 'Show Edit in Chart Studio Modebar Button'
 };
 
-Plotly.newPlot('myDiv', data, layout, {showSendToCloud: true});
+var config = {
+  showEditInChartStudio: true,
+  plotlyServerURL: "https://chart-studio.plotly.com"
+};
+
+Plotly.newPlot('myDiv', data, layout, config);
