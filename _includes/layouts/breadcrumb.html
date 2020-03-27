@@ -1,38 +1,5 @@
 <div class="nav-breadcrumb-container">
-    <div class="nav-breadcrumb-left">
-            {% if page.permalink != "/api/" %}
-                <a href="/{% if page.permalink contains 'javascript' %}javascript{% else %}{{page.language}}{% endif %}"><span>{% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %} Home</span></a>
-            {% endif %}
-
-            {% if page.display_as %}
-                {% assign langue = page.language %}
-                {% if page.permalink contains 'javascript' %}
-                    {% assign langue = 'javascript' %}
-                {% endif %}
-                {% if langue == 'python' or langue == 'r' or langue == 'javascript' %}
-                    {% assign display_as = site.data.display_as_py_r_js[page.display_as] %}
-                {% else %}
-                    {% assign display_as = site.data.display_as[page.display_as] %}
-                {% endif %}
-                &gt;
-                <a href="/{{ display_as.reference | prepend: "/" | prepend: langue }}">
-                    <span>{{ display_as.text }}</span>
-                </a>
-
-            {% endif %}
-
-            {% if page.layout != "langindex" %}
-            {% unless page.permalink == "/api/" %}
-            &gt;
-                    <span>{{page.name}}</span>
-            {% endunless %}
-            {% endif %}
-
-            {% if page.page_type == "reference" %}
-            &gt;
-                    <span>{{page.name}}</span>
-            {% endif %}
-    </div>
+    <div></div>
     <div class="nav-breadcrumb-right">
         <div class="--fork">
             {% if page.path contains "/python/html/" %}

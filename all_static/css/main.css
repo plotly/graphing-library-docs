@@ -1152,7 +1152,6 @@ header .\-identity {
 header.header-main {
   -webkit-transition: 0.2s ease-in-out all;
   transition: 0.2s ease-in-out all;
-  top: 0;
   z-index: 9999;
   border-bottom: 1px solid #e7e7e7;
   width: 100%;
@@ -1227,7 +1226,6 @@ header.header-main {
       -ms-flex-align: center;
       align-items: center; }
     header.header-main .\--wrap .\-identity {
-      width: 125px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1679,8 +1677,6 @@ aside.\--sidebar-container {
 
        }
     aside.\--sidebar-container .\--sidebar-fixed.affix {
-      top: -webkit-calc(60px) !important;
-      top: calc(60px) !important;
       z-index: 1;
       position: fixed !important;
       }
@@ -9571,8 +9567,35 @@ section > .nav-breadcrumb-container {
   line-height: 30px;
   background-color: #e4f5f2;
   text-align: center;
+  z-index: 99999999999999;
 }
 
 #covid-banner a {
   color: #f4564e;
+}
+
+.breadcrumb-nav{
+  z-index: 999999999999 !important;
+  color: #20293d;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .breadcrumb-nav{
+    display: none !important; }
+  }
+
+.breadcrumb-nav a{
+  display: flex;
+  padding-top: 0;
+  padding-right: 5px;
+  padding-left: 5px;
+  align-items: center;
+}
+
+.breadcrumb-nav a:hover{
+  border-bottom: none;
+  text-decoration: underline !important;
+  color:#60BAB6 !important;
 }
