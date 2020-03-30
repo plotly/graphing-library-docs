@@ -640,6 +640,7 @@ body {
     -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
+    margin-top: 90px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9584,7 +9585,17 @@ section > .nav-breadcrumb-container {
 @media (max-width: 1023px) {
   .breadcrumb-nav{
     display: none !important; }
+
+    body main.\--page {
+      margin-top: 120px;
+    }
   }
+
+  @media (max-width: 585px) {
+      body main.\--page {
+        margin-top: 150px;
+      }
+    }
 
 .breadcrumb-nav a{
   display: flex;
@@ -9598,4 +9609,10 @@ section > .nav-breadcrumb-container {
   border-bottom: none;
   text-decoration: underline !important;
   color:#60BAB6 !important;
+}
+
+.header-container{
+  position: fixed;
+  z-index: 99999999999999;
+  width: 100%;
 }
