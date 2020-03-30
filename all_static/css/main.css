@@ -9589,6 +9589,10 @@ section > .nav-breadcrumb-container {
     body main.\--page {
       margin-top: 120px;
     }
+
+    .header-container{
+      position: absolute !important;
+    }
   }
 
   @media (max-width: 585px) {
