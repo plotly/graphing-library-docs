@@ -9310,7 +9310,6 @@ pre, code, .hljs {
 #modal-input{
   background-color: #fff;
   border-radius: 5px;
-  margin-top: 25px;
   border: 1px solid lightgrey;
   box-sizing: border-box;
   display: block;
@@ -9571,6 +9570,13 @@ section > .nav-breadcrumb-container {
   z-index: 99999999999999;
 }
 
+@media (max-width: 1023px) {
+  #covid-banner {
+    font-size: 10px;
+  }
+}
+
+
 #covid-banner a {
   color: #f4564e;
 }
@@ -9580,6 +9586,7 @@ section > .nav-breadcrumb-container {
   color: #20293d;
   display: flex;
   align-items: center;
+  margin-left: 20px;
 }
 
 @media (max-width: 1023px) {
