@@ -80,7 +80,7 @@ $(function(config) {
 
   $('#myModal').on('shown.bs.modal', function () {
     searchInput.focus();
-    header.style.opacity = 0.5
+    header.style.opacity = 0.5;
   });
 
   $('#myModal').on('hidden.bs.modal', function () {
