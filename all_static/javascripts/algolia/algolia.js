@@ -6,6 +6,7 @@ $(function(config) {
   var primarySearchResults = document.getElementById('primary-search-results');
   var schemaSearchResults = document.getElementById('schema-search-results');
   var modalBody = document.getElementById('modal-body');
+  var header = document.getElementById('header-main');
   var lang = window.plotly_doc_language;
   if (lang == "plotly_js"){
     lang = "javascript"
@@ -79,6 +80,11 @@ $(function(config) {
 
   $('#myModal').on('shown.bs.modal', function () {
     searchInput.focus();
+    header.style.opacity = 0.5
+  });
+
+  $('#myModal').on('hidden.bs.modal', function () {
+    header.style.opacity = 1;
   });
 
 }(window.ALGOLIA_CONFIG));
