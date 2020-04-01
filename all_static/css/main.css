@@ -971,6 +971,8 @@ pre {
   margin-bottom: 30px; }
 
 .page404-txt {
+  min-height: 60vh;
+  text-align: center;
   font-weight: 300;
   font-size: 16px; }
   .page404-txt br {
