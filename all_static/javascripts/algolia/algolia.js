@@ -77,10 +77,6 @@ $(function(config) {
     }
   });
 
-  $('#myModal').on('click', function () {
-    $('#myModal').hide();
-  });
-
   $('#myModal').on('shown.bs.modal', function () {
     searchInput.focus();
   });
