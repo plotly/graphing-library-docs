@@ -1,51 +1,9 @@
-<div class="header-container">
-    <div id="covid-banner">
-        🏥 🏭 Working on the COVID-19 response in Canada? Plotly & the Canadian gov't can help you and your org. <a target="_blank" href="https://chriddyp.typeform.com/to/oWAP3T">Learn more and get in touch.</a>
-    </div>
-    <header class="header-main --default">
-        <div class="--wrap">
-            <div class="--wrap-left">
-                <div class="-identity">
-                    <a href="https://plotly.com/"><img src="/all_static/images/plotly_graphing_libraries_1.png" style="height: 45px;"></a>
-                    <a href="/graphing-libraries/"><img src="/all_static/images/plotly_graphing_libraries_2.png" style="height: 45px;"></a>
-                    <div class="breadcrumb-nav">
-                        {% if page.permalink != "/api/" and page.permalink != "/python/" and page.permalink != "/javascript/" and page.permalink != "/r/"  %}
-                            <a href="/{% if page.permalink contains 'javascript' %}javascript{% else %}{{page.language}}{% endif %}"><span>{% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}</span></a>
-                        {% endif %}
-    
-                        {% if page.display_as %}
-                            {% assign langue = page.language %}
-                            {% if page.permalink contains 'javascript' %}
-                                {% assign langue = 'javascript' %}
-                            {% endif %}
-                            {% if langue == 'python' or langue == 'r' or langue == 'javascript' %}
-                                {% assign display_as = site.data.display_as_py_r_js[page.display_as] %}
-                            {% else %}
-                                {% assign display_as = site.data.display_as[page.display_as] %}
-                            {% endif %}
-                             &gt;<a href="/{{ display_as.reference | prepend: "/" | prepend: langue }}"><span>{{ display_as.text }}</span></a>
-    
-                        {% endif %}
-    
-                        {% if page.layout != "langindex" %}
-                        {% unless page.permalink == "/api/" %}
-                        &gt;<span>&nbsp;{{page.name}}</span>
-                        {% endunless %}
-                        {% endif %}
-    
-                        {% if page.page_type == "reference" %}
-                        <span>&nbsp;{{page.name}}</span>
-                        {% endif %}
-                    </div>
-                </div>
-                
-            </div>
-            <div class="--wrap-right">
-                <nav class="--nav-meta" role="navigation">
-                    <ul>
-                        <li><a href="https://plotly.com/get-demo/" data-mode="1" target="_blank" class="typeform-share button --enterprise-quaternary">DEMO DASH</a></li>
-                    </ul>
-                </nav>
+<header class="header-main --default">
+    <div class="--wrap">
+        <div class="--wrap-left">
+            <div class="-identity">
+                <a href="https://plotly.com/"><img src="/all_static/images/plotly_graphing_libraries_1.png" style="height: 45px;"></a>
+                <a href="/graphing-libraries/"><img src="/all_static/images/plotly_graphing_libraries_2.png" style="height: 45px;"></a>
             </div>
         </div>
     </header>
