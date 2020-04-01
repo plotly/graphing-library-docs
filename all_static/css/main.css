@@ -640,7 +640,6 @@ body {
     -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
-    margin-top: 90px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -665,6 +664,7 @@ body {
       -ms-flex-align: stretch;
       align-items: stretch; }
     body main.\--page .\--page-body {
+      margin-top: 60px;
       width: -webkit-calc(100% - 220px);
       width: calc(100% - 220px); }
       @media (max-width: 584px) {
@@ -1639,6 +1639,7 @@ header.header-main {
 aside.\--sidebar-container {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  margin-top: 60px;
   width: 220px;
   min-width: 220px;
   border-right: 1px solid #e7e7e7;
@@ -9594,11 +9595,7 @@ section > .nav-breadcrumb-container {
     }
   }
 
-  @media (max-width: 585px) {
-      body main.\--page {
-        margin-top: 150px;
-      }
-    }
+
 
     @media (max-width: 400px) {
       .page.\--home .hero {
