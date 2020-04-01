@@ -9607,3 +9607,7 @@ section > .nav-breadcrumb-container {
   z-index: 99999999999999;
   width: 100%;
 }
+
+.\--wrap-inner{
+  padding-bottom: 40px;
+}
