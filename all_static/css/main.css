@@ -1646,10 +1646,10 @@ aside.\--sidebar-container {
   border-right: 1px solid #e7e7e7;
   background: #e4f5f2;
  }
-  @media (max-width: 769px) {
+  @media (max-width: 770px) {
     aside.\--sidebar-container {
       background: white !important;
-      margin-left: -220px;
+      margin-left: -240px;
       position: static;
       z-index: 999;
       min-height: 100vh; }
