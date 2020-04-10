@@ -8,21 +8,6 @@ display_as: file_settings
 thumbnail: thumbnail/mixed.jpg
 page_type: example_index
 order: 5
+sitemap: false
+redirect_to: python/plotly-fundamentals/
 ---
-
-
-<header class="--welcome">
-	<div class="--welcome-body">
-		<!--div.--wrap-inner-->
-		<div class="--title">
-			
-			<div class="--body">
-				<h1>Plotly Python Open Source Graphing Library Fundamentals</h1>
-				<p>{{page.description}}</p>
-			</div>
-		</div>
-	</div>
-</header>
-
-		{% assign languagelist = site.posts | where:"language","python/v3" |where:"display_as","file_settings" | where: "layout","base" | sort: "order" %}
-        {% include posts/documentation_eg.html %}
