@@ -9,21 +9,6 @@ thumbnail: thumbnail/mixed.jpg
 page_type: example_index
 simple_dash_appname: dash-3dplot
 order: 5
+sitemap: false
+redirect_to: python/3d-charts/
 ---
-
-
-<header class="--welcome">
-	<div class="--welcome-body">
-		<!--div.--wrap-inner-->
-		<div class="--title">
-			
-			<div class="--body">
-				<h1>Plotly Python Open Source Graphing Library 3D Charts</h1>
-				<p>{{page.description}}</p>
-			</div>
-		</div>
-	</div>
-</header>
-
-		{% assign languagelist = site.posts | where:"language","python/v3" | where:"display_as","3d_charts" | where: "layout","base" | sort: "order" %}
-        {% include posts/documentation_eg.html %}
