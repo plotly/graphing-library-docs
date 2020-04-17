@@ -9607,3 +9607,12 @@ section > .nav-breadcrumb-container {
 .page404-txt{
   margin-top: 200px;
 }
+
+.page404-txt > a {
+  color: #506784;
+  text-decoration: underline;
+}
+
+.page404-txt > a:hover {
+  color: #0D67BF !important;
+}
