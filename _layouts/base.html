@@ -72,10 +72,21 @@
 				<p><em>MATLAB is a registered trademark of The MathWorks, Inc.</em></p>
 				{% endif %}
 			</section>
+
+			{% if page.permalink contains "javascript/" or page.permalink contains "python/" %}
+
+			<a href="https://dash.plot.ly"><img width="100%" style="margin-top: 20px;" src="/all_static/images/dash.png"/></a>
+			
+			{%elsif page.permalink contains "r/" or page.permalink contains "ggplot2/"  %}
+
+			<a href="https://dashr.plot.ly"><img width="100%" style="margin-top: 20px;" src="/all_static/images/dash.png"/></a>
+
+			{% endif %}
 			<!--End Plotly Basics Section-->
 		</section>
 	</div>
 </main>
+
 
 {% include layouts/insertSidebarElement.html %}
 
