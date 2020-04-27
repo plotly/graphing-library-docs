@@ -26,6 +26,15 @@
             <!-- Start pulling content -->
             {{ content }}
             <!--End content -->
+            {% if page.permalink contains "javascript/" or page.permalink contains "python/" %}
+
+			<a href="https://dash.plotly.com"><img width="100%" style="margin-top: 20px;" src="/all_static/images/dash.png"/></a>
+			
+			{%elsif page.permalink contains "r/" or page.permalink contains "ggplot2/"  %}
+
+			<a href="https://dashr.plotly.com"><img width="100%" style="margin-top: 20px;" src="/all_static/images/dash.png"/></a>
+
+			{% endif %}
         </section>
     </div>
 
