@@ -1,5 +1,5 @@
 ---
-name: YIOrRd Heatmap
+name: YlOrRd Heatmap
 language: plotly_js
 suite: colorscales
 order: 16
@@ -10,10 +10,10 @@ arrangement: horizontal
 Plotly.d3.json('https://raw.githubusercontent.com/plotly/datasets/master/custom_heatmap_colorscale.json', function(figure) {
 var data = [{
   z: figure.z,
-    colorscale: 'YIOrRd',
+    colorscale: 'YlOrRd',
     type: 'heatmap'
   }
 ];
-var layout = {title: 'YIOrRd'};
+var layout = {title: 'YlOrRd'};
 Plotly.newPlot('myDiv', data, layout);
 });
