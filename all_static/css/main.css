@@ -8368,7 +8368,8 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
     position: relative; }
   .\--tutorial-index .\--tutorial-section header.\--section-header {
     padding: 20px;
-    font-size: 2rem;
+    padding-bottom: 0px;
+    font-size: 22px;
     color: black !important;
     font-family: "jubilat", serif;
     display: -webkit-box;
@@ -8377,15 +8378,6 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
     display: flex;
     padding-left: 0;
     position: relative; }
-    .\--tutorial-index .\--tutorial-section header.\--section-header::before {
-      content: '';
-      left: 0;
-      top: 100%;
-      width: 25%;
-      background: #ebebf2;
-      height: 1px;
-      margin-top: -1px;
-      position: absolute; }
     .\--tutorial-index .\--tutorial-section header.\--section-header a::before {
       display: none; }
     .\--tutorial-index .\--tutorial-section header.\--section-header div.icon {
@@ -8989,7 +8981,7 @@ pre, code, .hljs {
 
 .\--tutorial-section:not(.no-image) .\--grid {
   max-width: 1130px;
-  padding-top: 20px; }
+  padding-top: 0; }
   .\--tutorial-section:not(.no-image) .\--grid-list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -9020,8 +9012,7 @@ pre, code, .hljs {
     width: -webkit-calc(162px - 20px);
     width: calc(162px - 20px);
     max-width: 162px;
-    background: #f4f4f8 !important;
-    border: 1px solid #e7e7e7;
+    background: #fff !important;
     margin-right: 20px;
     margin-top: 20px;
     padding: 0 !important; }
@@ -9073,10 +9064,10 @@ pre, code, .hljs {
       .\--tutorial-section:not(.no-image) .\--grid-item a::before {
         display: none; }
     .\--tutorial-section:not(.no-image) .\--grid-item .\--item-meta {
-      min-height: 130px;
-      padding: 20px;
+      padding-top: 20px;
       display: -webkit-box;
       display: -webkit-flex;
+      font-size: 13px !important;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
@@ -9100,6 +9091,7 @@ pre, code, .hljs {
       min-height: 160px;
       max-height: 160px;
       -webkit-transition: 0.2s ease-in-out all;
+      box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.46);
       transition: 0.2s ease-in-out all; }
       .\--tutorial-section:not(.no-image) .\--grid-item .\--item-image span {
         position: absolute;
