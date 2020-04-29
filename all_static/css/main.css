@@ -610,7 +610,7 @@ code.hljs {
 
 html {
   font-size: 14.5px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "open-sans", sans-serif;
   font-weight: 400; }
 
 body {
@@ -808,7 +808,7 @@ span.copyCode {
   border-left: 1px solid #e7e7e7;
   background: #e4e4ee;
   position: absolute;
-  font-family: "Open Sans", sans-serif !important; }
+  font-family: "open-sans", sans-serif !important; }
   span.copyCode div.icon {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
@@ -1026,7 +1026,7 @@ section.\--page-body.\--full-width {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "open-sans", sans-serif; }
 
 .header-large--wrap {
   position: relative;
@@ -2674,7 +2674,7 @@ div.output_subarea::-webkit-scrollbar-thumb {
   color: #447bdc; }
 
 .cell h1, .cell section.section h2, section.section .cell h2 {
-  font-family: "jubilat", sans-serif; }
+  font-family: "jubilat", serif; }
 
 pre {
   overflow-y: hidden !important;
@@ -2701,7 +2701,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h2 {
-  font-family: "jubilat", sans-serif; }
+  font-family: "jubilat", serif; }
 
 .cell .text_cell_render h2 {
   font-weight: 300;
@@ -2716,7 +2716,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h3 {
-  font-family: "jubilat", sans-serif; }
+  font-family: "jubilat", serif; }
 
 .cell .text_cell_render h3 {
   font-weight: 300;
@@ -2730,7 +2730,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h4, .cell .js-splash--section-title {
-  font-family: "jubilat", sans-serif; }
+  font-family: "jubilat", serif; }
 
 .cell .text_cell_render h4, .cell .text_cell_render .js-splash--section-title {
   font-weight: 300;
@@ -2744,7 +2744,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h5 {
-  font-family: "jubilat", sans-serif; }
+  font-family: "jubilat", serif; }
 
 .cell .text_cell_render h5 {
   font-weight: 300;
@@ -2759,7 +2759,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h6 {
-  font-family: "jubilat", sans-serif; }
+  font-family: "jubilat", serif; }
 
 .cell .text_cell_render h6 {
   font-weight: 300;
@@ -2786,7 +2786,7 @@ html body .rendered_html div.icon.copy {
   visibility: hidden; }
 
 .cell div.text_cell_render {
-  font-family: "Open Sans", sans-serif;
+  font-family: "open-sans", sans-serif;
   text-align: left;
   text-justify: inter-word; }
 
@@ -2895,7 +2895,7 @@ html body .rendered_html div.icon.copy {
 .cell blockquote {
   display: block;
   background: #f3f3f3;
-  font-family: "Open Sans", sans-serif;
+  font-family: "open-sans", sans-serif;
   padding: 15px 15px 15px 15px;
   text-align: justify;
   text-justify: inter-word; }
@@ -8036,7 +8036,7 @@ div#notebook {
     text-align: center; }
     .page.\--home .hero .\--welcome h2 {
       font-size: 60px;
-      font-family: "jubilat", sans-serif;
+      font-family: "jubilat", serif;
       margin-bottom: 15px;
       margin-top: 0;
       color: #20293d !important;
@@ -8233,7 +8233,7 @@ div#notebook {
       .page.\--home .\--documentation-categories ul li h2 {
         width: 100%;
         font-size: 1.4rem;
-        font-family: "Open Sans", sans-serif;
+        font-family: "open-sans", sans-serif;
         line-height: 1.7rem;
         text-align: center;
         font-weight: 500;
@@ -8336,7 +8336,7 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
       .\--tutorial-index .\--welcome .\--title h1, .\--tutorial-index .\--welcome .\--title section.section h2, section.section .\--tutorial-index .\--welcome .\--title h2 {
         font-weight: 300;
         font-size: 3rem;
-        font-family: "jubilat", sans-serif;
+        font-family: "jubilat", serif;
         margin: 0;
          }
       .\--tutorial-index .\--welcome .\--title .sub {
@@ -9414,7 +9414,7 @@ pre, code, .hljs {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
   color: #20293d !important;
-  font-family: "jubilat", sans-serif;
+  font-family: "jubilat", serif;
 }
 
 .\--welcome-body{
@@ -9438,9 +9438,19 @@ pre, code, .hljs {
   }
 }
 
-@import url("https://p.typekit.net/p.css?s=1&k=dsx1rks&ht=tk&f=9882.9892.34284.34285.34286.34288.34289&a=37708615&app=typekit&e=css");
-
 @import url("https://use.typekit.net/xib5kch.css");
+
+@font-face {
+  font-family:"jubilat";
+  src:url("https://use.typekit.net/af/275f06/00000000000000003b9b0d24/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/275f06/00000000000000003b9b0d24/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/275f06/00000000000000003b9b0d24/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:400;
+  }
+  
+  @font-face {
+  font-family:"jubilat";
+  src:url("https://use.typekit.net/af/d16a24/00000000000000003b9b0d22/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/d16a24/00000000000000003b9b0d22/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/d16a24/00000000000000003b9b0d22/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:500;
+  }
 
 .close {
   font-size: 30px;
