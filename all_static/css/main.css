@@ -9043,8 +9043,8 @@ pre, code, .hljs {
         max-width: calc(162px);
         min-width: -webkit-calc(162px);
         min-width: calc(162px);
-        margin: 0;
-        margin-bottom: 20px; } }
+        margin: 10px;
+        } }
     .\--tutorial-section:not(.no-image) .\--grid-item img {
       max-width: 160px;
       height: 160px;
