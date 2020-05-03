@@ -8368,7 +8368,7 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
     position: relative; }
   .\--tutorial-index .\--tutorial-section header.\--section-header {
     padding: 20px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
     font-size: 22px;
     color: black !important;
     font-family: "jubilat", serif;
@@ -9044,9 +9044,7 @@ pre, code, .hljs {
         min-width: -webkit-calc(162px);
         min-width: calc(162px);
         margin: 0;
-        margin-bottom: 20px; }
-        .\--tutorial-section:not(.no-image) .\--grid-item:nth-of-type(odd) {
-          margin-right: 20px; } }
+        margin-bottom: 20px; } }
     .\--tutorial-section:not(.no-image) .\--grid-item img {
       max-width: 160px;
       height: 160px;
@@ -9717,4 +9715,16 @@ section > .nav-breadcrumb-container {
 
 .page404-txt > a:hover {
   color: #0D67BF !important;
+}
+
+.langindexlink{
+  margin-left: auto;
+  font-size: 14px;
+  color: #3f4f75;
+}
+
+@media (max-width: 1023px) {
+  .langindexlink{
+   display: none;
+  }
 }

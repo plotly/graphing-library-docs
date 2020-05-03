@@ -83,8 +83,21 @@
 
 {% if file_settings %}
 <section class="--tutorial-section">
-    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Fundamentals</a>    
+    {% if page.permalink == "/javascript/" or page.permalink == "/r/" or page.permalink == "/python/"  %}
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Fundamentals</a>
+        {% if page.permalink == "/javascript/"%}
+        <a href="/javascript/plotly-fundamentals" class="langindexlink">More Fundamentals</a>
+        {% endif %}
+
+        {% if page.permalink == "/r/"%}
+        <a href="/r/plotly-fundamentals" class="langindexlink">More Fundamentals</a>
+        {% endif %}
+
+        {% if page.permalink == "/python/"%}
+        <a href="/python/plotly-fundamentals" class="langindexlink">More Fundamentals</a>
+        {% endif %}
     </header>
+    {% endif %} 
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
@@ -102,8 +115,21 @@
 
 {% if chart_type %}
 <section class="--tutorial-section">
-    <header class="--section-header"><a href="#basic-charts" name="basic" id="basic-charts">Basic Charts</a>
+    {% if page.permalink == "/javascript/" or page.permalink == "/r/" or page.permalink == "/python/"  %}
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Basic Charts</a>
+        {% if page.permalink == "/javascript/"%}
+        <a href="/javascript/basic-charts" class="langindexlink">More Basic Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/r/"%}
+        <a href="/r/basic-charts" class="langindexlink">More Basic Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/python/"%}
+        <a href="/python/basic-charts" class="langindexlink">More Basic Charts</a>
+        {% endif %}
     </header>
+    {% endif %} 
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
@@ -122,8 +148,21 @@
 
 {% if statistical %}
 <section class="--tutorial-section" id="statistical-charts">
-    <header class="--section-header"><a href="#statistical-charts">Statistical Charts</a>
+    {% if page.permalink == "/javascript/" or page.permalink == "/r/" or page.permalink == "/python/"  %}
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Statistical Charts</a>
+        {% if page.permalink == "/javascript/"%}
+        <a href="/javascript/statistical-charts" class="langindexlink">More Statistical Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/r/"%}
+        <a href="/r/statistical-charts" class="langindexlink">More Statistical Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/python/"%}
+        <a href="/python/statistical-charts" class="langindexlink">More Statistical Charts</a>
+        {% endif %}
     </header>
+    {% endif %} 
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
@@ -141,8 +180,21 @@
 
 {% if scientific %}
 <section class="--tutorial-section" id="scientific-charts">
-    <header class="--section-header"><a href="#scientific-charts">Scientific Charts</a>
+    {% if page.permalink == "/javascript/" or page.permalink == "/r/" or page.permalink == "/python/"  %}
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Scientific Charts</a>
+        {% if page.permalink == "/javascript/"%}
+        <a href="/javascript/scientific-charts" class="langindexlink">More Scientific Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/r/"%}
+        <a href="/r/scientific-charts" class="langindexlink">More Scientific Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/python/"%}
+        <a href="/python/scientific-charts" class="langindexlink">More Scientific Charts</a>
+        {% endif %}
     </header>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
@@ -160,8 +212,21 @@
 
 {% if financial %}
 <section class="--tutorial-section" id="financial-charts">
-    <header class="--section-header"><a href="#financial-charts">Financial Charts</a>
+    {% if page.permalink == "/javascript/" or page.permalink == "/r/" or page.permalink == "/python/"  %}
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Financial Charts</a>
+        {% if page.permalink == "/javascript/"%}
+        <a href="/javascript/financial-charts" class="langindexlink">More Financial Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/r/"%}
+        <a href="/r/financial-charts" class="langindexlink">More Financial Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/python/"%}
+        <a href="/python/financial-charts" class="langindexlink">More Financial Charts</a>
+        {% endif %}
     </header>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
@@ -179,8 +244,21 @@
 
 {% if maps %}
 <section class="--tutorial-section" id="maps">
-    <header class="--section-header"><a href="#maps">Maps</a>
+    {% if page.permalink == "/javascript/" or page.permalink == "/r/" or page.permalink == "/python/"  %}
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Maps</a>
+        {% if page.permalink == "/javascript/"%}
+        <a href="/javascript/maps" class="langindexlink">More Maps</a>
+        {% endif %}
+
+        {% if page.permalink == "/r/"%}
+        <a href="/r/maps" class="langindexlink">More Maps</a>
+        {% endif %}
+
+        {% if page.permalink == "/python/"%}
+        <a href="/python/maps" class="langindexlink">More Maps</a>
+        {% endif %}
     </header>
+    {% endif %} 
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
@@ -198,8 +276,21 @@
 
 {% if 3d_charts %}
 <section class="--tutorial-section" id="3d-charts">
-    <header class="--section-header"><a href="#3d-charts">3D Charts</a>
+    {% if page.permalink == "/javascript/" or page.permalink == "/r/" or page.permalink == "/python/"  %}
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">3D Charts</a>
+        {% if page.permalink == "/javascript/"%}
+        <a href="/javascript/3d-charts" class="langindexlink">More 3D Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/r/"%}
+        <a href="/r/3d-charts" class="langindexlink">More 3D Charts</a>
+        {% endif %}
+
+        {% if page.permalink == "/python/"%}
+        <a href="/python/3d-charts" class="langindexlink">More 3D Charts</a>
+        {% endif %}
     </header>
+    {% endif %} 
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
@@ -217,8 +308,21 @@
 
 {% if multiple_axes %}
 <section class="--tutorial-section" id="multiple-axes-subplots-and-insets">
-    <header class="--section-header"><a href="#multiple-axes-subplots-and-insets">Subplots</a>
+    {% if page.permalink == "/javascript/" or page.permalink == "/r/" or page.permalink == "/python/"  %}
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Subplots</a>
+        {% if page.permalink == "/javascript/"%}
+        <a href="/javascript/subplot-charts" class="langindexlink">More Subplots</a>
+        {% endif %}
+
+        {% if page.permalink == "/r/"%}
+        <a href="/r/subplot-charts" class="langindexlink">More Subplots</a>
+        {% endif %}
+
+        {% if page.permalink == "/python/"%}
+        <a href="/python/subplot-charts" class="langindexlink">More Subplots</a>
+        {% endif %}
     </header>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
