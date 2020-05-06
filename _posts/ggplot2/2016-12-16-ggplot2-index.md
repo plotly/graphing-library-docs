@@ -4,7 +4,6 @@ name: ggplot2 Graphing Library
 description: With ggplotly() by Plotly, you can convert your ggplot2 figures into interactive ones powered by plotly.js, ready for embedding into Dash applications.
 layout: langindex
 language: ggplot2
-display_as: false
 redirect_from: ggplot2/reference/
 ---
 
@@ -21,6 +20,6 @@ redirect_from: ggplot2/reference/
   </div>
 </header>
 
-{% assign languagelist = site.posts | where:"language","ggplot2"  | sort: "order"  %}
+{% assign languagelist = site.posts | where:"page_type","example_index" | where:"language","ggplot2" | sort: "order" %}
 
 {% include posts/documentation_eg.html %}

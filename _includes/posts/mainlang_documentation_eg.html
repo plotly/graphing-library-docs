@@ -1,3 +1,15 @@
+{% assign languageindexpage = false %}
+
+{% if page.display_as %}
+{% assign languageindexpage = true %}
+{% endif %}
+
+{% assign mainlanguage = false %}
+
+{% if page.language == "plotly_js" or page.language == "python" or page.language == "r" %}
+{% assign mainlanguage = true %}
+{% endif %}
+
 {% comment %}First, check which sections this page should contain checking all of the posts{% endcomment %}
 {%- for page in languagelist -%}
 {% if page.display_as == "file_settings" %}
@@ -88,7 +100,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "file_settings" %}
+            {% if page.language == "plotly_js" and page.display_as == "file_settings" and page.order < 6 or languageindexpage %}
 
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
@@ -116,7 +128,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_type" or page.display_as == "basic" %}
+            {% if page.display_as == "chart_type" or page.display_as == "basic" and page.order < 6 or languageindexpage %}
 
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
@@ -144,7 +156,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "statistical" %}
+            {% if page.display_as == "statistical" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -174,7 +186,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "scientific" %}
+            {% if page.display_as == "scientific" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -204,7 +216,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "financial" %}
+            {% if page.display_as == "financial" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -234,7 +246,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "maps" %}
+            {% if page.display_as == "maps" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -264,7 +276,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "3d_charts" %}
+            {% if page.display_as == "3d_charts" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -294,7 +306,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "multiple_axes" %}
+            {% if page.display_as == "multiple_axes" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -324,7 +336,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" %}
+            {% if page.display_as == "chart_events" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -354,7 +366,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" %}
+            {% if page.display_as == "chart_events" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -384,7 +396,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" %}
+            {% if page.display_as == "chart_events" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -414,7 +426,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "transforms" %}
+            {% if page.display_as == "transforms" and page.order < 6 or languageindexpage %}
 
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
@@ -442,7 +454,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "controls" %}
+            {% if page.display_as == "controls" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -472,7 +484,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "animations" %}
+            {% if page.display_as == "animations" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -502,7 +514,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_studio" %}
+            {% if page.display_as == "chart_studio" and page.order < 6 or languageindexpage %}
 
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
@@ -530,7 +542,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "financial_analysis" %}
+            {% if page.display_as == "financial_analysis" and page.order < 6 or languageindexpage %}
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -563,7 +575,7 @@
 
 {% assign counter=0 %}
 {%- for page in languagelist -%}
-{% if page.display_as == "layout_opt" %}
+{% if page.display_as == "layout_opt" and page.order < 6 or languageindexpage %}
 {% if counter == 6 %}</ul></div><div class="six columns"><ul>{% endif %}
 <li><a class="no-list-style" href="/{{page.permalink}}">{{page.name}}</a></li>
 {% assign counter=counter | plus:1 %}
@@ -582,7 +594,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "advanced_opt" %}
+            {% if page.display_as == "advanced_opt" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -605,7 +617,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "style_opt" %}
+            {% if page.display_as == "style_opt" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -628,7 +640,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "layout_opt" %}
+            {% if page.display_as == "layout_opt" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -651,7 +663,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "legacy_charts" %}
+            {% if page.display_as == "legacy_charts" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -674,7 +686,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "databases" %}
+            {% if page.display_as == "databases" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -698,7 +710,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "report_generation" %}
+            {% if page.display_as == "report_generation" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -726,7 +738,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" %}
+            {% if page.display_as == "chart_events" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -750,7 +762,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "tutorial" %}
+            {% if page.display_as == "tutorial" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -773,7 +785,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "get_request" %}
+            {% if page.display_as == "get_request" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -796,7 +808,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "mathematics" %}
+            {% if page.display_as == "mathematics" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -820,7 +832,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "statistics" %}
+            {% if page.display_as == "statistics" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -843,7 +855,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "peak-analysis" %}
+            {% if page.display_as == "peak-analysis" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -866,7 +878,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "signal-analysis" %}
+            {% if page.display_as == "signal-analysis" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -891,7 +903,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "aesthetics" %}
+            {% if page.display_as == "aesthetics" and page.order < 6 or languageindexpage %}
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
@@ -919,7 +931,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "geoms" %}
+            {% if page.display_as == "geoms" and page.order < 6 or languageindexpage %}
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
@@ -946,7 +958,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "faceting" %}
+            {% if page.display_as == "faceting" and page.order < 6 or languageindexpage %}
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
@@ -973,7 +985,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "other" %}
+            {% if page.display_as == "other" and page.order < 6 or languageindexpage %}
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
@@ -1002,7 +1014,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "theme" %}
+            {% if page.display_as == "theme" and page.order < 6 or languageindexpage %}
 
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">

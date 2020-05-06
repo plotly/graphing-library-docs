@@ -24,6 +24,6 @@ language: scala
 </header>
 
 
-{% assign languagelist = site.posts | where:"language","scala"  | sort: "order" %}
+{% assign languagelist = site.posts | where:"page_type","example_index" | where:"language","scala"  | sort: "order" %}
 
 {% include posts/documentation_eg.html %}
