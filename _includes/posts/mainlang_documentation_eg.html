@@ -45,18 +45,6 @@
 {% elsif page.display_as == "advanced_opt" %}
 {% assign advanced_opt = true %}
 
-<!-- START OF GGPLOT CUSTOM LAYOUT -->
-{% elsif page.display_as == "aesthetics" %}
-{% assign aesthetics = true %}
-{% elsif page.display_as == "geoms" %}
-{% assign geoms = true %}
-{% elsif page.display_as == "faceting" %}
-{% assign faceting = true %}
-{% elsif page.display_as == "other" %}
-{% assign other = true %}
-{% elsif page.display_as == "theme" %}
-{% assign theme = true %}
-<!-- END OF GGPLOT CUSTOM LAYOUT -->
 {% endif %}
 {%- endfor -%}
 
@@ -103,16 +91,8 @@
             {% if page.display_as == "file_settings" and page.order < 6 or languageindexpage %}
 
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
+            {% include layouts/grid-item.html %}
 
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -131,16 +111,8 @@
             {% if page.display_as == "chart_type" or page.display_as == "basic" and page.order < 6 or languageindexpage %}
 
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
+            {% include layouts/grid-item.html %}
 
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -158,19 +130,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "statistical" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -188,19 +149,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "scientific" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -218,19 +168,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "financial" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -248,19 +187,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "maps" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -278,19 +206,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "3d_charts" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -308,19 +225,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "multiple_axes" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -338,19 +244,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "chart_events" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -368,19 +263,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "chart_events" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -398,19 +282,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "chart_events" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -429,16 +302,8 @@
             {% if page.display_as == "transforms" and page.order < 6 or languageindexpage %}
 
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
+                        {% include layouts/grid-item.html %}
 
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -456,19 +321,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "controls" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -486,19 +340,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "animations" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -517,16 +360,8 @@
             {% if page.display_as == "chart_studio" and page.order < 6 or languageindexpage %}
 
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
+                        {% include layouts/grid-item.html %}
 
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -544,19 +379,8 @@
             {%- for page in languagelist -%}
             {% if page.display_as == "financial_analysis" and page.order < 6 or languageindexpage %}
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+            {% include layouts/grid-item.html %}
 
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -904,16 +728,8 @@
         <ul class="--grid-list">
             {%- for page in languagelist -%}
             {% if page.display_as == "aesthetics" and page.order < 6 or languageindexpage %}
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
+                        {% include layouts/grid-item.html %}
 
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -932,16 +748,8 @@
         <ul class="--grid-list">
             {%- for page in languagelist -%}
             {% if page.display_as == "geoms" and page.order < 6 or languageindexpage %}
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
+                        {% include layouts/grid-item.html %}
 
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -959,16 +767,8 @@
         <ul class="--grid-list">
             {%- for page in languagelist -%}
             {% if page.display_as == "faceting" and page.order < 6 or languageindexpage %}
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
+                        {% include layouts/grid-item.html %}
 
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -986,16 +786,8 @@
         <ul class="--grid-list">
             {%- for page in languagelist -%}
             {% if page.display_as == "other" and page.order < 6 or languageindexpage %}
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
+                        {% include layouts/grid-item.html %}
 
-            </li>
 
             {% endif %}
             {%- endfor -%}
@@ -1017,16 +809,8 @@
             {% if page.display_as == "theme" and page.order < 6 or languageindexpage %}
 
 
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
+                        {% include layouts/grid-item.html %}
 
-            </li>
 
             {% endif %}
             {%- endfor -%}
