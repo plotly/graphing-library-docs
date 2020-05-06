@@ -100,7 +100,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.language == "plotly_js" and page.display_as == "file_settings" and page.order < 6 or languageindexpage %}
+            {% if page.display_as == "file_settings" and page.order < 6 or languageindexpage %}
 
 
             <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
