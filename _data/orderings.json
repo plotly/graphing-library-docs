@@ -45,6 +45,8 @@
 
          "annotations",
          "shapes",
+         "newshape",
+         "activeshape",
          "images",
          "updatemenus",
          "sliders",
