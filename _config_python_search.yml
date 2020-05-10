@@ -13,12 +13,13 @@ exclude: [
   #'_posts/python/',
   '_posts/plotly_js/',
   '_posts/python-v3/', '_posts/dashboards/', '_posts/misc/',
-  '_posts/ggplot2','_posts/julia','_posts/scala',
+  '_posts/ggplot2',
+  '_posts/julia','_posts/scala',
   '_posts/matlab',
   '_posts/nodejs',
   '_posts/temp',
   'vendor', 'node_modules',
-  'plotly.py'
+  'plotly.py', 'plotly.r-docs'
   ]
 
 # ---
@@ -38,6 +39,7 @@ algolia:
     - '*.Rmd'
     - '*.R'
     - 'plotly.py'
+    - 'plotly.r-docs'
     - '_posts/dashboards'
     - '_posts/ggplot2'
     - '_posts/julia'
