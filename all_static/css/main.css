@@ -9135,18 +9135,6 @@ pre, code, .hljs {
         -webkit-transition: 0.2s ease-in-out all;
         transition: 0.2s ease-in-out all;
         display: block; }
-    @media (min-width: 1024px) {
-      .\--tutorial-section:not(.no-image) .\--grid-item:hover {
-        background: white !important; }
-        .\--tutorial-section:not(.no-image) .\--grid-item:hover .\--item-image span::before {
-          -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1); }
-        .\--tutorial-section:not(.no-image) .\--grid-item:hover .\--item-image img {
-          opacity: 0; }
-        .\--tutorial-section:not(.no-image) .\--grid-item:hover .\--item-image span {
-          opacity: 1;
-          margin-left: 0; } }
 
 .\--tutorial-section.no-image .\--grid {
   display: block; }
