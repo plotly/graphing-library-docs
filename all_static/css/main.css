@@ -8369,7 +8369,9 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
   .\--tutorial-index .\--tutorial-section header.\--section-header {
     padding: 20px;
     padding-bottom: 10px;
-    font-size: 22px;
+    font-size: 30px;
+    font-family: "jubilat", serif;
+    max-width: 910px;
     color: black !important;
     font-family: "jubilat", serif;
     display: -webkit-box;
@@ -9063,6 +9065,7 @@ pre, code, .hljs {
         display: none; }
     .\--tutorial-section:not(.no-image) .\--grid-item .\--item-meta {
       padding-top: 20px;
+      padding-bottom: 40px;
       display: -webkit-box;
       display: -webkit-flex;
       font-size: 13px !important;
@@ -9705,14 +9708,25 @@ section > .nav-breadcrumb-container {
   color: #0D67BF !important;
 }
 
-.langindexlink{
+.langindexlink, .langindexlink-mobile{
   margin-left: auto;
   font-size: 14px;
   color: #3f4f75;
+  text-decoration: underline;
+}
+
+.langindexlink-mobile{
+  padding-bottom: 30px;
 }
 
 @media (max-width: 1023px) {
   .langindexlink{
+   display: none;
+  }
+}
+
+@media (min-width: 1023px) {
+  .langindexlink-mobile{
    display: none;
   }
 }
