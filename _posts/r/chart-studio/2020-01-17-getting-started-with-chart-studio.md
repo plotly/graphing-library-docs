@@ -2,7 +2,7 @@
 name: Getting Started with Chart Studio
 permalink: r/getting-started-with-chart-studio/
 description: Get started with Chart Studio and Plotly's R graphing library.
-page_type: u-guide
+page_type: example_index
 display_as: chart_studio
 layout: base
 language: r
