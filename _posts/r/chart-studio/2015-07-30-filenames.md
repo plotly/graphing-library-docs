@@ -8,7 +8,6 @@ order: 9
 output:
   html_document:
     keep_md: true
-page_type: example_index
 permalink: r/file-options/
 thumbnail: thumbnail/horizontal-bar.jpg
 ---

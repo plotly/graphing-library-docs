@@ -31,7 +31,6 @@ jupyter:
     name: Jupyter Notebook Tutorial
     language: python
     display_as: chart_studio
-    page_type: example_index
     order: 11
     ipynb: ~chelsea_lyn/14070
     v4upgrade: true
