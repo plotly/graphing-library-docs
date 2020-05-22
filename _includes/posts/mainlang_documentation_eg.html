@@ -54,8 +54,6 @@
 {% assign layout_options = true %}
 {% elsif page.display_as == "style_opt" %}
 {% assign style_options = true %}
-{% elsif page.display_as == "legacy_charts" %}
-{% assign legacy_charts = true %}
 {% elsif page.display_as == "databases" %}
 {% assign databases = true %}
 {% elsif page.display_as == "tutorial" %}
@@ -465,29 +463,6 @@
             {% assign counter=0 %}
             {%- for page in languagelist -%}
             {% if page.display_as == "layout_opt" and page.order < 6 or languageindexpage %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                </a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if legacy_charts %}
-<section class="--tutorial-section no-image" id="legacy-charts">
-    <header class="--section-header"><a href="#legacy-charts">Legacy Charts</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "legacy_charts" and page.order < 6 or languageindexpage %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
