@@ -12,8 +12,6 @@
 
 {% assign order_elligible = order_elligible %}
 
-{% assign category_elligible = page.display_as == "chart_type" or page.display_as == "basic" %}
-
 {% comment %}First, check which sections this page should contain checking all of the posts{% endcomment %}
 {%- for page in languagelist -%}
 {% if page.display_as == "file_settings" %}
@@ -42,8 +40,6 @@
 {% assign animations = true %}
 {% elsif page.display_as == "chart_events" %}
 {% assign chart_events = true %}
-{% elsif page.display_as == "financial_analysis" %}
-{% assign financial_analysis = true %}
 {% elsif page.display_as == "chart_studio" %}
 {% assign chart_studio = true %}
 {% elsif page.display_as == "advanced_opt" %}
@@ -58,24 +54,6 @@
 {% assign layout_options = true %}
 {% elsif page.display_as == "style_opt" %}
 {% assign style_options = true %}
-{% elsif page.display_as == "databases" %}
-{% assign databases = true %}
-{% elsif page.display_as == "tutorial" %}
-{% assign tutorial = true %}
-{% elsif page.display_as == "get_request" %}
-{% assign get_request = true %}
-{% elsif page.display_as == "report_generation" %}
-{% assign report_generation = true %}
-{% elsif page.display_as == "mathematics" %}
-{% assign mathematics = true %}
-{% elsif page.display_as == "statistics" %}
-{% assign statistics = true %}
-{% elsif page.display_as == "peak-analysis" %}
-{% assign peak-analysis = true %}
-{% elsif page.display_as == "signal-analysis" %}
-{% assign signal-analysis = true %}
-{% elsif page.display_as == "text_documents" %}
-{% assign text_documents = true %}
 {% endif %}
 {%- endfor -%}
 
@@ -110,7 +88,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if category_elligible and order_elligible %}
+            {% if chart_type and order_elligible %}
 
 
             {% include layouts/grid-item.html %}
@@ -391,27 +369,6 @@
 </section>
 {% endif %}
 
-{% if layout_options_ggplot %}
-<hr>
-<h4 class="example-section-title" id="layout-options">
-<a class="no_underline plot-blue" href="#layout-options">Layout Options</a></h4>
-<div class="row">
-<div class="six columns">
-<ul >
-
-{% assign counter=0 %}
-{%- for page in languagelist -%}
-{% if page.display_as == "layout_opt" and order_elligible %}
-{% if counter == 6 %}</ul></div><div class="six columns"><ul>{% endif %}
-<li><a class="no-list-style" href="/{{page.permalink}}">{{page.name}}</a></li>
-{% assign counter=counter | plus:1 %}
-{% endif %}
-{%- endfor -%}
-</ul>
-</div>
-</div>
-{% endif %}
-
 {% if advanced_opt %}
 <section class="--tutorial-section no-image" id="advanced-options">
     <header class="--section-header"><a href="#advanced-options">Advanced</a>
@@ -481,54 +438,6 @@
 </section>
 {% endif %}
 
-{% if databases %}
-<section class="--tutorial-section no-image" id="databases">
-    <header class="--section-header"><a href="#databases">Connecting to Databases</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "databases" and order_elligible %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-
-                </a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if report_generation %}
-<section class="--tutorial-section no-image" id="report-generation">
-    <header class="--section-header"><a href="#report-generation">Report Generation</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "report_generation" and order_elligible %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-
-                </a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
 {% if chart_events and page.language !="plotly_js" and page.language !="python" and page.language != "r" %}
 <section class="--tutorial-section no-image" id="chart-events">
     <header class="--section-header"><a href="#chart-events">Add Custom Controls with JavaScript</a>
@@ -555,250 +464,4 @@
         </ul>
     </section>
 </section>
-{% endif %}
-
-{% if tutorial %}
-<section class="--tutorial-section no-image" id="tutorial">
-    <header class="--section-header"><a href="#tutorial">Tutorial</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "tutorial" and order_elligible %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-				</a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if get_request %}
-<section class="--tutorial-section no-image" id="static-image-export">
-    <header class="--section-header"><a href="#static-image-export">Image Export &amp; Retrieving Plots</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "get_request" and order_elligible %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                </a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if mathematics %}
-<section class="--tutorial-section no-image" id="mathematics">
-    <header class="--section-header"><a href="#mathematics">Mathematics</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "mathematics" and order_elligible %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                </a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if statistics %}
-<section class="--tutorial-section no-image" id="statistics">
-    <header class="--section-header"><a href="#statistics">Statistics</a>
-
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "statistics" and order_elligible %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                </a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if peak-analysis %}
-<section class="--tutorial-section no-image" id="peak-analysis">
-    <header class="--section-header"><a href="#peak-analysis">Peak Analysis</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "peak-analysis" and order_elligible %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                </a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if signal-analysis %}
-<section class="--tutorial-section no-image" id="signal-analysis">
-    <header class="--section-header"><a href="#signal-analysis">Signal Analysis</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "signal-analysis" and order_elligible %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                </a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-<!-- START OF GGPLOT CUSTOM LAYOUT -->
-
-<!-- Aesthetics -->
-{% if aesthetics %}
-<section class="--tutorial-section">
-    <header class="--section-header"><a href="#aes" id="aes">Aesthetics</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {%- for page in languagelist -%}
-            {% if page.display_as == "aesthetics" and order_elligible %}
-                        {% include layouts/grid-item.html %}
-
-
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-
-{% endif %}
-
-<!-- Geoms -->
-{% if geoms %}
-<section class="--tutorial-section">
-    <header class="--section-header"><a href="#geoms" id="geoms">Geoms</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {%- for page in languagelist -%}
-            {% if page.display_as == "geoms" and order_elligible %}
-                        {% include layouts/grid-item.html %}
-
-
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-<!-- Faceting -->
-{% if faceting %}
-<section class="--tutorial-section">
-    <header class="--section-header"><a href="#faceting" id="faceting">Faceting</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {%- for page in languagelist -%}
-            {% if page.display_as == "faceting" and order_elligible %}
-                        {% include layouts/grid-item.html %}
-
-
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-<!-- Other -->
-{% if other %}
-<section class="--tutorial-section">
-    <header class="--section-header"><a href="#other" id="other">Other</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {%- for page in languagelist -%}
-            {% if page.display_as == "other" and order_elligible %}
-                        {% include layouts/grid-item.html %}
-
-
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-<!-- theme -->
-
-{% if theme %}
-
-<section class="--tutorial-section">
-    <header class="--section-header"><a href="#theme" id="theme">theme</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {%- for page in languagelist -%}
-            {% if page.display_as == "theme" and order_elligible %}
-
-
-                        {% include layouts/grid-item.html %}
-
-
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-<!-- END OF GGPLOT CUSTOM LAYOUT -->
-
-{% if page.language == "matlab" %}
-<p><em>MATLAB is a registered trademark of The MathWorks, Inc.</em></p>
 {% endif %}
