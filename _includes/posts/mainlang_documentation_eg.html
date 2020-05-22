@@ -1,15 +1,3 @@
-{% assign subindexpage = false %}
-
-{% if page.display_as %}
-{% assign subindexpage = true %}
-{% endif %}
-
-{% assign subindexpage = false %}
-
-{% if page.language == "plotly_js" or page.language == "python" or page.language == "r" %}
-{% assign subindexpage = true %}
-{% endif %}
-
 {% comment %}First, check which sections this page should contain checking all of the posts{% endcomment %}
 {%- for page in languagelist -%}
 {% if page.display_as == "file_settings" %}
