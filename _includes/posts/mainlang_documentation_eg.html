@@ -54,17 +54,10 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "file_settings" and order_elligible %} 
+            {% if page.display_as == "file_settings" and page.order < 6 %} 
 
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -79,11 +72,6 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
 
             {% assign category_elligible = false %}
 
@@ -91,12 +79,10 @@
             {% assign category_elligible = true %}
             {% endif %}
 
-            {% if category_elligible and order_elligible %}
+            {% if category_elligible and page.order < 6 %}
 
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -111,16 +97,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "statistical" and order_elligible %}
+            {% if page.display_as == "statistical" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -135,16 +114,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "scientific" and order_elligible %}
+            {% if page.display_as == "scientific" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -159,16 +131,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "financial" and order_elligible %}
+            {% if page.display_as == "financial" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -183,16 +148,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "maps" and order_elligible %}
+            {% if page.display_as == "maps" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -207,16 +165,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "3d_charts" and order_elligible %}
+            {% if page.display_as == "3d_charts" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -231,16 +182,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "multiple_axes" and order_elligible %}
+            {% if page.display_as == "multiple_axes" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -255,16 +199,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "chart_events" and order_elligible %}
+            {% if page.display_as == "chart_events" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -279,16 +216,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "chart_events" and order_elligible %}
+            {% if page.display_as == "chart_events" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -303,16 +233,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "chart_events" and order_elligible %}
+            {% if page.display_as == "chart_events" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -327,17 +250,10 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "transforms" and order_elligible %}
+            {% if page.display_as == "transforms" and page.order < 6 %}
 
 
                         {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -352,16 +268,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "controls" and order_elligible %}
+            {% if page.display_as == "controls" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -376,16 +285,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "animations" and order_elligible %}
+            {% if page.display_as == "animations" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -400,17 +302,10 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "chart_studio" and order_elligible %}
+            {% if page.display_as == "chart_studio" and page.order < 6 %}
 
 
                         {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -425,16 +320,9 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "financial_analysis" and order_elligible %}
+            {% if page.display_as == "financial_analysis" and page.order < 6 %}
 
             {% include layouts/grid-item.html %}
-
-
             {% endif %}
             {%- endfor -%}
         </ul>
@@ -450,12 +338,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "advanced_opt" and order_elligible %}
+            {% if page.display_as == "advanced_opt" and page.order < 6 %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -478,12 +361,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "style_opt" and order_elligible %}
+            {% if page.display_as == "style_opt" and page.order < 6 %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -506,12 +384,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "layout_opt" and order_elligible %}
+            {% if page.display_as == "layout_opt" and page.order < 6 %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -538,12 +411,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% assign order_elligible = false %}
-
-            {% if page.order < 6  %}
-            {% assign order_elligible = true %}
-            {% endif %}
-            {% if page.display_as == "chart_events" and order_elligible %}
+            {% if page.display_as == "chart_events" and page.order < 6 %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
