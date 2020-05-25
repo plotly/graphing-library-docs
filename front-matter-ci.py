@@ -80,8 +80,9 @@ def check_noTrailingSlash(meta_to_check):
 def check_no_example_index_with_order_under_5(meta_to_check):
     failures = []
     for meta in meta_to_check:
-        if meta["order"] < 5 and meta['page_type'] == "u-guide":
-            failures.append(meta['permalink'])
+        if "order" in meta:
+            if meta["order"] < 5 and meta['page_type'] == "u-guide":
+                failures.append(meta['permalink'])
     return "do any posts have order less than five but page_type: u-guide?", failures
 
 categories = [
