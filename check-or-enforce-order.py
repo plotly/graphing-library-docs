@@ -34,10 +34,10 @@ def enforceOrder(list_to_be_ordered):
         post_to_be_altered = fm.load(str(post))
         if folder_path == "python": # accounts for the fact that this is also run in the plotly.py-docs repo
             post_to_be_altered.metadata["jupyter"]["plotly"]['order'] = (index+2 if index>=4 else index+1)
-            fm.dump(post_to_be_altered, post)
+            fm.dump(post_to_be_altered, str(post))
         else:        
             post_to_be_altered.metadata['order'] = index+1
-            fm.dump(post_to_be_altered, post)
+            fm.dump(post_to_be_altered, str(post))
 
 def is_consecutive(list_to_be_checked): 
     if folder_path in ["python", "build/html", "r", "build", "build/r"] and len(list_to_be_checked) > 0:
