@@ -4,8 +4,7 @@ description: Plotly's R graphing library makes interactive, publication-quality 
 display_as: maps
 language: r
 layout: langindex
-name: More Maps
-order: 5
+name: Maps
 page_type: example_index
 permalink: r/maps/
 thumbnail: thumbnail/mixed.jpg

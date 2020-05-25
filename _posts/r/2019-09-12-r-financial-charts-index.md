@@ -4,8 +4,7 @@ description: APlotly.js makes interactive, publication-quality graphs online. Ex
 display_as: financial
 language: r
 layout: langindex
-name: More Financial Charts
-order: 5
+name: Financial Charts
 page_type: example_index
 permalink: r/financial-charts/
 thumbnail: thumbnail/mixed.jpg

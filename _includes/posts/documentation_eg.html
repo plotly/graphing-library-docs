@@ -115,7 +115,13 @@
 
 {% if chart_type %}
 <section class="--tutorial-section">
-    <header class="--section-header"><a href="#basic-charts" name="basic" id="basic-charts">Basic Charts</a>
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#basic-charts" name="basic" id="basic-charts">Basic Charts</a>
+
+        {% endif %}
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -135,7 +141,13 @@
 
 {% if statistical %}
 <section class="--tutorial-section" id="statistical-charts">
-    <header class="--section-header"><a href="#statistical-charts">Statistical Charts</a>
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#statistical-charts">Statistical Charts</a>
+
+        {% endif %}
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -154,7 +166,13 @@
 
 {% if scientific %}
 <section class="--tutorial-section" id="scientific-charts">
-    <header class="--section-header"><a href="#scientific-charts">Scientific Charts</a>
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#scientific-charts">Scientific Charts</a>
+
+        {% endif %}
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -173,7 +191,13 @@
 
 {% if financial %}
 <section class="--tutorial-section" id="financial-charts">
-    <header class="--section-header"><a href="#financial-charts">Financial Charts</a>
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#financial-charts">Financial Charts</a>
+
+        {% endif %}
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -192,7 +216,13 @@
 
 {% if maps %}
 <section class="--tutorial-section" id="maps">
-    <header class="--section-header"><a href="#maps">Maps</a>
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#maps">Maps</a>
+
+        {% endif %}
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -211,7 +241,13 @@
 
 {% if 3d_charts %}
 <section class="--tutorial-section" id="3d-charts">
-    <header class="--section-header"><a href="#3d-charts">3D Charts</a>
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#3d-charts">3D Charts</a>
+
+        {% endif %}
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -230,7 +266,13 @@
 
 {% if multiple_axes %}
 <section class="--tutorial-section" id="multiple-axes-subplots-and-insets">
-    <header class="--section-header"><a href="#multiple-axes-subplots-and-insets">Subplots</a>
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#multiple-axes-subplots-and-insets">Subplots</a>
+
+        {% endif %}
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">

@@ -4,8 +4,7 @@ description: Plotly's R graphing library makes interactive, publication-quality 
 display_as: file_settings
 language: r
 layout: langindex
-name: More Fundamentals
-order: 5
+name: Fundamentals
 page_type: example_index
 permalink: r/plotly-fundamentals/
 redirect_from: 
