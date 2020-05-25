@@ -1,13 +1,14 @@
 ---
-name: Wind Rose Charts
-permalink: javascript/wind-rose-charts/
 description: How to graph D3.js-based wind rose charts in plotly.js .
-layout: base
-thumbnail: thumbnail/wind-rose.jpg
-language: plotly_js
 display_as: scientific
-order: 8
+language: plotly_js
+layout: base
+name: Wind Rose Charts
+order: 7
+permalink: javascript/wind-rose-charts/
 redirect_from: javascript-graphing-library/wind-rose-charts/
+thumbnail: thumbnail/wind-rose.jpg
 ---
+
 {% assign examples = site.posts | where:"language","plotly_js" | where:"suite","wind-rose" | sort: "order" %}
 {% include posts/auto_examples.html examples=examples %}

@@ -63,7 +63,7 @@ jobs:
             # python check-or-enforce-order.py _posts/python
             # python check-or-enforce-order.py _posts/python-v3
             # python check-or-enforce-order.py _posts/r/
-            # python check-or-enforce-order.py _posts/plotly_js
+            python check-or-enforce-order.py _posts/plotly_js
             bundle exec jekyll build
             rm _data/mapbox_token.yml
             mkdir snapshots

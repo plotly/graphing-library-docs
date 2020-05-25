@@ -9001,7 +9001,6 @@ pre, code, .hljs {
     @media (max-width: 584px) {
       .\--tutorial-section:not(.no-image) .\--grid-list {
         padding: 0;
-        padding-bottom: 20px;
         -webkit-box-pack: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -9716,7 +9715,9 @@ section > .nav-breadcrumb-container {
 }
 
 .langindexlink-mobile{
+  position: static !important;
   padding-bottom: 30px;
+  margin-top: -30px;
 }
 
 @media (max-width: 1023px) {
@@ -9729,4 +9730,10 @@ section > .nav-breadcrumb-container {
   .langindexlink-mobile{
    display: none;
   }
+}
+
+.\--section-header > a {
+
+  padding-top: 40px;
+
 }
