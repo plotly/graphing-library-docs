@@ -26,6 +26,6 @@ redirect_from: julia/reference/
 </header>
 
 	<h2>Documentation Examples</h2>
-		{% assign languagelist = site.posts | where:"page_type","example_index" | where:"language","julia" | sort: "order" %}
+	{% assign languagelist = site.posts | where:"page_type","example_index" | where:"language","julia" | sort: "order" %}
 
 		{% include posts/documentation_eg.html %}

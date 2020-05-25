@@ -21,6 +21,6 @@ redirect_from: nodejs/reference/
 	</div>
 </header>
 
-		{% assign languagelist = site.posts | where:"page_type","example_index" | where:"language","nodejs" | sort: order  %}
+{% assign languagelist = site.posts | where:"page_type","example_index" | where:"language","nodejs" | sort: order  %}
 
 		{% include posts/documentation_eg.html %}
