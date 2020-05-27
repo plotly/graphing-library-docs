@@ -4,7 +4,7 @@ display_as: chart_studio
 language: r
 layout: base
 name: Working With Chart Studio Graphs
-order: 6
+order: 5
 output:
   html_document:
     keep_md: true

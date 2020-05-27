@@ -6,7 +6,7 @@ layout: base
 language: r
 thumbnail: thumbnail/modebar-icons.png
 display_as: chart_studio
-order: 7
+order: 6
 output:
   html_document:
     keep_md: true

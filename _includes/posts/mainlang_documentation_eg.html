@@ -207,7 +207,13 @@
 {% if multiple_axes %}
 <section class="--tutorial-section" id="multiple-axes-subplots-and-insets">
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Subplots</a>
+
+        {% unless page.permalink == "/python/" %}
         <a href="/{{language}}/subplot-charts" class="langindexlink">More Subplots</a>
+                        {% endunless %}
+
+
+
 
     </header>
     <section class="--grid">
@@ -330,6 +336,7 @@
 {% if chart_studio %}
 <section class="--tutorial-section">
     <header class="--section-header"><a href="#chart-studio" name="chart-studio" id="chart-studio">Chart Studio Integration</a>
+        <a href="/{{language}}/chart-studio" class="langindexlink">More Chart Studio Integration</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">

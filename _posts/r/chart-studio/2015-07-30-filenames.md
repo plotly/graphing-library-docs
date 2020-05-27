@@ -4,7 +4,7 @@ display_as: chart_studio
 language: r
 layout: base
 name: Updating Graphs Stored In Chart Studio
-order: 9
+order: 8
 output:
   html_document:
     keep_md: true
