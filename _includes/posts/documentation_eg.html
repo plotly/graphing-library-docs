@@ -1,6 +1,6 @@
 {% assign show_header = false %}
 
-{% if page.language != "python" or page.language != "plotly_js" or page.language != "r" %}
+{% if page.language != "python" and page.language != "plotly_js" and page.language != "r" %}
 {% assign show_header = "true" %}
 {% endif %}
 
