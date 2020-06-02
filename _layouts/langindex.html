@@ -9,7 +9,7 @@
 <main class="--page page--single --index">
 
     <div class="--wrap">
-        
+
         <!-- aside - Main Sidebar-->
         {% if page.page_type == "reference" %}
         {% include layouts/reference-side-nav.html %}
@@ -20,16 +20,14 @@
         {% endif %}
         <!-- Main-->
         <section class="--page-body --tutorial-index">
-            <div class="nav-breadcrumb-container">
-                {% include layouts/breadcrumb.html %}
-            </div>
+
             <!-- Start pulling content -->
             {{ content }}
             <!--End content -->
             {% if page.permalink contains "javascript/" or page.permalink contains "python/" %}
 
 			<a href="https://dash.plotly.com"><img width="100%" style="margin-top: 20px;" src="/all_static/images/dash.png"/></a>
-			
+
 			{%elsif page.permalink contains "r/" or page.permalink contains "ggplot2/"  %}
 
 			<a href="https://dashr.plotly.com"><img width="100%" style="margin-top: 20px;" src="/all_static/images/dash.png"/></a>

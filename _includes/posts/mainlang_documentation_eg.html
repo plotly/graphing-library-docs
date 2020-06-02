@@ -61,19 +61,19 @@
 {% if file_settings %}
 <section class="--tutorial-section">
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Fundamentals</a>
-        <a href="/{{language}}/plotly-fundamentals" class="langindexlink">More Fundamentals</a>
+        <a href="/{{language}}/plotly-fundamentals" class="langindexlink">More Fundamentals &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "file_settings" and page.order < num_examples %} 
+            {% if page.display_as == "file_settings" and page.order < num_examples %}
 
 
             {% include layouts/grid-item.html %}
             {% endif %}
             {%- endfor -%}
         </ul>
-        <a href="/{{language}}/plotly-fundamentals" class="langindexlink-mobile">More Fundamentals</a>
+        <a href="/{{language}}/plotly-fundamentals" class="langindexlink-mobile">More Fundamentals &raquo;</a>
     </section>
 </section>
 {% endif %}
@@ -81,8 +81,8 @@
 {% if chart_type %}
 <section class="--tutorial-section">
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Basic Charts</a>
-        <a href="/{{language}}/basic-charts" class="langindexlink">More Basic Charts</a>
-        
+        <a href="/{{language}}/basic-charts" class="langindexlink">More Basic Charts &raquo;</a>
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -101,7 +101,7 @@
             {% endif %}
             {%- endfor -%}
         </ul>
-        <a href="/{{language}}/basic-charts" class="langindexlink-mobile">More Basic Charts</a>
+        <a href="/{{language}}/basic-charts" class="langindexlink-mobile">More Basic Charts &raquo;</a>
     </section>
 </section>
 {% endif %}
@@ -109,7 +109,7 @@
 {% if statistical %}
 <section class="--tutorial-section" id="statistical-charts">
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Statistical Charts</a>
-        <a href="/{{language}}/statistical-charts" class="langindexlink">More Statistical Charts</a>
+        <a href="/{{language}}/statistical-charts" class="langindexlink">More Statistical Charts &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -120,7 +120,7 @@
             {% endif %}
             {%- endfor -%}
         </ul>
-        <a href="/{{language}}/statistical-charts" class="langindexlink-mobile">More Statistical Charts</a>
+        <a href="/{{language}}/statistical-charts" class="langindexlink-mobile">More Statistical Charts &raquo;</a>
     </section>
 </section>
 {% endif %}
@@ -128,7 +128,7 @@
 {% if scientific %}
 <section class="--tutorial-section" id="scientific-charts">
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Scientific Charts</a>
-        <a href="/{{language}}/scientific-charts" class="langindexlink">More Scientific Charts</a>
+        <a href="/{{language}}/scientific-charts" class="langindexlink">More Scientific Charts &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -139,7 +139,7 @@
             {% endif %}
             {%- endfor -%}
         </ul>
-        <a href="/{{language}}/scientific-charts" class="langindexlink-mobile">More Scientific Charts</a>
+        <a href="/{{language}}/scientific-charts" class="langindexlink-mobile">More Scientific Charts &raquo;</a>
     </section>
 </section>
 {% endif %}
@@ -147,7 +147,7 @@
 {% if financial %}
 <section class="--tutorial-section" id="financial-charts">
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Financial Charts</a>
-        <a href="/{{language}}/financial-charts" class="langindexlink">More Financial Charts</a>
+        <a href="/{{language}}/financial-charts" class="langindexlink">More Financial Charts &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -158,7 +158,7 @@
             {% endif %}
             {%- endfor -%}
         </ul>
-        <a href="/{{language}}/financial-charts" class="langindexlink-mobile">More Financial Charts</a>
+        <a href="/{{language}}/financial-charts" class="langindexlink-mobile">More Financial Charts &raquo;</a>
     </section>
 </section>
 {% endif %}
@@ -166,7 +166,7 @@
 {% if maps %}
 <section class="--tutorial-section" id="maps">
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Maps</a>
-        <a href="/{{language}}/maps" class="langindexlink">More Maps</a>
+        <a href="/{{language}}/maps" class="langindexlink">More Maps &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -177,7 +177,7 @@
             {% endif %}
             {%- endfor -%}
         </ul>
-        <a href="/{{language}}/maps" class="langindexlink-mobile">More Maps</a>
+        <a href="/{{language}}/maps" class="langindexlink-mobile">More Maps &raquo;</a>
 
     </section>
 </section>
@@ -186,7 +186,7 @@
 {% if 3d_charts %}
 <section class="--tutorial-section" id="3d-charts">
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">3D Charts</a>
-        <a href="/{{language}}/3d-charts" class="langindexlink">More 3D Charts</a>
+        <a href="/{{language}}/3d-charts" class="langindexlink">More 3D Charts &raquo;</a>
 
     </header>
     <section class="--grid">
@@ -198,7 +198,7 @@
             {% endif %}
             {%- endfor -%}
         </ul>
-        <a href="/{{language}}/3d-charts" class="langindexlink-mobile">More 3D Charts</a>
+        <a href="/{{language}}/3d-charts" class="langindexlink-mobile">More 3D Charts &raquo;</a>
 
     </section>
 </section>
@@ -209,7 +209,7 @@
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Subplots</a>
 
         {% unless page.permalink == "/python/" %}
-        <a href="/{{language}}/subplot-charts" class="langindexlink">More Subplots</a>
+        <a href="/{{language}}/subplot-charts" class="langindexlink">More Subplots &raquo;</a>
                         {% endunless %}
 
 
@@ -225,7 +225,7 @@
             {% endif %}
             {%- endfor -%}
         </ul>
-        <a href="/{{language}}/subplot-charts" class="langindexlink-mobile">More Subplots</a>
+        <a href="/{{language}}/subplot-charts" class="langindexlink-mobile">More Subplots &raquo;</a>
     </section>
 </section>
 {% endif %}
@@ -336,7 +336,7 @@
 {% if chart_studio %}
 <section class="--tutorial-section">
     <header class="--section-header"><a href="#chart-studio" name="chart-studio" id="chart-studio">Chart Studio Integration</a>
-        <a href="/{{language}}/chart-studio" class="langindexlink">More Chart Studio Integration</a>
+        <a href="/{{language}}/chart-studio" class="langindexlink">More Chart Studio Integration &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">

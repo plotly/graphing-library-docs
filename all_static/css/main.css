@@ -8367,8 +8367,8 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
   .\--tutorial-index .\--tutorial-section:not(:last-of-type) {
     position: relative; }
   .\--tutorial-index .\--tutorial-section header.\--section-header {
-    padding: 20px;
-    padding-bottom: 10px;
+    padding: 10px;
+    padding-bottom: 0;
     font-size: 30px;
     font-family: "jubilat", serif;
     max-width: 910px;
@@ -8379,7 +8379,8 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
     display: -ms-flexbox;
     display: flex;
     padding-left: 0;
-    position: relative; }
+    position: relative;
+    }
     .\--tutorial-index .\--tutorial-section header.\--section-header a::before {
       display: none; }
     .\--tutorial-index .\--tutorial-section header.\--section-header div.icon {
@@ -8996,8 +8997,9 @@ pre, code, .hljs {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-    padding: 5px;
-    padding-bottom: 20px; }
+    /* padding: 5px; */
+    /* padding-bottom: 20px; */
+    }
     @media (max-width: 584px) {
       .\--tutorial-section:not(.no-image) .\--grid-list {
         padding: 0;
@@ -9063,11 +9065,12 @@ pre, code, .hljs {
       .\--tutorial-section:not(.no-image) .\--grid-item a::before {
         display: none; }
     .\--tutorial-section:not(.no-image) .\--grid-item .\--item-meta {
-      padding-top: 20px;
-      padding-bottom: 40px;
+      padding-top: 15px;
+      padding-bottom: 20px;
       display: -webkit-box;
       display: -webkit-flex;
-      font-size: 13px !important;
+      font-size: 16px !important;
+      margin: 0 auto;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
@@ -9080,6 +9083,7 @@ pre, code, .hljs {
       order: 2 !important;
       border-top: 1px solid #e7e7e7;
       font-size: 1.2rem;
+      text-align: center;
       }
     .\--tutorial-section:not(.no-image) .\--grid-item .\--item-image {
       position: relative;
@@ -9712,6 +9716,7 @@ section > .nav-breadcrumb-container {
   font-size: 14px;
   color: #3f4f75;
   text-decoration: underline;
+  padding-top: 25px !important;
 }
 
 .langindexlink-mobile{
