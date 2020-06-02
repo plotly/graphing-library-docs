@@ -4,8 +4,7 @@ description: Plotly's R graphing library makes interactive, publication-quality 
 display_as: multiple_axes
 language: r
 layout: langindex
-name: More Subplots
-order: 5
+name: Subplots
 page_type: example_index
 permalink: r/subplot-charts/
 thumbnail: thumbnail/mixed.jpg

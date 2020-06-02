@@ -4,8 +4,7 @@ description: Plotly's R graphing library makes interactive, publication-quality 
 display_as: scientific
 language: r
 layout: langindex
-name: More Scientific Charts
-order: 5
+name: Scientific Charts
 page_type: example_index
 permalink: r/scientific-charts/
 thumbnail: thumbnail/mixed.jpg

@@ -1,3 +1,14 @@
+{% assign language = page.language %}
+
+{% if page.language == "plotly_js" %}
+{% assign language = "javascript" %}
+{% endif %}
+
+{% assign num_examples = 6 %}
+
+
+
+
 {% comment %}First, check which sections this page should contain checking all of the posts{% endcomment %}
 {%- for page in languagelist -%}
 {% if page.display_as == "file_settings" %}
@@ -50,24 +61,28 @@
 {% if file_settings %}
 <section class="--tutorial-section">
     <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Fundamentals</a>
+        <a href="/{{language}}/plotly-fundamentals" class="langindexlink">More Fundamentals &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "file_settings" and page.order < 6 %} 
+            {% if page.display_as == "file_settings" and page.order < num_examples %}
 
 
             {% include layouts/grid-item.html %}
             {% endif %}
             {%- endfor -%}
         </ul>
+        <a href="/{{language}}/plotly-fundamentals" class="langindexlink-mobile">More Fundamentals &raquo;</a>
     </section>
 </section>
 {% endif %}
 
 {% if chart_type %}
 <section class="--tutorial-section">
-    <header class="--section-header"><a href="#basic-charts" name="basic" id="basic-charts">Basic Charts</a>
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Basic Charts</a>
+        <a href="/{{language}}/basic-charts" class="langindexlink">More Basic Charts &raquo;</a>
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -79,115 +94,138 @@
             {% assign category_elligible = true %}
             {% endif %}
 
-            {% if category_elligible and page.order < 6 %}
+            {% if category_elligible and page.order < num_examples %}
 
 
             {% include layouts/grid-item.html %}
             {% endif %}
             {%- endfor -%}
         </ul>
+        <a href="/{{language}}/basic-charts" class="langindexlink-mobile">More Basic Charts &raquo;</a>
     </section>
 </section>
 {% endif %}
 
 {% if statistical %}
 <section class="--tutorial-section" id="statistical-charts">
-    <header class="--section-header"><a href="#statistical-charts">Statistical Charts</a>
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Statistical Charts</a>
+        <a href="/{{language}}/statistical-charts" class="langindexlink">More Statistical Charts &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "statistical" and page.order < 6 %}
+            {% if page.display_as == "statistical" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
             {%- endfor -%}
         </ul>
+        <a href="/{{language}}/statistical-charts" class="langindexlink-mobile">More Statistical Charts &raquo;</a>
     </section>
 </section>
 {% endif %}
 
 {% if scientific %}
 <section class="--tutorial-section" id="scientific-charts">
-    <header class="--section-header"><a href="#scientific-charts">Scientific Charts</a>
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Scientific Charts</a>
+        <a href="/{{language}}/scientific-charts" class="langindexlink">More Scientific Charts &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "scientific" and page.order < 6 %}
+            {% if page.display_as == "scientific" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
             {%- endfor -%}
         </ul>
+        <a href="/{{language}}/scientific-charts" class="langindexlink-mobile">More Scientific Charts &raquo;</a>
     </section>
 </section>
 {% endif %}
 
 {% if financial %}
 <section class="--tutorial-section" id="financial-charts">
-    <header class="--section-header"><a href="#financial-charts">Financial Charts</a>
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Financial Charts</a>
+        <a href="/{{language}}/financial-charts" class="langindexlink">More Financial Charts &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "financial" and page.order < 6 %}
+            {% if page.display_as == "financial" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
             {%- endfor -%}
         </ul>
+        <a href="/{{language}}/financial-charts" class="langindexlink-mobile">More Financial Charts &raquo;</a>
     </section>
 </section>
 {% endif %}
 
 {% if maps %}
 <section class="--tutorial-section" id="maps">
-    <header class="--section-header"><a href="#maps">Maps</a>
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Maps</a>
+        <a href="/{{language}}/maps" class="langindexlink">More Maps &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "maps" and page.order < 6 %}
+            {% if page.display_as == "maps" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
             {%- endfor -%}
         </ul>
+        <a href="/{{language}}/maps" class="langindexlink-mobile">More Maps &raquo;</a>
+
     </section>
 </section>
 {% endif %}
 
 {% if 3d_charts %}
 <section class="--tutorial-section" id="3d-charts">
-    <header class="--section-header"><a href="#3d-charts">3D Charts</a>
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">3D Charts</a>
+        <a href="/{{language}}/3d-charts" class="langindexlink">More 3D Charts &raquo;</a>
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "3d_charts" and page.order < 6 %}
+            {% if page.display_as == "3d_charts" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
             {%- endfor -%}
         </ul>
+        <a href="/{{language}}/3d-charts" class="langindexlink-mobile">More 3D Charts &raquo;</a>
+
     </section>
 </section>
 {% endif %}
 
 {% if multiple_axes %}
 <section class="--tutorial-section" id="multiple-axes-subplots-and-insets">
-    <header class="--section-header"><a href="#multiple-axes-subplots-and-insets">Subplots</a>
+    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Subplots</a>
+
+        {% unless page.permalink == "/python/" %}
+        <a href="/{{language}}/subplot-charts" class="langindexlink">More Subplots &raquo;</a>
+                        {% endunless %}
+
+
+
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "multiple_axes" and page.order < 6 %}
+            {% if page.display_as == "multiple_axes" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
             {%- endfor -%}
         </ul>
+        <a href="/{{language}}/subplot-charts" class="langindexlink-mobile">More Subplots &raquo;</a>
     </section>
 </section>
 {% endif %}
@@ -199,7 +237,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" and page.order < 6 %}
+            {% if page.display_as == "chart_events" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
@@ -216,7 +254,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" and page.order < 6 %}
+            {% if page.display_as == "chart_events" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
@@ -233,7 +271,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" and page.order < 6 %}
+            {% if page.display_as == "chart_events" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
@@ -250,7 +288,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "transforms" and page.order < 6 %}
+            {% if page.display_as == "transforms" and page.order < num_examples %}
 
 
                         {% include layouts/grid-item.html %}
@@ -268,7 +306,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "controls" and page.order < 6 %}
+            {% if page.display_as == "controls" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
@@ -285,7 +323,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "animations" and page.order < 6 %}
+            {% if page.display_as == "animations" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
@@ -298,11 +336,12 @@
 {% if chart_studio %}
 <section class="--tutorial-section">
     <header class="--section-header"><a href="#chart-studio" name="chart-studio" id="chart-studio">Chart Studio Integration</a>
+        <a href="/{{language}}/chart-studio" class="langindexlink">More Chart Studio Integration &raquo;</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_studio" and page.order < 6 %}
+            {% if page.display_as == "chart_studio" and page.order < num_examples %}
 
 
                         {% include layouts/grid-item.html %}
@@ -320,7 +359,7 @@
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
-            {% if page.display_as == "financial_analysis" and page.order < 6 %}
+            {% if page.display_as == "financial_analysis" and page.order < num_examples %}
 
             {% include layouts/grid-item.html %}
             {% endif %}
@@ -338,7 +377,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "advanced_opt" and page.order < 6 %}
+            {% if page.display_as == "advanced_opt" and page.order < num_examples %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -361,7 +400,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "style_opt" and page.order < 6 %}
+            {% if page.display_as == "style_opt" and page.order < num_examples %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -384,7 +423,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "layout_opt" and page.order < 6 %}
+            {% if page.display_as == "layout_opt" and page.order < num_examples %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
@@ -411,7 +450,7 @@
         <ul class="--grid-list">
             {% assign counter=0 %}
             {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" and page.order < 6 %}
+            {% if page.display_as == "chart_events" and page.order < num_examples %}
 
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">

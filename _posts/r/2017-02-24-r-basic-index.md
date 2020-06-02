@@ -4,8 +4,7 @@ description: Plotly's R graphing library makes interactive, publication-quality 
 display_as: basic
 language: r
 layout: langindex
-name: More Basic Charts
-order: 5
+name: Basic Charts
 page_type: example_index
 permalink: r/basic-charts/
 thumbnail: thumbnail/mixed.jpg
