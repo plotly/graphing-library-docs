@@ -80,7 +80,7 @@
 
 {% if chart_type %}
 <section class="--tutorial-section">
-    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Basic Charts</a>
+    <header class="--section-header"><a href="#basic-charts" id="basic-charts">Basic Charts</a>
         <a href="/{{language}}/basic-charts" class="langindexlink">More Basic Charts &raquo;</a>
 
     </header>
@@ -107,8 +107,8 @@
 {% endif %}
 
 {% if statistical %}
-<section class="--tutorial-section" id="statistical-charts">
-    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Statistical Charts</a>
+<section class="--tutorial-section">
+    <header class="--section-header"><a href="#statistical-charts" id="statistical-charts">Statistical Charts</a>
         <a href="/{{language}}/statistical-charts" class="langindexlink">More Statistical Charts &raquo;</a>
     </header>
     <section class="--grid">
@@ -127,7 +127,7 @@
 
 {% if scientific %}
 <section class="--tutorial-section" id="scientific-charts">
-    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Scientific Charts</a>
+    <header class="--section-header"><a href="#scientific-charts" name="fundamentals" id="fundamentals">Scientific Charts</a>
         <a href="/{{language}}/scientific-charts" class="langindexlink">More Scientific Charts &raquo;</a>
     </header>
     <section class="--grid">
@@ -146,7 +146,7 @@
 
 {% if financial %}
 <section class="--tutorial-section" id="financial-charts">
-    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Financial Charts</a>
+    <header class="--section-header"><a href="#financial-charts" name="fundamentals" id="fundamentals">Financial Charts</a>
         <a href="/{{language}}/financial-charts" class="langindexlink">More Financial Charts &raquo;</a>
     </header>
     <section class="--grid">
@@ -165,7 +165,7 @@
 
 {% if maps %}
 <section class="--tutorial-section" id="maps">
-    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Maps</a>
+    <header class="--section-header"><a href="#maps" name="fundamentals" id="fundamentals">Maps</a>
         <a href="/{{language}}/maps" class="langindexlink">More Maps &raquo;</a>
     </header>
     <section class="--grid">
@@ -185,7 +185,7 @@
 
 {% if 3d_charts %}
 <section class="--tutorial-section" id="3d-charts">
-    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">3D Charts</a>
+    <header class="--section-header"><a href="#3d-charts" name="fundamentals" id="fundamentals">3D Charts</a>
         <a href="/{{language}}/3d-charts" class="langindexlink">More 3D Charts &raquo;</a>
 
     </header>
@@ -206,7 +206,7 @@
 
 {% if multiple_axes %}
 <section class="--tutorial-section" id="multiple-axes-subplots-and-insets">
-    <header class="--section-header"><a href="#fundamentals" name="fundamentals" id="fundamentals">Subplots</a>
+    <header class="--section-header"><a href="#subplot-charts" name="fundamentals" id="subplot-charts">Subplots</a>
 
         {% unless page.permalink == "/python/" %}
         <a href="/{{language}}/subplot-charts" class="langindexlink">More Subplots &raquo;</a>
@@ -232,7 +232,7 @@
 
 {% if chart_events and page.language =="python" %}
 <section class="--tutorial-section" id="chart-events">
-    <header class="--section-header"><a href="#chart-events">Jupyter Widgets Interaction</a>
+    <header class="--section-header"><a href="#jupyter-widgets" id="jupyter-widgets">Jupyter Widgets Interaction</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -248,8 +248,8 @@
 {% endif %}
 
 {% if chart_events and page.language =="r" %}
-<section class="--tutorial-section" id="chart-events">
-    <header class="--section-header"><a href="#chart-events">Custom Interaction With JavaScript</a>
+<section class="--tutorial-section" id="custom-interaction">
+    <header class="--section-header"><a href="#custom-interaction">Custom Interaction With JavaScript</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -265,8 +265,8 @@
 {% endif %}
 
 {% if chart_events and page.language == 'plotly_js' %}
-<section class="--tutorial-section" id="chart-events">
-    <header class="--section-header"><a href="#chart-events">Custom Chart Events</a>
+<section class="--tutorial-section" id="custom-chart-events">
+    <header class="--section-header"><a href="#custom-chart-events">Custom Chart Events</a>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
