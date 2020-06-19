@@ -10,9 +10,9 @@
                     <a href="/graphing-libraries/"><img src="/all_static/images/plotly_graphing_libraries_2.png" style="height: 45px;"></a>
                     <div class="breadcrumb-nav">
                         {% if page.permalink != "/api/" and page.permalink != "/python/" and page.permalink != "/javascript/" and page.permalink != "/r/"  %}
-                            <a href="/{% if page.permalink contains 'javascript' %}javascript{% else %}{{page.language}}{% endif %}"><span>{% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}</span></a>
+                            <a href="/{% if page.permalink contains 'javascript' %}javascript{% else %}{{page.language}}{% endif %}">{% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}</a>
                         {% endif %}
-    
+
                         {% if page.display_as %}
                             {% assign langue = page.language %}
                             {% if page.permalink contains 'javascript' %}
@@ -23,22 +23,22 @@
                             {% else %}
                                 {% assign display_as = site.data.display_as[page.display_as] %}
                             {% endif %}
-                             &gt;<a href="/{{ display_as.reference | prepend: "/" | prepend: langue }}"><span>{{ display_as.text }}</span></a>
-    
+                             &gt;<a href="/{{ display_as.reference | prepend: "/" | prepend: langue }}">{{ display_as.text }}</a>
+
                         {% endif %}
-    
+
                         {% if page.layout != "langindex" %}
                         {% unless page.permalink == "/api/" %}
-                        &gt;<span>&nbsp;{{page.name}}</span>
+                        &gt;<a href="#">{{page.name}}</a>
                         {% endunless %}
                         {% endif %}
-    
+
                         {% if page.page_type == "reference" %}
-                        <span>&nbsp;{{page.name}}</span>
+                        &gt;<a href="#">Figure Reference</a>
                         {% endif %}
                     </div>
                 </div>
-                
+
             </div>
             <div class="--wrap-right">
                 <nav class="--nav-meta" role="navigation">
@@ -50,7 +50,7 @@
 {% elsif page.permalink contains "r/" or page.permalink contains "ggplot2/" %}
 <iframe src="https://ghbtns.com/github-btn.html?user=ropensci&repo=plotly&type=star&count=true&size=large" style="padding-top: 5px;" frameborder="0" scrolling="0" width="160px" height="40px"></iframe>
   {% endif %}
-                        
+
                         <li><a href="https://plotly.com/get-demo/" data-mode="1" target="_blank" class="typeform-share button --enterprise-quaternary">DEMO DASH</a></li>
                     </ul>
                 </nav>
