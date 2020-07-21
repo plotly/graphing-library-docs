@@ -9,25 +9,19 @@
         and obj[0] != "_isSubplotObj" and obj[0] != "transforms"
         and obj[0] != "editType" and obj[0] != "impliedEdits"%}
 
-        {% if obj[0] == "type" and page.language == "python" and block == "data" %}
+        {% if obj[0] == "type" and page.language == "python" and include.block == "data" %}
             {% continue %}
         {% endif %}
 
         <li>
-            {% if toc %}
-                {% assign id="" %}
-            {% else %}
-                {% capture id %}{{include.parentlink}}-{{obj[0]}}{% endcapture %}
-            {% endif %}
+            {% capture id %}{{include.parentlink}}-{{obj[0]}}{% endcapture %}
             <a class="attribute-name" id="{{id}}" href="#{{include.parentlink}}-{{obj[0]}}">
                 {{ obj[0] }}
             </a>
             <br><em>Parent:</em> <code>{{include.parentpath | replace: '-', '.'}}</code>
 
 
-            {% if display_info %}
-
-                {% if obj[0] == "type" and block == "data" %}
+                {% if obj[0] == "type" and include.block == "data" %}
                     <br />
                     <em>Type:</em> *{{obj[1]}}*
                 {% endif %}
@@ -101,10 +95,9 @@
                     {% endif %}
                 {% endif %}
 
-            {% endif %}
 
 
-            {% if display_info and obj[1].dflt %}
+            {% if obj[1].dflt %}
                 {% if obj[1].valType == "flaglist" %}
                     <br><em>Default:</em> <code>*{{ obj[1].dflt }}*</code>
                 {% else %}
@@ -133,12 +126,11 @@
 
             {% endif %}
 
-            {% if display_info and obj[1].description and obj[1].description!= "" %}
+            {% if obj[1].description and obj[1].description!= "" %}
                 <p>{{ obj[1].description | escape }}</p>
             {% endif %}
 
             {% if obj[1].role == "object" %}
-                {% assign parentattribute = attribute %}
                 {% capture localparentlink %}{{include.parentlink}}-{{obj[0]}}{% endcapture %}
                 {% capture localparentpath %}{{include.parentpath}}-{{obj[0]}}{% endcapture %}
                 {% if obj[1].items %}
@@ -151,9 +143,7 @@
                 {% else %}
                     {% assign attribute = obj[1] %}
                 {% endif %}
-                {% assign block = "nested" %}
-                {% include posts/reference-block.html parentlink=localparentlink block=block parentpath=localparentpath %}
-                {% assign attribute = parrentattribute %}
+                {% include posts/reference-block.html parentlink=localparentlink block="nested" parentpath=localparentpath %}
             {% endif %}
 
         </li>

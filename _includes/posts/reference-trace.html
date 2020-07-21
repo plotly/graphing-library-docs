@@ -33,10 +33,7 @@
       {% assign localparentlink=include.trace_name %}
       {% capture localparentpath %}data[type={{include.trace_name}}]{% endcapture %}
       {% assign attribute=include.trace_data.attributes %}
-      {% assign display_info = true %}
-      {% assign toc = false %}
-      {% assign block = "data" %}
-      {% include posts/reference-block.html parentlink=localparentlink block=block parentpath=localparentpath %}
+      {% include posts/reference-block.html parentlink=localparentlink block="data" parentpath=localparentpath %}
   </div>
 </div>
 <hr>
