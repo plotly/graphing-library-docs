@@ -52,7 +52,7 @@ jobs:
           command: |
             git config --global user.email "accounts@plot.ly"
             git config --global user.name "plotlydocbot"
-            echo 
+            echo
             echo "token: ${mapbox_token}" > _data/mapbox_token.yml
             rm -rf _posts/python/html
             rm -rf _posts/r/md
@@ -64,6 +64,7 @@ jobs:
             python check-or-enforce-order.py _posts/python-v3
             python check-or-enforce-order.py _posts/r/
             python check-or-enforce-order.py _posts/plotly_js
+            echo `md5 -q all_static/css/main.css` " ../all_static/css/main.css" > _data/cache_bust_css.yml
             bundle exec jekyll build
             rm _data/mapbox_token.yml
             mkdir snapshots
