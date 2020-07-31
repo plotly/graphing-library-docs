@@ -1,43 +1,30 @@
 
-
-{%- for trace in site.data.plotschema.traces -%}
-{% assign trace_name = trace[0] %}
-{% assign trace_data = trace[1] %}
-{% include posts/reference-trace.html trace_name=trace_name trace_data=trace_data %}
-{%- endfor -%}
-
-
 <div class="row">
   <div class="eight columns">
 
-          <a id="layout" href="#layout"><h4>layout</h4></a>
+    {%- for trace in site.data.plotschema.traces -%}
+      {% assign trace_name = trace[0] %}
+      {% assign trace_data = trace[1] %}
 
-          {% assign attribute=site.data.plotschema.layout.layoutAttributes %}
-          {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
+      <a id="{{ trace_name }}" href="#{{ trace_name }}"><h4>{{ trace_name }} traces</h4></a>
 
-          {% assign attribute=site.data.plotschema.traces.bar.layoutAttributes %}
-          {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
+      {% include posts/reference-trace.html trace_name=trace_name trace_data=trace_data %}
 
-          {% assign attribute=site.data.plotschema.traces.waterfall.layoutAttributes %}
-          {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
+    {%- endfor -%}
 
-          {% assign attribute=site.data.plotschema.traces.box.layoutAttributes %}
-          {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
 
-          {% assign attribute=site.data.plotschema.traces.violin.layoutAttributes %}
-          {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
 
-          {% assign attribute=site.data.plotschema.traces.pie.layoutAttributes %}
-          {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
+    <a id="layout" href="#layout"><h4>layout</h4></a>
 
-          {% assign attribute=site.data.plotschema.traces.funnelarea.layoutAttributes %}
-          {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
+    {% assign attribute=site.data.plotschema.layout.layoutAttributes %}
+    {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
 
-          {% assign attribute=site.data.plotschema.traces.sunburst.layoutAttributes %}
-          {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
-
-          {% assign attribute=site.data.plotschema.traces.treemap.layoutAttributes %}
-          {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
+    {%- for trace in site.data.plotschema.traces -%}
+    {% if trace[1].layoutAttributes %}
+    {% assign attribute=trace[1].layoutAttributes %}
+    {% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
+    {% endif %}
+    {%- endfor -%}
   </div>
 </div>
 
