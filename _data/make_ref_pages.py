@@ -5,6 +5,7 @@ schema = json.load(open("plotschema.json"))
 
 for upperlang in ["Python", "JavaScript", "MATLAB", "R"]:
     lang = upperlang.lower()
+    langcode = "plotly_js" if lang == "javascript" else lang
     for attr in [
         "xaxis", "yaxis", "coloraxis", "scene", "polar", "ternary", "geo", "mapbox",
         "sliders", "updatemenus", "annotations", "shapes", "images", "global"
@@ -16,7 +17,7 @@ f"""---
 permalink: /{lang}/reference/{fullattr.replace(".", "/")}/
 layout: langindex
 page_type: reference
-language: {lang}
+language: {langcode}
 name: {fullattr}
 description: Figure attribute reference for Plotly's {upperlang} open-source graphing library.
 ---
@@ -42,7 +43,7 @@ f"""---
 permalink: /{lang}/reference/{trace}/
 layout: langindex
 page_type: reference
-language: {lang}
+language: {langcode}
 name: {trace} Traces
 description: Figure attribute reference for Plotly's {upperlang} open-source graphing library.
 ---

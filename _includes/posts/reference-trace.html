@@ -1,4 +1,7 @@
 
+
+{% capture plotschemacontent %}
+
 <div class="description">
     {% if page.language == "plotly_js" %}
       A <code>{{include.trace_name}}</code> trace is an object with the key <code>"type"</code> equal to <code>"{{include.trace_data.attributes.type}}"</code>
@@ -25,6 +28,59 @@
     {% endif %}
     <br><br>{{ include.trace_data.meta.description }}<br><br>
 </div>
+
+
+
+{% endcapture %}
+
+
+{% if page.language == "plotly_js" %}
+    {% assign quote='"' %}
+    {% assign array='array' %}
+    {% assign arrays='arrays' %}
+    {% assign object='object' %}
+    {% assign 2darray='2D array' %}
+    {% assign data_array='data array' %}
+    {% assign truestring='true' %}
+    {% assign falsestring='false' %}
+{% elsif page.language == "python" %}
+    {% assign quote='"' %}
+    {% assign array='list' %}
+    {% assign arrays='lists' %}
+    {% assign object='dict' %}
+    {% assign 2darray='2D list' %}
+    {% assign data_array='data array' %}
+    {% assign truestring='True' %}
+    {% assign falsestring='False' %}
+{% elsif page.language == "r" %}
+    {% assign quote='"' %}
+    {% assign array='list' %}
+    {% assign arrays='lists' %}
+    {% assign object='named list' %}
+    {% assign 2darray='2D list' %}
+    {% assign data_array='dataframe column, list, vector' %}
+    {% assign truestring='TRUE' %}
+    {% assign falsestring='FALSE' %}
+{% elsif page.language == "matlab" %}
+    {% assign quote="'" %}
+    {% assign array='cell array' %}
+    {% assign arrays='cell arrays' %}
+    {% assign object='struct' %}
+    {% assign 2darray='matrix' %}
+    {% assign data_array='array' %}
+    {% assign truestring='true' %}
+    {% assign falsestring='false' %}
+{% endif %}
+
+{% capture curlyarray %}{% raw %}{array}{% endraw %}{% endcapture %}
+{% capture curlyarrays %}{% raw %}{arrays}{% endraw %}{% endcapture %}
+{% capture curly2darray %}{% raw %}{2D array}{% endraw %}{% endcapture %}
+{% capture curlyobject %}{% raw %}{object}{% endraw %}{% endcapture %}
+{{ plotschemacontent | replace:'*',quote |
+    replace:curlyarray,array | replace:curlyobject,object |
+    replace:curlyarrays,arrays | replace:curly2darray,2darray |
+    replace:"data_array",data_array | replace:"true",truestring | replace:"false",falsestring | normalize_whitespace }}
+
 
 {% assign localparentlink=include.trace_name %}
 {% capture localparentpath %}data[type={{include.trace_name}}]{% endcapture %}

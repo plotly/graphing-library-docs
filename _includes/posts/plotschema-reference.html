@@ -8,7 +8,7 @@
 
       <a id="{{ trace_name }}" href="#{{ trace_name }}"><h4>{{ trace_name }} traces</h4></a>
 
-      {% include posts/reference-trace.html trace_name=trace_name trace_data=trace_data %}
+      {% include posts/reference-trace.html trace_name=trace_name block="data" trace_data=trace_data %}
 
     {%- endfor -%}
 
