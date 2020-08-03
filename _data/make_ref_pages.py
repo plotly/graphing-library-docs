@@ -11,6 +11,14 @@ for upperlang in ["Python", "JavaScript", "MATLAB", "R"]:
         "sliders", "updatemenus", "annotations", "shapes", "images", "global"
     ]:
         fullattr = "layout" + ("." + attr if attr != "global" else "")
+        extra = "" if attr != "global" else """
+{%- for trace in site.data.plotschema.traces -%}
+{% if trace[1].layoutAttributes %}
+{% assign attribute=trace[1].layoutAttributes %}
+{% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" %}
+{% endif %}
+{%- endfor -%}
+    """
         with open(f"../_posts/reference_pages/{lang}/2020-07-20-{attr}.html" , 'w') as f:
             f.write(
 f"""---
@@ -29,7 +37,7 @@ description: Figure attribute reference for Plotly's {upperlang} open-source gra
 
     {{% assign attribute=site.data.plotschema.layout.layoutAttributes %}}
     {{% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" mustmatch="{attr}" %}}
-
+    {extra}
   </div>
 </div>
 """
