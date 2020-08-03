@@ -22,7 +22,7 @@ description: Figure attribute reference for Plotly's {upperlang} open-source gra
 ---
 
 <h2>{upperlang} Figure Reference: <code>{fullattr}</code></h2>
-<br />
+
 <div class="row">
   <div class="eight columns">
 
@@ -48,7 +48,7 @@ description: Figure attribute reference for Plotly's {upperlang} open-source gra
 ---
 
 <h2>{upperlang} Figure Reference: <code>{trace}</code> Traces</h2>
-<br /><br />
+
 <div class="row">
   <div class="eight columns">
 

@@ -1,14 +1,19 @@
 ---
-permalink: /matlab/reference/
+permalink: /matlab/reference/index/
 layout: langindex
 page_type: reference
 language: matlab
-name: Single-Page Reference
+name: Reference Index
 description: Figure attribute reference for Plotly's MATLAB open-source graphing library.
 ---
-<h2>MATLAB figure reference: Single Page</h2>
-<details>
-    <summary>How are Plotly attributes organized?</summary>
+<h2>MATLAB figure reference</h2>
+
+<br />
+<p>The pages linked in the sidebar together form the exhaustive reference for all of the attributes in the core figure data structure
+that the <code>plotly</code> library operates on. They are automatically-generated from the
+ <a href="https://raw.githubusercontent.com/plotly/plotly.js/master/dist/plot-schema.json">machine-readable Plotly.js schema reference</a>.</p>
+
+<h3>How are Plotly attributes organized?</h3>
     <div class="row">
         <p>
             <code>fig2plotly</code> converts MATLAB figures to online Plotly graphs. MATLAB describes figures differently than Plotly. Plotly's MATLAB library crawls the MATLAB figure objects and translates the MATLAB attributes into the structure that Plotly uses to describe and draw data visualizations.<br><br>
@@ -83,7 +88,3 @@ description: Figure attribute reference for Plotly's MATLAB open-source graphing
         </p>
         <hr>
     </div>
-</details>
-
-
-{% include posts/plotschema-reference.html %}

@@ -24,6 +24,7 @@
             <!-- Start pulling content -->
             {{ content }}
             <!--End content -->
+            {% unless page.permalink contains "/reference/" %}
             {% if page.permalink contains "javascript/" or page.permalink contains "python/" %}
 
 			<a href="https://dash.plotly.com"><img width="100%" style="margin-top: 20px;" src="/all_static/images/dash.png"/></a>
@@ -33,6 +34,7 @@
 			<a href="https://dashr.plotly.com"><img width="100%" style="margin-top: 20px;" src="/all_static/images/dash.png"/></a>
 
 			{% endif %}
+			{% endunless %}
         </section>
     </div>
 

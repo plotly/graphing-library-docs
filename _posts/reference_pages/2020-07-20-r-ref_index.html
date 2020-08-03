@@ -1,15 +1,19 @@
 ---
-permalink: /r/reference/
+permalink: /r/reference/index/
 layout: langindex
 page_type: reference
 language: r
-name: Single-Page Reference
+name: Reference Index
 description: Figure attribute reference for Plotly's R open-source graphing library.
 ---
-<h2>R Figure Reference: Single Page</h2>
+<h2>R Figure Reference</h2>
 
-<details>
-    <summary>How are Plotly attributes organized?</summary>
+<br />
+<p>The pages linked in the sidebar together form the exhaustive reference for all of the attributes in the core figure data structure
+that the <code>plotly</code> library operates on. They are automatically-generated from the
+ <a href="https://raw.githubusercontent.com/plotly/plotly.js/master/dist/plot-schema.json">machine-readable Plotly.js schema reference</a>.</p>
+
+    <h3>How are Plotly attributes organized?</h3>
     <div class="row">
         <p>
             <code>plotly</code> charts are described <i>declaratively</i> in the call signature of <code>plotly::plot_ly</code>, <code>plotly::add_trace</code>, and <code>plotly::layout</code>. Every aspect of a plotly chart (the colors, the grid-lines, the data, and so on) has a corresponding key in these call signatures. This page contains an extensive list of these attributes.<br><br>
@@ -49,9 +53,3 @@ description: Figure attribute reference for Plotly's R open-source graphing libr
         </p>
         <hr>
     </div>
-</details>
-
-
-
-
-{% include posts/plotschema-reference.html %}
