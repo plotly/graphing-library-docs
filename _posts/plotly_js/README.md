@@ -44,7 +44,7 @@ order: 5
   {% assign examples = site.posts | where:"language","plotly_js" | where:"suite","add-chart-type-or-topic"| sort: "order" %}
   {% include posts/auto_examples.html examples=examples %}
 ```
-  - Make sure to update `_includes/posts/documentation_eg.html` with the new chart type!
+  - Make sure to update `_includes/posts/documentation_eg.html`, `_includes/layouts/side-bar.html`, and `_data/display_as_py_r_js.yml` and the CI python scripts with the new chart type!
 
   - Index pages for chart categories must have `order: 5`.
 

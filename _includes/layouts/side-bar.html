@@ -39,6 +39,8 @@
 {% assign financial = true %}
 {% elsif page.display_as == "3d_charts" %}
 {% assign 3d_charts = true %}
+{% elsif page.display_as == "ai_ml" %}
+{% assign ai_ml = true %}
 {% elsif page.display_as == "advanced_charts"%}
 {% assign advanced_charts = true %}
 {% elsif page.display_as == "multiple_axes" %}
@@ -256,6 +258,12 @@
                 {% if statistical == true %}
                 <li class="--sidebar-item">
                     <a href="/{{langue}}/statistical-charts/" class="js-splash--navigation-item">Statistical Charts</a>
+                </li>
+                {% endif %}
+
+                {% if ai_ml == true %}
+                <li class="--sidebar-item">
+                    <a href="/{{langue}}/ai-ml/" class="js-splash--navigation-item">Artificial Intelligence and Machine Learning</a>
                 </li>
                 {% endif %}
 

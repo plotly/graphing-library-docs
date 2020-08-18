@@ -38,6 +38,8 @@
 {% assign chart_studio = true %}
 {% elsif page.display_as == "advanced_opt" %}
 {% assign advanced_opt = true %}
+{% elsif page.display_as == "ai_ml" %}
+{% assign ai_ml = true %}
 
 <!-- START OF GGPLOT CUSTOM LAYOUT -->
 {% elsif page.display_as == "aesthetics" %}
@@ -96,7 +98,7 @@
         {% if show_header %}
         <a href="#fundamentals" name="fundamentals" id="fundamentals">Fundamentals</a>
         {% endif %}
-        
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -104,7 +106,32 @@
             {% if page.display_as == "file_settings" %}
 
             {% include layouts/grid-item.html %}
-            
+
+
+            {% endif %}
+            {%- endfor -%}
+        </ul>
+    </section>
+</section>
+{% endif %}
+
+{% if ai_ml %}
+<section class="--tutorial-section" id="ai_ml">
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#ai_ml">Artificial Intelligence and Machine Learning</a>
+
+        {% endif %}
+
+    </header>
+    <section class="--grid">
+        <ul class="--grid-list">
+            {%- for page in languagelist -%}
+            {% if page.display_as == "ai_ml" %}
+
+            {% include layouts/grid-item.html %}
+
 
             {% endif %}
             {%- endfor -%}
