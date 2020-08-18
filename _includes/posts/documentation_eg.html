@@ -98,7 +98,7 @@
         {% if show_header %}
         <a href="#fundamentals" name="fundamentals" id="fundamentals">Fundamentals</a>
         {% endif %}
-        
+
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -106,7 +106,32 @@
             {% if page.display_as == "file_settings" %}
 
             {% include layouts/grid-item.html %}
-            
+
+
+            {% endif %}
+            {%- endfor -%}
+        </ul>
+    </section>
+</section>
+{% endif %}
+
+{% if ai_ml %}
+<section class="--tutorial-section" id="ai_ml">
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#ai_ml">Artificial Intelligence and Machine Learning</a>
+
+        {% endif %}
+
+    </header>
+    <section class="--grid">
+        <ul class="--grid-list">
+            {%- for page in languagelist -%}
+            {% if page.display_as == "ai_ml" %}
+
+                        {% include layouts/grid-item.html %}
+
 
             {% endif %}
             {%- endfor -%}
@@ -158,36 +183,6 @@
 
                         {% include layouts/grid-item.html %}
 
-
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if ai_ml %}
-<section class="--tutorial-section" id="ai-ml">
-    <header class="--section-header"><a href="#ai-ml" name="ai-ml" id="basic-charts">Artifical Intelligence and Machine Learning Charts</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {%- for page in languagelist -%}
-            {% if page.display_as == "ai_ml" %}
-
-            <li style="background-image: url({{site.imgurl}}{{page.thumbnail}});" class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-
-
-                    <!--<a href="{{page.permalink}}">-->
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-                    <div class="--item-image">
-                        <span>View Tutorial</span>
-                        <img src="{{site.imgurl}}{{page.thumbnail}}" alt="{{page.name}}">
-                    </div>
-                </a>
-
-            </li>
 
             {% endif %}
             {%- endfor -%}

@@ -41,6 +41,8 @@
 {% assign chart_studio = true %}
 {% elsif page.display_as == "advanced_opt" %}
 {% assign advanced_opt = true %}
+{% elsif page.display_as == "ai_ml" %}
+{% assign ai_ml = true %}
 
 {% endif %}
 {%- endfor -%}
@@ -74,6 +76,28 @@
             {%- endfor -%}
         </ul>
         <a href="/{{language}}/plotly-fundamentals" class="langindexlink-mobile">More Fundamentals &raquo;</a>
+    </section>
+</section>
+{% endif %}
+
+
+
+{% if ai_ml %}
+<section class="--tutorial-section">
+    <header class="--section-header"><a href="#ai_ml" name="ai_ml" id="ai_ml">Artificial Intelligence and Machine Learning</a>
+        <a href="/{{language}}/ai-ml/" class="langindexlink">More AI and ML &raquo;</a>
+    </header>
+    <section class="--grid">
+        <ul class="--grid-list">
+            {%- for page in languagelist -%}
+            {% if page.display_as == "ai_ml" and page.order < num_examples %}
+
+
+            {% include layouts/grid-item.html %}
+            {% endif %}
+            {%- endfor -%}
+        </ul>
+        <a href="/{{language}}/ai-ml/" class="langindexlink-mobile">More AI and ML &raquo;</a>
     </section>
 </section>
 {% endif %}
