@@ -267,6 +267,13 @@
  "offsetgroup",
  "stackgroup",
 
+ "xperiod",
+ "xperiodalignment",
+ "xperiod0",
+ "yperiod",
+ "yperiodalignment",
+ "yperiod0",
+
  "nbinsx",
  "nbinsy",
  "autobinx",
