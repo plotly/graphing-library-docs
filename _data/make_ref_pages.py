@@ -33,7 +33,7 @@ description: Figure attribute reference for Plotly's {upperlang} open-source gra
 <h2>{upperlang} Figure Reference: <code>{fullattr}</code></h2>
 
 <div class="row">
-  <div class="eight columns">
+  <div class="eight columns" style="max-width: 900px;">
 
     {{% assign attribute=site.data.plotschema.layout.layoutAttributes %}}
     {{% include posts/reference-block.html parentlink="layout" block="layout" parentpath="layout" mustmatch="{attr}" %}}
@@ -59,7 +59,7 @@ description: Figure attribute reference for Plotly's {upperlang} open-source gra
 <h2>{upperlang} Figure Reference: <code>{trace}</code> Traces</h2>
 
 <div class="row">
-  <div class="eight columns">
+  <div class="eight columns" style="max-width: 900px;">
 
     {{% include posts/reference-trace.html trace_name="{trace}" trace_data=site.data.plotschema.traces.{trace} %}}
 

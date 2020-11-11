@@ -10,7 +10,8 @@
         or obj[0] == "items" or obj[0] == "uid"
         or obj[0] == "smith" or obj[0] == "_deprecated"
         or obj[0] == "_isSubplotObj" or obj[0] == "transforms"
-        or obj[0] == "editType" or obj[0] == "impliedEdits"%}
+        or obj[0] == "editType" or obj[0] == "impliedEdits"
+        or obj[0] == "magic_underscores"%}
         {% continue %}
     {% endif %}
 
@@ -41,7 +42,12 @@
         <a class="attribute-name" id="{{id}}" href="#{{include.parentlink}}-{{obj[0]}}">
             {{ obj[0] }}
         </a>
-        <br><em>Parent:</em> <code>{{include.parentpath | replace: '-', '.'}}</code>
+
+        {% if page.language == "python" and obj[1].magic_underscores %}
+            <br><em>Code:</em> <code>{{ obj[1].magic_underscores }}</code>
+        {% else %}
+            <br><em>Parent:</em> <code>{{include.parentpath | replace: '-', '.'}}</code>
+        {% endif %}
 
 
         {% if obj[0] == "type" and include.block == "data" %}
