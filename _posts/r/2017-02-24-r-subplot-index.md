@@ -14,10 +14,11 @@ thumbnail: thumbnail/mixed.jpg
 	<div class="--welcome-body">
 		<!--div.--wrap-inner-->
 		<div class="--title">
-			
+
 			<div class="--body">
 				<h1>Plotly R Library Subplots and Multiple Axes</h1>
 				<p>{{page.description}}</p>
+				{% include layouts/dashplug.html %}
 			</div>
 		</div>
 	</div>

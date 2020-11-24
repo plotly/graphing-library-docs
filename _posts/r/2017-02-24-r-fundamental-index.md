@@ -7,7 +7,7 @@ layout: langindex
 name: Fundamentals
 page_type: example_index
 permalink: r/plotly-fundamentals/
-redirect_from: 
+redirect_from:
   - r/fundamentals/
   - r/style-options/
   - r/layout-options/
@@ -18,10 +18,11 @@ thumbnail: thumbnail/mixed.jpg
 	<div class="--welcome-body">
 		<!--div.--wrap-inner-->
 		<div class="--title">
-			
+
 			<div class="--body">
 				<h1>Plotly R Library Fundamentals</h1>
 				<p>{{page.description}}</p>
+				{% include layouts/dashplug.html %}
 			</div>
 		</div>
 	</div>

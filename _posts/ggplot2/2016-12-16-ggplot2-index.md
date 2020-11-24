@@ -11,10 +11,11 @@ redirect_from: ggplot2/reference/
   <div class="--welcome-body">
     <!--div.--wrap-inner-->
     <div class="--title">
-      
+
       <div class="--body">
         <h1>Plotly ggplot2 Library</h1>
         <p>{{page.description}}</p>
+				{% include layouts/dashplug.html %}
       </div>
     </div>
   </div>

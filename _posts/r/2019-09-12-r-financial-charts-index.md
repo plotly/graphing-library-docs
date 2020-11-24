@@ -14,11 +14,12 @@ thumbnail: thumbnail/mixed.jpg
 	<div class="--welcome-body">
 		<!--div.--wrap-inner-->
 		<div class="--title">
-			
+
 			<div class="--body">
 				<h1>Plotly R Library Financial Charts</h1>
 				<p>{{page.description}}</consectetur>
 				</p>
+				{% include layouts/dashplug.html %}
 			</div>
 		</div>
 	</div>
