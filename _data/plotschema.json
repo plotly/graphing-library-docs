@@ -1595,6 +1595,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scatter'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scatter'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -3334,6 +3350,22 @@
               "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scattergl'))"
+            },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "calc",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scattergl'))"
             },
             "ticklen": {
               "valType": "number",
@@ -5843,6 +5875,22 @@
               "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='bar'))"
+            },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='bar'))"
             },
             "ticklen": {
               "valType": "number",
@@ -8463,6 +8511,22 @@
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='heatmap'))"
           },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='heatmap'))"
+          },
           "ticklen": {
             "valType": "number",
             "min": 0,
@@ -9570,6 +9634,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='heatmapgl'))"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "calc",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='heatmapgl'))"
           },
           "ticklen": {
             "valType": "number",
@@ -11205,6 +11285,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='contour'))"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='contour'))"
           },
           "ticklen": {
             "valType": "number",
@@ -16324,6 +16420,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='histogram'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='histogram'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -17875,6 +17987,22 @@
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='histogram2d'))"
           },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='histogram2d'))"
+          },
           "ticklen": {
             "valType": "number",
             "min": 0,
@@ -19114,6 +19242,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='histogram2dcontour'))"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='histogram2dcontour'))"
           },
           "ticklen": {
             "valType": "number",
@@ -22909,6 +23053,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='funnel'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='funnel'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -26052,6 +26212,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scatter3d'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "calc",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scatter3d'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -26889,6 +27065,22 @@
               "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
               "dflt": "",
               "magic_underscores": "fig.update_traces(line_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scatter3d'))"
+            },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "calc",
+              "magic_underscores": "fig.update_traces(line_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scatter3d'))"
             },
             "ticklen": {
               "valType": "number",
@@ -28431,6 +28623,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='surface'))"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "calc",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='surface'))"
           },
           "ticklen": {
             "valType": "number",
@@ -30050,6 +30258,22 @@
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='mesh3d'))"
           },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='mesh3d'))"
+          },
           "ticklen": {
             "valType": "number",
             "min": 0,
@@ -31309,6 +31533,22 @@
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='cone'))"
           },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='cone'))"
+          },
           "ticklen": {
             "valType": "number",
             "min": 0,
@@ -32450,6 +32690,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='streamtube'))"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='streamtube'))"
           },
           "ticklen": {
             "valType": "number",
@@ -33603,6 +33859,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='volume'))"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "calc",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='volume'))"
           },
           "ticklen": {
             "valType": "number",
@@ -35019,6 +35291,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='isosurface'))"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "calc",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='isosurface'))"
           },
           "ticklen": {
             "valType": "number",
@@ -37017,6 +37305,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scattergeo'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "calc",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scattergeo'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -38468,6 +38772,22 @@
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='choropleth'))"
           },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='choropleth'))"
+          },
           "ticklen": {
             "valType": "number",
             "min": 0,
@@ -39698,6 +40018,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scattermapbox'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "calc",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scattermapbox'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -40855,6 +41191,22 @@
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='choroplethmapbox'))"
           },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='choroplethmapbox'))"
+          },
           "ticklen": {
             "valType": "number",
             "min": 0,
@@ -41903,6 +42255,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='densitymapbox'))"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='densitymapbox'))"
           },
           "ticklen": {
             "valType": "number",
@@ -43750,6 +44118,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scatterpolar'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scatterpolar'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -45109,6 +45493,22 @@
               "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scatterpolargl'))"
+            },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "calc",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scatterpolargl'))"
             },
             "ticklen": {
               "valType": "number",
@@ -47194,6 +47594,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='barpolar'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='barpolar'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -49068,6 +49484,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scatterternary'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scatterternary'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -50446,6 +50878,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='sunburst'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='sunburst'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -51075,6 +51523,19 @@
             "editType": "none"
           },
           "magic_underscores": "fig.update_traces(outsidetextfont=dict(...), selector=dict(type='sunburst'))"
+        },
+        "root": {
+          "color": {
+            "valType": "color",
+            "editType": "calc",
+            "role": "style",
+            "dflt": "rgba(0,0,0,0)",
+            "description": "sets the color of the root node for a sunburst or a treemap trace. this has no effect when a colorscale is used to set the markers.",
+            "magic_underscores": "fig.update_traces(root_color=&lt;VALUE&gt;, selector=dict(type='sunburst'))"
+          },
+          "editType": "calc",
+          "role": "object",
+          "magic_underscores": "fig.update_traces(root=dict(...), selector=dict(type='sunburst'))"
         },
         "leaf": {
           "opacity": {
@@ -51876,6 +52337,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='treemap'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='treemap'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -52639,6 +53116,19 @@
             "editType": "none"
           },
           "magic_underscores": "fig.update_traces(outsidetextfont=dict(...), selector=dict(type='treemap'))"
+        },
+        "root": {
+          "color": {
+            "valType": "color",
+            "editType": "calc",
+            "role": "style",
+            "dflt": "rgba(0,0,0,0)",
+            "description": "sets the color of the root node for a sunburst or a treemap trace. this has no effect when a colorscale is used to set the markers.",
+            "magic_underscores": "fig.update_traces(root_color=&lt;VALUE&gt;, selector=dict(type='treemap'))"
+          },
+          "editType": "calc",
+          "role": "object",
+          "magic_underscores": "fig.update_traces(root=dict(...), selector=dict(type='treemap'))"
         },
         "level": {
           "valType": "any",
@@ -54298,6 +54788,22 @@
               "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='splom'))"
+            },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='splom'))"
             },
             "ticklen": {
               "valType": "number",
@@ -56210,6 +56716,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(line_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='parcoords'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(line_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='parcoords'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -57217,6 +57739,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(line_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='parcats'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(line_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='parcats'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -57952,6 +58490,18 @@
             "description": "Sets the axis type. By default, plotly attempts to determined the axis type by looking into the data of the traces that referenced the axis in question.",
             "magic_underscores": "fig.update_traces(aaxis_type=&lt;VALUE&gt;, selector=dict(type='carpet'))"
           },
+          "autotypenumbers": {
+            "valType": "enumerated",
+            "values": [
+              "convert types",
+              "strict"
+            ],
+            "dflt": "convert types",
+            "role": "info",
+            "editType": "calc",
+            "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. Defaults to layout.autotypenumbers.",
+            "magic_underscores": "fig.update_traces(aaxis_autotypenumbers=&lt;VALUE&gt;, selector=dict(type='carpet'))"
+          },
           "autorange": {
             "valType": "enumerated",
             "values": [
@@ -58549,6 +59099,18 @@
             "editType": "calc",
             "description": "Sets the axis type. By default, plotly attempts to determined the axis type by looking into the data of the traces that referenced the axis in question.",
             "magic_underscores": "fig.update_traces(baxis_type=&lt;VALUE&gt;, selector=dict(type='carpet'))"
+          },
+          "autotypenumbers": {
+            "valType": "enumerated",
+            "values": [
+              "convert types",
+              "strict"
+            ],
+            "dflt": "convert types",
+            "role": "info",
+            "editType": "calc",
+            "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. Defaults to layout.autotypenumbers.",
+            "magic_underscores": "fig.update_traces(baxis_autotypenumbers=&lt;VALUE&gt;, selector=dict(type='carpet'))"
           },
           "autorange": {
             "valType": "enumerated",
@@ -60449,6 +61011,22 @@
               "dflt": "",
               "magic_underscores": "fig.update_traces(marker_colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='scattercarpet'))"
             },
+            "ticklabelposition": {
+              "valType": "enumerated",
+              "values": [
+                "outside",
+                "inside",
+                "outside top",
+                "inside top",
+                "outside bottom",
+                "inside bottom"
+              ],
+              "dflt": "outside",
+              "role": "info",
+              "description": "Determines where tick labels are drawn.",
+              "editType": "colorbars",
+              "magic_underscores": "fig.update_traces(marker_colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='scattercarpet'))"
+            },
             "ticklen": {
               "valType": "number",
               "min": 0,
@@ -61729,6 +62307,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_traces(colorbar_ticks=&lt;VALUE&gt;, selector=dict(type='contourcarpet'))"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_traces(colorbar_ticklabelposition=&lt;VALUE&gt;, selector=dict(type='contourcarpet'))"
           },
           "ticklen": {
             "valType": "number",
@@ -63048,6 +63642,15 @@
           "description": "Determines if the legend items symbols scale with their corresponding *trace* attributes or remain *constant* independent of the symbol size on the graph.",
           "magic_underscores": "fig.update_layout(legend_itemsizing=&lt;VALUE&gt;)"
         },
+        "itemwidth": {
+          "valType": "number",
+          "min": 30,
+          "dflt": 30,
+          "role": "style",
+          "editType": "legend",
+          "description": "Sets the width (in px) of the legend item symbols (the part other than the title.text).",
+          "magic_underscores": "fig.update_layout(legend_itemwidth=&lt;VALUE&gt;)"
+        },
         "itemclick": {
           "valType": "enumerated",
           "values": [
@@ -63360,6 +63963,18 @@
         "editType": "layoutstyle",
         "description": "Sets the background color of the plotting area in-between x and y axes.",
         "magic_underscores": "fig.update_layout(plot_bgcolor=&lt;VALUE&gt;)"
+      },
+      "autotypenumbers": {
+        "valType": "enumerated",
+        "values": [
+          "convert types",
+          "strict"
+        ],
+        "dflt": "convert types",
+        "role": "info",
+        "editType": "calc",
+        "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. This is the default value; however it could be overridden for individual axes.",
+        "magic_underscores": "fig.update_layout(autotypenumbers=&lt;VALUE&gt;)"
       },
       "colorscale": {
         "editType": "calc",
@@ -63773,6 +64388,22 @@
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
             "dflt": "",
             "magic_underscores": "fig.update_coloraxes(colorbar_ticks=&lt;VALUE&gt;)"
+          },
+          "ticklabelposition": {
+            "valType": "enumerated",
+            "values": [
+              "outside",
+              "inside",
+              "outside top",
+              "inside top",
+              "outside bottom",
+              "inside bottom"
+            ],
+            "dflt": "outside",
+            "role": "info",
+            "description": "Determines where tick labels are drawn.",
+            "editType": "colorbars",
+            "magic_underscores": "fig.update_coloraxes(colorbar_ticklabelposition=&lt;VALUE&gt;)"
           },
           "ticklen": {
             "valType": "number",
@@ -64698,6 +65329,18 @@
           "description": "Sets the axis type. By default, plotly attempts to determined the axis type by looking into the data of the traces that referenced the axis in question.",
           "magic_underscores": "fig.update_xaxes(type=&lt;VALUE&gt;)"
         },
+        "autotypenumbers": {
+          "valType": "enumerated",
+          "values": [
+            "convert types",
+            "strict"
+          ],
+          "dflt": "convert types",
+          "role": "info",
+          "editType": "calc",
+          "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. Defaults to layout.autotypenumbers.",
+          "magic_underscores": "fig.update_xaxes(autotypenumbers=&lt;VALUE&gt;)"
+        },
         "autorange": {
           "valType": "enumerated",
           "values": [
@@ -64788,10 +65431,9 @@
             "range",
             "domain"
           ],
-          "dflt": "range",
           "role": "info",
           "editType": "plot",
-          "description": "If this axis needs to be compressed (either due to its own `scaleanchor` and `scaleratio` or those of the other axis), determines how that happens: by increasing the *range* (default), or by decreasing the *domain*.",
+          "description": "If this axis needs to be compressed (either due to its own `scaleanchor` and `scaleratio` or those of the other axis), determines how that happens: by increasing the *range*, or by decreasing the *domain*. Default is *domain* for axes containing image traces, *range* otherwise.",
           "magic_underscores": "fig.update_xaxes(constrain=&lt;VALUE&gt;)"
         },
         "constraintoward": {
@@ -64986,6 +65628,26 @@
           "editType": "ticks",
           "description": "Determines where tick labels are drawn with respect to their corresponding ticks and grid lines. Only has an effect for axes of `type` *date* When set to *period*, tick labels are drawn in the middle of the period between ticks.",
           "magic_underscores": "fig.update_xaxes(ticklabelmode=&lt;VALUE&gt;)"
+        },
+        "ticklabelposition": {
+          "valType": "enumerated",
+          "values": [
+            "outside",
+            "inside",
+            "outside top",
+            "inside top",
+            "outside left",
+            "inside left",
+            "outside right",
+            "inside right",
+            "outside bottom",
+            "inside bottom"
+          ],
+          "dflt": "outside",
+          "role": "info",
+          "editType": "calc",
+          "description": "Determines where tick labels are drawn with respect to the axis Please note that top or bottom has no effect on x axes or when `ticklabelmode` is set to *period*. Similarly left or right has no effect on y axes or when `ticklabelmode` is set to *period*. Has no effect on *multicategory* axes or when `tickson` is set to *boundaries*.",
+          "magic_underscores": "fig.update_xaxes(ticklabelposition=&lt;VALUE&gt;)"
         },
         "mirror": {
           "valType": "enumerated",
@@ -65963,6 +66625,18 @@
           "description": "Sets the axis type. By default, plotly attempts to determined the axis type by looking into the data of the traces that referenced the axis in question.",
           "magic_underscores": "fig.update_yaxes(type=&lt;VALUE&gt;)"
         },
+        "autotypenumbers": {
+          "valType": "enumerated",
+          "values": [
+            "convert types",
+            "strict"
+          ],
+          "dflt": "convert types",
+          "role": "info",
+          "editType": "calc",
+          "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. Defaults to layout.autotypenumbers.",
+          "magic_underscores": "fig.update_yaxes(autotypenumbers=&lt;VALUE&gt;)"
+        },
         "autorange": {
           "valType": "enumerated",
           "values": [
@@ -66053,10 +66727,9 @@
             "range",
             "domain"
           ],
-          "dflt": "range",
           "role": "info",
           "editType": "plot",
-          "description": "If this axis needs to be compressed (either due to its own `scaleanchor` and `scaleratio` or those of the other axis), determines how that happens: by increasing the *range* (default), or by decreasing the *domain*.",
+          "description": "If this axis needs to be compressed (either due to its own `scaleanchor` and `scaleratio` or those of the other axis), determines how that happens: by increasing the *range*, or by decreasing the *domain*. Default is *domain* for axes containing image traces, *range* otherwise.",
           "magic_underscores": "fig.update_yaxes(constrain=&lt;VALUE&gt;)"
         },
         "constraintoward": {
@@ -66251,6 +66924,26 @@
           "editType": "ticks",
           "description": "Determines where tick labels are drawn with respect to their corresponding ticks and grid lines. Only has an effect for axes of `type` *date* When set to *period*, tick labels are drawn in the middle of the period between ticks.",
           "magic_underscores": "fig.update_yaxes(ticklabelmode=&lt;VALUE&gt;)"
+        },
+        "ticklabelposition": {
+          "valType": "enumerated",
+          "values": [
+            "outside",
+            "inside",
+            "outside top",
+            "inside top",
+            "outside left",
+            "inside left",
+            "outside right",
+            "inside right",
+            "outside bottom",
+            "inside bottom"
+          ],
+          "dflt": "outside",
+          "role": "info",
+          "editType": "calc",
+          "description": "Determines where tick labels are drawn with respect to the axis Please note that top or bottom has no effect on x axes or when `ticklabelmode` is set to *period*. Similarly left or right has no effect on y axes or when `ticklabelmode` is set to *period*. Has no effect on *multicategory* axes or when `tickson` is set to *boundaries*.",
+          "magic_underscores": "fig.update_yaxes(ticklabelposition=&lt;VALUE&gt;)"
         },
         "mirror": {
           "valType": "enumerated",
@@ -68667,6 +69360,18 @@
             "description": "Sets the axis type. By default, plotly attempts to determined the axis type by looking into the data of the traces that referenced the axis in question.",
             "magic_underscores": "fig.update_scenes(xaxis_type=&lt;VALUE&gt;)"
           },
+          "autotypenumbers": {
+            "valType": "enumerated",
+            "values": [
+              "convert types",
+              "strict"
+            ],
+            "dflt": "convert types",
+            "role": "info",
+            "editType": "plot",
+            "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. Defaults to layout.autotypenumbers.",
+            "magic_underscores": "fig.update_scenes(xaxis_autotypenumbers=&lt;VALUE&gt;)"
+          },
           "autorange": {
             "valType": "enumerated",
             "values": [
@@ -69315,6 +70020,18 @@
             "description": "Sets the axis type. By default, plotly attempts to determined the axis type by looking into the data of the traces that referenced the axis in question.",
             "magic_underscores": "fig.update_scenes(yaxis_type=&lt;VALUE&gt;)"
           },
+          "autotypenumbers": {
+            "valType": "enumerated",
+            "values": [
+              "convert types",
+              "strict"
+            ],
+            "dflt": "convert types",
+            "role": "info",
+            "editType": "plot",
+            "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. Defaults to layout.autotypenumbers.",
+            "magic_underscores": "fig.update_scenes(yaxis_autotypenumbers=&lt;VALUE&gt;)"
+          },
           "autorange": {
             "valType": "enumerated",
             "values": [
@@ -69962,6 +70679,18 @@
             "_noTemplating": true,
             "description": "Sets the axis type. By default, plotly attempts to determined the axis type by looking into the data of the traces that referenced the axis in question.",
             "magic_underscores": "fig.update_scenes(zaxis_type=&lt;VALUE&gt;)"
+          },
+          "autotypenumbers": {
+            "valType": "enumerated",
+            "values": [
+              "convert types",
+              "strict"
+            ],
+            "dflt": "convert types",
+            "role": "info",
+            "editType": "plot",
+            "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. Defaults to layout.autotypenumbers.",
+            "magic_underscores": "fig.update_scenes(zaxis_autotypenumbers=&lt;VALUE&gt;)"
           },
           "autorange": {
             "valType": "enumerated",
@@ -71982,6 +72711,18 @@
             "description": "Sets the axis type. By default, plotly attempts to determined the axis type by looking into the data of the traces that referenced the axis in question.",
             "magic_underscores": "fig.update_polars(radialaxis_type=&lt;VALUE&gt;)"
           },
+          "autotypenumbers": {
+            "valType": "enumerated",
+            "values": [
+              "convert types",
+              "strict"
+            ],
+            "dflt": "convert types",
+            "role": "info",
+            "editType": "calc",
+            "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. Defaults to layout.autotypenumbers.",
+            "magic_underscores": "fig.update_polars(radialaxis_autotypenumbers=&lt;VALUE&gt;)"
+          },
           "autorange": {
             "valType": "enumerated",
             "values": [
@@ -72573,6 +73314,18 @@
             "_noTemplating": true,
             "description": "Sets the angular axis type. If *linear*, set `thetaunit` to determine the unit in which axis value are shown. If *category, use `period` to set the number of integer coordinates around polar axis.",
             "magic_underscores": "fig.update_polars(angularaxis_type=&lt;VALUE&gt;)"
+          },
+          "autotypenumbers": {
+            "valType": "enumerated",
+            "values": [
+              "convert types",
+              "strict"
+            ],
+            "dflt": "convert types",
+            "role": "info",
+            "editType": "calc",
+            "description": "Using *strict* a numeric string in trace data is not converted to a number. Using *convert types* a numeric string in trace data may be treated as a number during automatic axis `type` detection. Defaults to layout.autotypenumbers.",
+            "magic_underscores": "fig.update_polars(angularaxis_autotypenumbers=&lt;VALUE&gt;)"
           },
           "categoryorder": {
             "valType": "enumerated",
