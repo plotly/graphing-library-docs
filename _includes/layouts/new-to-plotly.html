@@ -3,29 +3,36 @@
 
 {% if page.language == "python" and page.path contains "/python/html/" %}
 {% assign ipynbname = page.path | replace: "_posts/python/html/2019-07-03-", "" | replace: ".html", ".ipynb" %}
-<p class="dash-plug">
-    If you're using Dash Enterprise's <a href="https://plotly.com/dash/workspaces/">Data Science Workspaces</a>, you can copy/paste any of these cells into a
+<div class="dash-plug">
+    <p>If you're using Dash Enterprise's <a href="https://plotly.com/dash/workspaces/">Data Science Workspaces</a>, you can copy/paste any of these cells into a
     Workspace Jupyter notebook.
     <br>Alternatively, <a href="{{ ipynbname | prepend: "https://github.com/plotly/plotly.py-docs/raw/built_ipynb/" }}">download this entire tutorial as a Jupyter notebook</a> and import it into your Workspace.
-    <br><a href="https://go.plotly.com/company-lookup" class="plotly-red">Find out if your company is using Dash Enterprise</a>.
-</p>
+    <br><a href="https://go.plotly.com/company-lookup" class="plotly-red">Find out if your company is using Dash Enterprise</a>.</p>
+
+    <p style="text-align: center; margin: 5px;"><a href="https://go.plotly.com/dash-azure" class="plotly-red" style="font-weight: bold !important; ">Install Dash Enterprise on Azure</a> | <a href="https://go.plotly.com/dash-aws" class="plotly-red" style="font-weight: bold !important; ">Install Dash Enterprise on AWS</a></p>
+</div>
 <br>
 {% endif %}
 
 {% if page.language == "r" or page.language == "ggplot2  %}
-<p class="dash-plug">
-    Building AI apps or dashboards in R? Deploy them to <a href="https://plotly.com/dash/">Dash Enterprise</a> for hyper-scalability and pixel-perfect aesthetic.
-    <br><b style="font-weight: bold !important;">10% of the Fortune 500 uses Dash Enterprise to productionize AI & data science apps. <a href="https://go.plotly.com/company-search"  style="font-weight: bold !important;" class="plotly-red">Find out if your company is using Dash Enterprise</a></b>
-</p>
+<div class="dash-plug">
+    <p>Building AI apps or dashboards in R? Deploy them to <a href="https://plotly.com/dash/">Dash Enterprise</a> for hyper-scalability and pixel-perfect aesthetic.
+    <br><b style="font-weight: bold !important;">10% of the Fortune 500 uses Dash Enterprise to productionize AI & data science apps.
+    <br><a href="https://go.plotly.com/company-search"  style="font-weight: bold !important;" class="plotly-red">Find out if your company is using Dash Enterprise</a></b></p>
+
+    <p style="text-align: center; margin: 5px;"><a href="https://go.plotly.com/dash-azure" class="plotly-red" style="font-weight: bold !important; ">Install Dash Enterprise on Azure</a> | <a href="https://go.plotly.com/dash-aws" class="plotly-red" style="font-weight: bold !important; ">Install Dash Enterprise on AWS</a></p>
+</div>
 <br>
 {% endif %}
 
 {% if page.language == "javascript"  or page.language == "plotly_js" %}
-<p class="dash-plug">
-    Building AI apps or dashboards with Plotly.js? <a href="https://plotly.com/chart-studio/">Chart Studio</a> enables 1-click export, editing and sharing of Plotly.js charts.
+<div class="dash-plug">
+    <p>Building AI apps or dashboards with Plotly.js? <a href="https://plotly.com/chart-studio/">Chart Studio</a> enables 1-click export, editing and sharing of Plotly.js charts.
     If building a full-stack app with Plotly.js, you might save time by building with <a href="https://dash.plotly.com/">Dash</a> instead.
-    <b><a href="https://plotly.com/get-demo/?utm_source=docs&utm_medium=graphing&utm_campaign=nov&utm_content=javascript" class="plotly-red" style="font-weight: bold !important;">Schedule a Dash Enterprise demo.</a></b>
-</p>
+    <b><a href="https://plotly.com/get-demo/?utm_source=docs&utm_medium=graphing&utm_campaign=nov&utm_content=javascript" class="plotly-red" style="font-weight: bold !important;">Schedule a Dash Enterprise demo.</a></b></p>
+
+    <p style="text-align: center; margin: 5px;"><a href="https://go.plotly.com/dash-azure" class="plotly-red" style="font-weight: bold !important; ">Install Dash Enterprise on Azure</a> | <a href="https://go.plotly.com/dash-aws" class="plotly-red" style="font-weight: bold !important; ">Install Dash Enterprise on AWS</a></p>
+</div>
 <br>
 {% endif %}
 
