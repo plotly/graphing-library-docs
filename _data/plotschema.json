@@ -2077,7 +2077,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_x_type=&lt;VALUE&gt;, selector=dict(type='scatter'))"
           },
           "symmetric": {
@@ -2199,7 +2199,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_y_type=&lt;VALUE&gt;, selector=dict(type='scatter'))"
           },
           "symmetric": {
@@ -4458,7 +4458,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_x_type=&lt;VALUE&gt;, selector=dict(type='scattergl'))"
           },
           "symmetric": {
@@ -4580,7 +4580,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_y_type=&lt;VALUE&gt;, selector=dict(type='scattergl'))"
           },
           "symmetric": {
@@ -6292,7 +6292,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_x_type=&lt;VALUE&gt;, selector=dict(type='bar'))"
           },
           "symmetric": {
@@ -6414,7 +6414,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_y_type=&lt;VALUE&gt;, selector=dict(type='bar'))"
           },
           "symmetric": {
@@ -16779,7 +16779,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_x_type=&lt;VALUE&gt;, selector=dict(type='histogram'))"
           },
           "symmetric": {
@@ -16901,7 +16901,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_y_type=&lt;VALUE&gt;, selector=dict(type='histogram'))"
           },
           "symmetric": {
@@ -27451,7 +27451,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_x_type=&lt;VALUE&gt;, selector=dict(type='scatter3d'))"
           },
           "symmetric": {
@@ -27573,7 +27573,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_y_type=&lt;VALUE&gt;, selector=dict(type='scatter3d'))"
           },
           "symmetric": {
@@ -27695,7 +27695,7 @@
             ],
             "role": "info",
             "editType": "calc",
-            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the sqaure of the underlying data. If *data*, the bar lengths are set with data set `array`.",
+            "description": "Determines the rule used to generate the error bars. If *constant`, the bar lengths are of a constant value. Set this constant in `value`. If *percent*, the bar lengths correspond to a percentage of underlying data. Set this percentage in `value`. If *sqrt*, the bar lengths correspond to the square of the underlying data. If *data*, the bar lengths are set with data set `array`.",
             "magic_underscores": "fig.update_traces(error_z_type=&lt;VALUE&gt;, selector=dict(type='scatter3d'))"
           },
           "symmetric": {
@@ -58302,7 +58302,7 @@
         "x": {
           "valType": "data_array",
           "editType": "calc+clearAxisTypes",
-          "description": "A two dimensional array of x coordinates at each carpet point. If ommitted, the plot is a cheater plot and the xaxis is hidden by default.",
+          "description": "A two dimensional array of x coordinates at each carpet point. If omitted, the plot is a cheater plot and the xaxis is hidden by default.",
           "role": "data",
           "magic_underscores": "fig.update_traces(x=&lt;VALUE&gt;, selector=dict(type='carpet'))"
         },
@@ -59666,7 +59666,7 @@
           "role": "info",
           "dflt": 1,
           "editType": "calc",
-          "description": "The shift applied to each successive row of data in creating a cheater plot. Only used if `x` is been ommitted.",
+          "description": "The shift applied to each successive row of data in creating a cheater plot. Only used if `x` is been omitted.",
           "magic_underscores": "fig.update_traces(cheaterslope=&lt;VALUE&gt;, selector=dict(type='carpet'))"
         },
         "font": {
@@ -65646,7 +65646,7 @@
           "dflt": "outside",
           "role": "info",
           "editType": "calc",
-          "description": "Determines where tick labels are drawn with respect to the axis Please note that top or bottom has no effect on x axes or when `ticklabelmode` is set to *period*. Similarly left or right has no effect on y axes or when `ticklabelmode` is set to *period*. Has no effect on *multicategory* axes or when `tickson` is set to *boundaries*.",
+          "description": "Determines where tick labels are drawn with respect to the axis Please note that top or bottom has no effect on x axes or when `ticklabelmode` is set to *period*. Similarly left or right has no effect on y axes or when `ticklabelmode` is set to *period*. Has no effect on *multicategory* axes or when `tickson` is set to *boundaries*. When used on axes linked by `matches` or `scaleanchor`, no extra padding for inside labels would be added by autorange, so that the scales could match.",
           "magic_underscores": "fig.update_xaxes(ticklabelposition=&lt;VALUE&gt;)"
         },
         "mirror": {
@@ -66942,7 +66942,7 @@
           "dflt": "outside",
           "role": "info",
           "editType": "calc",
-          "description": "Determines where tick labels are drawn with respect to the axis Please note that top or bottom has no effect on x axes or when `ticklabelmode` is set to *period*. Similarly left or right has no effect on y axes or when `ticklabelmode` is set to *period*. Has no effect on *multicategory* axes or when `tickson` is set to *boundaries*.",
+          "description": "Determines where tick labels are drawn with respect to the axis Please note that top or bottom has no effect on x axes or when `ticklabelmode` is set to *period*. Similarly left or right has no effect on y axes or when `ticklabelmode` is set to *period*. Has no effect on *multicategory* axes or when `tickson` is set to *boundaries*. When used on axes linked by `matches` or `scaleanchor`, no extra padding for inside labels would be added by autorange, so that the scales could match.",
           "magic_underscores": "fig.update_yaxes(ticklabelposition=&lt;VALUE&gt;)"
         },
         "mirror": {
