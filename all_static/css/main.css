@@ -9767,6 +9767,17 @@ section > .nav-breadcrumb-container {
   color: deeppink;
 }
 
+#custom-banner-webinar {
+    min-height: 15px;
+    line-height: 15px;
+    background-color: rgb(64, 78, 119);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
 .dash-plug {
   border-left: 4px solid rgb(98, 186, 181);
   padding-left: 1rem;
