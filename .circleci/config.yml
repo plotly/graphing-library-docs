@@ -39,7 +39,7 @@ jobs:
             bundle install --path vendor/bundle
             sudo apt-get update
             sudo apt install python-pip
-            sudo pip install python-frontmatter
+            sudo pip install python-frontmatter==0.5.0
             sudo pip install pathlib
 
       - save_cache:

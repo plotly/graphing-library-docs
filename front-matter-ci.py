@@ -91,7 +91,6 @@ else:
 # collect all posts
 meta_to_check = []
 for path in paths:
-    print("processing", str(path))
     post = frontmatter.load(str(path))
     if len(post.metadata.keys()) > 0 and "jupyter" not in post.metadata:
         meta = post.metadata
