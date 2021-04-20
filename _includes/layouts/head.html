@@ -23,6 +23,10 @@
         <!-- Plotly.js -->
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+      {% if page.language == "plotly_js" %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+      {% endif %}
+
       {% if page.language == "r" or page.language == "ggplot2" %}
         <script src="/all_static/r_files/r_dependencies.js"></script>
       {% endif %}

@@ -10,7 +10,7 @@ markdown_content: |
   This example demonstrates how to use a restyle button to update single attributes by passing a two element array
   to a button's `args` attribute or update multiple attributes at the same time by passing an array containing an object.
 ---
-Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows){
+d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows){
 function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
 }

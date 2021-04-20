@@ -5,14 +5,14 @@ suite: parcoords
 order: 2
 sitemap: false
 arrangement: horizontal
-description: 
+description:
 ---
 
-Plotly.d3.csv('https://raw.githubusercontent.com/bcdunbar/datasets/master/iris.csv', function(err, rows){
-      
+d3.csv('https://raw.githubusercontent.com/bcdunbar/datasets/master/iris.csv', function(err, rows){
+
 function unpack(rows, key) {
-  return rows.map(function(row) { 
-    return row[key]; 
+  return rows.map(function(row) {
+    return row[key];
   });
 }
 
@@ -49,5 +49,5 @@ var layout = {
 };
 
 Plotly.newPlot('myDiv', data, layout);
-  
+
 });

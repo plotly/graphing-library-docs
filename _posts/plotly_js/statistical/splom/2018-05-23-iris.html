@@ -9,7 +9,7 @@ markdown_content: |
   The Iris dataset contains four data variables, sepal length, sepal width, petal length petal width, for 150 iris flowers. The flowers are labeled as Iris-setosa, Iris-versicolor, Iris-virginica.
 ---
 
-Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/iris-data.csv', function(err, rows){
+d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/iris-data.csv', function(err, rows){
 
     function unpack(rows, key) {
         return rows.map(function(row) { return row[key.replace('.',' ')]; });
