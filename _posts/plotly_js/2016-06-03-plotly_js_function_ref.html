@@ -109,13 +109,6 @@ var layoutRetrievedLater = graphDiv.layout;
 <br /><br />
 Important Note: In order to use this method to plot new items in arrays under <code>data</code> such as <code>x</code> or <code>marker.color</code> etc, these items must either have been added immutably (i.e. the identity of the parent array must have changed) or the value of <a href="{{ BASE_URL }}/javascript/reference/layout/#layout-datarevision"><code>layout.datarevision</code></a> must have changed.
 
-<h4 id="plotly-plot"><a href="{{ BASE_URL }}/javascript/plotlyjs-function-reference/#plotlyplot">Plotly.plot</a></h4>
-
-<em>Deprecated in favor of <a href="#plotlyreact"><code>Plotly.react</code></a></em>
-<br /><br />
-
-<code>Plotly.plot</code> is an internal method with the same signature as <a href="#plotlynewplot"><code>Plotly.newPlot</code></a> and <a href="#plotlyreact"><code>Plotly.react</code></a>, but it is not idempotent: if you call <code>Plotly.plot</code> twice on the same <code>&lt;div&gt;</code>, traces will be added to the plot rather than updated or replaced.
-
 <h4 id="plotly-restyle"><a href="{{ BASE_URL }}/javascript/plotlyjs-function-reference/#plotlyrestyle">Plotly.restyle</a></h4>
 <em>This function has comparable performance to <a href="#plotlyreact"><code>Plotly.react</code></a> and is faster than redrawing the whole plot with <a href="#plotlynewplot"><code>Plotly.newPlot</code></a>.</em><br /><br />
 
