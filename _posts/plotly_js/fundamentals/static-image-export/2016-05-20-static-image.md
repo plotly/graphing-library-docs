@@ -15,7 +15,6 @@ thumbnail: thumbnail/png-export.png
 
 You can save graphs created with `plotly.js` to static images and view them in your browser. Consider the following example:
 
-    var d3 = Plotly.d3;
     var img_jpg= d3.select('#jpg-export');
 
     // Plotting the Graph

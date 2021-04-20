@@ -43,7 +43,7 @@ redirect_from: /javascript-graphing-library/
                     <div style="border: 1px solid #C2C2C2; width: 100%; text-align: center;">
                         <a class="image-link" style="display: inline-block;" href="https://plotly.com/~mdtusz/72.embed"><img style="width: 100%" src="{{site.imgurl}}images/turbulence-simulation.jpg"/></a>
                     </div>
-                    <pre><code class="js-splash--code-block">Plotly.d3.json('https://plotly.com/~DanielCarrera/13.json', function(figure){
+                    <pre><code class="js-splash--code-block">d3.json('https://plotly.com/~DanielCarrera/13.json', function(figure){
                   var trace = {
                     x: figure.data[0].x, y: figure.data[0].y, z: figure.data[0].z,
                     type: 'contour', autocolorscale: false,
@@ -74,7 +74,7 @@ redirect_from: /javascript-graphing-library/
                         </div>
                     </div>
 
-                    <pre><code class="js-splash--code-block">Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/wind_speed_laurel_nebraska.csv', function(rows){
+                    <pre><code class="js-splash--code-block">d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/wind_speed_laurel_nebraska.csv', function(rows){
                     var trace = {
                       type: 'scatter',                    // set the chart type
                       mode: 'lines',                      // connect points with lines

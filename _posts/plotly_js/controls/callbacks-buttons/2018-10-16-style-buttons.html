@@ -11,7 +11,7 @@ markdown_content: |
   and position of the buttons. The example below demostrates how to apply different styling options.
   See all updatemenus styling attributes here: [https://plotly.com/javascript/reference/layout/#layout-updatemenus](https://plotly.com/javascript/reference/layout/updatemenus/).
 ---
-Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows){
+d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows){
 function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
 }

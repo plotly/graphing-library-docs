@@ -7,7 +7,7 @@ order: 12
 sitemap: false
 ---
 function linspace(a,b,n) {
-  return Plotly.d3.range(n).map(function(i){return a+i*(b-a)/(n-1);});
+  return d3.range(n).map(function(i){return a+i*(b-a)/(n-1);});
 }
 var boxNumber = 30;
 var boxColor = [];

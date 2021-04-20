@@ -11,7 +11,7 @@ markdown_content: |
   **Update One Layout Attribute**
   This example demonstrates how to update a layout attribute: chart type with the `relayout` method.
 ---
-Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/normal-clusters.csv', function(err, rows){
+d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/normal-clusters.csv', function(err, rows){
 function unpack(rows, key) {
   return rows.map(function(row) { return parseFloat(row[key]); });
 }
