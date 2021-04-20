@@ -75,11 +75,7 @@
         </section>
     </footer>
 
-{% if page.layout != "langindex" %}
-<!-- Mathjax -->
-<script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true}});</script>
-<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2CSafe.js&#038;ver=4.1'></script>
-{% endif %}
+
  {% if page.layout == "langindex" or page.layout == "base" %}
  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">

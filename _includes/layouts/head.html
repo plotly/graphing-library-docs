@@ -14,21 +14,26 @@
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-      {% if page.language != "python" %}
-      <!-- code highlighting -->
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script>
-      {% endif %}
+      {% if page.layout == "base" %}
+        {% if page.language != "python" %}
+        <!-- code highlighting -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        {% endif %}
+
+        <!-- Mathjax -->
+        <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 
         <!-- Plotly.js -->
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-      {% if page.language == "plotly_js" %}
-        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-      {% endif %}
+        {% if page.language == "plotly_js" %}
+          <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        {% endif %}
 
-      {% if page.language == "r" or page.language == "ggplot2" %}
-        <script src="/all_static/r_files/r_dependencies.js"></script>
+        {% if page.language == "r" or page.language == "ggplot2" %}
+          <script src="/all_static/r_files/r_dependencies.js"></script>
+        {% endif %}
       {% endif %}
       <!--
       //// Stylesheets
