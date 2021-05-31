@@ -8,7 +8,7 @@ orders = json.load(open("orderings.json", "r"))
 
 schema = json.load(
     urlopen(
-        "https://raw.githubusercontent.com/plotly/plotly.js/%s/dist/plot-schema.json"
+        "https://raw.githubusercontent.com/plotly/plotly.js/v%s/dist/plot-schema.json"
         % version
     )
 )
