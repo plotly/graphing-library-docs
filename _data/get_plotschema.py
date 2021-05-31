@@ -1,9 +1,12 @@
 import json
 from urllib.request import urlopen
+import sys
+
+version = sys.argv[1]
 
 orders = json.load(open("orderings.json", "r"))
 
-schema = json.load(urlopen("https://raw.githubusercontent.com/plotly/plotly.js/master/dist/plot-schema.json"))
+schema = json.load(urlopen("https://raw.githubusercontent.com/plotly/plotly.js/%s/dist/plot-schema.json" % version))
 #schema = json.load(open("plot-schema.json", "r"))
 del schema["traces"]["area"]
 del schema["traces"]["scatter"]["attributes"]["r"]
@@ -78,3 +81,4 @@ for trace_type in schema["traces"]:
     underscores(schema["traces"][trace_type]["attributes"], [], trace_type)
 
 json.dump(schema, open('plotschema.json', 'w'), indent=2)
+json.dump(dict(version=version), open('jsversion.json', 'w'), indent=2)
