@@ -15,11 +15,8 @@ var trace1 = {
 	x:unpack(rows, 'x1'), y: unpack(rows, 'y1'), z: unpack(rows, 'z1'),
 	mode: 'markers',
 	marker: {
-		size: 12,
-		line: {
-		color: 'rgba(217, 217, 217, 0.14)',
-		width: 0.5},
-		opacity: 0.8},
+		size: 2,
+		opacity: 0.5},
 	type: 'scatter3d'
 };
 
@@ -28,11 +25,11 @@ var trace2 = {
 	mode: 'markers',
 	marker: {
 		color: 'rgb(127, 127, 127)',
-		size: 12,
+		size: 4,
 		symbol: 'circle',
 		line: {
-		color: 'rgb(204, 204, 204)',
-		width: 1},
+			color: 'rgb(204, 204, 204)',
+			width: 1},
 		opacity: 0.8},
 	type: 'scatter3d'};
 
@@ -42,6 +39,7 @@ var layout = {margin: {
 	r: 0,
 	b: 0,
 	t: 0
-  }};
+}};
 Plotly.newPlot('myDiv', data, layout);
 });
+
