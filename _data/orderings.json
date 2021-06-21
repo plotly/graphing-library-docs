@@ -75,7 +75,7 @@
 
         "scattergeo", "choropleth", "scattermapbox", "choroplethmapbox", "densitymapbox",
 
-        "scatterpolar", "scatterpolargl", "barpolar", "scatterternary", "sunburst", "treemap",
+        "scatterpolar", "scatterpolargl", "barpolar", "scatterternary", "sunburst", "treemap", "icicle",
 
         "sankey", "splom", "parcoords", "parcats", "carpet", "scattercarpet", "contourcarpet",
 
@@ -90,6 +90,7 @@
  "title",
  "visible",
  "showlegend",
+ "legendrank",
  "legendgroup",
  "opacity",
  "mode",
@@ -236,6 +237,12 @@
  "hoverinfosrc",
  "hovertemplate",
  "hovertemplatesrc",
+"xhoverformat",
+"yhoverformat",
+"uhoverformat",
+"vhoverformat",
+"whoverformat",
+"valuehoverformat",
 
  "meta",
  "metasrc",
