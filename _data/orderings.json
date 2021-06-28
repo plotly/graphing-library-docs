@@ -92,6 +92,7 @@
  "showlegend",
  "legendrank",
  "legendgroup",
+ "legendgrouptitle",
  "opacity",
  "mode",
  "ids",
