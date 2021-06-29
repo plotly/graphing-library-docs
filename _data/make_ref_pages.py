@@ -3,7 +3,7 @@ import json
 schema = json.load(open("plotschema.json"))
 
 
-for upperlang in ["Python", "JavaScript", "MATLAB", "R"]:
+for upperlang in ["Python", "JavaScript", "MATLAB", "R", "Julia"]:
     lang = upperlang.lower()
     langcode = "plotly_js" if lang == "javascript" else lang
     for attr in [

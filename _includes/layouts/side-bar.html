@@ -103,63 +103,36 @@
         <nav class="--sidebar-body watch" id="where">
             <ul class="--sidebar-list">
                 <!-- Getting Started -->
-                {% if page.language == "plotly_js" %}
                 <li class="--sidebar-item">
-                    <a href="/javascript/getting-started" class="js-splash--navigation-item">Getting Started</a>
+                    <a href="/{{ langue }}/getting-started" class="js-splash--navigation-item">Getting Started</a>
                 </li>
-                {% else %}
-                <li class="--sidebar-item">
-                    <a href="/{{ page.language }}/getting-started" class="js-splash--navigation-item">Getting Started</a>
-                </li>
-                {% endif %}
-                {% if page.language == "r" or page.language == "python" %}
-                <li class="--sidebar-item">
-                    <a href="/{{ page.language }}/is-plotly-free" class="js-splash--navigation-item">Is Plotly Free?</a>
-                </li>
-                {% endif %}
-                {% if page.language == "plotly_js" %}
-                <li class="--sidebar-item">
-                    <a href="/javascript/is-plotly-free" class="js-splash--navigation-item">Is Plotly Free?</a>
-                </li>
-                {% endif %}
 
-                <!-- Cheat Sheets -->
-                {% if page.language == "plotly_js" or page.language == "r" or page.language == "matlab" %}
+                {% if page.language == "r" or page.language == "python" or  page.language == "plotly_js"%}
                 <li class="--sidebar-item">
-                    <a href="https://images.plot.ly/plotly-documentation/images/{{ page.language }}_cheat_sheet.pdf" class="js-splash--navigation-item">Cheat Sheet</a>
+                    <a href="/{{ langue }}/is-plotly-free" class="js-splash--navigation-item">Is Plotly Free?</a>
                 </li>
                 {% endif %}
 
                 <!-- Reference Pages -->
-                {% if page.language == "r" or page.language == "python" or page.language == "matlab" %}
+                {% if  page.language == "plotly_js" or page.language == "r" or page.language == "python" or page.language == "matlab" or page.language == "julia" %}
                 <li class="--sidebar-item">
-                    <a href="/{{ page.language }}/reference/index/" class="js-splash--navigation-item">Figure Reference</a>
+                    <a href="/{{ langue }}/reference/index/" class="js-splash--navigation-item">Figure Reference</a>
                 </li>
                 {% endif %}
+
+                <!-- Python Specific -->
+
                 {% if page.language == "python" %}
                 <li class="--sidebar-item">
                     <a href="/python-api-reference" class="js-splash--navigation-item">API Reference</a>
                 </li>
-                {% endif %}
-
-                <!-- User Guides -->
-                {% if page.language == "matlab" or page.language == "scala" %}
                 <li class="--sidebar-item">
-                    <a href="/{{ page.language }}/user-guide/" class="js-splash--navigation-item">User Guide</a>
-                </li>
-                {% endif %}
-
-                {% if page.language == "matlab" %}
-                <li class="--sidebar-item">
-                    <a href="/{{ page.language }}/offline/" class="js-splash--navigation-item">Use Offline</a>
+                    <a href="https://plotly.com/dash" class="js-splash--navigation-item">Dash</a>
                 </li>
                 {% endif %}
 
                 <!-- JS Specific -->
                 {% if page.language == "plotly_js" %}
-                <li class="--sidebar-item">
-                    <a href="/javascript/reference/index/" class="js-splash--navigation-item">Figure Reference</a>
-                </li>
                 <li class="--sidebar-item">
                     <a href="/javascript/plotlyjs-function-reference/" class="js-splash--navigation-item">Function Reference</a>
                 </li>
@@ -181,19 +154,37 @@
                 </li>
                 {% endif %}
 
-                <!-- Python Specific -->
-                {% if page.language == "python" %}
-                <li class="--sidebar-item">
-                    <a href="https://plotly.com/dash" class="js-splash--navigation-item">Dash</a>
-                </li>
-                {% endif %}
-
                 <!-- Python/v3 Index Page Specific -->
                 {% if page.permalink == "/python/v3/" %}
                 <li class="--sidebar-item">
                     <a href="/ipython-notebooks/" class="js-splash--navigation-item">IPython Notebooks</a>
                 </li>
                 {% endif %}
+
+                <!-- MATLAB Specific -->
+                {% if page.language == "matlab" %}
+                <li class="--sidebar-item">
+                    <a href="/{{ page.language }}/offline/" class="js-splash--navigation-item">Use Offline</a>
+                </li>
+                {% endif %}
+
+
+                <!-- User Guides -->
+                {% if page.language == "matlab" or page.language == "scala" %}
+                <li class="--sidebar-item">
+                    <a href="/{{ page.language }}/user-guide/" class="js-splash--navigation-item">User Guide</a>
+                </li>
+                {% endif %}
+
+                <!-- Cheat Sheets -->
+                {% if page.language == "plotly_js" or page.language == "r" or page.language == "matlab" %}
+                <li class="--sidebar-item">
+                    <a href="https://images.plot.ly/plotly-documentation/images/{{ page.language }}_cheat_sheet.pdf" class="js-splash--navigation-item">Cheat Sheet</a>
+                </li>
+                {% endif %}
+
+
+                <!-- Github Links -->
 
                 {% if page.language == 'python' %}
                 <li class="--sidebar-item">
@@ -202,12 +193,12 @@
 
                 {% elsif page.language == 'matlab' %}
                 <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/plotly/matlab-api" class="js-splash--navigation-item">GitHub</a>
+                    <a target="_blank" href="https://github.com/plotly/plotly-graphing-library-for-matlab" class="js-splash--navigation-item">GitHub</a>
                 </li>
 
                 {% elsif page.language == 'julia' %}
                 <li class="--sidebar-item">
-                    <a target="_blank" href="https://github.com/plotly/Julia-API" class="js-splash--navigation-item">GitHub</a>
+                    <a target="_blank" href="https://github.com/JuliaPlots/PlotlyJS.jl" class="js-splash--navigation-item">GitHub</a>
                 </li>
 
                 {% elsif page.language == 'nodejs' %}
