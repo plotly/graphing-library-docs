@@ -199,6 +199,15 @@
     {% assign data_array='data array' %}
     {% assign truestring='True' %}
     {% assign falsestring='False' %}
+{% elsif page.language == "julia" %}
+    {% assign quote='"' %}
+    {% assign array='Array' %}
+    {% assign arrays='Arrays' %}
+    {% assign object='Dict' %}
+    {% assign 2darray='2d Array, Matrix' %}
+    {% assign data_array='data array, Vector' %}
+    {% assign truestring='true' %}
+    {% assign falsestring='false' %}
 {% elsif page.language == "r" %}
     {% assign quote='"' %}
     {% assign array='list' %}
