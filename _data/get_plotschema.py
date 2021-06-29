@@ -90,20 +90,19 @@ def make_underscore(path, section, value):
 
 
 def underscores(attr, path, section):
-    if attr.get("role", "object") == "object":
-        if "items" not in attr or (
-            len(path) > 0 and path[-1] in ["shapes", "annotations", "images"]
-        ):
-            if "_deprecated" in attr:
-                del attr["_deprecated"]
-            for k in attr:
-                if type(attr[k]) == dict and not k.endswith("src"):
-                    underscores(attr[k], path + [k], section)
-            if len(path) and path[-1] != "items":
-                attr["magic_underscores"] = make_underscore(path, section, "dict(...)")
-        else:
-            attr["magic_underscores"] = make_underscore(path, section, "list(...)")
-    elif attr.get("role", None):
+    if "items" not in attr or (
+        len(path) > 0 and path[-1] in ["shapes", "annotations", "images"]
+    ):
+        if "_deprecated" in attr:
+            del attr["_deprecated"]
+        for k in attr:
+            if type(attr[k]) == dict and not k.endswith("src"):
+                underscores(attr[k], path + [k], section)
+    else:
+        attr["magic_underscores"] = make_underscore(path, section, "list(...)")
+    if attr.get("role") == "object":
+        attr["magic_underscores"] = make_underscore(path, section, "dict(...)")
+    else:
         attr["magic_underscores"] = make_underscore(path, section, "&lt;VALUE&gt;")
 
 
