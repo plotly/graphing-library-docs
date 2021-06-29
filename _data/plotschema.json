@@ -1711,7 +1711,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='scatter'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='scatter'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -2518,7 +2518,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='scatter'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='scatter'))"
         },
         "uirevision": {
           "valType": "any",
@@ -3362,7 +3362,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='scattergl'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='scattergl'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -4759,7 +4759,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='scattergl'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='scattergl'))"
         },
         "uirevision": {
           "valType": "any",
@@ -5767,7 +5767,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='bar'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='bar'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -6662,7 +6662,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='bar'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='bar'))"
         },
         "uirevision": {
           "valType": "any",
@@ -7111,7 +7111,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this pie trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='pie'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='pie'))"
           },
           "y": {
             "valType": "info_array",
@@ -7135,7 +7135,7 @@
               1
             ],
             "description": "Sets the vertical domain of this pie trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='pie'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='pie'))"
           },
           "editType": "calc",
           "row": {
@@ -7525,7 +7525,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='pie'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='pie'))"
         },
         "uirevision": {
           "valType": "any",
@@ -8351,7 +8351,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='heatmap'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='heatmap'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -8777,7 +8777,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='heatmap'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='heatmap'))"
         },
         "uirevision": {
           "valType": "any",
@@ -9437,7 +9437,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='heatmapgl'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='heatmapgl'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -9792,7 +9792,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='heatmapgl'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='heatmapgl'))"
         },
         "uirevision": {
           "valType": "any",
@@ -10105,7 +10105,7 @@
           ],
           "editType": "calc",
           "description": "Array defining the higher bound for each color component. Note that the default value will depend on the colormodel. For the `rgb` colormodel, it is [255, 255, 255]. For the `rgba` colormodel, it is [255, 255, 255, 1]. For the `rgba256` colormodel, it is [255, 255, 255, 255]. For the `hsl` colormodel, it is [360, 100, 100]. For the `hsla` colormodel, it is [360, 100, 100, 1].",
-          "magic_underscores": "fig.update_traces(zmax=&lt;VALUE&gt;, selector=dict(type='image'))"
+          "magic_underscores": "fig.update_traces(zmax=list(...), selector=dict(type='image'))"
         },
         "zmin": {
           "valType": "info_array",
@@ -10129,7 +10129,7 @@
           ],
           "editType": "calc",
           "description": "Array defining the lower bound for each color component. Note that the default value will depend on the colormodel. For the `rgb` colormodel, it is [0, 0, 0]. For the `rgba` colormodel, it is [0, 0, 0, 0]. For the `rgba256` colormodel, it is [0, 0, 0, 0]. For the `hsl` colormodel, it is [0, 0, 0]. For the `hsla` colormodel, it is [0, 0, 0, 0].",
-          "magic_underscores": "fig.update_traces(zmin=&lt;VALUE&gt;, selector=dict(type='image'))"
+          "magic_underscores": "fig.update_traces(zmin=list(...), selector=dict(type='image'))"
         },
         "zsmooth": {
           "valType": "enumerated",
@@ -11066,7 +11066,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='contour'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='contour'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -11647,7 +11647,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='contour'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='contour'))"
         },
         "uirevision": {
           "valType": "any",
@@ -11865,7 +11865,7 @@
             ],
             "description": "Sets the horizontal domain of this table trace (in plot fraction).",
             "editType": "calc",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='table'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='table'))"
           },
           "y": {
             "valType": "info_array",
@@ -11889,7 +11889,7 @@
             ],
             "description": "Sets the vertical domain of this table trace (in plot fraction).",
             "editType": "calc",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='table'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='table'))"
           },
           "row": {
             "valType": "integer",
@@ -13738,7 +13738,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='box'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='box'))"
         },
         "uirevision": {
           "valType": "any",
@@ -15019,7 +15019,7 @@
           ],
           "editType": "calc",
           "description": "Sets the span in data space for which the density function will be computed. Has an effect only when `spanmode` is set to *manual*.",
-          "magic_underscores": "fig.update_traces(span=&lt;VALUE&gt;, selector=dict(type='violin'))"
+          "magic_underscores": "fig.update_traces(span=list(...), selector=dict(type='violin'))"
         },
         "spanmode": {
           "valType": "enumerated",
@@ -15042,7 +15042,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='violin'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='violin'))"
         },
         "uirevision": {
           "valType": "any",
@@ -16030,7 +16030,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='histogram'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='histogram'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -16792,7 +16792,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='histogram'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='histogram'))"
         },
         "uirevision": {
           "valType": "any",
@@ -17610,7 +17610,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='histogram2d'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='histogram2d'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -18016,7 +18016,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='histogram2d'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='histogram2d'))"
         },
         "uirevision": {
           "valType": "any",
@@ -18822,7 +18822,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='histogram2dcontour'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='histogram2dcontour'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -19377,7 +19377,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='histogram2dcontour'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='histogram2dcontour'))"
         },
         "uirevision": {
           "valType": "any",
@@ -19975,7 +19975,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='ohlc'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='ohlc'))"
         },
         "uirevision": {
           "valType": "any",
@@ -20542,7 +20542,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='candlestick'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='candlestick'))"
         },
         "uirevision": {
           "valType": "any",
@@ -21517,7 +21517,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='waterfall'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='waterfall'))"
         },
         "uirevision": {
           "valType": "any",
@@ -22520,7 +22520,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='funnel'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='funnel'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -23056,7 +23056,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='funnel'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='funnel'))"
         },
         "uirevision": {
           "valType": "any",
@@ -23473,7 +23473,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this funnelarea trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='funnelarea'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='funnelarea'))"
           },
           "y": {
             "valType": "info_array",
@@ -23497,7 +23497,7 @@
               1
             ],
             "description": "Sets the vertical domain of this funnelarea trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='funnelarea'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='funnelarea'))"
           },
           "editType": "calc",
           "row": {
@@ -23805,7 +23805,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='funnelarea'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='funnelarea'))"
         },
         "uirevision": {
           "valType": "any",
@@ -24067,7 +24067,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this indicator trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='indicator'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='indicator'))"
           },
           "y": {
             "valType": "info_array",
@@ -24091,7 +24091,7 @@
               1
             ],
             "description": "Sets the vertical domain of this indicator trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='indicator'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='indicator'))"
           },
           "editType": "calc",
           "row": {
@@ -24365,7 +24365,7 @@
               ],
               "editType": "plot",
               "description": "Sets the range of this axis.",
-              "magic_underscores": "fig.update_traces(gauge_axis_range=&lt;VALUE&gt;, selector=dict(type='indicator'))"
+              "magic_underscores": "fig.update_traces(gauge_axis_range=list(...), selector=dict(type='indicator'))"
             },
             "visible": {
               "valType": "boolean",
@@ -24554,7 +24554,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(gauge_axis_tickformatstops=dict(...), selector=dict(type='indicator'))"
+              "magic_underscores": "fig.update_traces(gauge_axis_tickformatstops=list(...), selector=dict(type='indicator'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -24716,7 +24716,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(gauge_steps=dict(...), selector=dict(type='indicator'))"
+            "magic_underscores": "fig.update_traces(gauge_steps=list(...), selector=dict(type='indicator'))"
           },
           "threshold": {
             "line": {
@@ -24773,7 +24773,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='indicator'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='indicator'))"
         },
         "uirevision": {
           "valType": "any",
@@ -25525,7 +25525,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='scatter3d'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='scatter3d'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -26334,7 +26334,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(line_colorbar_tickformatstops=dict(...), selector=dict(type='scatter3d'))"
+              "magic_underscores": "fig.update_traces(line_colorbar_tickformatstops=list(...), selector=dict(type='scatter3d'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -27161,7 +27161,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='scatter3d'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='scatter3d'))"
         },
         "uirevision": {
           "valType": "any",
@@ -27809,7 +27809,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='surface'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='surface'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -29361,7 +29361,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='mesh3d'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='mesh3d'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -30617,7 +30617,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='cone'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='cone'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -31764,7 +31764,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='streamtube'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='streamtube'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -32905,7 +32905,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='volume'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='volume'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -34286,7 +34286,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='isosurface'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='isosurface'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -36218,7 +36218,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='scattergeo'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='scattergeo'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -36942,7 +36942,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='scattergeo'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='scattergeo'))"
         },
         "uirevision": {
           "valType": "any",
@@ -37609,7 +37609,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='choropleth'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='choropleth'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -38001,7 +38001,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='choropleth'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='choropleth'))"
         },
         "uirevision": {
           "valType": "any",
@@ -38806,7 +38806,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='scattermapbox'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='scattermapbox'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -39246,7 +39246,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='scattermapbox'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='scattermapbox'))"
         },
         "uirevision": {
           "valType": "any",
@@ -39915,7 +39915,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='choroplethmapbox'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='choroplethmapbox'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -40300,7 +40300,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='choroplethmapbox'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='choroplethmapbox'))"
         },
         "uirevision": {
           "valType": "any",
@@ -40938,7 +40938,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='densitymapbox'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='densitymapbox'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -41281,7 +41281,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='densitymapbox'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='densitymapbox'))"
         },
         "uirevision": {
           "valType": "any",
@@ -42742,7 +42742,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='scatterpolar'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='scatterpolar'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -43262,7 +43262,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='scatterpolar'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='scatterpolar'))"
         },
         "uirevision": {
           "valType": "any",
@@ -44044,7 +44044,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='scatterpolargl'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='scatterpolargl'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -45182,7 +45182,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='scatterpolargl'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='scatterpolargl'))"
         },
         "uirevision": {
           "valType": "any",
@@ -46060,7 +46060,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='barpolar'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='barpolar'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -46528,7 +46528,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='barpolar'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='barpolar'))"
         },
         "uirevision": {
           "valType": "any",
@@ -47983,7 +47983,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='scatterternary'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='scatterternary'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -48511,7 +48511,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='scatterternary'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='scatterternary'))"
         },
         "uirevision": {
           "valType": "any",
@@ -48800,7 +48800,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this sunburst trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='sunburst'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='sunburst'))"
           },
           "y": {
             "valType": "info_array",
@@ -48824,7 +48824,7 @@
               1
             ],
             "description": "Sets the vertical domain of this sunburst trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='sunburst'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='sunburst'))"
           },
           "editType": "calc",
           "row": {
@@ -49303,7 +49303,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='sunburst'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='sunburst'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -49814,7 +49814,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='sunburst'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='sunburst'))"
         },
         "uirevision": {
           "valType": "any",
@@ -50134,7 +50134,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this treemap trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='treemap'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='treemap'))"
           },
           "y": {
             "valType": "info_array",
@@ -50158,7 +50158,7 @@
               1
             ],
             "description": "Sets the vertical domain of this treemap trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='treemap'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='treemap'))"
           },
           "editType": "calc",
           "row": {
@@ -50681,7 +50681,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='treemap'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='treemap'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -51293,7 +51293,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='treemap'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='treemap'))"
         },
         "uirevision": {
           "valType": "any",
@@ -51613,7 +51613,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this icicle trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='icicle'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='icicle'))"
           },
           "y": {
             "valType": "info_array",
@@ -51637,7 +51637,7 @@
               1
             ],
             "description": "Sets the vertical domain of this icicle trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='icicle'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='icicle'))"
           },
           "editType": "calc",
           "row": {
@@ -52116,7 +52116,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='icicle'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='icicle'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -52729,7 +52729,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='icicle'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='icicle'))"
         },
         "uirevision": {
           "valType": "any",
@@ -52925,7 +52925,7 @@
             ],
             "description": "Sets the horizontal domain of this sankey trace (in plot fraction).",
             "editType": "calc",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='sankey'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='sankey'))"
           },
           "y": {
             "valType": "info_array",
@@ -52949,7 +52949,7 @@
             ],
             "description": "Sets the vertical domain of this sankey trace (in plot fraction).",
             "editType": "calc",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='sankey'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='sankey'))"
           },
           "row": {
             "valType": "integer",
@@ -53005,7 +53005,7 @@
             },
             "description": "Groups of nodes. Each group is defined by an array with the indices of the nodes it contains. Multiple groups can be specified.",
             "editType": "calc",
-            "magic_underscores": "fig.update_traces(node_groups=&lt;VALUE&gt;, selector=dict(type='sankey'))"
+            "magic_underscores": "fig.update_traces(node_groups=list(...), selector=dict(type='sankey'))"
           },
           "x": {
             "valType": "data_array",
@@ -53495,7 +53495,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(link_colorscales=dict(...), selector=dict(type='sankey'))"
+            "magic_underscores": "fig.update_traces(link_colorscales=list(...), selector=dict(type='sankey'))"
           },
           "description": "The links of the Sankey plot.",
           "editType": "calc",
@@ -53921,7 +53921,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(dimensions=dict(...), selector=dict(type='splom'))"
+          "magic_underscores": "fig.update_traces(dimensions=list(...), selector=dict(type='splom'))"
         },
         "hovertext": {
           "valType": "string",
@@ -54436,7 +54436,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='splom'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='splom'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -55273,7 +55273,7 @@
             "editType": "plot"
           },
           "description": "Sets the list of x axes corresponding to dimensions of this splom trace. By default, a splom will match the first N xaxes where N is the number of input dimensions. Note that, in case where `diagonal.visible` is false and `showupperhalf` or `showlowerhalf` is false, this splom trace will generate one less x-axis and one less y-axis.",
-          "magic_underscores": "fig.update_traces(xaxes=&lt;VALUE&gt;, selector=dict(type='splom'))"
+          "magic_underscores": "fig.update_traces(xaxes=list(...), selector=dict(type='splom'))"
         },
         "yaxes": {
           "valType": "info_array",
@@ -55285,7 +55285,7 @@
             "editType": "plot"
           },
           "description": "Sets the list of y axes corresponding to dimensions of this splom trace. By default, a splom will match the first N yaxes where N is the number of input dimensions. Note that, in case where `diagonal.visible` is false and `showupperhalf` or `showlowerhalf` is false, this splom trace will generate one less x-axis and one less y-axis.",
-          "magic_underscores": "fig.update_traces(yaxes=&lt;VALUE&gt;, selector=dict(type='splom'))"
+          "magic_underscores": "fig.update_traces(yaxes=list(...), selector=dict(type='splom'))"
         },
         "showlowerhalf": {
           "valType": "boolean",
@@ -55482,7 +55482,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='splom'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='splom'))"
         },
         "uirevision": {
           "valType": "any",
@@ -55712,7 +55712,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(dimensions=dict(...), selector=dict(type='parcoords'))"
+          "magic_underscores": "fig.update_traces(dimensions=list(...), selector=dict(type='parcoords'))"
         },
         "meta": {
           "valType": "any",
@@ -55760,7 +55760,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this parcoords trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='parcoords'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='parcoords'))"
           },
           "y": {
             "valType": "info_array",
@@ -55784,7 +55784,7 @@
               1
             ],
             "description": "Sets the vertical domain of this parcoords trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='parcoords'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='parcoords'))"
           },
           "editType": "plot",
           "row": {
@@ -56301,7 +56301,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(line_colorbar_tickformatstops=dict(...), selector=dict(type='parcoords'))"
+              "magic_underscores": "fig.update_traces(line_colorbar_tickformatstops=list(...), selector=dict(type='parcoords'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -56566,7 +56566,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='parcoords'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='parcoords'))"
         },
         "uirevision": {
           "valType": "any",
@@ -56753,7 +56753,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(dimensions=dict(...), selector=dict(type='parcats'))"
+          "magic_underscores": "fig.update_traces(dimensions=list(...), selector=dict(type='parcats'))"
         },
         "hoverinfo": {
           "valType": "flaglist",
@@ -56814,7 +56814,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this parcats trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_x=&lt;VALUE&gt;, selector=dict(type='parcats'))"
+            "magic_underscores": "fig.update_traces(domain_x=list(...), selector=dict(type='parcats'))"
           },
           "y": {
             "valType": "info_array",
@@ -56838,7 +56838,7 @@
               1
             ],
             "description": "Sets the vertical domain of this parcats trace (in plot fraction).",
-            "magic_underscores": "fig.update_traces(domain_y=&lt;VALUE&gt;, selector=dict(type='parcats'))"
+            "magic_underscores": "fig.update_traces(domain_y=list(...), selector=dict(type='parcats'))"
           },
           "editType": "calc",
           "row": {
@@ -57286,7 +57286,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(line_colorbar_tickformatstops=dict(...), selector=dict(type='parcats'))"
+              "magic_underscores": "fig.update_traces(line_colorbar_tickformatstops=list(...), selector=dict(type='parcats'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -57568,7 +57568,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='parcats'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='parcats'))"
         },
         "uirevision": {
           "valType": "any",
@@ -57925,7 +57925,7 @@
               }
             ],
             "description": "Sets the range of this axis. If the axis `type` is *log*, then you must take the log of your desired range (e.g. to set the range from 1 to 100, set the range from 0 to 2). If the axis `type` is *date*, it should be date strings, like date data, though Date objects and unix milliseconds will be accepted and converted to strings. If the axis `type` is *category*, it should be numbers, using the scale where each category is assigned a serial number from zero in the order it appears.",
-            "magic_underscores": "fig.update_traces(aaxis_range=&lt;VALUE&gt;, selector=dict(type='carpet'))"
+            "magic_underscores": "fig.update_traces(aaxis_range=list(...), selector=dict(type='carpet'))"
           },
           "fixedrange": {
             "valType": "boolean",
@@ -58154,7 +58154,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(aaxis_tickformatstops=dict(...), selector=dict(type='carpet'))"
+            "magic_underscores": "fig.update_traces(aaxis_tickformatstops=list(...), selector=dict(type='carpet'))"
           },
           "categoryorder": {
             "valType": "enumerated",
@@ -58471,7 +58471,7 @@
               }
             ],
             "description": "Sets the range of this axis. If the axis `type` is *log*, then you must take the log of your desired range (e.g. to set the range from 1 to 100, set the range from 0 to 2). If the axis `type` is *date*, it should be date strings, like date data, though Date objects and unix milliseconds will be accepted and converted to strings. If the axis `type` is *category*, it should be numbers, using the scale where each category is assigned a serial number from zero in the order it appears.",
-            "magic_underscores": "fig.update_traces(baxis_range=&lt;VALUE&gt;, selector=dict(type='carpet'))"
+            "magic_underscores": "fig.update_traces(baxis_range=list(...), selector=dict(type='carpet'))"
           },
           "fixedrange": {
             "valType": "boolean",
@@ -58700,7 +58700,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(baxis_tickformatstops=dict(...), selector=dict(type='carpet'))"
+            "magic_underscores": "fig.update_traces(baxis_tickformatstops=list(...), selector=dict(type='carpet'))"
           },
           "categoryorder": {
             "valType": "enumerated",
@@ -60388,7 +60388,7 @@
                 }
               },
               "role": "object",
-              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=dict(...), selector=dict(type='scattercarpet'))"
+              "magic_underscores": "fig.update_traces(marker_colorbar_tickformatstops=list(...), selector=dict(type='scattercarpet'))"
             },
             "tickprefix": {
               "valType": "string",
@@ -60907,7 +60907,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_traces(transforms=dict(...), selector=dict(type='scattercarpet'))"
+          "magic_underscores": "fig.update_traces(transforms=list(...), selector=dict(type='scattercarpet'))"
         },
         "uirevision": {
           "valType": "any",
@@ -61617,7 +61617,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=dict(...), selector=dict(type='contourcarpet'))"
+            "magic_underscores": "fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='contourcarpet'))"
           },
           "tickprefix": {
             "valType": "string",
@@ -63578,7 +63578,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_coloraxes(colorbar_tickformatstops=dict(...))"
+            "magic_underscores": "fig.update_coloraxes(colorbar_tickformatstops=list(...))"
           },
           "tickprefix": {
             "valType": "string",
@@ -64095,7 +64095,7 @@
           },
           "editType": "plot",
           "description": "Used for freeform grids, where some axes may be shared across subplots but others are not. Each entry should be a cartesian subplot id, like *xy* or *x3y2*, or ** to leave that cell empty. You may reuse x axes within the same column, and y axes within the same row. Non-cartesian subplots and traces that support `domain` can place themselves in this grid separately using the `gridcell` attribute.",
-          "magic_underscores": "fig.update_layout(grid_subplots=&lt;VALUE&gt;)"
+          "magic_underscores": "fig.update_layout(grid_subplots=list(...))"
         },
         "xaxes": {
           "valType": "info_array",
@@ -64110,7 +64110,7 @@
           },
           "editType": "plot",
           "description": "Used with `yaxes` when the x and y axes are shared across columns and rows. Each entry should be an x axis id like *x*, *x2*, etc., or ** to not put an x axis in that column. Entries other than ** must be unique. Ignored if `subplots` is present. If missing but `yaxes` is present, will generate consecutive IDs.",
-          "magic_underscores": "fig.update_layout(grid_xaxes=&lt;VALUE&gt;)"
+          "magic_underscores": "fig.update_layout(grid_xaxes=list(...))"
         },
         "yaxes": {
           "valType": "info_array",
@@ -64125,7 +64125,7 @@
           },
           "editType": "plot",
           "description": "Used with `yaxes` when the x and y axes are shared across columns and rows. Each entry should be an y axis id like *y*, *y2*, etc., or ** to not put a y axis in that row. Entries other than ** must be unique. Ignored if `subplots` is present. If missing but `xaxes` is present, will generate consecutive IDs.",
-          "magic_underscores": "fig.update_layout(grid_yaxes=&lt;VALUE&gt;)"
+          "magic_underscores": "fig.update_layout(grid_yaxes=list(...))"
         },
         "pattern": {
           "valType": "enumerated",
@@ -64177,7 +64177,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this grid subplot (in plot fraction). The first and last cells end exactly at the domain edges, with no grout around the edges.",
-            "magic_underscores": "fig.update_layout(grid_domain_x=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_layout(grid_domain_x=list(...))"
           },
           "y": {
             "valType": "info_array",
@@ -64201,7 +64201,7 @@
               1
             ],
             "description": "Sets the vertical domain of this grid subplot (in plot fraction). The first and last cells end exactly at the domain edges, with no grout around the edges.",
-            "magic_underscores": "fig.update_layout(grid_domain_y=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_layout(grid_domain_y=list(...))"
           },
           "editType": "plot",
           "role": "object",
@@ -64399,7 +64399,7 @@
           },
           "anim": true,
           "description": "Sets the range of this axis. If the axis `type` is *log*, then you must take the log of your desired range (e.g. to set the range from 1 to 100, set the range from 0 to 2). If the axis `type` is *date*, it should be date strings, like date data, though Date objects and unix milliseconds will be accepted and converted to strings. If the axis `type` is *category*, it should be numbers, using the scale where each category is assigned a serial number from zero in the order it appears.",
-          "magic_underscores": "fig.update_xaxes(range=&lt;VALUE&gt;)"
+          "magic_underscores": "fig.update_xaxes(range=list(...))"
         },
         "fixedrange": {
           "valType": "boolean",
@@ -64526,7 +64526,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_xaxes(rangebreaks=dict(...))"
+          "magic_underscores": "fig.update_xaxes(rangebreaks=list(...))"
         },
         "tickmode": {
           "valType": "enumerated",
@@ -64923,7 +64923,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_xaxes(tickformatstops=dict(...))"
+          "magic_underscores": "fig.update_xaxes(tickformatstops=list(...))"
         },
         "hoverformat": {
           "valType": "string",
@@ -65083,7 +65083,7 @@
           ],
           "editType": "plot",
           "description": "Sets the domain of this axis (in plot fraction).",
-          "magic_underscores": "fig.update_xaxes(domain=&lt;VALUE&gt;)"
+          "magic_underscores": "fig.update_xaxes(domain=list(...))"
         },
         "position": {
           "valType": "number",
@@ -65188,7 +65188,7 @@
               "autorange": false
             },
             "description": "Sets the range of the range slider. If not set, defaults to the full xaxis range. If the axis `type` is *log*, then you must take the log of your desired range. If the axis `type` is *date*, it should be date strings, like date data, though Date objects and unix milliseconds will be accepted and converted to strings. If the axis `type` is *category*, it should be numbers, using the scale where each category is assigned a serial number from zero in the order it appears.",
-            "magic_underscores": "fig.update_xaxes(rangeslider_range=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_xaxes(rangeslider_range=list(...))"
           },
           "thickness": {
             "valType": "number",
@@ -65235,7 +65235,7 @@
               ],
               "editType": "plot",
               "description": "Sets the range of this axis for the rangeslider.",
-              "magic_underscores": "fig.update_xaxes(rangeslider_yaxis_range=&lt;VALUE&gt;)"
+              "magic_underscores": "fig.update_xaxes(rangeslider_yaxis_range=list(...))"
             },
             "editType": "calc",
             "role": "object",
@@ -65313,7 +65313,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_xaxes(rangeselector_buttons=dict(...))"
+            "magic_underscores": "fig.update_xaxes(rangeselector_buttons=list(...))"
           },
           "x": {
             "valType": "number",
@@ -65595,7 +65595,7 @@
           },
           "anim": true,
           "description": "Sets the range of this axis. If the axis `type` is *log*, then you must take the log of your desired range (e.g. to set the range from 1 to 100, set the range from 0 to 2). If the axis `type` is *date*, it should be date strings, like date data, though Date objects and unix milliseconds will be accepted and converted to strings. If the axis `type` is *category*, it should be numbers, using the scale where each category is assigned a serial number from zero in the order it appears.",
-          "magic_underscores": "fig.update_yaxes(range=&lt;VALUE&gt;)"
+          "magic_underscores": "fig.update_yaxes(range=list(...))"
         },
         "fixedrange": {
           "valType": "boolean",
@@ -65722,7 +65722,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_yaxes(rangebreaks=dict(...))"
+          "magic_underscores": "fig.update_yaxes(rangebreaks=list(...))"
         },
         "tickmode": {
           "valType": "enumerated",
@@ -66119,7 +66119,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_yaxes(tickformatstops=dict(...))"
+          "magic_underscores": "fig.update_yaxes(tickformatstops=list(...))"
         },
         "hoverformat": {
           "valType": "string",
@@ -66279,7 +66279,7 @@
           ],
           "editType": "plot",
           "description": "Sets the domain of this axis (in plot fraction).",
-          "magic_underscores": "fig.update_yaxes(domain=&lt;VALUE&gt;)"
+          "magic_underscores": "fig.update_yaxes(domain=list(...))"
         },
         "position": {
           "valType": "number",
@@ -66396,7 +66396,7 @@
             ],
             "description": "Sets the horizontal domain of this ternary subplot (in plot fraction).",
             "editType": "plot",
-            "magic_underscores": "fig.update_ternaries(domain_x=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_ternaries(domain_x=list(...))"
           },
           "y": {
             "valType": "info_array",
@@ -66420,7 +66420,7 @@
             ],
             "description": "Sets the vertical domain of this ternary subplot (in plot fraction).",
             "editType": "plot",
-            "magic_underscores": "fig.update_ternaries(domain_y=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_ternaries(domain_y=list(...))"
           },
           "row": {
             "valType": "integer",
@@ -66763,7 +66763,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_ternaries(aaxis_tickformatstops=dict(...))"
+            "magic_underscores": "fig.update_ternaries(aaxis_tickformatstops=list(...))"
           },
           "hoverformat": {
             "valType": "string",
@@ -67161,7 +67161,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_ternaries(baxis_tickformatstops=dict(...))"
+            "magic_underscores": "fig.update_ternaries(baxis_tickformatstops=list(...))"
           },
           "hoverformat": {
             "valType": "string",
@@ -67559,7 +67559,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_ternaries(caxis_tickformatstops=dict(...))"
+            "magic_underscores": "fig.update_ternaries(caxis_tickformatstops=list(...))"
           },
           "hoverformat": {
             "valType": "string",
@@ -67788,7 +67788,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this scene subplot (in plot fraction).",
-            "magic_underscores": "fig.update_scenes(domain_x=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_scenes(domain_x=list(...))"
           },
           "y": {
             "valType": "info_array",
@@ -67812,7 +67812,7 @@
               1
             ],
             "description": "Sets the vertical domain of this scene subplot (in plot fraction).",
-            "magic_underscores": "fig.update_scenes(domain_y=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_scenes(domain_y=list(...))"
           },
           "editType": "plot",
           "row": {
@@ -68099,7 +68099,7 @@
             },
             "anim": false,
             "description": "Sets the range of this axis. If the axis `type` is *log*, then you must take the log of your desired range (e.g. to set the range from 1 to 100, set the range from 0 to 2). If the axis `type` is *date*, it should be date strings, like date data, though Date objects and unix milliseconds will be accepted and converted to strings. If the axis `type` is *category*, it should be numbers, using the scale where each category is assigned a serial number from zero in the order it appears.",
-            "magic_underscores": "fig.update_scenes(xaxis_range=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_scenes(xaxis_range=list(...))"
           },
           "tickmode": {
             "valType": "enumerated",
@@ -68377,7 +68377,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_scenes(xaxis_tickformatstops=dict(...))"
+            "magic_underscores": "fig.update_scenes(xaxis_tickformatstops=list(...))"
           },
           "hoverformat": {
             "valType": "string",
@@ -68701,7 +68701,7 @@
             },
             "anim": false,
             "description": "Sets the range of this axis. If the axis `type` is *log*, then you must take the log of your desired range (e.g. to set the range from 1 to 100, set the range from 0 to 2). If the axis `type` is *date*, it should be date strings, like date data, though Date objects and unix milliseconds will be accepted and converted to strings. If the axis `type` is *category*, it should be numbers, using the scale where each category is assigned a serial number from zero in the order it appears.",
-            "magic_underscores": "fig.update_scenes(yaxis_range=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_scenes(yaxis_range=list(...))"
           },
           "tickmode": {
             "valType": "enumerated",
@@ -68979,7 +68979,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_scenes(yaxis_tickformatstops=dict(...))"
+            "magic_underscores": "fig.update_scenes(yaxis_tickformatstops=list(...))"
           },
           "hoverformat": {
             "valType": "string",
@@ -69303,7 +69303,7 @@
             },
             "anim": false,
             "description": "Sets the range of this axis. If the axis `type` is *log*, then you must take the log of your desired range (e.g. to set the range from 1 to 100, set the range from 0 to 2). If the axis `type` is *date*, it should be date strings, like date data, though Date objects and unix milliseconds will be accepted and converted to strings. If the axis `type` is *category*, it should be numbers, using the scale where each category is assigned a serial number from zero in the order it appears.",
-            "magic_underscores": "fig.update_scenes(zaxis_range=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_scenes(zaxis_range=list(...))"
           },
           "tickmode": {
             "valType": "enumerated",
@@ -69581,7 +69581,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_scenes(zaxis_tickformatstops=dict(...))"
+            "magic_underscores": "fig.update_scenes(zaxis_tickformatstops=list(...))"
           },
           "hoverformat": {
             "valType": "string",
@@ -70112,7 +70112,7 @@
             ],
             "description": "Sets the horizontal domain of this geo subplot (in plot fraction). Note that geo subplots are constrained by domain. In general, when `projection.scale` is set to 1. a map will fit either its x or y domain, but not both.",
             "editType": "plot",
-            "magic_underscores": "fig.update_geos(domain_x=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_geos(domain_x=list(...))"
           },
           "y": {
             "valType": "info_array",
@@ -70136,7 +70136,7 @@
             ],
             "description": "Sets the vertical domain of this geo subplot (in plot fraction). Note that geo subplots are constrained by domain. In general, when `projection.scale` is set to 1. a map will fit either its x or y domain, but not both.",
             "editType": "plot",
-            "magic_underscores": "fig.update_geos(domain_y=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_geos(domain_y=list(...))"
           },
           "row": {
             "valType": "integer",
@@ -70266,7 +70266,7 @@
             ],
             "description": "For conic projection types only. Sets the parallels (tangent, secant) where the cone intersects the sphere.",
             "editType": "plot",
-            "magic_underscores": "fig.update_geos(projection_parallels=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_geos(projection_parallels=list(...))"
           },
           "scale": {
             "valType": "number",
@@ -70474,7 +70474,7 @@
             ],
             "description": "Sets the range of this axis (in degrees), sets the map's clipped coordinates.",
             "editType": "plot",
-            "magic_underscores": "fig.update_geos(lonaxis_range=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_geos(lonaxis_range=list(...))"
           },
           "showgrid": {
             "valType": "boolean",
@@ -70530,7 +70530,7 @@
             ],
             "description": "Sets the range of this axis (in degrees), sets the map's clipped coordinates.",
             "editType": "plot",
-            "magic_underscores": "fig.update_geos(lataxis_range=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_geos(lataxis_range=list(...))"
           },
           "showgrid": {
             "valType": "boolean",
@@ -70609,7 +70609,7 @@
             ],
             "description": "Sets the horizontal domain of this mapbox subplot (in plot fraction).",
             "editType": "plot",
-            "magic_underscores": "fig.update_mapboxes(domain_x=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_mapboxes(domain_x=list(...))"
           },
           "y": {
             "valType": "info_array",
@@ -70633,7 +70633,7 @@
             ],
             "description": "Sets the vertical domain of this mapbox subplot (in plot fraction).",
             "editType": "plot",
-            "magic_underscores": "fig.update_mapboxes(domain_y=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_mapboxes(domain_y=list(...))"
           },
           "row": {
             "valType": "integer",
@@ -70944,7 +70944,7 @@
             }
           },
           "role": "object",
-          "magic_underscores": "fig.update_mapboxes(layers=dict(...))"
+          "magic_underscores": "fig.update_mapboxes(layers=list(...))"
         },
         "editType": "plot",
         "uirevision": {
@@ -70981,7 +70981,7 @@
               1
             ],
             "description": "Sets the horizontal domain of this polar subplot (in plot fraction).",
-            "magic_underscores": "fig.update_polars(domain_x=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_polars(domain_x=list(...))"
           },
           "y": {
             "valType": "info_array",
@@ -71005,7 +71005,7 @@
               1
             ],
             "description": "Sets the vertical domain of this polar subplot (in plot fraction).",
-            "magic_underscores": "fig.update_polars(domain_y=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_polars(domain_y=list(...))"
           },
           "editType": "plot",
           "row": {
@@ -71045,7 +71045,7 @@
           ],
           "editType": "plot",
           "description": "Sets angular span of this polar subplot with two angles (in degrees). Sector are assumed to be spanned in the counterclockwise direction with *0* corresponding to rightmost limit of the polar subplot.",
-          "magic_underscores": "fig.update_polars(sector=&lt;VALUE&gt;)"
+          "magic_underscores": "fig.update_polars(sector=list(...))"
         },
         "hole": {
           "valType": "number",
@@ -71148,7 +71148,7 @@
             },
             "anim": true,
             "description": "Sets the range of this axis. If the axis `type` is *log*, then you must take the log of your desired range (e.g. to set the range from 1 to 100, set the range from 0 to 2). If the axis `type` is *date*, it should be date strings, like date data, though Date objects and unix milliseconds will be accepted and converted to strings. If the axis `type` is *category*, it should be numbers, using the scale where each category is assigned a serial number from zero in the order it appears.",
-            "magic_underscores": "fig.update_polars(radialaxis_range=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_polars(radialaxis_range=list(...))"
           },
           "categoryorder": {
             "valType": "enumerated",
@@ -71562,7 +71562,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_polars(radialaxis_tickformatstops=dict(...))"
+            "magic_underscores": "fig.update_polars(radialaxis_tickformatstops=list(...))"
           },
           "layer": {
             "valType": "enumerated",
@@ -72043,7 +72043,7 @@
               }
             },
             "role": "object",
-            "magic_underscores": "fig.update_polars(angularaxis_tickformatstops=dict(...))"
+            "magic_underscores": "fig.update_polars(angularaxis_tickformatstops=list(...))"
           },
           "layer": {
             "valType": "enumerated",
@@ -73232,7 +73232,7 @@
           }
         },
         "role": "object",
-        "magic_underscores": "fig.update_layout(updatemenus=dict(...))"
+        "magic_underscores": "fig.update_layout(updatemenus=list(...))"
       },
       "sliders": {
         "items": {
@@ -73611,7 +73611,7 @@
           }
         },
         "role": "object",
-        "magic_underscores": "fig.update_layout(sliders=dict(...))"
+        "magic_underscores": "fig.update_layout(sliders=list(...))"
       },
       "hidesources": {
         "valType": "boolean",
