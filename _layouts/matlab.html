@@ -9,16 +9,18 @@
           crossorigin="anonymous">
   </head>
   <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/blog/">Blog</a>
-    </nav>
-    <h1>{{ page.title }}</h1>
-    <section>
-      {{ content }}
-    </section>
-    <footer>
-      &copy; to me
-    </footer>
+    <div class="container">
+      <nav>
+        <a href="/matlab">All MATLAB® Plot Types</a>
+        <a href="{{ page.permalink }}">{{ page.function }}</a>
+      </nav>
+      <h1>{{ page.title }}</h1>
+      <section>
+        {{ content }}
+      </section>
+      <footer>
+        MATLAB® is a registered trademark of The MathWorks, Inc.
+      </footer>
+    </div>  
   </body>
 </html>
