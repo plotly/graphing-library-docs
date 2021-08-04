@@ -12,5 +12,5 @@ plot(x,y)
 fig2plotly()
 ```
 
-{% include recent_articles.html %}
+{% include create-line-plot.html %}
 
