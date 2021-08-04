@@ -1,5 +1,10 @@
+---
+layout: post
+title:  "MATLAB® plot"
+---
+
 # `plot`
-#### [2d line plot in MATLAB ®](https://www.mathworks.com/help/matlab/ref/plot.html)
+#### [2d line plot in MATLAB®](https://www.mathworks.com/help/matlab/ref/plot.html)
 
 ***
 
