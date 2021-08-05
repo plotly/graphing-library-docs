@@ -13,13 +13,18 @@
     </style>
   </head>
   <body>
+    <a href="#">                              
+      <button type="button" class="btn btn-default btn-sm">
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Improve this page
+      </button>
+    </a>
+                                                           
     <div class="container">
-      <nav>
-        <a href="/matlab">All MATLAB® Plot Types</a>
-        ...
-        <a href="{{ page.permalink }}"><code>{{ page.function }}</code></a>
-      </nav>
-      <h1>MATLAB - {{ page.function }}</h1>
+      <ol class="breadcrumb">
+        <li><a href="/matlab">All MATLAB® Plot Types</a></li>
+        <li class="active"><a href="{{ page.permalink }}"><code>{{ page.function }}</code></a></li>
+      </ol>
+      <h1>MATLAB - <code>{{ page.function }}</code>/h1>
       <section>
         {{ content }}
       </section>
