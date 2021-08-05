@@ -161,28 +161,12 @@
                 </li>
                 {% endif %}
 
-                <!-- MATLAB Specific -->
-                {% if page.language == "matlab" %}
-                <li class="--sidebar-item">
-                    <a href="/{{ page.language }}/offline/" class="js-splash--navigation-item">Use Offline</a>
-                </li>
-                {% endif %}
-
-
                 <!-- User Guides -->
                 {% if page.language == "matlab" or page.language == "scala" %}
                 <li class="--sidebar-item">
                     <a href="/{{ page.language }}/user-guide/" class="js-splash--navigation-item">User Guide</a>
                 </li>
                 {% endif %}
-
-                <!-- Cheat Sheets -->
-                {% if page.language == "plotly_js" or page.language == "r" or page.language == "matlab" %}
-                <li class="--sidebar-item">
-                    <a href="https://images.plot.ly/plotly-documentation/images/{{ page.language }}_cheat_sheet.pdf" class="js-splash--navigation-item">Cheat Sheet</a>
-                </li>
-                {% endif %}
-
 
                 <!-- Github Links -->
 
@@ -230,6 +214,7 @@
             </ul>
         </nav>
 
+        {% if page.language != "matlab" %}
         <!-- Examples start -->
         <header class="--sidebar-header">Examples</header>
         <nav class="--sidebar-body watch" id="where">
@@ -558,5 +543,6 @@
                 {% endif %}
             </ul>
         </nav>
+        {% endif %}
     </div>
 </aside>
