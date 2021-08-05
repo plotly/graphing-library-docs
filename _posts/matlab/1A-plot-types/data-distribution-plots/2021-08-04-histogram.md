@@ -9,7 +9,7 @@ reference: https://www.mathworks.com/help/matlab/ref/matlab.graphics.chart.primi
 github: data-distribution-plots/2021-08-04-histogram.md
 ---
 
-# MATLAB - `{{page.function}}`
+<!-- # MATLAB - `{{page.function}}` -->
 
 <!--------------------- EXAMPLE BREAK ------------------------->
 ## Histogram of Vector
