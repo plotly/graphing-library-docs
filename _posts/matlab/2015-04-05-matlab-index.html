@@ -97,7 +97,13 @@ plotly_url = response.url;
 			
 			<h2>Surface and Mesh Plots</h4>
 			
-			{% include posts/thumb.html type='surface-and-mesh-plots' function='surf' %}		
+			{% include posts/thumb.html type='surface-and-mesh-plots' function='surf' %}	
+			
+			<h2>More Examples</h2>
+			
+			{% assign languagelist = site.posts | where:"page_type","example_index" | where:"language","matlab"  | sort: "order" %}
+
+			{% include posts/documentation_eg.html %}
 			
 		</div>
 	</div>
