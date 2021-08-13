@@ -1,1 +1,28 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="plot-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="ssim-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="plot" role="tabpanel" aria-labelledby="plot-tab">
+    <iframe 
+      scrolling="no" 
+      margin="none" 
+      padding="none" 
+      seamless=seamless 
+      height="650" 
+      frameBorder="0"
+      style="border:0"
+      src="{{ include.src }}" 
+      width="800">
+    </iframe>    
+  </div>
+  <div class="tab-pane fade" id="ssim" role="tabpanel" aria-labelledby="ssim-tab">
+    <img src="/all_static/images/ssim/{{ include.function }}/{{ include.compare }}.png">
+    <img src="/all_static/images/ssim/{{ include.function }}/{{ include.ssim }}.png">
+  </div>
+</div>
 
