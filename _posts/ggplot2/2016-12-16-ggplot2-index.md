@@ -15,11 +15,26 @@ redirect_from: ggplot2/reference/
       <div class="--body">
         <h1>Plotly ggplot2 Library</h1>
         <p>{{page.description}}</p>
-				{% include layouts/dashplug.html %}
+	<br>
+	{% include layouts/dashplug.html %}
       </div>
     </div>
   </div>
 </header>
+
+<h1><code>ggplotly Reference</code></h1>
+
+<h2>Plot basics</h2>
+
+<h2>Layers</h2>
+
+<h3>Geoms</h3>
+
+<h3>Stats</h3>
+
+<h2>Aesthetics</h2>
+
+<h1>More Examples</h1>
 
 {% assign languagelist = site.posts | where:"language","ggplot2"  | sort: "order"  %}
 
