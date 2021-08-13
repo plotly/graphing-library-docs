@@ -1,6 +1,14 @@
+{% if page.language == "ggplot2 %}
+
+<span>hello</span>
+
+{% elsif %}
+
 <span style="margin-right:50px;">
   <a href="{{ include.type }}/{{ include.function }}">    
     <img style="max-height:160px" src="/all_static/images/m_thumbs/{{ include.function }}.png"><br>
     <h3 style="text-align:center;"><code>{{ include.function }}</code></h3>
   </a>
 </span>
+
+{% endif %}
