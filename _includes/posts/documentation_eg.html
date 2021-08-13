@@ -335,24 +335,6 @@
 </section>
 {% endif %}
 
-{% if chart_events and page.language =="r" %}
-<section class="--tutorial-section" id="chart-events">
-    <header class="--section-header"><a href="#chart-events">Custom Interaction With JavaScript</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" %}
-
-                        {% include layouts/grid-item.html %}
-
-
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
 
 {% if chart_events and page.language == 'plotly_js' %}
 <section class="--tutorial-section" id="chart-events">
