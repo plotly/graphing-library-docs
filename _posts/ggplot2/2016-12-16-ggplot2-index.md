@@ -7,22 +7,7 @@ language: ggplot2
 redirect_from: ggplot2/reference/
 ---
 
-<header class="--welcome">
-  <div class="--welcome-body">
-    <!--div.--wrap-inner-->
-    <div class="--title">
-
-      <div class="--body">
-        <h1>Plotly ggplot2 Library</h1>
-        <p>{{page.description}}</p>
-	<br>
-	{% include layouts/dashplug.html %}
-      </div>
-    </div>
-  </div>
-</header>
-
-<h1><code>ggplotly Reference</code></h1>
+{% include posts/ggplotly_header.html %}
 
 <h2>Plot basics</h2>
 
