@@ -6,9 +6,6 @@
 
 {% assign num_examples = 6 %}
 
-
-
-
 {% comment %}First, check which sections this page should contain checking all of the posts{% endcomment %}
 {%- for page in languagelist -%}
 {% if page.display_as == "file_settings" %}
@@ -452,34 +449,6 @@
             <li class="--grid-item">
                 <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
-                </a>
-            </li>
-            {% assign counter=counter | plus:1 %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if chart_events and page.language !="plotly_js" and page.language !="python" and page.language != "r" %}
-<section class="--tutorial-section no-image" id="chart-events">
-    <header class="--section-header"><a href="#chart-events">Add Custom Controls with JavaScript</a>
-    </header>
-    <section class="--grid">
-        <p>
-            All Plotly charts have click, hover and zoom events exposed to add custom controls with Plotly's JavaScript <a href="https://github.com/plotly/postMessage-API">postMessage
-            API</a>.
-        </p>
-        <ul class="--grid-list">
-            {% assign counter=0 %}
-            {%- for page in languagelist -%}
-            {% if page.display_as == "chart_events" and page.order < num_examples %}
-
-            <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
-                    <div class="--item-meta"><span>{{page.name}}</span></div>
-
                 </a>
             </li>
             {% assign counter=counter | plus:1 %}
