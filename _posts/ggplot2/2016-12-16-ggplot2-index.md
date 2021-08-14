@@ -7,19 +7,23 @@ language: ggplot2
 redirect_from: ggplot2/reference/
 ---
 
-{% include posts/ggplotly_header.html %}
+<h1 style="font-size:64px"><code>ggplotly</code> Reference</h1>
 
-<h2>Plot basics</h2>
+<hr>
 
-<h2>Layers</h2>
+<h1>Plot basics</h2>
 
-<h3>Geoms</h3>
+<h1>Layers</h2>
 
-<h3>Stats</h3>
+<h2>—— Geoms</h3>
 
-<h2>Aesthetics</h2>
+<h2>—— Stats</h3>
 
-<h1>More Examples</h1>
+<h1>Aesthetics</h2>
+
+<h1 style="font-size:64px">More Examples</h1>
+
+<hr>
 
 {% assign languagelist = site.posts | where:"language","ggplot2"  | sort: "order"  %}
 
