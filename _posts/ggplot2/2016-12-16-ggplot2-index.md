@@ -7,19 +7,19 @@ language: ggplot2
 redirect_from: ggplot2/reference/
 ---
 
-<h1 class="gg_mega"><code>ggplotly</code> Reference</h1>
+<h1 class="gg-mega"><code>ggplotly</code> Reference</h1>
 
-<h1 class="gg_big">Plot basics</h2>
+<h1 class="gg-big">Plot basics</h2>
 
-<h1 class="gg_big">Layers</h2>
+<h1 class="gg-big">Layers</h2>
 
-<h2 class="gg_sub">. . .  Geoms</h3>
+<h2 class="gg-sub">. . .  Geoms</h3>
 
-<h2 class="gg_sub">. . .  Stats</h3>
+<h2 class="gg-sub">. . .  Stats</h3>
 
-<h1 class="gg_big">Aesthetics</h2>
+<h1 class="gg-big">Aesthetics</h2>
 
-<h1 class="gg_mega">More Examples</h1>
+<h1 class="gg-mega">More Examples</h1>
 
 {% assign languagelist = site.posts | where:"language","ggplot2"  | sort: "order"  %}
 
