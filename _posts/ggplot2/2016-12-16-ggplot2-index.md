@@ -11,6 +11,8 @@ redirect_from: ggplot2/reference/
 
 <h1 class="gg-big">Plot basics</h2>
 
+{% include posts/thumb.html page_path='/ggplot2/plot-basics/ggplot' img_path='Plot\ basics/ggplot.png' page_title='ggplot' %}
+
 <h1 class="gg-big">Layers</h2>
 
 <h2 class="gg-sub">. . .  Geoms</h3>
