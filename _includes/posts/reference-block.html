@@ -217,6 +217,16 @@
     {% assign data_array='dataframe column, list, vector' %}
     {% assign truestring='TRUE' %}
     {% assign falsestring='FALSE' %}
+{% elsif page.language == "fsharp" %}
+    {% assign quote='"' %}
+    {% assign array='seq' %}
+    {% assign arrays='seqs' %}
+    {% assign object='obj' %}
+    {% assign 2darray='2D seq' %}
+    {% assign data_array='seq<#IConvertible>' %}
+    {% assign truestring='true' %}
+    {% assign falsestring='false' %}
+    //might add distinction for numbers? int/float
 {% elsif page.language == "matlab" %}
     {% assign quote="'" %}
     {% assign array='cell array' %}
