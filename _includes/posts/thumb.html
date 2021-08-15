@@ -1,6 +1,11 @@
 {% if page.language == "ggplot2 %}
 
-<span>hello</span>
+<span style="margin-right:50px;">
+  <a href="{{ include.page_path }}">    
+    <img style="max-height:160px" src="/all_static/images/gg_thumbs/{{ include.img_path }}.png"><br>
+    <h3 style="text-align:center;"><code>{{ include.page_title }}</code></h3>
+  </a>
+</span>
 
 {% else %}
 
