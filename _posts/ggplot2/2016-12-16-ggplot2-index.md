@@ -11,7 +11,10 @@ redirect_from: ggplot2/reference/
 
 <h1 class="gg-big">Plot basics</h2>
 
-{% include posts/thumb.html page_path='/ggplot2/plot-basics/ggplot' img_path='Plot basics/ggplot' page_title='ggplot' %}
+{% include posts/thumb.html path='plot-basics' keyword='ggplot' %}
+{% include posts/thumb.html path='plot-basics' keyword='aes' %}
+{% include posts/thumb.html path='plot-basics' keyword='gg-add' %}
+{% include posts/thumb.html path='plot-basics' keyword='qplot' %}
 
 <h1 class="gg-big">Layers</h2>
 
