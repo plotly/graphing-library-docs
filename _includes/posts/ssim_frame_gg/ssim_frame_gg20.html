@@ -1,0 +1,29 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="plot-tab" data-bs-toggle="tab" data-bs-target="#plot20" type="button" role="tab" aria-controls="plot" aria-selected="true">Plot</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="ssim-tab" data-bs-toggle="tab" data-bs-target="#ssim20" type="button" role="tab" aria-controls="ssim" aria-selected="false">SSIM</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="plot20" role="tabpanel" aria-labelledby="plot-tab">
+    <iframe 
+      scrolling="no" 
+      margin="none" 
+      padding="none" 
+      seamless=seamless 
+      height="650" 
+      frameBorder="0"
+      style="border:0"
+      src="{{ include.src }}" 
+      width="800">
+    </iframe>    
+  </div>
+  <div class="tab-pane fade" id="ssim20" role="tabpanel" aria-labelledby="ssim-tab">
+    <img src="https://raw.githubusercontent.com/steroidfella/jekyll_ggplot/master/chart-title.png" style="width:90%; height: 90%"/>
+    <img src="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/{{page.name}}/{{page.function}}/{{ include.compare }}.png" width="1152" height="480">
+    <img src="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/{{page.name}}/{{page.function}}/{{ include.ssim }}.png" width="1152" height="480">
+  </div>
+</div>
+
