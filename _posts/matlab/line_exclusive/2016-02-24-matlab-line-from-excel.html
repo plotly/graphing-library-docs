@@ -8,8 +8,6 @@ order: 1
 description: The data file for this chart can be downloaded from <a href="https://github.com/plotly/datasets/blob/master/data-matlab-excel-example.xlsx">Here.</a>
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 [v,T,vT] = xlsread('data-matlab-excel-example.xlsx','Sheet1','A1:B13') 
 % 'xlsx' for excel 2007
@@ -20,5 +18,4 @@ y=v(:,2);
 plot(x,y);
 title('Plotting from Excel Data');
 
-response = fig2plotly;
-plotly_url = response.url;
+response = fig2plotly();

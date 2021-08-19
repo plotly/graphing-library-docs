@@ -8,8 +8,6 @@ order: 4
 sitemap: false
 description: Inspired from <a href="http://www.mathworks.com/matlabcentral/newsreader/view_thread/52022">Matlab Forum</a>
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 x=[2,4,8, 16,32,64, 128,256, 300];
 y=[8.39365 3.4323 1.6234 1.447 0.7632 0.0984 0.05435 0.03455 0.1024];
@@ -21,5 +19,4 @@ errorbar(x,y,e);
 set(gca,'xscale','log');
 set(gca,'yscale','log');
 
-response = fig2plotly;
-plotly_url = response.url;
+response = fig2plotly();

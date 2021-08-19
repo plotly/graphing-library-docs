@@ -7,8 +7,6 @@ suite: line_exclusive
 order: 4
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 % Defining the function over interval..
 f1 = @(x) log(x);
@@ -20,5 +18,4 @@ fplot(f2, [10 15]);
 hold off;
 
 title('Plotting Function over interval');
-response = fig2plotly;
-plotly_url = response.url;
+response = fig2plotly();

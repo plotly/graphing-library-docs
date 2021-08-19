@@ -7,8 +7,6 @@ suite: scatter_exclusive
 order: 1
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 fig = figure;
 load seamount;
@@ -21,5 +19,4 @@ zoom(2)
 
 % strip = false =&gt; preserve MATLAB<sup>&reg;</sup> style!
 
-response = fig2plotly(fig, 'filename', 'matlab-seamount-scatter', 'strip', false);
-plotly_url = response.url;
+response = fig2plotly(fig, 'strip', false);

@@ -7,8 +7,6 @@ suite: scatter_exclusive
 order: 5
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 X = [1 2 3 4 5]
 Y = [5 5 5 5 5]
@@ -22,4 +20,3 @@ for i=1:5
 end
 hold off;
 resp = fig2plotly(fig)
-plotly_url = resp.url;

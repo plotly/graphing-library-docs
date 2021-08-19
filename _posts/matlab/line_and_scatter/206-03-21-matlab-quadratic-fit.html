@@ -8,9 +8,6 @@ order: 1
 sitemap: false
 ---
 
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
-
 x = linspace(0,4*pi,10);
 A = 2, B = 3, C = 1;
 
@@ -27,4 +24,3 @@ plot(x,k,'b-')
 hold off
 
 resp = fig2plotly(fig, 'strip',false)
-plotly_url = resp.url;

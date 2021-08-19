@@ -7,8 +7,6 @@ suite: line_exclusive
 order: 3
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 fig=figure;
 hax=axes;
@@ -22,4 +20,3 @@ line([4 4],get(hax,'XLim'))
 line(get(hax,'YLim'),[3 3]);
 
 response = fig2plotly(fig,'strip',false);
-plotly_url = response.url;

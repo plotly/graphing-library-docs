@@ -7,8 +7,6 @@ suite: bar
 order: 3
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 %bins
 x = 1900:10:2000;
@@ -36,5 +34,4 @@ legend('group1','group2');
 %--PLOTLY--%
 
 % Strip MATLAB<sup>&reg;</sup> style by default!
-response = fig2plotly(fig, 'filename', 'matlab-overlaid-bar';
-plotly_url = response.url;
+response = fig2plotly(fig);

@@ -7,8 +7,6 @@ suite: line_exclusive
 order: 1
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 x = 0:pi/10:2*pi;
 y1 = sin(x);
@@ -26,5 +24,4 @@ plot(x,y3,'Color',[201 24 50]/255,'LineWidth',2,'LineStyle','o');
 
 % strip = false =&gt; preserve MATLAB<sup>&reg;</sup> style!
 
-response = fig2plotly(fig, 'filename', 'matlab-line-style', 'strip', false);
-plotly_url = response.url;
+response = fig2plotly(fig, 'strip', false);
