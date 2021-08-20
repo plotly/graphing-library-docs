@@ -65,6 +65,66 @@ redirect_from: ggplot2/reference/
 {% include posts/thumb1.html path='layers' subpath='Annotations' keyword='borders' %}
 
 <h1 class="gg-big">Aesthetics</h2>
+{% include posts/thumb.html path='Aesthetics' keyword='aes_colour_fill_alpha' %}
+{% include posts/thumb.html path='Aesthetics' keyword='aes_group_order' %}
+{% include posts/thumb.html path='Aesthetics' keyword='aes_linetype_size_shape' %}
+{% include posts/thumb.html path='Aesthetics' keyword='aes_position' %}
+
+<h1 class="gg-big">Scales</h2>
+{% include posts/thumb.html path='Scales' keyword='expand_limits' %}
+{% include posts/thumb.html path='Scales' keyword='expansion' %}
+{% include posts/thumb.html path='Scales' keyword='labs' %}
+{% include posts/thumb.html path='Scales' keyword='lims' %}
+{% include posts/thumb.html path='Scales' keyword='scale_alpha' %}
+{% include posts/thumb.html path='Scales' keyword='scale_binned' %}
+{% include posts/thumb.html path='Scales' keyword='scale_brewer' %}
+{% include posts/thumb.html path='Scales' keyword='scale_colour_continuous' %}
+{% include posts/thumb.html path='Scales' keyword='scale_colour_discrete' %}
+{% include posts/thumb.html path='Scales' keyword='scale_continuous' %}
+{% include posts/thumb.html path='Scales' keyword='scale_date' %}
+{% include posts/thumb.html path='Scales' keyword='scale_discrete' %}
+{% include posts/thumb.html path='Scales' keyword='scale_gradient' %}
+{% include posts/thumb.html path='Scales' keyword='scale_grey' %}
+{% include posts/thumb.html path='Scales' keyword='scale_hue' %}
+{% include posts/thumb.html path='Scales' keyword='scale_identity' %}
+{% include posts/thumb.html path='Scales' keyword='scale_linetype' %}
+{% include posts/thumb.html path='Scales' keyword='scale_manual' %}
+{% include posts/thumb.html path='Scales' keyword='scale_shape' %}
+{% include posts/thumb.html path='Scales' keyword='scale_size' %}
+{% include posts/thumb.html path='Scales' keyword='scale_steps' %}
+{% include posts/thumb.html path='Scales' keyword='scale_viridis' %}
+
+<h1 class="gg-big">Guides axes and legends</h2>
+{% include posts/thumb.html path='Guides axes and legends' keyword='guide_axis' %}
+{% include posts/thumb.html path='Guides axes and legends' keyword='guide_bins' %}
+{% include posts/thumb.html path='Guides axes and legends' keyword='guide_colourbar' %}
+{% include posts/thumb.html path='Guides axes and legends' keyword='guide_coloursteps' %}
+{% include posts/thumb.html path='Guides axes and legends' keyword='guide_legend' %}
+{% include posts/thumb.html path='Guides axes and legends' keyword='guides' %}
+{% include posts/thumb.html path='Guides axes and legends' keyword='sec_axis' %}
+
+<h1 class="gg-big">Facetting</h2>
+{% include posts/thumb.html path='Facetting' keyword='facet_grid' %}
+{% include posts/thumb.html path='Facetting' keyword='facet_wrap' %}
+{% include posts/thumb.html path='Facetting' keyword='vars' %}
+
+<h1 class="gg-big">Coordinate systems</h2>
+{% include posts/thumb.html path='Coordinate systems' keyword='coord_cartesian' %}
+{% include posts/thumb.html path='Coordinate systems' keyword='coord_fixed' %}
+{% include posts/thumb.html path='Coordinate systems' keyword='coord_flip' %}
+{% include posts/thumb.html path='Coordinate systems' keyword='coord_map' %}
+
+<h1 class="gg-big">Themes</h2>
+{% include posts/thumb.html path='Themes' keyword='element' %}
+{% include posts/thumb.html path='Themes' keyword='theme' %}
+{% include posts/thumb.html path='Themes' keyword='theme_get' %}
+{% include posts/thumb.html path='Themes' keyword='theme_grey' %}
+
+<h1 class="gg-big">Programming with ggplot2</h2>
+{% include posts/thumb.html path='Programming with ggplot2' keyword='print.ggplot' %}
+
+<h1 class="gg-big">Autoplot and fortify</h2>
+{% include posts/thumb.html path='Autoplot and fortify' keyword='map_data' %}
 
 <h1 class="gg-mega">More Examples</h1>
 
