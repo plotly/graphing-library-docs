@@ -7,8 +7,6 @@ suite: network_graphs
 order: 0
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 % Create the onnectivity graph of the Buckminster Fuller geodesic dome
 [B, V] = bucky;
@@ -28,5 +26,4 @@ axis off equal;
 %--PLOTLY--%
 
 % Strip MATLAB<sup>&reg;</sup> style by default!
-response = fig2plotly(fig, 'filename', 'matlab-graph-plot');
-plotly_url = response.url;
+fig2plotly(fig);
