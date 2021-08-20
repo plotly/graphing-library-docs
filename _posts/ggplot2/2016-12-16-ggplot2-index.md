@@ -54,6 +54,16 @@ redirect_from: ggplot2/reference/
 {% include posts/thumb1.html path='layers' subpath='Stats' keyword='stat_summary' %}
 {% include posts/thumb1.html path='layers' subpath='Stats' keyword='stat_unique' %}
 
+<h2 class="gg-sub">Position adjustment</h3>
+{% include posts/thumb1.html path='layers' subpath='Position adjustment' keyword='position_dodge' %}
+{% include posts/thumb1.html path='layers' subpath='Position adjustment' keyword='position_jitter' %}
+{% include posts/thumb1.html path='layers' subpath='Position adjustment' keyword='position_stack' %}
+
+<h2 class="gg-sub">Annotations</h3>
+{% include posts/thumb1.html path='layers' subpath='Annotations' keyword='annotate' %}
+{% include posts/thumb1.html path='layers' subpath='Annotations' keyword='annotation_raster' %}
+{% include posts/thumb1.html path='layers' subpath='Annotations' keyword='borders' %}
+
 <h1 class="gg-big">Aesthetics</h2>
 
 <h1 class="gg-mega">More Examples</h1>
