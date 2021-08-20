@@ -65,10 +65,10 @@ redirect_from: ggplot2/reference/
 {% include posts/thumb1.html path='layers' subpath='Annotations' keyword='borders' %}
 
 <h1 class="gg-big">Aesthetics</h2>
-{% include posts/thumb.html path='Aesthetics' keyword='aes_colour_fill_alpha' %}
-{% include posts/thumb.html path='Aesthetics' keyword='aes_group_order' %}
-{% include posts/thumb.html path='Aesthetics' keyword='aes_linetype_size_shape' %}
-{% include posts/thumb.html path='Aesthetics' keyword='aes_position' %}
+{% include posts/thumb.html path='aesthetics' keyword='aes_colour_fill_alpha' %}
+{% include posts/thumb.html path='aesthetics' keyword='aes_group_order' %}
+{% include posts/thumb.html path='aesthetics' keyword='aes_linetype_size_shape' %}
+{% include posts/thumb.html path='aesthetics' keyword='aes_position' %}
 
 <h1 class="gg-big">Scales</h2>
 {% include posts/thumb.html path='Scales' keyword='expand_limits' %}
