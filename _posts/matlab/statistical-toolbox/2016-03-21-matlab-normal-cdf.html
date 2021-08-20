@@ -7,8 +7,6 @@ suite: statistical_toolbox
 order: 2
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 mu = [0:0.1:20];
 
@@ -17,5 +15,4 @@ X = normcdf(mu);
 fig = figure;
 plot(X)
 
-resp = fig2plotly(fig, 'strip',false)
-plotly_url = resp.url;
+fig2plotly(fig, 'strip',false)
