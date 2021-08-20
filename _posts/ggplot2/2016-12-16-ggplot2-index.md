@@ -17,6 +17,7 @@ redirect_from: ggplot2/reference/
 {% include posts/thumb.html path='plot-basics' keyword='qplot' %}
 
 <h1 class="gg-big">Layers</h2>
+<h2 class="gg-sub">. . .  Geoms</h3>
 {% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_abline' %}
 {% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_bar' %}
 {% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_bin_2d' %}
@@ -43,7 +44,6 @@ redirect_from: ggplot2/reference/
 {% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_text' %}
 {% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_tile' %}
 {% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_violin' %}
-<h2 class="gg-sub">. . .  Geoms</h3>
 
 <h2 class="gg-sub">. . .  Stats</h3>
 
