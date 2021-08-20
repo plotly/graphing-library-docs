@@ -17,7 +17,32 @@ redirect_from: ggplot2/reference/
 {% include posts/thumb.html path='plot-basics' keyword='qplot' %}
 
 <h1 class="gg-big">Layers</h2>
-
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_abline' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_bar' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_bin_2d' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_boxplot' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_contour' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_count' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_crossbar' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_density' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_dotplot' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_function' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_hex' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_histogram' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_jitter' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_map' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_path' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_point' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_polygon' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_quantile' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_ribbon' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_rug' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_segment' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_smooth' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_spoke' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_text' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_tile' %}
+{% include posts/thumb1.html path='layers' subpath='geoms' keyword='geom_violin' %}
 <h2 class="gg-sub">. . .  Geoms</h3>
 
 <h2 class="gg-sub">. . .  Stats</h3>
