@@ -4,11 +4,12 @@ title:  MATLAB barh
 description: Learn how to make 10 barh charts in MATLAB, then publish them to the Web with Plotly.
 permalink: /matlab/discrete-data-plots/barh/
 layout: matlab
-function: plot
-reference: https://mathworks.com/help/matlab/ref/barh.html
+function: barh
+reference: https://www.mathworks.com/help/matlab/ref/barh.html
 github: discrete-data-plots/barh.md
 ---
 
+<!-- # MATLAB - `{{page.function}}` -->
 
 ## Display One Series of Bars
 > Create a vector of four values. Display the values in a bar graph with one horizontal bar for each value.
