@@ -69,38 +69,40 @@
                   <label>
                     Client Libraries
                   </label>
-                  <div class="list-lib">
-                    {% for item in my_array%}
-                    {% if item.permalink == page.permalink %}
-                    <a href=" {{ site.url }}/{{item.permalink }}" class="current list-lib-item {{item.language }}">
+                  <div class="list-lib-wrap">
+                    <div class="list-lib">
+                      {% for item in my_array%}
+                      {% if item.permalink == page.permalink %}
+                      <a href=" {{ site.url }}/{{item.permalink }}" class="current list-lib-item {{item.language }}">
 
-                      {% else %}
-                      <a href=" {{ site.url }}/{{item.permalink }}" class="list-lib-item {{item.language }}">
+                        {% else %}
+                        <a href=" {{ site.url }}/{{item.permalink }}" class="list-lib-item {{item.language }}">
 
-                        {% endif %}
-                        <div class="item-icon">
-                        </div>
-                        <p class="item-language">
-                          {% if item.language == "julia" %}
-                          Julia
-                          {% elsif item.language == "python" %}
-                          Python
-                          {% elsif item.language == "r" %}
-                          R
-                          {% elsif item.language == "python" %}
-                          Python
-                          {% elsif item.language == "matlab" %}
-                          MATLAB®
-                          {% elsif item.language == "ggplot2" %}
-                          ggplot2
-                          {% elsif item.language == "fsharp" %}
-                          Fsharp
-                          {% else %}
-                          {{item.language}}
                           {% endif %}
-                        </p>
-                      </a>
-                      {% endfor %}
+                          <div class="item-icon">
+                          </div>
+                          <p class="item-language">
+                            {% if item.language == "julia" %}
+                            Julia
+                            {% elsif item.language == "python" %}
+                            Python
+                            {% elsif item.language == "r" %}
+                            R
+                            {% elsif item.language == "python" %}
+                            Python
+                            {% elsif item.language == "matlab" %}
+                            MATLAB®
+                            {% elsif item.language == "ggplot2" %}
+                            ggplot2
+                            {% elsif item.language == "fsharp" %}
+                            Fsharp
+                            {% else %}
+                            {{item.language}}
+                            {% endif %}
+                          </p>
+                        </a>
+                        {% endfor %}
+                    </div>
                   </div>
                 </div>
                 {% endif %}
