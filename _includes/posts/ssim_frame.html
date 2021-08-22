@@ -1,13 +1,23 @@
+{% assign min = 1 %}
+{% assign max = 9999999 %}
+{% assign diff = max | minus: min %}
+{% assign randomNumberPlot = "now" | date: "%N" | modulo: diff | plus: min %}
+
+{% assign min = 1 %}
+{% assign max = 9999999 %}
+{% assign diff = max | minus: min %}
+{% assign randomNumberSSIM = "now" | date: "%N" | modulo: diff | plus: min %}
+
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="plot-tab" data-bs-toggle="tab" data-bs-target="#plot" type="button" role="tab" aria-controls="plot" aria-selected="true">Plot</button>
+    <button class="nav-link active" id="plot-tab" data-bs-toggle="tab" data-bs-target="#plot-{{randomNumberPlot}}" type="button" role="tab" aria-controls="plot" aria-selected="true">Plot</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="ssim-tab" data-bs-toggle="tab" data-bs-target="#ssim" type="button" role="tab" aria-controls="ssim" aria-selected="false">SSIM</button>
+    <button class="nav-link" id="ssim-tab" data-bs-toggle="tab" data-bs-target="#ssim-{{randomNumberSSIM}}" type="button" role="tab" aria-controls="ssim" aria-selected="false">SSIM</button>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="plot" role="tabpanel" aria-labelledby="plot-tab">
+  <div class="tab-pane fade show active" id="plot-{{randomNumberPlot}}" role="tabpanel" aria-labelledby="plot-tab">
     <iframe 
       scrolling="no" 
       margin="none" 
@@ -20,7 +30,7 @@
       width="800">
     </iframe>    
   </div>
-  <div class="tab-pane fade" id="ssim" role="tabpanel" aria-labelledby="ssim-tab">
+  <div class="tab-pane fade" id="ssim-{{randomNumberSSIM}}" role="tabpanel" aria-labelledby="ssim-tab">
     <img src="{{ page.function }}/{{ include.compare }}">
     <img src="{{ page.function }}/{{ include.ssim }}">
   </div>
