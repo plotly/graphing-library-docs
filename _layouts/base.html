@@ -4,125 +4,144 @@
 {% include layouts/head.html %}
 
 <body data-spy="scroll" data-target=".watch" style="position:relative;">
- {% include layouts/google-tag-body.html %}
+  {% include layouts/google-tag-body.html %}
 
- <!--[if lt IE 10]>
+  <!--[if lt IE 10]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
 	your browser</a> to improve your experience.</p>
 <![endif]-->
 
- {% include layouts/_header-main.html %}
+  {% include layouts/_header-main.html %}
 
- <main class="--page page--single --index">
+  <main class="--page page--single --index">
 
-  <div class="--wrap">
-   <!-- aside - Main Sidebar-->
-   <aside class="--sidebar-container">
-    <div class="--sidebar-fixed reference" data-spy="affix" id="where">
-     {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" or
-     page.permalink contains "ggplot2/" %}
-     <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
-      <input id="modal-input" style="border-radius: 5px; width: 100%;" type="text" placeholder="   Search..."
-       readonly />
-     </button>
-     {% endif %}
-     <header class="--sidebar-header">On This Page</header>
-     <nav class="--sidebar-body watch" id="where">
-      <ul class="--sidebar-list"></ul>
+    <div class="--wrap">
+      <!-- aside - Main Sidebar-->
+      <aside class="--sidebar-container">
+        <div class="--sidebar-fixed reference" data-spy="affix" id="where">
+          {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains
+          "r/" or
+          page.permalink contains "ggplot2/" %}
+          <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
+            <input id="modal-input" style="border-radius: 5px; width: 100%;" type="text" placeholder="   Search..."
+              readonly />
+          </button>
+          {% endif %}
+          <header class="--sidebar-header">On This Page</header>
+          <nav class="--sidebar-body watch" id="where">
+            <ul class="--sidebar-list"></ul>
 
 
-     </nav>
-    </div>
-   </aside>
-   <!-- Main-->
-   <section class="--page-body --tutorial-index --base">
-    <header class="--welcome">
-     <div class="--welcome-body">
-      <!--div.--wrap-inner-->
-      <div class="--title">
-       <div class="--body">
-        {% include layouts/breadcrumb.html %}
-
-        {% unless page.ignore_header %}
-        <h1>
-         {{page.name}}
-         {% unless page.no_in_language %}
-         in {% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif
-         page.language == "matlab" %}MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}
-         {% endunless %}
-        </h1>
-        <p>{{page.description}} </p>
-        <br>
-
-        {% endunless %}
-
-        {% assign my_array = "" | split: ',' %}
-        {% for post in site.posts %}
-        {% if post.name == page.name %}
-        {% assign my_array = my_array | push: post %}
-        {% endif %}
-        {% endfor %}
-        {% if my_array.size > 2 %}
-        <div class="db-client-lib">
-         <label>
-          Client Libraries
-         </label>
-         <div class="list-lib">
-          {% for item in my_array%}
-          {% if item.permalink == page.permalink %}
-          <a href=" {{ site.url }}/{{item.permalink }}" class="current list-lib-item {{item.language }}">
-
-           {% else %}
-           <a href=" {{ site.url }}/{{item.permalink }}" class="list-lib-item {{item.language }}">
-
-            {% endif %}
-
-            <div class="item-icon">
-            </div>
-            <p class="item-language">{{item.language }} </p>
-           </a>
-           {% endfor %}
-         </div>
+          </nav>
         </div>
+      </aside>
+      <!-- Main-->
+      <section class="--page-body --tutorial-index --base">
+        <header class="--welcome">
+          <div class="--welcome-body">
+            <!--div.--wrap-inner-->
+            <div class="--title">
+              <div class="--body">
+                {% include layouts/breadcrumb.html %}
+
+                {% unless page.ignore_header %}
+                <h1>
+                  {{page.name}}
+                  {% unless page.no_in_language %}
+                  in {% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{%
+                  elsif
+                  page.language == "matlab" %}MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}
+                  {% endunless %}
+                </h1>
+                <p>{{page.description}} </p>
+                <br>
+
+                {% endunless %}
+
+                {% assign my_array = "" | split: ',' %}
+                {% for post in site.posts %}
+                {% if post.name == page.name %}
+                {% assign my_array = my_array | push: post %}
+                {% endif %}
+                {% endfor %}
+                {% if my_array.size > 2 %}
+                <div class="db-client-lib">
+                  <label>
+                    Client Libraries
+                  </label>
+                  <div class="list-lib">
+                    {% for item in my_array%}
+                    {% if item.permalink == page.permalink %}
+                    <a href=" {{ site.url }}/{{item.permalink }}" class="current list-lib-item {{item.language }}">
+
+                      {% else %}
+                      <a href=" {{ site.url }}/{{item.permalink }}" class="list-lib-item {{item.language }}">
+
+                        {% endif %}
+                        <div class="item-icon">
+                        </div>
+                        <p class="item-language">
+                          {% if item.language == "julia" %}
+                          Julia
+                          {% elsif item.language == "python" %}
+                          Python
+                          {% elsif item.language == "r" %}
+                          R
+                          {% elsif item.language == "python" %}
+                          Python
+                          {% elsif item.language == "matlab" %}
+                          MATLAB®
+                          {% elsif item.language == "ggplot2" %}
+                          ggplot2
+                          {% elsif item.language == "fsharp" %}
+                          Fsharp
+                          {% else %}
+                          {{item.language}}
+                          {% endif %}
+                        </p>
+                      </a>
+                      {% endfor %}
+                  </div>
+                </div>
+                {% endif %}
+
+                {% include layouts/new-to-plotly.html %}
+
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Start Plotly Basics Section -->
+        <section class="tutorial-content">
+
+          {% include both/py4_note.html %}
+
+
+          {{ content }}
+
+        </section>
+
+        {% if page.permalink contains "javascript/" or page.permalink contains "python/" %}
+
+        <a href="https://dash.plotly.com"><img width="100%" style="margin-top: 20px;"
+            src="/all_static/images/dash.png" /></a>
+
+        {%elsif page.permalink contains "r/" or page.permalink contains "ggplot2/" %}
+
+        <a href="https://dashr.plotly.com"><img width="100%" style="margin-top: 20px;"
+            src="/all_static/images/dash.png" /></a>
+
         {% endif %}
-
-        {% include layouts/new-to-plotly.html %}
-
-       </div>
-      </div>
-     </div>
-    </header>
-
-    <!-- Start Plotly Basics Section -->
-    <section class="tutorial-content">
-
-     {% include both/py4_note.html %}
+        <!--End Plotly Basics Section-->
+      </section>
+    </div>
+  </main>
 
 
-     {{ content }}
+  {% include layouts/insertSidebarElement.html %}
 
-    </section>
-
-    {% if page.permalink contains "javascript/" or page.permalink contains "python/" %}
-
-    <a href="https://dash.plotly.com"><img width="100%" style="margin-top: 20px;"
-      src="/all_static/images/dash.png" /></a>
-
-    {%elsif page.permalink contains "r/" or page.permalink contains "ggplot2/" %}
-
-    <a href="https://dashr.plotly.com"><img width="100%" style="margin-top: 20px;"
-      src="/all_static/images/dash.png" /></a>
-
-    {% endif %}
-    <!--End Plotly Basics Section-->
-   </section>
-  </div>
- </main>
-
-
- {% include layouts/insertSidebarElement.html %}
-
- {% include layouts/_footer-main.html %}
+  {% include layouts/_footer-main.html %}
 
 </body>
 
