@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB wordcloud
 description: Learn how to make 5 wordcloud charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/data-distribution-plots/wordcloud/
+permalink: /matlab/data-distribution-plots/2021-08-23-wordcloud/
 layout: matlab
 function: wordcloud
 reference: https://mathworks.com/help/matlab/ref/wordcloud.html
@@ -13,9 +13,13 @@ github: data-distribution-plots/wordcloud.md
 
 > Load the example data `sonnetsTable`. The table `tbl` contains a list of words in the variable `Word`, and the corresponding frequency counts in the variable `Count`.
 
-<pre class="mcode">load sonnetsTable
-head(tbl)</pre>
-<pre class="mcode"><div class="codeoutput"><pre>ans=<span class="emphasis"><em>8×2 table</em></span>
+<pre class="mcode">
+  load sonnetsTable
+head(tbl)
+</pre>
+
+<pre class="mcode">
+  <div class="codeoutput"><pre>ans=<span class="emphasis"><em>8×2 table</em></span>
        Word        Count
     ___________    _____
 
@@ -28,13 +32,18 @@ head(tbl)</pre>
     {''Thou'  }      1  
     {''Thus'  }      1  
 
-</pre></div></pre>
+</pre></div>
+</pre>
+
 > Plot the table data using `wordcloud`. Specify the words and corresponding word sizes to be the `Word` and `Count` variables respectively.
 
-<pre class="mcode">figure
+<pre class="mcode">
+  figure
 wordcloud(tbl,'Word','Count');
 title("Sonnets Word Cloud")
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/977.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/data-distribution-plots/wordcloud/plot_0_0_create_word_cloud_from_table_ERROR_CRASH__montage.png" 
@@ -54,9 +63,13 @@ fig2plotly()</pre>
 
 > Read the text from Shakespeare's Sonnets with the `fileread` function and convert it to string.
 
-<pre class="mcode">sonnets = string(fileread('sonnets.txt'));
-extractBefore(sonnets,"II")</pre>
-<pre class="mcode"><div class="codeoutput"><pre>ans = 
+<pre class="mcode">
+  sonnets = string(fileread('sonnets.txt'));
+extractBefore(sonnets,"II")
+</pre>
+
+<pre class="mcode">
+  <div class="codeoutput"><pre>ans = 
     "THE SONNETS
      
      by William Shakespeare
@@ -83,16 +96,22 @@ extractBefore(sonnets,"II")</pre>
      
        "
 
-</pre></div></pre>
+</pre></div>
+</pre>
+
 > Split `sonnets` into a string array whose elements contain individual words. To do this, remove the punctuation characters and join all the string elements into a 1-by-1 string and then split on the space characters. Then, remove words with fewer than five characters and convert the words to lowercase.
 
-<pre class="mcode">punctuationCharacters = ["." "?" "!" "," ";" ":"];
+<pre class="mcode">
+  punctuationCharacters = ["." "?" "!" "," ";" ":"];
 sonnets = replace(sonnets,punctuationCharacters," ");
 words = split(join(sonnets));
 words(strlength(words)<5) = [];
 words = lower(words);
-words(1:10)</pre>
-<pre class="mcode"><div class="codeoutput"><pre>ans = <span class="emphasis"><em>10x1 string</em></span>
+words(1:10)
+</pre>
+
+<pre class="mcode">
+  <div class="codeoutput"><pre>ans = <span class="emphasis"><em>10x1 string</em></span>
     "sonnets"
     "william"
     "shakespeare"
@@ -104,14 +123,19 @@ words(1:10)</pre>
     "beauty's"
     "might"
 
-</pre></div></pre>
+</pre></div>
+</pre>
+
 > Convert `sonnets` to a categorical array and then plot using `wordcloud`. The function plots the unique elements of `C` with sizes corresponding to their frequency counts.
 
-<pre class="mcode">C = categorical(words);
+<pre class="mcode">
+  C = categorical(words);
 figure
 wordcloud(C);
 title("Sonnets Word Cloud")
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/977.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/data-distribution-plots/wordcloud/plot_1_0_prepare_text_data_for_word_clouds_ERROR_CRASH__montage.png" 
@@ -129,9 +153,13 @@ fig2plotly()</pre>
 
 > Read the text from Shakespeare's Sonnets with the `fileread` function and convert it to string.
 
-<pre class="mcode">sonnets = string(fileread('sonnets.txt'));
-extractBefore(sonnets,"II")</pre>
-<pre class="mcode"><div class="codeoutput"><pre>ans = 
+<pre class="mcode">
+  sonnets = string(fileread('sonnets.txt'));
+extractBefore(sonnets,"II")
+</pre>
+
+<pre class="mcode">
+  <div class="codeoutput"><pre>ans = 
     "THE SONNETS
      
      by William Shakespeare
@@ -158,16 +186,22 @@ extractBefore(sonnets,"II")</pre>
      
        "
 
-</pre></div></pre>
+</pre></div>
+</pre>
+
 > Split `sonnets` into a string array whose elements contain individual words. To do this, remove the punctuation characters and join all the string elements into a 1-by-1 string and then split on the space characters. Then, remove words with fewer than five characters and convert the words to lowercase.
 
-<pre class="mcode">punctuationCharacters = ["." "?" "!" "," ";" ":"];
+<pre class="mcode">
+  punctuationCharacters = ["." "?" "!" "," ";" ":"];
 sonnets = replace(sonnets,punctuationCharacters," ");
 words = split(join(sonnets));
 words(strlength(words)<5) = [];
 words = lower(words);
-words(1:10)</pre>
-<pre class="mcode"><div class="codeoutput"><pre>ans = <span class="emphasis"><em>10x1 string</em></span>
+words(1:10)
+</pre>
+
+<pre class="mcode">
+  <div class="codeoutput"><pre>ans = <span class="emphasis"><em>10x1 string</em></span>
     "sonnets"
     "william"
     "shakespeare"
@@ -179,14 +213,19 @@ words(1:10)</pre>
     "beauty's"
     "might"
 
-</pre></div></pre>
+</pre></div>
+</pre>
+
 > Find the unique words in `sonnets` and count their frequency. Create a word cloud using the frequency counts as size data.
 
-<pre class="mcode">[numOccurrences,uniqueWords] = histcounts(categorical(words));
+<pre class="mcode">
+  [numOccurrences,uniqueWords] = histcounts(categorical(words));
 figure
 wordcloud(uniqueWords,numOccurrences);
 title("Sonnets Word Cloud")
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/977.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/data-distribution-plots/wordcloud/plot_2_0_specify_word_sizes_ERROR_CRASH__montage.png" 
@@ -202,9 +241,13 @@ fig2plotly()</pre>
 
 > Load the example data `sonnetsTable`. The table `tbl` contains a list of words in the `Word` variable, and corresponding frequency counts in the `Count` variable.
 
-<pre class="mcode">load sonnetsTable
-head(tbl)</pre>
-<pre class="mcode"><div class="codeoutput"><pre>ans=<span class="emphasis"><em>8×2 table</em></span>
+<pre class="mcode">
+  load sonnetsTable
+head(tbl)
+</pre>
+
+<pre class="mcode">
+  <div class="codeoutput"><pre>ans=<span class="emphasis"><em>8×2 table</em></span>
        Word        Count
     ___________    _____
 
@@ -217,15 +260,20 @@ head(tbl)</pre>
     {''Thou'  }      1  
     {''Thus'  }      1  
 
-</pre></div></pre>
+</pre></div>
+</pre>
+
 > Plot the table data using `wordcloud`. Specify the words and corresponding word sizes to be the `Word` and `Count` variables respectively. To set the word colors to random values, set `'Color'` to a random matrix or RGB triplets with one row for each word.
 
-<pre class="mcode">numWords = size(tbl,1);
+<pre class="mcode">
+  numWords = size(tbl,1);
 colors = rand(numWords,3);
 figure
 wordcloud(tbl,'Word','Count','Color',colors);
 title("Sonnets Word Cloud")
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/977.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/data-distribution-plots/wordcloud/plot_3_0_specify_word_colors_ERROR_CRASH__montage.png" 
@@ -246,9 +294,13 @@ fig2plotly()</pre>
 > Extract the text from `sonnets.txt` using
                             extractFileText`.
 
-<pre class="mcode">str = extractFileText("sonnets.txt");
-extractBefore(str,"II")</pre>
-<pre class="mcode"><div class="codeoutput"><pre>ans = 
+<pre class="mcode">
+  str = extractFileText("sonnets.txt");
+extractBefore(str,"II")
+</pre>
+
+<pre class="mcode">
+  <div class="codeoutput"><pre>ans = 
 
     "THE SONNETS
      
@@ -274,12 +326,17 @@ extractBefore(str,"II")</pre>
          Pity the world, or else this glutton be,
          To eat the world's due, by the grave and thee.
      
-       "</pre></div></pre>
+       "</pre></div>
+</pre>
+
 > Display the words from the sonnets in a word cloud.
 
-<pre class="mcode">figure
+<pre class="mcode">
+  figure
 wordcloud(str);
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/977.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/data-distribution-plots/wordcloud/plot_4_0_create_word_cloud_using_text_analytics_toolbox_ERROR_CRASH__montage.png" 

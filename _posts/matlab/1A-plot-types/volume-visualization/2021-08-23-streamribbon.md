@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB streamribbon
 description: Learn how to make 4 streamribbon charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/volume-visualization/streamribbon/
+permalink: /matlab/volume-visualization/2021-08-23-streamribbon/
 layout: matlab
 function: streamribbon
 reference: https://mathworks.com/help/matlab/ref/streamribbon.html
@@ -13,7 +13,8 @@ github: volume-visualization/streamribbon.md
 
 > Use stream ribbons to indicate the flow in a data set.
 
-<pre class="mcode">load wind
+<pre class="mcode">
+  load wind
 [sx,sy,sz] = meshgrid(80,20:10:50,0:5:15);
 streamribbon(x,y,z,u,v,w,sx,sy,sz);
 axis tight
@@ -21,7 +22,9 @@ shading interp
 view(3);
 camlight
 lighting gouraud
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/958.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamribbon/plot_0_0_use_stream_ribbons_to_indicate_flow_montage.png" 
@@ -37,7 +40,8 @@ fig2plotly()</pre>
 
 > Use precalculated vertex data, curl average velocity, and speed to indicate flow. 
 
-<pre class="mcode">load wind
+<pre class="mcode">
+  load wind
 [sx,sy,sz] = meshgrid(80,20:10:50,0:5:15);
 verts = stream3(x,y,z,u,v,w,sx,sy,sz);
 cav = curl(x,y,z,u,v,w);
@@ -48,7 +52,9 @@ shading interp
 view(3);
 camlight; 
 lighting gouraud
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/960.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamribbon/plot_1_0_indicate_flow_using_precalculated_data_montage.png" 
@@ -66,7 +72,8 @@ fig2plotly()</pre>
 
 > Specify a twist angle for the stream ribbon 
 
-<pre class="mcode">t = 0:.15:15;
+<pre class="mcode">
+  t = 0:.15:15;
 verts = {[cos(t)' sin(t)' (t/3)']};
 twistangle = {cos(t)'};
 streamribbon(verts,twistangle);
@@ -75,7 +82,9 @@ shading interp
 view(3)
 camlight 
 lighting gouraud
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/962.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamribbon/plot_2_0_stream_ribbon_with_twist_angle_montage.png" 
@@ -91,7 +100,8 @@ fig2plotly()</pre>
 
 > Create 3-D arrays and a cone plot.
 
-<pre class="mcode">xmin = -7; xmax = 7;
+<pre class="mcode">
+  xmin = -7; xmax = 7;
 ymin = -7; ymax = 7; 
 zmin = -7; zmax = 7; 
 x = linspace(xmin,xmax,30);
@@ -105,7 +115,9 @@ w = 0*x+1;
    linspace(ymin,ymax,30),[-3 4]);
 h = coneplot(x,y,z,u,v,w,cx,cy,cz,'quiver');
 set(h,'Color','k');
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/964.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamribbon/plot_3_0_combination_of_cone_and_stream_ribbon_plots_montage.png" 
@@ -115,7 +127,8 @@ fig2plotly()</pre>
 
 > Plot two sets of stream ribbons. Then define the view and lighting.
 
-<pre class="mcode">[sx,sy,sz] = meshgrid([-1 0 1],[-1 0 1],-6);
+<pre class="mcode">
+  [sx,sy,sz] = meshgrid([-1 0 1],[-1 0 1],-6);
 streamribbon(x,y,z,u,v,w,sx,sy,sz);
 [sx,sy,sz] = meshgrid([1:6],[0],-6);
 streamribbon(x,y,z,u,v,w,sx,sy,sz);
@@ -127,7 +140,9 @@ camva(66)
 camlookat 
 camdolly(0,0,.5,'fixtarget')
 camlight
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/965.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamribbon/plot_3_1_combination_of_cone_and_stream_ribbon_plots_montage.png" 

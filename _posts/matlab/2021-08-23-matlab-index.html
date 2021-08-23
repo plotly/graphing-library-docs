@@ -1,0 +1,198 @@
+---
+name: Plotly Graphing Library for MATLAB®
+permalink: /matlab/
+description: Create interactive charts in your web browser with MATLAB<sup>&reg;</sup> and Plotly.
+layout: langindex
+language: matlab
+---
+
+
+<header class="--welcome">
+  <div class="--welcome-body">
+    <div class="--title">
+      <div class="--body">
+        <h1>Plotly Graphing Library for MATLAB<sup>&reg;</sup></h1>
+        <p>
+          {page.description}
+        </p>
+        <p>
+          Head over to the [community forum](https://community.plotly.com/c/api/matlab/22) to ask questions and get help.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="section">
+  <div class="row auto-eg-padding">
+    <div class="row">
+      <div class="twelve columns">
+        <h6>Plotly brings interactive graphing to your MATLAB<sup>&reg;</sup> console.</h6>
+        <div class="z-depth-1">
+<pre><code>
+x = 80 * randn(1, 30);
+y = 80 * randn(size(x));
+r = randi(1500, size(x));
+c = randi(10, size(x));
+
+fig = figure;
+
+scatter(x, y, r, c, 'filled', 'MarkerEdgeColor', 'k')
+
+%--PLOTLY--%
+
+response = fig2plotly(fig, 'filename', 'matlab-bubble-chart',  'strip', false);
+plotly_url = response.url;
+
+</code></pre>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <iframe 
+          scrolling="no" 
+          margin="none" 
+          padding="none" 
+          seamless=seamless 
+          frameBorder="0"
+          style="border:0"
+          src="https://plotly.com/~PlotBot/113.embed" 
+          height="500" 
+          width="100%">
+        </iframe>
+      </div>
+    </div>
+    
+    <div class="row">
+
+      <h2>Types of MATLAB® Plots</h2>
+      
+		<h2>/Content/1A-Plot-Types/Geographic-Plots</h4>
+
+		{% include posts/thumb.html type='geographic-plots' function='geoscatter' %}	
+		{% include posts/thumb.html type='geographic-plots' function='geobubble' %}	
+		{% include posts/thumb.html type='geographic-plots' function='geoplot' %}	
+
+		<h2>/Content/1A-Plot-Types/Polar-Plots</h4>
+
+		{% include posts/thumb.html type='polar-plots' function='ezpolar' %}	
+		{% include posts/thumb.html type='polar-plots' function='polarplot' %}	
+		{% include posts/thumb.html type='polar-plots' function='polarscatter' %}	
+		{% include posts/thumb.html type='polar-plots' function='polarhistogram' %}	
+		{% include posts/thumb.html type='polar-plots' function='polarbubblechart' %}	
+		{% include posts/thumb.html type='polar-plots' function='compass' %}	
+
+		<h2>/Content/1A-Plot-Types/Line-Plots</h4>
+
+		{% include posts/thumb.html type='line-plots' function='semilogx' %}	
+		{% include posts/thumb.html type='line-plots' function='semilogy' %}	
+		{% include posts/thumb.html type='line-plots' function='area' %}	
+		{% include posts/thumb.html type='line-plots' function='errorbar' %}	
+		{% include posts/thumb.html type='line-plots' function='plot' %}	
+		{% include posts/thumb.html type='line-plots' function='plot3' %}	
+		{% include posts/thumb.html type='line-plots' function='fplot' %}	
+		{% include posts/thumb.html type='line-plots' function='fplot3' %}	
+		{% include posts/thumb.html type='line-plots' function='loglog' %}	
+		{% include posts/thumb.html type='line-plots' function='stairs' %}	
+		{% include posts/thumb.html type='line-plots' function='stackedplot' %}	
+		{% include posts/thumb.html type='line-plots' function='fimplicit' %}	
+
+		<h2>/Content/1A-Plot-Types/Images</h4>
+
+		{% include posts/thumb.html type='images' function='image' %}	
+		{% include posts/thumb.html type='images' function='imagesc' %}	
+
+		<h2>/Content/1A-Plot-Types/Surface-And-Mesh-Plots</h4>
+
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='waterfall' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='surfc' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='fsurf' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='mesh' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='meshc' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='ribbon' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='pcolor' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='fimplicit3' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='surfl' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='fmesh' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='meshz' %}	
+		{% include posts/thumb.html type='surface-and-mesh-plots' function='surf' %}	
+
+		<h2>/Content/1A-Plot-Types/Animation</h4>
+
+		{% include posts/thumb.html type='animation' function='comet' %}	
+		{% include posts/thumb.html type='animation' function='comet3' %}	
+		{% include posts/thumb.html type='animation' function='animatedline' %}	
+
+		<h2>/Content/1A-Plot-Types/Volume-Visualization</h4>
+
+		{% include posts/thumb.html type='volume-visualization' function='streamline' %}	
+		{% include posts/thumb.html type='volume-visualization' function='slice' %}	
+		{% include posts/thumb.html type='volume-visualization' function='streamtube' %}	
+		{% include posts/thumb.html type='volume-visualization' function='coneplot' %}	
+		{% include posts/thumb.html type='volume-visualization' function='streamribbon' %}	
+		{% include posts/thumb.html type='volume-visualization' function='streamslice' %}	
+		{% include posts/thumb.html type='volume-visualization' function='streamparticles' %}	
+
+		<h2>/Content/1A-Plot-Types/Vector-Fields</h4>
+
+		{% include posts/thumb.html type='vector-fields' function='feather' %}	
+		{% include posts/thumb.html type='vector-fields' function='quiver' %}	
+		{% include posts/thumb.html type='vector-fields' function='quiver3' %}	
+
+		<h2>/Content/1A-Plot-Types/Scatter-And-Bubble-Charts</h4>
+
+		{% include posts/thumb.html type='scatter-and-bubble-charts' function='swarmchart3' %}	
+		{% include posts/thumb.html type='scatter-and-bubble-charts' function='scatter' %}	
+		{% include posts/thumb.html type='scatter-and-bubble-charts' function='bubblechart' %}	
+		{% include posts/thumb.html type='scatter-and-bubble-charts' function='scatter3' %}	
+		{% include posts/thumb.html type='scatter-and-bubble-charts' function='bubblechart3' %}	
+		{% include posts/thumb.html type='scatter-and-bubble-charts' function='spy' %}	
+		{% include posts/thumb.html type='scatter-and-bubble-charts' function='swarmchart' %}	
+
+		<h2>/Content/1A-Plot-Types/Data-Distribution-Plots</h4>
+
+		{% include posts/thumb.html type='data-distribution-plots' function='heatmap' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='scatterhistogram' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='pie' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='swarmchart3' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='wordcloud' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='histogram' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='plotmatrix' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='parallelplot' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='histogram2' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='pie3' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='bubblecloud' %}	
+		{% include posts/thumb.html type='data-distribution-plots' function='swarmchart' %}	
+
+		<h2>/Content/1A-Plot-Types/Discrete-Data-Plots</h4>
+
+		{% include posts/thumb.html type='discrete-data-plots' function='stem3' %}	
+		{% include posts/thumb.html type='discrete-data-plots' function='bar3h' %}	
+		{% include posts/thumb.html type='discrete-data-plots' function='pareto' %}	
+		{% include posts/thumb.html type='discrete-data-plots' function='bar3' %}	
+		{% include posts/thumb.html type='discrete-data-plots' function='bar' %}	
+		{% include posts/thumb.html type='discrete-data-plots' function='stem' %}	
+		{% include posts/thumb.html type='discrete-data-plots' function='stairs' %}	
+		{% include posts/thumb.html type='discrete-data-plots' function='barh' %}	
+
+		<h2>/Content/1A-Plot-Types/Contour-Plots</h4>
+
+		{% include posts/thumb.html type='contour-plots' function='contourf' %}	
+		{% include posts/thumb.html type='contour-plots' function='fcontour' %}	
+		{% include posts/thumb.html type='contour-plots' function='contour' %}	
+		{% include posts/thumb.html type='contour-plots' function='contourslice' %}	
+		{% include posts/thumb.html type='contour-plots' function='contour3' %}	
+
+
+		<h2>More Examples</h2>
+		{% assign languagelist = site.posts | where:"page_type","example_index" | where:"language","matlab"  | sort: "order" %}
+		{% include posts/documentation_eg.html %}
+
+    </div>
+  </div>
+</div>
+
+<p style="margin-top:200px">
+  <em>MATLAB<sup>&reg;</sup> is a registered trademark of The MathWorks, Inc.</em>
+</p>

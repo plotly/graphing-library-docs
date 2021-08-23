@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB polarhistogram
 description: Learn how to make 4 polarhistogram charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/polar-plots/polarhistogram/
+permalink: /matlab/polar-plots/2021-08-23-polarhistogram/
 layout: matlab
 function: polarhistogram
 reference: https://mathworks.com/help/matlab/ref/polarhistogram.html
@@ -13,9 +13,12 @@ github: polar-plots/polarhistogram.md
 
 > Create a vector of values between 0 and 2π. Create a histogram chart that shows the data sorted into six bins.
 
-<pre class="mcode">theta = [0.1 1.1 5.4 3.4 2.3 4.5 3.2 3.4 5.6 2.3 2.1 3.5 0.6 6.1];
+<pre class="mcode">
+  theta = [0.1 1.1 5.4 3.4 2.3 4.5 3.2 3.4 5.6 2.3 2.1 3.5 0.6 6.1];
 polarhistogram(theta,6)
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/664.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/polar-plots/polarhistogram/plot_0_0_create_histogram_chart_in_polar_coordinates_montage.png" 
@@ -31,9 +34,12 @@ fig2plotly()</pre>
 
 > Create a histogram plot from 100,000 values between -π and π, and sort the data into 25 bins.
 
-<pre class="mcode">theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
+<pre class="mcode">
+  theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
 polarhistogram(theta,25);
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/666.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/polar-plots/polarhistogram/plot_1_0_specify_number_of_bins_for_polar_histogram_chart_montage.png" 
@@ -49,9 +55,12 @@ fig2plotly()</pre>
 
 > Create a histogram chart in polar coordinates, and then change its appearance. Specify the bar colors by setting the `FaceColor` property to a character vector of a color name, such as `'red'`, or an RGB triplet. Specify the transparency by setting the `FaceAlpha` property to a value between 0 and 1.
 
-<pre class="mcode">theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
+<pre class="mcode">
+  theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
 polarhistogram(theta,25,'FaceColor','red','FaceAlpha',.3);
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/668.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/polar-plots/polarhistogram/plot_2_0_modify_appearance_of_histogram_chart_montage.png" 
@@ -67,9 +76,12 @@ fig2plotly()</pre>
 
 > Create a histogram chart in polar coordinates. Assign the histogram object to the variable `h`.
 
-<pre class="mcode">theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
+<pre class="mcode">
+  theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
 h = polarhistogram(theta,25)
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/670.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/polar-plots/polarhistogram/plot_3_0_modify_appearance_of_histogram_chart_after_creation_montage.png" 
@@ -77,7 +89,8 @@ fig2plotly()</pre>
   index=444
 %}
 
-<pre class="mcode"><div class="codeoutput"><pre>h = 
+<pre class="mcode">
+  <div class="codeoutput"><pre>h = 
   Histogram with properties:
 
              Data: [100000x1 double]
@@ -93,11 +106,16 @@ fig2plotly()</pre>
   Show all properties
 
 </pre></div>
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 > Use `h` to access and modify properties of the histogram object after it is created. For example, show just the histogram outline by setting the `DisplayStyle` property of the histogram object.
 
-<pre class="mcode">h.DisplayStyle = 'stairs';
-fig2plotly()</pre>
+<pre class="mcode">
+  h.DisplayStyle = 'stairs';
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/672.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/polar-plots/polarhistogram/plot_3_1_modify_appearance_of_histogram_chart_after_creation_montage.png" 
