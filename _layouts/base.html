@@ -55,12 +55,12 @@
                 </h1>
                 <p>{{page.description}} </p>
                 <br>
-
                 {% endunless %}
-
                 {% assign my_array = "" | split: ',' %}
+                {% assign link = page.permalink | split: '/' | last %}
                 {% for post in site.posts %}
-                {% if post.name == page.name %}
+                {% assign link_post = post.permalink | split: '/' | last %}
+                {% if post.name == page.name or link == link_post %}
                 {% assign my_array = my_array | push: post %}
                 {% endif %}
                 {% endfor %}
