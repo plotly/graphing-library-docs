@@ -9,6 +9,9 @@ reference: https://mathworks.com/help/matlab/ref/streamtube.html
 github: volume-visualization/streamtube.md
 ---
 
+<script src="http://afarkas.github.io/lazysizes/lazysizes.min.js" async></script>
+
+
 ## Visualize flow
 
 > Use the `streamtube` function to indicate flow in the `wind` data set. The inputs include the coordinates, vector field components, and starting location for the stream tubes. 
@@ -25,12 +28,14 @@ lighting gouraud
 fig2plotly()
 </pre>
 
-{% include posts/ssim_frame.html 
-  src="https://chart-studio.plotly.com/~danton267/971.embed" 
-  ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamtube/plot_0_0_visualize_flow_montage.png" 
-  compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamtube/plot_0_0_visualize_flow_ssim_map.png" 
-  index=630
-%}
+
+<iframe frameborder="0"
+	  class="lazyload"
+    allowfullscreen=""
+    width="800"
+    height="650"
+    data-src="//https://chart-studio.plotly.com/~danton267/971.embed">
+</iframe>
 
 
 
@@ -54,12 +59,14 @@ lighting gouraud
 fig2plotly()
 </pre>
 
-{% include posts/ssim_frame.html 
-  src="https://chart-studio.plotly.com/~danton267/973.embed" 
-  ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamtube/plot_1_0_visualize_flow_using_vertex_data_and_divergence_montage.png" 
-  compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamtube/plot_1_0_visualize_flow_using_vertex_data_and_divergence_ssim_map.png" 
-  index=631
-%}
+
+<iframe frameborder="0"
+	  class="lazyload"
+    allowfullscreen=""
+    width="800"
+    height="650"
+    data-src="//https://chart-studio.plotly.com/~danton267/973.embed">
+</iframe>
 
 
 
