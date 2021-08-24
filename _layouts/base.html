@@ -66,7 +66,8 @@
                 {% assign link_post = post.permalink | split: '/' | last %}
                 {% if post.permalink contains '/reference' or post.permalink contains '/next' or post.permalink contains '/v3'  %}      
                 {% else %}
-                {% if post.name == page.name or link == link_post %}
+               <!-- {% if post.name == page.name or link == link_post %}-->
+                {% if link == link_post %}
                 {% assign my_array = my_array | push: post %}
                 {% endif %}
                 {% endif %}
