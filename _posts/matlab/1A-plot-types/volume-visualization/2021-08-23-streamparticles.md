@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB streamparticles
 description: Learn how to make 1 streamparticles charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/volume-visualization/streamparticles/
+permalink: /matlab/volume-visualization/2021-08-23-streamparticles/
 layout: matlab
 function: streamparticles
 reference: https://mathworks.com/help/matlab/ref/streamparticles.html
@@ -13,7 +13,8 @@ github: volume-visualization/streamparticles.md
 
 > This example uses streamlines in the `z = 5` plane to animate the flow along these lines with stream particles.
 
-<pre class="mcode">load wind
+<pre class="mcode">
+  load wind
 figure
 daspect([1,1,1]); 
 view(2)
@@ -26,7 +27,9 @@ zlim([4.9,5.1]);
 streamparticles(iverts, 200, ...
     'Animate',15,'FrameRate',40, ...
     'MarkerSize',10,'MarkerFaceColor',[0 .5 0])
-fig2plotly()</pre>
+fig2plotly()
+</pre>
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/955.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/volume-visualization/streamparticles/plot_0_0_animate_flow_without_displaying_streamlines_montage.png" 
