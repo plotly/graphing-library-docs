@@ -30,8 +30,6 @@
           <header class="--sidebar-header">On This Page</header>
           <nav class="--sidebar-body watch" id="where">
             <ul class="--sidebar-list"></ul>
-
-
           </nav>
         </div>
       </aside>
@@ -43,14 +41,20 @@
             <div class="--title">
               <div class="--body">
                 {% include layouts/breadcrumb.html %}
-
                 {% unless page.ignore_header %}
                 <h1>
                   {{page.name}}
                   {% unless page.no_in_language %}
-                  in {% if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{%
-                  elsif
-                  page.language == "matlab" %}MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}
+                  in {% if page.language == "plotly_js" %}
+                  JavaScript
+                  {% elsif page.language == "ggplot2" %}
+                  ggplot2
+                   {% elsif page.language == "fsharp" %}
+                  Fsharp
+                  {% elsif page.language == "matlab" %}
+                  MATLAB<sup>&reg;</sup>
+                  {% else %}
+                  {{page.language | capitalize}}{% endif %}
                   {% endunless %}
                 </h1>
                 <p>{{page.description}} </p>
@@ -60,14 +64,17 @@
                 {% assign link = page.permalink | split: '/' | last %}
                 {% for post in site.posts %}
                 {% assign link_post = post.permalink | split: '/' | last %}
+                {% if post.permalink contains 'reference' %}      
+                {% else %}
                 {% if post.name == page.name or link == link_post %}
                 {% assign my_array = my_array | push: post %}
+                {% endif %}
                 {% endif %}
                 {% endfor %}
                 {% if my_array.size > 2 %}
                 <div class="db-client-lib">
                   <label>
-                    Client Libraries
+                    This page in another language
                   </label>
                   <div class="list-lib-wrap">
                     <div class="list-lib">
