@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  aes_group_order
-permalink: /ggplot2/aesthetics/aes_group_orderaes_group_order/
+permalink: /ggplot2/aesthetics/aes_group_order/
 layout: ggplot
 function: aes_group_order
 reference: https://ggplot2.tidyverse.org/reference/
