@@ -8,9 +8,6 @@ order: 3
 sitemap: false
 description: Inspired from <a href="http://in.mathworks.com/help/matlab/creating_plots/aspect-ratio-for-2-d-axes.html">Matlab Docs</a>
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
-
 
 t = 0:pi/20:2*pi;
 x = sin(t);
@@ -42,5 +39,4 @@ title('axis equal tight');
 grid on;
 axis equal tight;
 
-resp = fig2plotly(fig,'strip',false);
-plotly_url = resp.url;
+fig2plotly(fig,'strip', false);
