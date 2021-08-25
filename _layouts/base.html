@@ -58,15 +58,17 @@
                   {% endunless %}
                 </h1>
                 <p>{{page.description}} </p>
-                <br>
+                <br> 
                 {% endunless %}
                 {% assign my_array = "" | split: ',' %}
                 {% assign link = page.permalink | split: '/' | last %}
                 {% for post in site.posts %}
                 {% assign link_post = post.permalink | split: '/' | last %}
-                {% if post.permalink contains 'reference' or post.permalink contains '/next' or post.permalink contains '/v3'  %}      
+                {% if post.permalink contains '/reference' or post.permalink contains '/next' or post.permalink contains '/v3' or post.permalink contains 'nodejs/' or post.permalink contains 'javascript/'  %}      
                 {% else %}
+                
                  {% if link == link_post %}
+                 <script>console.log({{ post.permalink }});</script>
                 {% assign my_array = my_array | push: post %}
                 {% endif %}
                 {% endif %}
