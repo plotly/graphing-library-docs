@@ -66,14 +66,12 @@
                 {% assign link_post = post.permalink | split: '/' | last %}
                 {% if post.permalink contains '/reference' or post.permalink contains '/next' or post.permalink contains '/v3' or post.permalink contains 'nodejs/' or post.permalink contains 'javascript/'  %}      
                 {% else %}
-                
-                 {% if link == link_post %}
-                 <script>console.log({{ post.permalink }});</script>
+                {% if link == link_post %}
                 {% assign my_array = my_array | push: post %}
                 {% endif %}
                 {% endif %}
                 {% endfor %}
-                {% if my_array.size > 2 %}
+                {% if my_array.size > 1 %}
                 <div class="db-client-lib">
                   <label>
                     This page in another language
