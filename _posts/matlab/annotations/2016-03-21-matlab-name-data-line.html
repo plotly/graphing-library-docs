@@ -8,8 +8,6 @@ order: 4
 sitemap: false
 description: Insipired from <a href="http://in.mathworks.com/matlabcentral/answers/97277-how-can-i-apply-data-labels-to-each-point-in-a-scatter-plot-in-matlab-7-0-4-r14sp2">Matlab Docs</a>
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 x = 1:10; y = 1:10; 
 fig = figure;
@@ -25,6 +23,6 @@ xlim([-1 5])
 ylim([-1 5])
 hold off
 
-resp = fig2plotly(fig, 'strip',false)
-plotly_url = resp.url
+fig2plotly(fig, 'strip',false)
+
 

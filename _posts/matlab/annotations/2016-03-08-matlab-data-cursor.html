@@ -7,10 +7,8 @@ suite: annotations
 order: 2
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
-x = 1:10:100
+x = 1:10:100;
 fig = figure;
 plot(x, (x+1).^2, 'bo','markers',14)
 title('hover over the markers to see the coordinates');
@@ -19,5 +17,4 @@ response = fig2plotly(fig, 'strip',false);
 data = cell2struct(data,'data',1);
 data.mode = 'markers+text'; % Able the data cursor
 
-response2 = plotly(data, response.layout);
-plotly_url = response2.url;
+plotly(data, response.layout);
