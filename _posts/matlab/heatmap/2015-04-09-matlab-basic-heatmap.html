@@ -7,8 +7,6 @@ suite: heatmap
 order: 0
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 size = 50;
 z = zeros(size, size);
@@ -25,6 +23,4 @@ colorbar;
 
 %--PLOTLY--%
 
-% Strip MATLAB<sup>&reg;</sup> style by default!
-response = fig2plotly(fig, 'filename', 'matlab-basic-heatmap');
-plotly_url = response.url;
+fig2plotly(fig);
