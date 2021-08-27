@@ -1,0 +1,52 @@
+{% assign post_array = "" | split: ',' %}
+{% assign link = page.permalink | split: '/' | last %}
+{% for post in site.posts %}
+{% assign link_post = post.permalink | split: '/' | last %}
+{% if post.permalink contains '/reference' or post.permalink contains '/next' or post.permalink contains '/v3' or
+post.permalink contains 'nodejs/' or post.permalink contains 'javascript/' or post.permalink contains 'scala/' %}
+{% else %}
+{% if link == link_post or page.name == post.name %}
+{% assign post_array = post_array | push: post %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% if post_array.size > 1 %}
+<div class="db-client-lib">
+  <label>
+    This page in another language
+  </label>
+  <div class="list-lib-wrap">
+    <div class="list-lib">
+      {% for item in post_array%}
+      {% if item.permalink == page.permalink %}
+      <a href=" {{ site.url }}/{{item.permalink }}" class="current list-lib-item {{item.language }}">
+        {% else %}
+        <a href=" {{ site.url }}/{{item.permalink }}" class="list-lib-item {{item.language }}">
+          {% endif %}
+          <div class="item-icon">
+          </div>
+          <p class="item-language">
+            {% if item.language == "julia" %}
+            Julia
+            {% elsif item.language == "python" %}
+            Python
+            {% elsif item.language == "r" %}
+            R
+            {% elsif item.language == "python" %}
+            Python
+            {% elsif item.language == "matlab" %}
+            MATLAB®
+            {% elsif item.language == "ggplot2" %}
+            ggplot2
+            {% elsif item.language == "fsharp" %}
+            Fsharp
+            {% else %}
+            {{item.language}}
+            {% endif %}
+          </p>
+        </a>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
