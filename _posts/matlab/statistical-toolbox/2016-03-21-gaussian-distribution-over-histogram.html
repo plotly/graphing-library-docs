@@ -9,8 +9,8 @@ sitemap: false
 description: Inspired from <a href="http://in.mathworks.com/help/stats/normpdf.html">Matlab Docs</a>
 ---
 
-[f,x]=hist(randn(10000,1),50);%# create histogram from a normal distribution.
-g=1/sqrt(2*pi)*exp(-0.5*x.^2);%# pdf of the normal distribution
+[f,x]=hist(randn(10000,1),50);
+g=1/sqrt(2*pi)*exp(-0.5*x.^2);
 
 fig = figure
 bar(x,f/trapz(x,f));

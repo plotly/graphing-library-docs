@@ -9,14 +9,11 @@ sitemap: false
 description: Inspired from <a href="http://www.mathworks.com/matlabcentral/answers/44468-plotting-a-linear-equation">Matlab Forum<a/>
 ---
 
-% Create the equation..
-%%
+
 b0 = 3;
 b1 = 4;
 f = @(x) b0-b1*x;
-%%
 
-% Plot the equation..
 ezplot( f, 0, 5 );
 title('Plot Symbolic Linear Equation')
 fig2plotly();
