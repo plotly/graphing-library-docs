@@ -1,6 +1,6 @@
 ---
 name: Sparse Matrix Visualization with the <code>spy</code> Function
-plot_url: https://plotly.com/~PlotBot/110
+plot_url: https://plotly.com/~PlotBot/110.embed
 arrangement: horizontal
 language: matlab
 suite: sparse_matrix_graphs
@@ -13,9 +13,4 @@ fig = figure;
 B = bucky;
 spy(B)
 
-%--PLOTLY--%
-
-% Strip MATLAB<sup>&reg;</sup> style by default!
-
-response = fig2plotly(fig);
-plotly_url = response.url;
+fig2plotly(fig);

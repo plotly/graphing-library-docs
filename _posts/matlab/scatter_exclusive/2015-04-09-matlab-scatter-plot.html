@@ -1,6 +1,6 @@
 ---
 name: Simple Scatter Plot
-plot_url: https://plotly.com/~PlotBot/112
+plot_url: https://plotly.com/~PlotBot/112.embed
 arrangement: horizontal
 language: matlab
 suite: scatter_exclusive
@@ -8,21 +8,13 @@ order: 0
 sitemap: false
 ---
 
-
-% Load undersea elevation data
 load seamount x y z;
 
-% Create a scatter plot using the scatter function
 fig = figure;
 scatter(x, y, 10, z);
 
-% Add title and axis labels
 title('Undersea Elevation');
 xlabel('Longitude');
 ylabel('Latitude');
 
-%--PLOTLY--%
-
-% strip = false =&gt; preserve MATLAB<sup>&reg;</sup> style!
-
-response = fig2plotly();
+fig2plotly();

@@ -1,14 +1,12 @@
 ---
 name: Private Graphs
-plot_url: https://plotly.com/~PlotBot/1
+plot_url: https://plotly.com/~PlotBot/1.embed
 arrangement: horizontal
 language: matlab
 suite: privacy
 order: 0
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 data = {...
   struct(...
@@ -16,5 +14,5 @@ data = {...
     'y', [0, 4, 2], ...
     'type', 'scatter')...
 };
-response = plotly(data, struct('filename', 'privacy-false', 'world_readable', false, 'fileopt', 'overwrite'));
-plot_url = response.url
+
+plotly(data, struct('world_readable', false));

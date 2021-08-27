@@ -1,6 +1,6 @@
 ---
 name: 2D Histogram of a Bivariate Normal Distribution
-plot_url: https://plotly.com/~PlotBot/77
+plot_url: https://plotly.com/~PlotBot/77.embed
 arrangement: horizontal
 language: matlab
 suite: histogram2d
@@ -17,5 +17,5 @@ data = {...
     'y', y, ...
     'type', 'histogram2d')...
 };
-response = plotly(data, struct('filename', '2d-histogram', 'fileopt', 'overwrite'));
-plot_url = response.url
+
+plotly(data);

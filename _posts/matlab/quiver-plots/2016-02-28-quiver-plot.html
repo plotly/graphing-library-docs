@@ -1,15 +1,12 @@
 ---
 name: Quiver Plot Example
-plot_url: https://plotly.com/~tarzzz/1656
+plot_url: https://plotly.com/~tarzzz/1656.embed
 arrangement: horizontal
 language: matlab
 suite: quiver-plots
 order: 0
 sitemap: false
 ---
-
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
 
 data = {...
   struct(...
@@ -18,6 +15,7 @@ data = {...
     'mode', 'lines', ...
     'type', 'scatter')
 };
+
 layout = struct('hovermode', 'closest');
-response = plotly(data, struct('layout', layout));
-plot_url = response.url
+
+plotly(data, struct('layout', layout));

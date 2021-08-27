@@ -1,18 +1,15 @@
 ---
 name: Simple Contour Plot
-plot_url: https://plotly.com/~jackp/3835
+plot_url: https://plotly.com/~jackp/3835.embed
 arrangement: horizontal
 language: matlab
 suite: contour
 order: 0
 sitemap: false
 ---
-% Learn about API authentication here: https://plotly.com/matlab/getting-started
-% Find your api_key here: https://plotly.com/settings/api
+
 
 [X,Y,Z] = peaks;
 contour(X,Y,Z,20)
 
-% PLOTLY
-response = fig2plotly();
-plotly_url = response.url;
+fig2plotly();

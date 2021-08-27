@@ -1,6 +1,6 @@
 ---
 name: Asymmetric Error Bars with a Constant Offset
-plot_url: https://plotly.com/~PlotBot/46
+plot_url: https://plotly.com/~PlotBot/46.embed
 arrangement: horizontal
 language: matlab
 suite: error-bar
@@ -19,5 +19,5 @@ data = {...
       'valueminus', 25), ...
     'type', 'scatter')...
 };
-response = plotly(data, struct('filename', 'error-bar-asymmetric-constant', 'fileopt', 'overwrite'));
-plot_url = response.url
+
+plotly(data);

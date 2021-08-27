@@ -1,6 +1,6 @@
 ---
 name: Basic Symmetric Error Bars
-plot_url: https://plotly.com/~PlotBot/45
+plot_url: https://plotly.com/~PlotBot/45.embed
 arrangement: horizontal
 language: matlab
 suite: error-bar
@@ -18,5 +18,5 @@ data = {...
       'visible', true), ...
     'type', 'scatter')...
 };
-response = plotly(data, struct('filename', 'basic-error-bar', 'fileopt', 'overwrite'));
-plot_url = response.url
+
+plotly(data);
