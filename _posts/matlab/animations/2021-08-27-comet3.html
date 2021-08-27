@@ -1,0 +1,69 @@
+---
+name: comet3
+plot_url: https://chart-studio.plotly.com/~danton267/29.embed
+arrangement: horizontal
+language: matlab
+suite: animations
+order: 1
+sitemap: false
+---
+
+[xmat,ymat,zmat] = peaks(100); 
+xvec = xmat(:);
+yvec = ymat(:);
+zvec = zmat(:);
+comet3(xvec,yvec,zvec)
+fig2plotly()
+
+
+{% include posts/ssim_frame.html 
+  src="https://chart-studio.plotly.com/~danton267/29.embed" 
+  ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/animation/comet3/plot_0_0_create_3_d_comet_plot_montage.png" 
+  compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/animation/comet3/plot_0_0_create_3_d_comet_plot_ssim_map.png" 
+  index=11
+%}
+
+
+
+
+[xmat,ymat,zmat] = peaks(100); 
+xvec = xmat(:);
+yvec = ymat(:);
+zvec = zmat(:);
+p = 0.5;
+comet3(xvec,yvec,zvec,p)
+fig2plotly()
+
+
+{% include posts/ssim_frame.html 
+  src="https://chart-studio.plotly.com/~danton267/31.embed" 
+  ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/animation/comet3/plot_1_0_control_comet_body_length_montage.png" 
+  compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/animation/comet3/plot_1_0_control_comet_body_length_ssim_map.png" 
+  index=12
+%}
+
+
+
+[xmat,ymat,zmat] = peaks(50); 
+xvec = xmat(:);
+yvec = ymat(:);
+zvec = zmat(:);
+p = 0.25;
+
+tiledlayout(1,2);
+ax1 = nexttile;
+ax2 = nexttile;
+
+comet3(ax1,xvec,yvec,zvec,p)
+comet3(ax2,yvec,xvec,zvec,p)
+fig2plotly()
+
+
+{% include posts/ssim_frame.html 
+  src="https://chart-studio.plotly.com/~danton267/977.embed" 
+  ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/animation/comet3/plot_2_0_plot_data_in_specified_axes_montage.png" 
+  compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/animation/comet3/plot_2_0_plot_data_in_specified_axes_ssim_map.png" 
+  index=13
+%}
+
+

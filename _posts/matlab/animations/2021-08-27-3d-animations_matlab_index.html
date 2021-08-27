@@ -1,0 +1,12 @@
+---
+name: Intro to Animations
+permalink: matlab/animations/
+description: An introduction to creating animations with Plotly in MATLAB<sup>&reg;</sup>.
+layout: base
+thumbnail: thumbnail/mixed.jpg
+language: matlab
+page_type: example_index
+display_as: animations
+---
+{% assign examples = site.posts | where:"language","matlab" | where:"suite","animations" | sort: "order" %}
+{% include posts/auto_examples.html examples=examples %}
