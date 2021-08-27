@@ -3,8 +3,8 @@ name: Quadratic surface in its General Form
 plot_url: https://plotly.com/~tarzzz/2114
 arrangement: horizontal
 language: matlab
-suite: 3d-surface
-order: 2
+suite: 3d-charts
+order: 8
 sitemap: false
 description: Inspired from <a href="http://stackoverflow.com/questions/15098980/plot-quadric-surfaces-in-general-form-in-matlab">Stack Overflow</a>
 ---
@@ -16,5 +16,4 @@ F = xx.^2 + 2*yy.^2 + 0.5*zz.^2 + .4*xx.*yy + .5*xx.*zz + .6*yy.*zz + 7*xx + 8*y
 fig = figure
 isosurface(xx, yy, zz, F, 0)
 
-resp = fig2plotly(fig,'strip',false)
-plotly_url = resp.url
+fig2plotly(fig,'strip',false)
