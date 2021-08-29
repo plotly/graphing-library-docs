@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB polarbubblechart
 description: Learn how to make 5 polarbubblechart charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/polar-plots/2021-08-29-polarbubblechart/
+permalink: /matlab/polar-plots/polarbubblechart/
 layout: matlab
 function: polarbubblechart
 reference: https://mathworks.com/help/matlab/ref/polarbubblechart.html

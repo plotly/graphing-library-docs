@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB geoscatter
 description: Learn how to make 2 geoscatter charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/geographic-plots/2021-08-29-geoscatter/
+permalink: /matlab/geographic-plots/geoscatter/
 layout: matlab
 function: geoscatter
 reference: https://mathworks.com/help/matlab/ref/geoscatter.html

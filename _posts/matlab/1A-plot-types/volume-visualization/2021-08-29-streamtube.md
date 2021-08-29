@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB streamtube
 description: Learn how to make 2 streamtube charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/volume-visualization/2021-08-29-streamtube/
+permalink: /matlab/volume-visualization/streamtube/
 layout: matlab
 function: streamtube
 reference: https://mathworks.com/help/matlab/ref/streamtube.html

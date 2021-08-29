@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB streamribbon
 description: Learn how to make 4 streamribbon charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/volume-visualization/2021-08-29-streamribbon/
+permalink: /matlab/volume-visualization/streamribbon/
 layout: matlab
 function: streamribbon
 reference: https://mathworks.com/help/matlab/ref/streamribbon.html

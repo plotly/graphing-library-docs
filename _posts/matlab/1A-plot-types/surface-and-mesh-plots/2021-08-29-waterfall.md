@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB waterfall
 description: Learn how to make 4 waterfall charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/surface-and-mesh-plots/2021-08-29-waterfall/
+permalink: /matlab/surface-and-mesh-plots/waterfall/
 layout: matlab
 function: waterfall
 reference: https://mathworks.com/help/matlab/ref/waterfall.html

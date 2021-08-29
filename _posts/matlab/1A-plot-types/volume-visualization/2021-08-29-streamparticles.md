@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB streamparticles
 description: Learn how to make 1 streamparticles charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/volume-visualization/2021-08-29-streamparticles/
+permalink: /matlab/volume-visualization/streamparticles/
 layout: matlab
 function: streamparticles
 reference: https://mathworks.com/help/matlab/ref/streamparticles.html

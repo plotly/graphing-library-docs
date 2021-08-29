@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB polarscatter
 description: Learn how to make 6 polarscatter charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/polar-plots/2021-08-29-polarscatter/
+permalink: /matlab/polar-plots/polarscatter/
 layout: matlab
 function: polarscatter
 reference: https://mathworks.com/help/matlab/ref/polarscatter.html

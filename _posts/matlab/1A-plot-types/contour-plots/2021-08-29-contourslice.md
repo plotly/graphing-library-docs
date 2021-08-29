@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB contourslice
 description: Learn how to make 4 contourslice charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/contour-plots/2021-08-29-contourslice/
+permalink: /matlab/contour-plots/contourslice/
 layout: matlab
 function: contourslice
 reference: https://mathworks.com/help/matlab/ref/contourslice.html

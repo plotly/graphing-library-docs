@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB scatterhistogram
 description: Learn how to make 7 scatterhistogram charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/data-distribution-plots/2021-08-29-scatterhistogram/
+permalink: /matlab/data-distribution-plots/scatterhistogram/
 layout: matlab
 function: scatterhistogram
 reference: https://mathworks.com/help/matlab/ref/scatterhistogram.html

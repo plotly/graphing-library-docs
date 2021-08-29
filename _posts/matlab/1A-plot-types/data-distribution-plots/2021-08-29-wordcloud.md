@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB wordcloud
 description: Learn how to make 5 wordcloud charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/data-distribution-plots/2021-08-29-wordcloud/
+permalink: /matlab/data-distribution-plots/wordcloud/
 layout: matlab
 function: wordcloud
 reference: https://mathworks.com/help/matlab/ref/wordcloud.html

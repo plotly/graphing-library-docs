@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB animatedline
 description: Learn how to make 6 animatedline charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/animation/2021-08-29-animatedline/
+permalink: /matlab/animation/animatedline/
 layout: matlab
 function: animatedline
 reference: https://mathworks.com/help/matlab/ref/animatedline.html

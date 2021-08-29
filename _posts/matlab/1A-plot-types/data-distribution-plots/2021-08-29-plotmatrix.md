@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB plotmatrix
 description: Learn how to make 4 plotmatrix charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/data-distribution-plots/2021-08-29-plotmatrix/
+permalink: /matlab/data-distribution-plots/plotmatrix/
 layout: matlab
 function: plotmatrix
 reference: https://mathworks.com/help/matlab/ref/plotmatrix.html

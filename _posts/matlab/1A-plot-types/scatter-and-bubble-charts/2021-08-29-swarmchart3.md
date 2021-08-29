@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB swarmchart3
 description: Learn how to make 6 swarmchart3 charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/scatter-and-bubble-charts/2021-08-29-swarmchart3/
+permalink: /matlab/scatter-and-bubble-charts/swarmchart3/
 layout: matlab
 function: swarmchart3
 reference: https://mathworks.com/help/matlab/ref/swarmchart3.html

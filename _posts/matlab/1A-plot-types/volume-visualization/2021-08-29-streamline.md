@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB streamline
 description: Learn how to make 1 streamline charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/volume-visualization/2021-08-29-streamline/
+permalink: /matlab/volume-visualization/streamline/
 layout: matlab
 function: streamline
 reference: https://mathworks.com/help/matlab/ref/streamline.html

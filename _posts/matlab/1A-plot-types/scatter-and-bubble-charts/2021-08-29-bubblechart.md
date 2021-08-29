@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB bubblechart
 description: Learn how to make 6 bubblechart charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/scatter-and-bubble-charts/2021-08-29-bubblechart/
+permalink: /matlab/scatter-and-bubble-charts/bubblechart/
 layout: matlab
 function: bubblechart
 reference: https://mathworks.com/help/matlab/ref/bubblechart.html

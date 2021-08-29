@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB polarhistogram
 description: Learn how to make 4 polarhistogram charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/polar-plots/2021-08-29-polarhistogram/
+permalink: /matlab/polar-plots/polarhistogram/
 layout: matlab
 function: polarhistogram
 reference: https://mathworks.com/help/matlab/ref/polarhistogram.html

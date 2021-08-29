@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB histogram
 description: Learn how to make 10 histogram charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/data-distribution-plots/2021-08-29-histogram/
+permalink: /matlab/data-distribution-plots/histogram/
 layout: matlab
 function: histogram
 reference: https://mathworks.com/help/matlab/ref/matlab.graphics.chart.primitive.histogram.html

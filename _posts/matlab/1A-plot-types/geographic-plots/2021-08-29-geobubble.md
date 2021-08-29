@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB geobubble
 description: Learn how to make 4 geobubble charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/geographic-plots/2021-08-29-geobubble/
+permalink: /matlab/geographic-plots/geobubble/
 layout: matlab
 function: geobubble
 reference: https://mathworks.com/help/matlab/ref/geobubble.html

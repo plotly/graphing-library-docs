@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB polarplot
 description: Learn how to make 8 polarplot charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/polar-plots/2021-08-29-polarplot/
+permalink: /matlab/polar-plots/polarplot/
 layout: matlab
 function: polarplot
 reference: https://mathworks.com/help/matlab/ref/polarplot.html

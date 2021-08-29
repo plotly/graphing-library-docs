@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB streamslice
 description: Learn how to make 1 streamslice charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/volume-visualization/2021-08-29-streamslice/
+permalink: /matlab/volume-visualization/streamslice/
 layout: matlab
 function: streamslice
 reference: https://mathworks.com/help/matlab/ref/streamslice.html

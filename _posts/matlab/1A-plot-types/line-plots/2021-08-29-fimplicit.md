@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB fimplicit
 description: Learn how to make 4 fimplicit charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/line-plots/2021-08-29-fimplicit/
+permalink: /matlab/line-plots/fimplicit/
 layout: matlab
 function: fimplicit
 reference: https://mathworks.com/help/matlab/ref/fimplicit.html

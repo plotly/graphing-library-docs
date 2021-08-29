@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB bubblecloud
 description: Learn how to make 4 bubblecloud charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/data-distribution-plots/2021-08-29-bubblecloud/
+permalink: /matlab/data-distribution-plots/bubblecloud/
 layout: matlab
 function: bubblecloud
 reference: https://mathworks.com/help/matlab/ref/bubblecloud.html

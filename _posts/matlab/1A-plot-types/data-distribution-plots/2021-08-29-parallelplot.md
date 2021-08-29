@@ -2,7 +2,7 @@
 layout: post
 title:  MATLAB parallelplot
 description: Learn how to make 6 parallelplot charts in MATLAB, then publish them to the Web with Plotly.
-permalink: /matlab/data-distribution-plots/2021-08-29-parallelplot/
+permalink: /matlab/data-distribution-plots/parallelplot/
 layout: matlab
 function: parallelplot
 reference: https://mathworks.com/help/matlab/ref/parallelplot.html
