@@ -1,0 +1,22 @@
+---
+name: Creating Graph from Excel File
+plot_url: https://chart-studio.plotly.com/~jolinos/200.embed
+arrangement: horizontal
+language: matlab
+suite: line_exclusive
+order: 1
+sitemap: false
+---
+
+url = 'https://github.com/plotly/datasets/raw/master/data-matlab-excel-example.xlsx';
+websave('data-matlab-excel-example.xlsx',url);
+
+[v,T,vT] = xlsread('data-matlab-excel-example.xlsx','Sheet1','A1:B13'); 
+
+x = v(:,1);
+y = v(:,2);
+
+plot(x,y);
+title('Plotting from Excel Data');
+
+fig2plotly();
