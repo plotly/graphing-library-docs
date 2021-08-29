@@ -1,0 +1,16 @@
+---
+name: Quantile Plot (qqplot) with two distributions
+plot_url: https://chart-studio.plotly.com/~jolinos/224.embed
+arrangement: horizontal
+language: matlab
+suite: line-and-scatter
+order: 3
+sitemap: false
+---
+
+load gas
+fig = figure;
+qqplot(price1,price2);
+title('Quantile Quantile Plot with two distributions')
+
+fig2plotly(fig, 'strip', false)
