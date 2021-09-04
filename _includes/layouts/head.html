@@ -41,7 +41,7 @@
   <script src="https://cdn.plot.ly/plotly-{{site.data.jsversion.version}}.min.js"></script>
 
   {% endif %}
-  {% if page.language == "julia" %}
+  {% if page.language == "julia" or page.language == "matlab" %}
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js"></script>
   <script type="text/javascript">
     if (typeof require !== 'undefined') {

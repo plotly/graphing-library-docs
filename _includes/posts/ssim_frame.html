@@ -18,6 +18,10 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="plot-{{randomNumberPlot}}" role="tabpanel" aria-labelledby="plot-tab">
+	
+	
+	{% if include.src  %}
+	
     <iframe 
       scrolling="no" 
       margin="none" 
@@ -28,7 +32,16 @@
       style="border:0"
       src="{{ include.src }}" 
       width="800">
-    </iframe>    
+    </iframe>   
+	{% else %}
+	<p> test</p>
+	{% endif %}
+	
+	{% raw %}
+	<p>{{include.src}}</p>
+	<p>{ { include.src } }</p>
+	<p>{{{include.src}}}</p>
+	{% endraw %} 
   </div>
   <div class="tab-pane fade" id="ssim-{{randomNumberSSIM}}" role="tabpanel" aria-labelledby="ssim-tab">
     <img src="{{ include.compare }}">
