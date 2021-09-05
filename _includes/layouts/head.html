@@ -17,11 +17,23 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
+	
   {% if page.layout == "base" %}
   {% if page.language != "python" %}
   <!-- code highlighting -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  {% endif %}
+  
+  {% if page.language == "matlab" %}
+	<link rel="stylesheet" 
+		  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+		  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+		  crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
+		  integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+		  crossorigin="anonymous">
+	</script>
   {% endif %}
 
   <!-- Mathjax -->
