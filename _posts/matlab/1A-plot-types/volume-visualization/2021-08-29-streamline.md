@@ -32,6 +32,32 @@ streamline(x,y,u,v,startx,starty)
 fig2plotly()
 </pre>
 
+
+{% raw %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js"></script>
+<script type="text/javascript">
+    if (typeof require !== 'undefined') {
+      require.undef("plotly");
+      requirejs.config({
+        paths: {
+          'plotly': ['https://cdn.plot.ly/plotly-2.4.2.min']
+        }
+      });
+      require(['plotly'], function (Plotly) {
+        window._Plotly = Plotly;
+      });
+    }
+</script>
+<script>
+  window.ALGOLIA_CONFIG = {
+    'applicationId': '7EK9KHJW8M',
+    'indexName': 'python_docs',
+    'apiKey': '4dae07ded6a721de73bde7356eec9280',
+    'baseurl': '/'
+  }
+</script>
+{% endraw %}
+
 {% include posts/ssim_frame.html 
   src="https://chart-studio.plotly.com/~danton267/952.embed" 
   ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_matlab/matlab/code-examples/volume-visualization/streamline/plot_0_0_draw_streamlines_montage.png" 
