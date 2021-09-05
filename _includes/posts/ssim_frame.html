@@ -33,33 +33,20 @@
 	</div>
 	
 	{% else %}
-	<div id="plot-{{randomNumberPlot}}" class="plotly-graph-div js-plotly-plot" style="height:525px; width:100%;"></div>
+	<div id="plot-{{randomNumberPlot}}" class="plotly-graph-div js-plotly-plot tab-pane fade show active" role="tabpanel"></div>
 	
 	
 	{% raw %}
 	<script type = "text/javascript" > require(["plotly"], function(Plotly) {
 		window.PLOTLYENV = window.PLOTLYENV || {};
-		if (document.getElementById(
-									{% endraw %} 
-									plot-{{randomNumberPlot}}
-									{% raw %}
+		if (document.getElementById("{% endraw %}plot-{{randomNumberPlot}}{% raw %}"
 		)) {
-			Plotly.newPlot(
-							{% endraw %} 
-							plot-{{randomNumberPlot}}
-							{% raw %}, 
-							{% endraw %} 
-							{{ include.raw_json_file }}
-							{% raw %},
+			Plotly.newPlot("{% endraw %}plot-{{randomNumberPlot}}{% raw %}", 
+							{% endraw %} {{ include.raw_json_file }} {% raw %},
 				{"responsive": true} 
-			
 			).then(function() {
 
-				var gd = document.getElementById(
-												{% endraw %} 
-												plot-{{randomNumberPlot}}
-												{% raw %}, 
-												);
+				var gd = document.getElementById("{% endraw %}plot-{{randomNumberPlot}}{% raw %}");
 				var x = new MutationObserver(function(mutations, observer) {
 					{
 						var display = window.getComputedStyle(gd).display;
