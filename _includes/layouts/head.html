@@ -69,6 +69,19 @@
   <!--
       //// Stylesheets
       -->
+	  
+  {% if page.language == "matlab" %}
+  <style>
+	.mcode { border: 1px solid #cfcfcf; border-radius: 2px; background: #f7f7f7; padding: 10px; }
+  </style>
+  {% endif %}
+  
+  {% if page.language == "ggplot2" %}
+  <style>
+	.mcode { border: 1px solid #cfcfcf; border-radius: 2px; background: #f7f7f7; padding: 10px; }
+	.wcode { border: 1px solid #cfcfcf; border-radius: 2px; background: #ffffff ; padding: 10px; }
+  </style>
+  {% endif %}
 
   <!-- Fonts -->
   <link
