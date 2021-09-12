@@ -51,8 +51,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_371
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example1_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example1_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example1_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example1_montage.png
 %}
 
 
@@ -95,8 +95,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_372
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example2_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example2_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example2_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example2_montage.png
 %}
 
 
@@ -139,8 +139,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_373
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example3_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example3_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example3_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example3_montage.png
 %}
 
 
@@ -183,8 +183,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_374
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example4_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example4_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example4_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example4_montage.png
 %}
 
 
@@ -227,8 +227,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_375
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example5_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example5_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example5_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example5_montage.png
 %}
 
 
@@ -271,8 +271,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_376
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example6_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example6_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example6_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example6_montage.png
 %}
 
 
@@ -315,8 +315,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_377
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example7_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example7_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example7_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example7_montage.png
 %}
 
 
@@ -359,8 +359,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_378
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example8_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example8_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example8_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example8_montage.png
 %}
 
 
@@ -386,8 +386,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_379
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example9_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example9_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example9_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example9_montage.png
 %}
 
 
@@ -413,8 +413,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_380
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example10_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example10_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example10_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example10_montage.png
 %}
 
 
@@ -440,8 +440,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_381
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example11_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example11_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example11_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example11_montage.png
 %}
 
 
@@ -467,8 +467,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_382
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example12_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example12_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example12_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example12_montage.png
 %}
 
 
@@ -494,8 +494,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_383
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example13_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example13_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example13_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example13_montage.png
 %}
 
 
@@ -521,8 +521,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_384
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example14_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example14_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example14_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example14_montage.png
 %}
 
 
@@ -548,8 +548,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_385
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example15_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example15_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example15_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example15_montage.png
 %}
 
 
@@ -575,8 +575,8 @@ plotly::ggplotly(p)
 {% endcapture %}
 {% include posts/ssim_frame.html
     raw_json_file=plot_386
-    ssim = "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example16_ssim_map.png" 
-    compare= "https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example16_montage.png
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example16_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Themes/theme_grey/example16_montage.png
 %}
 
 
