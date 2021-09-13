@@ -1,4 +1,6 @@
 {% assign post_array = "" | split: ',' %}
+{% assign link1 %}
+
 {% assign link = page.permalink | split: '/' | last %}
 {% for post in site.posts %}
 {% assign link_post = post.permalink | split: '/' | last %}
