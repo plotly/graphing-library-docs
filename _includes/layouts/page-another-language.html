@@ -1,8 +1,8 @@
 {% assign post_array = "" | split: ',' %}
-{% assign split_page = "/" | append: page.language | append: "/" %}
+{% assign split_page = page.language | append: "/" %}
 {% assign link = page.permalink | split: split_page | last %}
 {% for post in site.posts %}
-{% assign split_post = "/" | append: page.language | append: "/" %}
+{% assign split_post = post.language | append: "/" %}
 {% assign link_post = post.permalink | split: split_post | last %}
 {% if post.permalink contains '/reference' or post.permalink contains '/next' or post.permalink contains '/v3' or
 post.permalink contains 'nodejs/' or post.permalink contains 'javascript/' or post.permalink contains 'scala/' %}
