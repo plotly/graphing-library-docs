@@ -1529,8 +1529,9 @@ header.header-main {
 
 .\--wrap {
   width: 95%;
-  max-width: 1440px;
-  margin: auto; }
+  max-width: 4000px;
+  margin: auto; 
+}
 
 .plotly-social-media-small li:hover a div.icon {
   opacity: 1; }
@@ -1627,7 +1628,8 @@ header.header-main {
   text-decoration: none; }
 
 .\--page.\--index .\--wrap {
-  position: relative; }
+  position: relative; 
+}
   .\--page.\--index .\--wrap::before {
     content: '';
     height: 100%;
@@ -1637,7 +1639,8 @@ header.header-main {
     top: 0;
     position: absolute;
     background: #0e1012;
-    z-index: -1; }
+    z-index: -1; 
+  }
 
 .\--page-body {
   background: white; }
