@@ -99,7 +99,8 @@
                 <input id="modal-input" style="border-radius: 5px; width: 100%;"  type="text" placeholder="   Search..." readonly/>
                 </button>
         {% endif %}
-        <header class="--sidebar-header">Quick Start</header>
+        <details style="color: white;margin-top: 20px;">
+        <summary>Quick start</summary>
         <nav class="--sidebar-body watch" id="where">
             <ul class="--sidebar-list">
                 <!-- Getting Started -->
@@ -218,10 +219,12 @@
 
             </ul>
         </nav>
+        </details>
 
         {% if page.language != "matlab" %}
         <!-- Examples start -->
-        <header class="--sidebar-header">Examples</header>
+        <details style="color: white;margin-top: 20px;" open>
+        <summary>Examples</summary>
         <nav class="--sidebar-body watch" id="where">
             <ul class="--sidebar-list">
                 {% if file_settings == true %}
@@ -548,6 +551,7 @@
                 {% endif %}
             </ul>
         </nav>
+        </details>
         {% endif %}
     </div>
 </aside>
