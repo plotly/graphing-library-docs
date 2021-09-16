@@ -1,5 +1,5 @@
 ---
-  description: Creates position related aesthetics: x, y, xmin, xmax, ymin, ymax, xend, yend and then convert them with ggplotly
+  description: Creates position related aesthetics for x, y, xmin, xmax, ymin, ymax, xend, yend and then convert them with ggplotly
   function: aes_position
   permalink: /ggplot2/aesthetics/aes_position/
   layout: base

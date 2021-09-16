@@ -1,5 +1,5 @@
 ---
-  description: 
+  description: Draws a straight line between points in the chart and then convert them with ggplotly
   function: geom_segment
   permalink: /ggplot2/layers/geoms/geom_segment/
   layout: base
@@ -8,7 +8,7 @@
   reference: https://ggplot2.tidyverse.org/reference/
 ---
 
-Draws a straight line between points in the chart and then convert them with ggplotly
+# Adding segment and a curve
 
 
 <pre class="mcode">
@@ -19,19 +19,11 @@ p <-
  b +
  geom_curve(aes(x = x1, y = y1, xend = x2, yend = y2, colour = "curve"), data = df) +
  geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2, colour = "segment"), data = df)
-</pre>
-
-
-<pre class="mcode">
+ 
 plotly::ggplotly(p)
 </pre>
 
-<pre class="wcode">
-## Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomCurve() has yet to be implemented in plotly.
-##   If you'd like to see this geom implemented,
-##   Please open an issue with your example code at
-##   https://github.com/ropensci/plotly/issues
-</pre>
+
 
 {% capture plot_14 %}
   {% raw %}
@@ -47,25 +39,15 @@ plotly::ggplotly(p)
 
 
 
-
 <pre class="mcode">
 b <- ggplot(mtcars, aes(wt, mpg)) +
   geom_point()
 df <- data.frame(x1 = 2.62, x2 = 3.57, y1 = 21.0, y2 = 15.0)
 p <- b + geom_curve(aes(x = x1, y = y1, xend = x2, yend = y2), data = df, curvature = -0.2)
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
 
-<pre class="wcode">
-## Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomCurve() has yet to be implemented in plotly.
-##   If you'd like to see this geom implemented,
-##   Please open an issue with your example code at
-##   https://github.com/ropensci/plotly/issues
-</pre>
 
 {% capture plot_15 %}
   {% raw %}
@@ -87,19 +69,10 @@ b <- ggplot(mtcars, aes(wt, mpg)) +
   geom_point()
 df <- data.frame(x1 = 2.62, x2 = 3.57, y1 = 21.0, y2 = 15.0)
 p <- b + geom_curve(aes(x = x1, y = y1, xend = x2, yend = y2), data = df, curvature = 1)
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
 
-<pre class="wcode">
-## Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomCurve() has yet to be implemented in plotly.
-##   If you'd like to see this geom implemented,
-##   Please open an issue with your example code at
-##   https://github.com/ropensci/plotly/issues
-</pre>
 
 {% capture plot_16 %}
   {% raw %}
@@ -127,18 +100,8 @@ p <-
   data = df,
   arrow = arrow(length = unit(0.03, "npc"))
 )
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
-</pre>
-
-<pre class="wcode">
-## Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomCurve() has yet to be implemented in plotly.
-##   If you'd like to see this geom implemented,
-##   Please open an issue with your example code at
-##   https://github.com/ropensci/plotly/issues
 </pre>
 
 {% capture plot_17 %}
@@ -154,7 +117,7 @@ plotly::ggplotly(p)
 
 
 
-
+# Adding arrows to a map
 
 <pre class="mcode">
 p <-   
@@ -162,12 +125,11 @@ p <-
   geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat),
     arrow = arrow(length = unit(0.1,"cm"))) +
   borders("state")
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
+
+
 
 {% capture plot_18 %}
   {% raw %}
@@ -182,7 +144,7 @@ plotly::ggplotly(p)
 
 
 
-
+# Changing  style of segments
 
 
 <pre class="mcode">
@@ -200,10 +162,7 @@ p <-
   ) +
   geom_text(hjust = 'outside', nudge_x = -0.2) +
   xlim(0.5, 2)
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
@@ -216,54 +175,5 @@ plotly::ggplotly(p)
     raw_json_file=plot_19
     ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_segment/example6_ssim_map.png" 
     compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_segment/example6_montage.png"
-%}
-
-
-
-
-
-<pre class="mcode">
-counts <- as.data.frame(table(x = rpois(100,5)))
-counts$x <- as.numeric(as.character(counts$x))
-p <-   
- with(counts, plot(x, Freq, type = "h", lwd = 10))
-</pre>
-
-
-<pre class="mcode">
-plotly::ggplotly(p)
-</pre>
-
-
-
-<pre class="wcode">
-## Error in UseMethod("api_create"): no applicable method for 'api_create' applied to an object of class "shiny.tag"
-</pre>
-
-
-
-
-<pre class="mcode">
-counts <- as.data.frame(table(x = rpois(100,5)))
-counts$x <- as.numeric(as.character(counts$x))
-p <-   
- ggplot(counts, aes(x, Freq)) +
-  geom_segment(aes(xend = x, yend = 0), size = 10, lineend = "butt")
-</pre>
-
-
-<pre class="mcode">
-plotly::ggplotly(p)
-</pre>
-
-{% capture plot_20 %}
-  {% raw %}
-    {"data":[{"line":{"dash":"solid","color":"rgba(0,0,0,1)","width":37.7952755905512},"mode":"lines","type":"scatter","xsrc":"nadhil3:28:346be2","x":[0,0,null,1,1,null,2,2,null,3,3,null,4,4,null,5,5,null,6,6,null,7,7,null,8,8,null,9,9,null,11,11],"ysrc":"nadhil3:28:4c578d","y":[2,0,null,5,0,null,6,0,null,17,0,null,14,0,null,12,0,null,14,0,null,14,0,null,10,0,null,5,0,null,1,0],"frame":null,"xaxis":"x","yaxis":"y","hoveron":"points","textsrc":"nadhil3:28:4ef486","text":["x:0Freq:2x:0yend:0","x:0Freq:2x:0yend:0",null,"x:1Freq:5x:1yend:0","x:1Freq:5x:1yend:0",null,"x:2Freq:6x:2yend:0","x:2Freq:6x:2yend:0",null,"x:3Freq:17x:3yend:0","x:3Freq:17x:3yend:0",null,"x:4Freq:14x:4yend:0","x:4Freq:14x:4yend:0",null,"x:5Freq:12x:5yend:0","x:5Freq:12x:5yend:0",null,"x:6Freq:14x:6yend:0","x:6Freq:14x:6yend:0",null,"x:7Freq:14x:7yend:0","x:7Freq:14x:7yend:0",null,"x:8Freq:10x:8yend:0","x:8Freq:10x:8yend:0",null,"x:9Freq:5x:9yend:0","x:9Freq:5x:9yend:0",null,"x:11Freq:1x:11yend:0","x:11Freq:1x:11yend:0"],"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[-0.55,11.55],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"x"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["0","3","6","9"],"tickvals":[0,3,6,9],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["0","3","6","9"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[-0.85,17.85],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"Freq"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["0","5","10","15"],"tickvals":[1.11022302462516e-16,5,10,15],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["0","5","10","15"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":37.2602739726027,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
-  {% endraw %}
-{% endcapture %}
-{% include posts/ssim_frame.html
-    raw_json_file=plot_20
-    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_segment/example8_ssim_map.png" 
-    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_segment/example8_montage.png"
 %}
 

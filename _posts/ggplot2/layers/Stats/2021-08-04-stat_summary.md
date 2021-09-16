@@ -254,8 +254,6 @@ p <- ggplot(mtcars, aes(cyl, mpg)) +
 p <-  p + ylim(15, 30)
 
 plotly::ggplotly(p)
-
-## Warning: Removed 9 rows containing non-finite values (stat_summary).
 </pre>
 
 

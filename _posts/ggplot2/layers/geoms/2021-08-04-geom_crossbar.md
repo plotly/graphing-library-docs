@@ -123,7 +123,7 @@ plotly::ggplotly(p)
 %}
 
 
-# Flip orientation
+# Flip plot orientation
 
 <pre class="mcode">
 df <- data.frame(
