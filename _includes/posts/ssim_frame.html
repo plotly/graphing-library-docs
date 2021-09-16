@@ -11,7 +11,7 @@
 
 
 
-{% if include.ssim != ""  %}
+{% if include.ssim == ""  %}
 	{% if include.src  %}
 	<div id="plot-{{randomNumberPlot}}">
 		<iframe 
@@ -83,15 +83,21 @@
 		
 	{% endif %}
 
+
+
 {% else %}
-	<ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#home">Plot</a></li>
-		<li><a data-toggle="tab" href="#menu1">SSIM</a></li>
-	</ul>
+	<ul class="nav nav-tabs">  
+		<li class="active">
+			<a data-toggle="tab" href="#plot-{{randomNumberPlot}}">Plot</a>
+		</li>  
+		<li>
+			<a data-toggle="tab" href="#ssim-{{randomNumberSSIM}}">SSIM</a>
+		</li>  
+	</ul>  
 	
-	<div class="tab-content" id="ssim-{{randomNumberSSIM}}">
+	<div class="tab-content" id="myTabContent">
 		{% if include.src  %}
-		<div id="home" class="tab-pane fade in active" >
+		<div id="plot-{{randomNumberPlot}}" class="tab-pane fade in active">  
 			<iframe 
 				scrolling="no" 
 				margin="none" 
@@ -106,7 +112,7 @@
 		</div>
 		
 		{% else %}
-		<div id="plot-{{randomNumberPlot}}" class="plotly-graph-div js-plotly-plot tab-pane fade show active" role="tabpanel"></div>
+		<div id="plot-{{randomNumberPlot}}" class="tab-pane fade in active plotly-graph-div js-plotly-plot">  
 		{% raw %}
 		<script type = "text/javascript" > require(["plotly"], function(Plotly) {
 			window.PLOTLYENV = window.PLOTLYENV || {};
@@ -159,8 +165,7 @@
 			
 		{% endif %}
 		
-		
-		<div id="menu1" class="tab-pane fade"  id="ssim-{{randomNumberSSIM}}">    
+		<div id="ssim-{{randomNumberSSIM}}" class="tab-pane fade">  
 			{% if page.language == "ggplot2"  %}
 				<img src="https://raw.githubusercontent.com/plotly/ssim_baselines/main/headers/chart-title-ggplot2.png" style="width:90%; height: 90%"/>
 			{% elsif page.language == "matlab" %}
