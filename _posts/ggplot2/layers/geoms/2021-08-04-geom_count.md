@@ -1,46 +1,58 @@
 ---
-layout: post
-title:  geom_count
-permalink: /ggplot2/layers/geoms/geom_count/
-layout: ggplot
-function: geom_count
-reference: https://ggplot2.tidyverse.org/reference/
-name: Layers/Geoms
+  description: Counts the number of observations at each location, then maps the count to point area and then convert them with ggplotly.
+  function: geom_count
+  permalink: /ggplot2/layers/geoms/geom_count/
+  layout: base
+  language: ggplot2
+  name: geom_count
+  reference: https://ggplot2.tidyverse.org/reference/
 ---
 
-Counts the number of observations at each location, then maps the count to point area and then convert them with ggplotly.
-
+# Default point plot
 
 <pre class="mcode">
 p <-    
  ggplot(mpg, aes(cty, hwy)) +
  geom_point()
-</pre>
-
-
-<pre class="mcode">
+ 
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg1.html src="https://plotly.com/~nadhil/170.embed" ssim="example1_ssim_map" compare="example1_montage" %}
 
+{% capture plot_97 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:169:29e115","x":[18,21,20,21,16,18,18,18,16,20,19,15,17,17,15,15,17,16,14,11,14,13,12,16,15,16,15,15,14,11,11,14,19,22,18,18,17,18,17,16,16,17,17,11,15,15,16,16,15,14,13,14,14,14,9,11,11,13,13,9,13,11,13,11,12,9,13,13,12,9,11,11,13,11,11,11,12,14,15,14,13,13,13,14,14,13,13,13,11,13,18,18,17,16,15,15,15,15,14,28,24,25,23,24,26,25,24,21,18,18,21,21,18,18,19,19,19,20,20,17,16,17,17,15,15,14,9,14,13,11,11,12,12,11,11,11,12,14,13,13,13,21,19,23,23,19,19,18,19,19,14,15,14,12,18,16,17,18,16,18,18,20,19,20,18,21,19,19,19,20,20,19,20,15,16,15,15,16,14,21,21,21,21,18,18,19,21,21,21,22,18,18,18,24,24,26,28,26,11,13,15,16,17,15,15,15,16,21,19,21,22,17,33,21,19,22,21,21,21,16,17,35,29,21,19,20,20,21,18,19,21,16,18,17],"ysrc":"nadhil:169:0f682d","y":[29,29,31,30,26,26,27,26,25,28,27,25,25,25,25,24,25,23,20,15,20,17,17,26,23,26,25,24,19,14,15,17,27,30,26,29,26,24,24,22,22,24,24,17,22,21,23,23,19,18,17,17,19,19,12,17,15,17,17,12,17,16,18,15,16,12,17,17,16,12,15,16,17,15,17,17,18,17,19,17,19,19,17,17,17,16,16,17,15,17,26,25,26,24,21,22,23,22,20,33,32,32,29,32,34,36,36,29,26,27,30,31,26,26,28,26,29,28,27,24,24,24,22,19,20,17,12,19,18,14,15,18,18,15,17,16,18,17,19,19,17,29,27,31,32,27,26,26,25,25,17,17,20,18,26,26,27,28,25,25,24,27,25,26,23,26,26,26,26,25,27,25,27,20,20,19,17,20,17,29,27,31,31,26,26,28,27,29,31,31,26,26,27,30,33,35,37,35,15,18,20,20,22,17,19,18,20,29,26,29,29,24,44,29,26,29,29,29,29,23,24,44,41,29,26,28,29,29,29,28,29,26,26,26],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:169:fa8897","text":["cty:18hwy:29","cty:21hwy:29","cty:20hwy:31","cty:21hwy:30","cty:16hwy:26","cty:18hwy:26","cty:18hwy:27","cty:18hwy:26","cty:16hwy:25","cty:20hwy:28","cty:19hwy:27","cty:15hwy:25","cty:17hwy:25","cty:17hwy:25","cty:15hwy:25","cty:15hwy:24","cty:17hwy:25","cty:16hwy:23","cty:14hwy:20","cty:11hwy:15","cty:14hwy:20","cty:13hwy:17","cty:12hwy:17","cty:16hwy:26","cty:15hwy:23","cty:16hwy:26","cty:15hwy:25","cty:15hwy:24","cty:14hwy:19","cty:11hwy:14","cty:11hwy:15","cty:14hwy:17","cty:19hwy:27","cty:22hwy:30","cty:18hwy:26","cty:18hwy:29","cty:17hwy:26","cty:18hwy:24","cty:17hwy:24","cty:16hwy:22","cty:16hwy:22","cty:17hwy:24","cty:17hwy:24","cty:11hwy:17","cty:15hwy:22","cty:15hwy:21","cty:16hwy:23","cty:16hwy:23","cty:15hwy:19","cty:14hwy:18","cty:13hwy:17","cty:14hwy:17","cty:14hwy:19","cty:14hwy:19","cty:9hwy:12","cty:11hwy:17","cty:11hwy:15","cty:13hwy:17","cty:13hwy:17","cty:9hwy:12","cty:13hwy:17","cty:11hwy:16","cty:13hwy:18","cty:11hwy:15","cty:12hwy:16","cty:9hwy:12","cty:13hwy:17","cty:13hwy:17","cty:12hwy:16","cty:9hwy:12","cty:11hwy:15","cty:11hwy:16","cty:13hwy:17","cty:11hwy:15","cty:11hwy:17","cty:11hwy:17","cty:12hwy:18","cty:14hwy:17","cty:15hwy:19","cty:14hwy:17","cty:13hwy:19","cty:13hwy:19","cty:13hwy:17","cty:14hwy:17","cty:14hwy:17","cty:13hwy:16","cty:13hwy:16","cty:13hwy:17","cty:11hwy:15","cty:13hwy:17","cty:18hwy:26","cty:18hwy:25","cty:17hwy:26","cty:16hwy:24","cty:15hwy:21","cty:15hwy:22","cty:15hwy:23","cty:15hwy:22","cty:14hwy:20","cty:28hwy:33","cty:24hwy:32","cty:25hwy:32","cty:23hwy:29","cty:24hwy:32","cty:26hwy:34","cty:25hwy:36","cty:24hwy:36","cty:21hwy:29","cty:18hwy:26","cty:18hwy:27","cty:21hwy:30","cty:21hwy:31","cty:18hwy:26","cty:18hwy:26","cty:19hwy:28","cty:19hwy:26","cty:19hwy:29","cty:20hwy:28","cty:20hwy:27","cty:17hwy:24","cty:16hwy:24","cty:17hwy:24","cty:17hwy:22","cty:15hwy:19","cty:15hwy:20","cty:14hwy:17","cty:9hwy:12","cty:14hwy:19","cty:13hwy:18","cty:11hwy:14","cty:11hwy:15","cty:12hwy:18","cty:12hwy:18","cty:11hwy:15","cty:11hwy:17","cty:11hwy:16","cty:12hwy:18","cty:14hwy:17","cty:13hwy:19","cty:13hwy:19","cty:13hwy:17","cty:21hwy:29","cty:19hwy:27","cty:23hwy:31","cty:23hwy:32","cty:19hwy:27","cty:19hwy:26","cty:18hwy:26","cty:19hwy:25","cty:19hwy:25","cty:14hwy:17","cty:15hwy:17","cty:14hwy:20","cty:12hwy:18","cty:18hwy:26","cty:16hwy:26","cty:17hwy:27","cty:18hwy:28","cty:16hwy:25","cty:18hwy:25","cty:18hwy:24","cty:20hwy:27","cty:19hwy:25","cty:20hwy:26","cty:18hwy:23","cty:21hwy:26","cty:19hwy:26","cty:19hwy:26","cty:19hwy:26","cty:20hwy:25","cty:20hwy:27","cty:19hwy:25","cty:20hwy:27","cty:15hwy:20","cty:16hwy:20","cty:15hwy:19","cty:15hwy:17","cty:16hwy:20","cty:14hwy:17","cty:21hwy:29","cty:21hwy:27","cty:21hwy:31","cty:21hwy:31","cty:18hwy:26","cty:18hwy:26","cty:19hwy:28","cty:21hwy:27","cty:21hwy:29","cty:21hwy:31","cty:22hwy:31","cty:18hwy:26","cty:18hwy:26","cty:18hwy:27","cty:24hwy:30","cty:24hwy:33","cty:26hwy:35","cty:28hwy:37","cty:26hwy:35","cty:11hwy:15","cty:13hwy:18","cty:15hwy:20","cty:16hwy:20","cty:17hwy:22","cty:15hwy:17","cty:15hwy:19","cty:15hwy:18","cty:16hwy:20","cty:21hwy:29","cty:19hwy:26","cty:21hwy:29","cty:22hwy:29","cty:17hwy:24","cty:33hwy:44","cty:21hwy:29","cty:19hwy:26","cty:22hwy:29","cty:21hwy:29","cty:21hwy:29","cty:21hwy:29","cty:16hwy:23","cty:17hwy:24","cty:35hwy:44","cty:29hwy:41","cty:21hwy:29","cty:19hwy:26","cty:20hwy:28","cty:20hwy:29","cty:21hwy:29","cty:18hwy:29","cty:19hwy:28","cty:21hwy:29","cty:16hwy:26","cty:18hwy:26","cty:17hwy:26"],"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[7.7,36.3],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"cty"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["10","15","20","25","30","35"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[10.4,45.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"hwy"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["20","30","40"],"tickvals":[20,30,40],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["20","30","40"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":37.2602739726027,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_97
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example1_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example1_montage.png"
+%}
 
-
+# Add size to data based on count
 
 <pre class="mcode">
 p <-    
  ggplot(mpg, aes(cty, hwy)) +
  geom_count()
-</pre>
-
-
-<pre class="mcode">
+ 
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg2.html src="https://plotly.com/~nadhil/172.embed" ssim="example2_ssim_map" compare="example2_montage" %}
 
+{% capture plot_98 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:171:400258","x":[9,11,11,11,11,12,12,12,13,13,13,13,14,14,14,14,15,15,15,15,15,15,15,15,15,16,16,16,16,16,16,17,17,17,17,17,18,18,18,18,18,18,18,19,19,19,19,19,20,20,20,20,20,20,21,21,21,21,21,22,22,22,23,23,23,24,24,24,24,25,25,26,26,28,28,29,33,35],"ysrc":"nadhil:171:75fb73","y":[12,14,15,16,17,16,17,18,16,17,18,19,17,18,19,20,17,18,19,20,21,22,23,24,25,20,22,23,24,25,26,22,24,25,26,27,23,24,25,26,27,28,29,25,26,27,28,29,25,26,27,28,29,31,26,27,29,30,31,29,30,31,29,31,32,30,32,33,36,32,36,34,35,33,37,41,44,44],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"sizesrc":"nadhil:171:b7d2fc","size":[14.2620509522878,9.02078925567146,19.5033126489041,11.1917909343566,14.2620509522878,9.02078925567146,3.77952755905512,14.2620509522878,9.02078925567146,21.1628260347931,11.1917909343566,12.8576591133593,19.5033126489041,3.77952755905512,12.8576591133593,12.8576591133593,11.1917909343566,3.77952755905512,14.2620509522878,11.1917909343566,9.02078925567146,11.1917909343566,9.02078925567146,9.02078925567146,11.1917909343566,12.8576591133593,9.02078925567146,12.8576591133593,9.02078925567146,9.02078925567146,14.2620509522878,9.02078925567146,16.6179443241592,11.1917909343566,11.1917909343566,3.77952755905512,3.77952755905512,9.02078925567146,9.02078925567146,22.6771653543307,11.1917909343566,3.77952755905512,11.1917909343566,12.8576591133593,17.6466025645104,12.8576591133593,11.1917909343566,3.77952755905512,3.77952755905512,3.77952755905512,12.8576591133593,11.1917909343566,3.77952755905512,3.77952755905512,3.77952755905512,9.02078925567146,22.6771653543307,9.02078925567146,12.8576591133593,9.02078925567146,3.77952755905512,3.77952755905512,3.77952755905512,3.77952755905512,3.77952755905512,3.77952755905512,9.02078925567146,3.77952755905512,3.77952755905512,3.77952755905512,3.77952755905512,3.77952755905512,9.02078925567146,3.77952755905512,3.77952755905512,3.77952755905512,3.77952755905512,3.77952755905512],"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:171:ee995a","text":["n:5cty:9hwy:12","n:2cty:11hwy:14","n:10cty:11hwy:15","n:3cty:11hwy:16","n:5cty:11hwy:17","n:2cty:12hwy:16","n:1cty:12hwy:17","n:5cty:12hwy:18","n:2cty:13hwy:16","n:12cty:13hwy:17","n:3cty:13hwy:18","n:4cty:13hwy:19","n:10cty:14hwy:17","n:1cty:14hwy:18","n:4cty:14hwy:19","n:4cty:14hwy:20","n:3cty:15hwy:17","n:1cty:15hwy:18","n:5cty:15hwy:19","n:3cty:15hwy:20","n:2cty:15hwy:21","n:3cty:15hwy:22","n:2cty:15hwy:23","n:2cty:15hwy:24","n:3cty:15hwy:25","n:4cty:16hwy:20","n:2cty:16hwy:22","n:4cty:16hwy:23","n:2cty:16hwy:24","n:2cty:16hwy:25","n:5cty:16hwy:26","n:2cty:17hwy:22","n:7cty:17hwy:24","n:3cty:17hwy:25","n:3cty:17hwy:26","n:1cty:17hwy:27","n:1cty:18hwy:23","n:2cty:18hwy:24","n:2cty:18hwy:25","n:14cty:18hwy:26","n:3cty:18hwy:27","n:1cty:18hwy:28","n:3cty:18hwy:29","n:4cty:19hwy:25","n:8cty:19hwy:26","n:4cty:19hwy:27","n:3cty:19hwy:28","n:1cty:19hwy:29","n:1cty:20hwy:25","n:1cty:20hwy:26","n:4cty:20hwy:27","n:3cty:20hwy:28","n:1cty:20hwy:29","n:1cty:20hwy:31","n:1cty:21hwy:26","n:2cty:21hwy:27","n:14cty:21hwy:29","n:2cty:21hwy:30","n:4cty:21hwy:31","n:2cty:22hwy:29","n:1cty:22hwy:30","n:1cty:22hwy:31","n:1cty:23hwy:29","n:1cty:23hwy:31","n:1cty:23hwy:32","n:1cty:24hwy:30","n:2cty:24hwy:32","n:1cty:24hwy:33","n:1cty:24hwy:36","n:1cty:25hwy:32","n:1cty:25hwy:36","n:1cty:26hwy:34","n:2cty:26hwy:35","n:1cty:28hwy:33","n:1cty:28hwy:37","n:1cty:29hwy:41","n:1cty:33hwy:44","n:1cty:35hwy:44"],"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[7.7,36.3],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"cty"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["10","15","20","25","30","35"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[10.4,45.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"hwy"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["20","30","40"],"tickvals":[20,30,40],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["20","30","40"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":37.2602739726027,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_98
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example2_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example2_montage.png"
+%}
 
+Best used in conjunction with scale_size_area which ensures that counts of zero would be given size 0. Doesn't make much different here because the smallest count is already close to 0.
 
 
 <pre class="mcode">
@@ -48,36 +60,50 @@ p <-
  ggplot(mpg, aes(cty, hwy)) +
  geom_count() +
  scale_size_area()
-</pre>
-
-
-<pre class="mcode">
+ 
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg3.html src="https://plotly.com/~nadhil/174.embed" ssim="example3_ssim_map" compare="example3_montage" %}
 
+{% capture plot_99 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:173:2796e7","x":[9,11,11,11,11,12,12,12,13,13,13,13,14,14,14,14,15,15,15,15,15,15,15,15,15,16,16,16,16,16,16,17,17,17,17,17,18,18,18,18,18,18,18,19,19,19,19,19,20,20,20,20,20,20,21,21,21,21,21,22,22,22,23,23,23,24,24,24,24,25,25,26,26,28,28,29,33,35],"ysrc":"nadhil:173:ac8180","y":[12,14,15,16,17,16,17,18,16,17,18,19,17,18,19,20,17,18,19,20,21,22,23,24,25,20,22,23,24,25,26,22,24,25,26,27,23,24,25,26,27,28,29,25,26,27,28,29,25,26,27,28,29,31,26,27,29,30,31,29,30,31,29,31,32,30,32,33,36,32,36,34,35,33,37,41,44,44],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"sizesrc":"nadhil:173:0b4279","size":[13.5521984050514,8.57116285249271,19.1657027843947,10.4974877454526,13.5521984050514,8.57116285249271,6.06072737565183,13.5521984050514,8.57116285249271,20.9949754909051,10.4974877454526,12.1214547513037,19.1657027843947,6.06072737565183,12.1214547513037,12.1214547513037,10.4974877454526,6.06072737565183,13.5521984050514,10.4974877454526,8.57116285249271,10.4974877454526,8.57116285249271,8.57116285249271,10.4974877454526,12.1214547513037,8.57116285249271,12.1214547513037,8.57116285249271,8.57116285249271,13.5521984050514,8.57116285249271,16.0351774001359,10.4974877454526,10.4974877454526,6.06072737565183,6.06072737565183,8.57116285249271,8.57116285249271,22.6771653543307,10.4974877454526,6.06072737565183,10.4974877454526,12.1214547513037,17.1423257049854,12.1214547513037,10.4974877454526,6.06072737565183,6.06072737565183,6.06072737565183,12.1214547513037,10.4974877454526,6.06072737565183,6.06072737565183,6.06072737565183,8.57116285249271,22.6771653543307,8.57116285249271,12.1214547513037,8.57116285249271,6.06072737565183,6.06072737565183,6.06072737565183,6.06072737565183,6.06072737565183,6.06072737565183,8.57116285249271,6.06072737565183,6.06072737565183,6.06072737565183,6.06072737565183,6.06072737565183,8.57116285249271,6.06072737565183,6.06072737565183,6.06072737565183,6.06072737565183,6.06072737565183],"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:173:9c9faf","text":["n:5cty:9hwy:12","n:2cty:11hwy:14","n:10cty:11hwy:15","n:3cty:11hwy:16","n:5cty:11hwy:17","n:2cty:12hwy:16","n:1cty:12hwy:17","n:5cty:12hwy:18","n:2cty:13hwy:16","n:12cty:13hwy:17","n:3cty:13hwy:18","n:4cty:13hwy:19","n:10cty:14hwy:17","n:1cty:14hwy:18","n:4cty:14hwy:19","n:4cty:14hwy:20","n:3cty:15hwy:17","n:1cty:15hwy:18","n:5cty:15hwy:19","n:3cty:15hwy:20","n:2cty:15hwy:21","n:3cty:15hwy:22","n:2cty:15hwy:23","n:2cty:15hwy:24","n:3cty:15hwy:25","n:4cty:16hwy:20","n:2cty:16hwy:22","n:4cty:16hwy:23","n:2cty:16hwy:24","n:2cty:16hwy:25","n:5cty:16hwy:26","n:2cty:17hwy:22","n:7cty:17hwy:24","n:3cty:17hwy:25","n:3cty:17hwy:26","n:1cty:17hwy:27","n:1cty:18hwy:23","n:2cty:18hwy:24","n:2cty:18hwy:25","n:14cty:18hwy:26","n:3cty:18hwy:27","n:1cty:18hwy:28","n:3cty:18hwy:29","n:4cty:19hwy:25","n:8cty:19hwy:26","n:4cty:19hwy:27","n:3cty:19hwy:28","n:1cty:19hwy:29","n:1cty:20hwy:25","n:1cty:20hwy:26","n:4cty:20hwy:27","n:3cty:20hwy:28","n:1cty:20hwy:29","n:1cty:20hwy:31","n:1cty:21hwy:26","n:2cty:21hwy:27","n:14cty:21hwy:29","n:2cty:21hwy:30","n:4cty:21hwy:31","n:2cty:22hwy:29","n:1cty:22hwy:30","n:1cty:22hwy:31","n:1cty:23hwy:29","n:1cty:23hwy:31","n:1cty:23hwy:32","n:1cty:24hwy:30","n:2cty:24hwy:32","n:1cty:24hwy:33","n:1cty:24hwy:36","n:1cty:25hwy:32","n:1cty:25hwy:36","n:1cty:26hwy:34","n:2cty:26hwy:35","n:1cty:28hwy:33","n:1cty:28hwy:37","n:1cty:29hwy:41","n:1cty:33hwy:44","n:1cty:35hwy:44"],"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[7.7,36.3],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"cty"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["10","15","20","25","30","35"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[10.4,45.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"hwy"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["20","30","40"],"tickvals":[20,30,40],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["20","30","40"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":37.2602739726027,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_99
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example3_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example3_montage.png"
+%}
 
+# Display proportions instead of counts
 
+By default, all categorical variables in the plot form the groups.
 
-
-
+Specifying `geom_count` without a group identifier leads to a plot which is not useful:
 
 <pre class="mcode">
 d <- ggplot(diamonds, aes(x = cut, y = clarity))
 p <-  d + geom_count(aes(size = after_stat(prop)))
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg4.html src="https://plotly.com/~nadhil/176.embed" ssim="example4_ssim_map" compare="example4_montage" %}
 
 
+{% capture plot_100 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:175:681e54","x":[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5],"ysrc":"nadhil:175:95518a","y":[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":17.1421753925017,"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:175:56bd9e","text":["cut:1clarity:1prop:1","cut:1clarity:2prop:1","cut:1clarity:3prop:1","cut:1clarity:4prop:1","cut:1clarity:5prop:1","cut:1clarity:6prop:1","cut:1clarity:7prop:1","cut:1clarity:8prop:1","cut:2clarity:1prop:1","cut:2clarity:2prop:1","cut:2clarity:3prop:1","cut:2clarity:4prop:1","cut:2clarity:5prop:1","cut:2clarity:6prop:1","cut:2clarity:7prop:1","cut:2clarity:8prop:1","cut:3clarity:1prop:1","cut:3clarity:2prop:1","cut:3clarity:3prop:1","cut:3clarity:4prop:1","cut:3clarity:5prop:1","cut:3clarity:6prop:1","cut:3clarity:7prop:1","cut:3clarity:8prop:1","cut:4clarity:1prop:1","cut:4clarity:2prop:1","cut:4clarity:3prop:1","cut:4clarity:4prop:1","cut:4clarity:5prop:1","cut:4clarity:6prop:1","cut:4clarity:7prop:1","cut:4clarity:8prop:1","cut:5clarity:1prop:1","cut:5clarity:2prop:1","cut:5clarity:3prop:1","cut:5clarity:4prop:1","cut:5clarity:5prop:1","cut:5clarity:6prop:1","cut:5clarity:7prop:1","cut:5clarity:8prop:1"],"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[0.4,5.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"cut"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["Fair","Good","VeryGood","Premium","Ideal"],"tickvals":[1,2,3,4,5],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["Fair","Good","VeryGood","Premium","Ideal"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[0.4,8.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"clarity"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["I1","SI2","SI1","VS2","VS1","VVS2","VVS1","IF"],"tickvals":[1,2,3,4,5,6,7,8],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["I1","SI2","SI1","VS2","VS1","VVS2","VVS1","IF"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":48.9497716894977,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_100
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example4_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example4_montage.png"
+%}
 
 
+To correct this problem and achieve a more desirable plot, we need to specify which group the proportion is to be calculated over.
 
 
 
@@ -86,19 +112,26 @@ d <- ggplot(diamonds, aes(x = cut, y = clarity))
 p <-    
  d + geom_count(aes(size = after_stat(prop), group = 1)) +
   scale_size_area(max_size = 10)
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg5.html src="https://plotly.com/~nadhil/178.embed" ssim="example5_ssim_map" compare="example5_montage" %}
+
+{% capture plot_101 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:177:40d1e1","x":[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5],"ysrc":"nadhil:177:96f748","y":[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"sizesrc":"nadhil:177:abd38f","size":[7.69131075208581,11.4573365278656,10.7206419767665,8.57454264870155,6.92014463944479,4.40874780563511,2.18834187984502,1.59225259686419,5.20027520525161,17.450326539863,20.9629795334123,16.5981673316059,13.5107113032547,8.97581158828261,7.23847674117712,4.47218628596888,4.86441203374676,24.3220601687338,30.2108688984523,27.0162096378863,22.3609314298444,18.6519477394978,14.9083373919211,8.68876613817559,7.59919592314618,28.822264371911,31.7342862036371,30.7515054577551,23.6705365680794,15.6549014299464,13.1728900593773,8.04923541165918,6.41308710982844,27.0526793232708,34.7307404639515,37.7952755905512,31.796362552867,27.09429885453,24.013177576896,18.4774493750011],"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:177:2abd08","text":["cut:1clarity:1prop:0.0038932147","cut:1clarity:2prop:0.0086392288","cut:1clarity:3prop:0.0075639600","cut:1clarity:4prop:0.0048387097","cut:1clarity:5prop:0.0031516500","cut:1clarity:6prop:0.0012791991","cut:1clarity:7prop:0.0003151650","cut:1clarity:8prop:0.0001668521","cut:2clarity:1prop:0.0017797553","cut:2clarity:2prop:0.0200407861","cut:2clarity:3prop:0.0289210234","cut:2clarity:4prop:0.0181312570","cut:2clarity:5prop:0.0120133482","cut:2clarity:6prop:0.0053021876","cut:2clarity:7prop:0.0034482759","cut:2clarity:8prop:0.0013162773","cut:3clarity:1prop:0.0015572859","cut:3clarity:2prop:0.0389321468","cut:3clarity:3prop:0.0600667408","cut:3clarity:4prop:0.0480348535","cut:3clarity:5prop:0.0329069336","cut:3clarity:6prop:0.0228958102","cut:3clarity:7prop:0.0146273637","cut:3clarity:8prop:0.0049684835","cut:4clarity:1prop:0.0038005191","cut:4clarity:2prop:0.0546718576","cut:4clarity:3prop:0.0662773452","cut:4clarity:4prop:0.0622358176","cut:4clarity:5prop:0.0368743048","cut:4clarity:6prop:0.0161290323","cut:4clarity:7prop:0.0114200964","cut:4clarity:8prop:0.0042639970","cut:5clarity:1prop:0.0027067112","cut:5clarity:2prop:0.0481646274","cut:5clarity:3prop:0.0793845013","cut:5clarity:4prop:0.0940118650","cut:5clarity:5prop:0.0665368928","cut:5clarity:6prop:0.0483129403","cut:5clarity:7prop:0.0379495736","cut:5clarity:8prop:0.0224694105"],"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[0.4,5.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"cut"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["Fair","Good","VeryGood","Premium","Ideal"],"tickvals":[1,2,3,4,5],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["Fair","Good","VeryGood","Premium","Ideal"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[0.4,8.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"clarity"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["I1","SI2","SI1","VS2","VS1","VVS2","VVS1","IF"],"tickvals":[1,2,3,4,5,6,7,8],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["I1","SI2","SI1","VS2","VS1","VVS2","VVS1","IF"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":48.9497716894977,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_101
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example5_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example5_montage.png"
+%}
 
 
 
 
-
+Or group by x/y variables to have rows/columns sum to 1.
 
 
 <pre class="mcode">
@@ -106,17 +139,21 @@ d <- ggplot(diamonds, aes(x = cut, y = clarity))
 p <-    
  d + geom_count(aes(size = after_stat(prop), group = cut)) +
   scale_size_area(max_size = 10)
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg6.html src="https://plotly.com/~nadhil/180.embed" ssim="example6_ssim_map" compare="example6_montage" %}
 
-
-
+{% capture plot_102 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:179:868a9e","x":[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5],"ysrc":"nadhil:179:5f04bf","y":[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"sizesrc":"nadhil:179:439394","size":[24.2067061665619,36.0594426257248,33.7408588228109,26.986483981743,21.7796307179137,13.8755624539734,6.88732396659755,5.01126426919936,9.37585395320001,31.4621258713729,37.7952755905512,29.9257225145996,24.3591831169319,16.1829701778458,13.0506363779315,8.06314354794218,5.58867965613788,27.9433982806894,34.7089981760822,31.0386826078375,25.690274941206,21.4290566168978,17.1280560345326,9.98244602153074,8.17180586093135,30.9940619115111,34.1255086214424,33.0686739851952,25.4541442824569,16.8345199349163,14.1654855699597,8.6557564482138,5.51672967475346,23.2715252807894,29.8764235168432,32.5126284494608,27.3521837206595,23.3073276485438,20.6568548118677,15.8948555563204],"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:179:a7b3d9","text":["cut:1clarity:1prop:0.130434783cut:Fair","cut:1clarity:2prop:0.289440994cut:Fair","cut:1clarity:3prop:0.253416149cut:Fair","cut:1clarity:4prop:0.162111801cut:Fair","cut:1clarity:5prop:0.105590062cut:Fair","cut:1clarity:6prop:0.042857143cut:Fair","cut:1clarity:7prop:0.010559006cut:Fair","cut:1clarity:8prop:0.005590062cut:Fair","cut:2clarity:1prop:0.019567876cut:Good","cut:2clarity:2prop:0.220342438cut:Good","cut:2clarity:3prop:0.317977986cut:Good","cut:2clarity:4prop:0.199347737cut:Good","cut:2clarity:5prop:0.132083163cut:Good","cut:2clarity:6prop:0.058295964cut:Good","cut:2clarity:7prop:0.037912760cut:Good","cut:2clarity:8prop:0.014472075cut:Good","cut:3clarity:1prop:0.006952491cut:VeryGood","cut:3clarity:2prop:0.173812283cut:VeryGood","cut:3clarity:3prop:0.268167522cut:VeryGood","cut:3clarity:4prop:0.214451250cut:VeryGood","cut:3clarity:5prop:0.146912763cut:VeryGood","cut:3clarity:6prop:0.102218176cut:VeryGood","cut:3clarity:7prop:0.065303758cut:VeryGood","cut:3clarity:8prop:0.022181758cut:VeryGood","cut:4clarity:1prop:0.014864767cut:Premium","cut:4clarity:2prop:0.213835110cut:Premium","cut:4clarity:3prop:0.259227032cut:Premium","cut:4clarity:4prop:0.243419621cut:Premium","cut:4clarity:5prop:0.144224494cut:Premium","cut:4clarity:6prop:0.063084620cut:Premium","cut:4clarity:7prop:0.044666812cut:Premium","cut:4clarity:8prop:0.016677543cut:Premium","cut:5clarity:1prop:0.006774628cut:Ideal","cut:5clarity:2prop:0.120551251cut:Ideal","cut:5clarity:3prop:0.198691476cut:Ideal","cut:5clarity:4prop:0.235302306cut:Ideal","cut:5clarity:5prop:0.166535196cut:Ideal","cut:5clarity:6prop:0.120922463cut:Ideal","cut:5clarity:7prop:0.094983991cut:Ideal","cut:5clarity:8prop:0.056238690cut:Ideal"],"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[0.4,5.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"cut"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["Fair","Good","VeryGood","Premium","Ideal"],"tickvals":[1,2,3,4,5],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["Fair","Good","VeryGood","Premium","Ideal"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[0.4,8.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"clarity"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["I1","SI2","SI1","VS2","VS1","VVS2","VVS1","IF"],"tickvals":[1,2,3,4,5,6,7,8],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["I1","SI2","SI1","VS2","VS1","VVS2","VVS1","IF"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":48.9497716894977,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_102
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example6_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example6_montage.png"
+%}
 
 
 
@@ -126,13 +163,20 @@ d <- ggplot(diamonds, aes(x = cut, y = clarity))
 p <-    
  d + geom_count(aes(size = after_stat(prop), group = clarity)) +
   scale_size_area(max_size = 10)
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg7.html src="https://plotly.com/~nadhil/182.embed" ssim="example7_ssim_map" compare="example7_montage" %}
+
+{% capture plot_103 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:181:a2772e","x":[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5],"ysrc":"nadhil:181:0b042d","y":[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"sizesrc":"nadhil:181:ec24bb","size":[24.4519368426287,10.3407831434075,8.11686077017823,6.70228925694548,6.62520891273568,5.36049227683208,3.13251740010925,3.25692277580651,16.5325267671205,15.7497374796922,15.8715855421304,12.9739536147099,12.9348864232559,10.9134772090593,10.3615685240321,9.14777303620498,15.4647627250586,21.9517991109089,22.8733892173878,21.1172139480596,21.4079112395493,22.6784625053078,21.3406445843825,17.7727079138149,24.159088711523,26.0134442980714,24.0268057933599,24.0369070524855,22.661701165347,19.034424718632,18.8564262745125,16.4645598265569,20.3882544900783,24.4163108633242,26.2954947476119,29.5426683302117,30.4412054304592,32.9433177307736,34.3738322080037,37.7952755905512],"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:181:24f89d","text":["cut:1clarity:1prop:0.283400810clarity:I1","cut:1clarity:2prop:0.050685229clarity:SI2","cut:1clarity:3prop:0.031228473clarity:SI1","cut:1clarity:4prop:0.021292217clarity:VS2","cut:1clarity:5prop:0.020805287clarity:VS1","cut:1clarity:6prop:0.013620213clarity:VVS2","cut:1clarity:7prop:0.004651163clarity:VVS1","cut:1clarity:8prop:0.005027933clarity:IF","cut:2clarity:1prop:0.129554656clarity:I1","cut:2clarity:2prop:0.117576680clarity:SI2","cut:2clarity:3prop:0.119402985clarity:SI1","cut:2clarity:4prop:0.079784630clarity:VS2","cut:2clarity:5prop:0.079304859clarity:VS1","cut:2clarity:6prop:0.056454797clarity:VVS2","cut:2clarity:7prop:0.050889193clarity:VVS1","cut:2clarity:8prop:0.039664804clarity:IF","cut:3clarity:1prop:0.113360324clarity:I1","cut:3clarity:2prop:0.228409832clarity:SI2","cut:3clarity:3prop:0.247990815clarity:SI1","cut:3clarity:4prop:0.211372165clarity:VS2","cut:3clarity:5prop:0.217231673clarity:VS1","cut:3clarity:6prop:0.243782077clarity:VVS2","cut:3clarity:7prop:0.215868673clarity:VVS1","cut:3clarity:8prop:0.149720670clarity:IF","cut:4clarity:1prop:0.276653171clarity:I1","cut:4clarity:2prop:0.320752665clarity:SI2","cut:4clarity:3prop:0.273631841clarity:SI1","cut:4clarity:4prop:0.273861968clarity:VS2","cut:4clarity:5prop:0.243421858clarity:VS1","cut:4clarity:6prop:0.171733123clarity:VVS2","cut:4clarity:7prop:0.168536252clarity:VVS1","cut:4clarity:8prop:0.128491620clarity:IF","cut:5clarity:1prop:0.197031039clarity:I1","cut:5clarity:2prop:0.282575593clarity:SI2","cut:5clarity:3prop:0.327745886clarity:SI1","cut:5clarity:4prop:0.413689019clarity:VS2","cut:5clarity:5prop:0.439236324clarity:VS1","cut:5clarity:6prop:0.514409791clarity:VVS2","cut:5clarity:7prop:0.560054720clarity:VVS1","cut:5clarity:8prop:0.677094972clarity:IF"],"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[0.4,5.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"cut"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["Fair","Good","VeryGood","Premium","Ideal"],"tickvals":[1,2,3,4,5],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["Fair","Good","VeryGood","Premium","Ideal"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[0.4,8.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"clarity"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["I1","SI2","SI1","VS2","VS1","VVS2","VVS1","IF"],"tickvals":[1,2,3,4,5,6,7,8],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["I1","SI2","SI1","VS2","VS1","VVS2","VVS1","IF"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":48.9497716894977,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_103
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example7_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Geoms/geom_count/example7_montage.png"
+%}
 
 

@@ -1,93 +1,111 @@
 ---
-layout: post
-title:  expand_limits
-permalink: /ggplot2/Scales/expand_limits/
-layout: ggplot
-function: expand_limits
-reference: https://ggplot2.tidyverse.org/reference/
-name: Scales
+  description: Modify axis, legend, and plot labels and then convert them with ggplotly
+  function: expand_limits
+  permalink: /ggplot2/Scales/expand_limits/
+  layout: base
+  language: ggplot2
+  name: expand_limits
+  reference: https://ggplot2.tidyverse.org/reference/
 ---
 
-Modify axis, legend, and plot labels and then convert them with ggplotly
-
-
-
-
-
-
+# Default plot
 
 
 <pre class="mcode">
 p <- ggplot(mtcars, aes(mpg, wt)) + geom_point()
 p <-  p + expand_limits(x = 0)
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg1.html src="https://plotly.com/~nadhil/311.embed" ssim="example1_ssim_map" compare="example1_montage" %}
+
+{% capture plot_529 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:310:bd035a","x":[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],"ysrc":"nadhil:310:8c0e39","y":[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44,3.44,4.07,3.73,3.78,5.25,5.424,5.345,2.2,1.615,1.835,2.465,3.52,3.435,3.84,3.845,1.935,2.14,1.513,3.17,2.77,3.57,2.78],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:310:e7a324","text":["mpg:21.0wt:2.620","mpg:21.0wt:2.875","mpg:22.8wt:2.320","mpg:21.4wt:3.215","mpg:18.7wt:3.440","mpg:18.1wt:3.460","mpg:14.3wt:3.570","mpg:24.4wt:3.190","mpg:22.8wt:3.150","mpg:19.2wt:3.440","mpg:17.8wt:3.440","mpg:16.4wt:4.070","mpg:17.3wt:3.730","mpg:15.2wt:3.780","mpg:10.4wt:5.250","mpg:10.4wt:5.424","mpg:14.7wt:5.345","mpg:32.4wt:2.200","mpg:30.4wt:1.615","mpg:33.9wt:1.835","mpg:21.5wt:2.465","mpg:15.5wt:3.520","mpg:15.2wt:3.435","mpg:13.3wt:3.840","mpg:19.2wt:3.845","mpg:27.3wt:1.935","mpg:26.0wt:2.140","mpg:30.4wt:1.513","mpg:15.8wt:3.170","mpg:19.7wt:2.770","mpg:15.0wt:3.570","mpg:21.4wt:2.780"],"hoverinfo":"text","showlegend":false},{"frame":null,"xaxis":"x","yaxis":"y","visible":false,"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[-1.695,35.595],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"mpg"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[0,10,20,30],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["0","10","20","30"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[1.31745,5.61955],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"wt"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["2","3","4","5"],"tickvals":[2,3,4,5],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["2","3","4","5"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":31.4155251141553,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_529
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example1_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example1_montage.png"
+%}
 
 
-
-
-
-
+# Expand y axis
 
 <pre class="mcode">
 p <- ggplot(mtcars, aes(mpg, wt)) + geom_point()
 p <-  p + expand_limits(y = c(1, 9))
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg2.html src="https://plotly.com/~nadhil/313.embed" ssim="example2_ssim_map" compare="example2_montage" %}
+
+
+{% capture plot_530 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:312:230008","x":[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],"ysrc":"nadhil:312:39e82e","y":[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44,3.44,4.07,3.73,3.78,5.25,5.424,5.345,2.2,1.615,1.835,2.465,3.52,3.435,3.84,3.845,1.935,2.14,1.513,3.17,2.77,3.57,2.78],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:312:da9b91","text":["mpg:21.0wt:2.620","mpg:21.0wt:2.875","mpg:22.8wt:2.320","mpg:21.4wt:3.215","mpg:18.7wt:3.440","mpg:18.1wt:3.460","mpg:14.3wt:3.570","mpg:24.4wt:3.190","mpg:22.8wt:3.150","mpg:19.2wt:3.440","mpg:17.8wt:3.440","mpg:16.4wt:4.070","mpg:17.3wt:3.730","mpg:15.2wt:3.780","mpg:10.4wt:5.250","mpg:10.4wt:5.424","mpg:14.7wt:5.345","mpg:32.4wt:2.200","mpg:30.4wt:1.615","mpg:33.9wt:1.835","mpg:21.5wt:2.465","mpg:15.5wt:3.520","mpg:15.2wt:3.435","mpg:13.3wt:3.840","mpg:19.2wt:3.845","mpg:27.3wt:1.935","mpg:26.0wt:2.140","mpg:30.4wt:1.513","mpg:15.8wt:3.170","mpg:19.7wt:2.770","mpg:15.0wt:3.570","mpg:21.4wt:2.780"],"hoverinfo":"text","showlegend":false},{"frame":null,"xaxis":"x","yaxis":"y","visible":false,"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[9.225,35.075],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"mpg"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["10","15","20","25","30","35"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[0.6,9.4],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"wt"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["2.5","5.0","7.5"],"tickvals":[2.5,5,7.5],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["2.5","5.0","7.5"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":43.1050228310502,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_530
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example2_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example2_montage.png"
+%}
 
 
 
 
-
+# Include specific point
 
 
 <pre class="mcode">
 p <- ggplot(mtcars, aes(mpg, wt)) + geom_point()
 p <-  p + expand_limits(x = 0, y = 0)
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg3.html src="https://plotly.com/~nadhil/315.embed" ssim="example3_ssim_map" compare="example3_montage" %}
+
+
+{% capture plot_531 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:314:aa9d8d","x":[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],"ysrc":"nadhil:314:3494be","y":[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44,3.44,4.07,3.73,3.78,5.25,5.424,5.345,2.2,1.615,1.835,2.465,3.52,3.435,3.84,3.845,1.935,2.14,1.513,3.17,2.77,3.57,2.78],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"color":"rgba(0,0,0,1)","symbol":"circle","opacity":1,"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:314:c1ddd6","text":["mpg:21.0wt:2.620","mpg:21.0wt:2.875","mpg:22.8wt:2.320","mpg:21.4wt:3.215","mpg:18.7wt:3.440","mpg:18.1wt:3.460","mpg:14.3wt:3.570","mpg:24.4wt:3.190","mpg:22.8wt:3.150","mpg:19.2wt:3.440","mpg:17.8wt:3.440","mpg:16.4wt:4.070","mpg:17.3wt:3.730","mpg:15.2wt:3.780","mpg:10.4wt:5.250","mpg:10.4wt:5.424","mpg:14.7wt:5.345","mpg:32.4wt:2.200","mpg:30.4wt:1.615","mpg:33.9wt:1.835","mpg:21.5wt:2.465","mpg:15.5wt:3.520","mpg:15.2wt:3.435","mpg:13.3wt:3.840","mpg:19.2wt:3.845","mpg:27.3wt:1.935","mpg:26.0wt:2.140","mpg:30.4wt:1.513","mpg:15.8wt:3.170","mpg:19.7wt:2.770","mpg:15.0wt:3.570","mpg:21.4wt:2.780"],"hoverinfo":"text","showlegend":false},{"frame":null,"xaxis":"x","yaxis":"y","visible":false,"hoverinfo":"text","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[-1.695,35.595],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"mpg"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[0,10,20,30],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["0","10","20","30"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[-0.2712,5.6952],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"wt"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["0","2","4"],"tickvals":[0,2,4],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["0","2","4"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":31.4155251141553,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_531
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example3_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example3_montage.png"
+%}
 
 
 
-
-
-
+# Colour points sequentially
 
 <pre class="mcode">
 p <-    
  ggplot(mtcars, aes(mpg, wt)) +
   geom_point(aes(colour = cyl)) +
   expand_limits(colour = seq(2, 10, by = 2))
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg4.html src="https://plotly.com/~nadhil/317.embed" ssim="example4_ssim_map" compare="example4_montage" %}
+{% capture plot_532 %}
+  {% raw %}
+    {"data":[{"mode":"markers","type":"scatter","xsrc":"nadhil:316:4796f5","x":[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],"ysrc":"nadhil:316:de71f5","y":[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44,3.44,4.07,3.73,3.78,5.25,5.424,5.345,2.2,1.615,1.835,2.465,3.52,3.435,3.84,3.845,1.935,2.14,1.513,3.17,2.77,3.57,2.78],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"width":1.88976377952756,"colorsrc":"nadhil:316:6e48cf","color":["rgba(51,106,152,1)","rgba(51,106,152,1)","rgba(34,73,108,1)","rgba(51,106,152,1)","rgba(68,141,198,1)","rgba(51,106,152,1)","rgba(68,141,198,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(51,106,152,1)","rgba(51,106,152,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(68,141,198,1)","rgba(51,106,152,1)","rgba(68,141,198,1)","rgba(34,73,108,1)"]},"size":5.66929133858268,"symbol":"circle","opacity":1,"colorsrc":"nadhil:316:f2d4fd","color":["rgba(51,106,152,1)","rgba(51,106,152,1)","rgba(34,73,108,1)","rgba(51,106,152,1)","rgba(68,141,198,1)","rgba(51,106,152,1)","rgba(68,141,198,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(51,106,152,1)","rgba(51,106,152,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(68,141,198,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(34,73,108,1)","rgba(68,141,198,1)","rgba(51,106,152,1)","rgba(68,141,198,1)","rgba(34,73,108,1)"],"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:316:2dae95","text":["mpg:21.0wt:2.620cyl:6","mpg:21.0wt:2.875cyl:6","mpg:22.8wt:2.320cyl:4","mpg:21.4wt:3.215cyl:6","mpg:18.7wt:3.440cyl:8","mpg:18.1wt:3.460cyl:6","mpg:14.3wt:3.570cyl:8","mpg:24.4wt:3.190cyl:4","mpg:22.8wt:3.150cyl:4","mpg:19.2wt:3.440cyl:6","mpg:17.8wt:3.440cyl:6","mpg:16.4wt:4.070cyl:8","mpg:17.3wt:3.730cyl:8","mpg:15.2wt:3.780cyl:8","mpg:10.4wt:5.250cyl:8","mpg:10.4wt:5.424cyl:8","mpg:14.7wt:5.345cyl:8","mpg:32.4wt:2.200cyl:4","mpg:30.4wt:1.615cyl:4","mpg:33.9wt:1.835cyl:4","mpg:21.5wt:2.465cyl:4","mpg:15.5wt:3.520cyl:8","mpg:15.2wt:3.435cyl:8","mpg:13.3wt:3.840cyl:8","mpg:19.2wt:3.845cyl:8","mpg:27.3wt:1.935cyl:4","mpg:26.0wt:2.140cyl:4","mpg:30.4wt:1.513cyl:4","mpg:15.8wt:3.170cyl:8","mpg:19.7wt:2.770cyl:6","mpg:15.0wt:3.570cyl:8","mpg:21.4wt:2.780cyl:4"],"hoverinfo":"text","showlegend":false},{"frame":null,"xaxis":"x","yaxis":"y","visible":false,"hoverinfo":"text","showlegend":false},{"mode":"markers","name":"99_bda81b85f384598b4008daaef0d887c1","type":"scatter","xsrc":"nadhil:316:2e5165","x":[10],"ysrc":"nadhil:316:46aaf7","y":[2],"frame":null,"xaxis":"x","yaxis":"y","marker":{"colorbar":{"len":0.5,"title":"cyl","bgcolor":"rgba(255,255,255,1)","ticklen":2,"tickfont":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"tickmode":"array","thickness":23.04,"titlefont":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"bordercolor":"transparent","borderwidth":1.88976377952756,"ticktextsrc":"nadhil:316:c00637","ticktext":["2","4","6","8","10"],"tickvalssrc":"nadhil:316:37464e","tickvals":[0,0.25,0.5,0.75,1]},"colorsrc":"nadhil:316:23e07f","color":[0,1],"colorscale":[[0,"#132B43"],[0.00334448160535117,"#132B44"],[0.00668896321070234,"#132C44"],[0.0100334448160535,"#142C45"],[0.0133779264214047,"#142D45"],[0.0167224080267558,"#142D46"],[0.020066889632107,"#142D46"],[0.0234113712374582,"#142E47"],[0.0267558528428093,"#152E47"],[0.0301003344481605,"#152F48"],[0.0334448160535117,"#152F48"],[0.0367892976588629,"#152F49"],[0.040133779264214,"#153049"],[0.0434782608695652,"#16304A"],[0.0468227424749164,"#16304A"],[0.0501672240802676,"#16314B"],[0.0535117056856187,"#16314B"],[0.0568561872909699,"#16324C"],[0.0602006688963211,"#17324D"],[0.0635451505016723,"#17324D"],[0.0668896321070234,"#17334E"],[0.0702341137123746,"#17334E"],[0.0735785953177258,"#17344F"],[0.0769230769230769,"#18344F"],[0.0802675585284281,"#183450"],[0.0836120401337793,"#183550"],[0.0869565217391304,"#183551"],[0.0903010033444816,"#183651"],[0.0936454849498328,"#193652"],[0.0969899665551839,"#193652"],[0.100334448160535,"#193753"],[0.103678929765886,"#193754"],[0.107023411371237,"#193854"],[0.110367892976589,"#1A3855"],[0.11371237458194,"#1A3955"],[0.117056856187291,"#1A3956"],[0.120401337792642,"#1A3956"],[0.123745819397993,"#1A3A57"],[0.127090301003345,"#1B3A57"],[0.130434782608696,"#1B3B58"],[0.133779264214047,"#1B3B59"],[0.137123745819398,"#1B3B59"],[0.140468227424749,"#1C3C5A"],[0.1438127090301,"#1C3C5A"],[0.147157190635452,"#1C3D5B"],[0.150501672240803,"#1C3D5B"],[0.153846153846154,"#1C3D5C"],[0.157190635451505,"#1D3E5C"],[0.160535117056856,"#1D3E5D"],[0.163879598662207,"#1D3F5D"],[0.167224080267559,"#1D3F5E"],[0.17056856187291,"#1D3F5F"],[0.173913043478261,"#1E405F"],[0.177257525083612,"#1E4060"],[0.180602006688963,"#1E4160"],[0.183946488294314,"#1E4161"],[0.187290969899666,"#1E4261"],[0.190635451505017,"#1F4262"],[0.193979933110368,"#1F4263"],[0.197324414715719,"#1F4363"],[0.20066889632107,"#1F4364"],[0.204013377926421,"#1F4464"],[0.207357859531773,"#204465"],[0.210702341137124,"#204465"],[0.214046822742475,"#204566"],[0.217391304347826,"#204566"],[0.220735785953177,"#214667"],[0.224080267558528,"#214668"],[0.22742474916388,"#214768"],[0.230769230769231,"#214769"],[0.234113712374582,"#214769"],[0.237458193979933,"#22486A"],[0.240802675585284,"#22486A"],[0.244147157190635,"#22496B"],[0.247491638795987,"#22496C"],[0.250836120401338,"#224A6C"],[0.254180602006689,"#234A6D"],[0.25752508361204,"#234A6D"],[0.260869565217391,"#234B6E"],[0.264214046822743,"#234B6E"],[0.267558528428094,"#244C6F"],[0.270903010033445,"#244C70"],[0.274247491638796,"#244C70"],[0.277591973244147,"#244D71"],[0.280936454849498,"#244D71"],[0.28428093645485,"#254E72"],[0.287625418060201,"#254E72"],[0.290969899665552,"#254F73"],[0.294314381270903,"#254F74"],[0.297658862876254,"#254F74"],[0.301003344481605,"#265075"],[0.304347826086957,"#265075"],[0.307692307692308,"#265176"],[0.311036789297659,"#265176"],[0.31438127090301,"#275277"],[0.317725752508361,"#275278"],[0.321070234113712,"#275278"],[0.324414715719064,"#275379"],[0.327759197324415,"#275379"],[0.331103678929766,"#28547A"],[0.334448160535117,"#28547B"],[0.337792642140468,"#28557B"],[0.341137123745819,"#28557C"],[0.344481605351171,"#28567C"],[0.347826086956522,"#29567D"],[0.351170568561873,"#29567D"],[0.354515050167224,"#29577E"],[0.357859531772575,"#29577F"],[0.361204013377926,"#2A587F"],[0.364548494983278,"#2A5880"],[0.367892976588629,"#2A5980"],[0.37123745819398,"#2A5981"],[0.374581939799331,"#2A5982"],[0.377926421404682,"#2B5A82"],[0.381270903010033,"#2B5A83"],[0.384615384615385,"#2B5B83"],[0.387959866220736,"#2B5B84"],[0.391304347826087,"#2C5C85"],[0.394648829431438,"#2C5C85"],[0.397993311036789,"#2C5D86"],[0.40133779264214,"#2C5D86"],[0.404682274247492,"#2C5D87"],[0.408026755852843,"#2D5E87"],[0.411371237458194,"#2D5E88"],[0.414715719063545,"#2D5F89"],[0.418060200668896,"#2D5F89"],[0.421404682274247,"#2E608A"],[0.424749163879599,"#2E608A"],[0.42809364548495,"#2E618B"],[0.431438127090301,"#2E618C"],[0.434782608695652,"#2E618C"],[0.438127090301003,"#2F628D"],[0.441471571906354,"#2F628D"],[0.444816053511706,"#2F638E"],[0.448160535117057,"#2F638F"],[0.451505016722408,"#30648F"],[0.454849498327759,"#306490"],[0.45819397993311,"#306590"],[0.461538461538461,"#306591"],[0.464882943143813,"#306592"],[0.468227424749164,"#316692"],[0.471571906354515,"#316693"],[0.474916387959866,"#316793"],[0.478260869565217,"#316794"],[0.481605351170569,"#326895"],[0.48494983277592,"#326895"],[0.488294314381271,"#326996"],[0.491638795986622,"#326996"],[0.494983277591973,"#326997"],[0.498327759197324,"#336A98"],[0.501672240802676,"#336A98"],[0.505016722408027,"#336B99"],[0.508361204013378,"#336B99"],[0.511705685618729,"#346C9A"],[0.51505016722408,"#346C9B"],[0.518394648829431,"#346D9B"],[0.521739130434783,"#346D9C"],[0.525083612040134,"#346E9D"],[0.528428093645485,"#356E9D"],[0.531772575250836,"#356E9E"],[0.535117056856187,"#356F9E"],[0.538461538461538,"#356F9F"],[0.54180602006689,"#3670A0"],[0.545150501672241,"#3670A0"],[0.548494983277592,"#3671A1"],[0.551839464882943,"#3671A1"],[0.555183946488294,"#3772A2"],[0.558528428093645,"#3772A3"],[0.561872909698997,"#3773A3"],[0.565217391304348,"#3773A4"],[0.568561872909699,"#3773A4"],[0.57190635451505,"#3874A5"],[0.575250836120401,"#3874A6"],[0.578595317725752,"#3875A6"],[0.581939799331104,"#3875A7"],[0.585284280936455,"#3976A8"],[0.588628762541806,"#3976A8"],[0.591973244147157,"#3977A9"],[0.595317725752508,"#3977A9"],[0.598662207357859,"#3978AA"],[0.602006688963211,"#3A78AB"],[0.605351170568562,"#3A79AB"],[0.608695652173913,"#3A79AC"],[0.612040133779264,"#3A79AC"],[0.615384615384615,"#3B7AAD"],[0.618729096989967,"#3B7AAE"],[0.622073578595318,"#3B7BAE"],[0.625418060200669,"#3B7BAF"],[0.62876254180602,"#3C7CB0"],[0.632107023411371,"#3C7CB0"],[0.635451505016722,"#3C7DB1"],[0.638795986622074,"#3C7DB1"],[0.642140468227425,"#3C7EB2"],[0.645484949832776,"#3D7EB3"],[0.648829431438127,"#3D7FB3"],[0.652173913043478,"#3D7FB4"],[0.655518394648829,"#3D7FB5"],[0.658862876254181,"#3E80B5"],[0.662207357859532,"#3E80B6"],[0.665551839464883,"#3E81B6"],[0.668896321070234,"#3E81B7"],[0.672240802675585,"#3F82B8"],[0.675585284280936,"#3F82B8"],[0.678929765886288,"#3F83B9"],[0.682274247491639,"#3F83BA"],[0.68561872909699,"#4084BA"],[0.688963210702341,"#4084BB"],[0.692307692307692,"#4085BB"],[0.695652173913043,"#4085BC"],[0.698996655518395,"#4086BD"],[0.702341137123746,"#4186BD"],[0.705685618729097,"#4186BE"],[0.709030100334448,"#4187BF"],[0.712374581939799,"#4187BF"],[0.71571906354515,"#4288C0"],[0.719063545150502,"#4288C1"],[0.722408026755853,"#4289C1"],[0.725752508361204,"#4289C2"],[0.729096989966555,"#438AC2"],[0.732441471571906,"#438AC3"],[0.735785953177257,"#438BC4"],[0.739130434782609,"#438BC4"],[0.74247491638796,"#438CC5"],[0.745819397993311,"#448CC6"],[0.749163879598662,"#448DC6"],[0.752508361204013,"#448DC7"],[0.755852842809364,"#448EC8"],[0.759197324414716,"#458EC8"],[0.762541806020067,"#458FC9"],[0.765886287625418,"#458FC9"],[0.769230769230769,"#458FCA"],[0.772575250836121,"#4690CB"],[0.775919732441471,"#4690CB"],[0.779264214046823,"#4691CC"],[0.782608695652174,"#4691CD"],[0.785953177257525,"#4792CD"],[0.789297658862876,"#4792CE"],[0.792642140468228,"#4793CF"],[0.795986622073579,"#4793CF"],[0.79933110367893,"#4894D0"],[0.802675585284281,"#4894D0"],[0.806020066889632,"#4895D1"],[0.809364548494983,"#4895D2"],[0.812709030100335,"#4896D2"],[0.816053511705686,"#4996D3"],[0.819397993311037,"#4997D4"],[0.822742474916388,"#4997D4"],[0.826086956521739,"#4998D5"],[0.82943143812709,"#4A98D6"],[0.832775919732442,"#4A99D6"],[0.836120401337793,"#4A99D7"],[0.839464882943144,"#4A9AD8"],[0.842809364548495,"#4B9AD8"],[0.846153846153846,"#4B9BD9"],[0.849498327759197,"#4B9BDA"],[0.852842809364549,"#4B9BDA"],[0.8561872909699,"#4C9CDB"],[0.859531772575251,"#4C9CDB"],[0.862876254180602,"#4C9DDC"],[0.866220735785953,"#4C9DDD"],[0.869565217391304,"#4D9EDD"],[0.872909698996656,"#4D9EDE"],[0.876254180602007,"#4D9FDF"],[0.879598662207358,"#4D9FDF"],[0.882943143812709,"#4DA0E0"],[0.88628762541806,"#4EA0E1"],[0.889632107023411,"#4EA1E1"],[0.892976588628763,"#4EA1E2"],[0.896321070234114,"#4EA2E3"],[0.899665551839465,"#4FA2E3"],[0.903010033444816,"#4FA3E4"],[0.906354515050167,"#4FA3E5"],[0.909698996655518,"#4FA4E5"],[0.91304347826087,"#50A4E6"],[0.916387959866221,"#50A5E7"],[0.919732441471572,"#50A5E7"],[0.923076923076923,"#50A6E8"],[0.926421404682274,"#51A6E8"],[0.929765886287625,"#51A7E9"],[0.933110367892977,"#51A7EA"],[0.936454849498328,"#51A8EA"],[0.939799331103679,"#52A8EB"],[0.94314381270903,"#52A9EC"],[0.946488294314381,"#52A9EC"],[0.949832775919732,"#52AAED"],[0.953177257525084,"#53AAEE"],[0.956521739130435,"#53ABEE"],[0.959866220735786,"#53ABEF"],[0.963210702341137,"#53ACF0"],[0.966555183946488,"#54ACF0"],[0.969899665551839,"#54ADF1"],[0.973244147157191,"#54ADF2"],[0.976588628762542,"#54AEF2"],[0.979933110367893,"#55AEF3"],[0.983277591973244,"#55AFF4"],[0.986622073578595,"#55AFF4"],[0.989966555183946,"#55B0F5"],[0.993311036789298,"#56B0F6"],[0.996655518394649,"#56B1F6"],[1,"#56B1F7"]]},"opacity":0,"hoverinfo":"skip","showlegend":false}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[9.225,35.075],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"mpg"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["10","15","20","25","30","35"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[1.31745,5.61955],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"wt"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["2","3","4","5"],"tickvals":[2,3,4,5],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["2","3","4","5"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":31.4155251141553,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_532
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example4_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example4_montage.png"
+%}
 
 
 
-
+# Colour points in steps
 
 
 
@@ -96,14 +114,21 @@ p <-
  ggplot(mtcars, aes(mpg, wt)) +
   geom_point(aes(colour = factor(cyl))) +
   expand_limits(colour = factor(seq(2, 10, by = 2)))
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg5.html src="https://plotly.com/~nadhil/319.embed" ssim="example5_ssim_map" compare="example5_montage" %}
+
+{% capture plot_533 %}
+  {% raw %}
+    {"data":[{"mode":"markers","name":"4","type":"scatter","xsrc":"nadhil:318:a40796","x":[22.8,24.4,22.8,32.4,30.4,33.9,21.5,27.3,26,30.4,21.4],"ysrc":"nadhil:318:561e7b","y":[2.32,3.19,3.15,2.2,1.615,1.835,2.465,1.935,2.14,1.513,2.78],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"size":5.66929133858268,"color":"rgba(0,191,125,1)","symbol":"circle","opacity":1,"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:318:b88884","text":["mpg:22.8wt:2.320factor(cyl):4","mpg:24.4wt:3.190factor(cyl):4","mpg:22.8wt:3.150factor(cyl):4","mpg:32.4wt:2.200factor(cyl):4","mpg:30.4wt:1.615factor(cyl):4","mpg:33.9wt:1.835factor(cyl):4","mpg:21.5wt:2.465factor(cyl):4","mpg:27.3wt:1.935factor(cyl):4","mpg:26.0wt:2.140factor(cyl):4","mpg:30.4wt:1.513factor(cyl):4","mpg:21.4wt:2.780factor(cyl):4"],"hoverinfo":"text","showlegend":true,"legendgroup":"4"},{"mode":"markers","name":"6","type":"scatter","xsrc":"nadhil:318:432f13","x":[21,21,21.4,18.1,19.2,17.8,19.7],"ysrc":"nadhil:318:c90f33","y":[2.62,2.875,3.215,3.46,3.44,3.44,2.77],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"size":5.66929133858268,"color":"rgba(0,176,246,1)","symbol":"circle","opacity":1,"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:318:0d1ee9","text":["mpg:21.0wt:2.620factor(cyl):6","mpg:21.0wt:2.875factor(cyl):6","mpg:21.4wt:3.215factor(cyl):6","mpg:18.1wt:3.460factor(cyl):6","mpg:19.2wt:3.440factor(cyl):6","mpg:17.8wt:3.440factor(cyl):6","mpg:19.7wt:2.770factor(cyl):6"],"hoverinfo":"text","showlegend":true,"legendgroup":"6"},{"mode":"markers","name":"8","type":"scatter","xsrc":"nadhil:318:158b25","x":[18.7,14.3,16.4,17.3,15.2,10.4,10.4,14.7,15.5,15.2,13.3,19.2,15.8,15],"ysrc":"nadhil:318:f13155","y":[3.44,3.57,4.07,3.73,3.78,5.25,5.424,5.345,3.52,3.435,3.84,3.845,3.17,3.57],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"size":5.66929133858268,"color":"rgba(231,107,243,1)","symbol":"circle","opacity":1,"autocolorscale":false},"hoveron":"points","textsrc":"nadhil:318:d8042c","text":["mpg:18.7wt:3.440factor(cyl):8","mpg:14.3wt:3.570factor(cyl):8","mpg:16.4wt:4.070factor(cyl):8","mpg:17.3wt:3.730factor(cyl):8","mpg:15.2wt:3.780factor(cyl):8","mpg:10.4wt:5.250factor(cyl):8","mpg:10.4wt:5.424factor(cyl):8","mpg:14.7wt:5.345factor(cyl):8","mpg:15.5wt:3.520factor(cyl):8","mpg:15.2wt:3.435factor(cyl):8","mpg:13.3wt:3.840factor(cyl):8","mpg:19.2wt:3.845factor(cyl):8","mpg:15.8wt:3.170factor(cyl):8","mpg:15.0wt:3.570factor(cyl):8"],"hoverinfo":"text","showlegend":true,"legendgroup":"8"},{"name":"2","frame":null,"xaxis":"x","yaxis":"y","visible":false,"hoverinfo":"text","showlegend":true,"legendgroup":"2"},{"name":"4","frame":null,"xaxis":"x","yaxis":"y","visible":false,"hoverinfo":"text","showlegend":false,"legendgroup":"4"},{"name":"6","frame":null,"xaxis":"x","yaxis":"y","visible":false,"hoverinfo":"text","showlegend":false,"legendgroup":"6"},{"name":"8","frame":null,"xaxis":"x","yaxis":"y","visible":false,"hoverinfo":"text","showlegend":false,"legendgroup":"8"},{"name":"10","frame":null,"xaxis":"x","yaxis":"y","visible":false,"hoverinfo":"text","showlegend":true,"legendgroup":"10"}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[9.225,35.075],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"mpg"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["10","15","20","25","30","35"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[1.31745,5.61955],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"wt"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["2","3","4","5"],"tickvals":[2,3,4,5],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["2","3","4","5"],"categoryorder":"array","showticklabels":true},"legend":{"y":0.93503937007874,"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":31.4155251141553,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":true,"annotations":[{"x":1.02,"y":1,"ax":0,"ay":0,"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"factor(cyl)","xref":"paper","yref":"paper","xanchor":"left","yanchor":"bottom","showarrow":false,"textangle":0,"legendTitle":true}],"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_533
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example5_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Scales/expand_limits/example5_montage.png"
+%}
 
 
 

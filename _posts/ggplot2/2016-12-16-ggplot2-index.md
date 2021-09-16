@@ -120,9 +120,6 @@ redirect_from: ggplot2/reference/
 {% include posts/thumb.html path='Themes' keyword='theme_get' %}
 {% include posts/thumb.html path='Themes' keyword='theme_grey' %}
 
-<h1 class="gg-big">Programming with ggplot2</h2>
-{% include posts/thumb.html path='Programming with ggplot2' keyword='print.ggplot' %}
-
 <h1 class="gg-big">Autoplot and fortify</h2>
 {% include posts/thumb.html path='Autoplot and fortify' keyword='map_data' %}
 

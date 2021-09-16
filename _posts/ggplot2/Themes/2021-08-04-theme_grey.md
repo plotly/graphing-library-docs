@@ -1,6 +1,6 @@
 ---
-  description: 
-  function: theme_grey
+  description: Give complete themes which control all non-data display and then convert them with ggplotly.
+  function: themes
   permalink: /ggplot2/Themes/theme_grey/
   layout: base
   language: ggplot2
@@ -8,14 +8,11 @@
   reference: https://ggplot2.tidyverse.org/reference/
 ---
 
-Give complete themes which control all non-data display and then convert them with ggplotly.
 
 
+# theme_gray
 
-
-
-
-
+`theme_gray()` is used by default.
 
 <pre class="mcode">
 mtcars2 <- within(mtcars, {
@@ -36,13 +33,11 @@ p1 <- ggplot(mtcars2) +
     y = "Fuel economy (mpg)",
     colour = "Gears"
   )
-p <-  p1 + theme_gray() # the default
-</pre>
+p <-  p1 + theme_gray()
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
 
 {% capture plot_371 %}
   {% raw %}
@@ -58,7 +53,7 @@ plotly::ggplotly(p)
 
 
 
-
+# theme_bw
 
 
 <pre class="mcode">
@@ -81,12 +76,11 @@ p1 <- ggplot(mtcars2) +
     colour = "Gears"
   )
 p <-  p1 + theme_bw()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
+
 
 {% capture plot_372 %}
   {% raw %}
@@ -101,7 +95,7 @@ plotly::ggplotly(p)
 
 
 
-
+# theme_linedraw
 
 
 
@@ -125,12 +119,10 @@ p1 <- ggplot(mtcars2) +
     colour = "Gears"
   )
 p <-  p1 + theme_linedraw()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
 
 {% capture plot_373 %}
   {% raw %}
@@ -146,7 +138,7 @@ plotly::ggplotly(p)
 
 
 
-
+# theme_light
 
 
 <pre class="mcode">
@@ -169,12 +161,11 @@ p1 <- ggplot(mtcars2) +
     colour = "Gears"
   )
 p <-  p1 + theme_light()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
+
 
 {% capture plot_374 %}
   {% raw %}
@@ -190,7 +181,7 @@ plotly::ggplotly(p)
 
 
 
-
+# theme_dark
 
 
 <pre class="mcode">
@@ -213,10 +204,7 @@ p1 <- ggplot(mtcars2) +
     colour = "Gears"
   )
 p <-  p1 + theme_dark()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
 
@@ -233,8 +221,7 @@ plotly::ggplotly(p)
 
 
 
-
-
+# theme_minimal
 
 
 <pre class="mcode">
@@ -257,12 +244,10 @@ p1 <- ggplot(mtcars2) +
     colour = "Gears"
   )
 p <-  p1 + theme_minimal()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
 
 {% capture plot_376 %}
   {% raw %}
@@ -278,7 +263,7 @@ plotly::ggplotly(p)
 
 
 
-
+# theme_classic
 
 
 <pre class="mcode">
@@ -301,12 +286,11 @@ p1 <- ggplot(mtcars2) +
     colour = "Gears"
   )
 p <-  p1 + theme_classic()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
+
 
 {% capture plot_377 %}
   {% raw %}
@@ -322,7 +306,7 @@ plotly::ggplotly(p)
 
 
 
-
+# theme_void
 
 
 <pre class="mcode">
@@ -345,12 +329,10 @@ p1 <- ggplot(mtcars2) +
     colour = "Gears"
   )
 p <-  p1 + theme_void()
-</pre>
-
-
-<pre class="mcode">
+ 
 plotly::ggplotly(p)
 </pre>
+
 
 {% capture plot_378 %}
   {% raw %}
@@ -366,18 +348,18 @@ plotly::ggplotly(p)
 
 
 
+# facet_grid and themes 
 
-
+`theme_gray()` is used by default.
 
 <pre class="mcode">
 p2 <- p1 + facet_grid(vs ~ am)
-p <-  p2 + theme_gray() # the default
-</pre>
+p <-  p2 + theme_gray()
 
 
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
 
 {% capture plot_379 %}
   {% raw %}
@@ -392,19 +374,17 @@ plotly::ggplotly(p)
 
 
 
-
+# facet - theme_bw
 
 
 
 <pre class="mcode">
 p2 <- p1 + facet_grid(vs ~ am)
 p <-  p2 + theme_bw()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
 
 {% capture plot_380 %}
   {% raw %}
@@ -419,19 +399,18 @@ plotly::ggplotly(p)
 
 
 
-
+# facet - theme_linedraw
 
 
 
 <pre class="mcode">
 p2 <- p1 + facet_grid(vs ~ am)
 p <-  p2 + theme_linedraw()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
+
 
 {% capture plot_381 %}
   {% raw %}
@@ -446,19 +425,18 @@ plotly::ggplotly(p)
 
 
 
-
+# facet - theme_light
 
 
 
 <pre class="mcode">
 p2 <- p1 + facet_grid(vs ~ am)
 p <-  p2 + theme_light()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
+
 
 {% capture plot_382 %}
   {% raw %}
@@ -473,19 +451,18 @@ plotly::ggplotly(p)
 
 
 
-
+# facet - theme_dark
 
 
 
 <pre class="mcode">
 p2 <- p1 + facet_grid(vs ~ am)
 p <-  p2 + theme_dark()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
+
 
 {% capture plot_383 %}
   {% raw %}
@@ -500,19 +477,17 @@ plotly::ggplotly(p)
 
 
 
-
+# facet - theme_minimal
 
 
 
 <pre class="mcode">
 p2 <- p1 + facet_grid(vs ~ am)
 p <-  p2 + theme_minimal()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
 
 {% capture plot_384 %}
   {% raw %}
@@ -528,18 +503,17 @@ plotly::ggplotly(p)
 
 
 
-
+# facet - theme_classic
 
 
 <pre class="mcode">
 p2 <- p1 + facet_grid(vs ~ am)
 p <-  p2 + theme_classic()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
+
 
 {% capture plot_385 %}
   {% raw %}
@@ -554,19 +528,18 @@ plotly::ggplotly(p)
 
 
 
-
+# facet - theme_void
 
 
 
 <pre class="mcode">
 p2 <- p1 + facet_grid(vs ~ am)
 p <-  p2 + theme_void()
-</pre>
 
-
-<pre class="mcode">
 plotly::ggplotly(p)
 </pre>
+
+
 
 {% capture plot_386 %}
   {% raw %}

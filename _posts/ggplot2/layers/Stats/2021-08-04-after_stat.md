@@ -1,82 +1,87 @@
 ---
-layout: post
-title:  after_stat
-permalink: /ggplot2/layers/Stats/after_stat/
-layout: ggplot
-function: after_stat
-reference: https://ggplot2.tidyverse.org/reference/
-name: Layers/Stats
+  description: Map from stat transformed data, flag evaluation of mapping for after data has been scaled, map the same aesthetic multiple times but remap it for the geom, and then convert them with ggplotly.
+  function: after_stat
+  permalink: /ggplot2/layers/Stats/after_stat/
+  layout: base
+  language: ggplot2
+  name: after_stat
+  reference: https://ggplot2.tidyverse.org/reference/
 ---
 
-Map from stat transformed data, flag evaluation of mapping for after data has been scaled, map the same aesthetic multiple times but remap it for the geom, and then convert them with ggplotly.
-
-
-
-
-
-
+# Default histogram plot
 
 
 <pre class="mcode">
 p <-    
  ggplot(mpg, aes(displ)) +
   geom_histogram(aes(y = after_stat(count)))
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
-<pre class="wcode">
-## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-</pre>
-
-{% include posts/ssim_frame_gg/ssim_frame_gg1.html src="https://plotly.com/~nadhil/1085.embed" ssim="example1_ssim_map" compare="example1_montage" %}
 
 
+{% capture plot_313 %}
+  {% raw %}
+    {"data":[{"type":"bar","xsrc":"nadhil:1084:864b62","x":[1.67586206896552,1.86206896551724,2.04827586206897,2.23448275862069,2.42068965517241,2.60689655172414,2.79310344827586,2.97931034482759,3.16551724137931,3.35172413793103,3.53793103448276,3.72413793103448,3.91034482758621,4.09655172413793,4.28275862068966,4.46896551724138,4.6551724137931,4.84137931034483,5.02758620689655,5.21379310344828,5.4,5.58620689655172,5.77241379310345,5.95862068965517,6.1448275862069,6.33103448275862,6.51724137931035,6.70344827586207,6.88965517241379,7.07586206896552],"ysrc":"nadhil:1084:54435a","y":[5,17,21,6,33,8,10,8,6,13,7,11,18,0,4,1,28,0,2,11,8,1,8,3,3,0,1,0,0,1],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"transparent","width":1.88976377952756},"color":"rgba(89,89,89,1)","autocolorscale":false},"basesrc":"nadhil:1084:b7831c","base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"textsrc":"nadhil:1084:7ca743","text":["displ:1.675862count:5","displ:1.862069count:17","displ:2.048276count:21","displ:2.234483count:6","displ:2.420690count:33","displ:2.606897count:8","displ:2.793103count:10","displ:2.979310count:8","displ:3.165517count:6","displ:3.351724count:13","displ:3.537931count:7","displ:3.724138count:11","displ:3.910345count:18","displ:4.096552count:0","displ:4.282759count:4","displ:4.468966count:1","displ:4.655172count:28","displ:4.841379count:0","displ:5.027586count:2","displ:5.213793count:11","displ:5.400000count:8","displ:5.586207count:1","displ:5.772414count:8","displ:5.958621count:3","displ:6.144828count:3","displ:6.331034count:0","displ:6.517241count:1","displ:6.703448count:0","displ:6.889655count:0","displ:7.075862count:1"],"widthsrc":"nadhil:1084:58f6ee","width":[0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551725,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724],"hoverinfo":"text","showlegend":false,"orientation":"v"}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[1.30344827586207,7.44827586206897],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"displ"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["2","4","6"],"tickvals":[2,4,6],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["2","4","6"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[-1.65,34.65],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"count"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[0,10,20,30],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["0","10","20","30"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":37.2602739726027,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_313
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Stats/after_stat/example1_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Stats/after_stat/example1_montage.png"
+%}
 
+# Scaling bins between 0 and 1
 
 
 <pre class="mcode">
 p <-    
  ggplot(mpg, aes(displ)) +
   geom_histogram(aes(y = after_stat(count / max(count))))
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
-<pre class="wcode">
-## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-</pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg2.html src="https://plotly.com/~nadhil/1087.embed" ssim="example2_ssim_map" compare="example2_montage" %}
+{% capture plot_314 %}
+  {% raw %}
+    {"data":[{"type":"bar","xsrc":"nadhil:1086:45b049","x":[1.67586206896552,1.86206896551724,2.04827586206897,2.23448275862069,2.42068965517241,2.60689655172414,2.79310344827586,2.97931034482759,3.16551724137931,3.35172413793103,3.53793103448276,3.72413793103448,3.91034482758621,4.09655172413793,4.28275862068966,4.46896551724138,4.6551724137931,4.84137931034483,5.02758620689655,5.21379310344828,5.4,5.58620689655172,5.77241379310345,5.95862068965517,6.1448275862069,6.33103448275862,6.51724137931035,6.70344827586207,6.88965517241379,7.07586206896552],"ysrc":"nadhil:1086:df7296","y":[0.151515151515152,0.515151515151515,0.636363636363636,0.181818181818182,1,0.242424242424242,0.303030303030303,0.242424242424242,0.181818181818182,0.393939393939394,0.212121212121212,0.333333333333333,0.545454545454545,0,0.121212121212121,0.0303030303030303,0.848484848484849,0,0.0606060606060606,0.333333333333333,0.242424242424242,0.0303030303030303,0.242424242424242,0.0909090909090909,0.0909090909090909,0,0.0303030303030303,0,0,0.0303030303030303],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"transparent","width":1.88976377952756},"color":"rgba(89,89,89,1)","autocolorscale":false},"basesrc":"nadhil:1086:3a5334","base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"textsrc":"nadhil:1086:2d75ca","text":["displ:1.675862count/max(count):0.15151515","displ:1.862069count/max(count):0.51515152","displ:2.048276count/max(count):0.63636364","displ:2.234483count/max(count):0.18181818","displ:2.420690count/max(count):1.00000000","displ:2.606897count/max(count):0.24242424","displ:2.793103count/max(count):0.30303030","displ:2.979310count/max(count):0.24242424","displ:3.165517count/max(count):0.18181818","displ:3.351724count/max(count):0.39393939","displ:3.537931count/max(count):0.21212121","displ:3.724138count/max(count):0.33333333","displ:3.910345count/max(count):0.54545455","displ:4.096552count/max(count):0.00000000","displ:4.282759count/max(count):0.12121212","displ:4.468966count/max(count):0.03030303","displ:4.655172count/max(count):0.84848485","displ:4.841379count/max(count):0.00000000","displ:5.027586count/max(count):0.06060606","displ:5.213793count/max(count):0.33333333","displ:5.400000count/max(count):0.24242424","displ:5.586207count/max(count):0.03030303","displ:5.772414count/max(count):0.24242424","displ:5.958621count/max(count):0.09090909","displ:6.144828count/max(count):0.09090909","displ:6.331034count/max(count):0.00000000","displ:6.517241count/max(count):0.03030303","displ:6.703448count/max(count):0.00000000","displ:6.889655count/max(count):0.00000000","displ:7.075862count/max(count):0.03030303"],"widthsrc":"nadhil:1086:523d6e","width":[0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551725,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724,0.186206896551724],"hoverinfo":"text","showlegend":false,"orientation":"v"}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[1.30344827586207,7.44827586206897],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"displ"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["2","4","6"],"tickvals":[2,4,6],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["2","4","6"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[-0.05,1.05],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"count/max(count)"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"categoryorder":"array","showticklabels":true},"legend":{"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":48.9497716894977,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":false,"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_314
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Stats/after_stat/example2_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Stats/after_stat/example2_montage.png"
+%}
 
 
-
-
-
+# Transparent fill colour
 
 
 <pre class="mcode">
 p <-    
  ggplot(mpg, aes(class, hwy)) +
   geom_boxplot(aes(colour = class, fill = after_scale(alpha(colour, 0.4))))
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg3.html src="https://plotly.com/~nadhil/1089.embed" ssim="example3_ssim_map" compare="example3_montage" %}
+
+{% capture plot_315 %}
+  {% raw %}
+    {"data":[{"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"2seater","type":"box","xsrc":"nadhil:1088:ed872b","x":[1,1,1,1,1],"ysrc":"nadhil:1088:8bb101","y":[24,26,25,23,26],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(248,118,109,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"2seater"},{"line":{"color":"rgba(196,154,0,1)","width":1.88976377952756},"name":"compact","type":"box","xsrc":"nadhil:1088:6da712","x":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],"ysrc":"nadhil:1088:9e50e6","y":[29,29,31,30,26,26,27,26,25,28,27,25,25,25,25,29,29,29,29,23,24,29,27,37,35,25,27,29,31,31,26,26,27,30,33,35,25,27,29,27,29,26,29,29,26,44,24],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(196,154,0,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"compact"},{"line":{"color":"rgba(83,180,0,1)","width":1.88976377952756},"name":"midsize","type":"box","xsrc":"nadhil:1088:f016b9","x":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],"ysrc":"nadhil:1088:ee3adc","y":[24,25,31,29,27,23,31,26,26,27,30,29,27,27,31,31,32,25,28,26,28,29,25,25,29,26,30,26,29,26,26,26,26,28,26,28,27,26,26,26,26],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(83,180,0,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"midsize"},{"line":{"color":"rgba(0,192,148,1)","width":1.88976377952756},"name":"minivan","type":"box","xsrc":"nadhil:1088:dc63e8","x":[4,4,4,4,4,4,4,4,4,4,4],"ysrc":"nadhil:1088:6d4685","y":[22,22,24,21,24,24,17,22,23,24,23],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(0,192,148,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"minivan"},{"line":{"color":"rgba(0,182,235,1)","width":1.88976377952756},"name":"pickup","type":"box","xsrc":"nadhil:1088:b49279","x":[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"ysrc":"nadhil:1088:6b8e64","y":[16,20,12,20,18,17,19,19,12,17,17,16,16,17,19,15,17,17,17,15,15,17,20,17,22,18,19,16,17,17,12,15,16],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(0,182,235,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"pickup"},{"line":{"color":"rgba(165,138,255,1)","width":1.88976377952756},"name":"subcompact","type":"box","xsrc":"nadhil:1088:dfac8d","x":[6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6],"ysrc":"nadhil:1088:d875b8","y":[29,34,36,36,26,32,28,27,24,24,24,26,32,26,29,21,25,26,24,26,26,26,44,41,29,26,28,29,29,22,23,22,20,33,32],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(165,138,255,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"subcompact"},{"line":{"color":"rgba(251,97,215,1)","width":1.88976377952756},"name":"suv","type":"box","xsrc":"nadhil:1088:414e6a","x":[7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],"ysrc":"nadhil:1088:4938da","y":[24,17,17,19,17,12,19,19,25,15,27,19,20,20,17,22,17,15,18,15,16,26,23,17,19,19,18,17,15,15,18,18,20,20,18,17,15,17,20,17,17,14,18,25,17,14,20,12,17,16,18,17,19,19,17,17,17,19,20,18,17,17],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(251,97,215,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"suv"}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[0.4,7.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"class"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["2seater","compact","midsize","minivan","pickup","subcompact","suv"],"tickvals":[1,2,3,4,5,6,7],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["2seater","compact","midsize","minivan","pickup","subcompact","suv"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[10.4,45.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"hwy"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["20","30","40"],"tickvals":[20,30,40],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["20","30","40"],"categoryorder":"array","showticklabels":true},"legend":{"y":0.93503937007874,"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":37.2602739726027,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":true,"annotations":[{"x":1.02,"y":1,"ax":0,"ay":0,"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"class","xref":"paper","yref":"paper","xanchor":"left","yanchor":"bottom","showarrow":false,"textangle":0,"legendTitle":true}],"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_315
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Stats/after_stat/example3_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Stats/after_stat/example3_montage.png"
+%}
 
 
 
-
+# Using stage to modify the scaled fill
 
 
 
@@ -84,13 +89,20 @@ plotly::ggplotly(p)
 p <-    
  ggplot(mpg, aes(class, hwy)) +
   geom_boxplot(aes(fill = stage(class, after_scale = alpha(fill, 0.4))))
-</pre>
-
-
-<pre class="mcode">
+  
 plotly::ggplotly(p)
 </pre>
 
-{% include posts/ssim_frame_gg/ssim_frame_gg4.html src="https://plotly.com/~nadhil/1091.embed" ssim="example4_ssim_map" compare="example4_montage" %}
+
+{% capture plot_316 %}
+  {% raw %}
+    {"data":[{"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"2seater","type":"box","xsrc":"nadhil:1090:7dcca8","x":[1,1,1,1,1],"ysrc":"nadhil:1090:82564a","y":[24,26,25,23,26],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(248,118,109,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"2seater"},{"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"compact","type":"box","xsrc":"nadhil:1090:cf48ad","x":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],"ysrc":"nadhil:1090:3a561e","y":[29,29,31,30,26,26,27,26,25,28,27,25,25,25,25,29,29,29,29,23,24,29,27,37,35,25,27,29,31,31,26,26,27,30,33,35,25,27,29,27,29,26,29,29,26,44,24],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(196,154,0,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"compact"},{"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"midsize","type":"box","xsrc":"nadhil:1090:790830","x":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],"ysrc":"nadhil:1090:d18f82","y":[24,25,31,29,27,23,31,26,26,27,30,29,27,27,31,31,32,25,28,26,28,29,25,25,29,26,30,26,29,26,26,26,26,28,26,28,27,26,26,26,26],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(83,180,0,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"midsize"},{"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"minivan","type":"box","xsrc":"nadhil:1090:ca9885","x":[4,4,4,4,4,4,4,4,4,4,4],"ysrc":"nadhil:1090:b96743","y":[22,22,24,21,24,24,17,22,23,24,23],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(0,192,148,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"minivan"},{"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"pickup","type":"box","xsrc":"nadhil:1090:c6c26b","x":[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"ysrc":"nadhil:1090:9d378b","y":[16,20,12,20,18,17,19,19,12,17,17,16,16,17,19,15,17,17,17,15,15,17,20,17,22,18,19,16,17,17,12,15,16],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(0,182,235,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"pickup"},{"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"subcompact","type":"box","xsrc":"nadhil:1090:65efb7","x":[6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6],"ysrc":"nadhil:1090:a0466a","y":[29,34,36,36,26,32,28,27,24,24,24,26,32,26,29,21,25,26,24,26,26,26,44,41,29,26,28,29,29,22,23,22,20,33,32],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(165,138,255,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"subcompact"},{"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"suv","type":"box","xsrc":"nadhil:1090:e2be57","x":[7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],"ysrc":"nadhil:1090:2d8498","y":[24,17,17,19,17,12,19,19,25,15,27,19,20,20,17,22,17,15,18,15,16,26,23,17,19,19,18,17,15,15,18,18,20,20,18,17,15,17,20,17,17,14,18,25,17,14,20,12,17,16,18,17,19,19,17,17,17,19,20,18,17,17],"frame":null,"xaxis":"x","yaxis":"y","marker":{"line":{"color":"rgba(0,0,0,1)","width":1.88976377952756},"size":5.66929133858268,"opacity":null,"outliercolor":"rgba(0,0,0,1)"},"fillcolor":"rgba(251,97,215,0.4)","hoverinfo":"y","showlegend":true,"legendgroup":"suv"}],"layout":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"xaxis":{"type":"linear","range":[0.4,7.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"class"},"anchor":"y","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["2seater","compact","midsize","minivan","pickup","subcompact","suv"],"tickvals":[1,2,3,4,5,6,7],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["2seater","compact","midsize","minivan","pickup","subcompact","suv"],"categoryorder":"array","showticklabels":true},"yaxis":{"type":"linear","range":[10.4,45.6],"ticks":"outside","title":{"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"hwy"},"anchor":"x","domain":[0,1],"nticks":null,"ticklen":3.65296803652968,"showgrid":true,"showline":false,"tickfont":{"size":11.689497716895,"color":"rgba(77,77,77,1)","family":""},"tickmode":"array","ticktext":["20","30","40"],"tickvals":[20,30,40],"zeroline":false,"autorange":false,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"linecolor":null,"linewidth":0,"tickangle":0,"tickcolor":"rgba(51,51,51,1)","tickwidth":0.66417600664176,"automargin":true,"hoverformat":".2f","categoryarray":["20","30","40"],"categoryorder":"array","showticklabels":true},"legend":{"y":0.93503937007874,"font":{"size":11.689497716895,"color":"rgba(0,0,0,1)","family":""},"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756},"margin":{"b":40.1826484018265,"l":37.2602739726027,"r":7.30593607305936,"t":26.2283105022831},"shapes":[{"x0":0,"x1":1,"y0":0,"y1":1,"line":{"color":null,"width":0,"linetype":[]},"type":"rect","xref":"paper","yref":"paper","fillcolor":null}],"barmode":"relative","hovermode":"closest","showlegend":true,"annotations":[{"x":1.02,"y":1,"ax":0,"ay":0,"font":{"size":14.6118721461187,"color":"rgba(0,0,0,1)","family":""},"text":"class","xref":"paper","yref":"paper","xanchor":"left","yanchor":"bottom","showarrow":false,"textangle":0,"legendTitle":true}],"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)"},"frames":[]}
+  {% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html
+    raw_json_file=plot_316
+    ssim="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Stats/after_stat/example4_ssim_map.png" 
+    compare="https://raw.githubusercontent.com/plotly/ssim_baselines/main/out_ggplot2/ggplot2/Layers/Stats/after_stat/example4_montage.png"
+%}
 
 
