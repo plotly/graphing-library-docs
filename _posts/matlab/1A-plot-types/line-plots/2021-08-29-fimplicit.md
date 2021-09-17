@@ -105,7 +105,7 @@ fp = fimplicit(@(x,y) y.*sin(x) + x.*cos(y) - 1)
 %}
 
 
-<div class="codeoutput">fp = 
+<div class="codeoutput"><pre>fp = 
   ImplicitFunctionLine with properties:
 
      Function: @(x,y)y.*sin(x)+x.*cos(y)-1
@@ -115,7 +115,7 @@ fp = fimplicit(@(x,y) y.*sin(x) + x.*cos(y) - 1)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 Use `fp` to access and modify properties of the implicit function line object after it is created. For example, change the color, line style, and line width.

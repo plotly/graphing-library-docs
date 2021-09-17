@@ -17,7 +17,7 @@ head(tbl)
 
 
 
-<div class="codeoutput">ans=<span class="emphasis"><em>8×2 table</em></span>
+<div class="codeoutput"><pre>ans=<span class="emphasis"><em>8×2 table</em></span>
        Word        Count
     ___________    _____
 
@@ -30,7 +30,7 @@ head(tbl)
     {'<span style='color:#A020F0'>'Thou'</span>  }      1  
     {'<span style='color:#A020F0'>'Thus'</span>  }      1  
 
-</div>
+</pre></div>
 
 
 Plot the table data using `wordcloud`. Specify the words and corresponding word sizes to be the `Word` and `Count` variables respectively.
@@ -71,7 +71,7 @@ extractBefore(sonnets,"II")
 
 
 
-<div class="codeoutput">ans = 
+<div class="codeoutput"><pre>ans = 
     "THE SONNETS
      
      by William Shakespeare
@@ -86,7 +86,7 @@ extractBefore(sonnets,"II")
        But as the riper should by time decease,
        His tender heir might bear his memory:
        But thou, contracted to thine own bright eyes,
-       Feed'st thy light's flame with self-substantial fuel,
+       Feed<span style='color:#A020F0'>'st thy light'</span>s flame with self-substantial fuel,
        Making a famine where abundance lies,
        Thy self thy foe, to thy sweet self too cruel:
        Thou that art now the world's fresh ornament,
@@ -98,7 +98,7 @@ extractBefore(sonnets,"II")
      
        "
 
-</div>
+</pre></div>
 
 
 Split `sonnets` into a string array whose elements contain individual words. To do this, remove the punctuation characters and join all the string elements into a 1-by-1 string and then split on the space characters. Then, remove words with fewer than five characters and convert the words to lowercase.
@@ -113,7 +113,7 @@ words(1:10)
 
 
 
-<div class="codeoutput">ans = <span class="emphasis"><em>10x1 string</em></span>
+<div class="codeoutput"><pre>ans = <span class="emphasis"><em>10x1 string</em></span>
     "sonnets"
     "william"
     "shakespeare"
@@ -125,7 +125,7 @@ words(1:10)
     "beauty's"
     "might"
 
-</div>
+</pre></div>
 
 
 Convert `sonnets` to a categorical array and then plot using `wordcloud`. The function plots the unique elements of `C` with sizes corresponding to their frequency counts.
@@ -165,7 +165,7 @@ extractBefore(sonnets,"II")
 
 
 
-<div class="codeoutput">ans = 
+<div class="codeoutput"><pre>ans = 
     "THE SONNETS
      
      by William Shakespeare
@@ -180,7 +180,7 @@ extractBefore(sonnets,"II")
        But as the riper should by time decease,
        His tender heir might bear his memory:
        But thou, contracted to thine own bright eyes,
-       Feed'st thy light's flame with self-substantial fuel,
+       Feed<span style='color:#A020F0'>'st thy light'</span>s flame with self-substantial fuel,
        Making a famine where abundance lies,
        Thy self thy foe, to thy sweet self too cruel:
        Thou that art now the world's fresh ornament,
@@ -192,7 +192,7 @@ extractBefore(sonnets,"II")
      
        "
 
-</div>
+</pre></div>
 
 
 Split `sonnets` into a string array whose elements contain individual words. To do this, remove the punctuation characters and join all the string elements into a 1-by-1 string and then split on the space characters. Then, remove words with fewer than five characters and convert the words to lowercase.
@@ -207,7 +207,7 @@ words(1:10)
 
 
 
-<div class="codeoutput">ans = <span class="emphasis"><em>10x1 string</em></span>
+<div class="codeoutput"><pre>ans = <span class="emphasis"><em>10x1 string</em></span>
     "sonnets"
     "william"
     "shakespeare"
@@ -219,7 +219,7 @@ words(1:10)
     "beauty's"
     "might"
 
-</div>
+</pre></div>
 
 
 Find the unique words in `sonnets` and count their frequency. Create a word cloud using the frequency counts as size data.
@@ -257,7 +257,7 @@ head(tbl)
 
 
 
-<div class="codeoutput">ans=<span class="emphasis"><em>8×2 table</em></span>
+<div class="codeoutput"><pre>ans=<span class="emphasis"><em>8×2 table</em></span>
        Word        Count
     ___________    _____
 
@@ -270,7 +270,7 @@ head(tbl)
     {'<span style='color:#A020F0'>'Thou'</span>  }      1  
     {'<span style='color:#A020F0'>'Thus'</span>  }      1  
 
-</div>
+</pre></div>
 
 
 Plot the table data using `wordcloud`. Specify the words and corresponding word sizes to be the `Word` and `Count` variables respectively. To set the word colors to random values, set `'Color'` to a random matrix or RGB triplets with one row for each word.
@@ -314,7 +314,7 @@ extractBefore(str,"II")
 
 
 
-<div class="codeoutput">ans = 
+<div class="codeoutput"><pre>ans = 
 
     "THE SONNETS
      
@@ -330,7 +330,7 @@ extractBefore(str,"II")
        But as the riper should by time decease,
        His tender heir might bear his memory:
        But thou, contracted to thine own bright eyes,
-       Feed'st thy light's flame with self-substantial fuel,
+       Feed<span style='color:#A020F0'>'st thy light'</span>s flame with self-substantial fuel,
        Making a famine where abundance lies,
        Thy self thy foe, to thy sweet self too cruel:
        Thou that art now the world's fresh ornament,
@@ -340,7 +340,7 @@ extractBefore(str,"II")
          Pity the world, or else this glutton be,
          To eat the world's due, by the grave and thee.
      
-       "</div>
+       "</pre></div>
 
 
 Display the words from the sonnets in a word cloud.

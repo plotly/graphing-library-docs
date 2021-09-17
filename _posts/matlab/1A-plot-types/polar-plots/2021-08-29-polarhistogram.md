@@ -102,7 +102,7 @@ h = polarhistogram(theta,25)
 %}
 
 
-<div class="codeoutput">h = 
+<div class="codeoutput"><pre>h = 
   Histogram with properties:
 
              Data: [100000x1 double]
@@ -117,7 +117,7 @@ h = polarhistogram(theta,25)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 Use `h` to access and modify properties of the histogram object after it is created. For example, show just the histogram outline by setting the `DisplayStyle` property of the histogram object.

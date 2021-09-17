@@ -103,10 +103,10 @@ grpvalues = {<span style='color:#A020F0'>'Red'</span>,<span style='color:#A020F0
     <span style='color:#A020F0'>'Red'</span>,<span style='color:#A020F0'>'Blue'</span>,<span style='color:#A020F0'>'Black'</span>};
 s = scatterhistogram(xvalues,yvalues,<span style='color:#A020F0'>'GroupData'</span>,grpvalues);
 
-s.Title = 'Shoe Sales';
-s.XLabel = 'Shoe Size';
+s.Title = <span style='color:#A020F0'>'Shoe Sales'</span>;
+s.XLabel = <span style='color:#A020F0'>'Shoe Size'</span>;
 s.YLabel = <span style='color:#A020F0'>'Price'</span>;
-s.LegendTitle = 'Shoe Color';
+s.LegendTitle = <span style='color:#A020F0'>'Shoe Color'</span>;
 
 fig2plotly()
 </pre>

@@ -170,10 +170,10 @@ levels = (3 * nsites) + (7 * randn(1,30) + 20);
 
 % Display bubble chart with axis labels and legend
 bubblechart(nsites,levels,towns)
-xlabel('Number of Industrial Sites')
-ylabel('Contamination Level')
+xlabel(<span style='color:#A020F0'>'Number of Industrial Sites'</span>)
+ylabel(<span style='color:#A020F0'>'Contamination Level'</span>)
 bubblesize([5 30])
-bubblelegend('Town Population',<span style='color:#A020F0'>'Location'</span>,<span style='color:#A020F0'>'eastoutside'</span>)
+bubblelegend(<span style='color:#A020F0'>'Town Population'</span>,<span style='color:#A020F0'>'Location'</span>,<span style='color:#A020F0'>'eastoutside'</span>)
 
 fig2plotly()
 </pre>
@@ -272,15 +272,15 @@ tiledlayout(1,2,<span style='color:#A020F0'>'TileSpacing'</span>,<span style='co
 % West side
 ax1 = nexttile;
 bubblechart(ax1,nsites1,levels1,towns1);
-title('West Side')
-xlabel('Number of Industrial Sites')
+title(<span style='color:#A020F0'>'West Side'</span>)
+xlabel(<span style='color:#A020F0'>'Number of Industrial Sites'</span>)
 
 % East side
 ax2 = nexttile;
 bubblechart(ax2,nsites2,levels2,towns2);
-title('East Side')
-xlabel('Number of Industrial Sites')
-ylabel('Contamination Level')
+title(<span style='color:#A020F0'>'East Side'</span>)
+xlabel(<span style='color:#A020F0'>'Number of Industrial Sites'</span>)
+ylabel(<span style='color:#A020F0'>'Contamination Level'</span>)
 
 fig2plotly()
 </pre>

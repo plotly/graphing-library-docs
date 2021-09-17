@@ -143,7 +143,7 @@ gb = geobubble(tsunamis.Latitude,tsunamis.Longitude,tsunamis.MaxHeight,colordata
 Use properties of the geographic bubble chart to modify the chart. For example, add titles to the size and color legends. (If you specify the table as an argument, `geobubble` adds legend titles automatically, using the names of table variables.)
 
 <pre class="mcode">
-gb.SizeLegendTitle = 'Max Height';
+gb.SizeLegendTitle = <span style='color:#A020F0'>'Max Height'</span>;
 gb.ColorLegendTitle = <span style='color:#A020F0'>'Cause'</span>;
 
 fig2plotly()

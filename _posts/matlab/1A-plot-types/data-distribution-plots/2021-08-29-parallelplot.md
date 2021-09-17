@@ -30,7 +30,7 @@ p = parallelplot(tbl)
 %}
 
 
-<div class="codeoutput">p = 
+<div class="codeoutput"><pre>p = 
   ParallelCoordinatesPlot with properties:
 
             SourceTable: [100x3 table]
@@ -39,7 +39,7 @@ p = parallelplot(tbl)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 By default, the software randomly jitters plot lines so that they are unlikely to overlap perfectly along coordinate rulers. This jittering is particularly helpful for visualizing categorical data because it enables you to distinguish between plot lines more easily. For example, observe the plot lines along the `Smoker` coordinate ruler; the plot lines are not flush with either the `true` or `false` tick marks.
@@ -111,7 +111,7 @@ p = parallelplot(X)
 
 
 
-<div class="codeoutput">p = 
+<div class="codeoutput"><pre>p = 
   ParallelCoordinatesPlot with properties:
 
               Data: [100x3 double]
@@ -120,7 +120,7 @@ p = parallelplot(X)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 <pre class="mcode">
@@ -146,8 +146,8 @@ min(Height)
 
 
 
-<div class="codeoutput">ans = 60
-</div>
+<div class="codeoutput"><pre>ans = 60
+</pre></div>
 
 
 
@@ -155,8 +155,8 @@ max(Height)
 
 
 
-<div class="codeoutput">ans = 72
-</div>
+<div class="codeoutput"><pre>ans = 72
+</pre></div>
 
 
 <pre class="mcode">
@@ -208,7 +208,7 @@ p = parallelplot(X,<span style='color:#A020F0'>'CoordinateData'</span>,coorddata
 
 
 
-<div class="codeoutput">p = 
+<div class="codeoutput"><pre>p = 
   ParallelCoordinatesPlot with properties:
 
               Data: [100x3 double]
@@ -217,7 +217,7 @@ p = parallelplot(X,<span style='color:#A020F0'>'CoordinateData'</span>,coorddata
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 <pre class="mcode">
@@ -244,7 +244,7 @@ p2 = parallelplot(X,<span style='color:#A020F0'>'CoordinateData'</span>,coorddat
 
 
 
-<div class="codeoutput">p2 = 
+<div class="codeoutput"><pre>p2 = 
   ParallelCoordinatesPlot with properties:
 
               Data: [100x3 double]
@@ -253,7 +253,7 @@ p2 = parallelplot(X,<span style='color:#A020F0'>'CoordinateData'</span>,coorddat
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 <pre class="mcode">
@@ -288,20 +288,20 @@ head(outages)
 
 
 
-<div class="codeoutput">ans=<span class="emphasis"><em>8×6 table</em></span>
+<div class="codeoutput"><pre>ans=<span class="emphasis"><em>8×6 table</em></span>
        Region           OutageTime        Loss     Customers     RestorationTime            Cause       
     _____________    ________________    ______    __________    ________________    ___________________
 
-    {<span style='color:#A020F0'>'SouthWest'</span>}    2002-02-01 12:18    458.98    1.8202e+06    2002-02-07 16:50    {'winter storm'   }
-    {<span style='color:#A020F0'>'SouthEast'</span>}    2003-01-23 00:49    530.14    2.1204e+05                 NaT    {'winter storm'   }
-    {<span style='color:#A020F0'>'SouthEast'</span>}    2003-02-07 21:15     289.4    1.4294e+05    2003-02-17 08:14    {'winter storm'   }
-    {<span style='color:#A020F0'>'West'</span>     }    2004-04-06 05:44    434.81    3.4037e+05    2004-04-06 06:10    {'equipment fault'}
-    {<span style='color:#A020F0'>'MidWest'</span>  }    2002-03-16 06:18    186.44    2.1275e+05    2002-03-18 23:23    {'severe storm'   }
+    {<span style='color:#A020F0'>'SouthWest'</span>}    2002-02-01 12:18    458.98    1.8202e+06    2002-02-07 16:50    {<span style='color:#A020F0'>'winter storm'</span>   }
+    {<span style='color:#A020F0'>'SouthEast'</span>}    2003-01-23 00:49    530.14    2.1204e+05                 NaT    {<span style='color:#A020F0'>'winter storm'</span>   }
+    {<span style='color:#A020F0'>'SouthEast'</span>}    2003-02-07 21:15     289.4    1.4294e+05    2003-02-17 08:14    {<span style='color:#A020F0'>'winter storm'</span>   }
+    {<span style='color:#A020F0'>'West'</span>     }    2004-04-06 05:44    434.81    3.4037e+05    2004-04-06 06:10    {<span style='color:#A020F0'>'equipment fault'</span>}
+    {<span style='color:#A020F0'>'MidWest'</span>  }    2002-03-16 06:18    186.44    2.1275e+05    2002-03-18 23:23    {<span style='color:#A020F0'>'severe storm'</span>   }
     {<span style='color:#A020F0'>'West'</span>     }    2003-06-18 02:49         0             0    2003-06-18 10:54    {<span style='color:#A020F0'>'attack'</span>         }
-    {<span style='color:#A020F0'>'West'</span>     }    2004-06-20 14:39    231.29           NaN    2004-06-20 19:16    {'equipment fault'}
-    {<span style='color:#A020F0'>'West'</span>     }    2002-06-06 19:28    311.86           NaN    2002-06-07 00:51    {'equipment fault'}
+    {<span style='color:#A020F0'>'West'</span>     }    2004-06-20 14:39    231.29           NaN    2004-06-20 19:16    {<span style='color:#A020F0'>'equipment fault'</span>}
+    {<span style='color:#A020F0'>'West'</span>     }    2002-06-06 19:28    311.86           NaN    2002-06-07 00:51    {<span style='color:#A020F0'>'equipment fault'</span>}
 
-</div>
+</pre></div>
 
 
 Create a new variable called `OutageDuration` that indicates how long each power outage lasted. Convert `OutageDuration` to the number of days each power outage lasted. Add the new variable to the `outages` table, and call it `OutageDays`.
@@ -347,14 +347,14 @@ outliers = outages([1011 269],:)
 
 
 
-<div class="codeoutput">outliers=<span class="emphasis"><em>2×7 table</em></span>
+<div class="codeoutput"><pre>outliers=<span class="emphasis"><em>2×7 table</em></span>
        Region           OutageTime        Loss     Customers     RestorationTime            Cause            OutageDays
     _____________    ________________    ______    __________    ________________    ____________________    __________
 
-    {<span style='color:#A020F0'>'NorthEast'</span>}    2009-08-20 02:46       NaN    1.7355e+05    2042-09-18 23:31    {'severe storm'    }       12083  
-    {<span style='color:#A020F0'>'MidWest'</span>  }    2008-02-07 06:18    2378.7             0    2019-08-14 16:16    {'energy emergency'}      4206.4  
+    {<span style='color:#A020F0'>'NorthEast'</span>}    2009-08-20 02:46       NaN    1.7355e+05    2042-09-18 23:31    {<span style='color:#A020F0'>'severe storm'</span>    }       12083  
+    {<span style='color:#A020F0'>'MidWest'</span>  }    2008-02-07 06:18    2378.7             0    2019-08-14 16:16    {<span style='color:#A020F0'>'energy emergency'</span>}      4206.4  
 
-</div>
+</pre></div>
 
 
 
@@ -392,8 +392,8 @@ Change the order of the events in `Cause` by updating the source table. First, c
 
 <pre class="mcode">
 categoricalCause = categorical(p.SourceTable.Cause);
-newOrder = {<span style='color:#A020F0'>'attack'</span>,<span style='color:#A020F0'>'earthquake'</span>,'energy emergency','equipment fault', ...
-    <span style='color:#A020F0'>'fire'</span>,'severe storm','thunder storm',<span style='color:#A020F0'>'wind'</span>,'winter storm',<span style='color:#A020F0'>'unknown'</span>};
+newOrder = {<span style='color:#A020F0'>'attack'</span>,<span style='color:#A020F0'>'earthquake'</span>,<span style='color:#A020F0'>'energy emergency'</span>,<span style='color:#A020F0'>'equipment fault'</span>, ...
+    <span style='color:#A020F0'>'fire'</span>,<span style='color:#A020F0'>'severe storm'</span>,<span style='color:#A020F0'>'thunder storm'</span>,<span style='color:#A020F0'>'wind'</span>,<span style='color:#A020F0'>'winter storm'</span>,<span style='color:#A020F0'>'unknown'</span>};
 orderCause = reordercats(categoricalCause,newOrder);
 p.SourceTable.Cause = orderCause;
 

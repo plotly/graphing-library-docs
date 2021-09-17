@@ -82,7 +82,7 @@ p = waterfall(X,Y,Z)
 %}
 
 
-<div class="codeoutput">p = 
+<div class="codeoutput"><pre>p = 
   Patch with properties:
 
     FaceColor: [1 1 1]
@@ -94,7 +94,7 @@ p = waterfall(X,Y,Z)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 Use `p` to access and modify properties of the waterfall plot after it is created. For example, change the color of the plot edges by setting the `EdgeColor` property.

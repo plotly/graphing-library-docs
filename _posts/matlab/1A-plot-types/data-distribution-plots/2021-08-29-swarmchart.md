@@ -85,7 +85,7 @@ tbl(1:5,:)
 
 
 
-<div class="codeoutput">ans=<span class="emphasis"><em>5×5 table</em></span>
+<div class="codeoutput"><pre>ans=<span class="emphasis"><em>5×5 table</em></span>
          Timestamp              Day         Total    Westbound    Eastbound
     ___________________    _____________    _____    _________    _________
 
@@ -95,7 +95,7 @@ tbl(1:5,:)
     2015-06-24 03:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
     2015-06-24 04:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
 
-</div>
+</pre></div>
 
 
 Create a vector `x` with the day name from each observation, and another vector y with the bicycle traffic observed. Then create a swarm chart of `x` and `y`, and specify the point marker `('.')`. The chart shows the distribution of bicycle traffic according to the day of the week.
@@ -240,7 +240,7 @@ tbl(1:5,:)
 
 
 
-<div class="codeoutput">ans=<span class="emphasis"><em>5×5 table</em></span>
+<div class="codeoutput"><pre>ans=<span class="emphasis"><em>5×5 table</em></span>
          Timestamp              Day         Total    Westbound    Eastbound
     ___________________    _____________    _____    _________    _________
 
@@ -250,7 +250,7 @@ tbl(1:5,:)
     2015-06-24 03:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
     2015-06-24 04:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
 
-</div>
+</pre></div>
 
 
 Define `x` as a categorical array of the day names in the table. Define `yEast` and `yWest` as vectors containing the eastbound and westbound bicycle traffic counts.

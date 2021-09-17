@@ -181,12 +181,12 @@ Display the data in a bubble chart. Create axis labels using the `xlabel`, `ylab
 
 <pre class="mcode">
 bubblechart3(nsites,nregulated,levels,towns)
-xlabel('Industrial Sites')
-ylabel('Regulated Sites')
-zlabel('Contamination Level')
+xlabel(<span style='color:#A020F0'>'Industrial Sites'</span>)
+ylabel(<span style='color:#A020F0'>'Regulated Sites'</span>)
+zlabel(<span style='color:#A020F0'>'Contamination Level'</span>)
 
 bubblesize([5 30])
-bubblelegend('Town Population',<span style='color:#A020F0'>'Location'</span>,<span style='color:#A020F0'>'eastoutside'</span>)
+bubblelegend(<span style='color:#A020F0'>'Town Population'</span>,<span style='color:#A020F0'>'Location'</span>,<span style='color:#A020F0'>'eastoutside'</span>)
 
 fig2plotly()
 </pre>
@@ -232,18 +232,18 @@ ax1 = nexttile;
 
 % East side
 bubblechart3(ax1,nsites1,nregulated1,levels1,towns1);
-title('East Side')
-xlabel('Industrial Sites')
-ylabel('Regulated Sites')
-zlabel('Contamination Level')
+title(<span style='color:#A020F0'>'East Side'</span>)
+xlabel(<span style='color:#A020F0'>'Industrial Sites'</span>)
+ylabel(<span style='color:#A020F0'>'Regulated Sites'</span>)
+zlabel(<span style='color:#A020F0'>'Contamination Level'</span>)
 
 % West side
 ax2 = nexttile;
 bubblechart3(ax2,nsites2,nregulated2,levels2,towns2);
-title('West Side')
-xlabel('Industrial Sites')
-ylabel('Regulated Sites')
-zlabel('Contamination Level')
+title(<span style='color:#A020F0'>'West Side'</span>)
+xlabel(<span style='color:#A020F0'>'Industrial Sites'</span>)
+ylabel(<span style='color:#A020F0'>'Regulated Sites'</span>)
+zlabel(<span style='color:#A020F0'>'Contamination Level'</span>)
 
 fig2plotly()
 </pre>

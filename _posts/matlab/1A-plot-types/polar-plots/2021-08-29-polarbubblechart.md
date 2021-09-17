@@ -173,7 +173,7 @@ theta = repmat([0 pi/2 7*pi/6],1,4) + 0.25*randn(1,12);
 altitude = randi([13000 43000],1,12);
 planesize = randi([75 500],[1 12]);
 polarbubblechart(theta,altitude,planesize)
-bubblelegend('Number of Passengers',<span style='color:#A020F0'>'Location'</span>,<span style='color:#A020F0'>'eastoutside'</span>)
+bubblelegend(<span style='color:#A020F0'>'Number of Passengers'</span>,<span style='color:#A020F0'>'Location'</span>,<span style='color:#A020F0'>'eastoutside'</span>)
 
 fig2plotly()
 </pre>
@@ -214,12 +214,12 @@ Create a tiled chart layout so you can visualize the data side-by-side. Then, cr
 t = tiledlayout(1,2);
 pax1 = polaraxes(t);
 polarbubblechart(pax1,theta1,altitude1,planesize1)
-title('Airport A')
+title(<span style='color:#A020F0'>'Airport A'</span>)
 
 pax2 = polaraxes(t);
 pax2.Layout.Tile = 2;
 polarbubblechart(pax2,theta2,altitude2,planesize2);
-title('Airport B')
+title(<span style='color:#A020F0'>'Airport B'</span>)
 
 fig2plotly()
 </pre>

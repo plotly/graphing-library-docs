@@ -17,7 +17,7 @@ tbl(1:5,:)
 
 
 
-<div class="codeoutput">ans=<span class="emphasis"><em>5×5 table</em></span>
+<div class="codeoutput"><pre>ans=<span class="emphasis"><em>5×5 table</em></span>
          Timestamp              Day         Total    Westbound    Eastbound
     ___________________    _____________    _____    _________    _________
 
@@ -27,7 +27,7 @@ tbl(1:5,:)
     2015-06-24 03:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
     2015-06-24 04:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
 
-</div>
+</pre></div>
 
 
 Create a vector `x` with the day name from each observation.
@@ -206,7 +206,7 @@ tbl(1:5,:)
 
 
 
-<div class="codeoutput">ans=<span class="emphasis"><em>5×5 table</em></span>
+<div class="codeoutput"><pre>ans=<span class="emphasis"><em>5×5 table</em></span>
          Timestamp              Day         Total    Westbound    Eastbound
     ___________________    _____________    _____    _________    _________
 
@@ -216,7 +216,7 @@ tbl(1:5,:)
     2015-06-24 03:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
     2015-06-24 04:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
 
-</div>
+</pre></div>
 
 
 Create vector `x` with the days names for each observation. Create a categorical vector `y` containing the values `"pm"` or `"am"` according to the time for each observation in the table. Define `ze` as a vector of eastbound traffic data, and define `zw` as a vector of westbound traffic data. 

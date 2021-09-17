@@ -118,7 +118,7 @@ S(3).Marker = '*';
 H(3).EdgeColor = <span style='color:#A020F0'>'k'</span>;
 H(3).FaceColor = <span style='color:#A020F0'>'g'</span>;  
 
-title(BigAx,'A Comparison of Data Sets')
+title(BigAx,<span style='color:#A020F0'>'A Comparison of Data Sets'</span>)
 
 
 {% capture plot_3_0_modify_scatter_plot_matrix_after_creation_153 %}

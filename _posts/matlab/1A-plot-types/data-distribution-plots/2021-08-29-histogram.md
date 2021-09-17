@@ -27,7 +27,7 @@ h = histogram(x)
 %}
 
 
-<div class="codeoutput">h = 
+<div class="codeoutput"><pre>h = 
   Histogram with properties:
 
              Data: [10000x1 double]
@@ -42,7 +42,7 @@ h = histogram(x)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 When you specify an output argument to the `histogram` function, it returns a histogram object. You can use this object to inspect the properties of the histogram, such as the number of bins or the width of the bins.
@@ -56,8 +56,8 @@ fig2plotly()
 </pre>
 
 
-<div class="codeoutput">nbins = 37
-</div>
+<div class="codeoutput"><pre>nbins = 37
+</pre></div>
 
 
 
@@ -85,7 +85,7 @@ h = histogram(x,nbins)
 %}
 
 
-<div class="codeoutput">h = 
+<div class="codeoutput"><pre>h = 
   Histogram with properties:
 
              Data: [1000x1 double]
@@ -100,7 +100,7 @@ h = histogram(x,nbins)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 Find the bin counts.
@@ -112,11 +112,11 @@ fig2plotly()
 </pre>
 
 
-<div class="codeoutput">counts = <span class="emphasis"><em>1×25</em></span>
+<div class="codeoutput"><pre>counts = <span class="emphasis"><em>1×25</em></span>
 
      1     3     0     6    14    19    31    54    74    80    92   122   104   115    88    80    38    32    21     9     5     5     5     0     2
 
-</div>
+</pre></div>
 
 
 
@@ -143,7 +143,7 @@ h = histogram(X)
 %}
 
 
-<div class="codeoutput">h = 
+<div class="codeoutput"><pre>h = 
   Histogram with properties:
 
              Data: [1000x1 double]
@@ -158,7 +158,7 @@ h = histogram(X)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 Use the `morebins` function to coarsely adjust the number of bins.
@@ -181,8 +181,8 @@ fig2plotly()
 %}
 
 
-<div class="codeoutput">Nbins = 29
-</div>
+<div class="codeoutput"><pre>Nbins = 29
+</pre></div>
 
 
 Adjust the bins at a fine grain level by explicitly setting the number of bins.
@@ -259,7 +259,7 @@ C = categorical(A,[1 0 NaN],{<span style='color:#A020F0'>'yes'</span>,<span styl
 
 
 
-<div class="codeoutput">C = <span class="emphasis"><em>1x27 categorical</em></span>
+<div class="codeoutput"><pre>C = <span class="emphasis"><em>1x27 categorical</em></span>
   Columns 1 through 9
 
      no      no      yes      yes      yes      no      no      no      no 
@@ -276,7 +276,7 @@ C = categorical(A,[1 0 NaN],{<span style='color:#A020F0'>'yes'</span>,<span styl
 
      yes      yes 
 
-</div>
+</pre></div>
 
 
 Plot a categorical histogram of the votes, using a relative bar width of `0.5`.
@@ -296,7 +296,7 @@ h = histogram(C,<span style='color:#A020F0'>'BarWidth'</span>,0.5)
 %}
 
 
-<div class="codeoutput">h = 
+<div class="codeoutput"><pre>h = 
   Histogram with properties:
 
               Data: [1x27 categorical]
@@ -311,7 +311,7 @@ h = histogram(C,<span style='color:#A020F0'>'BarWidth'</span>,0.5)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 
@@ -338,7 +338,7 @@ h = histogram(x,<span style='color:#A020F0'>'Normalization'</span>,<span style='
 %}
 
 
-<div class="codeoutput">h = 
+<div class="codeoutput"><pre>h = 
   Histogram with properties:
 
              Data: [1000x1 double]
@@ -353,7 +353,7 @@ h = histogram(x,<span style='color:#A020F0'>'Normalization'</span>,<span style='
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 Compute the sum of the bar heights. With this normalization, the height of each bar is equal to the probability of selecting an observation within that bin interval, and the height of all of the bars sums to 1.
@@ -365,8 +365,8 @@ fig2plotly()
 </pre>
 
 
-<div class="codeoutput">S = 1
-</div>
+<div class="codeoutput"><pre>S = 1
+</pre></div>
 
 
 
@@ -440,7 +440,7 @@ h = histogram(x)
 %}
 
 
-<div class="codeoutput">h = 
+<div class="codeoutput"><pre>h = 
   Histogram with properties:
 
              Data: [1000x1 double]
@@ -455,7 +455,7 @@ h = histogram(x)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 Specify exactly how many bins to use.
@@ -612,7 +612,7 @@ y = findobj(h,<span style='color:#A020F0'>'type'</span>,<span style='color:#A020
 
 
 
-<div class="codeoutput">y = 
+<div class="codeoutput"><pre>y = 
   Histogram with properties:
 
              Data: [10x10 double]
@@ -627,7 +627,7 @@ y = findobj(h,<span style='color:#A020F0'>'type'</span>,<span style='color:#A020
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 

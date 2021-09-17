@@ -22,7 +22,7 @@ fig2plotly()
 </pre>
 
 
-<div class="codeoutput">tbl=<span class="emphasis"><em>10×3 table</em></span>
+<div class="codeoutput"><pre>tbl=<span class="emphasis"><em>10×3 table</em></span>
     Mislabeled    State    Manufacturing Plant
     __________    _____    ___________________
 
@@ -37,7 +37,7 @@ fig2plotly()
         50        "RI"          "Plant B"     
         20        "VT"          "Plant B"     
 
-</div>
+</pre></div>
 
 
 Create a bubble cloud to visualize the mislabeled costumes by state.
@@ -110,7 +110,7 @@ ages = categorical(["40-90+" "5-15" "16-39" "40-90+" ...
    "5-15" "16-39" "5-15" "16-39" "40-90+"]);
 ages = reordercats(ages,["5-15" "16-39" "40-90+"] );
 b = bubblecloud(n,flavs,ages);
-b.LegendTitle = 'Age Range';
+b.LegendTitle = <span style='color:#A020F0'>'Age Range'</span>;
 
 fig2plotly()
 </pre>

@@ -129,7 +129,7 @@ r2 = rand(12,1);
 polarscatter(th,r2,<span style='color:#A020F0'>'filled'</span>)
 hold off
 
-legend('Series A','Series B')
+legend(<span style='color:#A020F0'>'Series A'</span>,<span style='color:#A020F0'>'Series B'</span>)
 
 fig2plotly()
 </pre>
@@ -169,7 +169,7 @@ ps = polarscatter(th,r,<span style='color:#A020F0'>'filled'</span>)
 %}
 
 
-<div class="codeoutput">ps = 
+<div class="codeoutput"><pre>ps = 
   Scatter with properties:
 
              Marker: <span style='color:#A020F0'>'o'</span>
@@ -184,7 +184,7 @@ ps = polarscatter(th,r,<span style='color:#A020F0'>'filled'</span>)
 
   Show all properties
 
-</div>
+</pre></div>
 
 
 Use `ps` to modify properties of the scatter object after it is created.
