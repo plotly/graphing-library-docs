@@ -1,21 +1,14 @@
-{% if page.language == "python" or page.language == "r" or page.language == "ggplot2" %}
+{% if page.language != "javascript" or page.language != "plotly_js" %}
 <div class="dash-plug">
-  <p>Write, deploy, & scale {{ page.language | capitalize }} Dash apps on a <b>Kubernetes Dash Enterprise cluster</b>.
-    <br>
-    <a href="https://plotly.com/get-pricing/" class="plotly-red">Get Pricing</a>
+  <p>Deploy {{ page.language | capitalize }} AI Dash apps on private Kubernetes clusters: 
+    <a href="/get-pricing/">Pricing</a>
     &nbsp;|&nbsp;
-    <a href="https://plotly.com/get-demo/" class="plotly-red">Demo</a>
+    <a href="/get-demo/">Demo</a>
     &nbsp;|&nbsp;
-    <a href="https://plotly.com/dash/" class="plotly-red">Overview</a>
+    <a href="/dash/">Overview</a>
+    &nbsp;|&nbsp;
+    <a href="/consulting-and-oem/">AI App Services</a>
   </p>
 </div>
 {% endif %}
 
-{% if page.language == "javascript" or page.language == "plotly_js" %}
-<div class="dash-plug">
-    <p>Building full-stack apps and dashboards with Plotly.js? 
-      <br>
-      Increase development speed by 2x-10x with <a href="https://plotly.com/dash">Dash</a>. 🏃
-  </p>
-</div>
-{% endif %}

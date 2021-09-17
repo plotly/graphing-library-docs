@@ -15,6 +15,7 @@ Load the `wind` data set, which loads the three-dimensional arrays `u`, `v`, `w`
 load wind
 streamslice(x,y,z,u,v,w,[],[],5)
 axis tight
+
 fig2plotly()
 </pre>
 

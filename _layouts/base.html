@@ -19,6 +19,10 @@
       <!-- aside - Main Sidebar-->
       <aside class="--sidebar-container">
         <div class="--sidebar-fixed reference" data-spy="affix" id="where">
+          <div class="brand">
+            <a href="/graphing-libraries/"><img src="/all_static/images/logo-white.png" style="height: 45px;"></a>
+          </div>
+
           {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains
           "r/" or
           page.permalink contains "ggplot2/" %}
@@ -49,7 +53,7 @@
                   JavaScript
                   {% elsif page.language == "ggplot2" %}
                   ggplot2
-                   {% elsif page.language == "fsharp" %}
+                  {% elsif page.language == "fsharp" %}
                   Fsharp
                   {% elsif page.language == "matlab" %}
                   MATLAB<sup>&reg;</sup>
@@ -58,7 +62,7 @@
                   {% endunless %}
                 </h1>
                 <p>{{page.description}} </p>
-                <br>  
+                <br>
                 {% endunless %}
                 {% include layouts/page-another-language.html %}
                 {% include layouts/new-to-plotly.html %}

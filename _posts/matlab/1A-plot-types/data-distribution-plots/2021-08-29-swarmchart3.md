@@ -11,12 +11,12 @@ reference: https://mathworks.com/help/matlab/ref/swarmchart3.html
 
 Read the `BicycleCounts.csv` data set into a timetable called `tbl`. This data set contains bicycle traffic data over a period of time. Display the first five rows of `tbl`. 
 
-<pre>
+
 tbl = readtable(fullfile(matlabroot,<span style='color:#A020F0'>'examples'</span>,<span style='color:#A020F0'>'matlab'</span>,<span style='color:#A020F0'>'data'</span>,'BicycleCounts.csv'));
 tbl(1:5,:)
-</pre>
 
-<pre>
+
+
 <div class="codeoutput"><pre>ans=<span class="emphasis"><em>5×5 table</em></span>
          Timestamp              Day         Total    Westbound    Eastbound
     ___________________    _____________    _____    _________    _________
@@ -28,14 +28,14 @@ tbl(1:5,:)
     2015-06-24 04:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
 
 </pre></div>
-</pre>
+
 
 Create a vector `x` with the day name from each observation.
 
-<pre>
+
 daynames = ["Sunday" "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday"];
 x = categorical(tbl.Day,daynames);
-</pre>
+
 
 Create a categorical vector `y` containing the values `"pm"` or `"am"` according to the time for each observation in the table. Create vector `z` of eastbound traffic data. Then create a swarm chart of `x`, `y`, and `z`. The chart shows the data distributions for each morning and evening of the week.
 
@@ -46,6 +46,7 @@ y(ispm) = "pm";
 y(~ispm) = "am";
 z= tbl.Eastbound;
 swarmchart3(x,y,z);
+
 fig2plotly()
 </pre>
 
@@ -72,6 +73,7 @@ x = [zeros(1,500) ones(1,500)];
 y = ones(1,1000);
 z = randn(1,1000).^2;
 swarmchart3(x,y,z,5);
+
 fig2plotly()
 </pre>
 
@@ -98,6 +100,7 @@ x = [zeros(1,500) ones(1,500)];
 y = ones(1,1000);
 z = randn(1,1000).^2;
 swarmchart3(x,y,z,'.');
+
 fig2plotly()
 </pre>
 
@@ -125,6 +128,7 @@ y = randi(2,1,1000);
 z = randn(1,1000).^2;
 c = sqrt(z);
 swarmchart3(x,y,z,50,c,<span style='color:#A020F0'>'filled'</span>);
+
 fig2plotly()
 </pre>
 
@@ -153,6 +157,7 @@ z = randn(1,1000).^2;
 s = swarmchart3(x,y,z);
 xlabel(<span style='color:#A020F0'>'X'</span>)
 ylabel(<span style='color:#A020F0'>'Y'</span>)
+
 fig2plotly()
 </pre>
 
@@ -173,6 +178,7 @@ s.XJitter = <span style='color:#A020F0'>'rand'</span>;
 s.XJitterWidth = 0.5;
 s.YJitter = <span style='color:#A020F0'>'randn'</span>;
 s.YJitterWidth = 0.1;
+
 fig2plotly()
 </pre>
 
@@ -194,12 +200,12 @@ fig2plotly()
 
 Read the `BicycleCounts.csv` data set into a timetable called `tbl`. This data set contains bicycle traffic data over a period of time. Display the first five rows of `tbl`. 
 
-<pre>
+
 tbl = readtable(fullfile(matlabroot,<span style='color:#A020F0'>'examples'</span>,<span style='color:#A020F0'>'matlab'</span>,<span style='color:#A020F0'>'data'</span>,'BicycleCounts.csv'));
 tbl(1:5,:)
-</pre>
 
-<pre>
+
+
 <div class="codeoutput"><pre>ans=<span class="emphasis"><em>5×5 table</em></span>
          Timestamp              Day         Total    Westbound    Eastbound
     ___________________    _____________    _____    _________    _________
@@ -211,7 +217,7 @@ tbl(1:5,:)
     2015-06-24 04:00:00    {<span style='color:#A020F0'>'Wednesday'</span>}      1          1            0    
 
 </pre></div>
-</pre>
+
 
 Create vector `x` with the days names for each observation. Create a categorical vector `y` containing the values `"pm"` or `"am"` according to the time for each observation in the table. Define `ze` as a vector of eastbound traffic data, and define `zw` as a vector of westbound traffic data. 
 
@@ -224,6 +230,7 @@ y(ispm) = <span style='color:#A020F0'>'pm'</span>;
 y(~ispm) = <span style='color:#A020F0'>'am'</span>;
 ze = tbl.Eastbound;
 zw = tbl.Westbound;
+
 fig2plotly()
 </pre>
 
@@ -233,6 +240,7 @@ Create a tiled chart layout in the `'flow'` tile arrangement, so that the axes f
 tiledlayout(<span style='color:#A020F0'>'flow'</span>)
 ax1=nexttile;
 swarmchart3(ax1,x,y,ze,'.');
+
 fig2plotly()
 </pre>
 
@@ -252,6 +260,7 @@ Repeat the process to create a second axes object and a swarm chart for the west
 ax2 = nexttile;
 z = tbl.Westbound;
 swarmchart3(ax2,x,y,zw,'.');
+
 fig2plotly()
 </pre>
 

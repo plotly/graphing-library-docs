@@ -11,10 +11,10 @@ reference: https://mathworks.com/help/matlab/ref/matlab.graphics.chart.primitive
 
 Generate 10,000 random numbers and create a histogram. The `histogram` function automatically chooses an appropriate number of bins to cover the range of values in `x` and show the shape of the underlying distribution.
 
-<pre>
+
 x = randn(10000,1);
 h = histogram(x)
-</pre>
+
 
 {% capture plot_0_0_histogram_of_vector_73 %}
   {% raw %}{"data":[{"name":"x","type":"bar","x":[-3.7,-3.5,-3.3,-3.1,-2.9,-2.7,-2.5,-2.3,-2.1,-1.9,-1.7,-1.5,-1.3,-1.1,-0.9,-0.7,-0.5,-0.3,-0.1,0.0999999999999999,0.3,0.5,0.7,0.9,1.1,1.3,1.5,1.7,1.9,2.1,2.3,2.5,2.7,2.9,3.1,3.3,3.5],"y":[2,2,1,6,7,17,29,57,86,133,193,271,331,421,540,613,730,748,776,806,824,721,623,503,446,326,234,191,132,78,65,33,26,11,8,5,5],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.199999999999999,0.2,0.2,0.2,0.2,0.199999999999999,0.2,0.2,0.2,0.2,0.199999999999999,0.2,0.2],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-4.17,3.97],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":9,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,900],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":11,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -26,7 +26,7 @@ h = histogram(x)
   index=73
 %}
 
-<pre>
+
 <div class="codeoutput"><pre>h = 
   Histogram with properties:
 
@@ -43,7 +43,7 @@ h = histogram(x)
   Show all properties
 
 </pre></div>
-</pre>
+
 
 When you specify an output argument to the `histogram` function, it returns a histogram object. You can use this object to inspect the properties of the histogram, such as the number of bins or the width of the bins.
 
@@ -51,13 +51,14 @@ Find the number of histogram bins.
 
 <pre class="mcode">
 nbins = h.NumBins
+
 fig2plotly()
 </pre>
 
-<pre>
+
 <div class="codeoutput"><pre>nbins = 37
 </pre></div>
-</pre>
+
 
 
 
@@ -67,11 +68,11 @@ fig2plotly()
 
 Plot a histogram of 1,000 random numbers sorted into 25 equally spaced bins.
 
-<pre>
+
 x = randn(1000,1);
 nbins = 25;
 h = histogram(x,nbins)
-</pre>
+
 
 {% capture plot_1_0_specify_number_of_histogram_bins_75 %}
   {% raw %}{"data":[{"name":"x","type":"bar","x":[-3.06,-2.78,-2.5,-2.22,-1.94,-1.66,-1.38,-1.1,-0.82,-0.54,-0.26,0.02,0.3,0.58,0.86,1.14,1.42,1.7,1.98,2.26,2.54,2.82,3.1,3.38,3.66],"y":[2,5,5,9,17,34,39,61,85,93,112,97,101,90,74,57,39,41,15,9,8,4,2,0,1],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.28,0.279999999999999,0.28,0.28,0.279999999999999,0.28,0.28,0.28],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-3.55,4.15],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":9,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,120],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":8,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -83,7 +84,7 @@ h = histogram(x,nbins)
   index=75
 %}
 
-<pre>
+
 <div class="codeoutput"><pre>h = 
   Histogram with properties:
 
@@ -100,22 +101,23 @@ h = histogram(x,nbins)
   Show all properties
 
 </pre></div>
-</pre>
+
 
 Find the bin counts.
 
 <pre class="mcode">
 counts = h.Values
+
 fig2plotly()
 </pre>
 
-<pre>
+
 <div class="codeoutput"><pre>counts = <span class="emphasis"><em>1×25</em></span>
 
      1     3     0     6    14    19    31    54    74    80    92   122   104   115    88    80    38    32    21     9     5     5     5     0     2
 
 </pre></div>
-</pre>
+
 
 
 
@@ -125,10 +127,10 @@ fig2plotly()
 
 Generate 1,000 random numbers and create a histogram. 
 
-<pre>
+
 X = randn(1000,1);
 h = histogram(X)
-</pre>
+
 
 {% capture plot_2_0_change_number_of_histogram_bins_77 %}
   {% raw %}{"data":[{"name":"X","type":"bar","x":[-3.45,-3.15,-2.85,-2.55,-2.25,-1.95,-1.65,-1.35,-1.05,-0.75,-0.45,-0.15,0.15,0.45,0.75,1.05,1.35,1.65,1.95,2.25,2.55,2.85,3.15],"y":[1,2,0,5,12,18,28,51,75,89,117,114,122,114,74,66,47,26,19,14,3,2,1],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.300000000000001,0.3,0.3,0.3,0.3,0.300000000000001,0.3,0.3,0.300000000000001,0.3],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-3.945,3.645],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":8,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,140],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":9,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -140,7 +142,7 @@ h = histogram(X)
   index=77
 %}
 
-<pre>
+
 <div class="codeoutput"><pre>h = 
   Histogram with properties:
 
@@ -157,13 +159,14 @@ h = histogram(X)
   Show all properties
 
 </pre></div>
-</pre>
+
 
 Use the `morebins` function to coarsely adjust the number of bins.
 
 <pre class="mcode">
 Nbins = morebins(h);
 Nbins = morebins(h)
+
 fig2plotly()
 </pre>
 
@@ -177,15 +180,16 @@ fig2plotly()
   index=78
 %}
 
-<pre>
+
 <div class="codeoutput"><pre>Nbins = 29
 </pre></div>
-</pre>
+
 
 Adjust the bins at a fine grain level by explicitly setting the number of bins.
 
 <pre class="mcode">
 h.NumBins = 31;
+
 fig2plotly()
 </pre>
 
@@ -207,11 +211,11 @@ fig2plotly()
 
 Generate 1,000 random numbers and create a histogram. Specify the bin edges as a vector with wide bins on the edges of the histogram to capture the outliers that do not satisfy |x|<2. The first vector element is the left edge of the first bin, and the last vector element is the right edge of the last bin.
 
-<pre>
+
 x = randn(1000,1);
 edges = [-10 -2:0.25:2 10];
 h = histogram(x,edges);
-</pre>
+
 
 {% capture plot_3_0_specify_bin_edges_of_histogram_80 %}
   {% raw %}{"data":[{"name":"x","type":"bar","x":[-6,-1.875,-1.625,-1.375,-1.125,-0.875,-0.625,-0.375,-0.125,0.125,0.375,0.625,0.875,1.125,1.375,1.625,1.875,6],"y":[21,19,20,45,54,64,81,93,105,110,95,80,67,42,37,30,15,22],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[8,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,8],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-11,11],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":12,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,120],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":8,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -227,6 +231,7 @@ Specify the `Normalization` property as `'countdensity'` to flatten out the bins
 
 <pre class="mcode">
 h.Normalization = <span style='color:#A020F0'>'countdensity'</span>;
+
 fig2plotly()
 </pre>
 
@@ -248,12 +253,12 @@ fig2plotly()
 
 Create a categorical vector that represents votes. The categories in the vector are `'yes'`, `'no'`, or `'undecided'`.
 
-<pre>
+
 A = [0 0 1 1 1 0 0 0 0 NaN NaN 1 0 0 0 1 0 1 0 1 0 0 0 1 1 1 1];
 C = categorical(A,[1 0 NaN],{<span style='color:#A020F0'>'yes'</span>,<span style='color:#A020F0'>'no'</span>,<span style='color:#A020F0'>'undecided'</span>})
-</pre>
 
-<pre>
+
+
 <div class="codeoutput"><pre>C = <span class="emphasis"><em>1x27 categorical</em></span>
   Columns 1 through 9
 
@@ -272,16 +277,16 @@ C = categorical(A,[1 0 NaN],{<span style='color:#A020F0'>'yes'</span>,<span styl
      yes      yes 
 
 </pre></div>
-</pre>
+
 
 Plot a categorical histogram of the votes, using a relative bar width of `0.5`.
 
-<pre>
+
 h = histogram(C,<span style='color:#A020F0'>'BarWidth'</span>,0.5)
-</pre>
+
 
 {% capture plot_4_0_plot_categorical_histogram_82 %}
-  {% raw %}{"data":[{"name":"","type":"bar","x":["yes","no","undecided"],"y":[11,14,2],"width":0.5,"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"category","range":[-0.5,2.5],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":4,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,14],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":9,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
+  {% raw %}{"data":[{"name":"","type":"bar","x":["yes","no","undecided"],"y":[11,14,2],"width":0.5,"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5},"color":"rgb(0,113.985,188.955)"},"opacity":0.75,"visible":true,"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"category","range":[-0.5,2.5],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":4,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,14],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":9,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
 {% endcapture %}
 {% include posts/ssim_frame.html 
   raw_json_file=plot_4_0_plot_categorical_histogram_82
@@ -290,7 +295,7 @@ h = histogram(C,<span style='color:#A020F0'>'BarWidth'</span>,0.5)
   index=82
 %}
 
-<pre>
+
 <div class="codeoutput"><pre>h = 
   Histogram with properties:
 
@@ -307,7 +312,7 @@ h = histogram(C,<span style='color:#A020F0'>'BarWidth'</span>,0.5)
   Show all properties
 
 </pre></div>
-</pre>
+
 
 
 
@@ -317,10 +322,10 @@ h = histogram(C,<span style='color:#A020F0'>'BarWidth'</span>,0.5)
 
 Generate 1,000 random numbers and create a histogram using the `'probability'` normalization.
 
-<pre>
+
 x = randn(1000,1);
 h = histogram(x,<span style='color:#A020F0'>'Normalization'</span>,<span style='color:#A020F0'>'probability'</span>)
-</pre>
+
 
 {% capture plot_5_0_histogram_with_specified_normalization_83 %}
   {% raw %}{"data":[{"name":"x","type":"bar","x":[-3.15,-2.85,-2.55,-2.25,-1.95,-1.65,-1.35,-1.05,-0.75,-0.45,-0.15,0.15,0.45,0.75,1.05,1.35,1.65,1.95,2.25,2.55,2.85,3.15,3.45],"y":[0.001,0,0.003,0.012,0.025,0.024,0.056,0.075,0.091,0.116,0.115,0.105,0.116,0.085,0.064,0.045,0.034,0.017,0.008,0.003,0.003,0,0.002],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.300000000000001,0.3,0.3,0.3,0.3,0.300000000000001,0.3,0.3,0.300000000000001,0.3],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-3.645,3.945],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":8,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,0.12],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":8,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -332,7 +337,7 @@ h = histogram(x,<span style='color:#A020F0'>'Normalization'</span>,<span style='
   index=83
 %}
 
-<pre>
+
 <div class="codeoutput"><pre>h = 
   Histogram with properties:
 
@@ -349,19 +354,20 @@ h = histogram(x,<span style='color:#A020F0'>'Normalization'</span>,<span style='
   Show all properties
 
 </pre></div>
-</pre>
+
 
 Compute the sum of the bar heights. With this normalization, the height of each bar is equal to the probability of selecting an observation within that bin interval, and the height of all of the bars sums to 1.
 
 <pre class="mcode">
 S = sum(h.Values)
+
 fig2plotly()
 </pre>
 
-<pre>
+
 <div class="codeoutput"><pre>S = 1
 </pre></div>
-</pre>
+
 
 
 
@@ -371,13 +377,13 @@ fig2plotly()
 
 Generate two vectors of random numbers and plot a histogram for each vector in the same figure. 
 
-<pre>
+
 x = randn(2000,1);
 y = 1 + randn(5000,1);
 h1 = histogram(x);
 hold on
 h2 = histogram(y);
-</pre>
+
 
 {% capture plot_6_0_plot_multiple_histograms_85 %}
   {% raw %}{"data":[{"name":"x","type":"bar","x":[-3.15,-2.85,-2.55,-2.25,-1.95,-1.65,-1.35,-1.05,-0.75,-0.45,-0.15,0.15,0.45,0.75,1.05,1.35,1.65,1.95,2.25,2.55,2.85,3.15,3.45],"y":[1,4,9,21,28,54,99,116,184,204,231,261,214,199,143,94,64,42,20,6,2,1,3],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.300000000000001,0.3,0.3,0.3,0.3,0.300000000000001,0.3,0.3,0.300000000000001,0.3],"showlegend":true},{"name":"y","type":"bar","x":[-2.3,-2.1,-1.9,-1.7,-1.5,-1.3,-1.1,-0.9,-0.7,-0.5,-0.3,-0.1,0.0999999999999999,0.3,0.5,0.7,0.9,1.1,1.3,1.5,1.7,1.9,2.1,2.3,2.5,2.7,2.9,3.1,3.3,3.5,3.7,3.9,4.1,4.3],"y":[1,3,4,12,18,29,33,56,88,132,195,210,256,284,385,376,401,401,397,327,322,281,240,168,121,107,59,41,23,15,11,1,1,2],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.199999999999999,0.2,0.2,0.2,0.2,0.199999999999999,0.2,0.2,0.2,0.2],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-3.685,4.785],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":9,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,450],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":11,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"color":"rgba(0,0,0,0)"},"showlegend":false,"annotations":[{"x":0.5175,"y":0.935,"font":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"text":"","xref":"paper","yref":"paper","align":"center","xanchor":"center","yanchor":"bottom","borderpad":3,"showarrow":false,"textangle":0,"bordercolor":"rgba(0,0,0,0)","borderwidth":0.5}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -396,6 +402,7 @@ h1.Normalization = <span style='color:#A020F0'>'probability'</span>;
 h1.BinWidth = 0.25;
 h2.Normalization = <span style='color:#A020F0'>'probability'</span>;
 h2.BinWidth = 0.25;
+
 fig2plotly()
 </pre>
 
@@ -417,10 +424,10 @@ fig2plotly()
 
 Generate 1,000 random numbers and create a histogram. Return the histogram object to adjust the properties of the histogram without recreating the entire plot.
 
-<pre>
+
 x = randn(1000,1);
 h = histogram(x)
-</pre>
+
 
 {% capture plot_7_0_adjust_histogram_properties_87 %}
   {% raw %}{"data":[{"name":"x","type":"bar","x":[-3.15,-2.85,-2.55,-2.25,-1.95,-1.65,-1.35,-1.05,-0.75,-0.45,-0.15,0.15,0.45,0.75,1.05,1.35,1.65,1.95,2.25,2.55],"y":[1,1,8,15,23,45,49,68,71,104,120,123,110,89,59,50,27,18,16,3],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.300000000000001,0.3,0.3,0.3,0.3,0.300000000000001,0.3],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-3.6,3],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":8,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,140],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":9,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -432,7 +439,7 @@ h = histogram(x)
   index=87
 %}
 
-<pre>
+
 <div class="codeoutput"><pre>h = 
   Histogram with properties:
 
@@ -449,12 +456,13 @@ h = histogram(x)
   Show all properties
 
 </pre></div>
-</pre>
+
 
 Specify exactly how many bins to use.
 
 <pre class="mcode">
 h.NumBins = 15;
+
 fig2plotly()
 </pre>
 
@@ -472,6 +480,7 @@ Specify the edges of the bins with a vector. The first value in the vector is th
 
 <pre class="mcode">
 h.BinEdges = [-3:3];
+
 fig2plotly()
 </pre>
 
@@ -490,11 +499,12 @@ Change the color of the histogram bars.
 <pre class="mcode">
 h.FaceColor = [0 0.5 0.5];
 h.EdgeColor = <span style='color:#A020F0'>'r'</span>;
+
 fig2plotly()
 </pre>
 
 {% capture plot_7_3_adjust_histogram_properties_90 %}
-  {% raw %}{"data":[{"name":"x","type":"bar","x":[-2.5,-1.5,-0.5,0.5,1.5,2.5],"y":[23,158,333,319,137,26],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(255,0,0)","width":0.5},"color":"rgb(0,127.5,127.5)"},"opacity":0.75,"visible":true,"width":[1,1,1,1,1,1],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-3.3,3.3],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":8,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,350],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":9,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
+  {% raw %}{"data":[{"name":"x","type":"bar","x":[-2.5,-1.5,-0.5,0.5,1.5,2.5],"y":[23,158,333,319,137,26],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(255,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[1,1,1,1,1,1],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-3.3,3.3],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":8,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,350],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":9,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
 {% endcapture %}
 {% include posts/ssim_frame.html 
   raw_json_file=plot_7_3_adjust_histogram_properties_90
@@ -514,6 +524,7 @@ Generate 5,000 normally distributed random numbers with a mean of 5 and a standa
 <pre class="mcode">
 x = 2*randn(5000,1) + 5;
 histogram(x,<span style='color:#A020F0'>'Normalization'</span>,<span style='color:#A020F0'>'pdf'</span>)
+
 fig2plotly()
 </pre>
 
@@ -533,9 +544,9 @@ The probability density function for a normal distribution with mean μ, standar
 
 
 
-<pre>
 
-</pre>
+
+
 
 
 
@@ -548,6 +559,7 @@ mu = 5;
 sigma = 2;
 f = exp(-(y-mu).^2./(2*sigma^2))./(sigma*sqrt(2*pi));
 plot(y,f,<span style='color:#A020F0'>'LineWidth'</span>,1.5)
+
 fig2plotly()
 </pre>
 
@@ -573,14 +585,15 @@ Use the `savefig` function to save a `histogram` figure.
 histogram(randn(10));
 savefig('histogram.fig');
 close gcf
+
 fig2plotly()
 </pre>
 
 Use `openfig` to load the histogram figure back into MATLAB. `openfig` also returns a handle to the figure, `h`. 
 
-<pre>
+
 h = openfig('histogram.fig');
-</pre>
+
 
 {% capture plot_9_0_saving_and_loading_histogram_objects_93 %}
   {% raw %}{"data":[{"name":"","type":"bar","x":[-2.75,-2.25,-1.75,-1.25,-0.75,-0.25,0.25,0.75,1.25,1.75],"y":[1,1,2,7,23,19,20,14,8,5],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0,0,0)","width":0.5}},"opacity":0.75,"visible":true,"width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":80,"pad":0},"scene1":{"domain":{"x":[0.13,0.905],"y":[0.11,0.925]}},"xaxis1":{"side":"bottom","type":"linear","range":[-3.25,2.25],"ticks":"inside","anchor":"y1","domain":[0.13,0.905],"mirror":"ticks","nticks":12,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"yaxis1":{"side":"left","type":"linear","range":[0,25],"ticks":"inside","anchor":"x1","domain":[0.11,0.925],"mirror":"ticks","nticks":7,"ticklen":6.51,"autotick":true,"showgrid":false,"showline":true,"tickfont":{"size":10,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"zeroline":false,"autorange":false,"gridcolor":"rgb(38.25,38.25,38.25)","gridwidth":1,"linecolor":"rgb(38.25,38.25,38.25)","linewidth":1,"tickcolor":"rgb(38.25,38.25,38.25)","tickwidth":1,"titlefont":{"size":11,"color":"rgb(38.25,38.25,38.25)","family":"Arial,sans-serif"},"exponentformat":"none"},"barmode":"group","autosize":false,"hovermode":"closest","titlefont":{"size":11,"color":"rgb(0,0,0)","family":"Arial,sans-serif"},"showlegend":false,"annotations":[],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -594,11 +607,11 @@ h = openfig('histogram.fig');
 
 Use the `findobj` function to locate the correct object handle from the figure handle. This allows you to continue manipulating the original histogram object used to generate the figure.
 
-<pre>
-y = findobj(h,<span style='color:#A020F0'>'type'</span>,<span style='color:#A020F0'>'histogram'</span>)
-</pre>
 
-<pre>
+y = findobj(h,<span style='color:#A020F0'>'type'</span>,<span style='color:#A020F0'>'histogram'</span>)
+
+
+
 <div class="codeoutput"><pre>y = 
   Histogram with properties:
 
@@ -615,7 +628,7 @@ y = findobj(h,<span style='color:#A020F0'>'type'</span>,<span style='color:#A020
   Show all properties
 
 </pre></div>
-</pre>
+
 
 
 

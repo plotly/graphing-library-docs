@@ -15,6 +15,7 @@ Create a scatter chart in polar coordinates.
 th = pi/4:pi/4:2*pi;
 r = [19 6 12 18 16 11 15 15];
 polarscatter(th,r)
+
 fig2plotly()
 </pre>
 
@@ -41,6 +42,7 @@ th = linspace(0,2*pi,20);
 r = rand(1,20);
 sz = 75;
 polarscatter(th,r,sz,<span style='color:#A020F0'>'filled'</span>)
+
 fig2plotly()
 </pre>
 
@@ -68,6 +70,7 @@ r = [19 6 12 18 16 11 15 15];
 sz = 100*[6 15 20 3 15 3 6 40];
 c = [1 2 2 2 1 1 2 1];
 polarscatter(th,r,sz,c,<span style='color:#A020F0'>'filled'</span>,<span style='color:#A020F0'>'MarkerFaceAlpha'</span>,.5)
+
 fig2plotly()
 </pre>
 
@@ -94,6 +97,7 @@ th = linspace(0,360,50);
 r = 0.005*th/10;
 th_radians = deg2rad(th);
 polarscatter(th_radians,r)
+
 fig2plotly()
 </pre>
 
@@ -125,7 +129,8 @@ r2 = rand(12,1);
 polarscatter(th,r2,<span style='color:#A020F0'>'filled'</span>)
 hold off
 
-legend('Series A','Series B')
+legend(<span style='color:#A020F0'>'Series A'</span>,<span style='color:#A020F0'>'Series B'</span>)
+
 fig2plotly()
 </pre>
 
@@ -147,11 +152,11 @@ fig2plotly()
 
 Create a scatter chart and assign the scatter object to the variable `ps`. 
 
-<pre>
+
 th = pi/6:pi/6:2*pi;
 r = rand(12,1);
 ps = polarscatter(th,r,<span style='color:#A020F0'>'filled'</span>)
-</pre>
+
 
 {% capture plot_5_0_modify_scatter_chart_after_creation_510 %}
   {% raw %}{"data":[{"mode":"markers","name":"","r":[0.690348312164723,0.526803922390343,0.0482455910000982,0.426344461532851,0.750835764558867,0.544673504555297,0.0321220886304254,0.754756474061852,0.93489257585803,0.265586797503433,0.472287191699781,0.752110895357479],"type":"scatterpolar","visible":true,"theta":[30,60,90,120,150,180,210,240,270,300,330,360],"showlegend":true}],"layout":{"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"autosize":false,"hovermode":"closest","titlefont":{"color":"rgba(0,0,0,0)"},"showlegend":false,"annotations":[{"text":"","xref":"paper","yref":"paper","align":"center","xanchor":"center","yanchor":"bottom","showarrow":false}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -163,7 +168,7 @@ ps = polarscatter(th,r,<span style='color:#A020F0'>'filled'</span>)
   index=510
 %}
 
-<pre>
+
 <div class="codeoutput"><pre>ps = 
   Scatter with properties:
 
@@ -180,7 +185,7 @@ ps = polarscatter(th,r,<span style='color:#A020F0'>'filled'</span>)
   Show all properties
 
 </pre></div>
-</pre>
+
 
 Use `ps` to modify properties of the scatter object after it is created.
 
@@ -189,6 +194,7 @@ ps.Marker = <span style='color:#A020F0'>'square'</span>;
 ps.SizeData = 200;
 ps.MarkerFaceColor = <span style='color:#A020F0'>'red'</span>;
 ps.MarkerFaceAlpha = .5;
+
 fig2plotly()
 </pre>
 

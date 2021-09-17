@@ -4,6 +4,9 @@
   <meta charset="utf-8" />
 
   <link rel="canonical" href="https://plotly.com{{page.url}}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
 
   <!-- Media query magic - http://stackoverflow.com/questions/19945658/my-iphone-thinks-its-980px-wide -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,70 +16,89 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
-	
-	
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
     crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 
-	
+
   {% if page.layout == "base" %}
-	  {% if page.language != "python" %}
-	  <!-- code highlighting -->
-	  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-	  <script>hljs.initHighlightingOnLoad();</script>
-	  {% endif %}
-	  
+  {% if page.language != "python" %}
+  <!-- code highlighting -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
 
-	  <!-- Mathjax -->
-	  <script type='text/javascript'
-		src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  </script>
+  {% endif %}
 
-	  {% if page.language == "plotly_js" %}
-	  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-	  {% endif %}
 
-	  {% if page.language == "r" %}
-	  <!-- Plotly.js hardcoded to 1.x due to Plotly.plot() -->
-	  <script src="https://cdn.plot.ly/plotly-1.58.4.min.js"></script>
-	  <script src="/all_static/r_files/r_dependencies.js"></script>
-	  {% else %}
-	  <!-- Plotly.js -->
-	  <script src="https://cdn.plot.ly/plotly-{{site.data.jsversion.version}}.min.js"></script>
-	  {% endif %}
-	  
-	  {% if page.language == "julia" or page.language == "matlab" or page.language == "ggplot2" %}
-	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js"></script>
-	  <script type="text/javascript">
-		if (typeof require !== 'undefined') {
-		  require.undef("plotly");
-		  requirejs.config({
-			paths: {
-			  'plotly': ['https://cdn.plot.ly/plotly-{{site.data.jsversion.version}}.min']
-			}
-		  });
-		  require(['plotly'], function (Plotly) {
-			window._Plotly = Plotly;
-		  });
-		}
-	  </script>
-	  {% endif %}
+  <!-- Mathjax -->
+  <script type='text/javascript'
+    src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+  {% if page.language == "plotly_js" %}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  {% endif %}
+
+  {% if page.language == "r" %}
+  <!-- Plotly.js hardcoded to 1.x due to Plotly.plot() -->
+  <script src="https://cdn.plot.ly/plotly-1.58.4.min.js"></script>
+  <script src="/all_static/r_files/r_dependencies.js"></script>
+  {% else %}
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-{{site.data.jsversion.version}}.min.js"></script>
+  {% endif %}
+
+  {% if page.language == "julia" or page.language == "matlab" or page.language == "ggplot2" %}
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js"></script>
+  <script type="text/javascript">
+    if (typeof require !== 'undefined') {
+      require.undef("plotly");
+      requirejs.config({
+        paths: {
+          'plotly': ['https://cdn.plot.ly/plotly-{{site.data.jsversion.version}}.min']
+        }
+      });
+      require(['plotly'], function (Plotly) {
+        window._Plotly = Plotly;
+      });
+    }
+
+  </script>
+  {% endif %}
   {% endif %}
   <!--
       //// Stylesheets
       -->
-	  
+
   {% if page.language == "matlab" %}
   <style>
-	.mcode { border: 1px solid #cfcfcf; border-radius: 2px; background: #f7f7f7; padding: 10px; }
+    .mcode {
+      border: 1px solid #cfcfcf;
+      border-radius: 2px;
+      background: #f7f7f7;
+      padding: 10px;
+    }
   </style>
   {% endif %}
-  
+
   {% if page.language == "ggplot2" %}
   <style>
-	.mcode { border: 1px solid #cfcfcf; border-radius: 2px; background: #f7f7f7; padding: 10px; }
-	.wcode { border: 1px solid #cfcfcf; border-radius: 2px; background: #ffffff ; padding: 10px; }
+    .mcode {
+      border: 1px solid #cfcfcf;
+      border-radius: 2px;
+      background: #f7f7f7;
+      padding: 10px;
+    }
+
+    .wcode {
+      border: 1px solid #cfcfcf;
+      border-radius: 2px;
+      background: #ffffff;
+      padding: 10px;
+    }
   </style>
   {% endif %}
 

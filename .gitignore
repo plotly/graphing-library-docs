@@ -33,3 +33,5 @@ _data/mapbox_token.yml
 plot-schema.json
 
 _posts/julia/html
+Gemfile.lock
+_config_dev.yml

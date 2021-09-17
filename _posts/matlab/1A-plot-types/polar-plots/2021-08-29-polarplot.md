@@ -15,6 +15,7 @@ Plot a line in polar coordinates.
 theta = 0:0.01:2*pi;
 rho = sin(2*theta).*cos(2*theta);
 polarplot(theta,rho)
+
 fig2plotly('TreatAs', 'polarplot')
 </pre>
 
@@ -36,16 +37,17 @@ fig2plotly('TreatAs', 'polarplot')
 
 Create the data to plot.
 
-<pre>
+
 theta = linspace(0,360,50);
 rho = 0.005*theta/10;
-</pre>
+
 
 Convert the values in `theta` from degrees to radians. Then, plot the data in polar coordinates.
 
 <pre class="mcode">
 theta_radians = deg2rad(theta);
 polarplot(theta_radians,rho)
+
 fig2plotly('TreatAs', 'polarplot')
 </pre>
 
@@ -76,6 +78,7 @@ rho2 = theta/12;
 hold on
 polarplot(theta,rho2,'--')
 hold off
+
 fig2plotly('TreatAs', 'polarplot')
 </pre>
 
@@ -100,11 +103,12 @@ Specify only the radius values, without specifying the angle values. `polarplot`
 <pre class="mcode">
 rho = 10:5:70;
 polarplot(rho,'-o')
+
 fig2plotly('TreatAs', 'polarplot')
 </pre>
 
 {% capture plot_3_0_plot_radius_values_at_equally_spaced_angles_498 %}
-  {% raw %}{"data":[{"line":{"dash":"solid","color":"rgb(0,113.985,188.955)","width":1},"mode":"lines+markers","name":"","r":[10,15,20,25,30,35,40,45,50,55,60,65,70],"type":"scatterpolar","marker":{"line":{"color":"rgb(0,113.985,188.955)","width":0.5},"size":2.4,"color":"rgba(0,0,0,0)","symbol":"circle","maxdisplayed":14},"visible":true,"theta":[0,30,60,90,120,150,180,210,240,270,300,330,360],"showlegend":true}],"layout":{"polar":{"radialaxis":{"angle":80,"ticks":"","showline":false,"tickmode":"array","tickvals":[0,20,40,60],"gridcolor":"rgb(235,235,235)","tickangle":90},"angularaxis":{"ticks":"","tickmode":"array","tickvals":[0,30,60,90,120,150,180,210,240,270,300,330],"gridcolor":"rgb(235,235,235)","linecolor":"rgb(210,210,210)"}},"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"autosize":false,"hovermode":"closest","titlefont":{"color":"rgba(0,0,0,0)"},"showlegend":false,"annotations":[{"text":"","xref":"paper","yref":"paper","align":"center","xanchor":"center","yanchor":"bottom","showarrow":false}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
+  {% raw %}{"data":[{"line":{"dash":"solid","color":"rgb(0,113.985,188.955)","width":1},"mode":"lines+markers","name":"","r":[10,15,20,25,30,35,40,45,50,55,60,65,70],"type":"scatterpolar","marker":{"line":{"color":"rgb(0,113.985,188.955)","width":0.5},"size":6,"color":"rgba(0,0,0,0)","symbol":"circle","maxdisplayed":14},"visible":true,"theta":[0,30,60,90,120,150,180,210,240,270,300,330,360],"showlegend":true}],"layout":{"polar":{"radialaxis":{"angle":80,"ticks":"","showline":false,"tickmode":"array","tickvals":[0,20,40,60],"gridcolor":"rgb(235,235,235)","tickangle":90},"angularaxis":{"ticks":"","tickmode":"array","tickvals":[0,30,60,90,120,150,180,210,240,270,300,330],"gridcolor":"rgb(235,235,235)","linecolor":"rgb(210,210,210)"}},"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"autosize":false,"hovermode":"closest","titlefont":{"color":"rgba(0,0,0,0)"},"showlegend":false,"annotations":[{"text":"","xref":"paper","yref":"paper","align":"center","xanchor":"center","yanchor":"bottom","showarrow":false}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
 {% endcapture %}
 {% include posts/ssim_frame.html 
   raw_json_file=plot_3_0_plot_radius_values_at_equally_spaced_angles_498
@@ -125,6 +129,7 @@ Create a polar plot using negative radius values. By default, `polarplot` reflec
 theta = linspace(0,2*pi);
 rho = sin(theta);
 polarplot(theta,rho)
+
 fig2plotly('TreatAs', 'polarplot')
 </pre>
 
@@ -140,9 +145,9 @@ fig2plotly('TreatAs', 'polarplot')
 
 Change the limits of the r-axis so it ranges from -1 to 1.
 
-<pre>
+
 rlim([-1 1])
-</pre>
+
 
 {% capture plot_4_0_plot_negative_radius_values_499 %}
   {% raw %}{"data":[{"line":{"dash":"solid","color":"rgb(0,113.985,188.955)","width":1},"mode":"lines","name":"","r":[0,0.0634239196565645,0.126592453573749,0.18925124436041,0.251147987181079,0.312033445698487,0.371662455660328,0.429794912089172,0.486196736100469,0.540640817455598,0.59290792905464,0.642787609686539,0.690079011482112,0.734591708657533,0.776146464291757,0.814575952050336,0.849725429949514,0.881453363447582,0.909631995354518,0.934147860265107,0.954902241444074,0.971811568323542,0.984807753012208,0.993838464461254,0.998867339183008,0.999874127673875,0.996854775951942,0.989821441880933,0.978802446214779,0.963842158559942,0.945000818714669,0.922354294104581,0.895993774291336,0.866025403784439,0.832569854634771,0.795761840530832,0.755749574354258,0.712694171378863,0.666769000516292,0.618158986220605,0.567059863862771,0.513677391573407,0.458226521727411,0.400930535406614,0.342020143325669,0.28173255684143,0.220310532786541,0.15800139597335,0.0950560433041829,0.0317279334980681,0.0317279334980679,0.0950560433041826,0.15800139597335,0.220310532786541,0.281732556841429,0.342020143325669,0.400930535406613,0.45822652172741,0.513677391573406,0.567059863862771,0.618158986220605,0.666769000516292,0.712694171378863,0.755749574354258,0.795761840530832,0.832569854634771,0.866025403784438,0.895993774291336,0.922354294104581,0.945000818714668,0.963842158559942,0.978802446214779,0.989821441880933,0.996854775951942,0.999874127673875,0.998867339183008,0.993838464461254,0.984807753012208,0.971811568323542,0.954902241444074,0.934147860265107,0.909631995354519,0.881453363447582,0.849725429949514,0.814575952050336,0.776146464291757,0.734591708657534,0.690079011482113,0.64278760968654,0.59290792905464,0.540640817455597,0.486196736100469,0.429794912089172,0.371662455660328,0.312033445698487,0.251147987181079,0.189251244360411,0.12659245357375,0.0634239196565654,2.44929359829471e-16],"type":"scatterpolar","marker":{"line":{"width":0.5},"size":6,"color":"rgb(0,113.985,188.955)"},"visible":true,"theta":[0,3.63636363636364,7.27272727272727,10.9090909090909,14.5454545454545,18.1818181818182,21.8181818181818,25.4545454545455,29.0909090909091,32.7272727272727,36.3636363636364,40,43.6363636363636,47.2727272727273,50.9090909090909,54.5454545454545,58.1818181818182,61.8181818181818,65.4545454545455,69.0909090909091,72.7272727272727,76.3636363636364,80,83.6363636363636,87.2727272727273,90.9090909090909,94.5454545454545,98.1818181818182,101.818181818182,105.454545454545,109.090909090909,112.727272727273,116.363636363636,120,123.636363636364,127.272727272727,130.909090909091,134.545454545455,138.181818181818,141.818181818182,145.454545454545,149.090909090909,152.727272727273,156.363636363636,160,163.636363636364,167.272727272727,170.909090909091,174.545454545455,178.181818181818,181.818181818182,185.454545454545,189.090909090909,192.727272727273,196.363636363636,200,203.636363636364,207.272727272727,210.909090909091,214.545454545455,218.181818181818,221.818181818182,225.454545454545,229.090909090909,232.727272727273,236.363636363636,240,243.636363636364,247.272727272727,250.909090909091,254.545454545455,258.181818181818,261.818181818182,265.454545454545,269.090909090909,272.727272727273,276.363636363636,280,283.636363636364,287.272727272727,290.909090909091,294.545454545455,298.181818181818,301.818181818182,305.454545454545,309.090909090909,312.727272727273,316.363636363636,320,323.636363636364,327.272727272727,330.909090909091,334.545454545455,338.181818181818,341.818181818182,345.454545454545,349.090909090909,352.727272727273,356.363636363636,360],"showlegend":true}],"layout":{"polar":{"radialaxis":{"angle":80,"ticks":"","showline":false,"tickmode":"array","tickvals":[0,0.2,0.4,0.6,0.8,1],"gridcolor":"rgb(235,235,235)","tickangle":90},"angularaxis":{"ticks":"","tickmode":"array","tickvals":[0,30,60,90,120,150,180,210,240,270,300,330],"gridcolor":"rgb(235,235,235)","linecolor":"rgb(210,210,210)"}},"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"autosize":false,"hovermode":"closest","titlefont":{"color":"rgba(0,0,0,0)"},"showlegend":false,"annotations":[{"text":"","xref":"paper","yref":"paper","align":"center","xanchor":"center","yanchor":"bottom","showarrow":false}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -166,11 +171,12 @@ Create a polar plot using a red line with circle markers.
 theta = linspace(0,2*pi,25);
 rho = 2*theta;
 polarplot(theta,rho,'r-o')
+
 fig2plotly('TreatAs', 'polarplot')
 </pre>
 
 {% capture plot_5_0_specify_line_color_for_polar_plot_501 %}
-  {% raw %}{"data":[{"line":{"dash":"solid","color":"rgb(255,0,0)","width":1},"mode":"lines+markers","name":"","r":[0,0.523598775598299,1.0471975511966,1.5707963267949,2.0943951023932,2.61799387799149,3.14159265358979,3.66519142918809,4.18879020478639,4.71238898038469,5.23598775598299,5.75958653158129,6.28318530717959,6.80678408277789,7.33038285837618,7.85398163397448,8.37758040957278,8.90117918517108,9.42477796076938,9.94837673636768,10.471975511966,10.9955742875643,11.5191730631626,12.0427718387609,12.5663706143592],"type":"scatterpolar","marker":{"line":{"color":"rgb(255,0,0)","width":0.5},"size":2.4,"color":"rgba(0,0,0,0)","symbol":"circle","maxdisplayed":26},"visible":true,"theta":[0,15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255,270,285,300,315,330,345,360],"showlegend":true}],"layout":{"polar":{"radialaxis":{"angle":80,"ticks":"","showline":false,"tickmode":"array","tickvals":[0,5,10],"gridcolor":"rgb(235,235,235)","tickangle":90},"angularaxis":{"ticks":"","tickmode":"array","tickvals":[0,30,60,90,120,150,180,210,240,270,300,330],"gridcolor":"rgb(235,235,235)","linecolor":"rgb(210,210,210)"}},"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"autosize":false,"hovermode":"closest","titlefont":{"color":"rgba(0,0,0,0)"},"showlegend":false,"annotations":[{"text":"","xref":"paper","yref":"paper","align":"center","xanchor":"center","yanchor":"bottom","showarrow":false}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
+  {% raw %}{"data":[{"line":{"dash":"solid","color":"rgb(255,0,0)","width":1},"mode":"lines+markers","name":"","r":[0,0.523598775598299,1.0471975511966,1.5707963267949,2.0943951023932,2.61799387799149,3.14159265358979,3.66519142918809,4.18879020478639,4.71238898038469,5.23598775598299,5.75958653158129,6.28318530717959,6.80678408277789,7.33038285837618,7.85398163397448,8.37758040957278,8.90117918517108,9.42477796076938,9.94837673636768,10.471975511966,10.9955742875643,11.5191730631626,12.0427718387609,12.5663706143592],"type":"scatterpolar","marker":{"line":{"color":"rgb(255,0,0)","width":0.5},"size":6,"color":"rgba(0,0,0,0)","symbol":"circle","maxdisplayed":26},"visible":true,"theta":[0,15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255,270,285,300,315,330,345,360],"showlegend":true}],"layout":{"polar":{"radialaxis":{"angle":80,"ticks":"","showline":false,"tickmode":"array","tickvals":[0,5,10],"gridcolor":"rgb(235,235,235)","tickangle":90},"angularaxis":{"ticks":"","tickmode":"array","tickvals":[0,30,60,90,120,150,180,210,240,270,300,330],"gridcolor":"rgb(235,235,235)","linecolor":"rgb(210,210,210)"}},"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"autosize":false,"hovermode":"closest","titlefont":{"color":"rgba(0,0,0,0)"},"showlegend":false,"annotations":[{"text":"","xref":"paper","yref":"paper","align":"center","xanchor":"center","yanchor":"bottom","showarrow":false}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
 {% endcapture %}
 {% include posts/ssim_frame.html 
   raw_json_file=plot_5_0_specify_line_color_for_polar_plot_501
@@ -187,11 +193,11 @@ fig2plotly('TreatAs', 'polarplot')
 
 Create a polar plot and return the chart line object. 
 
-<pre>
+
 theta = linspace(0,2*pi,25);
 rho = 2*theta;
 p = polarplot(theta,rho);
-</pre>
+
 
 {% capture plot_6_0_specify_line_color_after_creation_502 %}
   {% raw %}{"data":[{"line":{"dash":"solid","color":"rgb(0,113.985,188.955)","width":1},"mode":"lines","name":"","r":[0,0.523598775598299,1.0471975511966,1.5707963267949,2.0943951023932,2.61799387799149,3.14159265358979,3.66519142918809,4.18879020478639,4.71238898038469,5.23598775598299,5.75958653158129,6.28318530717959,6.80678408277789,7.33038285837618,7.85398163397448,8.37758040957278,8.90117918517108,9.42477796076938,9.94837673636768,10.471975511966,10.9955742875643,11.5191730631626,12.0427718387609,12.5663706143592],"type":"scatterpolar","marker":{"line":{"width":0.5},"size":6,"color":"rgb(0,113.985,188.955)"},"visible":true,"theta":[0,15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255,270,285,300,315,330,345,360],"showlegend":true}],"layout":{"polar":{"radialaxis":{"angle":80,"ticks":"","showline":false,"tickmode":"array","tickvals":[0,5,10],"gridcolor":"rgb(235,235,235)","tickangle":90},"angularaxis":{"ticks":"","tickmode":"array","tickvals":[0,30,60,90,120,150,180,210,240,270,300,330],"gridcolor":"rgb(235,235,235)","linecolor":"rgb(210,210,210)"}},"title":"","width":840,"height":630,"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"autosize":false,"hovermode":"closest","titlefont":{"color":"rgba(0,0,0,0)"},"showlegend":false,"annotations":[{"text":"","xref":"paper","yref":"paper","align":"center","xanchor":"center","yanchor":"bottom","showarrow":false}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -209,6 +215,7 @@ Change the line color and width and add markers.
 p.Color = <span style='color:#A020F0'>'magenta'</span>;
 p.Marker = <span style='color:#A020F0'>'square'</span>;
 p.MarkerSize = 8;
+
 fig2plotly('TreatAs', 'polarplot')
 </pre>
 
@@ -233,6 +240,7 @@ Plot complex values in polar coordinates. Display markers at each point without 
 <pre class="mcode">
 Z = [2+3i 2 -1+4i 3-4i 5+2i -4-2i -2+3i -2 -3i 3i-2i];
 polarplot(Z,'*')
+
 fig2plotly('TreatAs', 'polarplot')
 </pre>
 

@@ -672,9 +672,8 @@ body {
       -ms-flex-align: stretch;
       align-items: stretch; }
     body main.\--page .\--page-body {
-      margin-top: 40px;
-      width: -webkit-calc(100% - 220px);
-      width: calc(100% - 220px); }
+      width: -webkit-calc(100% -  300px);
+      width: calc(100% - 300px); }
       @media (max-width: 769px) {
         body main.\--page .\--page-body {
           width: 100%;
@@ -720,11 +719,6 @@ a:link:not(.button) {
   /* text-decoration: none; */
   font-weight: 400;
   }
-
-a:hover {
-  opacity: 1 !important;
-  text-decoration: underline !important;
-  color:#60BAB6 !important; }
 
 h6 {
   font-weight: bold;
@@ -993,7 +987,7 @@ pre {
     font-size: 1.5rem; }
     .page404-txt h5 a {
       font-size: 1rem;
-      background: #447bdc;
+      background: #0e1012;
       color: white !important;
       padding: 20px; }
       .page404-txt h5 a:hover {
@@ -1156,12 +1150,12 @@ body {
       .header-large--wrap + header.header-main.affix.\--default .mobile-menu-btn span::before, .header-large--wrap + header.header-main.affix.\--default .mobile-menu-btn span::after {
         background: #626262; }
     .header-large--wrap + header.header-main.affix.\--default .\-identity {
-      color: #447bdc !important; }
+      color: #0e1012 !important; }
   .header-large--wrap + header.header-main.\--default a:link, .header-large--wrap + header.header-main.\--default a:visited, .header-large--wrap + header.header-main.\--default a:active {
     color: currentColor !important; }
 
 header .\-identity {
-  color: #447bdc; }
+  color: #0e1012; }
 
 header.header-main {
   -webkit-transition: 0.2s ease-in-out all;
@@ -1177,7 +1171,6 @@ header.header-main {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 20px;
   padding-top: 0;
   padding-bottom: 0;
   height: 60px;
@@ -1286,8 +1279,6 @@ header.header-main {
           max-width: 100%; }
           header.header-main .\--wrap .\-identity div.logo svg rect {
             fill: currentColor; }
-    header.header-main .\--wrap nav {
-      font-size: 1.1rem; }
       header.header-main .\--wrap nav ul {
         list-style-type: none;
         display: -webkit-box;
@@ -1297,6 +1288,7 @@ header.header-main {
         margin: 0;
         padding: 0; }
         header.header-main .\--wrap nav ul li {
+          margin-right: 15px;
           padding: 5px;
           display: -webkit-box;
           display: -webkit-flex;
@@ -1535,14 +1527,14 @@ header.header-main {
           padding: 0 5px; }
 
 .\--wrap {
-  width: 95%;
+  width: 100%;
   max-width: 1440px;
   margin: auto; }
 
 .plotly-social-media-small li:hover a div.icon {
   opacity: 1; }
   .plotly-social-media-small li:hover a div.icon svg path {
-    fill: #447bdc !important; }
+    fill: #0e1012 !important; }
 
 .plotly-social-media-small li a {
   display: -webkit-box;
@@ -1643,7 +1635,6 @@ header.header-main {
     margin-left: -25vw;
     top: 0;
     position: absolute;
-    background: #e4f5f2;
     z-index: -1; }
 
 .\--page-body {
@@ -1652,11 +1643,11 @@ header.header-main {
 aside.\--sidebar-container {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  width: 220px;
-  margin-top: 50px;
-  min-width: 220px;
-  border-right: 1px solid #e7e7e7;
-  background: #e4f5f2;
+  width: 300px;
+  min-width: 300px;
+  border-right: 1px solid #0e1012;
+  background: #0e1012;
+  padding: 0 20px;
  }
   @media (max-width: 770px) {
     aside.\--sidebar-container {
@@ -1664,13 +1655,13 @@ aside.\--sidebar-container {
       margin-left: -240px;
       position: static;
       z-index: 999;
-      min-height: 100vh; }
+      /* min-height: 100vh; */ }
       aside.\--sidebar-container.show {
         margin-left: 0; } }
   aside.\--sidebar-container header.\--sidebar-header {
+    color: white;
     padding: 8px;
     padding-left: 0;
-    /* background: #e4f5f2; */
     font-weight: 600;
     font-weight: bold;
     font-size: 1.1rem;
@@ -1679,7 +1670,7 @@ aside.\--sidebar-container {
       /* border-top: 1px solid #e7e7e7; */
       }
   aside.\--sidebar-container .\--sidebar-fixed {
-    width: 219px;
+    width: 279px;
     z-index: 99;
     max-height: -webkit-calc(100vh - 128px);
     max-height: calc(100vh - 128px);
@@ -1708,9 +1699,10 @@ aside.\--sidebar-container {
     aside.\--sidebar-container .\--sidebar-body ul li {
       /* font-size: 1.2rem; */
       font-weight: bold;
+      color: #A0AABA;     
       }
       aside.\--sidebar-container .\--sidebar-body ul li.\--category-title {
-        background: #e4f5f2;
+        background: #0e1012;
         font-weight: 400; }
         aside.\--sidebar-container .\--sidebar-body ul li.\--category-title:hover {
           pointer-events: none; }
@@ -1721,17 +1713,20 @@ aside.\--sidebar-container {
         width: 100%;
         text-decoration: none;
         }
+      aside.\--sidebar-container .\--sidebar-body ul li a:hover {
+        color: white !important;
+        }
         aside.\--sidebar-container .\--sidebar-body ul li a::before {
           display: none !important; }
       aside.\--sidebar-container .\--sidebar-body ul li.\--sidebar-item:hover {
-        background: #e4f5f2; }
+        background: #0e1012; }
   aside.\--sidebar-container .\--btn {
     background: transparent;
     width: -webkit-calc(100%);
     width: calc(100%);
     border: none !important;
     position: relative;
-    background: #e4f5f2;
+    background: #0e1012;
     border-right: 0;
     /* color: #626262; */
     font-weight: 600;
@@ -1749,7 +1744,7 @@ aside.\--sidebar-container {
     padding-left: 0;
     }
     aside.\--sidebar-container .\--btn:hover {
-      background: #e4f5f2;
+      background: #0e1012;
       }
 
     aside.\--sidebar-container .\--btn .icon {
@@ -1777,7 +1772,7 @@ aside.\--sidebar-container {
     font-weight: bold;
     line-height: 1.75rem;
     letter-spacing: 1px;
-    color: #447bdc; }
+    color: #0e1012; }
   .sidebar ul {
     width: 100%;
     max-height: -webkit-calc(100vh - 189px);
@@ -1804,7 +1799,7 @@ aside.\--sidebar-container {
       .sidebar ul.sidebar-list.reference ul ul li {
         background: #84a8e8;
         padding-left: 40px;
-        border-bottom: 1px solid #447bdc; }
+        border-bottom: 1px solid #0e1012; }
         .sidebar ul.sidebar-list.reference ul ul li:hover {
           background: #9ab8ec; }
     .sidebar ul .back {
@@ -1857,7 +1852,7 @@ aside.\--sidebar-container {
         display: inline-block;
         padding: 5px 10px;
         color: white;
-        background-color: #447bdc;
+        background-color: #0e1012;
         max-width: 80%; }
       .sidebar ul li img {
         -webkit-transition: all 0.2s ease-in-out;
@@ -1866,7 +1861,7 @@ aside.\--sidebar-container {
         color: inherit !important; }
       .sidebar ul li:hover {
         background: #f7f7f7;
-        border-color: #447bdc;
+        border-color: #0e1012;
         cursor: pointer;
         border-bottom: 1px solid #f4f4f4; }
         .sidebar ul li:hover img {
@@ -1877,12 +1872,12 @@ aside.\--sidebar-container {
       .sidebar ul li.main-links {
         background: #6693e2;
         width: 50%;
-        border-bottom: 1px solid #447bdc; }
+        border-bottom: 1px solid #0e1012; }
       .sidebar ul li.label {
         font-weight: bold;
         background: #2764d0;
         border-left: 5px solid #2764d0;
-        border-bottom: 1px solid #447bdc; }
+        border-bottom: 1px solid #0e1012; }
   .sidebar + main {
     width: -webkit-calc(100% - 220px);
     width: calc(100% - 220px);
@@ -2083,7 +2078,7 @@ aside.\--sidebar-container {
         margin: 0;
         margin-bottom: 20px;
         padding: 20px;
-        color: #447bdc;
+        color: #0e1012;
         border-bottom: 1px solid #e7e7e7;
         width: 100%;
         background: #f4f4f8;
@@ -2201,7 +2196,7 @@ aside.\--sidebar-container {
               letter-spacing: normal;
               margin: 0;
               padding-right: 20px;
-              color: #447bdc; }
+              color: #0e1012; }
             .sidebar + main.tutorials .wrap section ul li:hover img {
               opacity: 0.08; }
             .sidebar + main.tutorials .wrap section ul li:hover .alltutcol .titlecenter {
@@ -2230,7 +2225,7 @@ aside.\--sidebar-container {
                 text-align: left !important;
                 background: transparent;
                 opacity: 0;
-                color: #447bdc;
+                color: #0e1012;
                 -webkit-transform: translateY(-5px);
                 -ms-transform: translateY(-5px);
                 transform: translateY(-5px);
@@ -2681,10 +2676,10 @@ div.output_subarea::-webkit-scrollbar-thumb {
   border: 0;}
 
 .cell .cm-s-ipython span.cm-keyword {
-  color: #447bdc; }
+  color: #0e1012; }
 
 .cell h1, .cell section.section h2, section.section .cell h2 {
-  font-family: "jubilat", serif; }
+  font-family: "roboto", sans-serif; }
 
 pre {
   overflow-y: hidden !important;
@@ -2711,7 +2706,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h2 {
-  font-family: "jubilat", serif; }
+  font-family: "roboto", sans-serif; }
 
 .cell .text_cell_render h2 {
   font-weight: 300;
@@ -2726,7 +2721,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h3 {
-  font-family: "jubilat", serif; }
+  font-family: "roboto", sans-serif; }
 
 .cell .text_cell_render h3 {
   font-weight: 300;
@@ -2740,7 +2735,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h4, .cell .js-splash--section-title {
-  font-family: "jubilat", serif; }
+  font-family: "roboto", sans-serif }
 
 .cell .text_cell_render h4, .cell .text_cell_render .js-splash--section-title {
   font-weight: 300;
@@ -2754,7 +2749,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h5 {
-  font-family: "jubilat", serif; }
+  font-family: "roboto", sans-serif; }
 
 .cell .text_cell_render h5 {
   font-weight: 300;
@@ -2769,7 +2764,7 @@ html body .rendered_html div.icon.copy {
   overflow: hidden; }
 
 .cell h6 {
-  font-family: "jubilat", serif; }
+  font-family: "roboto", sans-serif; }
 
 .cell .text_cell_render h6 {
   font-weight: 300;
@@ -6347,7 +6342,7 @@ h1:hover .anchor-link, section.section h2:hover .anchor-link, h2:hover .anchor-l
 
 .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
   font-weight: bold;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "open-sans", Helvetica, Arial, sans-serif; }
 
 .cm-header-1 {
   font-size: 185.7%; }
@@ -7893,7 +7888,7 @@ div#notebook {
   display: block;
   overflow: hidden;
   padding: 1em;
-  font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "open-sans", "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.5; }
 
 #carbonads span {
@@ -8058,7 +8053,7 @@ div#notebook {
 
     .page.\--home .hero .\--welcome h2 {
       font-size: 60px;
-      font-family: "jubilat", serif;
+      font-family: "roboto", sans-serif;
       margin-bottom: 15px;
       margin-top: 0;
       color: #20293d !important;
@@ -8350,10 +8345,9 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
           max-width: 100%;
           margin: 0 !important; }
       .\--tutorial-index .\--welcome .\--title h1, .\--tutorial-index .\--welcome .\--title section.section h2, section.section .\--tutorial-index .\--welcome .\--title h2 {
-        font-weight: 300;
-        font-size: 3rem;
-        font-family: "jubilat", serif;
-        margin: 0;
+        font-weight: 550;
+        font-size: 2.2rem;
+        font-family: "Roboto", "Open-sans", sans-serif;
          }
       .\--tutorial-index .\--welcome .\--title .sub {
         font-size: 1.5rem; }
@@ -8377,11 +8371,10 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
   .\--tutorial-index .\--tutorial-section header.\--section-header {
     padding: 10px;
     padding-bottom: 0;
-    font-size: 30px;
-    font-family: "jubilat", serif;
+    font-size: 1.6em;
+    font-family: "roboto", "open-sans", sans-serif;
     max-width: 910px;
     color: black !important;
-    font-family: "jubilat", serif;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -8397,7 +8390,7 @@ body:not(:-moz-handler-blocked) main.\--page .\--page-body {
       .\--tutorial-index .\--tutorial-section header.\--section-header div.icon:hover {
         cursor: pointer; }
         .\--tutorial-index .\--tutorial-section header.\--section-header div.icon:hover svg path {
-          fill: #447bdc; }
+          fill: #0e1012; }
       .\--tutorial-index .\--tutorial-section header.\--section-header div.icon svg path {
         fill: #afafaf; }
 
@@ -8477,7 +8470,7 @@ body {
     flex-direction: column; }
     .\--more-categories article header {
       width: 100%;
-      background: #447bdc;
+      background: #0e1012;
       padding: 10px; }
       .\--more-categories article header * {
         margin: 0;
@@ -8777,15 +8770,15 @@ pre {
   .page--single .tutorial-content p + h1, .page--single .tutorial-content section.section div.content-box + h1, section.section .page--single .tutorial-content div.content-box + h1, .page--single .tutorial-content section.section p + h2, section.section .page--single .tutorial-content p + h2, .page--single .tutorial-content section.section div.content-box + h2, section.section .page--single .tutorial-content div.content-box + h2, .page--single .tutorial-content p h2, .page--single .tutorial-content section.section div.content-box h2, section.section .page--single .tutorial-content div.content-box h2, .page--single .tutorial-content p h3, .page--single .tutorial-content section.section div.content-box h3, section.section .page--single .tutorial-content div.content-box h3, .page--single .tutorial-content p h4, .page--single .tutorial-content section.section div.content-box h4, section.section .page--single .tutorial-content div.content-box h4, .page--single .tutorial-content p .js-splash--section-title, .page--single .tutorial-content section.section div.content-box .js-splash--section-title, section.section .page--single .tutorial-content div.content-box .js-splash--section-title {
     border-top: 1px solid #e7e7e7; }
   .page--single .tutorial-content h1, .page--single .tutorial-content section.section h2, section.section .page--single .tutorial-content h2 {
-    font-size: 2.5rem; }
+    font-size: 2rem; }
   .page--single .tutorial-content h2 {
-    font-size: 2.5rem; }
+    font-size: 2rem; }
   .page--single .tutorial-content h3 {
-    font-size: 2.5rem; }
+    font-size: 2rem; }
   .page--single .tutorial-content h4, .page--single .tutorial-content .js-splash--section-title {
-    font-size: 2rem; }
+    font-size: 1.6rem; }
   .page--single .tutorial-content h5 {
-    font-size: 2rem; }
+    font-size: 1.6rem; }
   .page--single .tutorial-content h1, .page--single .tutorial-content section.section h2, section.section .page--single .tutorial-content h2, .page--single .tutorial-content h3, .page--single .tutorial-content h4, .page--single .tutorial-content .js-splash--section-title, .page--single .tutorial-content h5 {
     padding: 15px;
     color: #20293d !important;
@@ -8807,7 +8800,7 @@ pre {
       .page--single .tutorial-content h1 div.icon:hover, .page--single .tutorial-content section.section h2 div.icon:hover, section.section .page--single .tutorial-content h2 div.icon:hover, .page--single .tutorial-content h3 div.icon:hover, .page--single .tutorial-content h4 div.icon:hover, .page--single .tutorial-content .js-splash--section-title div.icon:hover, .page--single .tutorial-content h5 div.icon:hover {
         cursor: pointer; }
         .page--single .tutorial-content h1 div.icon:hover svg path, .page--single .tutorial-content section.section h2 div.icon:hover svg path, section.section .page--single .tutorial-content h2 div.icon:hover svg path, .page--single .tutorial-content h3 div.icon:hover svg path, .page--single .tutorial-content h4 div.icon:hover svg path, .page--single .tutorial-content .js-splash--section-title div.icon:hover svg path, .page--single .tutorial-content h5 div.icon:hover svg path {
-          fill: #447bdc; }
+          fill: #0e1012; }
       .page--single .tutorial-content h1 div.icon svg path, .page--single .tutorial-content section.section h2 div.icon svg path, section.section .page--single .tutorial-content h2 div.icon svg path, .page--single .tutorial-content h3 div.icon svg path, .page--single .tutorial-content h4 div.icon svg path, .page--single .tutorial-content .js-splash--section-title div.icon svg path, .page--single .tutorial-content h5 div.icon svg path {
         fill: #afafaf; }
   .page--single .tutorial-content th {
@@ -8820,7 +8813,7 @@ pre {
     display: -ms-flexbox;
     display: flex; }
     .page--single .tutorial-content h5 a {
-      font-size: 2rem; }
+      font-size: 1.6rem; }
       .page--single .tutorial-content h5 a::before {
         display: none; }
 
@@ -9072,6 +9065,10 @@ pre, code, .hljs {
       flex-direction: column; }
       .\--tutorial-section:not(.no-image) .\--grid-item a::before {
         display: none; }
+    .\--tutorial-section:not(.no-image) .\--grid-item a:hover {
+      text-decoration: none;
+      color: #0e1012;
+    }
     .\--tutorial-section:not(.no-image) .\--grid-item .\--item-meta {
       padding-top: 15px;
       padding-bottom: 20px;
@@ -9089,22 +9086,21 @@ pre, code, .hljs {
       -webkit-order: 2 !important;
       -ms-flex-order: 2 !important;
       order: 2 !important;
-      border-top: 1px solid #e7e7e7;
-      font-size: 1.2rem;
       text-align: center;
+      color: #626262 !important;
+      text-transform: uppercase;
+      font-size: 0.9rem !important;
+      font-weight: 800;
       }
     .\--tutorial-section:not(.no-image) .\--grid-item .\--item-image {
       position: relative;
-      background: #447bdc;
+      background: #0e1012;
       width: 160px;
       min-width: 160px;
       max-width: 160px;
       height: 160px;
       min-height: 160px;
       max-height: 160px;
-      -webkit-transition: 0.2s ease-in-out all;
-      box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.46);
-      transition: 0.2s ease-in-out all; }
       .\--tutorial-section:not(.no-image) .\--grid-item .\--item-image span {
         position: absolute;
         height: 100%;
@@ -9146,8 +9142,12 @@ pre, code, .hljs {
           transition: 0.2s transform ease-in-out 0.15s;
           transition: 0.2s transform ease-in-out 0.15s, 0.2s -webkit-transform ease-in-out 0.15s; }
       .\--tutorial-section:not(.no-image) .\--grid-item .\--item-image img {
+        filter: grayscale(95%);
         -webkit-transition: 0.2s ease-in-out all;
         transition: 0.2s ease-in-out all;
+        display: block; }
+      .\--tutorial-section:not(.no-image) .\--grid-item .\--item-image img:hover {
+        filter: none;
         display: block; }
 
 .\--tutorial-section.no-image .\--grid {
@@ -9193,7 +9193,7 @@ pre, code, .hljs {
 .\--page {
   position: relative;
   z-index: 3;
-  background: white; }
+  background: #F9f9f9; }
 
 .upgrade#carbonads {
   width: 100%;
@@ -9225,7 +9225,7 @@ pre, code, .hljs {
   -ms-flex-pack: center;
   justify-content: center;
   background: rgba(68, 123, 220, 0.5);
-  border-top: 1px solid #447bdc;
+  border-top: 1px solid #0e1012;
   position: absolute;
   width: 100vw;
   left: 0;
@@ -9337,7 +9337,8 @@ pre, code, .hljs {
 
 #modal-button{
   padding-top: 10px;
-  background-color: #e4f5f2;
+  margin-top: 40px;
+  background-color: #0e1012;
   border: none;
   padding-left: 0;
 }
@@ -9420,7 +9421,7 @@ pre, code, .hljs {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
   color: #20293d !important;
-  font-family: "jubilat", serif;
+  font-family: "roboto", sans-serif;
 }
 
 .\--welcome-body{
@@ -9445,16 +9446,7 @@ pre, code, .hljs {
 }
 
 /*
- * The Typekit service used to deliver this font or fonts for use on websites
- * is provided by Adobe and is subject to these Terms of Use
- * http://www.adobe.com/products/eulas/tou_typekit. For font license
- * information, see the list below.
  *
- * jubilat:
- *   - http://typekit.com/eulas/00000000000000003b9b0d24
- *   - http://typekit.com/eulas/00000000000000003b9b0d1f
- *   - http://typekit.com/eulas/00000000000000003b9b0d2b
- *   - http://typekit.com/eulas/00000000000000003b9b0d18
  * open-sans:
  *   - http://typekit.com/eulas/000000000000000000011c34
  *   - http://typekit.com/eulas/000000000000000000011c35
@@ -9463,61 +9455,7 @@ pre, code, .hljs {
  *   - http://typekit.com/eulas/000000000000000000011c3c
  *   - http://typekit.com/eulas/000000000000000000011c3d
  *
- * © 2009-2020 Adobe Systems Incorporated. All Rights Reserved.
  */
-/*{"last_published":"2020-04-29 17:45:58 UTC"}*/
-
-@font-face {
-  font-family: "jubilat";
-  src: url("https://use.typekit.net/af/275f06/00000000000000003b9b0d24/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-      format("woff2"),
-    url("https://use.typekit.net/af/275f06/00000000000000003b9b0d24/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-      format("woff"),
-    url("https://use.typekit.net/af/275f06/00000000000000003b9b0d24/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-      format("opentype");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "jubilat";
-  src: url("https://use.typekit.net/af/66f69e/00000000000000003b9b0d1f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
-      format("woff2"),
-    url("https://use.typekit.net/af/66f69e/00000000000000003b9b0d1f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
-      format("woff"),
-    url("https://use.typekit.net/af/66f69e/00000000000000003b9b0d1f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
-      format("opentype");
-  font-display: auto;
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "jubilat";
-  src: url("https://use.typekit.net/af/321cc2/00000000000000003b9b0d2b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
-      format("woff2"),
-    url("https://use.typekit.net/af/321cc2/00000000000000003b9b0d2b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
-      format("woff"),
-    url("https://use.typekit.net/af/321cc2/00000000000000003b9b0d2b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
-      format("opentype");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "jubilat";
-  src: url("https://use.typekit.net/af/9e4f99/00000000000000003b9b0d18/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
-      format("woff2"),
-    url("https://use.typekit.net/af/9e4f99/00000000000000003b9b0d18/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
-      format("woff"),
-    url("https://use.typekit.net/af/9e4f99/00000000000000003b9b0d18/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
-      format("opentype");
-  font-display: auto;
-  font-style: italic;
-  font-weight: 700;
-}
 
 @font-face {
   font-family: "open-sans";
@@ -9597,9 +9535,6 @@ pre, code, .hljs {
   font-weight: 600;
 }
 
-.tk-jubilat {
-  font-family: "jubilat", serif;
-}
 .tk-open-sans {
   font-family: "open-sans", sans-serif;
 }
@@ -9693,12 +9628,14 @@ section > .nav-breadcrumb-container {
   padding-right: 5px;
   padding-left: 5px;
   align-items: center;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;  
 }
 
 .breadcrumb-nav a:hover{
   border-bottom: none;
   text-decoration: underline !important;
-  color:#60BAB6 !important;
 }
 
 .header-container{
@@ -9768,21 +9705,26 @@ section > .nav-breadcrumb-container {
 }
 
 .dash-plug {
-  border-left: 4px solid rgb(98, 186, 181);
+  border-left: 4px solid #2186f4;
   padding-left: 1rem;
-  font-style: italic;
   font-size: 0.85em;
-  background-color: rgb(237, 249, 247);
+  background-color: #F9f9f9;
   padding-top: 5px;
   padding-bottom: 5px;
+  max-width: 650px;
+}
+
+.dash-plug > p > a{
+  font-weight: bold !important;
+  color: rgb(96,96,96) !important;
 }
 
 .plotly-red {
-  color: #f4564e !important;
+  color: #0e1012;
 }
 
 #teal-background {
-  background-color: #60bab6;
+  background-color: white;
 }
 
 #teal-background:hover {
