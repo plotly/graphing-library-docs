@@ -18,6 +18,7 @@ Create the matrices `X`, `Y`, `Z`, and `V` from the `flow` data set. Draw contou
 zslice = 0;
 contourslice(X,Y,Z,V,[],[],zslice)
 grid on
+
 fig2plotly()
 </pre>
 
@@ -51,6 +52,7 @@ zslice = [];
 contourslice(X,Y,Z,V,xslice,yslice,zslice)
 view(3)
 grid on
+
 fig2plotly()
 </pre>
 
@@ -84,6 +86,7 @@ contourslice(X,Y,Z,V,xslice,[],[],lvls)
 colorbar
 view(3)
 grid on
+
 fig2plotly()
 </pre>
 
@@ -116,6 +119,7 @@ zsurf = xsurf.^2-ysurf.^2;
 contourslice(X,Y,Z,V,xsurf,ysurf,zsurf,20)
 view(3)
 grid on
+
 fig2plotly()
 </pre>
 

@@ -17,11 +17,12 @@ loc = ["NJ" "NY" "MA" "OH" "NH" "ME" "CT" "PA" "RI" "VT"]';
 plant = ["Plant A" "Plant A" "Plant A" "Plant A" ...
        "Plant A" "Plant A" "Plant A" "Plant B" "Plant B" "Plant B"]';
 tbl = table(n,loc,plant,<span style='color:#A020F0'>'VariableNames'</span>,["Mislabeled" "State" "Manufacturing Plant"])
+
 fig2plotly()
 </pre>
 
-<pre>
-<div class="codeoutput"><pre>tbl=<span class="emphasis"><em>10×3 table</em></span>
+
+<div class="codeoutput">tbl=<span class="emphasis"><em>10×3 table</em></span>
     Mislabeled    State    Manufacturing Plant
     __________    _____    ___________________
 
@@ -36,13 +37,14 @@ fig2plotly()
         50        "RI"          "Plant B"     
         20        "VT"          "Plant B"     
 
-</pre></div>
-</pre>
+</div>
+
 
 Create a bubble cloud to visualize the mislabeled costumes by state.
 
 <pre class="mcode">
 bubblecloud(tbl,"Mislabeled","State")
+
 fig2plotly()
 </pre>
 
@@ -60,6 +62,7 @@ Divide the bubbles into groups by specifying the `groupvar` argument. In this ca
 
 <pre class="mcode">
 bubblecloud(tbl,"Mislabeled","State","Manufacturing Plant")
+
 fig2plotly()
 </pre>
 
@@ -86,6 +89,7 @@ n = [58 115 81 252 200 224 70 120 140];
 flavs = ["Rum" "Pumpkin" "Mint" "Vanilla" "Chocolate" ...
     "Strawberry" "Twist" "Coffee" "Cookie"];
 bubblecloud(n,flavs)
+
 fig2plotly()
 </pre>
 
@@ -107,6 +111,7 @@ ages = categorical(["40-90+" "5-15" "16-39" "40-90+" ...
 ages = reordercats(ages,["5-15" "16-39" "40-90+"] );
 b = bubblecloud(n,flavs,ages);
 b.LegendTitle = 'Age Range';
+
 fig2plotly()
 </pre>
 
@@ -132,6 +137,7 @@ Load the `patients` data set, and create a bubble cloud of 20 patient weight mea
 load patients
 b = bubblecloud(Weight(1:20),SelfAssessedHealthStatus(1:20), ...
     <span style='color:#A020F0'>'FaceColor'</span>,[0.3 0.6 0.4]);
+
 fig2plotly()
 </pre>
 
@@ -153,6 +159,7 @@ b.LegendTitle = "Smoker";
 f = gcf;
 f.Position([3 4]) = [655 395];
 b.FontSize = 9;
+
 fig2plotly()
 </pre>
 
@@ -171,6 +178,7 @@ To visualize the groups with different colors, set the `FaceColor` property back
 <pre class="mcode">
 b.FaceColor = <span style='color:#A020F0'>'flat'</span>;
 b.EdgeColor = <span style='color:#A020F0'>'flat'</span>;
+
 fig2plotly()
 </pre>
 
@@ -188,6 +196,7 @@ To customize the group colors, set the `ColorOrder` property to a matrix contain
 
 <pre class="mcode">
 b.ColorOrder = [0.3 0.6 0.4; 0.4 0.3 0.6];
+
 fig2plotly()
 </pre>
 
@@ -205,6 +214,7 @@ Alternatively, you can pass the `BubbleCloud` object to the `colororder` functio
 
 <pre class="mcode">
 colororder(b,["#E6CC1A"; "#4D9966"])
+
 fig2plotly()
 </pre>
 
@@ -231,6 +241,7 @@ c = categorical(["Pumpkin" "Princess" "Princess" "Princess" "Spooky Monster" ...
     "Spooky Monster" "Spooky Monster" "Spooky Monster" "Spooky Monster"]);
 [sz,labels] = histcounts(c);
 bubblecloud(sz,labels)
+
 fig2plotly()
 </pre>
 

@@ -13,11 +13,11 @@ Create a scatter plot with marginal histograms from a table of data for medical 
 
 Load the `patients` data set and create a table from a subset of the variables loaded into the workspace. Then, create a scatter histogram chart comparing the H`eight` values to the W`eight` values.
 
-<pre>
+
 load patients
 tbl = table(LastName,Age,Gender,Height,Weight);
 s = scatterhistogram(tbl,<span style='color:#A020F0'>'Height'</span>,<span style='color:#A020F0'>'Weight'</span>);
-</pre>
+
 
 {% capture plot_0_0_scatter_histogram_chart_with_tabular_data_155 %}
   {% raw %}{"data":[{"mode":"markers","type":"scatter","x":[71,69,64,67,64,68,64,68,68,66,68,66,71,72,65,71,69,69,70,68,65,64,62,66,65,70,63,63,68,67,70,66,64,70,71,66,71,66,66,63,71,69,70,70,67,65,68,62,70,67,68,62,64,66,72,63,66,70,71,68,63,65,67,66,68,71,70,60,64,64,66,64,72,65,67,72,64,68,66,64,68,69,69,64,63,68,65,63,66,65,68,71,70,71,66,69,69,70,68,66],"y":[176,163,131,133,119,142,142,180,183,132,128,137,174,202,129,181,191,131,179,172,133,117,137,146,123,189,143,114,166,186,126,137,138,187,193,137,192,118,180,128,164,183,169,194,172,135,182,121,158,179,170,136,135,147,186,124,134,170,180,130,130,127,141,111,134,189,137,136,130,137,186,127,176,127,115,178,131,183,194,126,186,188,189,120,132,182,120,123,141,129,184,181,124,174,134,171,188,186,172,177],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0.000000,113.985000,188.955000)","width":0.5},"size":7.2,"color":"rgb(0.000000,113.985000,188.955000)","symbol":"circle"},"visible":true},{"type":"histogram","x":[71,69,64,67,64,68,64,68,68,66,68,66,71,72,65,71,69,69,70,68,65,64,62,66,65,70,63,63,68,67,70,66,64,70,71,66,71,66,66,63,71,69,70,70,67,65,68,62,70,67,68,62,64,66,72,63,66,70,71,68,63,65,67,66,68,71,70,60,64,64,66,64,72,65,67,72,64,68,66,64,68,69,69,64,63,68,65,63,66,65,68,71,70,71,66,69,69,70,68,66],"y":[176,163,131,133,119,142,142,180,183,132,128,137,174,202,129,181,191,131,179,172,133,117,137,146,123,189,143,114,166,186,126,137,138,187,193,137,192,118,180,128,164,183,169,194,172,135,182,121,158,179,170,136,135,147,186,124,134,170,180,130,130,127,141,111,134,189,137,136,130,137,186,127,176,127,115,178,131,183,194,126,186,188,189,120,132,182,120,123,141,129,184,181,124,174,134,171,188,186,172,177],"xaxis":"x2","yaxis":"y2","marker":{"color":"rgba(0.000000,0.447000,0.741000,0.7)"},"nbinsx":13,"histfunc":"count","histnorm":"probability","showlegend":false},{"type":"histogram","x":[71,69,64,67,64,68,64,68,68,66,68,66,71,72,65,71,69,69,70,68,65,64,62,66,65,70,63,63,68,67,70,66,64,70,71,66,71,66,66,63,71,69,70,70,67,65,68,62,70,67,68,62,64,66,72,63,66,70,71,68,63,65,67,66,68,71,70,60,64,64,66,64,72,65,67,72,64,68,66,64,68,69,69,64,63,68,65,63,66,65,68,71,70,71,66,69,69,70,68,66],"y":[176,163,131,133,119,142,142,180,183,132,128,137,174,202,129,181,191,131,179,172,133,117,137,146,123,189,143,114,166,186,126,137,138,187,193,137,192,118,180,128,164,183,169,194,172,135,182,121,158,179,170,136,135,147,186,124,134,170,180,130,130,127,141,111,134,189,137,136,130,137,186,127,176,127,115,178,131,183,194,126,186,188,189,120,132,182,120,123,141,129,184,181,124,174,134,171,188,186,172,177],"xaxis":"x3","yaxis":"y3","marker":{"color":"rgba(0.000000,0.447000,0.741000,0.7)"},"nbinsy":6,"histfunc":"count","histnorm":"probability","showlegend":false,"orientation":"h"}],"layout":{"width":840,"bargap":0.05,"height":630,"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"xaxis1":{"font":{"family":"Arial,sans-serif"},"range":[60,72],"ticks":"inside","title":{"font":{"size":12,"family":"Arial,sans-serif"},"text":"Height"},"anchor":"y1","domain":[0.115047615175872,0.815631968988971],"mirror":"ticks","showgrid":false,"tickfont":{"size":12},"zeroline":true,"linecolor":"rgba(0,0,0,0.4)","tickcolor":"rgba(0,0,0,0.4)","showticklabels":true},"xaxis2":{"color":"rgba(0,0,0,0)","range":[60,72],"anchor":"y2","domain":[0.115047615175872,0.815631968988971],"showgrid":false,"zeroline":false,"showticklabels":false},"xaxis3":{"color":"rgba(0,0,0,0)","anchor":"y3","domain":[0.820886351642569,0.96],"showgrid":false,"zeroline":true,"zerolinecolor":"rgba(0,0,0,0.4)","showticklabels":false},"yaxis1":{"range":[111,202],"ticks":"inside","title":{"font":{"size":12,"family":"Arial,sans-serif"},"text":"Weight"},"anchor":"x1","domain":[0.132666226719592,0.754175958651961],"mirror":"ticks","showgrid":false,"tickfont":{"size":12,"family":"Arial,sans-serif"},"zeroline":true,"linecolor":"rgba(0,0,0,0.4)","tickcolor":"rgba(0,0,0,0.4)","showticklabels":true},"yaxis2":{"color":"rgba(0,0,0,0)","anchor":"x2","domain":[0.766606153290608,0.96],"showgrid":false,"zeroline":true,"zerolinecolor":"rgba(0,0,0,0.4)","showticklabels":false},"yaxis3":{"color":"rgba(0,0,0,0)","range":[111,202],"anchor":"x3","domain":[0.132666226719592,0.754175958651961],"showgrid":false,"zeroline":false,"showticklabels":false},"barmode":"overlay","autosize":false,"hovermode":"closest","showlegend":false,"annotations":[{"text":"","xref":"paper","yref":"paper","showarrow":false}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -39,11 +39,11 @@ Using the `patients` data set, create a scatter plot with marginal histograms an
 
 Load the `patients` data set and create a scatter histogram chart from the data. Compare the patients' `Systolic` and `Diastolic` values. Group the data according to the patients' smoker status by setting the `'GroupVariable'` name-value pair argument to `'Smoker'`.
 
-<pre>
+
 load patients
 tbl = table(LastName,Diastolic,Systolic,Smoker);
 s = scatterhistogram(tbl,<span style='color:#A020F0'>'Diastolic'</span>,<span style='color:#A020F0'>'Systolic'</span>,<span style='color:#A020F0'>'GroupVariable'</span>,<span style='color:#A020F0'>'Smoker'</span>);
-</pre>
+
 
 {% capture plot_1_0_specify_table_variable_for_grouping_data_156 %}
   {% raw %}{"data":[{"mode":"markers","name":"true","type":"scatter","x":[93,88,95,92,95,79,90,96,89,92,90,90,92,89,96,78,95,91,91,89,82,82,91,85,84,82,92,92,96,87,90,99,92,93],"y":[124,130,130,130,124,123,128,129,127,134,136,124,128,132,137,124,129,130,132,129,138,138,122,125,124,134,125,135,128,123,138,128,124,136],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(0.000000,113.985000,188.955000)","width":0.5},"size":7.2,"color":"rgb(0.000000,113.985000,188.955000)","symbol":"circle"},"visible":true,"showlegend":true,"legendgroup":"true"},{"mode":"markers","name":"false","type":"scatter","x":[77,83,75,80,70,82,78,86,77,68,74,79,77,76,75,79,88,77,80,76,83,83,80,84,92,83,85,74,80,89,77,81,76,83,86,79,74,76,81,77,73,85,76,80,80,79,82,79,75,74,78,75,78,81,79,85,79,80,80,81,77,91,79,73,74,86],"y":[109,125,117,122,121,115,115,118,114,115,127,114,119,125,121,123,114,114,113,125,120,121,115,127,121,127,117,120,116,117,116,119,123,116,117,118,120,117,113,122,115,120,117,123,123,119,110,121,125,120,117,121,118,120,118,118,122,131,113,122,124,130,123,129,119,114],"xaxis":"x1","yaxis":"y1","marker":{"line":{"color":"rgb(216.750000,82.875000,24.990000)","width":0.5},"size":7.2,"color":"rgb(216.750000,82.875000,24.990000)","symbol":"circle"},"visible":true,"showlegend":true,"legendgroup":"false"},{"name":"true","type":"histogram","x":[93,88,95,92,95,79,90,96,89,92,90,90,92,89,96,78,95,91,91,89,82,82,91,85,84,82,92,92,96,87,90,99,92,93],"y":[124,130,130,130,124,123,128,129,127,134,136,124,128,132,137,124,129,130,132,129,138,138,122,125,124,134,125,135,128,123,138,128,124,136],"xaxis":"x3","yaxis":"y3","marker":{"color":"rgba(0.000000,0.447000,0.741000,0.7)"},"nbinsx":22,"histfunc":"count","histnorm":"probability","showlegend":false,"legendgroup":"true"},{"name":"false","type":"histogram","x":[77,83,75,80,70,82,78,86,77,68,74,79,77,76,75,79,88,77,80,76,83,83,80,84,92,83,85,74,80,89,77,81,76,83,86,79,74,76,81,77,73,85,76,80,80,79,82,79,75,74,78,75,78,81,79,85,79,80,80,81,77,91,79,73,74,86],"y":[109,125,117,122,121,115,115,118,114,115,127,114,119,125,121,123,114,114,113,125,120,121,115,127,121,127,117,120,116,117,116,119,123,116,117,118,120,117,113,122,115,120,117,123,123,119,110,121,125,120,117,121,118,120,118,118,122,131,113,122,124,130,123,129,119,114],"xaxis":"x3","yaxis":"y3","marker":{"color":"rgba(0.850000,0.325000,0.098000,0.7)"},"nbinsx":25,"histfunc":"count","histnorm":"probability","showlegend":false,"legendgroup":"false"},{"name":"true","type":"histogram","x":[93,88,95,92,95,79,90,96,89,92,90,90,92,89,96,78,95,91,91,89,82,82,91,85,84,82,92,92,96,87,90,99,92,93],"y":[124,130,130,130,124,123,128,129,127,134,136,124,128,132,137,124,129,130,132,129,138,138,122,125,124,134,125,135,128,123,138,128,124,136],"xaxis":"x5","yaxis":"y5","marker":{"color":"rgba(0.000000,0.447000,0.741000,0.7)"},"nbinsy":17,"histfunc":"count","histnorm":"probability","showlegend":false,"legendgroup":"true","orientation":"h"},{"name":"false","type":"histogram","x":[77,83,75,80,70,82,78,86,77,68,74,79,77,76,75,79,88,77,80,76,83,83,80,84,92,83,85,74,80,89,77,81,76,83,86,79,74,76,81,77,73,85,76,80,80,79,82,79,75,74,78,75,78,81,79,85,79,80,80,81,77,91,79,73,74,86],"y":[109,125,117,122,121,115,115,118,114,115,127,114,119,125,121,123,114,114,113,125,120,121,115,127,121,127,117,120,116,117,116,119,123,116,117,118,120,117,113,122,115,120,117,123,123,119,110,121,125,120,117,121,118,120,118,118,122,131,113,122,124,130,123,129,119,114],"xaxis":"x5","yaxis":"y5","marker":{"color":"rgba(0.850000,0.325000,0.098000,0.7)"},"nbinsy":23,"histfunc":"count","histnorm":"probability","showlegend":false,"legendgroup":"false","orientation":"h"}],"layout":{"width":840,"bargap":0.05,"height":630,"legend":{"x":0.96,"y":0.96,"font":{"size":10,"family":"Arial,sans-serif"},"xref":"paper","title":{"font":{"size":12,"color":"black","family":"Arial,sans-serif"},"side":"top","text":"Smoker"},"valign":"middle","xanchor":"right","yanchor":"top","bordercolor":"rgba(0,0,0,0.2)","borderwidth":1},"margin":{"b":0,"l":0,"r":0,"t":0,"pad":0},"xaxis1":{"font":{"family":"Arial,sans-serif"},"range":[68,99],"ticks":"inside","title":{"font":{"size":12,"family":"Arial,sans-serif"},"text":"Diastolic"},"anchor":"y1","domain":[0.115047615175871,0.814235036444453],"mirror":"ticks","showgrid":false,"tickfont":{"size":12},"zeroline":true,"linecolor":"rgba(0,0,0,0.4)","tickcolor":"rgba(0,0,0,0.4)","showticklabels":true},"xaxis3":{"color":"rgba(0,0,0,0)","range":[68,99],"anchor":"y3","domain":[0.115047615175871,0.814235036444453],"showgrid":false,"zeroline":false,"showticklabels":false},"xaxis5":{"color":"rgba(0,0,0,0)","anchor":"y5","domain":[0.819478942103968,0.96],"showgrid":false,"zeroline":true,"zerolinecolor":"rgba(0,0,0,0.4)","showticklabels":false},"yaxis1":{"range":[109,138],"ticks":"inside","title":{"font":{"size":12,"family":"Arial,sans-serif"},"text":"Systolic"},"anchor":"x1","domain":[0.132666226719592,0.752313381925938],"mirror":"ticks","showgrid":false,"tickfont":{"size":12,"family":"Arial,sans-serif"},"zeroline":true,"linecolor":"rgba(0,0,0,0.4)","tickcolor":"rgba(0,0,0,0.4)","showticklabels":true},"yaxis3":{"color":"rgba(0,0,0,0)","anchor":"x3","domain":[0.764706325030065,0.96],"showgrid":false,"zeroline":true,"zerolinecolor":"rgba(0,0,0,0.4)","showticklabels":false},"yaxis5":{"color":"rgba(0,0,0,0)","range":[109,138],"anchor":"x5","domain":[0.132666226719592,0.752313381925938],"showgrid":false,"zeroline":false,"showticklabels":false},"barmode":"overlay","autosize":false,"hovermode":"closest","showlegend":true,"annotations":[{"text":"","xref":"paper","yref":"paper","showarrow":false}],"paper_bgcolor":"rgb(255,255,255)"},"frames":[]}{% endraw %}
@@ -71,6 +71,7 @@ Smoker = categorical(Smoker);
 s = scatterhistogram(Age,Smoker);
 xlabel(<span style='color:#A020F0'>'Age'</span>)
 ylabel(<span style='color:#A020F0'>'Smoker'</span>)
+
 fig2plotly()
 </pre>
 
@@ -106,6 +107,7 @@ s.Title = 'Shoe Sales';
 s.XLabel = 'Shoe Size';
 s.YLabel = <span style='color:#A020F0'>'Price'</span>;
 s.LegendTitle = 'Shoe Color';
+
 fig2plotly()
 </pre>
 
@@ -114,6 +116,7 @@ Change the colors in the scatter histogram chart to match the group labels. Chan
 <pre class="mcode">
 s.Color = {<span style='color:#A020F0'>'Red'</span>,<span style='color:#A020F0'>'Black'</span>,<span style='color:#A020F0'>'Blue'</span>};
 s.BinWidths = 1;
+
 fig2plotly()
 </pre>
 
@@ -142,6 +145,7 @@ load patients
 tbl = table(LastName,Diastolic,Systolic,SelfAssessedHealthStatus);
 s = scatterhistogram(tbl,<span style='color:#A020F0'>'Diastolic'</span>,<span style='color:#A020F0'>'Systolic'</span>,<span style='color:#A020F0'>'GroupVariable'</span>,<span style='color:#A020F0'>'SelfAssessedHealthStatus'</span>, ...
     <span style='color:#A020F0'>'NumBins'</span>,4,<span style='color:#A020F0'>'LineWidth'</span>,1.5,<span style='color:#A020F0'>'ScatterPlotLocation'</span>,<span style='color:#A020F0'>'NorthEast'</span>,<span style='color:#A020F0'>'LegendVisible'</span>,<span style='color:#A020F0'>'on'</span>);
+
 fig2plotly()
 </pre>
 
@@ -172,6 +176,7 @@ SmokerGender = strcat(genderStatus(idx),"-",smokerStatus(idx));
 s = scatterhistogram(Diastolic,Systolic,<span style='color:#A020F0'>'GroupData'</span>,SmokerGender,<span style='color:#A020F0'>'LegendVisible'</span>,<span style='color:#A020F0'>'on'</span>);
 xlabel(<span style='color:#A020F0'>'Diastolic'</span>)
 ylabel(<span style='color:#A020F0'>'Systolic'</span>)
+
 fig2plotly()
 </pre>
 
@@ -208,6 +213,7 @@ tbl = table(Horsepower,MPG,Cylinders);
 s = scatterhistogram(tbl,<span style='color:#A020F0'>'Horsepower'</span>,<span style='color:#A020F0'>'MPG'</span>, ...
     <span style='color:#A020F0'>'GroupVariable'</span>,<span style='color:#A020F0'>'Cylinders'</span>,<span style='color:#A020F0'>'HistogramDisplayStyle'</span>,<span style='color:#A020F0'>'smooth'</span>, ...
     <span style='color:#A020F0'>'LineStyle'</span>,'-');
+
 fig2plotly()
 </pre>
 
