@@ -19,10 +19,8 @@
             {% else %}
             {% assign display_as = site.data.display_as[page.display_as] %}
             {% endif %}
-            &gt; <a href="/{{ display_as.reference | prepend: " /" | prepend: langue }}">{{ display_as.text }}</a>
-
+            &gt; <a href="/{{ display_as.reference | prepend:"/" | prepend: langue }}">{{display_as.text}}</a>
             {% endif %}
-
             {% if page.layout != "langindex" and page.permalink != "/api/" %}
             &gt; <span>{{page.name}}</span>
             {% endif %}
@@ -31,7 +29,6 @@
             &gt; <span>{{page.name}}</span>
             {% endif %}
         </div>
-
     </div>
     <div class="nav-breadcrumb-right">
         <div class="--fork">
