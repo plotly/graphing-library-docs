@@ -2,7 +2,7 @@
     <div>
         <div class="breadcrumb-nav">
             {% if page.permalink != "/api/" and page.permalink != "/python/" and page.permalink != "/javascript/" and
-            page.permalink != "/r/" %}
+            page.permalink != "/r/"  and page.permalink != "/julia/"  and page.permalink != "/ggplot2/"  and page.permalink != "/matlab/"  %}
             <a href="/{% if page.permalink contains 'javascript' %}javascript{% else %}{{page.language}}{% endif %}">{%
                 if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif
                 page.language == "matlab" %}Plotly Graphing Library for MATLAB<sup>&reg;</sup>{% else %}{{page.language
@@ -26,7 +26,7 @@
             {% endif %}
             {% if page.page_type == "reference" %}
             &gt; <a href="/{{langue}}/reference/index/">Figure Reference</a>
-            &gt; <span>{{page.name}}</span>
+            &gt; <span>{{page.name}} -1</span>
             {% endif %}
         </div>
     </div>
