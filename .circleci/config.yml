@@ -54,13 +54,7 @@ jobs:
             git config --global user.name "plotlydocbot"
             echo
             echo "token: ${mapbox_token}" > _data/mapbox_token.yml
-            rm -rf _posts/python/html
-            git clone -b built git@github.com:plotly/plotly.py-docs _posts/python/html
-            rm -rf _posts/r/md
-            git clone -b built git@github.com:plotly/plotly.r-docs _posts/r/md
-            mv _posts/r/md/ggplot2 _posts/ggplot2/md
-            rm -rf _posts/julia/html
-            git clone -b built git@github.com:plotly/plotlyjs.jl-docs _posts/julia/html
+            make fetch_upstream_files
             python front-matter-ci.py _posts
             python check-or-enforce-order.py _posts/python
             python check-or-enforce-order.py _posts/python-v3
@@ -87,7 +81,7 @@ jobs:
             cp --parents 'javascript/line-and-scatter/index.html' '../snapshots'
             cp --parents 'ggplot2/index.html' '../snapshots'
             cp --parents 'ggplot2/getting-started/index.html' '../snapshots'
-            cp --parents 'ggplot2/geom_abline/index.html' '../snapshots'
+            cp --parents 'ggplot2/histograms/index.html' '../snapshots'
             cp --parents 'matlab/index.html' '../snapshots'
             cp --parents 'matlab/getting-started/index.html' '../snapshots'
             cp --parents 'matlab/graphing-multiple-chart-types/index.html' '../snapshots'

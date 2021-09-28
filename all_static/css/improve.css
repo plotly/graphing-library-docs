@@ -1,3 +1,81 @@
+.open-menu .menu-mobile {
+  right: 0px; }
+.open-menu .--page.page--single, .open-menu .header-container, .open-menu .--home.--api {
+  opacity: 0.3; }
+
+.menu-icon {
+  width: 35px;
+  margin: 0px 15px 0px 10px;
+  cursor: pointer;
+  height: 30px;
+  float: right;
+  display: none; }
+  @media screen and (max-width: 1005px) {
+    .menu-icon {
+      display: block; } }
+  .menu-icon span {
+    height: 2px;
+    display: block;
+    width: 33px;
+    background-color: #49587c;
+    margin: 5px 0px 5px 0px; }
+
+.menu-mobile {
+  width: 280px;
+  background-color: #0e1012;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 30px;
+  z-index: 9999;
+  transition: all ease 0.3s;
+  right: -300px; }
+  .menu-mobile .switch-mode {
+    margin: 0px 0px 30px 0px; }
+  .menu-mobile .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    z-index: 999;
+    cursor: pointer; }
+    .menu-mobile .close-menu::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      transform: rotate(45deg);
+      background-color: #fff; }
+    .menu-mobile .close-menu::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      transform: rotate(-45deg);
+      background-color: #fff; }
+  .menu-mobile ul {
+    margin: 0px;
+    padding: 0px; }
+    .menu-mobile ul li {
+      margin: 0px 0px 15px 0px; }
+      .menu-mobile ul li a {
+        display: block;
+        pading: 10px 0px 10px 0px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #ddd !important;
+        text-decoration: none; }
+        .menu-mobile ul li a:hover {
+          color: #fff !important; }
+
 .db-client-lib {
   margin: 0px 0px 30px 0px; }
   .db-client-lib label {
@@ -151,7 +229,7 @@ aside.\--sidebar-container .\--sidebar-fixed.affix #modal-button {
     text-decoration: underline;
     color: #2186f4 !important; }
 
-/*********fix  dark sidebar*********/
+/*********fix dark sidebar*********/
 body p a {
   color: #606060 !important;
   font-weight: 600; }
@@ -205,9 +283,6 @@ aside.\--sidebar-container {
     aside.\--sidebar-container .brand img {
       width: 100%;
       height: auto !important; }
-
-.breadcrumb-nav {
-  display: none; }
 
 header.header-main {
   border: none; }
@@ -367,6 +442,9 @@ body * {
 body .fa {
   font: normal normal normal 14px/1 FontAwesome !important; }
 
+.page.\--home .\--documentation-categories ul li .category-img {
+  background-color: transparent !important; }
+
 #advanced-options .--grid-list {
   display: flex;
   flex-wrap: wrap;
@@ -435,5 +513,362 @@ code.hljs {
 .hljs-meta,
 .hljs-link {
   color: #72a125; }
+
+.nav-breadcrumb-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media screen and (max-width: 991px) {
+    .nav-breadcrumb-container .--fork {
+      display: none; } }
+  .nav-breadcrumb-container .--fork span {
+    color: #3f3f45; }
+  .nav-breadcrumb-container .breadcrumb-nav {
+    font-style: italic;
+    color: #3f3f45;
+    font-weight: 600; }
+    .nav-breadcrumb-container .breadcrumb-nav a {
+      font-size: 14px;
+      font-weight: 600;
+      font-style: italic;
+      color: #3f3f45; }
+      .nav-breadcrumb-container .breadcrumb-nav a:hover {
+        text-decoration: underline; }
+    .nav-breadcrumb-container .breadcrumb-nav span {
+      font-size: 14px;
+      font-weight: 600;
+      font-style: italic;
+      color: #3f3f45; }
+
+body header.header-main.\--default nav.--nav-meta > ul > li:hover > a {
+  color: #2186f4 !important; }
+body header.header-main.\--default nav.--nav-meta > ul > li.languages {
+  position: relative; }
+  body header.header-main.\--default nav.--nav-meta > ul > li.languages > a {
+    display: flex !important;
+    align-items: center;
+    color: #666; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages > a .icon {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin: 0px 6px 0px 0px; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.matlab {
+      display: inline-block;
+      order: 6; }
+      body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.matlab .icon {
+        background-image: url("../images/icon-matlab.png");
+        background-size: 20px auto; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.python {
+      display: inline-block;
+      order: 1; }
+      body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.python .icon {
+        background-image: url("../images/icon-python.png");
+        background-size: 20px auto; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.r {
+      display: inline-block;
+      order: 2; }
+      body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.r .icon {
+        background-image: url("../images/icon-r.png");
+        background-size: 20px auto; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.julia {
+      display: inline-block;
+      order: 4; }
+      body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.julia .icon {
+        background-image: url("../images/icon-julia.png");
+        background-size: 20px auto; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.ggplot2 {
+      display: inline-block;
+      order: 3; }
+      body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.ggplot2 .icon {
+        background-image: url("../images/icon-ggplot2.png");
+        background-size: 18px auto; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.fsharp {
+      display: inline-block;
+      order: 15; }
+      body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.fsharp .icon {
+        background-image: url("../images/icon-fsharp.png");
+        background-size: 20px auto; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.dash {
+      display: inline-block;
+      order: 15; }
+      body header.header-main.\--default nav.--nav-meta > ul > li.languages > a.dash .icon {
+        background-image: url("../images/icon-dash.png");
+        background-size: 23px auto; }
+  body header.header-main.\--default nav.--nav-meta > ul > li.languages:hover ul {
+    z-index: 999;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0px; }
+  body header.header-main.\--default nav.--nav-meta > ul > li.languages > a {
+    position: relative;
+    padding-right: 17px; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages > a:before {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 0px;
+      border: 5px solid transparent;
+      border-top-color: #666;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      margin: -1px 0px 0px 0px; }
+  body header.header-main.\--default nav.--nav-meta > ul > li.languages ul {
+    position: absolute;
+    top: 100%;
+    left: -5px;
+    width: 190px;
+    background-color: #fff;
+    padding: 5px 0px;
+    display: block;
+    z-index: 999;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.3s;
+    opacity: 0;
+    margin: 10px 0px 0px;
+    z-index: -1;
+    visibility: hidden; }
+    body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li {
+      display: block;
+      padding: 0px;
+      margin: 0px 0px 0px 0px; }
+      body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a {
+        display: flex !important;
+        align-items: center;
+        padding: 3px 10px;
+        transition: all ease 0.3s; }
+        body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a:hover {
+          background-color: #eee;
+          color: #2186f4 !important; }
+        body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a .icon {
+          flex-shrink: 0;
+          width: 30px;
+          height: 30px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          margin: 0px 10px 0px 0px; }
+        body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.matlab {
+          display: inline-block;
+          order: 6; }
+          body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.matlab .icon {
+            background-image: url("../images/icon-matlab.png");
+            background-size: 20px auto; }
+        body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.python {
+          display: inline-block;
+          order: 1; }
+          body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.python .icon {
+            background-image: url("../images/icon-python.png");
+            background-size: 20px auto; }
+        body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.r {
+          display: inline-block;
+          order: 2; }
+          body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.r .icon {
+            background-image: url("../images/icon-r.png");
+            background-size: 20px auto; }
+        body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.julia {
+          display: inline-block;
+          order: 4; }
+          body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.julia .icon {
+            background-image: url("../images/icon-julia.png");
+            background-size: 20px auto; }
+        body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.ggplot2 {
+          display: inline-block;
+          order: 3; }
+          body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.ggplot2 .icon {
+            background-image: url("../images/icon-ggplot2.png");
+            background-size: 18px auto; }
+        body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.fsharp {
+          display: inline-block;
+          order: 15; }
+          body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.fsharp .icon {
+            background-image: url("../images/icon-fsharp.png");
+            background-size: 20px auto; }
+        body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.dash {
+          display: inline-block;
+          order: 15; }
+          body header.header-main.\--default nav.--nav-meta > ul > li.languages ul li a.dash .icon {
+            background-image: url("../images/icon-dash.png");
+            background-size: 23px auto; }
+
+.--nav-meta {
+  display: flex; }
+
+.switch-mode {
+  margin: 0px 20px 0px 10px;
+  display: flex;
+  align-items: center; }
+  .switch-mode .icon-dark {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/dark-mode.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-shrink: 0;
+    opacity: 0; }
+  .switch-mode .icon-light {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/light-mode.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-shrink: 0; }
+  .switch-mode .switch {
+    margin: 0px 10px;
+    flex-shrink: 0;
+    width: 35px;
+    height: 20px;
+    position: relative;
+    background-color: #bbb;
+    border-radius: 20px;
+    cursor: pointer; }
+    .switch-mode .switch:before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      transition: all ease 0.3s; }
+
+/**********dark-mode*******/
+.dark-mode {
+  background-color: #0e1012 !important;
+  color: #a0aaba !important; }
+  .dark-mode .switch-mode .icon-dark {
+    opacity: 1; }
+  .dark-mode .switch-mode .icon-light {
+    opacity: 0; }
+  .dark-mode .switch::before {
+    right: 18px !important;
+    background-color: #878787 !important; }
+  .dark-mode header.header-main.\--default nav.--nav-meta > ul > li.languages > a {
+    color: #fff; }
+  .dark-mode header.header-main.\--default nav.--nav-meta > ul > li.languages ul {
+    background-color: #040404; }
+  .dark-mode header.header-main.\--default
+  nav.--nav-meta
+  > ul
+  > li.languages
+  ul
+  li
+  a:hover {
+    background-color: #000;
+    color: #2186f4 !important; }
+  .dark-mode .db-client-lib .list-lib .list-lib-item:hover {
+    border: 1px solid #5a5a5a;
+    text-decoration: none;
+    background-color: #040404; }
+  .dark-mode .db-client-lib .list-lib .list-lib-item.current {
+    border: 1px solid #5a5a5a;
+    text-decoration: none;
+    background-color: #040404; }
+  .dark-mode .db-client-lib .list-lib .list-lib-item p {
+    color: #a0aaba; }
+  .dark-mode .rendered_html pre,
+  .dark-mode .rendered_html code {
+    color: #a0aaba; }
+  .dark-mode pre,
+  .dark-mode code,
+  .dark-mode .hljs {
+    background: #040404 !important;
+    color: #a0aaba;
+    line-height: 1.5rem; }
+  .dark-mode div.output_area pre {
+    color: #a0aaba; }
+  .dark-mode .highlight1 {
+    background: #040404 !important; }
+  .dark-mode pre1 {
+    border: 1px solid #444343; }
+  .dark-mode .\--page-body {
+    background-color: #0e1012 !important; }
+  .dark-mode header.header-main.\--default,
+  .dark-mode .header-large--wrap + header.header-main.\--default.affix {
+    color: #fff !important;
+    background-color: #0e1012 !important; }
+  .dark-mode div.text_cell_render {
+    color: #a0aaba; }
+  .dark-mode .dash-plug {
+    background-color: #161a1d; }
+  .dark-mode .\--tutorial-index .\--welcome .\--title h1,
+  .dark-mode .\--tutorial-index .\--welcome .\--title section.section h2,
+  .dark-mode section.section .\--tutorial-index .\--welcome .\--title h2 {
+    color: #fff; }
+  .dark-mode .page--single .tutorial-content h1,
+  .dark-mode .page--single .tutorial-content section.section h2,
+  .dark-mode section.section .page--single .tutorial-content h2,
+  .dark-mode .page--single .tutorial-content h3,
+  .dark-mode .page--single .tutorial-content h4,
+  .dark-mode .page--single .tutorial-content .js-splash--section-title,
+  .dark-mode .page--single .tutorial-content h5 {
+    color: #fff !important; }
+  .dark-mode .\--tutorial-index .\--welcome::before {
+    background: #333; }
+  .dark-mode aside.\--sidebar-container {
+    background: #040404; }
+  .dark-mode .breadcrumb-nav {
+    color: #a0aaba; }
+  .dark-mode .nav-breadcrumb-container .breadcrumb-nav a {
+    color: #a0aaba; }
+  .dark-mode .nav-breadcrumb-container .breadcrumb-nav span {
+    color: #a0aaba; }
+  .dark-mode .nav-breadcrumb-container .--fork span {
+    color: #a0aaba; }
+  .dark-mode .nav-breadcrumb-container .--fork svg path {
+    fill: #a0aaba; }
+  .dark-mode .--section-header a {
+    color: #fff !important; }
+  .dark-mode .\--tutorial-section .\--grid-item {
+    background: transparent !important; }
+  .dark-mode .\--tutorial-section:not(.no-image) .\--grid-item .\--item-meta {
+    color: #fffff !important; }
+  .dark-mode .\--tutorial-section:not(.no-image) .\--grid-item .\--item-meta {
+    color: #a0aaba !important; }
+  .dark-mode .--body p a {
+    color: #fff !important; }
+    .dark-mode .--body p a:hover {
+      text-decoration: underline; }
+  .dark-mode p a {
+    color: #fff !important;
+    font-weight: 600; }
+  .dark-mode .\--footer-main {
+    background-color: #040404;
+    border-top: 1px solid #0e1012; }
+  .dark-mode .\--footer-meta {
+    border-top: none;
+    background: #040404; }
+  .dark-mode .--footer-column h6 {
+    color: #a0aaba !important; }
+  .dark-mode .\--footer-main ul a {
+    color: #a0aaba;
+    display: inline-block;
+    margin: 2px 0; }
+  .dark-mode .subscribe-text {
+    -webkit-margin-before: 0em;
+    margin-block-start: 0em;
+    font-size: 80%;
+    color: #a0aaba; }
+  .dark-mode .\--api .hero {
+    border-bottom: 1px solid #0e1012; }
+  .dark-mode .page.\--home .hero .\--welcome h2 {
+    color: #ffffff !important; }
+  .dark-mode .page.\--home .hero .\--welcome span {
+    color: #a0aaba;
+    /* text-transform: uppercase; */ }
+  .dark-mode .page.\--home .\--documentation-categories {
+    background-color: #0e1012;
+    border-top: 1px solid #0e1012; }
+  .dark-mode .page.\--home .\--documentation-categories ul li {
+    background: #0e1012;
+    border: 1px solid #4b5156; }
+  .dark-mode .page.\--home .\--documentation-categories ul li h2 {
+    color: #a0aaba; }
 
 /*# sourceMappingURL=improve.css.map */
