@@ -1,0 +1,68 @@
+---
+description: How to set the privacy settings of Chart Studio graphs in ggplot2.
+display_as: chart_studio
+language: ggplot2
+layout: base
+name: Privacy Settings For Chart Studio Graphs
+order: 3
+output:
+  html_document:
+    keep_md: true
+permalink: ggplot2/privacy/
+thumbnail: thumbnail/privacy.jpg
+---
+
+```{r, echo = FALSE, message=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+Sys.setenv("plotly_username"="RPlotBot")
+Sys.setenv("plotly_api_key"="q0lz6r5efr")
+```
+#### Default Privacy
+The `plotly` ggplot2 package renders plots entirely **locally** by default.
+
+However, you can also choose to publish plots on the web using Chart Studio via the `api_create()` function. 
+
+By default, the `api_create()` function creates public graphs. With a [Chart Studio Enterprise subscription](https://plotly.com/online-chart-maker/), you can easily make graphs private by using the `sharing` argument of the `api_create()` function.
+
+### Public Graph
+
+Please note, this is the default privacy option.
+
+```{r}
+library(plotly)
+library(ggplot2)
+
+p <- qplot(mpg, wt, data = mtcars, size = cyl)
+
+chart_link = api_create(p, filename = "public-graph-file")
+chart_link
+```
+
+Below is the URL of this public plot. Anyone can view public plots even if they are not logged into Plotly. <br> [Try it out](https://chart-studio.plotly.com/~danton267/1535/#/)
+
+### Private Graph
+```{r}
+library(plotly)
+library(ggplot2)
+
+p <- qplot(mpg, wt, data = mtcars, size = cyl)
+
+chart_link = api_create(p, filename = "private-graph-file", sharing = "private")
+chart_link
+```
+
+Below is the URL of the private plot above. Only the owner can view the private plot. You won't be able to view this plot. <br> [Try it out](https://chart-studio.plotly.com/~danton267/1533/#/)
+
+### Secret Graph
+```{r}
+library(plotly)
+library(ggplot2)
+
+p <- qplot(mpg, wt, data = mtcars, size = cyl)
+
+chart_link = api_create(p, filename = "secret-graph-file", sharing = "secret")
+chart_link
+```
+
+Below is the URL of this secret plot. Anyone with the secret link can view this chart. However, it will not appear in the Plotly feed, your profile, or search engines. <br> Try it out:
+[https://chart-studio.plotly.com/~danton267/1531/?share_key=UrA8XN1nhtLMmtTbckbkUK#/](https://chart-studio.plotly.com/~danton267/1531/?share_key=UrA8XN1nhtLMmtTbckbkUK#/)

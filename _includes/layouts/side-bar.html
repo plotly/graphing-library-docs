@@ -99,7 +99,7 @@
             <a href="/graphing-libraries/"><img src="/all_static/images/logo-white.png" style="height: 45px;"></a>
         </div>
         {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/"
-        or page.permalink contains "ggplot2/" %}
+        or page.permalink contains "ggplot2/" or page.permalink contains "matlab/" %}
         <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
             <input id="modal-input" style="border-radius: 5px; width: 100%;" type="text" placeholder="   Search..."
                 readonly />
@@ -114,7 +114,7 @@
                         <a href="/{{ langue }}/getting-started" class="js-splash--navigation-item">Getting Started</a>
                     </li>
 
-                    {% if page.language == "r" or page.language == "python" or page.language == "plotly_js"%}
+                    {% if page.language == "r" or page.language == "python" or page.language == "plotly_js" or page.language == "ggplot2" or page.language == "matlab"%}
                     <li class="--sidebar-item">
                         <a href="/{{ langue }}/is-plotly-free" class="js-splash--navigation-item">Is Plotly Free?</a>
                     </li>
@@ -238,7 +238,6 @@
             </nav>
         </details>
 
-        {% if page.language != "matlab" %}
         <!-- Examples start -->
         <details style="color: white;margin-top: 20px;" open>
             <summary>Examples</summary>
@@ -578,6 +577,5 @@
                 </ul>
             </nav>
         </details>
-        {% endif %}
     </div>
 </aside>
