@@ -81,7 +81,7 @@ jobs:
             cp --parents 'javascript/line-and-scatter/index.html' '../snapshots'
             cp --parents 'ggplot2/index.html' '../snapshots'
             cp --parents 'ggplot2/getting-started/index.html' '../snapshots'
-            cp --parents 'ggplot2/2D-Histogram/index.html' '../snapshots'
+            cp --parents 'ggplot2/histograms/index.html' '../snapshots'
             cp --parents 'matlab/index.html' '../snapshots'
             cp --parents 'matlab/getting-started/index.html' '../snapshots'
             cp --parents 'matlab/graphing-multiple-chart-types/index.html' '../snapshots'
