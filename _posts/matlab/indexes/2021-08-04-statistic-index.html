@@ -1,0 +1,31 @@
+---
+permalink: matlab/statistical-charts/
+description: Plotly's MATLAB<sup>&reg;</sup> graphing library makes interactive, publication-quality graphs online. Examples of how to make statistical charts such as box plots, histograms, and distrubution plots.
+name: Statistical Charts
+layout: langindex
+language: matlab
+display_as: statistical
+thumbnail: thumbnail/mixed.jpg
+page_type: example_index
+---
+
+<header class="--welcome">
+	<div class="--welcome-body">
+		<!--div.--wrap-inner-->
+		<div class="--title">
+
+			<div class="--body">
+				<h1> Plotly MATLAB<sup>&reg;</sup> Open Source Graphing Library Statistical Charts</h1>
+				<p>{{page.description}}</p><br>
+				{% include layouts/dashplug.html %}
+			</div>
+		</div>
+	</div>
+</header>
+
+{% assign languagelist = site.posts | where:"language","matlab" | where:"display_as","statistical" | where: "layout","base" | sort: "order" %}
+{% include posts/documentation_eg.html %}
+
+<p style="margin-top:200px">
+	<em>MATLAB<sup>&reg;</sup> is a registered trademark of The MathWorks, Inc.</em>
+</p>

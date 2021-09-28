@@ -1,0 +1,56 @@
+---
+description: How to download Chart Studio users' public graphs and data into an ggplot2 session.
+display_as: chart_studio
+language: ggplot2
+layout: base
+name: Working With Chart Studio Graphs
+order: 5
+output:
+  html_document:
+    keep_md: true
+permalink: ggplot2/working-with-chart-studio-graphs/
+thumbnail: thumbnail/hover.jpg
+---
+
+```{r, echo = FALSE, message=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning=FALSE)
+Sys.setenv("plotly_username"="RPlotBot")
+Sys.setenv("plotly_api_key"="q0lz6r5efr")
+```
+### Download Chart Studio Graphs Into ggplot2 Sessions
+
+Download Chart Studio figures directly into your ggplot2 session with the `api_download_plot()` function. This takes the `plot_id` of the Chart Studio plot and the `username` of the plot's creator as arguments.
+
+For example, to download [https://plotly.com/~cpsievert/559](https://plotly.com/~cpsievert/559) into ggplot2, call:
+
+```{r}
+library(plotly)
+
+fig <- api_download_plot("559", "cpsievert")
+
+fig
+```
+
+### Update The Layout on A Downloaded Graph
+
+Once the figure is downloaded from Chart Studio into your ggplot2 session, you can update its layout just like you would any other figure you create with the `plotly` ggplot2 package. 
+
+**Note:** If you were to re-upload this figure to Chart Studio, a new figure would be created unless you specify the same `filename` as the figure that you downloaded. In that case, the existing figure will be overwritten.
+
+```{r}
+p <- layout(fig, title = paste("Modified on ", Sys.time()))
+p
+```
+
+### Adding a Trace to a Subplot Figure
+
+```{r}
+fig <- api_download_plot("6343", "chelsea_lyn")
+
+p <- add_lines(fig, x = c(1, 2), y = c(1, 2), xaxis = "x2", yaxis = "y2")
+p
+```
+
+### Reference
+
+See the documentation for [getting started with Chart Studio in ggplot2](https://plotly.com/r/getting-started-with-chart-studio). 

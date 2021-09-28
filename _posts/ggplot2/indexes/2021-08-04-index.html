@@ -1,0 +1,27 @@
+---
+name: Plotly Graphing Library for ggplot2
+permalink: /ggplot2/
+display_as: false
+description: With ggplotly() by Plotly, you can convert your ggplot2 figures into interactive ones powered by plotly.js, ready for embedding into Dash applications.
+layout: langindex
+language: ggplot2
+---
+
+<header class="--welcome">
+	<div class="--welcome-body">
+		<div class="--title">
+			<div class="--body">
+				<h1>Plotly ggplot2 Open Source Graphing Library</h1>
+				<p>{{page.description}}
+					<br>ggplotly is <a href="/ggplot2/is-plotly-free">free and open source</a>
+					and you can <a target="_blank" href="https://github.com/ropensci/plotly">view the source, report issues or contribute on GitHub</a>.
+					<br>Head over to the <a href="https://community.plotly.com/c/graphing-libraries/r/9">community forum</a> to ask questions and get help.
+				</p><br>
+				{% include layouts/dashplug.html %}
+			</div>
+		</div>
+	</div>
+</header>
+
+{% assign languagelist = site.posts | where:"language","ggplot2"  | sort: "order" %}
+{% include posts/mainlang_documentation_eg.html %}
