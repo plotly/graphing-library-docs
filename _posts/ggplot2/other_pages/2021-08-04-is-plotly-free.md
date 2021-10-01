@@ -9,7 +9,7 @@ language: python
 
 #### Is Plotly for  ggplot2 Free?
 
-&nbsp;  &nbsp; **Yes.** &nbsp; Plotly for  ggplot2 is free and open-source software, [licensed under the **MIT license**](https:/https://github.com/ropensci/plotly/blob/master/LICENSE.md). It costs nothing to [install and use](/ggplot2/getting-started). You can view the source, report issues or contribute using [our Github repository](https://github.com/ropensci/plotly).
+&nbsp;  &nbsp; **Yes.** &nbsp; Plotly for  ggplot2 is free and open-source software, [licensed under the **MIT license**](https://github.com/plotly/plotly.R/blob/master/LICENSE.md). It costs nothing to [install and use](/ggplot2/getting-started). You can view the source, report issues or contribute using [our Github repository](https://github.com/plotly/plotly.R).
 
 #### Can I use Plotly for  ggplot2 without signing up to any service?
 

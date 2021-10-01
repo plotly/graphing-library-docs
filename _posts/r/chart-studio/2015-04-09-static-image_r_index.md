@@ -46,7 +46,7 @@ Sys.setenv("plotly_api_key" = "YOUR API KEY")
 You will also need to be using the development version of the `plotly` R package in order to use the `plotly_IMAGE()` function. This can be installed from GitHub using the [`devtools`](https://cran.r-project.org/web/packages/devtools/index.html) R package by running the following command in your R session:
 
 ```r
-devtools::install_github("ropensci/plotly")
+devtools::install_github("plotly/plotly.R")
 ```
 
 #### Export R Graph As Static Image

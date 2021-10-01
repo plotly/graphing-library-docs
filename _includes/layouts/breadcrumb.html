@@ -2,9 +2,9 @@
     <div>
         <div class="breadcrumb-nav">
             {% if page.permalink != "/api/" and page.permalink != "/python/" and page.permalink != "/javascript/" and
-            page.permalink != "/r/"  and page.permalink != "/julia/"  and page.permalink != "/ggplot2/"  and page.permalink != "/matlab/" %}
+            page.permalink != "/r/"  and page.permalink != "/julia/"  and page.permalink != "/ggplot2/" and page.permalink != "/fsharp/" and page.permalink != "/matlab/" %}
             <a href="/{% if page.permalink contains 'javascript' %}javascript{% else %}{{page.language}}{% endif %}">{%
-                if page.language == "plotly_js" %}JavaScript{% elsif page.language == "ggplot2" %}ggplot2{% elsif
+                if page.language == "plotly_js" %}JavaScript{% elsif page.language == "fsharp" %}Fsharp{% elsif
                 page.language == "matlab" %}MATLAB<sup>&reg;</sup>{% else %}{{page.language | capitalize}}{% endif %}</a>
             {% endif %}
 
@@ -50,6 +50,12 @@
           {% elsif page.path contains "/matlab/" %}
             {% assign filename = page.path %}
               <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/graphing-library-docs/edit/master/" }}" >
+          {% elsif page.path contains "/julia/" %}
+          {% assign filename = page.path %}
+            <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/plotlyjs.jl-docs/edit/master/julia/" }}" >
+          {% elsif page.path contains "/fsharp/" %}
+          {% assign filename = page.path %}
+            <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/plotly.net-docs/edit/main/fsharp/" }}" >
           {% else %}
               {% assign filename = page.path | split: "/" | last %}
               <a id="forklink" href="{{ page.path | remove: filename | prepend: "https://github.com/plotly/graphing-library-docs/tree/master/" }}">

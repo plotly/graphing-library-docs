@@ -98,8 +98,7 @@
         <div class="brand">
             <a href="/graphing-libraries/"><img src="/all_static/images/logo-white.png" style="height: 45px;"></a>
         </div>
-        {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/"
-        or page.permalink contains "ggplot2/" or page.permalink contains "matlab/" %}
+        {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" %}
         <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
             <input id="modal-input" style="border-radius: 5px; width: 100%;" type="text" placeholder="   Search..."
                 readonly />
@@ -206,7 +205,7 @@
 
                     {% elsif page.language == 'r' or page.language == 'ggplot2' %}
                     <li class="--sidebar-item">
-                        <a target="_blank" href="https://github.com/ropensci/plotly"
+                        <a target="_blank" href="https://github.com/plotly/plotly.R"
                             class="js-splash--navigation-item">GitHub</a>
                     </li>
 

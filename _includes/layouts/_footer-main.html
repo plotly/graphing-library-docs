@@ -133,6 +133,24 @@
     'baseurl': '/'
   }
 </script>
+{% elsif page.permalink contains "julia/" %}
+<script>
+  window.ALGOLIA_CONFIG = {
+    'applicationId': '{{ site.algolia.application_id }}',
+    'indexName': 'julia_docs',
+    'apiKey': '{{ site.algolia.read_only_api_key }}',
+    'baseurl': '/'
+  }
+</script>
+{% elsif page.permalink contains "fsharp/" %}
+<script>
+  window.ALGOLIA_CONFIG = {
+    'applicationId': '{{ site.algolia.application_id }}',
+    'indexName': 'fsharp_docs',
+    'apiKey': '{{ site.algolia.read_only_api_key }}',
+    'baseurl': '/'
+  }
+</script>
 {% elsif page.permalink contains "r/" %}
 <script>
   window.ALGOLIA_CONFIG = {

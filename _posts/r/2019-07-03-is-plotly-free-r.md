@@ -9,7 +9,7 @@ language: r
 
 #### Is Plotly for R Free?
 
-&nbsp;  &nbsp; **Yes.** &nbsp; Plotly for R is free and open-source software, [licensed under the **MIT license**](https://github.com/ropensci/plotly/blob/master/LICENSE.md). It costs nothing to [install and use](/r/getting-started). You can view the source, report issues or contribute using [our Github repository](https://github.com/ropensci/plotly).
+&nbsp;  &nbsp; **Yes.** &nbsp; Plotly for R is free and open-source software, [licensed under the **MIT license**](https://github.com/plotly/plotly.R/blob/master/LICENSE.md). It costs nothing to [install and use](/r/getting-started). You can view the source, report issues or contribute using [our Github repository](https://github.com/plotly/plotly.R).
 
 
 #### Can I use Plotly for R without signing up to any service?
