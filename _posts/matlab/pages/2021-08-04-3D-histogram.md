@@ -4,7 +4,7 @@ name: 3D Histograms
 display_as: 3d_charts
 order: 14
 permalink: matlab/3D-histogram/
-thumbnail: thumbnail/
+thumbnail: thumbnail/3d-histogram.png
 layout: base
 language: matlab
 page_type: u-guide
