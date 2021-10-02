@@ -22,7 +22,21 @@
     crossorigin="anonymous"
   ></script>
 
-  
+ <script>
+ const theme = localStorage.getItem('theme');
+      if (theme === "dark-mode") {
+
+        var root = document.getElementsByTagName( 'html' )[0]; // '0' to assign the first (and only `HTML` tag)
+        root.setAttribute( 'class', 'dark-mode' );
+
+        var body = document.body;
+        body.classList.add("dark-mode");
+         console.log("co");
+        }
+        else {
+          console.log("ko co");
+        }
+  </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
     crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
@@ -57,6 +71,9 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js"
   ></script>
   <script type="text/javascript">
+
+
+
     if (typeof require !== "undefined") {
       require.undef("plotly");
       requirejs.config({
