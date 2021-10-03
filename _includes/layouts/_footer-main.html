@@ -195,12 +195,13 @@
 <script src="/all_static//javascripts/hash_offset.js"></script>
 <!-- Image Hover Script -->
 <script src="/all_static/javascripts/imghover.js"></script>
+<!-- code highlighting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+
 <script src="/all_static/javascripts/improve.js?version={{ "now" | date: "%Y-%m-%d-%H-%M"
 }}"></script>
+
 {% if page.language != "python" %}
-<!-- code highlighting -->
-<script src="/all_static/javascripts/codehighlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-
 {% endif %}
