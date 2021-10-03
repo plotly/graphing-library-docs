@@ -22,6 +22,9 @@ statistical:
 ai_ml:
     reference: '#ai-ml'
     text: Artificial Intelligence and Machine Learning
+bio:
+    reference: '#bio'
+    text: Bio
 scientific:
     reference: '#scientific-charts'
     text: Scientific
