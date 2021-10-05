@@ -132,7 +132,7 @@
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
-            {% if page.display_as == "chart_type" and page.layout != "langindex" %}
+            {% if page.display_as == "chart_type" or page.display_as == "basic" and page.layout != "langindex" %}
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
@@ -644,7 +644,6 @@
                             <div class="--item-meta"><span>{{page.name}}</span></div>
                         </a>
                     </li>
-                    {% include layouts/grid-item.html %}
                 {% endif %}
             {%- endfor -%}
 
@@ -671,7 +670,6 @@
                             <div class="--item-meta"><span>{{page.name}}</span></div>
                         </a>
                     </li>
-                    {% include layouts/grid-item.html %}
                 {% endif %}
             {%- endfor -%}
 
@@ -698,7 +696,6 @@
                             <div class="--item-meta"><span>{{page.name}}</span></div>
                         </a>
                     </li>
-                    {% include layouts/grid-item.html %}
                 {% endif %}
             {%- endfor -%}
 
