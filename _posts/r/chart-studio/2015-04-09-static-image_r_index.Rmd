@@ -41,7 +41,7 @@ Let the R session know about your Chart Studio authorization credentials by sett
 
 ```{r, eval = FALSE}
 Sys.setenv("plotly_username" = "YOUR USER NAME")
-Sys.setenv("plotly_api_key" = "YOUR API KEY")
+Sys.setenv("plotly_api_key" = "YOUR API KEY1")
 ```
 
 #### Use The Development Version Of The `plotly` R Package
