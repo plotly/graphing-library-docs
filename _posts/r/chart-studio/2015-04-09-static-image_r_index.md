@@ -1,5 +1,5 @@
 ---
-description: How to export R graphs as static images using Chart Studio. 
+description: How to export R graphs as static images using Chart Studio.
 display_as: chart_studio
 language: r
 layout: base
@@ -17,7 +17,7 @@ thumbnail: thumbnail/png-export.png
 
 ### Supported File Formats
 
-With the `plotly` R package, you can export graphs you create as static images in the `.png` and/or `.jpg`/`.jpeg` file formats for free using the [Chart Studio web service](https://chart-studio.plot.ly/create/#/). 
+With the `plotly` R package, you can export graphs you create as static images in the `.png` and/or `.jpg`/`.jpeg` file formats for free using the [Chart Studio web service](https://chart-studio.plot.ly/create/#/).
 
 Currently, exporting graphs you create as static images in the `.eps`, `.svg`, and/or `.pdf` format is a feature that is available only to users of [Chart Studio Enterprise](https://plotly.com/online-chart-maker/).
 
@@ -25,11 +25,11 @@ Currently, exporting graphs you create as static images in the `.eps`, `.svg`, a
 
 ### Exporting Chart Studio Charts As Static Images
 
-To export your R graphs as static images using the Chart Studio web service, you can use the built-in `plotly_IMAGE()` function. 
+To export your R graphs as static images using the Chart Studio web service, you can use the built-in `plotly_IMAGE()` function.
 
 #### Create A Chart Studio Account And Get An API Key
 
-To use the `plotly_IMAGE()` function, you will need to have a [Chart Studio account](https://chart-studio.plot.ly/Auth/login/?action=signup#/) and an API key (which can be found [in your Chart Studio account online settings](https://plotly.com/settings/api)). Learn more about [getting started with Chart Studio in R](https://plotly.com/r/getting-started-with-chart-studio). 
+To use the `plotly_IMAGE()` function, you will need to have a [Chart Studio account](https://chart-studio.plot.ly/Auth/login/?action=signup#/) and an API key (which can be found [in your Chart Studio account online settings](https://plotly.com/settings/api)). Learn more about [getting started with Chart Studio in R](https://plotly.com/r/getting-started-with-chart-studio).
 
 #### Set Environment Variables In Your R Session
 
@@ -66,7 +66,7 @@ plotly_IMAGE(p, format = "png", out_file = "output.png")
 
 #### Local Image Export
 
-As an alternative to using the Chart Studio web service to export your R graphs as static images, you can [use the built-in `orca()` function](https://plotly.com/r/static-image-export) to export images locally. 
+As an alternative to using the Chart Studio web service to export your R graphs as static images, you can [use the built-in `orca()` function](https://plotly.com/r/static-image-export) to export images locally.
 
 #### Embed R Charts in RMarkdown Documents
 

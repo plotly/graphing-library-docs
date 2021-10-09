@@ -9,19 +9,18 @@ thumbnail: thumbnail/mixed.jpg
 page_type: example_index
 ---
 
-
 <header class="--welcome">
-	<div class="--welcome-body">
-		<!--div.--wrap-inner-->
-		<div class="--title">
-			
-			<div class="--body">
-				<h1>Plotly R Chart Studio Integration</h1>
-				<p>{{page.description}}</p>
-			</div>
-		</div>
-	</div>
+  <div class="--welcome-body">
+    <!--div.--wrap-inner-->
+    <div class="--title">
+      <div class="--body">
+        <h1>Plotly R Chart Studio Integration</h1>
+        <p>{{page.description}}</p>
+      </div>
+    </div>
+  </div>
 </header>
 
-		{% assign languagelist = site.posts | where:"language","r" |where:"display_as","chart_studio" | where: "layout","base" | sort: "order" %}
-        {% include posts/documentation_eg.html %}
+{% assign languagelist = site.posts | where:"language","r"
+|where:"display_as","chart_studio" | where: "layout","base" | sort: "order" %}
+{% include posts/documentation_eg.html %}

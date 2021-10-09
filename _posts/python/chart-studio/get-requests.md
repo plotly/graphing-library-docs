@@ -33,7 +33,7 @@ jupyter:
     v4upgrade: true
 ---
 
-#### Get and Change a Public Figure
+#### Get and Change a Public Figure1
 
 ```python
 import chart_studio.plotly as py

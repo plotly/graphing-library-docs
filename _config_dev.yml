@@ -20,7 +20,6 @@ exclude:
     "*.Rmd",
     vendor,
     node_modules,
-    "_posts/python/chart-studio/*.md",
     "_posts/python-v3",
     "_posts/plotly_js",
   ]

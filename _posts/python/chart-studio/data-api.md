@@ -34,7 +34,7 @@ jupyter:
     v4upgrade: true
 ---
 
-#### Creating a Plotly Grid
+#### Creating a Plotly Grid1
 You can instantiate a grid with data by either uploading tabular data to Plotly or by creating a Plotly `grid` using the API. To upload the grid we will use `plotly.plotly.grid_ops.upload()`. It takes the following arguments:
 - `grid` (Grid Object): the actual grid object that you are uploading.
 - `filename` (str): name of the grid in your plotly account,

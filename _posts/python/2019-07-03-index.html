@@ -13,25 +13,28 @@ layout: langindex
 language: python
 ---
 
-
 <header class="--welcome">
-	<div class="--welcome-body">
-		<!--div.--wrap-inner-->
-		<div class="--title">
-
-			<div class="--body">
-				<h1>Plotly Python Open Source Graphing Library</h1>
-				<p>{{page.description}}
-					<br>Plotly.py is <a href="/python/is-plotly-free">free and open source</a>
-					and you can <a target="_blank" href="https://github.com/plotly/plotly.py">view the source, report issues or contribute on GitHub</a>.
-				</p><br>
-				{% include layouts/dashplug.html %}
-			</div>
-		</div>
-	</div>
+  <div class="--welcome-body">
+    <!--div.--wrap-inner-->
+    <div class="--title">
+      <div class="--category-img">
+        <img src="../all_static/images/python.png" alt="" />
+      </div>
+      <div class="--body">
+        <h1>Plotly Python Open Source Graphing Library</h1>
+        <p>
+          {{page.description}} <br />Plotly.py is
+          <a href="/python/is-plotly-free">free and open source</a> and you can
+          <a target="_blank" href="https://github.com/plotly/plotly.py"
+            >view the source, report issues or contribute on GitHub</a
+          >.
+        </p>
+        <br />
+        {% include layouts/dashplug.html %}
+      </div>
+    </div>
+  </div>
 </header>
 
-
-
-		{% assign languagelist = site.posts | where:"language","python"  | sort: "order" %}
-        {% include posts/mainlang_documentation_eg.html %}
+{% assign languagelist = site.posts | where:"language","python" | sort: "order"
+%} {% include posts/mainlang_documentation_eg.html %}

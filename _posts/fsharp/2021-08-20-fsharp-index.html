@@ -8,22 +8,19 @@ language: fsharp
 ---
 
 <header class="--welcome">
-	<div class="--welcome-body">
-		<div class="--title">
-			<div class="--category-img">
-				<img src="https://plotly.net/img/logo.png" alt="">
-			</div>
-			<div class="--body">
-				<h1>Plotly F# Library</h1>
-				<p>
-					{{page.description}}
-				</p>
-			</div>
-		</div>
-	</div>
+  <div class="--welcome-body">
+    <div class="--title">
+      <div class="--category-img">
+        <img src="../all_static/images/icon-fsharp.png" alt="" />
+      </div>
+      <div class="--body">
+        <h1>Plotly F# Library</h1>
+        <p>{{page.description}}</p>
+      </div>
+    </div>
+  </div>
 </header>
 
-
 <h2>Documentation Examples</h2>
-{% assign languagelist = site.posts |  where:"language","fsharp" | sort: "order" %}
-{% include posts/mainlang_documentation_eg.html %}
+{% assign languagelist = site.posts | where:"language","fsharp" | sort: "order"
+%} {% include posts/mainlang_documentation_eg.html %}
