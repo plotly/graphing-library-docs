@@ -1263,6 +1263,7 @@ textarea {
 body .hljsln {
   padding-left: 35px !important;
 }
+
 .hljsln .ln-num {
   position: absolute;
   z-index: 2;
@@ -1275,7 +1276,7 @@ body .hljsln {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
+
   user-select: none;
 }
 .hljsln .ln-num::before {
