@@ -20,7 +20,7 @@ Sys.setenv("plotly_api_key"="q0lz6r5efr")
 #### Default Privacy
 The `plotly` R package renders plots entirely **locally** by default.
 
-However, you can also choose to publish plots on the web using Chart Studio via the `api_create()` function. 
+However, you can also choose to publish plots on the web using Chart Studio via the `api_create()` function.
 
 By default, the `api_create()` function creates public graphs. With a [Chart Studio Enterprise subscription](https://plotly.com/online-chart-maker/), you can easily make graphs private by using the `sharing` argument of the `api_create()` function.
 

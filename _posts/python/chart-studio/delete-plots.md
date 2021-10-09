@@ -35,7 +35,8 @@ jupyter:
     v4upgrade: true
 ---
 
-#### Imports and Credentials
+
+#### Imports and Credentials11
 In additional to importing python's `requests` and `json` packages, this tutorial also uses [Plotly's REST API](https://api.plot.ly/v2/)
 
 First define YOUR [username and api key](https://plotly.com/settings/api) and create `auth` and `headers` to use with `requests`

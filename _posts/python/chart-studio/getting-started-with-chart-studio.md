@@ -37,7 +37,7 @@ jupyter:
 
 ### Installation
 
-To install Chart Studio's python package, use the package manager **pip** inside your terminal.<br>
+To install Chart Studio's python package, use the package manager **pip** inside your terminal.111<br>
 If you don't have **pip** installed on your machine, [click here](https://pip.pypa.io/en/latest/installing.html) for pip's installation instructions.
 <br>
 <br>
