@@ -35,8 +35,9 @@ jupyter:
     v4upgrade: true
 ---
 
-#### Default Privacy11ssssssssssss
+#### Default Privacy
 By default, `plotly.iplot()` and `plotly.plot()` create public graphs (which are free to create). With a [plotly subscription](https://plotly.com/plans) you can easily make charts private or secret via the sharing argument.
+
 
 #### Public Graphs
 
