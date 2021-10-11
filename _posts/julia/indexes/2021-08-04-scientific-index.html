@@ -1,9 +1,9 @@
 ---
-permalink: julua/scientific-charts/
+permalink: julia/scientific-charts/
 description: Plotly's Julia graphing library makes interactive, publication-quality graphs online. Examples of how to make scientific charts such as contour plots, heatmaps, dendrograms, polar charts, and ternary plots.
 name: Scientific Charts
 layout: langindex
-language: julua
+language: julia
 display_as: scientific
 thumbnail: thumbnail/mixed.jpg
 page_type: example_index
@@ -23,5 +23,5 @@ page_type: example_index
 	</div>
 </header>
 
-{% assign languagelist = site.posts | where:"language","julua" |where:"display_as","scientific" | where: "layout","base" | sort: "order" %}
+{% assign languagelist = site.posts | where:"language","julia" |where:"display_as","scientific" | where: "layout","base" | sort: "order" %}
 {% include posts/documentation_eg.html %}

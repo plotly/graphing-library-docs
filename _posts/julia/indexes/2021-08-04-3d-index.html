@@ -1,9 +1,9 @@
 ---
-permalink: julua/3d-charts/
+permalink: julia/3d-charts/
 description: Plotly's Julia graphing library makes interactive, publication-quality graphs online. Examples of how to make 3D charts.
 name: 3D Charts
 layout: langindex
-language: julua
+language: julia
 display_as: 3d_charts
 thumbnail: thumbnail/mixed.jpg
 ---
@@ -22,5 +22,5 @@ thumbnail: thumbnail/mixed.jpg
 	</div>
 </header>
 
-{% assign languagelist = site.posts | where:"language","julua" | where:"display_as","3d_charts" | where: "layout","base" | sort: "order" %}
+{% assign languagelist = site.posts | where:"language","julia" | where:"display_as","3d_charts" | where: "layout","base" | sort: "order" %}
 {% include posts/documentation_eg.html %}

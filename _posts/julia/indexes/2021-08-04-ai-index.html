@@ -1,9 +1,9 @@
 ---
-permalink: julua/ai-ml/
+permalink: julia/ai-ml/
 description: Plotly's Julia graphing library makes interactive, publication-quality graphs online. Examples of how to make charts related to artificial intelligence and machine learning.
 name: AI and ML Charts
 layout: langindex
-language: julua
+language: julia
 display_as: ai_ml
 thumbnail: thumbnail/mixed.jpg
 page_type: example_index
@@ -22,5 +22,5 @@ page_type: example_index
 	</div>
 </header>
 
-{% assign languagelist = site.posts | where: "language","julua" | where: "display_as","ai_ml" | where: "layout","base" | sort: "order" %}
+{% assign languagelist = site.posts | where: "language","julia" | where: "display_as","ai_ml" | where: "layout","base" | sort: "order" %}
 {% include posts/documentation_eg.html %}

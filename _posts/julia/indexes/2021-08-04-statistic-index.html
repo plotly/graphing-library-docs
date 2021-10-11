@@ -1,9 +1,9 @@
 ---
-permalink: julua/statistical-charts/
+permalink: julia/statistical-charts/
 description: Plotly's Julia graphing library makes interactive, publication-quality graphs online. Examples of how to make statistical charts such as box plots, histograms, and distrubution plots.
 name: Statistical Charts
 layout: langindex
-language: julua
+language: julia
 display_as: statistical
 thumbnail: thumbnail/mixed.jpg
 page_type: example_index
@@ -23,5 +23,5 @@ page_type: example_index
 	</div>
 </header>
 
-{% assign languagelist = site.posts | where:"language","julua" | where:"display_as","statistical" | where: "layout","base" | sort: "order" %}
+{% assign languagelist = site.posts | where:"language","julia" | where:"display_as","statistical" | where: "layout","base" | sort: "order" %}
 {% include posts/documentation_eg.html %}
