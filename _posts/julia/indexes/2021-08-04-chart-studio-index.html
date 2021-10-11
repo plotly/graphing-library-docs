@@ -1,0 +1,26 @@
+---
+permalink: julua/chart-studio/
+description: Plotly's Julia graphing library makes interactive, publication-quality graphs online. Tutorials and tips about fundamental features of Plotly's Python API.
+name: Chart Studio Docs
+layout: langindex
+language: julua
+display_as: chart_studio
+thumbnail: thumbnail/mixed.jpg
+page_type: example_index
+---
+
+<header class="--welcome">
+	<div class="--welcome-body">
+		<!--div.--wrap-inner-->
+		<div class="--title">
+			
+			<div class="--body">
+				<h1>Plotly Julia Chart Studio Integration</h1>
+				<p>{{page.description}}</p>
+			</div>
+		</div>
+	</div>
+</header>
+
+{% assign languagelist = site.posts | where:"language","julua" |where:"display_as","chart_studio" | where: "layout","base" | sort: "order" %}
+{% include posts/documentation_eg.html %}

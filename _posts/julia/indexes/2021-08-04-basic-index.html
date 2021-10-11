@@ -1,0 +1,27 @@
+---
+permalink: julua/basic-charts/
+description: Plotly's Julia graphing library makes interactive, publication-quality graphs online. Examples of how to make basic charts.
+name: Basic Charts
+layout: langindex
+language: julua
+display_as: basic
+thumbnail: thumbnail/mixed.jpg
+page_type: example_index
+---
+
+<header class="--welcome">
+	<div class="--welcome-body">
+		<!--div.--wrap-inner-->
+		<div class="--title">
+
+			<div class="--body">
+				<h1>Plotly Julia Open Source Graphing Library Basic Charts</h1>
+				<p>{{page.description}}</p><br>
+				{% include layouts/dashplug.html %}
+			</div>
+		</div>
+	</div>
+</header>
+
+{% assign languagelist = site.posts | where: "language","julua" | where: "display_as","basic" | where: "layout","base" | sort: "order" %}
+{% include posts/documentation_eg.html %}
