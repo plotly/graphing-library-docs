@@ -22,6 +22,7 @@ thumbnail: thumbnail/mixed.jpg
 			<div class="--body">
 				<h1>Plotly R Library Fundamentals</h1>
 				<p>{{page.description}}</p>
+        {% include layouts/page-another-language.html %}
 				{% include layouts/dashplug.html %}
 			</div>
 		</div>

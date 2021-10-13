@@ -19,6 +19,7 @@ thumbnail: thumbnail/mixed.jpg
 				<h1>Plotly R Library Financial Charts</h1>
 				<p>{{page.description}}</consectetur>
 				</p>
+        {% include layouts/page-another-language.html %}
 				{% include layouts/dashplug.html %}
 			</div>
 		</div>
