@@ -1,12 +1,12 @@
 ---
 permalink: python/chart-events/
 redirect_from:
-  - python/next/chart-events/
-  - python/mouse-events/
-  - python/hover-events/
-  - python/zoom-events/
-  - python/textbox-widget/
-  - python/widget-app/
+- python/next/chart-events/
+- python/mouse-events/
+- python/hover-events/
+- python/zoom-events/
+- python/textbox-widget/
+- python/widget-app/
 description: All Plotly charts have click, hover and zoom events which can be accessed by go.FigureWidget using Jupyter Widgets.
 name: FigureWidget Docs
 layout: langindex
@@ -18,17 +18,18 @@ page_type: example_index
 
 
 <header class="--welcome">
-	<div class="--welcome-body">
-		<!--div.--wrap-inner-->
-		<div class="--title">
+  <div class="--welcome-body">
+    <!--div.--wrap-inner-->
+    <div class="--title">
 
-			<div class="--body">
-				<h1>Add Custom Interactivity with Jupyter Widgets</h1>
-				<p>{{page.description}}</p>
-			</div>
-		</div>
-	</div>
+      <div class="--body">
+        <h1>Add Custom Interactivity with Jupyter Widgets</h1>
+        <p>{{page.description}}</p>
+        {% include layouts/page-another-language.html %}
+      </div>
+    </div>
+  </div>
 </header>
 
-		{% assign languagelist = site.posts | where:"language","python" |where:"display_as","chart_events" | where: "layout","base" | sort: "order" %}
-        {% include posts/documentation_eg.html %}
+{% assign languagelist = site.posts | where:"language","python" |where:"display_as","chart_events" | where: "layout","base" | sort: "order" %}
+{% include posts/documentation_eg.html %}
