@@ -17,7 +17,7 @@ thumbnail: thumbnail/mixed.jpg
 
 			<div class="--body">
 				<h1>Plotly R Library Scientific Charts</h1>
-				<p>{{page.description}}</p>
+				<p>{{page.description}}</p><br>
         {% include layouts/page-another-language.html %}
 				{% include layouts/dashplug.html %}
 			</div>
