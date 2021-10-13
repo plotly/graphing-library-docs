@@ -12,7 +12,7 @@ post.permalink contains 'nodejs/' or post.permalink contains 'javascript/' or po
 {% endif %}
 {% endif %}
 {% endfor %}
-{% if post_array.size > 1 %}
+{% if post_array.size > -1 %}
 <div class="db-client-lib">
   <label>
     This page in another language
@@ -64,6 +64,15 @@ post.permalink contains 'nodejs/' or post.permalink contains 'javascript/' or po
             Studio
             </p>
          </a>
+        {% elsif page.name == "OHLC Plots" %}
+        <a href="https://plotly.com/chart-studio-help/make-a-line-graph/" class="list-lib-item studio">
+          <div class="item-icon">
+          </div>
+            <p class="item-language">
+            Studio
+            </p>
+         </a>
+         {% else %}
         {% endif %}
     </div>
   </div>
