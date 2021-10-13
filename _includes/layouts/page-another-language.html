@@ -48,8 +48,16 @@ post.permalink contains 'nodejs/' or post.permalink contains 'javascript/' or po
           </p>
         </a>
         {% endfor %}
-        {% if page.name == "Scatter Plots in Python" %}
+        {% if page.name == "Scatter Plots" %}
          <a href="https://plotly.com/chart-studio-help/make-a-line-and-scatter-plot/" class="list-lib-item studio">
+          <div class="item-icon">
+          </div>
+            <p class="item-language">
+            Studio
+            </p>
+         </a>
+         {% elsif page.name == "Line Charts" %}
+        <a href="https://plotly.com/chart-studio-help/make-a-line-graph/" class="list-lib-item studio">
           <div class="item-icon">
           </div>
             <p class="item-language">
