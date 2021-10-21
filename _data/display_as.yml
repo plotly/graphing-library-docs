@@ -24,7 +24,7 @@ ai_ml:
     text: Artificial Intelligence and Machine Learning
 bio:
     reference: '#bio'
-    text: Bio
+    text: Bioinformatics
 scientific:
     reference: '#scientific-charts'
     text: Scientific
