@@ -41,6 +41,8 @@
 {% assign 3d_charts = true %}
 {% elsif page.display_as == "ai_ml" %}
 {% assign ai_ml = true %}
+{% elsif page.display_as == "bio" %}
+{% assign bio = true %}
 {% elsif page.display_as == "advanced_charts"%}
 {% assign advanced_charts = true %}
 {% elsif page.display_as == "multiple_axes" %}
@@ -264,6 +266,12 @@
                     <li class="--sidebar-item">
                         <a href="/{{langue}}/ai-ml/" class="js-splash--navigation-item">Artificial Intelligence and
                             Machine Learning</a>
+                    </li>
+                    {% endif %}
+
+                    {% if bio == true %}
+                    <li class="--sidebar-item">
+                        <a href="/{{langue}}/bio/" class="js-splash--navigation-item">Visualizing Biological Data</a>
                     </li>
                     {% endif %}
 

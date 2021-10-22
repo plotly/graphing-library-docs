@@ -40,6 +40,8 @@
 {% assign advanced_opt = true %}
 {% elsif page.display_as == "ai_ml" %}
 {% assign ai_ml = true %}
+{% elsif page.display_as == "bio" %}
+{% assign bio = true %}
 
 <!-- START OF GGPLOT CUSTOM LAYOUT -->
 {% elsif page.display_as == "aesthetics" %}
@@ -129,6 +131,31 @@
         <ul class="--grid-list">
             {%- for page in languagelist -%}
             {% if page.display_as == "ai_ml" %}
+
+            {% include layouts/grid-item.html %}
+
+
+            {% endif %}
+            {%- endfor -%}
+        </ul>
+    </section>
+</section>
+{% endif %}
+
+{% if bio %}
+<section class="--tutorial-section" id="bio">
+    <header class="--section-header">
+        {% if show_header %}
+
+        <a href="#bio">Bio</a>
+
+        {% endif %}
+
+    </header>
+    <section class="--grid">
+        <ul class="--grid-list">
+            {%- for page in languagelist -%}
+            {% if page.display_as == "bio" %}
 
             {% include layouts/grid-item.html %}
 

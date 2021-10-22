@@ -1,0 +1,28 @@
+---
+permalink: python/bio/
+description: Dash Bio is a suite of bioinformatics components that make it simple to analyze, visualize, and interact with bioinformatics data in a Dash application.
+name: Visualizing Biological Data
+layout: langindex
+language: python
+display_as: bio
+thumbnail: thumbnail/mixed.jpg
+page_type: example_index
+---
+
+
+<header class="--welcome">
+	<div class="--welcome-body">
+		<!--div.--wrap-inner-->
+		<div class="--title">
+			<div class="--body">
+				<h1>Plotly Python Open Source Graphing Library Visualizing Biological Data</h1>
+				<p>{{page.description}}</p><br>
+				{% include layouts/dashplug.html %}
+			</div>
+		</div>
+	</div>
+</header>
+
+
+		{% assign languagelist = site.posts | where: "language","python" | where: "display_as","bio" | where: "layout","base" | sort: "order" %}
+        {% include posts/documentation_eg.html %}
