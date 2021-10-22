@@ -41,6 +41,8 @@
             {% assign advanced_opt = true %}
         {% elsif page.display_as == "ai_ml" %}
             {% assign ai_ml = true %}
+        {% elsif page.display_as == "bio" %}
+            {% assign bio = true %}
         {% endif %}
     {% endif %}
 {%- endfor -%}
@@ -61,14 +63,14 @@
 <section class="--tutorial-section">
     <header class="--section-header">
         <a href="#fundamentals" name="fundamentals" id="fundamentals">Fundamentals</a>
-        
+
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
             {% if page.display_as == "file_settings" and page.layout != "langindex" %}
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/plotly-fundamentals" class="langindexlink">More Fundamentals &raquo;</a>
         {% endif %}
@@ -96,21 +98,21 @@
 <section class="--tutorial-section">
     <header class="--section-header">
         <a href="#ai_ml" name="ai_ml" id="ai_ml">Artificial Intelligence and Machine Learning</a>
-        
+
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
             {% if page.display_as == "ai_ml" and page.layout != "langindex" %}
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/ai-ml/" class="langindexlink">More AI and ML &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -125,6 +127,30 @@
 </section>
 {% endif %}
 
+
+
+{% if bio %}
+<section class="--tutorial-section">
+    <header class="--section-header"><a href="#bio" name="bio" id="bio">Bioinformatics</a>
+        <a href="/{{language}}/bio/" class="langindexlink">More Bioinformatics &raquo;</a>
+    </header>
+    <section class="--grid">
+        <ul class="--grid-list">
+            {%- for page in languagelist -%}
+            {% if page.display_as == "bio" and page.order < num_examples %}
+
+
+            {% include layouts/grid-item.html %}
+            {% endif %}
+            {%- endfor -%}
+        </ul>
+        <a href="/{{language}}/bio/" class="langindexlink-mobile">More Bioinformatics &raquo;</a>
+    </section>
+</section>
+{% endif %}
+
+
+
 {% if chart_type %}
 <section class="--tutorial-section">
     <header class="--section-header">
@@ -136,18 +162,18 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/basic-charts/" class="langindexlink">More Basic Charts &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
-    
+
                 {% assign category_elligible = false %}
 
                 {% if page.display_as == "chart_type" or page.display_as == "basic"  %}
@@ -175,14 +201,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/statistical-charts/" class="langindexlink">More Statistical Charts &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -208,14 +234,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/scientific-charts/" class="langindexlink">More Scientific Charts &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -241,14 +267,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/financial-charts/" class="langindexlink">More Financial Charts &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -274,14 +300,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/maps/" class="langindexlink">More Maps &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -307,14 +333,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/3d-charts/" class="langindexlink">More 3D Charts &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -340,14 +366,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/subplot-charts/" class="langindexlink">More Subplots &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -373,14 +399,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/chart-events/" class="langindexlink">More Chart Events &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -406,14 +432,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/chart-events/" class="langindexlink">More Chart Events &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -422,7 +448,7 @@
                     {% include layouts/grid-item.html %}
                 {% endif %}
             {%- endfor -%}
-            
+
         </ul>
     </section>
 </section>
@@ -439,14 +465,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/chart-events/" class="langindexlink">More Chart Events &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -455,7 +481,7 @@
                     {% include layouts/grid-item.html %}
                 {% endif %}
             {%- endfor -%}
-            
+
         </ul>
     </section>
 </section>
@@ -472,14 +498,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/transforms/" class="langindexlink">More Transforms &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -505,14 +531,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/controls/" class="langindexlink">More Controls &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -538,14 +564,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/animations/" class="langindexlink">More Animations &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -571,14 +597,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/chart-studio/" class="langindexlink">More Chart Studio Integration &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -604,14 +630,14 @@
                 {% assign forloop_idx = forloop_idx | plus:1 %}
             {% endif %}
         {%- endfor -%}
-        
+
         {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/financial-analysis/" class="langindexlink">More Financial Analysis &raquo;</a>
         {% endif %}
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -633,7 +659,7 @@
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -659,7 +685,7 @@
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
@@ -685,7 +711,7 @@
     </header>
     <section class="--grid">
         <ul class="--grid-list">
-            
+
             {% assign forloop_idx = 0 %}
 
             {%- for page in languagelist -%}
