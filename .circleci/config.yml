@@ -87,6 +87,8 @@ jobs:
             cp --parents 'matlab/getting-started/index.html' '../snapshots'
             cp --parents 'matlab/graphing-multiple-chart-types/index.html' '../snapshots'
             cp --parents 'matlab/histograms/index.html' '../snapshots'
+            cp --parents 'csharp/index.html' '../snapshots'
+            cp --parents 'csharp/getting-started/index.html' '../snapshots'
             cd ..
             rm -f 'snapshots/all_static/javascripts/jquery-knob/index.html'
             rm -f 'snapshots/all_static/images/Plotly-feed2.html'
