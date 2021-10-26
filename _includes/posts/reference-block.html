@@ -219,6 +219,15 @@
     {% assign falsestring='FALSE' %}
 {% elsif page.language == "fsharp" %}
     {% assign quote='"' %}
+    {% assign array='IEnumerable' %}
+    {% assign arrays='IEnumerables' %}
+    {% assign object='object' %}
+    {% assign 2darray='2D Array' %}
+    {% assign data_array='IEnumerable<#IConvertible>' %}
+    {% assign truestring='True' %}
+    {% assign falsestring='False' %}
+{% elsif page.language == "csharp" %}
+    {% assign quote='"' %}
     {% assign array='seq' %}
     {% assign arrays='seqs' %}
     {% assign object='obj' %}

@@ -1,0 +1,28 @@
+---
+description: Plotly's C# graphing library makes interactive, publication-quality graphs online. Tutorials and tips about fundamental features of Plotly's python API.
+name: Fundamentals
+display_as: file_settings
+layout: langindex
+language: csharp
+permalink: csharp/plotly-fundamentals/
+thumbnail: thumbnail/mixed.jpg
+page_type: example_index
+---
+
+<header class="--welcome">
+  <div class="--welcome-body">
+    <!--div.--wrap-inner-->
+    <div class="--title">
+
+      <div class="--body">
+        <h1>Plotly C# Open Source Graphing Library Fundamentals</h1>
+        <p>{{page.description}}</p><br>
+        {% include layouts/page-another-language.html %}
+        {% include layouts/dashplug.html %}
+      </div>
+    </div>
+  </div>
+</header>
+
+{% assign languagelist = site.posts | where:"language","csharp" |where:"display_as","file_settings" | where: "layout","base" | sort: "order" %}
+{% include posts/documentation_eg.html %}
