@@ -151,6 +151,15 @@
     'baseurl': '/'
   }
 </script>
+{% elsif page.permalink contains "csharp/" %}
+<script>
+  window.ALGOLIA_CONFIG = {
+    'applicationId': '{{ site.algolia.application_id }}',
+    'indexName': 'csharp_docs',
+    'apiKey': '{{ site.algolia.read_only_api_key }}',
+    'baseurl': '/'
+  }
+</script>
 {% elsif page.permalink contains "r/" %}
 <script>
   window.ALGOLIA_CONFIG = {
