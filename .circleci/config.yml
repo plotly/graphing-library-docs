@@ -60,6 +60,7 @@ jobs:
             python check-or-enforce-order.py _posts/python
             python check-or-enforce-order.py _posts/python-v3
             python check-or-enforce-order.py _posts/r/
+            python check-or-enforce-order.py _posts/matlab
             python check-or-enforce-order.py _posts/plotly_js
             echo `md5 -q all_static/css/main.css` " ../all_static/css/main.css" > _data/cache_bust_css.yml
             bundle exec jekyll build
