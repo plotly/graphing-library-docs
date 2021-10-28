@@ -557,7 +557,6 @@
       }
     });
   };
-
   $.fn.ignore = function (sel) {
     return this.clone().find(sel || ">*").remove().end();
   };
@@ -580,7 +579,6 @@
 
       }, 3000);
     });
-
   }
   db.menuMobile();
   db.switchMode();
