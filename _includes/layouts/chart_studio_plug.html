@@ -7,6 +7,8 @@ create a Chart Studio account
 <a href="https://plotly.com/r/getting-started-with-chart-studio/">create a Chart Studio account</a>
 {% elsif page.language == "ggplot2" %}
 create a Chart Studio account
+{% elsif page.language == "julia" %}
+<a href="https://plotly.com/julia/getting-started-with-chart-studio/">create a Chart Studio account</a>
 {% elsif page.language == "fsharp" %}
 create a Chart Studio account
 {% elsif page.language == "csharp" %}
@@ -34,6 +36,11 @@ py.plot(fig, filename = 'basic-line', auto_open=True)</pre>
 
 {% elsif page.language == "ggplot2" %}
 
+{% elsif page.language == "julia" %}
+<h4>Example usage - upload a plot to Chart Studio</h4>
+<pre>using Plotly
+p = plot(scatter(x=0:4, y=(0:4).^2));
+rp = post(p, filename="basic-line")</pre>
 {% elsif page.language == "fsharp" %}
 
 {% elsif page.language == "csharp" %}
