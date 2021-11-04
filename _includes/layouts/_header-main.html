@@ -65,6 +65,16 @@
                                 <div class="icon"></div>
                                 C#
                             </a>
+                            {% elsif language == "plotly_js" %}
+                            <a class="{{language}}">
+                                <div class="icon"></div>
+                                Javascript
+                            </a>
+                            {% elsif language == "javascript" %}
+                            <a class="{{language}}">
+                                <div class="icon"></div>
+                                Javascript
+                            </a>
 
                             {% elsif language == "fsharp" %}
                             <a class="{{language}}">
@@ -85,13 +95,18 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="https://plotly.com/r/" class="r">
+                                        <div class="icon"></div>R
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="https://plotly.com/julia/" class="julia">
                                         <div class="icon"></div>Julia
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://plotly.com/r/" class="r">
-                                        <div class="icon"></div>R
+                                    <a href="https://plotly.com/javascript/" class="plotly_js">
+                                        <div class="icon"></div>Javascript
                                     </a>
                                 </li>
                                 <li>
@@ -102,11 +117,6 @@
                                 <li>
                                     <a href="https://plotly.com/matlab/" class="matlab">
                                         <div class="icon"></div>MATLAB
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://plotly.com/csharp/" class="csharp">
-                                        <div class="icon"></div>C#
                                     </a>
                                 </li>
                                 <li>
