@@ -34,7 +34,6 @@
                         langue == 'ggplot2' or 
                         langue == 'julia' or 
                         langue == 'matlab' or 
-                        langue == 'csharp' or 
                         langue == 'fsharp' %}
                     {% assign display_as = site.data.display_as_py_r_js[page.display_as] %}
                 {% else %}
@@ -65,21 +64,21 @@
         {% elsif page.path contains "/r/md/r" %}
             {% assign filename = page.path | replace: "_posts/r/md/r/", "" | replace: ".md", ".Rmd" %}
             <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/plotly.r-docs/edit/master/r/" }}" >
+        {% elsif page.path contains "/julia/" %}
+            {% assign filename = page.path %}
+            <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/plotlyjs.jl-docs/edit/master/julia/" }}" >
+        {% elsif page.path contains "/javascript/" %}
+            {% assign filename = page.path %}
+            <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/graphing-library-docs/tree/master/" }}" >
         {% elsif page.path contains "/ggplot2/md" %}
             {% assign filename = page.path | replace: "_posts/ggplot2/md/", "" | replace: ".md", ".Rmd" %}
             <a id="forklink" href="{{ filename | prepend: "https://github.com/plotly/plotly.r-docs/edit/master/ggplot2/" }}">
         {% elsif page.path contains "/matlab/" %}
             {% assign filename = page.path %}
             <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/graphing-library-docs/edit/master/" }}" >
-        {% elsif page.path contains "/julia/" %}
-            {% assign filename = page.path %}
-            <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/plotlyjs.jl-docs/edit/master/julia/" }}" >
         {% elsif page.path contains "/fsharp/" %}
             {% assign filename = page.path %}
             <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/plotly.net-docs/edit/main/fsharp/" }}" >
-        {% elsif page.path contains "/csharp/" %}
-            {% assign filename = page.path %}
-            <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/plotly.net-docs/edit/main/csharp/" }}" >
         {% else %}
             {% assign filename = page.path | split: "/" | last %}
             <a id="forklink" href="{{ page.path | remove: filename | prepend: "https://github.com/plotly/graphing-library-docs/tree/master/" }}">
