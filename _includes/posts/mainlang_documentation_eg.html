@@ -94,60 +94,6 @@
 
 
 
-{% if ai_ml %}
-<section class="--tutorial-section">
-    <header class="--section-header">
-        <a href="#ai_ml" name="ai_ml" id="ai_ml">Artificial Intelligence and Machine Learning</a>
-
-        {% assign forloop_idx = 0 %}
-        {%- for page in languagelist -%}
-            {% if page.display_as == "ai_ml" and page.layout != "langindex" %}
-                {% assign forloop_idx = forloop_idx | plus:1 %}
-            {% endif %}
-        {%- endfor -%}
-
-        {% if forloop_idx >= num_examples %}
-        <a href="/{{language}}/ai-ml/" class="langindexlink">More AI and ML &raquo;</a>
-        {% endif %}
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-
-            {% assign forloop_idx = 0 %}
-
-            {%- for page in languagelist -%}
-                {% if page.display_as == "ai_ml" and page.layout != "langindex" and forloop_idx < num_examples  %}
-                    {% assign forloop_idx = forloop_idx | plus:1 %}
-                    {% include layouts/grid-item.html %}
-                {% endif %}
-            {%- endfor -%}
-
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-
-
-{% if bio %}
-<section class="--tutorial-section">
-    <header class="--section-header"><a href="#bio" name="bio" id="bio">Bioinformatics</a>
-        <a href="/{{language}}/bio/" class="langindexlink">More Bioinformatics &raquo;</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {%- for page in languagelist -%}
-            {% if page.display_as == "bio" and page.order < num_examples %}
-
-
-            {% include layouts/grid-item.html %}
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-        <a href="/{{language}}/bio/" class="langindexlink-mobile">More Bioinformatics &raquo;</a>
-    </section>
-</section>
-{% endif %}
 
 
 
@@ -322,6 +268,60 @@
 </section>
 {% endif %}
 
+{% if ai_ml %}
+<section class="--tutorial-section">
+    <header class="--section-header">
+        <a href="#ai_ml" name="ai_ml" id="ai_ml">Artificial Intelligence and Machine Learning</a>
+
+        {% assign forloop_idx = 0 %}
+        {%- for page in languagelist -%}
+            {% if page.display_as == "ai_ml" and page.layout != "langindex" %}
+                {% assign forloop_idx = forloop_idx | plus:1 %}
+            {% endif %}
+        {%- endfor -%}
+
+        {% if forloop_idx >= num_examples %}
+        <a href="/{{language}}/ai-ml/" class="langindexlink">More AI and ML &raquo;</a>
+        {% endif %}
+    </header>
+    <section class="--grid">
+        <ul class="--grid-list">
+
+            {% assign forloop_idx = 0 %}
+
+            {%- for page in languagelist -%}
+                {% if page.display_as == "ai_ml" and page.layout != "langindex" and forloop_idx < num_examples  %}
+                    {% assign forloop_idx = forloop_idx | plus:1 %}
+                    {% include layouts/grid-item.html %}
+                {% endif %}
+            {%- endfor -%}
+
+        </ul>
+    </section>
+</section>
+{% endif %}
+
+
+
+{% if bio %}
+<section class="--tutorial-section">
+    <header class="--section-header"><a href="#bio" name="bio" id="bio">Bioinformatics</a>
+        <a href="/{{language}}/bio/" class="langindexlink">More Bioinformatics &raquo;</a>
+    </header>
+    <section class="--grid">
+        <ul class="--grid-list">
+            {%- for page in languagelist -%}
+            {% if page.display_as == "bio" and page.order < num_examples %}
+
+
+            {% include layouts/grid-item.html %}
+            {% endif %}
+            {%- endfor -%}
+        </ul>
+        <a href="/{{language}}/bio/" class="langindexlink-mobile">More Bioinformatics &raquo;</a>
+    </section>
+</section>
+{% endif %}
 {% if 3d_charts %}
 <section class="--tutorial-section" id="3d-charts">
     <header class="--section-header">

@@ -105,7 +105,7 @@
                 readonly />
         </button>
         {% endif %}
-        <details style="color: white;margin-top: 20px;">
+        <details style="color: white;margin-top: 20px;" open>
             <summary>Quick start</summary>
             <nav class="--sidebar-body watch" id="where">
                 <ul class="--sidebar-list" style="margin-left: 15px;">
@@ -268,19 +268,6 @@
                     </li>
                     {% endif %}
 
-                    {% if ai_ml == true %}
-                    <li class="--sidebar-item">
-                        <a href="/{{langue}}/ai-ml/" class="js-splash--navigation-item">Artificial Intelligence and
-                            Machine Learning</a>
-                    </li>
-                    {% endif %}
-
-                    {% if bio == true %}
-                    <li class="--sidebar-item">
-                        <a href="/{{langue}}/bio/" class="js-splash--navigation-item">Visualizing Biological Data</a>
-                    </li>
-                    {% endif %}
-
                     {% if scientific == true %}
                     <li class="--sidebar-item">
                         <a href="/{{langue}}/scientific-charts/" class="js-splash--navigation-item">Scientific
@@ -297,6 +284,19 @@
                     {% if maps == true %}
                     <li class="--sidebar-item">
                         <a href="/{{langue}}/maps/" class="js-splash--navigation-item">Maps</a>
+                    </li>
+                    {% endif %}
+
+                    {% if ai_ml == true %}
+                    <li class="--sidebar-item">
+                        <a href="/{{langue}}/ai-ml/" class="js-splash--navigation-item">Artificial Intelligence and
+                            Machine Learning</a>
+                    </li>
+                    {% endif %}
+
+                    {% if bio == true %}
+                    <li class="--sidebar-item">
+                        <a href="/{{langue}}/bio/" class="js-splash--navigation-item">Visualizing Biological Data</a>
                     </li>
                     {% endif %}
 
