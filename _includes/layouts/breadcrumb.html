@@ -1,14 +1,14 @@
 <div class="nav-breadcrumb-container">
     <div>
         <div class="breadcrumb-nav">
-            {% if page.permalink != "/api/" and 
-                page.permalink != "/python/" and 
+            {% if page.permalink != "/api/" and
+                page.permalink != "/python/" and
                 page.permalink != "/javascript/" and
-                page.permalink != "/r/" and 
-                page.permalink != "/julia/" and 
-                page.permalink != "/ggplot2/" and 
-                page.permalink != "/fsharp/" and 
-                page.permalink != "/csharp/" and 
+                page.permalink != "/r/" and
+                page.permalink != "/julia/" and
+                page.permalink != "/ggplot2/" and
+                page.permalink != "/fsharp/" and
+                page.permalink != "/csharp/" and
                 page.permalink != "/matlab/" %}
                 <a href="/{% if page.permalink contains 'javascript' %}javascript{% else %}{{page.language}}{% endif %}">
                     {% if page.language == "plotly_js" %}JavaScript
@@ -28,13 +28,13 @@
             {% endif %}
 
             {% if page.display_as %}
-                {% if langue == 'python' or 
-                        langue == 'r' or 
-                        langue == 'javascript' or 
-                        langue == 'ggplot2' or 
-                        langue == 'julia' or 
-                        langue == 'matlab' or 
-                        langue == 'csharp' or 
+                {% if langue == 'python' or
+                        langue == 'r' or
+                        langue == 'javascript' or
+                        langue == 'ggplot2' or
+                        langue == 'julia' or
+                        langue == 'matlab' or
+                        langue == 'csharp' or
                         langue == 'fsharp' %}
                     {% assign display_as = site.data.display_as_py_r_js[page.display_as] %}
                 {% else %}
@@ -51,6 +51,7 @@
             {% endif %}
         </div>
     </div>
+    {% if page.layout != "langindex" %}
     <div class="nav-breadcrumb-right">
         <div class="--fork">
         {% if page.path contains "/python/html/" %}
@@ -95,4 +96,5 @@
               </a>
         </div>
     </div>
+    {% endif %}
 </div>

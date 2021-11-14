@@ -317,6 +317,7 @@ DEPENDENCIES
   algoliasearch-jekyll (~> 0.8.2)
   github-pages
   jekyll-redirect-from
+  jekyll-seo-tag
   jekyll-sitemap
   jemoji
   octopress
@@ -325,4 +326,4 @@ DEPENDENCIES
   rake
 
 BUNDLED WITH
-   1.16.4
+   1.17.2
