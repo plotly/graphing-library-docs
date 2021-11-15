@@ -10213,7 +10213,7 @@
           "dflt": "#fff",
           "editType": "plot",
           "valType": "color",
-          "magic_underscores": "fig.update_layout(smith_bgcolor=&lt;VALUE&gt;)"
+          "magic_underscores": "fig.update_smiths(bgcolor=&lt;VALUE&gt;)"
         },
         "domain": {
           "column": {
@@ -10222,7 +10222,7 @@
             "editType": "plot",
             "min": 0,
             "valType": "integer",
-            "magic_underscores": "fig.update_layout(smith_domain_column=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(domain_column=&lt;VALUE&gt;)"
           },
           "editType": "plot",
           "role": "object",
@@ -10232,7 +10232,7 @@
             "editType": "plot",
             "min": 0,
             "valType": "integer",
-            "magic_underscores": "fig.update_layout(smith_domain_row=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(domain_row=&lt;VALUE&gt;)"
           },
           "x": {
             "description": "Sets the horizontal domain of this smith subplot (in plot fraction).",
@@ -10256,7 +10256,7 @@
               }
             ],
             "valType": "info_array",
-            "magic_underscores": "fig.update_layout(smith_domain_x=list(...))"
+            "magic_underscores": "fig.update_smiths(domain_x=list(...))"
           },
           "y": {
             "description": "Sets the vertical domain of this smith subplot (in plot fraction).",
@@ -10280,9 +10280,9 @@
               }
             ],
             "valType": "info_array",
-            "magic_underscores": "fig.update_layout(smith_domain_y=list(...))"
+            "magic_underscores": "fig.update_smiths(domain_y=list(...))"
           },
-          "magic_underscores": "fig.update_layout(smith_domain=dict(...))"
+          "magic_underscores": "fig.update_smiths(domain=dict(...))"
         },
         "editType": "calc",
         "imaginaryaxis": {
@@ -10291,7 +10291,7 @@
             "dflt": "#444",
             "editType": "plot",
             "valType": "color",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_color=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_color=&lt;VALUE&gt;)"
           },
           "editType": "plot",
           "gridcolor": {
@@ -10299,7 +10299,7 @@
             "dflt": "#eee",
             "editType": "plot",
             "valType": "color",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_gridcolor=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_gridcolor=&lt;VALUE&gt;)"
           },
           "gridwidth": {
             "description": "Sets the width (in px) of the grid lines.",
@@ -10307,14 +10307,14 @@
             "editType": "plot",
             "min": 0,
             "valType": "number",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_gridwidth=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_gridwidth=&lt;VALUE&gt;)"
           },
           "hoverformat": {
             "description": "Sets the hover text formatting rule using d3 formatting mini-languages which are very similar to those in Python. For numbers, see: https://github.com/d3/d3-format/tree/v1.4.5#d3-format. And for dates see: https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format. We add two items to d3's date formatter: *%h* for half of the year as a decimal number as well as *%{n}f* for fractional seconds with n digits. For example, *2016-10-13 09:15:23.456* with tickformat *%H~%M~%S.%2f* would display *09~15~23.46*",
             "dflt": "",
             "editType": "plot",
             "valType": "string",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_hoverformat=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_hoverformat=&lt;VALUE&gt;)"
           },
           "layer": {
             "description": "Sets the layer on which this axis is displayed. If *above traces*, this axis is displayed above all the subplot's traces If *below traces*, this axis is displayed below all the subplot's traces, but above the grid lines. Useful when used together with scatter-like traces with `cliponaxis` set to *false* to show markers and/or text nodes above this axis.",
@@ -10325,14 +10325,14 @@
               "above traces",
               "below traces"
             ],
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_layer=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_layer=&lt;VALUE&gt;)"
           },
           "linecolor": {
             "description": "Sets the axis line color.",
             "dflt": "#444",
             "editType": "plot",
             "valType": "color",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_linecolor=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_linecolor=&lt;VALUE&gt;)"
           },
           "linewidth": {
             "description": "Sets the width (in px) of the axis line.",
@@ -10340,7 +10340,7 @@
             "editType": "plot",
             "min": 0,
             "valType": "number",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_linewidth=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_linewidth=&lt;VALUE&gt;)"
           },
           "role": "object",
           "showgrid": {
@@ -10348,21 +10348,21 @@
             "dflt": true,
             "editType": "plot",
             "valType": "boolean",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_showgrid=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_showgrid=&lt;VALUE&gt;)"
           },
           "showline": {
             "description": "Determines whether or not a line bounding this axis is drawn.",
             "dflt": true,
             "editType": "plot",
             "valType": "boolean",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_showline=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_showline=&lt;VALUE&gt;)"
           },
           "showticklabels": {
             "description": "Determines whether or not the tick labels are drawn.",
             "dflt": true,
             "editType": "plot",
             "valType": "boolean",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_showticklabels=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_showticklabels=&lt;VALUE&gt;)"
           },
           "showtickprefix": {
             "description": "If *all*, all tick labels are displayed with a prefix. If *first*, only the first tick is displayed with a prefix. If *last*, only the last tick is displayed with a suffix. If *none*, tick prefixes are hidden.",
@@ -10375,7 +10375,7 @@
               "last",
               "none"
             ],
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_showtickprefix=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_showtickprefix=&lt;VALUE&gt;)"
           },
           "showticksuffix": {
             "description": "Same as `showtickprefix` but for tick suffixes.",
@@ -10388,20 +10388,20 @@
               "last",
               "none"
             ],
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_showticksuffix=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_showticksuffix=&lt;VALUE&gt;)"
           },
           "tickcolor": {
             "description": "Sets the tick color.",
             "dflt": "#444",
             "editType": "plot",
             "valType": "color",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_tickcolor=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_tickcolor=&lt;VALUE&gt;)"
           },
           "tickfont": {
             "color": {
               "editType": "plot",
               "valType": "color",
-              "magic_underscores": "fig.update_layout(smith_imaginaryaxis_tickfont_color=&lt;VALUE&gt;)"
+              "magic_underscores": "fig.update_smiths(imaginaryaxis_tickfont_color=&lt;VALUE&gt;)"
             },
             "description": "Sets the tick font.",
             "editType": "plot",
@@ -10411,23 +10411,23 @@
               "noBlank": true,
               "strict": true,
               "valType": "string",
-              "magic_underscores": "fig.update_layout(smith_imaginaryaxis_tickfont_family=&lt;VALUE&gt;)"
+              "magic_underscores": "fig.update_smiths(imaginaryaxis_tickfont_family=&lt;VALUE&gt;)"
             },
             "role": "object",
             "size": {
               "editType": "plot",
               "min": 1,
               "valType": "number",
-              "magic_underscores": "fig.update_layout(smith_imaginaryaxis_tickfont_size=&lt;VALUE&gt;)"
+              "magic_underscores": "fig.update_smiths(imaginaryaxis_tickfont_size=&lt;VALUE&gt;)"
             },
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_tickfont=dict(...))"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_tickfont=dict(...))"
           },
           "tickformat": {
             "description": "Sets the tick label formatting rule using d3 formatting mini-languages which are very similar to those in Python. For numbers, see: https://github.com/d3/d3-format/tree/v1.4.5#d3-format. And for dates see: https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format. We add two items to d3's date formatter: *%h* for half of the year as a decimal number as well as *%{n}f* for fractional seconds with n digits. For example, *2016-10-13 09:15:23.456* with tickformat *%H~%M~%S.%2f* would display *09~15~23.46*",
             "dflt": "",
             "editType": "plot",
             "valType": "string",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_tickformat=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_tickformat=&lt;VALUE&gt;)"
           },
           "ticklen": {
             "description": "Sets the tick length (in px).",
@@ -10435,14 +10435,14 @@
             "editType": "plot",
             "min": 0,
             "valType": "number",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_ticklen=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_ticklen=&lt;VALUE&gt;)"
           },
           "tickprefix": {
             "description": "Sets a tick label prefix.",
             "dflt": "",
             "editType": "plot",
             "valType": "string",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_tickprefix=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_tickprefix=&lt;VALUE&gt;)"
           },
           "ticks": {
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *outside* (*inside*), this axis' are drawn outside (inside) the axis lines.",
@@ -10453,20 +10453,20 @@
               "inside",
               ""
             ],
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_ticks=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_ticks=&lt;VALUE&gt;)"
           },
           "ticksuffix": {
             "description": "Sets a tick label suffix.",
             "dflt": "",
             "editType": "plot",
             "valType": "string",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_ticksuffix=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_ticksuffix=&lt;VALUE&gt;)"
           },
           "tickvals": {
             "description": "Sets the values at which ticks on this axis appear. Defaults to `realaxis.tickvals` plus the same as negatives and zero.",
             "editType": "plot",
             "valType": "data_array",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_tickvals=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_tickvals=&lt;VALUE&gt;)"
           },
           "tickvalssrc": {
             "description": "Sets the source reference on Chart Studio Cloud for `tickvals`.",
@@ -10479,16 +10479,16 @@
             "editType": "plot",
             "min": 0,
             "valType": "number",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_tickwidth=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_tickwidth=&lt;VALUE&gt;)"
           },
           "visible": {
             "description": "A single toggle to hide the axis while preserving interaction like dragging. Default is true when a cheater plot is present on the axis, otherwise false",
             "dflt": true,
             "editType": "plot",
             "valType": "boolean",
-            "magic_underscores": "fig.update_layout(smith_imaginaryaxis_visible=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(imaginaryaxis_visible=&lt;VALUE&gt;)"
           },
-          "magic_underscores": "fig.update_layout(smith_imaginaryaxis=dict(...))"
+          "magic_underscores": "fig.update_smiths(imaginaryaxis=dict(...))"
         },
         "realaxis": {
           "color": {
@@ -10496,7 +10496,7 @@
             "dflt": "#444",
             "editType": "plot",
             "valType": "color",
-            "magic_underscores": "fig.update_layout(smith_realaxis_color=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_color=&lt;VALUE&gt;)"
           },
           "editType": "plot",
           "gridcolor": {
@@ -10504,7 +10504,7 @@
             "dflt": "#eee",
             "editType": "plot",
             "valType": "color",
-            "magic_underscores": "fig.update_layout(smith_realaxis_gridcolor=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_gridcolor=&lt;VALUE&gt;)"
           },
           "gridwidth": {
             "description": "Sets the width (in px) of the grid lines.",
@@ -10512,14 +10512,14 @@
             "editType": "plot",
             "min": 0,
             "valType": "number",
-            "magic_underscores": "fig.update_layout(smith_realaxis_gridwidth=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_gridwidth=&lt;VALUE&gt;)"
           },
           "hoverformat": {
             "description": "Sets the hover text formatting rule using d3 formatting mini-languages which are very similar to those in Python. For numbers, see: https://github.com/d3/d3-format/tree/v1.4.5#d3-format. And for dates see: https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format. We add two items to d3's date formatter: *%h* for half of the year as a decimal number as well as *%{n}f* for fractional seconds with n digits. For example, *2016-10-13 09:15:23.456* with tickformat *%H~%M~%S.%2f* would display *09~15~23.46*",
             "dflt": "",
             "editType": "plot",
             "valType": "string",
-            "magic_underscores": "fig.update_layout(smith_realaxis_hoverformat=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_hoverformat=&lt;VALUE&gt;)"
           },
           "layer": {
             "description": "Sets the layer on which this axis is displayed. If *above traces*, this axis is displayed above all the subplot's traces If *below traces*, this axis is displayed below all the subplot's traces, but above the grid lines. Useful when used together with scatter-like traces with `cliponaxis` set to *false* to show markers and/or text nodes above this axis.",
@@ -10530,14 +10530,14 @@
               "above traces",
               "below traces"
             ],
-            "magic_underscores": "fig.update_layout(smith_realaxis_layer=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_layer=&lt;VALUE&gt;)"
           },
           "linecolor": {
             "description": "Sets the axis line color.",
             "dflt": "#444",
             "editType": "plot",
             "valType": "color",
-            "magic_underscores": "fig.update_layout(smith_realaxis_linecolor=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_linecolor=&lt;VALUE&gt;)"
           },
           "linewidth": {
             "description": "Sets the width (in px) of the axis line.",
@@ -10545,7 +10545,7 @@
             "editType": "plot",
             "min": 0,
             "valType": "number",
-            "magic_underscores": "fig.update_layout(smith_realaxis_linewidth=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_linewidth=&lt;VALUE&gt;)"
           },
           "role": "object",
           "showgrid": {
@@ -10553,21 +10553,21 @@
             "dflt": true,
             "editType": "plot",
             "valType": "boolean",
-            "magic_underscores": "fig.update_layout(smith_realaxis_showgrid=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_showgrid=&lt;VALUE&gt;)"
           },
           "showline": {
             "description": "Determines whether or not a line bounding this axis is drawn.",
             "dflt": true,
             "editType": "plot",
             "valType": "boolean",
-            "magic_underscores": "fig.update_layout(smith_realaxis_showline=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_showline=&lt;VALUE&gt;)"
           },
           "showticklabels": {
             "description": "Determines whether or not the tick labels are drawn.",
             "dflt": true,
             "editType": "plot",
             "valType": "boolean",
-            "magic_underscores": "fig.update_layout(smith_realaxis_showticklabels=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_showticklabels=&lt;VALUE&gt;)"
           },
           "showtickprefix": {
             "description": "If *all*, all tick labels are displayed with a prefix. If *first*, only the first tick is displayed with a prefix. If *last*, only the last tick is displayed with a suffix. If *none*, tick prefixes are hidden.",
@@ -10580,7 +10580,7 @@
               "last",
               "none"
             ],
-            "magic_underscores": "fig.update_layout(smith_realaxis_showtickprefix=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_showtickprefix=&lt;VALUE&gt;)"
           },
           "showticksuffix": {
             "description": "Same as `showtickprefix` but for tick suffixes.",
@@ -10593,7 +10593,7 @@
               "last",
               "none"
             ],
-            "magic_underscores": "fig.update_layout(smith_realaxis_showticksuffix=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_showticksuffix=&lt;VALUE&gt;)"
           },
           "side": {
             "description": "Determines on which side of real axis line the tick and tick labels appear.",
@@ -10604,27 +10604,27 @@
               "top",
               "bottom"
             ],
-            "magic_underscores": "fig.update_layout(smith_realaxis_side=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_side=&lt;VALUE&gt;)"
           },
           "tickangle": {
             "description": "Sets the angle of the tick labels with respect to the horizontal. For example, a `tickangle` of -90 draws the tick labels vertically.",
             "dflt": 90,
             "editType": "ticks",
             "valType": "angle",
-            "magic_underscores": "fig.update_layout(smith_realaxis_tickangle=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_tickangle=&lt;VALUE&gt;)"
           },
           "tickcolor": {
             "description": "Sets the tick color.",
             "dflt": "#444",
             "editType": "plot",
             "valType": "color",
-            "magic_underscores": "fig.update_layout(smith_realaxis_tickcolor=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_tickcolor=&lt;VALUE&gt;)"
           },
           "tickfont": {
             "color": {
               "editType": "plot",
               "valType": "color",
-              "magic_underscores": "fig.update_layout(smith_realaxis_tickfont_color=&lt;VALUE&gt;)"
+              "magic_underscores": "fig.update_smiths(realaxis_tickfont_color=&lt;VALUE&gt;)"
             },
             "description": "Sets the tick font.",
             "editType": "plot",
@@ -10634,23 +10634,23 @@
               "noBlank": true,
               "strict": true,
               "valType": "string",
-              "magic_underscores": "fig.update_layout(smith_realaxis_tickfont_family=&lt;VALUE&gt;)"
+              "magic_underscores": "fig.update_smiths(realaxis_tickfont_family=&lt;VALUE&gt;)"
             },
             "role": "object",
             "size": {
               "editType": "plot",
               "min": 1,
               "valType": "number",
-              "magic_underscores": "fig.update_layout(smith_realaxis_tickfont_size=&lt;VALUE&gt;)"
+              "magic_underscores": "fig.update_smiths(realaxis_tickfont_size=&lt;VALUE&gt;)"
             },
-            "magic_underscores": "fig.update_layout(smith_realaxis_tickfont=dict(...))"
+            "magic_underscores": "fig.update_smiths(realaxis_tickfont=dict(...))"
           },
           "tickformat": {
             "description": "Sets the tick label formatting rule using d3 formatting mini-languages which are very similar to those in Python. For numbers, see: https://github.com/d3/d3-format/tree/v1.4.5#d3-format. And for dates see: https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format. We add two items to d3's date formatter: *%h* for half of the year as a decimal number as well as *%{n}f* for fractional seconds with n digits. For example, *2016-10-13 09:15:23.456* with tickformat *%H~%M~%S.%2f* would display *09~15~23.46*",
             "dflt": "",
             "editType": "plot",
             "valType": "string",
-            "magic_underscores": "fig.update_layout(smith_realaxis_tickformat=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_tickformat=&lt;VALUE&gt;)"
           },
           "ticklen": {
             "description": "Sets the tick length (in px).",
@@ -10658,14 +10658,14 @@
             "editType": "plot",
             "min": 0,
             "valType": "number",
-            "magic_underscores": "fig.update_layout(smith_realaxis_ticklen=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_ticklen=&lt;VALUE&gt;)"
           },
           "tickprefix": {
             "description": "Sets a tick label prefix.",
             "dflt": "",
             "editType": "plot",
             "valType": "string",
-            "magic_underscores": "fig.update_layout(smith_realaxis_tickprefix=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_tickprefix=&lt;VALUE&gt;)"
           },
           "ticks": {
             "description": "Determines whether ticks are drawn or not. If **, this axis' ticks are not drawn. If *top* (*bottom*), this axis' are drawn above (below) the axis line.",
@@ -10676,14 +10676,14 @@
               "bottom",
               ""
             ],
-            "magic_underscores": "fig.update_layout(smith_realaxis_ticks=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_ticks=&lt;VALUE&gt;)"
           },
           "ticksuffix": {
             "description": "Sets a tick label suffix.",
             "dflt": "",
             "editType": "plot",
             "valType": "string",
-            "magic_underscores": "fig.update_layout(smith_realaxis_ticksuffix=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_ticksuffix=&lt;VALUE&gt;)"
           },
           "tickvals": {
             "description": "Sets the values at which ticks on this axis appear.",
@@ -10696,7 +10696,7 @@
             ],
             "editType": "plot",
             "valType": "data_array",
-            "magic_underscores": "fig.update_layout(smith_realaxis_tickvals=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_tickvals=&lt;VALUE&gt;)"
           },
           "tickvalssrc": {
             "description": "Sets the source reference on Chart Studio Cloud for `tickvals`.",
@@ -10709,19 +10709,19 @@
             "editType": "plot",
             "min": 0,
             "valType": "number",
-            "magic_underscores": "fig.update_layout(smith_realaxis_tickwidth=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_tickwidth=&lt;VALUE&gt;)"
           },
           "visible": {
             "description": "A single toggle to hide the axis while preserving interaction like dragging. Default is true when a cheater plot is present on the axis, otherwise false",
             "dflt": true,
             "editType": "plot",
             "valType": "boolean",
-            "magic_underscores": "fig.update_layout(smith_realaxis_visible=&lt;VALUE&gt;)"
+            "magic_underscores": "fig.update_smiths(realaxis_visible=&lt;VALUE&gt;)"
           },
-          "magic_underscores": "fig.update_layout(smith_realaxis=dict(...))"
+          "magic_underscores": "fig.update_smiths(realaxis=dict(...))"
         },
         "role": "object",
-        "magic_underscores": "fig.update_layout(smith=dict(...))"
+        "magic_underscores": "fig.update_smiths(...)"
       },
       "annotations": {
         "items": {

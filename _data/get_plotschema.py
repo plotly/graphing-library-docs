@@ -44,6 +44,7 @@ def make_underscore(path, section, value):
             mapbox="mapboxes",
             ternary="ternaries",
             polar="polars",
+            smith="smiths",
         )
         item_patterns = dict(
             shapes="shapes", images="layout_images", annotations="annotations",
