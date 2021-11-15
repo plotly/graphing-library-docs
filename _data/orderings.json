@@ -44,6 +44,7 @@
          "geo",
          "mapbox",
          "polar",
+         "smith",
 
          "annotations",
          "shapes",
@@ -75,7 +76,7 @@
 
         "scattergeo", "choropleth", "scattermapbox", "choroplethmapbox", "densitymapbox",
 
-        "scatterpolar", "scatterpolargl", "barpolar", "scatterternary", "sunburst", "treemap", "icicle",
+        "scatterpolar", "scatterpolargl", "barpolar", "scatterternary", "scattersmith", "sunburst", "treemap", "icicle",
 
         "sankey", "splom", "parcoords", "parcats", "carpet", "scattercarpet", "contourcarpet",
 
@@ -185,6 +186,8 @@
  "k",
  "ksrc",
 
+  "imag", "imagsrc",
+  "real", "realsrc",
  "facecolor",
  "facecolorsrc",
  "indices",

@@ -9,7 +9,7 @@ for upperlang in ["Python", "JavaScript", "MATLAB", "R", "Julia", "F#"]:
     lang = "csharp" if lang == "c#" else lang
     langcode = "plotly_js" if lang == "javascript" else lang
     for attr in [
-        "xaxis", "yaxis", "coloraxis", "scene", "polar", "ternary", "geo", "mapbox",
+        "xaxis", "yaxis", "coloraxis", "scene", "polar", "ternary", "smith", "geo", "mapbox",
         "sliders", "updatemenus", "annotations", "shapes", "images", "global"
     ]:
         fullattr = "layout" + ("." + attr if attr != "global" else "")
