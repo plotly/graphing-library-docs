@@ -8,7 +8,7 @@
         or obj[0] == "role" or obj[0] == "extras"
         or obj[0] == "description" or obj[0] == "_isLinkedToArray"
         or obj[0] == "items" or obj[0] == "uid"
-        or obj[0] == "smith" or obj[0] == "_deprecated"
+        or obj[0] == "_deprecated"
         or obj[0] == "_isSubplotObj" or obj[0] == "transforms"
         or obj[0] == "editType" or obj[0] == "impliedEdits"
         or obj[0] == "magic_underscores"%}
@@ -23,7 +23,7 @@
         {% if include.mustmatch == "global" %}
             {% if obj[0] == "xaxis" or obj[0] == "yaxis"
                 or obj[0] == "coloraxis" or obj[0] == "scene"
-                or obj[0] == "ternary" or obj[0] == "polar"
+                or obj[0] == "ternary" or obj[0] == "polar" or obj[0] == "smith"
                 or obj[0] == "mapbox" or obj[0] == "geo"
                 or obj[0] == "shapes" or obj[0] == "annotations"
                 or obj[0] == "images"
