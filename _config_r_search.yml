@@ -15,6 +15,7 @@ exclude: [
   '_posts/plotly_js/',
   '_posts/python-v3/', '_posts/dashboards/', '_posts/misc/',
   #'_posts/ggplot2',
+  '_posts/fsharp/',
   '_posts/julia','_posts/scala',
   '_posts/matlab',
   '_posts/nodejs',
