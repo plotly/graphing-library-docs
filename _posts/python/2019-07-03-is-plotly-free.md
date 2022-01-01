@@ -9,11 +9,6 @@ language: python
 
 #### Is Plotly for Python Free?
 
-```python
-Sys.setenv("plotly_username" = "YOUR USER NAME")
-Sys.setenv("plotly_api_key" = "YOUR API KEY")
-```
-
 &nbsp;  &nbsp; **Yes.** &nbsp; Plotly for Python is free and open-source software, [licensed under the **MIT license**](https://github.com/plotly/plotly.py/blob/master/LICENSE.txt). It costs nothing to [install and use](/python/getting-started). You can view the source, report issues or contribute using [our Github repository](https://github.com/plotly/plotly.py).
 
 #### Can I use Plotly for Python without signing up to any service?
