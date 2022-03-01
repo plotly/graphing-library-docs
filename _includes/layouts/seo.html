@@ -4,17 +4,21 @@
 
 <!-- Count headers of the examples -->
 {% assign counter = 0 %}
-{% assign code_blocks = page.content | split: '<div class="plot-container plotly">' %}
-{% assign code_blocks2 = page.content | split: 'plot-container plotly' %}
+{% assign code_blocks = page.content | split: '<div' %}
 {% for code_block in code_blocks %}
+    {% if code_block contains "plot-container plotly" %}
     {% assign counter = counter | plus: 1 %}
+    {% endif  %}
+    
 {% endfor %}
+
+
+
 
 {% capture description %}"Over {{counter}} examples of {{page.name}} including changing color, size, log axes, and more."{% endcapture %}
 
 <!-- SEO Tags - title, meta_description -->
 <title>{{code_blocks}}</title>
-<title>{{code_blocks2}}</title>
 <meta name="description" content={{description}}>
 
 <!-- Bing tags -->
