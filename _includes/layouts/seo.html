@@ -13,7 +13,7 @@
 <title>{{title}}</title>
 
 {% assign counter = 0 %}
-{% assign headers = page.content | split: '<h2> %}
+{% assign headers = page.content | split: '<h2>' %}
 {% for header in headers %}
     {% assign counter = counter | plus: 1 %}
 {% endfor %}
