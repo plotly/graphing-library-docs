@@ -1,26 +1,16 @@
 <!-- SEO Tags - title, meta_description -->
 
-<!-- create a title -->
-{% capture title %}
-    {% if page.name %} {{page.name}} with 
-        {% if page.language == 'plotly_js' %} JavaScript 
-            {% elsif page.language == 'ggplot2'%} ggplot2
-            {% elsif page.language == 'f_sharp' %} F# 
-            {% elsif page.language == 'matlab' %} MATLAB 
-            {% else %} {{page.language | capitalize }}
-        {% endif %} 
-    {% elsif page.name == '404' %} 404 Page Not Found 
-    {% else %} Plotly Open Source Graphing Libraries{% endif %}
-{% endcapture %}
+<!-- Create a title -->
+{% capture title %}{% if page.name %} {{page.name}} with {% if page.language == 'plotly_js' %} JavaScript{% elsif page.language == 'ggplot2'%} ggplot2{% elsif page.language == 'f_sharp' %} F#{% elsif page.language == 'matlab' %} MATLAB{% else %} {{page.language | capitalize }}{% endif %} {% elsif page.name == '404' %} 404 Page Not Found{% else %} Plotly Open Source Graphing Libraries{% endif %}{% endcapture %}
 
-
+<!-- Count headers of the examples -->
 {% assign counter = 0 %}
 {% assign headers = page.content | split: '<h' %}
 {% for header in headers %}
     {% assign counter = counter | plus: 1 %}
 {% endfor %}
 
-{% capture description %}Over {{counter}} examples of {{page.name}} including changing color, size, log axes, and more.{% endcapture %}
+{% capture description %}"Over {{counter}} examples of {{page.name}} including changing color, size, log axes, and more."{% endcapture %}
 
 <title>{{title}}</title>
 
