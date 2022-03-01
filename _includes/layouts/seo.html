@@ -1,17 +1,20 @@
 <!-- SEO Tags - title, meta_description -->
-
-<title>{% if page.name %} {{page.name}} with 
-    {% if page.language == 'plotly_js' %} JavaScript 
-        {% elsif page.language == 'ggplot2'%} ggplot2
-        {% elsif page.language == 'f_sharp' %} F# 
-        {% elsif page.language == 'matlab' %} MATLAB 
-        {% else %} {{page.language | capitalize }}
-    {% endif %} 
+{% capture title %}
+    {% if page.name %} {{page.name}} with 
+        {% if page.language == 'plotly_js' %} JavaScript 
+            {% elsif page.language == 'ggplot2'%} ggplot2
+            {% elsif page.language == 'f_sharp' %} F# 
+            {% elsif page.language == 'matlab' %} MATLAB 
+            {% else %} {{page.language | capitalize }}
+        {% endif %} 
     {% elsif page.name == '404' %} 404 Page Not Found 
-    {% else %} Plotly Open Source Graphing Libraries{% endif %}</title>
+    {% else %} Plotly Open Source Graphing Libraries{% endif %}
+{% endcapture %}
+
+<title></title>
 
 {% assign counter = 0 %}
-{% assign headers = page.content | split: '<h2>' %}
+{% assign headers = page.content | split: '<h' %}
 {% for header in headers %}
     {% assign counter = counter | plus: 1 %}
 {% endfor %}
@@ -23,7 +26,7 @@
 <!-- Bing tags -->
     <meta name="msvalidate.01" content="D319859A832F9F1D15A7646E2A42150A" />
 <!-- Facebook tags -->
-    <!-- <meta property="og:title" content={{title}}/> -->
+    <meta property="og:title" content={{title}}/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="{% if page.imageurl %}{{page.imageurl}}{% else %}{% if page.thumbnail%}{{site.imgurl}}{{page.thumbnail}}{%else%}https://help.plot.ly/images/twitter-default.png{% endif %}{% endif %}">
     <meta property="og:description" content="Over {{counter}} examples of {{page.name}} including changing color, size, log axes, and more."/>
@@ -33,7 +36,7 @@
 
 <!-- twitter tags -->
     <meta name="twitter:card" content="photo" />
-    <!-- <meta name="twitter:title" content={{title}}/> -->
+    <meta name="twitter:title" content={{title}}/>
     <meta name="twitter:url" content="{% if page.permalink %}https://plotly.com/{{page.permalink}}{% endif %}"/>
     <meta name="twitter:description" content="Over {{counter}} examples of {{page.name}} including changing color, size, log axes, and more."/>
     <meta name="twitter:image" content="{% if page.imageurl %}{{page.imageurl}}{% else %}{% if page.thumbnail%}{{site.imgurl}}{{page.thumbnail}}{%else%}https://help.plot.ly/images/twitter-default.png{% endif %}{% endif %}">
