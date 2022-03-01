@@ -5,11 +5,7 @@
 
 <!-- Count headers of the examples -->
 {% assign counter = 0 %}
-{% assign code_blocks = page.content | split: '<pre' %}
-{% for code_block in code_blocks %}
-    {% assign counter = counter | plus: 1 %}
-{% endfor %}
-{% assign code_blocks = page.content | split: '<code' %}
+{% assign code_blocks = page.content | split: 'db-copy' %}
 {% for code_block in code_blocks %}
     {% assign counter = counter | plus: 1 %}
 {% endfor %}
