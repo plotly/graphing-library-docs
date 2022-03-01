@@ -5,7 +5,7 @@
 
 <!-- Count headers of the examples -->
 {% assign counter = 0 %}
-{% assign code_blocks = page.content | split: 'db-copy' %}
+{% assign code_blocks = page.content | split: 'plot-container plotly' %}
 {% for code_block in code_blocks %}
     {% assign counter = counter | plus: 1 %}
 {% endfor %}
