@@ -4,12 +4,20 @@
 
 <!-- Count headers of the examples -->
 {% assign counter = 0 %}
-{% assign code_blocks = page.content | split: '<div' %}
+{% if page.language = 'python' %} {% assign code_blocks = page.content | split: 'plotly-graph-div' %}
+{% elsif page.language = 'julia' %} {% assign code_blocks = page.content | split: 'plotly-graph-div' %}
+{% elsif page.language == 'r' %} {% assign code_blocks = page.content | split: 'plotly html-widget' %}
+{% elsif page.language == 'ggplot2' %} {% assign code_blocks = page.content | split: 'plotly html-widget' %}
+{% elsif page.language == 'plotly_js' %} {% assign code_blocks = page.content | split: 'Plotly.newPlot('myDiv_' %}
+{% elsif page.language == 'matlab' %} {% assign code_blocks = page.content | split: 'plotly-graph-div js-plotly-plot' %}
+{% elsif page.language == 'f_sharp' %} {% assign code_blocks = page.content | split: 'output_html rendered_html output_subarea output_execute_result' %}
+{% endif  %}
+
+
 {% for code_block in code_blocks %}
     {% if code_block contains "plot-container plotly" %}
-    {% assign counter = counter | plus: 1 %}
+        {% assign counter = counter | plus: 1 %}
     {% endif  %}
-    
 {% endfor %}
 
 
@@ -18,7 +26,7 @@
 {% capture description %}"Over {{counter}} examples of {{page.name}} including changing color, size, log axes, and more."{% endcapture %}
 
 <!-- SEO Tags - title, meta_description -->
-<title>{{code_blocks}}</title>
+<title>{{title}}</title>
 <meta name="description" content={{description}}>
 
 <!-- Bing tags -->
