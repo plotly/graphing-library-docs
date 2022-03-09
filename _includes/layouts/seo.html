@@ -1,23 +1,56 @@
+
+<!-- Create a title -->
+{% capture title %}
+    {% if page.permalink == '/python/' or page.language == '/julia/' or page.language == '/r/' or page.language == '/ggplot2/' or page.language == '/f_sharp/' or page.language == '/matlab/' or page.language == '/javascript/' %}{{page.name}}
+    {% elsif page.name == '404' %} 404 Page Not Found
+    {% elsif page.name %} {{page.name | capitalize}} with {% if page.language == 'plotly_js' %}JavaScript{% elsif page.language == 'ggplot2'%}ggplot2{% elsif page.language == 'f_sharp' %}F#{% elsif page.language == 'matlab' %}MATLAB{% else %}{{page.language | capitalize }}{% endif %}{% else %} Plotly Open Source Graphing Libraries{% endif %}
+{% endcapture %}
+<!-- Count number of plots on the page -->
+{% if page.language == 'python' %} {% assign split_class = 'plotly-graph-' %}
+    {% elsif page.language == 'julia' %} {% assign split_class = 'plotly-graph-' %}
+    {% elsif page.language == 'r' %} {% assign split_class = 'plotly html-widget' %}
+    {% elsif page.language == 'ggplot2' %} {% assign split_class = 'plotly html-widget' %}
+    {% elsif page.language == 'plotly_js' %} {% assign split_class = 'Plotly.newPlot('myDiv_' %}
+    {% elsif page.language == 'matlab' %} {% assign split_class = 'plotly-graph-' %}
+    {% elsif page.language == 'f_sharp' %} {% assign split_class = 'output_html rendered_html output_subarea output_execute_result' %}
+    {% else %} {% assign split_class = 'plotly-graph-' %}
+{% endif  %}
+
+{% assign code_blocks = page.content | split: 'div' %}
+
+{% if page.layout == 'langindex' %}
+    {% capture description %}{{page.description}}{% endcapture %}
+{% else %}
+    {% assign counter = 0 %}
+    {% for code_block in code_blocks %}
+        {% if code_block contains split_class %}
+            {% assign counter = counter | plus: 1 %}
+        {% endif  %}
+    {% endfor %}
+    {% capture description %}"Over {{counter}} examples of {{page.name}} including changing color, size, log axes, and more."{% endcapture %}
+{% endif  %}
+
+
 <!-- SEO Tags - title, meta_description -->
-<title>{% if page.name %}{{page.name}} | {% if page.language == 'plotly_js' %} JavaScript {% elsif page.language == 'ggplot2'%} ggplot2 {% elsif page.language == 'matlab' %} Plotly Graphing Library for MATLAB® {% else %}{{page.language | capitalize }}{% endif %} | Plotly {% elsif page.name == '404' %} 404 Page Not Found {% else %} Plotly Open Source Graphing Libraries{% endif %} </title>
-<meta name="description" content="{% if page.description %}{{page.description}}{% else %}Plotly is the easiest way to graph and share your data.{% endif %}">
+<title>{{title}}</title>
+<meta name="description" content={{description}}>
 
 <!-- Bing tags -->
     <meta name="msvalidate.01" content="D319859A832F9F1D15A7646E2A42150A" />
 <!-- Facebook tags -->
-    <meta property="og:title" content="{% if page.name %}{{page.name}}{% else %}plotly{% endif %}"/>
+    <meta property="og:title" content={{title}}/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="{% if page.imageurl %}{{page.imageurl}}{% else %}{% if page.thumbnail%}{{site.imgurl}}{{page.thumbnail}}{%else%}https://help.plot.ly/images/twitter-default.png{% endif %}{% endif %}">
-    <meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}Plotly is the easiest way to graph and share your data.{% endif %}"/>
+    <meta property="og:description" content={{description}}/>
     <meta property="og:url" />
     <meta property="fb:admins" content="1123751525"/>
     <meta property="fb:admins" content="22418"/>
 
 <!-- twitter tags -->
     <meta name="twitter:card" content="photo" />
-    <meta name="twitter:title" content="{% if page.name %}{{page.name}}{% else %}plotly{% endif %}"/>
+    <meta name="twitter:title" content={{title}}/>
     <meta name="twitter:url" content="{% if page.permalink %}https://plotly.com/{{page.permalink}}{% endif %}"/>
-    <meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}Plotly is the easiest way to graph and share your data.{% endif %}"/>
+    <meta name="twitter:description" content={{description}}/>
     <meta name="twitter:image" content="{% if page.imageurl %}{{page.imageurl}}{% else %}{% if page.thumbnail%}{{site.imgurl}}{{page.thumbnail}}{%else%}https://help.plot.ly/images/twitter-default.png{% endif %}{% endif %}">
     <meta name="twitter:site" content="@plotlygraphs"/>
 
