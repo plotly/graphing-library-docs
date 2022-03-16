@@ -3,6 +3,7 @@
 {% capture title %}
     {% if page.permalink == '/python/' or page.language == '/julia/' or page.language == '/r/' or page.language == '/ggplot2/' or page.language == '/f_sharp/' or page.language == '/matlab/' or page.language == '/javascript/' %}{{page.name}}
     {% elsif page.name == '404' %} 404 Page Not Found
+    {% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %} Plotly Open Source Graphing Libraries
     {% elsif page.name %} {{page.name | capitalize}} with {% if page.language == 'plotly_js' %}JavaScript{% elsif page.language == 'ggplot2'%}ggplot2{% elsif page.language == 'f_sharp' %}F#{% elsif page.language == 'matlab' %}MATLAB{% else %}{{page.language | capitalize }}{% endif %}{% else %} Plotly Open Source Graphing Libraries{% endif %}
 {% endcapture %}
 <!-- Count number of plots on the page -->
@@ -20,6 +21,8 @@
 
 {% if page.layout == 'langindex' %}
     {% capture description %}{{page.description}}{% endcapture %}
+{% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %}
+    {% capture description %}"Interactive charts and maps for Python, R, Julia, Javascript, ggplot2, F#, MATLAB®, and Dash."{% endcapture %}
 {% else %}
     {% assign counter = 0 %}
     {% for code_block in code_blocks %}
