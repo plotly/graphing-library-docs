@@ -1,6 +1,5 @@
 plugins:
   - jekyll-redirect-from
-  - jekyll-seo-tag
   - jekyll-sitemap
   - algoliasearch-jekyll
 
@@ -70,24 +69,3 @@ algolia:
       - h6
       - unordered(text)
       - unordered(tags)
-
-# ---
-# Jekyll SEO Tags
-# ---
-url: https://plotly.com
-tagline: Plotly is the easiest way to graph and share your data
-author: plotlygraphs
-twitter:
-  username: plotlygraphs
-  card: photo
-facebook:
-  admin: 1123751525
-  admins: 22418
-logo: /all_static/images/dark-logo.png
-social:
-  links:
-    - https://twitter.com/plotlygraphs
-    - https://www.facebook.com/plotly
-    - https://www.linkedin.com/company/plotly/mycompany/
-    - https://github.com/plotly
-    - https://www.instagram.com/plotly/
