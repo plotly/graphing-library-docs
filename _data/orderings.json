@@ -402,6 +402,7 @@
  "direction",
  "fill",
  "fillcolor",
+ "fillpattern",
  "flatshading",
  "font",
  "header",
