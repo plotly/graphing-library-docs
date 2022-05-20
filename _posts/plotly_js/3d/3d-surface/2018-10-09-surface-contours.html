@@ -35,7 +35,12 @@ var data = [{
 
 var layout = {
   title: 'Mt Bruno Elevation With Projected Contours',
-  scene: {camera: {eye: {x: 1.87, y: 0.88, z: -0.64}}},
+  scene: {
+    camera: { eye: { x: 1.87, y: 0.88, z: -0.64 } },
+    xaxis: { title: { text: "Latitude" } },
+    yaxis: { title: { text: "Longitude" } },
+    zaxis: { title: { text: "Elevation" } }
+  },
   autosize: false,
   width: 500,
   height: 500,
