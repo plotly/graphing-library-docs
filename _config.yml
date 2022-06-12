@@ -63,3 +63,5 @@ algolia:
       - h6
       - unordered(text)
       - unordered(tags)
+
+excerpt_separator: <!-- excerpt-end -->

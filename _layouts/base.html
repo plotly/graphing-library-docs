@@ -16,28 +16,9 @@
 
     <div class="--wrap">
       <!-- aside - Main Sidebar-->
-      <aside class="--sidebar-container">
-        <div class="--sidebar-fixed reference" data-spy="affix" id="where">
-          <div class="brand">
-            <a href="/graphing-libraries/"><img src="/all_static/images/logo-white.png" style="height: 45px;"></a>
-          </div>
 
-          {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains
-          "r/" or
-          page.permalink contains "ggplot2/" %}
-          <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
-            <input id="modal-input" style="border-radius: 5px; width: 100%;" type="text" placeholder="   Search..."
-              readonly />
-          </button>
-          {% endif %}
-          <header class="--sidebar-header">On This Page</header>
-          <nav class="--sidebar-body watch" id="where">
-            <ul class="--sidebar-list"></ul>
-          </nav>
-        </div>
-        {% include layouts/webinar_plug.html %}
+      {% include layouts/side-bar.html %}
 
-      </aside>
       <!-- Main-->
       <section class="--page-body --tutorial-index --base">
         <header class="--welcome">
