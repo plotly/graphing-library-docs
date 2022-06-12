@@ -105,8 +105,15 @@
                 readonly />
         </button>
         {% endif %}
-        <details style="color: white;margin-top: 20px;" open>
-            <summary>Quick start</summary>
+
+        {%if page.page_type == "reference" %}
+
+        {% include layouts/reference-side-nav.html %}
+
+        {% else %}
+
+        <details style="color: white;margin-top: 20px;" {% if page.layout == "langindex" %} open {%endif %}>
+            <summary>Quick Reference</summary>
             <nav class="--sidebar-body watch" id="where">
                 <ul class="--sidebar-list" style="margin-left: 15px;">
                     <!-- Getting Started -->
@@ -243,6 +250,8 @@
                 </ul>
             </nav>
         </details>
+
+        {% if page.layout == "langindex" %}
 
         <!-- Examples start -->
         <details style="color: white;margin-top: 20px;" open>
@@ -588,6 +597,17 @@
                 </ul>
             </nav>
         </details>
+        {% else %}
+
+        <details style="color: white;margin-top: 20px;" open>
+            <summary>On This Page</summary>
+            <nav class="--sidebar-body watch" id="where">
+            <ul class="--sidebar-list" id="nav_header_insertion_list"></ul>
+            </nav>
+        </details>
+
+        {% endif %}
+        {% endif %}
     </div>
 
     {% include layouts/webinar_plug.html %}

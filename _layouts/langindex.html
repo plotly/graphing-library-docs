@@ -11,13 +11,9 @@
 
         <div class="--wrap">
             <!-- aside - Main Sidebar-->
-            {% if page.page_type == "reference" %}
-            {% include layouts/reference-side-nav.html %}
-            {% elsif page.nosidebar %}
-            <!-- If this tag is set to true in the page, it will not apply sidebar -->
-            {% else %}
+
             {% include layouts/side-bar.html %}
-            {% endif %}
+
             <!-- Main-->
             <section class="--page-body --tutorial-index">
                 {% include layouts/breadcrumb.html %}
