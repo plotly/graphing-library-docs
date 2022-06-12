@@ -167,7 +167,7 @@
   }
 
 </script>
-{% elsif page.permalink contains "r/" %}
+{% elsif page.permalink contains "r/" or page.permalink contains "ggplot2/" %}
 <script>
   window.ALGOLIA_CONFIG = {
     'applicationId': '{{ site.algolia.application_id }}',
