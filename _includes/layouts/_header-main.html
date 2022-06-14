@@ -7,7 +7,7 @@
     <div class="close-menu"></div>
     <ul>
         <li><a style="font-weight: bold;"
-                href="https://community.plotly.com/c/graphing-libraries/{% if page.permalink contains 'javascript' %}javascript{% elsif page.permalink contains 'fsharp' %}net{% elsif page.permalink contains 'csharp' %}net{% else %}{{page.language}}{% endif %}">Forum</a>
+                href="https://community.plotly.com/c/{% if page.permalink contains 'javascript' %}plotly-js{% elsif page.permalink contains 'python' %}plotly-python{% elsif (page.permalink contains r) or (page.permalink contains matlab) or (page.permalink contains julia) or (page.permalink contains fsharp) %}plotly-r-matlab-julia-net{% else %}{% endif %}">Forum</a>
         </li>
         <li><a style="font-weight: bold;" href="https://plotly.com/get-pricing/">Pricing</a></li>
         <li><a style="font-weight: bold;" href="https://dash.plotly.com">Dash</a></li>
