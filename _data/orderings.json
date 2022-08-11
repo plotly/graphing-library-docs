@@ -22,6 +22,8 @@
          "clickmode",
          "dragmode",
          "selectdirection",
+         "activeselection",
+         "newselection",
          "hoverdistance",
          "spikedistance",
          "hoverlabel",
@@ -53,6 +55,7 @@
          "images",
          "updatemenus",
          "sliders",
+         "selections",
 
          "hidesources",
 
