@@ -36,7 +36,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            bundle install --path vendor/bundle
+            bundle install --full-index --path vendor/bundle
             sudo apt-get update
             sudo apt install python-pip
             sudo pip install PyYAML==5.4.1
