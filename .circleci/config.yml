@@ -7,7 +7,7 @@ jobs:
 
     docker:
       # a packaged system that has the instructions for creating a running container.
-      - image: circleci/ruby:2.3.3
+      - image: cimg/ruby:2.3.3
 
     # actions that need to be taken to perform your job
     steps:
