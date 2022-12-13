@@ -7,7 +7,7 @@ jobs:
 
     docker:
       # a packaged system that has the instructions for creating a running container.
-      - image: cimg/ruby:2.6-node-browsers-legacy
+      - image: circleci/ruby:2.6-node-browsers-legacy
 
     # actions that need to be taken to perform your job
     steps:
