@@ -7,7 +7,7 @@ jobs:
 
     docker:
       # a packaged system that has the instructions for creating a running container.
-      - image: circleci/ruby:2.6-node-browsers-legacy
+      - image: circleci/ruby:2.3.3
 
     # actions that need to be taken to perform your job
     steps:
@@ -37,6 +37,11 @@ jobs:
           name: install dependencies
           command: |
             bundle install --full-index --path vendor/bundle
+            sudo rm /etc/apt/sources.list
+            echo "deb http://ftp.us.debian.org/debian/ jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+            echo "deb-src http://ftp.us.debian.org/debian/ jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+            echo "Acquire::Check-Valid-Until false;" | sudo tee -a /etc/apt/apt.conf.d/10-nocheckvalid
+            echo 'Package: *\nPin: origin "archive.debian.org"\nPin-Priority: 500' | sudo tee -a /etc/apt/preferences.d/10-archive-pin
             sudo apt-get update
             sudo apt install python-pip
             sudo pip install PyYAML==5.4.1
