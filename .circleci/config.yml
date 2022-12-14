@@ -36,7 +36,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            bundle install --full-index --path vendor/bundle
+            bundle install --path vendor/bundle
             sudo rm /etc/apt/sources.list
             echo "deb http://ftp.us.debian.org/debian/ jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
             echo "deb-src http://ftp.us.debian.org/debian/ jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
