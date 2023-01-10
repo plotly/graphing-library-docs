@@ -73,7 +73,7 @@
             {% assign filename = page.path %}
             <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/graphing-library-docs/edit/master/" }}" >
         {% elsif page.path contains "/julia/" %}
-            {% assign filename = page.path %}
+            {% assign filename = page.path | replace: "_posts/julia/html/2021-08-17-", "" | replace: ".html", ".md" %}
             <a id="forklink" href= "{{ filename | prepend: "https://github.com/plotly/plotlyjs.jl-docs/edit/master/julia/" }}" >
         {% elsif page.path contains "/fsharp/" %}
             {% assign filename = page.path %}
