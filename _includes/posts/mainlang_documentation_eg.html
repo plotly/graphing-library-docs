@@ -586,39 +586,6 @@
 </section>
 {% endif %}
 
-{% if chart_studio %}
-<section class="--tutorial-section">
-    <header class="--section-header">
-        <a href="#chart-studio" name="chart-studio" id="chart-studio">Chart Studio Integration</a>
-
-        {% assign forloop_idx = 0 %}
-        {%- for page in languagelist -%}
-            {% if page.display_as == "chart_studio" and page.layout != "langindex" %}
-                {% assign forloop_idx = forloop_idx | plus:1 %}
-            {% endif %}
-        {%- endfor -%}
-
-        {% if forloop_idx >= num_examples %}
-        <a href="/{{language}}/chart-studio/" class="langindexlink">More Chart Studio Integration &raquo;</a>
-        {% endif %}
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-
-            {% assign forloop_idx = 0 %}
-
-            {%- for page in languagelist -%}
-                {% if page.display_as == "chart_studio" and page.layout != "langindex" and forloop_idx < num_examples  %}
-                    {% assign forloop_idx = forloop_idx | plus:1 %}
-                    {% include layouts/grid-item.html %}
-                {% endif %}
-            {%- endfor -%}
-
-        </ul>
-    </section>
-</section>
-{% endif %}
-
 {% if financial_analysis %}
 <section class="--tutorial-section" id="financial-analysis">
     <header class="--section-header">
