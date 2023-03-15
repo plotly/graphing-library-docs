@@ -1,0 +1,80 @@
+---
+name: Adding Labels to Shapes
+language: plotly_js
+suite: shape
+order: 11
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+   This example adds a `label` to each of the rectangles on the graph,
+   sets a `font` `size` and `color`, and positions the label
+    'top center' using `textposition`.
+---
+var data = [
+  {
+    x: [
+      '2015-02-01', '2015-02-02', '2015-02-03', '2015-02-04', '2015-02-05',
+      '2015-02-06', '2015-02-07', '2015-02-08', '2015-02-09', '2015-02-10',
+      '2015-02-11', '2015-02-12', '2015-02-13', '2015-02-14', '2015-02-15',
+      '2015-02-16', '2015-02-17', '2015-02-18', '2015-02-19', '2015-02-20',
+      '2015-02-21', '2015-02-22', '2015-02-23', '2015-02-24', '2015-02-25',
+      '2015-02-26', '2015-02-27', '2015-02-28',
+    ],
+    y: [
+      14, 17, 8, 4, 7, 10, 12, 14, 12, 7, 11, 7, 18, 14, 14, 16, 13, 8, 8,
+      7, 7, 3, 9, 9, 4, 13, 9, 6,
+    ],
+    mode: 'line',
+  },
+];
+
+var layout = {
+  title: 'Product price changes and revenue growth',
+  xaxis: { title: 'Date' },
+  yaxis: { title: 'Revenue Growth' },
+
+  shapes: [
+    {
+      type: 'rect',
+      xref: 'x',
+      yref: 'paper',
+      x0: '2015-02-02',
+      y0: 0,
+      x1: '2015-02-08',
+      y1: 1,
+      fillcolor: '#d3d3d3',
+      opacity: 0.2,
+      line: {
+        width: 0,
+      },
+      label: {
+        text: 'Price drop',
+        font: { size: 10, color: 'green' },
+        textposition: 'top center',
+      },
+    },
+    {
+      type: 'rect',
+      xref: 'x',
+      yref: 'paper',
+      x0: '2015-02-16',
+      y0: 0,
+      x1: '2015-02-22',
+      y1: 1,
+      fillcolor: '#d3d3d3',
+      opacity: 0.2,
+      line: {
+        width: 0,
+      },
+      label: {
+        text: 'Price increase',
+        font: { size: 10, color: 'red' },
+        textposition: 'top center',
+      },
+    },
+  ],
+  height: 500,
+  width: 500,
+};
+
+Plotly.newPlot('myDiv', data, layout);
