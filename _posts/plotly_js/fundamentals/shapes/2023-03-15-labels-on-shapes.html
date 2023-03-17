@@ -6,9 +6,12 @@ order: 11
 sitemap: false
 arrangement: horizontal
 markdown_content: |
-   This example adds a `label` to each of the rectangles on the graph,
-   sets a `font` `size` and `color`, and positions the label
-    'top center' using `textposition`.
+   This example adds a `label` to a rectangle and a line on the graph,
+   sets a `font` `size` and `color` on the rectangle, and positions its label
+    'top center' using `textposition`. On the line, we specify a `yanchor` of "top"
+    to anchor the top of the label to its `textposition`.
+    You can also draw new shapes on the graph and each new shape automatically
+    gets a text label.
 ---
 var data = [
   {
@@ -21,7 +24,7 @@ var data = [
       '2015-02-26', '2015-02-27', '2015-02-28',
     ],
     y: [
-      14, 17, 8, 4, 7, 10, 12, 14, 12, 7, 11, 7, 18, 14, 14, 16, 13, 8, 8,
+      14, 17, 8, 4, 7, 10, 12, 14, 12, 11, 10, 9, 18, 14, 14, 16, 13, 8, 8,
       7, 7, 3, 9, 9, 4, 13, 9, 6,
     ],
     mode: 'line',
@@ -32,6 +35,7 @@ var layout = {
   title: 'Product price changes and revenue growth',
   xaxis: { title: 'Date' },
   yaxis: { title: 'Revenue Growth' },
+  dragmode: 'drawline',
 
   shapes: [
     {
@@ -44,6 +48,7 @@ var layout = {
       y1: 1,
       fillcolor: '#d3d3d3',
       opacity: 0.2,
+      editable: true,
       line: {
         width: 0,
       },
@@ -54,27 +59,33 @@ var layout = {
       },
     },
     {
-      type: 'rect',
-      xref: 'x',
-      yref: 'paper',
-      x0: '2015-02-16',
-      y0: 0,
-      x1: '2015-02-22',
-      y1: 1,
+      type: 'line',
+      x0: '2015-02-01',
+      y0: 8,
+      x1: '2015-02-28',
+      y1: 8,
       fillcolor: '#d3d3d3',
       opacity: 0.2,
-      line: {
-        width: 0,
-      },
+      editable: true,
       label: {
-        text: 'Price increase',
-        font: { size: 10, color: 'red' },
-        textposition: 'top center',
+        text: 'January average',
+        yanchor: 'top',
       },
     },
   ],
+  newshape: { label: { text: 'New shape text' } },
   height: 500,
   width: 500,
 };
 
-Plotly.newPlot('myDiv', data, layout);
+var config = { 'modeBarButtonsToAdd': [
+  'drawline',
+  'drawopenpath',
+  'drawclosedpath',
+  'drawcircle',
+  'drawrect',
+  'eraseshape'
+  ]
+};
+
+Plotly.newPlot('myDiv', data, layout, config);
