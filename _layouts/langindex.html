@@ -21,15 +21,15 @@
                 {{ content }}
                 <!--End content -->
                 {% unless page.permalink contains "/reference/" %}
-                {% if page.permalink contains "javascript/" or page.permalink contains "python/" %}
+                {% if page.permalink contains "python/" %}
 
-                <a href="https://dash.plotly.com"><img width="100%" style="margin-top: 20px;"
-                        src="/all_static/images/dash.png" /></a>
+                <a href="https://dash.plotly.com/tutorial?utm_medium=graphing_libraries&utm_content=python_footer"><img width="100%" style="margin-top: 20px;"
+                        src="/all_static/images/dash_2023.png" /></a>
 
-                {%elsif page.permalink contains "r/" or page.permalink contains "ggplot2/" %}
+                {%elsif page.permalink contains "javascript/" %}
 
-                <a href="https://dashr.plotly.com"><img width="100%" style="margin-top: 20px;"
-                        src="/all_static/images/dash.png" /></a>
+                <a href="https://dash.plotly.com/tutorial?utm_medium=graphing_libraries&utm_content=javascript_footer"><img width="100%" style="margin-top: 20px;"
+                        src="/all_static/images/dash_2023.png" /></a>
 
                 {% endif %}
                 {% endunless %}
