@@ -21,8 +21,10 @@ exclude:
     vendor,
     node_modules,
     "_posts/python-v3",
-    "_posts/plotly_js",
   ]
+
+incremental: true
+
 # ---
 # Markdown / Syntax
 # ---
