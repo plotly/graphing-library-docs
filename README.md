@@ -79,7 +79,8 @@ docker run -it -p 4001:4000 -v {PATH_TO_GIT_CLONE}:/graphing-library-docs circle
 # then inside the docker
 cd graphing-library-docs
 bundle install
-bundle exec jekyll serve --host 0.0.0.0
+# change destination to avoid permission issues (no writing to mounted disk). Use host 0.0.0.0 so port can be forwarded out of container
+bundle exec jekyll serve --host 0.0.0.0 --destination ~/_SITE
 ```
 
 3. Visit the pages at: [http://localhost:4001/api/](http://localhost:4001/api/)
