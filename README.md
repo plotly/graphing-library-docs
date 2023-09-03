@@ -75,7 +75,7 @@ bundle install
 
 2. Create a container with Ruby preinstalled, mount (allow docker to access) the git clone, and connect docker port 4000 to localhost port 4001
 ```sh
-docker run -it -p 4001:4000 -v {PATH_TO_GIT_CLONE}:/graphing-library-docs circleci/ruby:2.7.4 bash
+docker run -it -p 4001:4000 -v {PATH_TO_GIT_CLONE}:/graphing-library-docs ruby:2.7.4 bash
 # then inside the docker
 cd graphing-library-docs
 bundle install
