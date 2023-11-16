@@ -29,6 +29,9 @@ window.markprompt = {
                     'How can I use Plotly Express with Dash?',
                 ],
             },
+            conversationMetadata: {
+                "source": "graphing-library-docs",
+            },
             enabled: true,
             model: 'gpt-3.5-turbo',
         },
