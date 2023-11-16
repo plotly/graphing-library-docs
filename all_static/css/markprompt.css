@@ -1,7 +1,7 @@
 :root {
   --markprompt-background: #FFFFFF;
-  --markprompt-muted: #FFFFFF;
-  --markprompt-border: #e5e5e5;
+  --markprompt-muted: #FAFAFA;
+  --markprompt-border: #E5E5E5;
   --markprompt-input: #FFFFFF;
   --markprompt-foreground: #20293d;
   --markprompt-primary: #6D5FE4;
@@ -11,7 +11,7 @@
 
 @media (prefers-color-scheme: dark) {
   :not([data-theme=light]):root {
-    --markprompt-background: #171A1D;
+    --markprompt-background: #0E1012;
     --markprompt-muted: #171A1C;
     --markprompt-border: #3F3F3F;
     --markprompt-input: #171A1D;
@@ -23,7 +23,7 @@
 }
 
 [data-theme=dark]:root {
-  --markprompt-background: #171A1D;
+  --markprompt-background: #0E1012;
   --markprompt-muted: #171A1C;
   --markprompt-border: #3F3F3F;
   --markprompt-input: #171A1D;
@@ -34,7 +34,7 @@
 }
 
 .dark-mode {
-  --markprompt-background: #171A1D;
+  --markprompt-background: #0E1012;
   --markprompt-muted: #171A1C;
   --markprompt-border: #3F3F3F;
   --markprompt-input: #171A1D;
