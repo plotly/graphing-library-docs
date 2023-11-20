@@ -15,6 +15,7 @@ const getLabel = (reference) => {
 };
 
 window.markprompt = {
+    projectKey: 'pk_0upevf7bcscej8JQMALYiqmXoWQkltw3',
     container: '#markprompt',
     options: {
         chat: {
