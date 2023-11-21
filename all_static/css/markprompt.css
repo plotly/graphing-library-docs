@@ -1,6 +1,6 @@
 :root {
   --markprompt-background: #FFFFFF;
-  --markprompt-muted: #FAFAFA;
+  --markprompt-muted: #F3f3f3;
   --markprompt-border: #E5E5E5;
   --markprompt-input: #FFFFFF;
   --markprompt-foreground: #20293d;
@@ -140,6 +140,7 @@
   margin-top: 5px !important;
   margin-bottom: 8px !important;
   max-height: none !important;
+
 }
 :where(.MarkpromptAnswer p code),
 :where(.MarkpromptAnswer ol li code),
@@ -340,3 +341,24 @@ input.MarkpromptPrompt:focus {
   margin-bottom: 16px !important;
 }
 
+ .MarkpromptContentDialog .MarkpromptAnswer pre {
+  background-color: var(--markprompt-background) !important;
+  line-height:1.6666667;
+  margin-top:1.6666667em;
+  margin-bottom:1.6666667em;
+  border-radius:.25rem;
+  padding:.6666667em 1em !important;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+.MarkpromptContentDialog .MarkpromptAnswer code {
+  background-color: var(--markprompt-background) !important;
+  color: var(--markprompt-foreground);
+  padding: 3px !important;
+}
+
+.MarkpromptCopyButton {
+  z-index: 1;
+}
