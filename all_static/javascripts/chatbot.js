@@ -14,6 +14,39 @@ const getLabel = (reference) => {
     return label;
 };
 
+const setCookie = (name, value, days) => {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+};
+
+const getCookie = (name) => {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith(name + '=')) {
+            return cookie.substring(name.length + 1);
+        }
+    }
+    return null;
+};
+
+const getUniqueID = () => {
+    const storedID = getCookie("plotly-chatbot-cookie");
+
+    if (storedID) {
+        return storedID;
+    } else {
+        const newID = generateUniqueID();
+        setCookie("plotly-chatbot-cookie", newID, 365);
+        return newID;
+    }
+};
+
+const generateUniqueID = () => {
+    return Date.now().toString();
+};
+
 window.markprompt = {
     projectKey: 'pk_0upevf7bcscej8JQMALYiqmXoWQkltw3',
     container: '#markprompt',
@@ -31,6 +64,7 @@ window.markprompt = {
                 ],
             },
             conversationMetadata: {
+                "userid": getUniqueID(),
                 "source": "graphing-library-docs",
             },
             enabled: true,
