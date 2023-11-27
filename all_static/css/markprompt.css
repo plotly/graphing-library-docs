@@ -3,14 +3,14 @@
   --markprompt-muted: #F3f3f3;
   --markprompt-border: #E5E5E5;
   --markprompt-input: #FFFFFF;
-  --markprompt-foreground: #20293d;
+  --markprompt-foreground: #3F3F3F;
   --markprompt-primary: #6D5FE4;
   --markprompt-primaryHighlight: #97E1FB;
   --markprompt-secondaryHighlight: #6D5FE4;
 }
 
 @media (prefers-color-scheme: dark) {
-  :not([data-theme=light]):root {
+  :not([data-theme=light]):root.dark-mode {
     --markprompt-background: #0E1012;
     --markprompt-muted: #171A1C;
     --markprompt-border: #3F3F3F;
@@ -22,7 +22,20 @@
   }
 }
 
-[data-theme=dark]:root {
+@media (prefers-color-scheme: dark) {
+  :not([data-theme=light]):root {
+    --markprompt-background: #FFFFFF;
+    --markprompt-muted: #F3f3f3;
+    --markprompt-border: #E5E5E5;
+    --markprompt-input: #FFFFFF;
+    --markprompt-foreground: #3F3F3F;
+    --markprompt-primary: #6D5FE4;
+    --markprompt-primaryHighlight: #97E1FB;
+    --markprompt-secondaryHighlight: #6D5FE4;
+  }
+}
+
+[data-theme=dark]:root.dark-mode {
   --markprompt-background: #0E1012;
   --markprompt-muted: #171A1C;
   --markprompt-border: #3F3F3F;
@@ -40,7 +53,7 @@
   --markprompt-input: #171A1D;
   --markprompt-foreground: #a0aaba;
   --markprompt-primary: #6D5FE4;
-  --markprompt-primaryHighlight: #97E1FB;
+  --markprompt-primaryHighlight: #97E1FB ;
   --markprompt-secondaryHighlight: #6D5FE4;
 }
 
@@ -62,7 +75,6 @@
     right: 0;
   }
 }
-
 
 .MarkpromptContentDialog {
   font-family: Open Sans, sans-serif;
@@ -229,7 +241,6 @@ input.MarkpromptPrompt:focus {
   letter-spacing: initial;
   line-height: initial;
   height: initial;
-  font-size: initial;
 }
 
 .MarkpromptClose {
@@ -359,6 +370,30 @@ input.MarkpromptPrompt:focus {
   padding: 3px !important;
 }
 
+.MarkpromptContentDialog .MarkpromptAnswer li code {
+  font-weight: 600 !important;
+  border: 1px solid var(--markprompt-border);border: 1px solid var(--markprompt-border) !important;
+}
+
+
+.MarkpromptContentDialog .MarkpromptMessages .MarkpromptAnswer p code {
+  border: 1px solid var(--markprompt-border);border: 1px solid var(--markprompt-border) !important;
+}
+
+.MarkpromptContentDialog .MarkpromptMessages .MarkpromptAnswer pre {
+  border: 1px solid var(--markprompt-border);border: 1px solid var(--markprompt-border) !important;
+}
+
+
 .MarkpromptCopyButton {
   z-index: 1;
 }
+
+:where(.MarkpromptReference a) {
+  border-color: var(--markprompt-border);
+}
+
+.MarkpromptTabsContainer .MarkpromptViews .MarkpromptChatView .MarkpromptMessages .MarkpromptReferences p {
+  font-weight: 600 !important;
+}
+
