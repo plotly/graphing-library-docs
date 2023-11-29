@@ -33,11 +33,9 @@ The easiest way to do this is to follow the `Edit this page on GitHub` link at t
 
 For more extensive changes to Ploty's JavaScript documentation, we suggest getting the Jekyll application which builds the site to run locally so that you can test your changes as you develop them. 
 
-This involves cloning the repository and installing its dependencies: [Git](https://git-scm.com/), [Ruby]((https://www.ruby-lang.org/en/), [Jekyll](https://jekyllrb.com/), and the [Python `requests` package](https://pypi.org/project/requests/). 
 
 1. Use [`git`](https://git-scm.com/) to [clone](https://git-scm.com/docs/git-clone) the public `plotly/graphing-library-docs` repository.
 
-To do so, run the following commands in your terminal:
 
 ```sh
 git clone git@github.com:plotly/graphing-library-docs.git
@@ -53,9 +51,12 @@ Your branch is up to date with 'origin/master'.
 nothing to commit, working tree clean
 ```
 
+**Note:** We recommend using the same ruby version as [gh-pages](https://pages.github.com/versions/). Note [RVM](https://rvm.io/rvm/install) is helpful for installing and managing ruby versions.
+
+**Without Docker**
+
 2. Download Ruby and check your `Ruby` version by running the `ruby --version` command in your terminal. 
 
-**Note:** We recommend using `version 2.3.3` or the same ruby version as [gh-pages](https://pages.github.com/versions/). Note [RVM](https://rvm.io/rvm/install) is helpful for installing and managing ruby versions.
 
 3. Download Jekyll and check your Jekyll version by running the `jekyll -v` command in your terminal. We recommend using the same ruby version as [gh-pages](https://pages.github.com/versions/).
 
@@ -66,11 +67,26 @@ gem install bundler
 bundle install
 ```
 
-**Note:** These dependencies should be the same version that [gh-pages](https://pages.github.com/versions/) is using.
-
 5. Serve the Jekyll application: `bundle exec jekyll serve --config _config_dev.yml`.
 
 6. Visit the pages at: [http://localhost:4000/](http://localhost:4000)
+
+**With Docker**
+
+2. Create a container with Ruby preinstalled, mount (allow docker to access) the git clone, and connect docker port 4000 to localhost port 4001
+```sh
+docker run -it -p 4001:4000 -v {PATH_TO_GIT_CLONE}:/graphing-library-docs ruby:2.7.4 bash
+# then inside the docker
+cd graphing-library-docs
+bundle install
+# change destination to avoid permission issues (no writing to mounted disk). Use host 0.0.0.0 so port can be forwarded out of container
+bundle exec jekyll serve --host 0.0.0.0 --destination ~/_SITE
+```
+
+3. Visit the pages at: [http://localhost:4001/api/](http://localhost:4001/api/)
+
+#### Reducing build times
+
 
 **Note** The default Jekyll configuration file only builds the JavaScript posts by [excluding folders](https://jekyllrb.com/docs/configuration/options/). If you want to override this behavior, serve the application with a custom Jekyll configuration file in the root of the repository. Do this by copying `_config_dev.yml`, renaming it `_config_personal.yml`, and modifying the `exclude` statement. 
 
