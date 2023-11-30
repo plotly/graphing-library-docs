@@ -11,6 +11,9 @@ const getHref = (result) => {
 const getLabel = (reference) => {
     var label = reference.meta?.leadHeading?.value || reference.file?.title;
     label = label.replace(/[^\x00-\x7F]/g, "");
+    while (label.includes("plotly-logomark")) {
+        label = label.replace("plotly-logomark", "");
+    }
     return label;
 };
 
