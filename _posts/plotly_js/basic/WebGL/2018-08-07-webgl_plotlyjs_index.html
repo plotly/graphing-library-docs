@@ -12,3 +12,17 @@ thumbnail: thumbnail/webgl.jpg
 
 {% assign examples = site.posts | where:"language","plotly_js" | where:"suite","webgl-vs-svg"| sort: "order" %}
 {% include posts/auto_examples.html examples=examples %}
+<div>
+  <h3>
+    Multiple WebGL Contexts
+  </h3>
+  <p>
+    Each Plotly.js figure by default uses one WebGL context.
+    As web browsers may have a limit on the number of WebGL contexts that any web document can access, this will cause an issue if you want to render many WebGL figures on the one page.
+    If you do and you hit the WebGL context limit, not all figures will render.
+    In the console in Chrome you'll also see a warning like: "Too many active WebGL contexts. Oldest context will be lost".
+    You can use `virtual-webgl` for handling multiple WebGL contexts when you encounter this issue by adding the following script on your page.
+    <pre>&lt;script src="https://unpkg.com/virtual-webgl@1.0.6/src/virtual-webgl.js"&gt;&lt;/script&gt;</pre>
+  </p>
+</div>
+
