@@ -51,6 +51,8 @@ window.markprompt = {
     projectKey: 'pk_0upevf7bcscej8JQMALYiqmXoWQkltw3',
     container: '#markprompt',
     options: {
+        sticky: true,
+        close: { hasIcon: true },
         chat: {
             systemPrompt: "- You are an enthusiastic company representative from Plotly who loves to help people!\\\n- You must never mention a competing product.\\\n- Never give code examples which are not provided in the docs, and don't give code examples in other languages than Python.",
             defaultView: {
