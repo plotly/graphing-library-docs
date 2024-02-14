@@ -72,6 +72,7 @@ window.markprompt = {
             enabled: true,
             model: 'gpt-3.5-turbo',
             maxTokens: 2000,
+            errorText: "Sorry, I'm having some connection issues. Please try again in a few minutes.",
         },
         search: {
             enabled: false,
