@@ -411,6 +411,7 @@
  "direction",
  "fill",
  "fillcolor",
+ "fillgradient",
  "fillpattern",
  "flatshading",
  "font",
