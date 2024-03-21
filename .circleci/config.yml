@@ -56,6 +56,7 @@ jobs:
       - run:
           name: deployment
           command: |
+            set -x
             git config --global user.email "accounts@plot.ly"
             git config --global user.name "plotlydocbot"
             echo
