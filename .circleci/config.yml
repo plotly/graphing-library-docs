@@ -104,8 +104,7 @@ jobs:
             rm -f snapshots/*.bkp
             rm -f snapshots/*/*.bkp
             rm -f snapshots/*/*/*.bkp
-            ruby -e "require 'excon'; Excon.defaults[:ssl_verify_peer] = false"
-            percy snapshot snapshots --enable_javascript
+            percy snapshot snapshots --enable_javascript --debug
             rm -rf 'snapshots/'
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               git clone --depth=1 --branch=gh-pages https://github.com/plotly/documentation.git
