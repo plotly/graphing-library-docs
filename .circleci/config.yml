@@ -7,7 +7,7 @@ jobs:
 
     docker:
       # a packaged system that has the instructions for creating a running container.
-      - image: circleci/ruby:2.3.3
+      - image: circleci/ruby:2.7.4
 
     # actions that need to be taken to perform your job
     steps:
@@ -104,7 +104,7 @@ jobs:
             rm -f snapshots/*.bkp
             rm -f snapshots/*/*.bkp
             rm -f snapshots/*/*/*.bkp
-            percy snapshot snapshots --enable_javascript --debug
+            percy snapshot snapshots --enable_javascript
             rm -rf 'snapshots/'
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               git clone --depth=1 --branch=gh-pages https://github.com/plotly/documentation.git
