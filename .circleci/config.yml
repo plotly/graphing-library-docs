@@ -104,7 +104,7 @@ jobs:
             rm -f snapshots/*.bkp
             rm -f snapshots/*/*.bkp
             rm -f snapshots/*/*/*.bkp
-            export NODE_TLS_REJECT_UNAUTHORIZED=0
+            ruby -e "require 'excon'; Excon.defaults[:ssl_verify_peer] = false"
             percy snapshot snapshots --enable_javascript
             rm -rf 'snapshots/'
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
