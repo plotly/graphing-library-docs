@@ -44,8 +44,8 @@ jobs:
             echo "Acquire::Check-Valid-Until false;" | sudo tee -a /etc/apt/apt.conf.d/10-nocheckvalid
             echo '# Package: *\nPin: origin "archive.debian.org"\nPin-Priority: 500' | sudo tee -a /etc/apt/preferences.d/10-archive-pin
             sudo apt-get update
-            sudo apt install python3-pip
-            sudo apt install python3.11-venv
+            sudo apt-get install python3-pip
+            sudo apt-get install python3-venv
             python3 -m venv .venv
             source .venv/bin/activate
             sudo pip install PyYAML==5.4.1
