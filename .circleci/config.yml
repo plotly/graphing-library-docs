@@ -45,7 +45,7 @@ jobs:
             echo '# Package: *\nPin: origin "archive.debian.org"\nPin-Priority: 500' | sudo tee -a /etc/apt/preferences.d/10-archive-pin
             sudo apt-get update
             sudo apt-get install python3-full python-pip
-            sudo pip install python3-virtualenv
+            sudo pip install virtualenv
             virtualenv venv
             source venv/bin/activate
             sudo pip install PyYAML==5.4.1
