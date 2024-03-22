@@ -7,7 +7,7 @@ jobs:
 
     docker:
       # a packaged system that has the instructions for creating a running container.
-      - image: circleci/ruby:2.3.3
+      - image: circleci/ruby:2.7.4
 
     # actions that need to be taken to perform your job
     steps:
@@ -36,17 +36,21 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            set -x
+            gem install bundler:2.4.22
             bundle install --path vendor/bundle
             sudo rm /etc/apt/sources.list
-            echo "deb http://archive.debian.org/debian/ jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
-            echo "deb-src http://archive.debian.org/debian jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+            echo "deb http://ftp.us.debian.org/debian/ bookworm main contrib non-free" | sudo tee -a /etc/apt/sources.list
+            echo "deb-src http://ftp.us.debian.org/debian/ bookworm main contrib non-free" | sudo tee -a /etc/apt/sources.list
             echo "Acquire::Check-Valid-Until false;" | sudo tee -a /etc/apt/apt.conf.d/10-nocheckvalid
             echo '# Package: *\nPin: origin "archive.debian.org"\nPin-Priority: 500' | sudo tee -a /etc/apt/preferences.d/10-archive-pin
             sudo apt-get update
-            sudo apt install python-pip
-            sudo pip install PyYAML==5.4.1
-            sudo pip install python-frontmatter==0.5.0
-            sudo pip install pathlib
+            sudo apt-get install python3-full python3-pip
+            python3 -m venv venv
+            source venv/bin/activate
+            pip install PyYAML==6.0.1
+            pip install python-frontmatter==0.5.0
+            pip install pathlib
 
       - save_cache:
           key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
@@ -56,6 +60,7 @@ jobs:
       - run:
           name: deployment
           command: |
+            source venv/bin/activate
             git config --global user.email "accounts@plot.ly"
             git config --global user.name "plotlydocbot"
             echo
@@ -103,7 +108,7 @@ jobs:
             rm -f snapshots/*.bkp
             rm -f snapshots/*/*.bkp
             rm -f snapshots/*/*/*.bkp
-            percy snapshot snapshots --enable_javascript
+            bundle exec percy snapshot snapshots --enable_javascript
             rm -rf 'snapshots/'
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               git clone --depth=1 --branch=gh-pages https://github.com/plotly/documentation.git
