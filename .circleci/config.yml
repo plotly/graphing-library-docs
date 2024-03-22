@@ -108,7 +108,7 @@ jobs:
             rm -f snapshots/*.bkp
             rm -f snapshots/*/*.bkp
             rm -f snapshots/*/*/*.bkp
-            percy snapshot snapshots --enable_javascript
+            bundle exec percy snapshot snapshots --enable_javascript
             rm -rf 'snapshots/'
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               git clone --depth=1 --branch=gh-pages https://github.com/plotly/documentation.git
