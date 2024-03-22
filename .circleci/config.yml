@@ -36,7 +36,6 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            set -x
             gem install bundler:2.4.22
             bundle install --path vendor/bundle
             sudo rm /etc/apt/sources.list
