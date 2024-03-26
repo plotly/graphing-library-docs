@@ -71,11 +71,11 @@ jobs:
             python check-or-enforce-order.py _posts/r/
             python check-or-enforce-order.py _posts/matlab
             python check-or-enforce-order.py _posts/plotly_js
+            deactivate
+            rm -rf venv
             echo `md5 -q all_static/css/main.css` > _data/cache_bust_css.yml
             bundle exec jekyll build
             rm _data/mapbox_token.yml
-            deactivate
-            rm -rf venv
             mkdir snapshots
             cd _site
             cp -r 'all_static' '../snapshots'
@@ -127,5 +127,4 @@ jobs:
       - store_artifacts:
           path: site.zip
           destination: site_new
-
 
