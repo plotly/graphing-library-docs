@@ -109,6 +109,7 @@ jobs:
             rm -f snapshots/*/*/*.bkp
             bundle exec percy snapshot snapshots --enable_javascript
             rm -rf 'snapshots/'
+            zip -r site.zip _site/
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               git clone --depth=1 --branch=gh-pages https://github.com/plotly/documentation.git
               git config user.name plotlydocbot
@@ -121,3 +122,8 @@ jobs:
               cd ..
               rm -rf documentation
             fi
+      - store_artifacts:
+          path: site.zip
+          destination: site_new
+
+
