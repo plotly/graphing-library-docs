@@ -74,6 +74,8 @@ jobs:
             echo `md5 -q all_static/css/main.css` > _data/cache_bust_css.yml
             bundle exec jekyll build
             rm _data/mapbox_token.yml
+            deactivate
+            rm -rf venv
             mkdir snapshots
             cd _site
             cp -r 'all_static' '../snapshots'
