@@ -19,6 +19,7 @@
 
          "modebar",
          "hovermode",
+         "hoversubplots",
          "clickmode",
          "dragmode",
          "selectdirection",
@@ -104,6 +105,7 @@
  "mode",
  "ids",
  "idssrc",
+ "zorder",
 
  "x",
  "xsrc",
