@@ -19,6 +19,7 @@
 
          "modebar",
          "hovermode",
+         "hoversubplots",
          "clickmode",
          "dragmode",
          "selectdirection",
@@ -250,6 +251,7 @@
  "hovertemplatesrc",
 "xhoverformat",
 "yhoverformat",
+"zorder",
 "uhoverformat",
 "vhoverformat",
 "whoverformat",
