@@ -105,6 +105,7 @@
  "mode",
  "ids",
  "idssrc",
+ "zorder",
 
  "x",
  "xsrc",
@@ -251,7 +252,6 @@
  "hovertemplatesrc",
 "xhoverformat",
 "yhoverformat",
-"zorder",
 "uhoverformat",
 "vhoverformat",
 "whoverformat",
