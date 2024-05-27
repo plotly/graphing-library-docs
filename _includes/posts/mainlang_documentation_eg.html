@@ -530,7 +530,7 @@
             {% endif %}
         {%- endfor -%}
 
-        {% if forloop_idx > num_examples %}
+        {% if forloop_idx >= num_examples %}
         <a href="/{{language}}/controls/" class="langindexlink">More Controls &raquo;</a>
         {% endif %}
     </header>
