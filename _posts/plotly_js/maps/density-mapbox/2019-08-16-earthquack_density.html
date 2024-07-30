@@ -1,8 +1,8 @@
 ---
-name: Outdoors Tile that Requires Token
+name: Outdoors Tile
 language: plotly_js
 layout: base
-suite: mapbox-density-heatmaps
+suite: tile-density-heatmaps
 order: 3
 sitemap: false
 arrangement: horizontal
@@ -18,11 +18,9 @@ var data = [{
   hoverinfo: 'skip'}];
 
 var layout = {
-    mapbox: {center: {lon: 60, lat: 30}, style: "outdoors", zoom: 2},
+    map: {center: {lon: 60, lat: 30}, style: "outdoors", zoom: 2},
     coloraxis: {colorscale: "Viridis"}, title: {text: "Earthquake Magnitude"},
     width: 600, height: 400, margin: {t: 30, b: 0}};
 
-var config = {mapboxAccessToken: "your access token"};
-
-Plotly.newPlot('myDiv', data, layout, config);
+Plotly.newPlot('myDiv', data, layout);
 })
