@@ -1,7 +1,7 @@
 ---
-name: Adding Lines to Mapbox
+name: Adding Lines to Maps
 language: plotly_js
-suite: scattermapbox
+suite: scatter-tile-maps
 order: 4
 sitemap: false
 arrangement: horizontal
@@ -26,7 +26,7 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/c34aaa0b1b3cddad335173
         var opacityValue = count[i]/getMaxOfArray(count);
 
         var result = {
-            type: 'scattermapbox',
+            type: 'scattermap',
             lon: [ startLongitude[i] , endLongitude[i] ],
             lat: [ startLat[i] , endLat[i] ],
             mode: 'lines',
@@ -42,7 +42,7 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/c34aaa0b1b3cddad335173
 
     layout = {
       dragmode: 'zoom',
-      mapbox: {
+      map: {
         center: {
           lat: 38.03697222,
           lon: -90.70916722
@@ -65,10 +65,6 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/c34aaa0b1b3cddad335173
       plot_bgcolor: '#191A1A',
       showlegend: false
    };
-
-  Plotly.setPlotConfig({
-    mapboxAccessToken: "your access token"
-  })
 
   Plotly.newPlot("myDiv", data, layout, {showLink: false});
 
