@@ -14,7 +14,7 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k
 
 var data = [{
   lon: unpack(rows, 'Longitude'), lat: unpack(rows, 'Latitude'), radius:10,
-  z: unpack(rows, 'Magnitude'), type: "densityma", coloraxis: 'coloraxis',
+  z: unpack(rows, 'Magnitude'), type: "densitymap", coloraxis: 'coloraxis',
   hoverinfo: 'skip'}];
 
 var layout = {
