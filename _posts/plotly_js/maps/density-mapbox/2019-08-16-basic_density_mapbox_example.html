@@ -2,12 +2,17 @@
 name: Stamen Terrain Tile
 language: plotly_js
 suite: tile-density-heatmaps
-order: 5
+order: 6
 sitemap: false
 layout: base
 arrangement: horizontal
 markdown_content: |
 
+<strong>> Mapbox traces are deprecated and may be removed in a future version of Plotly.js.</strong>
+
+  Earlier examples use traces that render with [Maplibre GL JS](https://maplibre.org/maplibre-gl-js/docs).
+  These traces were introduced in Plotly.js 2.35.0 and replace Mapbox-based tile maps,
+  which are now deprecated. Here's one of the earlier examples written using the Mapbox-based `densitymapbox` trace.
 
 ---
 var data = [{type: 'densitymapbox', lon: [10, 20, 30], lat: [15, 25, 35], z: [1, 3, 2]}];
