@@ -1,16 +1,16 @@
 ---
-description: How to make a D3.js-based density mapbox in JavaScript. A density mapbox
+description: How to make a tile-based density heatmap in JavaScript. A density heatmap
   uses a variable binding expression to display population density.
 display_as: maps
 language: plotly_js
 layout: base
-name: Mapbox Density Heatmap
+name: Tile Density Heatmap
 order: 2
 page_type: example_index
-permalink: javascript/mapbox-density-heatmaps/
-redirect_from: javascript-graphing-library/density-maps/
+permalink: javascript/tile-density-heatmaps/
+redirect_from: javascript/mapbox-density-heatmaps/
 thumbnail: thumbnail/mapbox-density.png
 ---
 
-{% assign examples = site.posts | where:"language","plotly_js" | where:"suite","mapbox-density-heatmaps" | sort: "order" %}
+{% assign examples = site.posts | where:"language","plotly_js" | where:"suite","tile-density-heatmaps" | sort: "order" %}
 {% include posts/auto_examples.html examples=examples %}

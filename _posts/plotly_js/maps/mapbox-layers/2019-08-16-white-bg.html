@@ -1,13 +1,13 @@
 ---
-name: Base Tiles from the USGS, no token needed
+name: Base Tiles from the USGS
 language: plotly_js
-suite: mapbox-layers
+suite: map-layers
 order: 5
 sitemap: false
 arrangement: horizontal
 markdown_content: |
 
-    Here is an example of a map which uses a public USGS imagery map, specified in layout.mapbox.layers, and which is rendered below the data layer.
+    Here is an example of a map which uses a public USGS imagery map, specified in layout.map.layers, and which is rendered below the data layer.
 ---
 d3.csv(
 	"https://raw.githubusercontent.com/plotly/datasets/master/2015_06_30_precipitation.csv",
@@ -20,7 +20,7 @@ d3.csv(
 
 var data = [
 	{
-		type: "scattermapbox",
+		type: "scattermap",
 		text: unpack(rows, "Globvalue"),
 		lon: unpack(rows, "Lon"),
 		lat: unpack(rows, "Lat"),
@@ -30,7 +30,7 @@ var data = [
 
 var layout = {
 	dragmode: "zoom",
-	mapbox: {
+	map: {
 		style: "white-bg",
 		layers: [
 			{
