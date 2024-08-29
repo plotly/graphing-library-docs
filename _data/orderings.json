@@ -46,6 +46,7 @@
          "ternary",
          "scene",
          "geo",
+         "map",
          "mapbox",
          "polar",
          "smith",
@@ -79,7 +80,7 @@
 
         "scatter3d", "surface", "mesh3d", "cone", "streamtube", "volume", "isosurface",
 
-        "scattergeo", "choropleth", "scattermapbox", "choroplethmapbox", "densitymapbox",
+        "scattergeo", "choropleth", "scattermap", "scattermapbox", "choroplethmap", "choroplethmapbox", "densitymap", "densitymapbox",
 
         "scatterpolar", "scatterpolargl", "barpolar", "scatterternary", "scattersmith", "sunburst", "treemap", "icicle",
 
