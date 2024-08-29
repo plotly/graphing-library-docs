@@ -1,14 +1,14 @@
 ---
 name: Basic Example
 language: plotly_js
-suite: scattermapbox
+suite: scatter-tile-maps
 order: 1
 sitemap: false
 arrangement: horizontal
 ---
 
 var data = [{
-  type:'scattermapbox',
+  type:'scattermap',
   lat:['45.5017'],
   lon:['-73.5673'],
   mode:'markers',
@@ -21,7 +21,7 @@ var data = [{
 var layout = {
   autosize: true,
   hovermode:'closest',
-  mapbox: {
+  map: {
     bearing:0,
     center: {
       lat:45,
@@ -31,9 +31,5 @@ var layout = {
     zoom:5
   },
 }
-
-Plotly.setPlotConfig({
-  mapboxAccessToken: "your access token"
-})
 
 Plotly.newPlot('myDiv', data, layout)

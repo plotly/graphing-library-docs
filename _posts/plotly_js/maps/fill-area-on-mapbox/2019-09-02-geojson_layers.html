@@ -1,22 +1,22 @@
 ---
 name: GeoJSON Layers
 language: plotly_js
-suite: filled-area-on-mapbox
+suite: filled-area-on-map
 order: 3
 sitemap: false
 arrangement: horizontal
 markdown_content: |
 
-    This example shows an area below [water layer](https://plotly.com/javascript/reference/choroplethmapbox/#choroplethmapbox-below), and sets geojson object of type feature and geometries of type [MultiPolygon](https://plotly.com/javascript/reference/choroplethmapbox/#choroplethmapbox-geojson).
+    This example shows an area below [water layer](https://plotly.com/javascript/reference/choroplethmap/#choroplethmap-below), and sets geojson object of type feature and geometries of type [MultiPolygon](https://plotly.com/javascript/reference/choroplethmap/#choroplethmap-geojson).
 ---
 var data = [{
-    type: "scattermapbox", mode: "markers",
+    type: "scattermap", mode: "markers",
     lon: [-73.605], lat: [45.51],
     marker: { size: 20, color: ["cyan"] }
   }];
 
 var layout = {
-  mapbox: {
+  map: {
     style: "dark",
     center: { lon: -73.6, lat: 45.515},
     zoom: 12, layers: [{
@@ -54,6 +54,4 @@ var layout = {
   height: 450, width: 700
 };
 
-var config = {mapboxAccessToken: "your access token"};
-
-Plotly.newPlot("myDiv", data, layout, config);
+Plotly.newPlot("myDiv", data, layout);

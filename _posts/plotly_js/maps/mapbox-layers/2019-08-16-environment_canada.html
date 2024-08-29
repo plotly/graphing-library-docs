@@ -1,13 +1,13 @@
 ---
-name: Base Tiles from the USGS, radar overlay from Environment Canada, no token needed
+name: Base Tiles from the USGS, radar overlay from Environment Canada
 language: plotly_js
-suite: mapbox-layers
+suite: map-layers
 order: 6
 sitemap: false
 arrangement: horizontal
 markdown_content: |
 
-    Here is the same example, with in addition, a WMS layer from Environment Canada which displays near-real-time radar imagery in partly-transparent raster tiles, rendered above the go.Scattermapbox trace, as is the default.
+    Here is the same example, with in addition, a WMS layer from Environment Canada which displays near-real-time radar imagery in partly-transparent raster tiles, rendered above the go.Scattermap trace, as is the default.
 ---
 d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2015_06_30_precipitation.csv', function(err, rows){
       function unpack(rows, key) {
@@ -15,14 +15,14 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2015_06_30_prec
 		}
 
 var data = [{
-        type: 'scattermapbox', text: unpack(rows, 'Globvalue'),
+        type: 'scattermap', text: unpack(rows, 'Globvalue'),
         lon: unpack(rows, 'Lon'), lat: unpack(rows, 'Lat'),
         marker: {color: 'fuchsia', size: 4}
     }];
 
 var layout = {
 	dragmode: 'zoom',
-	mapbox: {
+	map: {
 		style: 'white-bg',
 		layers: [
 			{
