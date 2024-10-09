@@ -17,7 +17,7 @@ This page outlines the changes in Plotly.js version 3 and cases where you may ne
 
 Plotly.js 3 removes the following features that were deprecated in previous versions.
 
-### `annotation.ref`
+### `annotation.ref` Attribute
 
 `annotation.ref` has been removed. Use `annotation.xref` and `annotation.yref` instead.
 
@@ -57,11 +57,16 @@ var layout = {
 ...
 ```
 
-### `opacity` on Error Bars
+### `heatmapgl` Trace
+
+`heatmapgl` has been removed. Use `heatmap` instead.
+
+
+### `opacity` Attribute on Error Bars
 
 The `opacity` attribute on error bars has been removed. Use the alpha channel of the `color` attribute instead.
 
-Here's a previous example from the Plotly.js docs that uses `opacity`.
+Here's an example that was previously in the Plotly.js docs, and which uses `opacity`.
 
 ```
   error_y: {
@@ -86,3 +91,60 @@ And here it is rewritten to use the alpha channel on a `rgba` color value.
   }
 
 ```
+
+### `pointcloud` Trace
+
+`pointcloud` has been removed. Use `scattergl` instead.
+
+Here's an example that was previously in the Plotly.js docs and which uses `pointcloud`:
+
+
+```js
+var myPlot = document.getElementById('myDiv');
+
+var xy = new Float32Array([1,2,3,4,5,6,0,4]);
+
+
+data = [{ xy: xy,  type: 'pointcloud' }];
+
+layout = { };
+
+
+Plotly.newPlot('myDiv', data, layout);
+```
+
+And here it is rewritten to use `scattergl`:
+
+```js
+var myPlot = document.getElementById('myDiv');
+
+var xy = new Float32Array([1,2,3,4,5,6,0,4]);
+
+var x = [];
+var y = [];
+for (var i = 0; i < xy.length; i += 2) {
+    x.push(xy[i]);
+    y.push(xy[i + 1]);
+}
+
+var data = [{
+    x: x,
+    y: y,
+    mode: 'markers',
+    type: 'scattergl',
+    marker: {
+        size: 10,
+        color: 'blue',
+        opacity: 0.8
+    }
+}];
+var layout = {
+    title: 'Point Cloud',
+    xaxis: { title: 'X Axis' },
+    yaxis: { title: 'Y Axis' }
+};
+
+Plotly.newPlot('myDiv', data, layout);
+```
+
+
