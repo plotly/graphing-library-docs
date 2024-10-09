@@ -17,7 +17,7 @@ This page outlines the changes in Plotly.js version 3 and cases where you may ne
 
 Plotly.js 3 removes the following features that were deprecated in previous versions.
 
-### annotation.ref
+### `annotation.ref`
 
 `annotation.ref` has been removed. Use `annotation.xref` and `annotation.yref` instead.
 
@@ -55,4 +55,34 @@ var layout = {
     }]
 };
 ...
+```
+
+### `opacity` on Error Bars
+
+The `opacity` attribute on error bars has been removed. Use the alpha channel of the `color` attribute instead.
+
+Here's a previous example from the Plotly.js docs that uses `opacity`.
+
+```
+  error_y: {
+    type: 'constant',
+    value: 0.1,
+    color: '#85144B',
+    thickness: 1.5,
+    width: 3,
+    opacity: 0.5
+  }
+
+```
+And here it is rewritten to use the alpha channel on a `rgba` color value.
+
+```
+  error_y: {
+    type: 'constant',
+    value: 0.1,
+    color: 'rgba(133, 20, 75, 0.5)',
+    thickness: 1.5,
+    width: 3,
+  }
+
 ```
