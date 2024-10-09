@@ -57,6 +57,58 @@ var layout = {
 ...
 ```
 
+### `bardir` Attribute on Bar Charts
+
+The `bardir` attribute for setting the bar direction on bar charts has been removed. Use `orientation` instead.
+
+Here's an example using `bardir` to make the bars horizontal:
+
+```js
+var data = [{
+    type: 'bar',
+    x: [1, 2, 3, 4],
+    y: [10, 15, 13, 17],
+    bardir: 'h',
+}];
+
+var layout = {
+    title: 'Bar Chart with Horizontal Bars',
+    xaxis: {
+        title: 'X Axis'
+    },
+    yaxis: {
+        title: 'Y Axis'
+    }
+};
+
+
+Plotly.newPlot('bar-chart', data, layout);
+```
+
+And here it is rewritten to use `orientation`:
+
+```js
+var data = [{
+    type: 'bar',
+    x: [1, 2, 3, 4],
+    y: [10, 15, 13, 17],
+    orientation: 'h',
+}];
+
+var layout = {
+    title: 'Bar Chart with Horizontal Bars',
+    xaxis: {
+        title: 'X Axis'
+    },
+    yaxis: {
+        title: 'Y Axis'
+    }
+};
+
+
+Plotly.newPlot('bar-chart', data, layout);
+```
+
 ### `heatmapgl` Trace
 
 `heatmapgl` has been removed. Use `heatmap` instead.
