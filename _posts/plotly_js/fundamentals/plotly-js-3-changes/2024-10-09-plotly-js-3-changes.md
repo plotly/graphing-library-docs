@@ -231,52 +231,6 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 ```
 
-## `title` Attribute as a String
-
-The `title` attribute can no longer be set as a string. Use `title.text` instead.
-
-Here's an example that sets `title` with strings on the chart and on the axes:
-
-```js
-var data = [{
-    x: [1, 2, 3, 4, 5],
-    y: [1, 2, 4, 8, 16]
-}];
-
-var layout = {
-    title: 'My chart title',
-    xaxis: { title: 'x-axis title' },
-    yaxis: { title: 'y-axis title' }
-};
-
-Plotly.newPlot('myDiv', data, layout);
-```
-
-And here it is rewritten to use `title.text`:
-
-```js
-var data = [
-  {
-    x: [1, 2, 3, 4, 5],
-    y: [1, 2, 4, 8, 16]
-  }
-];
-
-var layout = {
-  title: { text: "My chart title" },
-  xaxis: {
-    title: {
-      text: "x-axis title"
-    }
-  },
-  yaxis: { title: { text: "y-axis title" } }
-};
-
-Plotly.newPlot("myDiv", data, layout);
-```
-
-
-
 ### `titlefont`,`titleposition`, `titleside`, and `titleoffset` Attributes
 
 The `titlefont`,`titleposition`, `titleside`, and `titleoffset` attributes are removed. Replace them with `title.font`, `title.position`, `title.side`, and `title.offset`.
