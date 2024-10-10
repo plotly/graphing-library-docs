@@ -109,6 +109,38 @@ var layout = {
 Plotly.newPlot('bar-chart', data, layout);
 ```
 
+### `cameraposition` Attribute on 3D Surface Plots
+
+The `cameraposition` attribute on 3D surface plots has been removed. Use `camera` instead.
+
+If you are using `cameraposition`, you'll need to make some changes to it for it work with the `camera` attribute. Here's an example of converting a `cameraposition` to `camera`. This example uses [gl-mat4](https://www.npmjs.com/package/gl-mat4#fromquatoutmat4-qquat4).
+
+```js
+var m4FromQuat = require('gl-mat4/fromQuat');
+
+// Original cameraposition
+var cameraposition = <cameraposition>;
+
+var rotation = cameraposition[0];
+var center = cameraposition[1];
+var radius = cameraposition[2];
+var mat = m4FromQuat([], rotation);
+var eye = [];
+
+for(j = 0; j < 3; ++j) {
+    eye[j] = center[j] + radius * mat[2 + 4 * j];
+}
+
+// New camera
+var camera = {
+    eye: {x: eye[0], y: eye[1], z: eye[2]},
+    center: {x: center[0], y: center[1], z: center[2]},
+    up: {x: 0, y: 0, z: 1}
+};
+```
+
+
+
 ### `heatmapgl` Trace
 
 `heatmapgl` has been removed. Use `heatmap` instead.
