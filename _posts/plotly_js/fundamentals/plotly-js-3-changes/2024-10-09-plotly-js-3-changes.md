@@ -199,4 +199,48 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 ```
 
+### `titlefont`,`titleposition`, `titleside`, and `titleoffset` Attributes
 
+The `titlefont`,`titleposition`, `titleside`, and `titleoffset` attributes are removed. Replace them with `title.font`, `title.position`, `title.side`, and `title.offset`.
+
+Here's an example that uses `titlefont`:
+
+```js
+var data = [{
+    type: 'bar',
+    x: ['A', 'B', 'C', 'D'],
+    y: [10, 15, 13, 17]
+}];
+
+var layout = {
+    title: {
+        text: 'Chart Title',
+    },
+    titlefont: {
+        size: 40
+    }
+};
+
+Plotly.newPlot('chart', data, layout);
+```
+
+And here it is rewritten to use `title.font`:
+
+```js
+var data = [{
+    type: 'bar',
+    x: ['A', 'B', 'C', 'D'],
+    y: [10, 15, 13, 17]
+}];
+
+var layout = {
+    title: {
+        text: 'Chart Title',
+        font: {
+            size: 40
+        }
+    },
+};
+
+Plotly.newPlot('chart', data, layout);
+```
