@@ -109,9 +109,9 @@ var layout = {
 Plotly.newPlot('bar-chart', data, layout);
 ```
 
-### `cameraposition` Attribute on 3D Surface Plots
+### `layout.scene.cameraposition` Attribute for 3D Plots
 
-The `cameraposition` attribute on 3D surface plots has been removed. Use `camera` instead.
+The `layout.scene.cameraposition` attribute on 3D plots has been removed. Use `layout.scene.camera` instead.
 
 If you are using `cameraposition`, you'll need to make some changes to it for it work with the `camera` attribute. Here's an example of converting a `cameraposition` to `camera`. This example uses [gl-mat4](https://www.npmjs.com/package/gl-mat4#fromquatoutmat4-qquat4).
 
@@ -139,12 +139,31 @@ var camera = {
 };
 ```
 
-
-
 ### `heatmapgl` Trace
 
 `heatmapgl` has been removed. Use `heatmap` instead.
 
+```
+var data = [
+  {
+    z: [[1, 20, 30], [20, 1, 60], [30, 60, 1]],
+    type: 'heatmapgl'
+  }
+];
+
+Plotly.newPlot('myDiv', data);
+```
+
+```
+var data = [
+  {
+    z: [[1, 20, 30], [20, 1, 60], [30, 60, 1]],
+    type: 'heatmap'
+  }
+];
+
+Plotly.newPlot('myDiv', data);
+```
 
 ### `opacity` Attribute on Error Bars
 
