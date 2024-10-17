@@ -195,6 +195,10 @@ And here it is rewritten to use the alpha channel on a `rgba` color value.
 
 ```
 
+### jQuery Events
+
+Support for using jQuery events has been removed. Use [Plotly.js events](/javascript/plotlyjs-events/) instead.
+
 ### `pointcloud` Trace
 
 `pointcloud` has been removed. Use `scattergl` instead.
@@ -249,6 +253,11 @@ var layout = {
 
 Plotly.newPlot('myDiv', data, layout);
 ```
+
+### `plot3dPixelRatio` for WebGL Image Export
+
+`plotGlPixelRatio` for setting the pixel ration during WebGL image export has been removed. Use `plotGlPixelRatio` instead.
+
 
 ### `titlefont`,`titleposition`, `titleside`, and `titleoffset` Attributes
 
