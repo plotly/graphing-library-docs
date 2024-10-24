@@ -311,6 +311,10 @@ var layout = {
 Plotly.newPlot('chart', data, layout);
 ```
 
+### Transforms
+
+Transforms have been removed.
+
 ### `zauto`, `zmin`, and `zmax` from Surface Trace
 
 The `zauto`, `zmin`, and `zmax` attributes have been removed on surface traces. Use `cauto`, `cmin`, and `cmax` instead.
