@@ -260,7 +260,7 @@ Plotly.newPlot('myDiv', data, layout);
 
 ### `plot3dPixelRatio` for WebGL Image Export
 
-The `plotGlPixelRatio` option on `config` for setting the pixel ration during WebGL image export has been removed. Use `plotGlPixelRatio` instead.
+The `plot3dPixelRatio` option on `config` for setting the pixel ration during WebGL image export has been removed. Use `plotGlPixelRatio` instead.
 
 
 ### `titlefont`,`titleposition`, `titleside`, and `titleoffset` Attributes
