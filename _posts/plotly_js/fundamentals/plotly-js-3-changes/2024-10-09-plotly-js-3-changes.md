@@ -59,9 +59,7 @@ var layout = {
 
 ### `autotick` Attribute
 
-The `autotick` attribute has been removed.
-
-Use `tickmode: 'auto'` instead of `autotick: true` and `tickmode: 'linear'` instead of `autotick: false`.
+The `autotick` attribute has been removed. Use `tickmode: 'auto'` instead of `autotick: true` and `tickmode: 'linear'` instead of `autotick: false`.
 
 ### `bardir` Attribute on Bar Charts
 
