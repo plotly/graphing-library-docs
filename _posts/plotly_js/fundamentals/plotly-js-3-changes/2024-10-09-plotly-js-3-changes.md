@@ -117,7 +117,7 @@ Plotly.newPlot('bar-chart', data, layout);
 
 The `layout.scene.cameraposition` attribute on 3D plots has been removed. Use `layout.scene.camera` instead.
 
-If you are using `cameraposition`, you'll need to make some changes to it for it work with the `camera` attribute. Here's an example of converting a `cameraposition` to `camera`. This example uses [gl-mat4](https://www.npmjs.com/package/gl-mat4#fromquatoutmat4-qquat4).
+If you are using `cameraposition`, you'll need to update it for it work with the `camera` attribute. Here's an example of converting a `cameraposition` to `camera`. This example uses [gl-mat4](https://www.npmjs.com/package/gl-mat4#fromquatoutmat4-qquat4).
 
 ```js
 var m4FromQuat = require('gl-mat4/fromQuat');
