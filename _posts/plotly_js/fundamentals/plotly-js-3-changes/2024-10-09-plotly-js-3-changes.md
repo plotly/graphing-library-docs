@@ -319,4 +319,32 @@ Transforms have been removed.
 
 The `zauto`, `zmin`, and `zmax` attributes have been removed on surface traces. Use `cauto`, `cmin`, and `cmax` instead.
 
+```JavaScript
+var data = [{
+    z: [
+        [1, 20, 30, 50],
+        [20, 1, 60, 80],
+        [30, 60, 1, 100],
+        [50, 80, 100, 1]
+    ],
+    type: 'surface',
+    zauto: false,
+    zmin: 0,
+    zmax: 100
+}];
+```
 
+```JavaScript
+var data = [{
+    z: [
+        [1, 20, 30, 50],
+        [20, 1, 60, 80],
+        [30, 60, 1, 100],
+        [50, 80, 100, 1]
+    ],
+    type: 'surface',
+    cauto: false,
+    cmin: 0,
+    cmax: 100
+}];
+```
