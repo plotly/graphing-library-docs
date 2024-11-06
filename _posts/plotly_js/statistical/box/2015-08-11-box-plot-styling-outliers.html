@@ -59,7 +59,9 @@ var trace4 = {
 var data = [trace1, trace2, trace3, trace4];
 
 var layout = {
-  title: 'Box Plot Styling Outliers'
+  title: {
+    text: 'Box Plot Styling Outliers'
+  }
 };
 
 Plotly.newPlot('myDiv', data, layout);
