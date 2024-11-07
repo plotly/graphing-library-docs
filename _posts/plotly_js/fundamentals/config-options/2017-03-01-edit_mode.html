@@ -6,7 +6,7 @@ order: 2
 sitemap: false
 arrangement: horizontal
 markdown_content: |
-  In editable mode, users can edit the chart title, axis labels and trace names in the legend.  
+  In editable mode, users can edit the chart title, axis labels and trace names in the legend.
 ---
 var trace1 = {
   x: [0, 1, 2, 3, 4],
@@ -23,6 +23,10 @@ var trace2 = {
 };
 
 var data = [trace1, trace2];
-var layout = {title: 'Click Here<br>to Edit Chart Title'};
+var layout = {
+  title: {
+      text: 'Click Here<br>to Edit Chart Title'
+  }
+};
 
 Plotly.newPlot('myDiv', data, layout, {editable: true});
