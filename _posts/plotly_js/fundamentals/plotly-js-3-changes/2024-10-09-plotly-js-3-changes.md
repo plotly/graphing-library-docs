@@ -21,8 +21,7 @@ Plotly.js 3 removes the following features that were deprecated in previous vers
 
 `annotation.ref` has been removed. Use `annotation.xref` and `annotation.yref` instead.
 
-
-Example using `annotation.ref`:
+Here's an example using `annotation.ref`, followed by teh same example rewritte to use `annotation.xref` and `annotation.yref`:
 
 ```js
 ...
@@ -38,8 +37,6 @@ var layout = {
 };
 ...
 ```
-
-Example using `annotation.xref` and `annotation.yref`:
 
 ```js
 ...
@@ -65,7 +62,7 @@ The `autotick` attribute has been removed. Use `tickmode: 'auto'` instead of `au
 
 The `bardir` attribute for setting the bar direction on bar charts has been removed. Use `orientation` instead.
 
-Here's an example using `bardir` to make the bars horizontal:
+Here's an example using `bardir` to make the bars horizontal, followed by the same example rewritten to use `orientation`:
 
 ```js
 var data = [{
@@ -88,8 +85,6 @@ var layout = {
 
 Plotly.newPlot('bar-chart', data, layout);
 ```
-
-And here it is rewritten to use `orientation`:
 
 ```js
 var data = [{
@@ -173,7 +168,7 @@ Plotly.newPlot('myDiv', data);
 
 The `opacity` attribute on error bars has been removed. Use the alpha channel of the `color` attribute instead.
 
-Here's an example that was previously in the Plotly.js docs, and which uses `opacity`.
+Here's an example that was previously in the Plotly.js docs, and which uses `opacity`, followed by the same example rewritten to use the alpha channel on a `rgba` color value.
 
 ```
   error_y: {
@@ -186,7 +181,6 @@ Here's an example that was previously in the Plotly.js docs, and which uses `opa
   }
 
 ```
-And here it is rewritten to use the alpha channel on a `rgba` color value.
 
 ```
   error_y: {
@@ -207,8 +201,7 @@ Support for using jQuery events has been removed. Use [Plotly.js events](/javasc
 
 `pointcloud` has been removed. Use `scattergl` instead.
 
-Here's an example that was previously in the Plotly.js docs and which uses `pointcloud`:
-
+Here's an example that was previously in the Plotly.js docs and which uses `pointcloud`, followed by the same example rewritten to use `scattergl`:
 
 ```js
 var myPlot = document.getElementById('myDiv');
@@ -223,8 +216,6 @@ layout = { };
 
 Plotly.newPlot('myDiv', data, layout);
 ```
-
-And here it is rewritten to use `scattergl`:
 
 ```js
 var myPlot = document.getElementById('myDiv');
@@ -263,11 +254,36 @@ Plotly.newPlot('myDiv', data, layout);
 The `plot3dPixelRatio` option on `config` for setting the pixel ration during WebGL image export has been removed. Use `plotGlPixelRatio` instead.
 
 
+## `title` Attribute as a String
+
+The `title` attribute can no longer be set as a string. Use `title.text` instead. Here's an example of how to set the title using `title.text`:
+
+```js
+var data = [
+  {
+    x: [1, 2, 3, 4, 5],
+    y: [1, 2, 4, 8, 16]
+  }
+];
+
+var layout = {
+  title: { text: "My chart title" },
+  xaxis: {
+    title: {
+      text: "x-axis title"
+    }
+  },
+  yaxis: { title: { text: "y-axis title" } }
+};
+
+Plotly.newPlot("myDiv", data, layout);
+```
+
 ### `titlefont`,`titleposition`, `titleside`, and `titleoffset` Attributes
 
 The `titlefont`,`titleposition`, `titleside`, and `titleoffset` attributes are removed. Replace them with `title.font`, `title.position`, `title.side`, and `title.offset`.
 
-Here's an example that uses `titlefont`:
+Here's an example that uses `titlefont`, followed by the same example rewritten to use `title.font`:
 
 ```js
 var data = [{
@@ -287,8 +303,6 @@ var layout = {
 
 Plotly.newPlot('chart', data, layout);
 ```
-
-And here it is rewritten to use `title.font`:
 
 ```js
 var data = [{
