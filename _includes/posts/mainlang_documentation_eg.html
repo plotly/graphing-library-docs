@@ -27,8 +27,6 @@
             {% assign 3d_charts = true %}
         {% elsif page.display_as == "multiple_axes" %}
             {% assign multiple_axes = true %}
-        {% elsif page.display_as == "transforms" %}
-            {% assign transforms = true %}
         {% elsif page.display_as == "controls" %}
             {% assign controls = true %}
         {% elsif page.display_as == "animations" %}
@@ -475,39 +473,6 @@
 
             {%- for page in languagelist -%}
                 {% if page.display_as == "chart_events" and page.layout != "langindex" and forloop_idx < num_examples  %}
-                    {% assign forloop_idx = forloop_idx | plus:1 %}
-                    {% include layouts/grid-item.html %}
-                {% endif %}
-            {%- endfor -%}
-
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if transforms %}
-<section class="--tutorial-section">
-    <header class="--section-header">
-        <a href="#transforms" name="transforms" id="transforms">Transforms</a>
-
-        {% assign forloop_idx = 0 %}
-        {%- for page in languagelist -%}
-            {% if page.display_as == "transforms" and page.layout != "langindex" %}
-                {% assign forloop_idx = forloop_idx | plus:1 %}
-            {% endif %}
-        {%- endfor -%}
-
-        {% if forloop_idx >= num_examples %}
-        <a href="/{{language}}/transforms/" class="langindexlink">More Transforms &raquo;</a>
-        {% endif %}
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-
-            {% assign forloop_idx = 0 %}
-
-            {%- for page in languagelist -%}
-                {% if page.display_as == "transforms" and page.layout != "langindex" and forloop_idx < num_examples  %}
                     {% assign forloop_idx = forloop_idx | plus:1 %}
                     {% include layouts/grid-item.html %}
                 {% endif %}

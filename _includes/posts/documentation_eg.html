@@ -24,8 +24,6 @@
 {% assign 3d_charts = true %}
 {% elsif page.display_as == "multiple_axes" %}
 {% assign multiple_axes = true %}
-{% elsif page.display_as == "transforms" %}
-{% assign transforms = true %}
 {% elsif page.display_as == "controls" %}
 {% assign controls = true %}
 {% elsif page.display_as == "animations" %}
@@ -371,26 +369,6 @@
         <ul class="--grid-list">
             {%- for page in languagelist -%}
             {% if page.display_as == "chart_events" %}
-
-                        {% include layouts/grid-item.html %}
-
-
-            {% endif %}
-            {%- endfor -%}
-        </ul>
-    </section>
-</section>
-{% endif %}
-
-{% if transforms %}
-<section class="--tutorial-section">
-    <header class="--section-header"><a href="#transforms" name="transforms" id="transforms">Transforms</a>
-    </header>
-    <section class="--grid">
-        <ul class="--grid-list">
-            {%- for page in languagelist -%}
-            {% if page.display_as == "transforms" %}
-
 
                         {% include layouts/grid-item.html %}
 
