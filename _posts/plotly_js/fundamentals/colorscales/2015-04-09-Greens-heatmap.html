@@ -13,6 +13,10 @@ var data = [{
     type: 'heatmap'
   }
 ];
-var layout = {title: 'Greens'};
+var layout = {
+  title: {
+      text: 'Greens'
+  }
+};
 Plotly.newPlot('myDiv', data, layout);
 });

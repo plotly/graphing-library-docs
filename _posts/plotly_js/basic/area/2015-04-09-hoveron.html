@@ -34,7 +34,9 @@ var data = [
   }]
 
 var layout = {
-  title: 'Hover on <i>points</i> or <i>fill</i>',
+  title: {
+    text: 'Hover on <i>points</i> or <i>fill</i>'
+  },
   xaxis: {
     range: [0,5]
   },
@@ -43,4 +45,4 @@ var layout = {
   }
 }
 
-Plotly.newPlot('myDiv', data, layout) 
+Plotly.newPlot('myDiv', data, layout)

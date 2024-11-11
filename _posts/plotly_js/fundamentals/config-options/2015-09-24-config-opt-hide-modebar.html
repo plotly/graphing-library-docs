@@ -6,8 +6,8 @@ order: 5
 sitemap: false
 arrangement: horizontal
 markdown_content: |
-    When users hover over a figure generated with `plotly.js`, a `modebar` appears in the top-right of the figure. This presents users with several options for interacting with the figure. 
-    
+    When users hover over a figure generated with `plotly.js`, a `modebar` appears in the top-right of the figure. This presents users with several options for interacting with the figure.
+
     By default, the `modebar` is only visible while the user is hovering over the chart. If you would like the `modebar` to never be visible, then set the `displayModeBar` attribute in the `config` of your figure to `false`.
 ---
 var trace1 = {
@@ -27,7 +27,9 @@ var trace2 = {
 var data = [trace1, trace2];
 
 var layout = {
-    title: 'Hide the Modebar',
+    title: {
+        text: 'Hide the Modebar'
+    },
     showlegend: true
 };
 
