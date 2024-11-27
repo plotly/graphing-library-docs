@@ -50,7 +50,7 @@ order: 5
 
 ## Create A New Example Post:
 
-1. In the folder containing the examples for the chart type you are writing documenation for, create a file named: `yyyy-mm-dd-example-title.html`. 
+1. In the folder containing the examples for the chart type you are writing documentation for, create a file named: `yyyy-mm-dd-example-title.html`. 
 
 2. Copy the example post template below and write JavaScript code to demonstrate the feature you are documenting. 
   - If `plot_url` front-matter is not present, then the resulting chart will be displayed inline and a `Try It Codepen` button will be automatically generated. 
