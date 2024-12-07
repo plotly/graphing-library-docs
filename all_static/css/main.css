@@ -2929,8 +2929,8 @@ code {
 */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0");
-  src: url("../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+  src: url("../fonts/font-awesome/font/fontawesome-webfont.eot?v=4.3.0");
+  src: url("../fonts/font-awesome/font/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../fonts/font-awesome/font/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/font-awesome/font/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fonts/font-awesome/font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8065,7 +8065,6 @@ div#notebook {
       color: #20293d;
       padding-top: 10px;
       padding-bottom: 20px; }
-      c
     @media (max-width: 584px) {
       .page.\--home .hero .\--welcome p, .page.\--home .hero .\--welcome section.section div.content-box, section.section .page.\--home .hero .\--welcome div.content-box {
         padding: 0 40px; } }
