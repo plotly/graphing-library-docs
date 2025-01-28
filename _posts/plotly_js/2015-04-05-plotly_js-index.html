@@ -51,9 +51,25 @@ redirect_from: /javascript-graphing-library/
                     reversescale: true, zmax: 2.5, zmin: -2.5
                   };
                   var layout = {
-                    title: 'turbulence simulation',
-                    xaxis: {title: 'radial direction', showline: true, mirror: 'allticks', ticks: 'inside'},
-                    yaxis: {title: 'vertical direction', showline: true, mirror: 'allticks', ticks: 'inside'},
+                    title: {
+                      text: 'turbulence simulation'
+                  },
+                    xaxis: {
+                      title: {
+                          text: 'radial direction'
+                      },
+                      showline: true,
+                      mirror: 'allticks',
+                      ticks: 'inside'
+                    },
+                    yaxis: {
+                        title: {
+                            text: 'vertical direction'
+                        },
+                        showline: true,
+                        mirror: 'allticks',
+                        ticks: 'inside'
+                    },
                     margin: {l: 40, b: 40, t: 60},
                     annotations: [{
                       showarrow: false,
@@ -97,7 +113,11 @@ redirect_from: /javascript-graphing-library/
                     };
 
                     var layout = {
-                      yaxis: {title: "Wind Speed"},       // set the y axis title
+                      yaxis: {
+                        title: {
+                          text: "Wind Speed"
+                        }
+                      },       // set the y axis title
                       xaxis: {
                         showgrid: false,                  // remove the x-axis grid lines
                         tickformat: "%B, %Y"              // customize the date format to "month, day"

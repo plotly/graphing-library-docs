@@ -49,9 +49,13 @@ var trace1 = {
       colorbar: {
         y: 0,
         yanchor: "bottom",
-        titleside: "right",
+        title: {side:
+          'right'
+        },
         len: 0.75,
-        title: "Pressure coefficient, c<sub>p</sub>"
+        title: {
+          text: "Pressure coefficient, c<sub>p</sub>"
+        },
       },
       contours: {
         start: -1,
@@ -169,7 +173,9 @@ var layout = {
       range: [-3.800,3.800],
       showgrid: false
     },
-    title: "Flow over a Karman-Trefftz airfoil",
+    title: {
+      text: "Flow over a Karman-Trefftz airfoil"
+    },
     hovermode: "closest",
     margin: {
       r: 60,

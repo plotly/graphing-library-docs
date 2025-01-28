@@ -28,7 +28,7 @@ In order to contribute to the majority of Plotly's R graphing library documentat
 ##### In `documentation/_posts/r`
 1. Write your tutorial in R Markdown (Rmd) file (**IMPORTANT:** do not edit the markdown (md) files by hand! All edits should happen in the .Rmd file! The *only* exception to this is the index file: `2015-07-30-r-index.md` which you should edit directly.)
   - Your .Rmd file should be named in the following format: `yyyy-mm-dd-chart-type.Rmd`
-  - Please base your tutorial off of one of our exsisting tutorials (i.e. `documentation/_posts/r/2015-11-19-shapes.Rmd`)
+  - Please base your tutorial off of one of our existing tutorials (i.e. `documentation/_posts/r/2015-11-19-shapes.Rmd`)
       - Include the following header (*replacing `your-tutorial-chart` with the type of chart you're creating in the tutorial.) :
       ```
       ---

@@ -52,13 +52,17 @@ var data = [
     ],
     type: 'heatmap',
     colorbar:{
-      autotick: false,
+      tickmode: 'linear',
       tick0: 0,
       dtick: 1
     }
   }
 ];
 
-var layout = {title: 'CUSTOM DISCRETIZED HEATMAP COLORSCALE'};
+var layout = {
+  title: {
+      text: 'CUSTOM DISCRETIZED HEATMAP COLORSCALE'
+  }
+};
 
 Plotly.newPlot('myDiv', data, layout);

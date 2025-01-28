@@ -7,7 +7,7 @@ order: 4.1
 sitemap: false
 arrangement: horizontal
 markdown_content: |
-  `plotly_legendclick` and `plotly_legenddoubleclick` allow customization of the plotly legend. The default behaviour of `plotly_legendclick` is to hide a trace and the default behavior of `plotly_legenddoubleclick` is to select one trace and hide all the others. 
+  `plotly_legendclick` and `plotly_legenddoubleclick` allow customization of the plotly legend. The default behaviour of `plotly_legendclick` is to hide a trace and the default behavior of `plotly_legenddoubleclick` is to select one trace and hide all the others.
   We can add to the default behaviour by creating a new `plotly_legendclick` event with a function of our choice. We can also disable the default behaviour by creating a function that returns `false`. In the example below, we do both in order to create a `plotly_legendclick` event which changes the marker color back to black instead of erasing the trace.
 ---
 var myPlot = document.getElementById('myDiv'),
@@ -23,7 +23,7 @@ var myPlot = document.getElementById('myDiv'),
     layout = {
         showlegend: true,
         hovermode:'closest',
-        title:'Click on a Point to Change Color<br>Click on a Trace in the Legend to Change Back One Trace Only'
+        title: {text: 'Click on a Point to Change Color<br>Click on a Trace in the Legend to Change Back One Trace Only'}
      };
 
 Plotly.newPlot('myDiv', data, layout);
