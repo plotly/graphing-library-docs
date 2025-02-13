@@ -56,12 +56,6 @@
         <div class="--fork">
         {% if page.path contains "/python/html/" %}
             {% assign filename = page.path | replace: "_posts/python/html/2019-07-03-", "" | replace: ".html", ".md" %}
-
-            <a href="{{ filename | prepend: "
-                https://mybinder.org/v2/gh/plotly/plotly.py/doc-prod?filepath=doc%2Fpython%2F" }}" target="_blank"
-                style="float: right; margin-left: 20px;">
-                <img src="/all_static/images/binder_badge.svg" />
-            </a>
             <a id="forklink" href="{{ filename | prepend: "https://github.com/plotly/plotly.py/edit/doc-prod/doc/python/" }}">
         {% elsif page.path contains "/r/md/r" %}
             {% assign filename = page.path | replace: "_posts/r/md/r/", "" | replace: ".md", ".Rmd" %}
