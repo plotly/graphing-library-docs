@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import os
 import frontmatter
 from pathlib import Path
 
@@ -8,43 +7,31 @@ def generate_sitemap():
     urls = []
     
     # Find all HTML and MD files in _posts/python
-    for file_path in Path("_posts/python").rglob("*.html"):
+    for file_path in Path("_posts/python").rglob("*.[hm][td]*"):
         try:
             post = frontmatter.load(file_path)
             if 'permalink' in post:
-                urls.append(f"{base_url}/{post['permalink']}")
-            else:
-                # Generate URL from file path if no permalink
-                relative_path = file_path.relative_to(Path("_posts/python"))
-                url_path = relative_path.with_suffix('')
-                urls.append(f"{base_url}/python/{url_path}")
+                permalink = post['permalink']
+                # Use permalink as-is if it has a domain, otherwise prepend base_url
+                url = permalink if permalink.startswith(('http://', 'https://')) else f"{base_url}/{permalink}"
+                urls.append(url)
         except:
             pass
     
-    for file_path in Path("_posts/python").rglob("*.md"):
-        try:
-            post = frontmatter.load(file_path)
-            if 'permalink' in post:
-                urls.append(f"{base_url}/{post['permalink']}")
-            else:
-                # Generate URL from file path if no permalink
-                relative_path = file_path.relative_to(Path("_posts/python"))
-                url_path = relative_path.with_suffix('')
-                urls.append(f"{base_url}/python/{url_path}")
-        except:
-            pass
+    # Remove duplicates and sort
+    urls = sorted(set(urls))
     
     # Generate sitemap
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    xml += ''.join(f'  <url>\n    <loc>{url}</loc>\n  </url>\n' for url in sorted(set(urls)))
+    xml += ''.join(f'  <url>\n    <loc>{url}</loc>\n  </url>\n' for url in urls)
     xml += '</urlset>'
     
-    os.makedirs('python', exist_ok=True)
-    with open('python/sitemap.xml', 'w') as f:
-        f.write(xml)
+    # Write to file
+    Path('python').mkdir(exist_ok=True)
+    Path('python/sitemap.xml').write_text(xml, encoding='utf-8')
     
     print(f"Generated sitemap with {len(urls)} URLs")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     generate_sitemap() 
 
