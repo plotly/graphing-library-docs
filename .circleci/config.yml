@@ -71,10 +71,12 @@ jobs:
             python check-or-enforce-order.py _posts/r/
             python check-or-enforce-order.py _posts/matlab
             python check-or-enforce-order.py _posts/plotly_js
+            python python-sitemap.py
             echo `md5 -q all_static/css/main.css` > _data/cache_bust_css.yml
             deactivate
             rm -rf venv
             bundle exec jekyll build
+            cp python/sitemap.xml _site/python/sitemap.xml
             rm _data/mapbox_token.yml
             mkdir snapshots
             cd _site
@@ -111,6 +113,10 @@ jobs:
             rm -f snapshots/*/*/*.bkp
             bundle exec percy snapshot snapshots --enable_javascript
             rm -rf 'snapshots/'
+            # Save _site as artifacts for testing
+            - store_artifacts:
+                path: _site
+                destination: built-site
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               git clone --depth=1 --branch=gh-pages https://github.com/plotly/documentation.git
               git config user.name plotlydocbot
