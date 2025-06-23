@@ -13,6 +13,11 @@ def generate_sitemap():
             post = frontmatter.load(file_path)
             if 'permalink' in post:
                 urls.append(f"{base_url}/{post['permalink']}")
+            else:
+                # Generate URL from file path if no permalink
+                relative_path = file_path.relative_to(Path("_posts/python"))
+                url_path = relative_path.with_suffix('')
+                urls.append(f"{base_url}/python/{url_path}")
         except:
             pass
     
@@ -21,6 +26,11 @@ def generate_sitemap():
             post = frontmatter.load(file_path)
             if 'permalink' in post:
                 urls.append(f"{base_url}/{post['permalink']}")
+            else:
+                # Generate URL from file path if no permalink
+                relative_path = file_path.relative_to(Path("_posts/python"))
+                url_path = relative_path.with_suffix('')
+                urls.append(f"{base_url}/python/{url_path}")
         except:
             pass
     
