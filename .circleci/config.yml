@@ -126,10 +126,3 @@ jobs:
               rm -rf documentation
             fi
 
-      - run:
-          name: zip artifacts
-          command: tar -czf built-site.tar.gz _site/
-
-      - store_artifacts:
-          path: built-site.tar.gz
-          destination: built-site
