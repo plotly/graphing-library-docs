@@ -17,7 +17,9 @@ def generate_sitemap():
                 # Skip dash.plotly.com URLs
                 if 'dash.plotly.com' in url:
                     continue
-                urls.append(url)
+                # Only include URLs that are under /python/
+                if permalink.startswith('/python/'):
+                    urls.append(url)
         except:
             pass
     
