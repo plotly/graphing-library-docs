@@ -8,6 +8,9 @@ def generate_sitemap():
     
     # Find all HTML and MD files in _posts/python
     for file_path in Path("_posts/python").rglob("*.[hm][td]*"):
+        # Skip files in redir directory
+        if "redir" in file_path.parts:
+            continue
         try:
             post = frontmatter.load(file_path)
             if 'permalink' in post:
