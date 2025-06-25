@@ -13,7 +13,7 @@ def generate_sitemap():
             if 'permalink' in post:
                 permalink = post['permalink']
                 # Use permalink as-is if it has a domain, otherwise prepend base_url
-                url = permalink if permalink.startswith(('http://', 'https://')) else f"{base_url}/{permalink}"
+                url = permalink if permalink.startswith(('http://', 'https://')) else f"{base_url}/{permalink.lstrip('/')}"
                 # Skip dash.plotly.com URLs
                 if 'dash.plotly.com' in url:
                     continue
