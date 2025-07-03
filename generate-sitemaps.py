@@ -17,23 +17,20 @@ def generate_sitemap_for_language(posts_dir, url_prefix, output_dir, reference_d
             # Skip files in redir directory
             if "redir" in file_path.parts:
                 continue
-            try:
-                post = frontmatter.load(file_path)
-                if 'permalink' in post:
-                    permalink = post['permalink']
-                    # Use permalink as-is if it has a domain, otherwise prepend base_url
-                    url = permalink if permalink.startswith(('http://', 'https://')) else f"{base_url}/{permalink.lstrip('/')}"
-                    # Skip dash.plotly.com URLs
-                    if 'dash.plotly.com' in url:
-                        continue
-                    # Skip chart-studio URLs
-                    if 'chart-studio' in url:
-                        continue
-                    # Only include URLs that start with the specified prefix (with or without leading slash)
-                    if permalink.startswith(url_prefix) or permalink.startswith(f"/{url_prefix}"):
-                        urls.append(url)
-            except Exception as e:
-                pass
+            post = frontmatter.load(file_path)
+            if 'permalink' in post:
+                permalink = post['permalink']
+                # Use permalink as-is if it has a domain, otherwise prepend base_url
+                url = permalink if permalink.startswith(('http://', 'https://')) else f"{base_url}/{permalink.lstrip('/')}"
+                # Skip dash.plotly.com URLs
+                if 'dash.plotly.com' in url:
+                    continue
+                # Skip chart-studio URLs
+                if 'chart-studio' in url:
+                    continue
+                # Only include URLs that start with the specified prefix (with or without leading slash)
+                if permalink.startswith(url_prefix) or permalink.startswith(f"/{url_prefix}"):
+                    urls.append(url)
     
     # Remove duplicates and sort
     urls = sorted(set(urls))
