@@ -71,7 +71,7 @@ jobs:
             python check-or-enforce-order.py _posts/r/
             python check-or-enforce-order.py _posts/matlab
             python check-or-enforce-order.py _posts/plotly_js
-            python python-sitemap.py
+            python generate-sitemaps.py
             echo `md5 -q all_static/css/main.css` > _data/cache_bust_css.yml
             deactivate
             rm -rf venv
