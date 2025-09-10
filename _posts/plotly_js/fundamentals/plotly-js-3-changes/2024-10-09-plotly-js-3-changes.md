@@ -21,7 +21,7 @@ Plotly.js 3 removes the following features that were deprecated in previous vers
 
 `annotation.ref` has been removed. Use `annotation.xref` and `annotation.yref` instead.
 
-Here's an example using `annotation.ref`, followed by teh same example rewritte to use `annotation.xref` and `annotation.yref`:
+Here's an example using `annotation.ref`, followed by the same example rewritten to use `annotation.xref` and `annotation.yref`:
 
 ```js
 ...
