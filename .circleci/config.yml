@@ -39,8 +39,8 @@ jobs:
             gem install bundler:2.4.22
             bundle install --path vendor/bundle
             sudo rm /etc/apt/sources.list
-            echo "deb http://ftp.us.debian.org/debian/ bookworm main contrib non-free" | sudo tee -a /etc/apt/sources.list
-            echo "deb-src http://ftp.us.debian.org/debian/ bookworm main contrib non-free" | sudo tee -a /etc/apt/sources.list
+            echo "deb http://ftp.us.debian.org/debian/ trixie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+            echo "deb-src http://ftp.us.debian.org/debian/ trixie main contrib non-free" | sudo tee -a /etc/apt/sources.list
             echo "Acquire::Check-Valid-Until false;" | sudo tee -a /etc/apt/apt.conf.d/10-nocheckvalid
             echo '# Package: *\nPin: origin "archive.debian.org"\nPin-Priority: 500' | sudo tee -a /etc/apt/preferences.d/10-archive-pin
             sudo apt-get update
