@@ -36,6 +36,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            wget -qO - https://ftp-master.debian.org/keys/archive-key-11.asc | sudo apt-key add -
             gem install bundler:2.4.22
             bundle install --path vendor/bundle
             sudo rm /etc/apt/sources.list
