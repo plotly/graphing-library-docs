@@ -48,6 +48,9 @@
                 {% endunless %}
                 {% include layouts/page-another-language.html %}
                 {% include layouts/dashplug.html %}
+                {% if page.language == "r" or page.language == "julia" or page.language == "fsharp" or page.permalink contains "matlab/" or page.permalink contains "ggplot2/" %}
+                {% include layouts/docs_retirement_plug.html %}
+                {% endif %}
               </div>
             </div>
           </div>
