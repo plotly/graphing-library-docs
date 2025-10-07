@@ -95,7 +95,7 @@
 <aside class="--sidebar-container">
     <div class="--sidebar-fixed reference" data-spy="affix" id="where">
         <div class="brand">
-            <a href="/graphing-libraries/"><img src="/all_static/images/graphing_library.svg" style="height: 30px;"></a>
+            <a href="{% if page.permalink contains 'python/' %}/python/{% else %}/graphing-libraries/{% endif %}"><img src="/all_static/images/graphing_library.svg" style="height: 30px;"></a>
         </div>
         {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" or page.permalink contains "julia/" or page.permalink contains "ggplot2/" %}
         <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
