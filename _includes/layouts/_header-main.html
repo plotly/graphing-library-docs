@@ -20,9 +20,9 @@
         <div class="--wrap">
             <div class="--wrap-left">
                 <div class="-identity">
-                    <a href="https://plotly.com/"><img src="/all_static/images/graphing_library_dark.svg"
+                    <a href="{% if page.permalink contains 'python/' %}/python/{% else %}https://plotly.com/{% endif %}"><img src="/all_static/images/graphing_library_dark.svg"
                             style="height: 30px;" class="logo-dark"></a>
-                    <a href="/graphing-libraries/"><img src="/all_static/images/graphing_library.svg"
+                    <a href="{% if page.permalink contains 'python/' %}/python/{% else %}/graphing-libraries/{% endif %}"><img src="/all_static/images/graphing_library.svg"
                             style="height: 30px;" class="logo-white"></a>
 
 
