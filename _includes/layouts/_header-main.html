@@ -1,3 +1,10 @@
+<style>
+.menu-mobile a.download-studio-btn:hover,
+.--nav-meta a.download-studio-btn:hover,
+a.download-studio-btn:hover {
+  background: #8B88FF !important;
+}
+</style>
 <div class="menu-mobile">
     <div class="switch-mode">
         <div class="icon-dark"></div>
@@ -6,12 +13,9 @@
     </div>
     <div class="close-menu"></div>
     <ul>
-        <li><a style="font-weight: bold;"
-                href="https://community.plotly.com/c/{% if page.permalink contains 'javascript' %}plotly-js/6{% elsif page.permalink contains 'python' %}plotly-python/5{% elsif page.permalink contains 'r/' or page.permalink contains 'ggplot2/' or page.permalink contains 'matlab/' or page.permalink contains 'fsharp/' or page.permalink contains 'julia/' %}plotly-r-matlab-julia-net/29{% else %}{% endif %}">Forum</a>
-        </li>
+        <li><a class="download-studio-btn" style="display: inline-block; font-weight: bold; background: #7A76FF; color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; transition: background 0.3s ease;" href="https://plotly.com/studio">Download Studio</a></li>
         <li><a style="font-weight: bold;" href="https://plotly.com/pricing">Studio and Cloud Pricing</a></li>
         <li><a style="font-weight: bold;" href="https://plotly.com/get-pricing">Dash Enterprise Pricing</a></li>
-        <li><a style="font-weight: bold;" href="https://dash.plotly.com">Dash</a></li>
         <!--<li><a style="font-weight: bold;" href="http://plotly.cloud">Dash Cloud</a></li>-->
 
     </ul>
@@ -125,20 +129,12 @@
                                         <div class="icon"></div>F#
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="https://dash.plotly.com/" class="dash">
-                                        <div class="icon"></div>Dash
-                                    </a>
-                                </li>
                             </ul>
 
                         </li>
-                        <li><a style="font-weight: bold;"
-                                href="https://community.plotly.com/c/{% if page.permalink contains 'javascript' %}plotly-js/6{% elsif page.permalink contains 'python' %}plotly-python/5{% elsif page.permalink contains 'r/' or page.permalink contains 'ggplot2/' or page.permalink contains 'matlab/' or page.permalink contains 'fsharp/' or page.permalink contains 'julia/' %}plotly-r-matlab-julia-net/29{% else %}{% endif %}">Forum</a>
-                        </li>
+                        <li><a class="download-studio-btn" style="display: inline-block; font-weight: bold; background: #7A76FF; color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; transition: background 0.3s ease;" href="https://plotly.com/studio">Download Studio</a></li>
                         <li><a style="font-weight: bold;" href="https://plotly.com/pricing">Studio and Cloud Pricing</a></li>
                         <li><a style="font-weight: bold;" href="https://plotly.com/get-pricing">Dash Enterprise Pricing</a></li>
-                        <li><a style="font-weight: bold;" href="https://dash.plotly.com">Dash</a></li>
                         <!--<li><a style="font-weight: bold;" href="http://plotly.cloud">Dash Cloud</a></li>-->
 
                         {% if page.permalink contains "python/" %}
