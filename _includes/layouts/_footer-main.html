@@ -75,7 +75,6 @@
         </article>
       </div>
     </div>
-    <div id="markprompt" />
   </section>
 </footer>
 
@@ -228,13 +227,6 @@
 <script src="/all_static/javascripts/highlight/highlight.min.js"></script>
 <script src="/all_static/javascripts/highlight/julia.min.js"></script>
 <script src="/all_static/javascripts/highlight.line-numbers.js"></script>
-
-
-
-{% if page.language == "python" %}
-<script src="/all_static/javascripts/chatbot.js" type="module"></script>
-<script type="module" src="https://esm.sh/@markprompt/web@0.24.0/init"></script>
-{% endif %}
 
 {% if page.language != "python" %}
 {% endif %}
