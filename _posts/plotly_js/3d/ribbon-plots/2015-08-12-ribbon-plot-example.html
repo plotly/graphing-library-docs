@@ -6,7 +6,7 @@ order: 0
 sitemap: false
 arrangement: horizontal
 ---
-d3.json('https://raw.githubusercontent.com/plotly/datasets/master/3d-ribbon.json', function(figure){
+d3.json('https://raw.githubusercontent.com/plotly/datasets/master/3d-ribbon.json').then(function(figure){
 
   var trace1 = {
     x:figure.data[0].x, y:figure.data[0].y, z:figure.data[0].z,
