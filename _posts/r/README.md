@@ -1,8 +1,8 @@
 # Contribute to Plotly's [R Documentation](https://plotly.com/r/)
 
-These are the instructions for contributing to the subset of the documentation for Plotly's R graphing library which deals with Chart Studio. 
+These are the instructions for contributing to the documentation for Plotly's R graphing library.
 
-In order to contribute to the majority of Plotly's R graphing library documentation (which is not related to Chart Studio), please visit the [plotly.r-docs](https://github.com/plotly/plotly.r-docs) repository. 
+For the majority of Plotly's R graphing library documentation, please visit the [plotly.r-docs](https://github.com/plotly/plotly.r-docs) repository. 
 
 ## Initial Steps:
 1. Clone the repo:
@@ -52,15 +52,6 @@ In order to contribute to the majority of Plotly's R graphing library documentat
       ```
         ```{r, echo = FALSE, message=FALSE}
         knitr::opts_chunk$set(message = FALSE, warning=FALSE)
-      ```
-
-      - If your example needs to authenticate with Chart Studio, use the following R code snippet instead: 
-
-      ```
-        ```{r, echo = FALSE, message=FALSE}
-        knitr::opts_chunk$set(message = FALSE, warning=FALSE)
-        Sys.setenv("plotly_username"="RPlotBot")
-        Sys.setenv("plotly_api_key"="q0lz6r5efr")```
       ```
 
       - To include R code and plots in your tutorial, format the code snippets and plots in the following format:

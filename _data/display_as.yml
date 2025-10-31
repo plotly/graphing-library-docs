@@ -70,9 +70,6 @@ layout_opt:
 legacy_charts:
     reference: '#legacy-charts'
     text: Legacy Charts
-chart_studio:
-    reference: 'chart-studio'
-    text: Chart Studio
 advanced_opt:
     reference: '#advanced-options'
     text: Advanced
