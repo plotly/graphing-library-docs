@@ -242,6 +242,7 @@
  "textpositionsrc",
  "texttemplate",
  "texttemplatesrc",
+ "texttemplatefallback",
 
  "dimensions",
 
@@ -251,6 +252,7 @@
  "hoverinfosrc",
  "hovertemplate",
  "hovertemplatesrc",
+ "hovertemplatefallback",
 "xhoverformat",
 "yhoverformat",
 "uhoverformat",
