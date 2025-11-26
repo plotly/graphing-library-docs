@@ -8,6 +8,7 @@ language: python/v3
 thumbnail: thumbnail/ff-subplots.jpg
 display_as: chart_studio
 order: 4
+redirect_to: python/
 ---
 {% assign examples = site.posts | where:"language","python/v3" | where:"suite","sending-data" | sort: "order" %}
 {% include posts/auto_examples.html examples=examples %}
