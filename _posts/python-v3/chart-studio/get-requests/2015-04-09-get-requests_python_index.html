@@ -10,6 +10,7 @@ language: python/v3
 thumbnail: thumbnail/spectral.jpg
 display_as: chart_studio
 order: 8
+redirect_to: python/
 ---
 {% assign examples = site.posts | where:"language","python/v3" | where:"suite","get-requests" | sort: "order" %}
 {% include posts/auto_examples.html examples=examples %}
