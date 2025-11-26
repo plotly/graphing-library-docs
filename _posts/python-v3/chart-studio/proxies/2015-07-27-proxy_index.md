@@ -7,6 +7,7 @@ language: python/v3
 thumbnail: thumbnail/net.jpg
 display_as: chart_studio
 order: 10
+redirect_to: python/
 ---
 
 ### Using Plotly's Python API Behind a Corporate Proxy
