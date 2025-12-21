@@ -7,6 +7,7 @@ order: 1
 sitemap: false
 ---
 
+// error bar, working: e.g x1 = 2, x1 = 0 , 0 and 2 build the error boundaries
 var trace1 = {
   x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1], 
   y: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0], 
@@ -17,6 +18,8 @@ var trace1 = {
   showlegend: false, 
   type: "scatter"
 };
+
+// error bar, working: e.g x1 = 5.5, x1 = 4.5 , 4.5 and 5.5 build the error boundaries
 var trace2 = {
   x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1], 
   y: [5.5, 3, 5.5, 8, 6, 3, 8, 5, 6, 5.5, 4.75, 5, 4, 7, 2, 4, 7, 4.4, 2, 4.5], 
@@ -27,6 +30,8 @@ var trace2 = {
   showlegend: false, 
   type: "scatter"
 };
+
+// error bar, working: e.g x1 = 11, x1 = 9 , 9 and 11 build the error boundaries
 var trace3 = {
   x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1], 
   y: [11, 9, 7, 5, 3, 1, 3, 5, 3, 1, -1, 1, 3, 1, -0.5, 1, 3, 5, 7, 9], 
@@ -37,6 +42,8 @@ var trace3 = {
   showlegend: false, 
   type: "scatter"
 };
+
+// trace4, trace5 and trace6 represent the lines (or measurements)
 var trace4 = {
   x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 
   y: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 
