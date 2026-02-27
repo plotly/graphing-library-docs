@@ -49,7 +49,7 @@ jobs:
           python check-or-enforce-order.py _posts/matlab
           python check-or-enforce-order.py _posts/plotly_js
           python generate-sitemaps.py
-          echo $(md5sum all_static/css/main.css | cut -d ' ' -f 1) > _data/cache_bust_css.yml
+          md5sum all_static/css/main.css | cut -d ' ' -f 1 > _data/cache_bust_css.yml
           bundle exec jekyll build
           cp python/sitemap.xml _site/python/sitemap.xml
 
