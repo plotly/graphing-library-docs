@@ -53,6 +53,10 @@ jobs:
           bundle exec jekyll build
           cp python/sitemap.xml _site/python/sitemap.xml
 
+      - name: Clean invalid file paths
+        run: |
+          find _site -name "*:*" -delete || true
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
