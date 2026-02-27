@@ -4,13 +4,14 @@ display_as: file_settings
 language: plotly_js
 layout: base
 name: Version 3 Changes
-order: 27
+order: 26
 page_type: u-guide
 permalink: javascript/version-3-changes/
 redirect_from: javascript/pointcloud/
 sitemap: false
 thumbnail: thumbnail/pointcloud.jpg
 ---
+
 This page outlines the changes in Plotly.js version 3 and cases where you may need to update your charts.
 
 ## Removed Features
