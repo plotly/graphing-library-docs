@@ -54,10 +54,10 @@ jobs:
           cp python/sitemap.xml _site/python/sitemap.xml
 
       - name: Zip site
-        run: zip -r site-build.zip _site/
+        run: zip -r site-build-github-actions.zip _site/
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: site-build
-          path: site-build.zip
+          name: site-build-github-actions
+          path: site-build-github-actions.zip

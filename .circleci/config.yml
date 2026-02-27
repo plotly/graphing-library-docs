@@ -127,8 +127,8 @@ jobs:
               cd ..
               rm -rf documentation
             fi
-            zip -r site-build.zip _site/
+            zip -r site-build-circleci.zip _site/
 
       - store_artifacts:
-          path: site-build.zip
-          destination: site-build.zip
+          path: site-build-circleci.zip
+          destination: site-build-circleci.zip
