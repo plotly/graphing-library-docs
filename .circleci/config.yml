@@ -127,3 +127,8 @@ jobs:
               cd ..
               rm -rf documentation
             fi
+            zip -r site-build.zip _site/
+
+      - store_artifacts:
+          path: site-build.zip
+          destination: site-build.zip
