@@ -6,7 +6,7 @@ display_as: file_settings
 language: plotly_js
 layout: base
 name: Static Image Export
-order: 24
+order: 25
 page_type: u-guide
 permalink: javascript/static-image-export/
 sitemap: false
