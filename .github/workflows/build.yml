@@ -28,3 +28,33 @@ jobs:
         run: |
           pip install PyYAML==6.0.1
           pip install python-frontmatter==0.5.0
+
+      - name: Fetch upstream docs
+        run: |
+          rm -rf _posts/python/html _posts/julia/html _posts/fsharp/html _posts/csharp/html _posts/r/md _posts/ggplot2/md _posts/matlab/md
+          git clone --depth 1 -b built https://github.com/plotly/plotly.py-docs _posts/python/html
+          git clone --depth 1 -b built https://github.com/plotly/plotlyjs.jl-docs _posts/julia/html
+          git clone --depth 1 -b built https://github.com/plotly/plotly.net-docs _posts/fsharp/html
+          git clone --depth 1 -b built https://github.com/plotly/plotly.r-docs _posts/r/md
+          git clone --depth 1 -b built https://github.com/plotly/plotly.matlab-docs _posts/matlab/md
+          mv _posts/r/md/ggplot2 _posts/ggplot2/md
+          mv _posts/fsharp/html/csharp _posts/csharp/html
+
+      - name: Build site
+        run: |
+          python front-matter-ci.py _posts
+          python check-or-enforce-order.py _posts/python
+          python check-or-enforce-order.py _posts/python-v3
+          python check-or-enforce-order.py _posts/r/
+          python check-or-enforce-order.py _posts/matlab
+          python check-or-enforce-order.py _posts/plotly_js
+          python generate-sitemaps.py
+          echo $(md5sum all_static/css/main.css | cut -d ' ' -f 1) > _data/cache_bust_css.yml
+          bundle exec jekyll build
+          cp python/sitemap.xml _site/python/sitemap.xml
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: _site/
