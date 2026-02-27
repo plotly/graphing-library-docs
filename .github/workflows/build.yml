@@ -55,7 +55,7 @@ jobs:
 
       - name: Clean invalid file paths
         run: |
-          find _site -name "*:*" -delete || true
+          rm -rf "_site/https:"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
