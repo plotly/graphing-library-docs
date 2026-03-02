@@ -2,8 +2,8 @@ name: Build and Deploy
 
 on:
   push:
-    branches:
-      - update-ci
+    branches-ignore:
+      - gh-pages
 
 jobs:
   build:
