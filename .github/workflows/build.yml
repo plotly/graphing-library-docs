@@ -92,6 +92,9 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
+      - name: Remove files with invalid characters
+        run: find _site -name '*:*' -delete 2>/dev/null || true
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
