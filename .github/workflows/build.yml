@@ -56,6 +56,45 @@ jobs:
           bundle exec jekyll build
           cp python/sitemap.xml _site/python/sitemap.xml
 
+      - name: Create Percy snapshots
+        run: |
+          mkdir snapshots
+          cd _site
+          cp -r 'all_static' '../snapshots'
+          cp 'api/index.html' '../snapshots'
+          cp --parents 'python/index.html' '../snapshots'
+          cp --parents 'python/getting-started/index.html' '../snapshots'
+          cp --parents 'python/plotly-fundamentals/index.html' '../snapshots'
+          cp --parents 'python/line-and-scatter/index.html' '../snapshots'
+          cp --parents 'r/index.html' '../snapshots'
+          cp --parents 'r/getting-started/index.html' '../snapshots'
+          cp --parents 'r/plotly-fundamentals/index.html' '../snapshots'
+          cp --parents 'r/line-and-scatter/index.html' '../snapshots'
+          cp --parents 'javascript/index.html' '../snapshots'
+          cp --parents 'javascript/plotly-fundamentals/index.html' '../snapshots'
+          cp --parents 'javascript/getting-started/index.html' '../snapshots'
+          cp --parents 'javascript/line-and-scatter/index.html' '../snapshots'
+          cp --parents 'ggplot2/index.html' '../snapshots'
+          cp --parents 'ggplot2/getting-started/index.html' '../snapshots'
+          cp --parents 'ggplot2/histograms/index.html' '../snapshots'
+          cp --parents 'matlab/index.html' '../snapshots'
+          cp --parents 'matlab/getting-started/index.html' '../snapshots'
+          cp --parents 'matlab/graphing-multiple-chart-types/index.html' '../snapshots'
+          cp --parents 'matlab/histograms/index.html' '../snapshots'
+          cp --parents 'csharp/index.html' '../snapshots'
+          cp --parents 'csharp/getting-started/index.html' '../snapshots'
+          cd ..
+          rm -f 'snapshots/all_static/javascripts/jquery-knob/index.html'
+          rm -f 'snapshots/all_static/images/Plotly-feed2.html'
+          rm -f 'snapshots/all_static/images/Plotly.html'
+          rm -f 'snapshots/all_static/images/Plotly-Feed.html'
+          rm -f snapshots/*.bkp snapshots/*/*.bkp snapshots/*/*/*.bkp
+
+      - name: Percy snapshot
+        run: bundle exec percy snapshot snapshots --enable_javascript
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+
       - name: Zip site
         run: zip -r site-build-github-actions.zip _site/
 
