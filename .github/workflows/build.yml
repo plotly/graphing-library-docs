@@ -19,15 +19,13 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
         with:
           python-version: '3.x'
 
       - name: Install Python dependencies
-        run: |
-          pip install PyYAML==6.0.1
-          pip install python-frontmatter==0.5.0
+        run: uv pip install --system PyYAML==6.0.1 python-frontmatter==0.5.0
 
       - name: Fetch upstream docs
         run: make fetch_upstream_files
