@@ -92,11 +92,8 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
-      - name: Zip site
-        run: zip -r site-build-github-actions.zip _site/
-
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: site-build-github-actions
-          path: site-build-github-actions.zip
+          name: site-build
+          path: _site/
