@@ -36,7 +36,8 @@ jobs:
         run: python fix-case-redirects.py _posts/julia/html
 
       - name: Set up Mapbox token
-        run: echo "token: ${{ secrets.MAPBOX_TOKEN }}" > _data/mapbox_token.yml
+        run: |
+          echo "token: ${{ secrets.MAPBOX_TOKEN }}" > _data/mapbox_token.yml
 
       - name: Build site
         run: |
