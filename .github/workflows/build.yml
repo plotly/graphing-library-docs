@@ -30,18 +30,13 @@ jobs:
           pip install python-frontmatter==0.5.0
 
       - name: Fetch upstream docs
-        run: |
-          rm -rf _posts/python/html _posts/julia/html _posts/fsharp/html _posts/csharp/html _posts/r/md _posts/ggplot2/md _posts/matlab/md
-          git clone --depth 1 -b built https://github.com/plotly/plotly.py-docs _posts/python/html
-          git clone --depth 1 -b built https://github.com/plotly/plotlyjs.jl-docs _posts/julia/html
-          git clone --depth 1 -b built https://github.com/plotly/plotly.net-docs _posts/fsharp/html
-          git clone --depth 1 -b built https://github.com/plotly/plotly.r-docs _posts/r/md
-          git clone --depth 1 -b built https://github.com/plotly/plotly.matlab-docs _posts/matlab/md
-          mv _posts/r/md/ggplot2 _posts/ggplot2/md
-          mv _posts/fsharp/html/csharp _posts/csharp/html
+        run: make fetch_upstream_files
 
       - name: Fix case-sensitive redirect issues
         run: python fix-case-redirects.py _posts/julia/html
+
+      - name: Set up Mapbox token
+        run: echo "token: ${{ secrets.MAPBOX_TOKEN }}" > _data/mapbox_token.yml
 
       - name: Build site
         run: |
