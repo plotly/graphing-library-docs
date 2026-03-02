@@ -40,6 +40,9 @@ jobs:
           mv _posts/r/md/ggplot2 _posts/ggplot2/md
           mv _posts/fsharp/html/csharp _posts/csharp/html
 
+      - name: Fix case-sensitive redirect issues
+        run: python fix-case-redirects.py _posts/julia/html
+
       - name: Build site
         run: |
           python front-matter-ci.py _posts
