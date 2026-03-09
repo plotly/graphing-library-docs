@@ -105,7 +105,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: plotly/documentation
-          ref: test-pages
+          ref: test-pages-2
           token: ${{ steps.app-token.outputs.token }}
           path: documentation
 
