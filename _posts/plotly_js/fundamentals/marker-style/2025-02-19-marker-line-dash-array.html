@@ -1,0 +1,32 @@
+---
+name: Dashed Marker Borders - Array
+language: plotly_js
+suite: marker-style
+order: 3
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+  You can also pass an array of dash styles to set different styles per marker.
+---
+
+var styles = ['solid', 'dot', 'dash', 'longdash', 'dashdot', 'longdashdot'];
+
+var data = [{
+  x: [0, 1, 2, 3, 4, 5],
+  y: [0, 0, 0, 0, 0, 0],
+  type: 'scatter',
+  mode: 'markers+text',
+  text: styles,
+  textposition: 'bottom center',
+  marker: {
+    size: 30,
+    color: 'white',
+    line: {
+      color: 'blue',
+      width: 2,
+      dash: styles
+    }
+  }
+}];
+
+Plotly.newPlot('myDiv', data);
