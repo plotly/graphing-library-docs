@@ -33,9 +33,6 @@ jobs:
       - name: Fetch upstream docs
         run: make fetch_upstream_files
 
-      - name: Fix case-sensitive redirect issues
-        run: python fix-case-redirects.py _posts/julia/html
-
       - name: Set up Mapbox token
         run: |
           echo "token: ${{ secrets.MAPBOX_TOKEN }}" > _data/mapbox_token.yml
@@ -92,15 +89,6 @@ jobs:
         run: bundle exec percy snapshot snapshots --enable_javascript
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-
-      - name: Remove files with invalid characters
-        run: rm -rf _site/https:* 2>/dev/null || true
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-build
-          path: _site/
 
       - name: Create GitHub App token
         if: github.ref_name == 'update-ci' && github.repository == 'plotly/graphing-library-docs'
