@@ -91,7 +91,7 @@ jobs:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
       - name: Create GitHub App token
-        if: github.ref_name == 'update-ci' && github.repository == 'plotly/graphing-library-docs'
+        if: github.ref_name == 'master' && github.repository == 'plotly/graphing-library-docs'
         uses: actions/create-github-app-token@v2
         id: app-token
         with:
@@ -101,16 +101,16 @@ jobs:
           repositories: documentation
 
       - name: Checkout documentation repo
-        if: github.ref_name == 'update-ci' && github.repository == 'plotly/graphing-library-docs'
+        if: github.ref_name == 'master' && github.repository == 'plotly/graphing-library-docs'
         uses: actions/checkout@v4
         with:
           repository: plotly/documentation
-          ref: test-pages-2
+          ref: gh-pages
           token: ${{ steps.app-token.outputs.token }}
           path: documentation
 
-      - name: Deploy to test branch
-        if: github.ref_name == 'update-ci' && github.repository == 'plotly/graphing-library-docs'
+      - name: Deploy docs
+        if: github.ref_name == 'master' && github.repository == 'plotly/graphing-library-docs'
         run: |
           git config --global user.email "accounts@plot.ly"
           git config --global user.name "plotlydocbot"
