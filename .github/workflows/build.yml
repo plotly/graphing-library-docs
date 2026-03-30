@@ -1,0 +1,121 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches-ignore:
+      - gh-pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+          bundler-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install Python dependencies
+        run: uv pip install --system PyYAML==6.0.1 python-frontmatter==0.5.0
+
+      - name: Fetch upstream docs
+        run: make fetch_upstream_files
+
+      - name: Set up Mapbox token
+        run: |
+          echo "token: ${{ secrets.MAPBOX_TOKEN }}" > _data/mapbox_token.yml
+
+      - name: Build site
+        run: |
+          python front-matter-ci.py _posts
+          python check-or-enforce-order.py _posts/python
+          python check-or-enforce-order.py _posts/python-v3
+          python check-or-enforce-order.py _posts/r/
+          python check-or-enforce-order.py _posts/matlab
+          python check-or-enforce-order.py _posts/plotly_js
+          python generate-sitemaps.py
+          md5sum all_static/css/main.css | cut -d ' ' -f 1 > _data/cache_bust_css.yml
+          bundle exec jekyll build
+          cp python/sitemap.xml _site/python/sitemap.xml
+          rm _data/mapbox_token.yml
+
+      - name: Create Percy snapshots
+        run: |
+          mkdir snapshots
+          cd _site
+          cp -r 'all_static' '../snapshots'
+          cp 'api/index.html' '../snapshots'
+          cp --parents 'python/index.html' '../snapshots'
+          cp --parents 'python/getting-started/index.html' '../snapshots'
+          cp --parents 'python/plotly-fundamentals/index.html' '../snapshots'
+          cp --parents 'python/line-and-scatter/index.html' '../snapshots'
+          cp --parents 'r/index.html' '../snapshots'
+          cp --parents 'r/getting-started/index.html' '../snapshots'
+          cp --parents 'r/plotly-fundamentals/index.html' '../snapshots'
+          cp --parents 'r/line-and-scatter/index.html' '../snapshots'
+          cp --parents 'javascript/index.html' '../snapshots'
+          cp --parents 'javascript/plotly-fundamentals/index.html' '../snapshots'
+          cp --parents 'javascript/getting-started/index.html' '../snapshots'
+          cp --parents 'javascript/line-and-scatter/index.html' '../snapshots'
+          cp --parents 'ggplot2/index.html' '../snapshots'
+          cp --parents 'ggplot2/getting-started/index.html' '../snapshots'
+          cp --parents 'ggplot2/histograms/index.html' '../snapshots'
+          cp --parents 'matlab/index.html' '../snapshots'
+          cp --parents 'matlab/getting-started/index.html' '../snapshots'
+          cp --parents 'matlab/graphing-multiple-chart-types/index.html' '../snapshots'
+          cp --parents 'matlab/histograms/index.html' '../snapshots'
+          cp --parents 'csharp/index.html' '../snapshots'
+          cp --parents 'csharp/getting-started/index.html' '../snapshots'
+          cd ..
+          rm -f 'snapshots/all_static/javascripts/jquery-knob/index.html'
+          rm -f 'snapshots/all_static/images/Plotly-feed2.html'
+          rm -f 'snapshots/all_static/images/Plotly.html'
+          rm -f 'snapshots/all_static/images/Plotly-Feed.html'
+          rm -f snapshots/*.bkp snapshots/*/*.bkp snapshots/*/*/*.bkp
+
+      - name: Percy snapshot
+        run: bundle exec percy snapshot snapshots --enable_javascript
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+
+      - name: Create GitHub App token
+        if: github.ref_name == github.event.repository.default_branch && github.repository == 'plotly/graphing-library-docs'
+        uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ vars.GRAPHING_LIBRARIES_CI_GHAPP_ID }}
+          private-key: ${{ secrets.GRAPHING_LIBRARIES_CI_GHAPP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: documentation
+
+      - name: Checkout documentation repo
+        if: github.ref_name == 'master' && github.repository == 'plotly/graphing-library-docs'
+        uses: actions/checkout@v4
+        with:
+          repository: plotly/documentation
+          ref: gh-pages
+          token: ${{ steps.app-token.outputs.token }}
+          path: documentation
+
+      - name: Deploy docs
+        if: github.ref_name == 'master' && github.repository == 'plotly/graphing-library-docs'
+        run: |
+          git config --global user.email "accounts@plot.ly"
+          git config --global user.name "plotlydocbot"
+          cp -r _site/* documentation/
+          cd documentation
+          git add .
+          git commit -m "deploying https://github.com/plotly/graphing-library-docs/commit/${{ github.sha }}" || echo "No changes to commit"
+          git push
