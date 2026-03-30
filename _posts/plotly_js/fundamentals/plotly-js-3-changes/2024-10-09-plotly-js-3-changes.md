@@ -11,7 +11,6 @@ redirect_from: javascript/pointcloud/
 sitemap: false
 thumbnail: thumbnail/pointcloud.jpg
 ---
-
 This page outlines the changes in Plotly.js version 3 and cases where you may need to update your charts.
 
 ## Removed Features
