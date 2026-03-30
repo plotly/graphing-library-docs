@@ -91,7 +91,7 @@ jobs:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
       - name: Create GitHub App token
-        if: github.ref_name == 'master' && github.repository == 'plotly/graphing-library-docs'
+        if: github.ref_name == github.event.repository.default_branch && github.repository == 'plotly/graphing-library-docs'
         uses: actions/create-github-app-token@v2
         id: app-token
         with:
