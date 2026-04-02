@@ -102,7 +102,7 @@ jobs:
 
       - name: Checkout documentation repo
         if: github.ref_name == 'master' && github.repository == 'plotly/graphing-library-docs'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: plotly/documentation
           ref: gh-pages
