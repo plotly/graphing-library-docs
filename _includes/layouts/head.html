@@ -43,11 +43,28 @@
   <!-- Plotly.js hardcoded to 1.x due to Plotly.plot() -->
   <script src="https://cdn.plot.ly/plotly-1.58.4.min.js"></script>
   <script src="/all_static/r_files/r_dependencies.js"></script>
+  {% elsif page.language == "julia" or page.language == "matlab" %}
+  <!-- Plotly.js hardcoded to 2.x for RequireJS/AMD compatibility -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js"></script>
+  <script type="text/javascript">
+    if (typeof require !== "undefined") {
+      require.undef("plotly");
+      requirejs.config({
+        paths: {
+          plotly: [
+            "https://cdn.plot.ly/plotly-2.35.3.min",
+          ],
+        },
+      });
+      require(["plotly"], function(Plotly) {
+        window._Plotly = Plotly;
+      });
+    }
+
+  </script>
   {% else %}
   <!-- Plotly.js -->
   <script src="https://cdn.plot.ly/plotly-{{site.data.jsversion.version}}.min.js"></script>
-  {% endif %} {% if page.language == "julia" or page.language == "matlab" or
-  page.language == "ggplot2" %}
   {% endif %} {% endif %}
   <!--
       //// Stylesheets
