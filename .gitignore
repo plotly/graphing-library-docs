@@ -37,3 +37,4 @@ Gemfile.lock
 _config_dev.yml
 _posts/fsharp/html
 .pytest_cache
+.tool-versions
