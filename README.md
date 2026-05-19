@@ -115,9 +115,9 @@ Whenever a pull request is made, the GitHub Actions workflow defined in [`.githu
 
 Making sure that a pull request passes every CI check is part of the code review process.
 
-## Search indices
+## Search indexes
 
-Search on plotly.com docs pages is powered by Algolia indices that are updated separately from the site build. There are four indices, each updated by its own `make` target:
+Search on plotly.com docs pages is powered by Algolia indexes that are updated separately from the site build. There are four indexes, each updated by its own `make` target:
 
 | Index | Search on | Update with |
 | --- | --- | --- |
@@ -126,13 +126,13 @@ Search on plotly.com docs pages is powered by Algolia indices that are updated s
 | `r_docs` | https://plotly.com/r/, https://plotly.com/ggplot2/ | `make update_r_search` |
 | `schema` | reference pages (e.g. https://plotly.com/python/reference) | `make update_ref_search` |
 
-You can browse the indices at https://www.algolia.com/apps/7EK9KHJW8M/explorer/browse/.
+You can browse the indexes at https://www.algolia.com/apps/7EK9KHJW8M/explorer/browse/.
 
-**When to update:** Run the appropriate `update_*_search` target whenever a new tutorial is added to the corresponding `_posts/` directory. The `schema` index should be updated when a new plotly.js version is released.
+**When to update:** Run the appropriate `update_*_search` target whenever a new tutorial is added to the corresponding `_posts/` directory. Run the `schema` index update command when a new plotly.js version is released.
 
 **How to exclude files from an index:** Each search index has its own Jekyll config (`_config_python_search.yml`, `_config_r_search.yml`, etc.) with an `algolia.excluded_files` list. Add files or paths there to keep them out of search results.
 
-**Algolia API key:** Updating the indices requires a private Algolia API key set as an environment variable. Request it from a Plotly maintainer via an issue on this repository.
+**Algolia API key:** Updating the indexes requires a private Algolia API key set as an environment variable. Request it from a Plotly maintainer via an issue on this repository.
 
 Run `make help` to see all available `make` targets, including search-index and upstream-fetch commands.
 

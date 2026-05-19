@@ -10,7 +10,7 @@ The scss and Jekyll instance have been separated to allow for faster updates to 
 
 ### Usage
 
-Once the repo has been cloned successfully (see the main [README.md](https://github.com/plotly/graphing-library-docs/blob/master/README.md#how-to-get-the-application-working-locally)), run `npm install` to install gulp and the necessary dependencies.
+Once you have successfully cloned the repo (see the main [README.md](https://github.com/plotly/graphing-library-docs/blob/master/README.md#how-to-get-the-application-working-locally)), run `npm install` to install gulp and the necessary dependencies.
 
 Generally it's best to work with two terminal sessions: one for `bundle exec jekyll …` and another to keep the `gulp` task running.
 
@@ -22,7 +22,7 @@ Generally it's best to work with two terminal sessions: one for `bundle exec jek
 
 It's a bit of a hassle to make concurrent updates to markup and scss. Any time you update an html/js file you'll have to run `bundle exec jekyll build` (or run `bundle exec jekyll serve` with Jekyll watching for changes). Jekyll's watch mode can be slow on this repo because of its size; building on demand is sometimes preferable.
 
-When you run `bundle exec jekyll …`, Jekyll will regenerate `styles.css` — so if you modify any scss file and save it, Jekyll's output may overwrite your changes. Run `gulp build` again to regenerate the css after Jekyll runs.
+When you run `bundle exec jekyll …`, Jekyll regenerates `styles.css` — so if you modify any scss file and save it, Jekyll's output may overwrite your changes. Run `gulp build` again to regenerate the css after Jekyll runs.
 
 ### folder structure
 
