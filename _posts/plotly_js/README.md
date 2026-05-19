@@ -18,7 +18,7 @@ The easiest way to do this is to follow the `Edit this page on GitHub` link at t
 
 For contributions such as new example posts, we recommend setting up a local development environment so that you can test your changes as you work on them. 
 
-**See the `How To Get The Application Working Locally` section of the [Contributing Guide](https://github.com/plotly/graphing-library-docs/blob/master/Contributing.md)  to learn how to clone this repository to your local development environment and install its dependencies.**
+**See the `How To Get The Application Working Locally` section of the [Contributing Guide](https://github.com/plotly/graphing-library-docs/blob/master/README.md#how-to-get-the-application-working-locally) to learn how to clone this repository to your local development environment and install its dependencies.**
 
 Then follow these instructions to create or modify a new post. If the post is the first of its chart type, you need to create an index page for it first. 
 
@@ -44,7 +44,7 @@ order: 5
   {% assign examples = site.posts | where:"language","plotly_js" | where:"suite","add-chart-type-or-topic"| sort: "order" %}
   {% include posts/auto_examples.html examples=examples %}
 ```
-  - Make sure to update `_includes/posts/documentation_eg.html`, `_includes/layouts/side-bar.html`, and `_data/display_as_py_r_js.yml` and the CI python scripts with the new chart type!
+  - Make sure to update `_includes/posts/documentation_eg.html`, `_includes/layouts/side-bar.html`, and `_data/display_as_py_r_js.yml` with the new chart type. If the chart type needs to be tracked for front-matter or ordering validation, also update `front-matter-ci.py` and `check-or-enforce-order.py`.
 
   - Index pages for chart categories must have `order: 5`.
 
@@ -76,7 +76,7 @@ var data = [
     x: ['giraffes', 'orangutans', 'monkeys'],
     y: [20, 14, 23],
     type: 'bar'
-  }The
+  }
 ];
 
 Plotly.newPlot('myDiv', data);
@@ -108,10 +108,7 @@ Plotly.newPlot('myDiv', data);
       - 'maps' = https://plotly.com/javascript/maps
       - '3d_charts' = https://plotly.com/javascript/3d-charts
     - Thumbnail images should be clear and interesting. You do not need to capture the ENTIRE chart, but rather focus on the most interesting part of the chart.
-    - Use images.plot.ly for adding new images. The password is in the Plotly 1Password Engineering Vault. 
-      - Log-in here: https://661924842005.signin.aws.amazon.com/console
-      - From the <b>Amazon Web Services Console</b> select <b>S3 (Scalable Storage in the Cloud)</b> then select <b>plotly-tutorials</b> -> <b>plotly-documentation</b> -> <b>thumbnail</b>
-      - Now from <b>All Buckets /plotly-tutorials/plotly-documentation/thumbnail</b> select the <b>Actions</b> dropdown and <b>upload</b> your .jpg file
+    - Plotly hosts thumbnail images on `images.plot.ly`. If you do not have upload access, attach the image to your pull request and a maintainer will upload it on your behalf.
 
 ## Modify An Existing Post:
 
@@ -142,7 +139,7 @@ Plotly.newPlot('myDiv', data);
     git commit -m 'message about your changes'
     git push origin your_feature_branch
     ```
-    - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request!. You can then tag **@jdamiba** for a review.
+    - Visit the [documentation repo](https://github.com/plotly/graphing-library-docs) and open a pull request. A Plotly maintainer will review it.
 
 ## Style Edits
 
