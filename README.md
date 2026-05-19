@@ -30,9 +30,9 @@ This repository mainly serves:
 
 To quickly make a contribution to Plotly's JavaScript graphing libraries documentation, simply submit a pull request with the change you would like to suggest.
 
-The easiest way to do this is to follow the `Edit this page on GitHub` link at the top right of the page you are interested in contributing to:
+The easiest way to do this is to follow the `Suggest an edit to this page` link at the top right of the page you are interested in contributing to:
 
-![Screen Shot 2020-01-07 at 12 45 39 PM](https://user-images.githubusercontent.com/1557650/71916356-bfe53800-314b-11ea-92b6-eb763037f6d5.png)
+![Bar charts in JavaScript](https://github.com/user-attachments/assets/2835bbba-19e9-4f6c-b550-2b75730f9d21)
 
 **Note:** You don't have to worry about breaking the site when you submit a pull request! This is because your change will not be merged to production immediately. A Plotly team member will first perform a code review on your pull request.
 
