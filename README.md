@@ -60,7 +60,7 @@ Your branch is up to date with 'origin/master'.
 nothing to commit, working tree clean
 ```
 
-2. Install Ruby 2.7.4. Check your version with `ruby --version`. [RVM](https://rvm.io/rvm/install) is helpful for installing and managing Ruby versions.
+2. Install Ruby 2.7.4. Check your version with `ruby --version`. [RVM](https://rvm.io/rvm/install) is helpful for installing and managing Ruby versions; alternatively, if there are issues installing RVM, [rbenv](https://rbenv.org/) also works fine.
 
 3. Install all remaining dependencies (Ruby gems, Python packages, Node packages, and upstream tutorial content) in one step:
 
