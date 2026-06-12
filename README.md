@@ -60,7 +60,9 @@ Your branch is up to date with 'origin/master'.
 nothing to commit, working tree clean
 ```
 
-2. Install Ruby 2.7.4. Check your version with `ruby --version`. [RVM](https://rvm.io/rvm/install) is helpful for installing and managing Ruby versions.
+Warning: if there are issues with `npm` or `pip`, try running `bundle exec jekyll build --no-watch --incremental` (once) then `bundle exec jekyll serve --no-watch --incremental` (every time you want to start the server, should only take a few seconds).
+
+2. Install Ruby 2.7.4. Check your version with `ruby --version`. [RVM](https://rvm.io/rvm/install) is helpful for installing and managing Ruby versions; alternatively, if there are issues installing RVM, [rbenv](https://rbenv.org/) also works fine.
 
 3. Install all remaining dependencies (Ruby gems, Python packages, Node packages, and upstream tutorial content) in one step:
 
