@@ -243,6 +243,8 @@ GEM
     minitest (5.22.3)
     multipart-post (2.4.0)
     mutex_m (0.2.0)
+    nokogiri (1.15.6-aarch64-linux)
+      racc (~> 1.4)
     nokogiri (1.15.6-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.15.6-x86_64-linux)
@@ -321,6 +323,7 @@ GEM
     verbal_expressions (0.1.5)
 
 PLATFORMS
+  aarch64-linux
   arm64-darwin-23
   x86_64-linux
 
