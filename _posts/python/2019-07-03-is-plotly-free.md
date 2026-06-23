@@ -25,5 +25,5 @@ language: python
 
 #### Does Plotly also make commercial software?
 
-&nbsp;  &nbsp; **Yes.** &nbsp; Plotly has commercial offerings such as [Dash Enterprise](https://plotly.com/dash), [Plotly Studio](https://plotly.com/studio), and [Plotly Cloud](https://plotly.com/cloud).
+&nbsp;  &nbsp; **Yes.** &nbsp; Plotly has commercial offerings such as [Dash Enterprise](https://plotly.com/dash-enterprise), [Plotly Studio](https://plotly.com/studio), and [Plotly Cloud](https://plotly.com/cloud).
 
