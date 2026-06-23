@@ -26,5 +26,5 @@ obtaining any token, or creating any account.
 
 #### Does Plotly also make commercial software?
 
-&nbsp;  &nbsp; **Yes.** &nbsp; Plotly has commercial offerings such as [Dash Enterprise](https://plotly.com/dash).
+&nbsp;  &nbsp; **Yes.** &nbsp; Plotly has commercial offerings such as [Dash Enterprise](https://plotly.com/dash-enterprise).
 
