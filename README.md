@@ -77,7 +77,7 @@ npm install                                # Node packages (for the gulp/scss wo
 make fetch_upstream_files                  # Python, R, Julia, Matlab, C#, and F# tutorial content
 ```
 
-4. Serve the Jekyll application: `bundle exec jekyll serve --config _config_dev.yml`.
+4. Serve the Jekyll application: `bundle exec jekyll serve --config _config_dev.yml --incremental` (the initial build may take a while).
 
 5. Visit the pages at: [http://localhost:4000/](http://localhost:4000)
 
