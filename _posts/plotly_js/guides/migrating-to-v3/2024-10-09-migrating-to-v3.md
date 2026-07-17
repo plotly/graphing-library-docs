@@ -1,13 +1,16 @@
 ---
 description: Learn about the changes in Plotly.js version 3.
-display_as: file_settings
+display_as: guide
 language: plotly_js
 layout: base
-name: Version 3 Changes
-order: 27
+name: Migrating to Plotly.js v3
+order: 2
 page_type: u-guide
-permalink: javascript/version-3-changes/
-redirect_from: javascript/pointcloud/
+permalink: javascript/guides/migrating-to-v3/
+redirect_from:
+- javascript/pointcloud/
+- javascript/version-3-changes/
+- javascript/migrating-to-v3/
 sitemap: false
 thumbnail: thumbnail/pointcloud.jpg
 ---
