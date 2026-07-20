@@ -10,16 +10,16 @@ thumbnail: thumbnail/mixed.jpg
 
 
 <header class="--welcome">
-	<div class="--welcome-body">
-		<div class="--title">
-			<div class="--body">
-				<h1>Plotly.js Guides</h1>
-				<p>{{page.description}}</p>
-				{% include layouts/dashplug.html %}
-			</div>
-		</div>
-	</div>
+  <div class="--welcome-body">
+    <div class="--title">
+      <div class="--body">
+        <h1>Plotly.js Guides</h1>
+        <p>{{page.description}}</p>
+        {% include layouts/dashplug.html %}
+      </div>
+    </div>
+  </div>
 </header>
 
-		{% assign languagelist = site.posts | where:"language","plotly_js" | where:"display_as","guide" | where: "layout","base" | sort: "order" %}
+    {% assign languagelist = site.posts | where:"language","plotly_js" | where:"display_as","guide" | where: "layout","base" | sort: "order" %}
         {% include posts/documentation_eg.html %}
