@@ -4,7 +4,7 @@ display_as: guide
 language: plotly_js
 layout: base
 name: Migrating to Plotly.js v3
-order: 2
+order: 3
 page_type: u-guide
 permalink: javascript/guides/migrating-to-v3/
 redirect_from:
