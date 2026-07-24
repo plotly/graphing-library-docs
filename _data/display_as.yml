@@ -13,6 +13,9 @@ signal-analysis:
 file_settings:
     reference: '#fundamentals'
     text: Fundamentals
+guide:
+    reference: '#guides'
+    text: Guides
 basic:
     reference: '#basic-charts'
     text: Basic
