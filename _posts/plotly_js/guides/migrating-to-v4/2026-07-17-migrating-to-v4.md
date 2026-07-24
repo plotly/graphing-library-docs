@@ -33,7 +33,9 @@ existing code or input needs to be updated.
 - [Scattermap rendering changes](#scattermap-rendering-changes)
 - [Shape legend `line.dash`](#shape-legend-line-dash)
 - [Overlaying axis `tickmode`](#overlaying-axis-tickmode)
+- [`splom.axis.matches` default](#splomaxismatches-default)
 - [Sankey layout](#sankey-layout)
+- [MathJax v2 dropped](#mathjax-v2-dropped)
 
 ---
 
@@ -74,9 +76,11 @@ Config options removed from `Plotly.newPlot(gd, data, layout, config)`:
 | `showLink`, `linkText`, `sendData`, `showSources` | None — remove them |
 | `showEditInChartStudio` | `showSendToCloud` |
 
-The `editInChartStudio` modebar button is gone — switch to `sendDataToCloud`.
-The undocumented `stream: { token, maxpoints }` trace attribute is removed and
-now schema-rejected.
+The `editInChartStudio` modebar button is gone — switch to `sendChartToCloud`.
+The v3 alias `sendDataToCloud` for that button was also removed, so update
+any `modeBarButtonsToAdd: ['sendDataToCloud']` calls to use
+`'sendChartToCloud'`. The undocumented `stream: { token, maxpoints }` trace
+attribute is removed and now schema-rejected.
 
 ```js
 // Before
@@ -90,6 +94,30 @@ Plotly.newPlot(gd, data, layout, {
 Plotly.newPlot(gd, data, layout, {
     showSendToCloud: true,
 });
+```
+
+Also removed: every schema attribute ending in `src` (`xsrc`, `ysrc`,
+`textsrc`, `marker.colorsrc`, …) plus `layout.hidesources`. These were
+Chart Studio data-reference hooks; delete them from any figures where they
+still appear.
+
+The `Plots.graphJson()` signature is simplified — drop the third `mode`
+argument if you were passing one:
+
+```js
+// Before
+const json = Plotly.Plots.graphJson(gd, opts, mode);
+
+// After
+const json = Plotly.Plots.graphJson(gd, opts);
+```
+
+The **"Share with Plotly Cloud" button (`sendChartToCloud`) is now on by
+default** and targets `cloud.plotly.com`. If you don't want the button
+visible, opt out:
+
+```js
+Plotly.newPlot(gd, data, layout, { showSendToCloud: false });
 ```
 
 ---
@@ -207,6 +235,15 @@ defaulting to `'auto'`.
 
 ---
 
+## `splom.axis.matches` default
+
+`splom` (scatter plot matrix) traces now default `axis.matches` to `true`, so
+axes on the same row/column are linked and pan/zoom together. In v3 the
+default was `false` (each cell independent). To restore v3 behavior on a
+specific splom, set `matches: false` on its axes explicitly.
+
+---
+
 ## Sankey layout
 
 `@plotly/d3-sankey` was upgraded from 0.7.2 to 0.12.3. The schema is
@@ -216,3 +253,23 @@ code change needed unless you had output locked to specific pixel positions.
 To pin node/link order (for animation or side-by-side comparisons), use the
 new `sankey.node.sort` and `sankey.link.sort` attributes with `'input'`.
 Defaults preserve v3-equivalent auto ordering.
+
+---
+
+## MathJax v2 dropped
+
+Plotly.js now supports **MathJax v3 and v4** for LaTeX rendering. **MathJax
+v2 support has been removed** — figures using a v2 bundle will no longer
+render math expressions.
+
+If your page bundles MathJax v2, upgrade to v3 or v4:
+
+```html
+<!-- v3 -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<!-- or v4 -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+```
+
+The MathJax v3 and v4 syntax is unchanged, so no code changes to the call
+sites are needed once the correct bundle is loaded.
