@@ -25,6 +25,7 @@ v4](/javascript/guides/migrating-to-v4/).
 - [Share with Plotly Cloud](#share-with-plotly-cloud)
 - [MathJax v4 support](#mathjax-v4-support)
 - [Sankey node and link ordering](#sankey-node-and-link-ordering)
+- [Sankey flow direction](#sankey-flow-direction)
 - [Geo subplot zoom limits](#geo-subplot-zoom-limits)
 - [TypeScript types](#typescript-types)
 
@@ -94,10 +95,12 @@ of `1` (default) gives a head about 3× the line width.
 
 ### Coloring arrows by a scalar field
 
-Pass a `c` array (one value per arrow) plus the usual colorscale attributes
-(`marker.colorscale`, `marker.cmin`, `marker.cmax`, `marker.showscale`,
-`marker.colorbar`) to color each arrow by an independent scalar. Without `c`,
-every arrow uses `marker.color`.
+Pass `marker.color` as an array (one value per arrow) together with the usual
+colorscale attributes (`marker.colorscale`, `marker.cmin`, `marker.cmax`,
+`marker.showscale`, `marker.colorbar`) to color each arrow by that scalar. If
+you enable a colorscale but don't supply a `marker.color` array, arrows are
+colored by their vector magnitude `|(u, v)|` instead. A single (non-array)
+`marker.color` paints every arrow that one color.
 
 ```js
 {
@@ -280,6 +283,56 @@ In this figure the source nodes are given as `[A, B, C, D]` and paired
 one-to-one with targets `[Z, Y, X, W]` — a maximally-crossed input. `'auto'`
 flips the source column to `D, C, B, A` so the primary flows run horizontally;
 `'input'` leaves both columns in the given order and preserves every crossing.
+
+---
+
+## Sankey flow direction
+
+*Implemented in [#7870](https://github.com/plotly/plotly.js/pull/7870).*
+
+A new `sankey.direction` attribute controls which way flows run along the
+`orientation` axis, so you can reverse a diagram without manually reversing
+your `link.source` / `link.target` data.
+
+| Attribute | Default | `'reversed'` value |
+|---|---|---|
+| `sankey.direction` | `'forward'` | Flips the flow along the `orientation` axis. |
+
+`direction` is orthogonal to the existing `orientation` attribute (`'h'` /
+`'v'`), giving four combinations:
+
+| `orientation` | `direction` | Result |
+|---|---|---|
+| `'h'` (default) | `'forward'` (default) | Sources on the left, targets on the right |
+| `'h'` | `'reversed'` | Sources on the right, targets on the left |
+| `'v'` | `'forward'` | Sources on top, targets on the bottom |
+| `'v'` | `'reversed'` | Sources on the bottom, targets on the top |
+
+The default (`'forward'`) reproduces v3 behavior, so no code change is needed
+on upgrade.
+
+```js
+Plotly.newPlot(gd, [{
+    type: 'sankey',
+    orientation: 'h',
+    direction: 'reversed',   // sources on the right, targets on the left
+    node: {
+        label: [/* … */]
+    },
+    link: {
+        source: [/* … */],
+        target: [/* … */],
+        value:  [/* … */]
+    }
+}]);
+```
+
+Node labels stay upright and readable in every combination — only the flow
+geometry mirrors.
+
+| `direction: 'forward'` (default) | `direction: 'reversed'` |
+|---|---|
+| ![forward flow with sources on the left](/all_static/images/whats-new-in-v4/sankey_direction_forward.png) | ![reversed flow with sources on the right](/all_static/images/whats-new-in-v4/sankey_direction_reversed.png) |
 
 ---
 
@@ -745,16 +798,19 @@ accepted.**
 // Before — tinycolor parsed this as 0–1 fractions
 'rgb(0.5, 0.5, 0.5)'  // → rgb(128, 128, 128)
 
-// After — the underlying library reads them as integer 0–255 (truncated)
+// After — the underlying library reads them on the 0–255 scale and rounds
+// to the nearest integer
 'rgb(0.5, 0.5, 0.5)'  // → rgb(1, 1, 1)
 ```
 
 Convert any inputs of the form `rgb(0.5, 0.5, 0.5)` to `rgb(128, 128, 128)`
 (or any other supported color string) before passing them to Plotly.
 
-Mixed-format strings where at least one component is `>= 1` (e.g. `rgb(255,
-0.0, 0.0)`) continue to render correctly: the new parser treats the `0.0`
-components as integer `0`.
+Every numeric component is read literally on the 0–255 scale and rounded —
+there is no 0–1 fraction detection. A string like `rgb(255, 0.0, 0.0)` still
+renders correctly because its `0.0` components round to `0`, but any genuinely
+fractional component rounds to the nearest integer rather than scaling to
+0–255 (e.g. `rgb(200, 0.5, 0.5)` → `rgb(200, 1, 1)`).
 
 **Numeric color inputs are now rejected.**
 
@@ -812,21 +868,7 @@ for a working example using each format.
 All of these are parsed by Plotly in JavaScript and normalized to legacy
 `rgb(...)` / `rgba(...)` before being written to the DOM, so the browser never
 sees the modern syntax — your figures render the same in any browser that ran
-v3. The note below only matters if you also mirror these strings into your own
-stylesheets or template literals.
-
-Native CSS support:
-
-| Format | First supported |
-|---|---|
-| `#rrggbbaa`, `#rgba` | Chrome 62 (2017), Firefox 49 (2016), Safari 9.1 (2016) |
-| `rgb(r g b)`, `rgb(r g b / a)`, `hsl(h s l / a)` (space + slash-alpha) | Chrome 65 (2018), Firefox 52 (2017), Safari 12.1 (Mar 2019) |
-| `hsla()` | Universal since IE9 |
-| `hwb()` | Chrome 101 (Apr 2022), Firefox 96 (Jan 2022), Safari 15 (Sep 2021) |
-
-`hwb()` is the only format here that won't parse in browsers from ~2020 or
-earlier. Everything else is safe in any browser shipped in the last seven
-years.
+v3.
 
 ---
 
@@ -912,7 +954,7 @@ have changed by the time you land on `scattermap` in v4:
 ### Marker icons now respect `marker.color`
 
 `marker.color` on a scattermap trace is now applied to the icon by setting
-`icon-color`.
+`icon-color`. In v3, the icons were always black.
 
 | Before (v3) | After (v4) |
 |---|---|

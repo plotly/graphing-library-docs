@@ -203,7 +203,7 @@ Figures that already supply view attributes render unchanged.
 
 | Change | Detail |
 |---|---|
-| Marker icons now respect `marker.color` | To keep icons in their original artwork color, set `marker.color: 'white'`. |
+| Marker icons now respect `marker.color` | To maintain the v3 behavior, pass `marker.color: 'black'` |
 | Maki icons load from `@mapbox/maki@8.2.0` via jsDelivr | A handful of icon names dropped between Maki 2.1 and 8.2 will 404 — swap to the nearest Maki 8 equivalent. |
 | Legend swatches always draw a circle | Regardless of `marker.symbol`. Selectors that styled the swatch path based on symbol name will now match a circle on map traces. |
 
