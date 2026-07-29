@@ -80,7 +80,7 @@ Plotly.newPlot(gd, [{
 
 | Attribute | Values | Purpose |
 |---|---|---|
-| `x`, `y` | numeric arrays | Arrow anchor positions. `x0` + `dx` / `y0` + `dy` shorthand also supported for regular grids. |
+| `x`, `y` | numeric arrays | Arrow anchor positions. |
 | `u`, `v` | numeric arrays | Vector components at each `(x, y)`. |
 | `anchor` | `'tail'` (default) / `'tip'` / `'center'` | Which point of the arrow sits at `(x, y)`. |
 | `sizemode` | `'scaled'` (default) / `'raw'` | Normalize arrow lengths against the maximum vector length + point density, or draw them at their raw magnitude. |
@@ -136,13 +136,7 @@ A larger example showing arrows colored by magnitude:
 [#7854](https://github.com/plotly/plotly.js/pull/7854), and
 [#7909](https://github.com/plotly/plotly.js/pull/7909).*
 
-Plotly.js can now share the current figure to
-[Plotly Cloud](https://cloud.plotly.com) from a one-click modebar button.
-The button posts the figure's data and layout to `cloud.plotly.com` and
-returns a shareable URL — the successor to the old Chart Studio upload
-flow, but without the Chart Studio-specific config surface (`showLink`,
-`sendData`, `showSources`, etc. — those are all gone; see
-[Chart Studio APIs removed](#chart-studio-apis-removed)).
+Plotly.js now offers a modebar button which sends the current chart to [Plotly Cloud](https://cloud.plotly.com) to generate a shareable link. Sharing the chart opens Plotly Cloud in a new tab, where you can copy the sharing link and adjust visibility settings. A Plotly Cloud account is required.
 
 The button is enabled by default in v4:
 
@@ -161,13 +155,6 @@ The button is controlled by two config options:
 | `showSendToCloud` | `true` | Whether the "Share with Plotly Cloud" modebar button is rendered. |
 | `plotlyServerURL` | `'cloud.plotly.com'` | The endpoint the button posts to. Override to point at a self-hosted or alternate server. |
 
-The button's internal name (in `modeBarButtonsToAdd`, event handlers, etc.)
-is `sendChartToCloud`. In v3 both `sendChartToCloud` and the alias
-`sendDataToCloud` worked; in v4 the alias is removed — code that referred to
-the button by the `sendDataToCloud` name needs to be updated.
-
-### Opting out
-
 Hide the button by setting `showSendToCloud: false`:
 
 ```js
@@ -176,30 +163,6 @@ Plotly.newPlot(gd, data, layout, {
 });
 ```
 
-Or point the upload at a different host:
-
-```js
-Plotly.newPlot(gd, data, layout, {
-    plotlyServerURL: 'https://my-plotly-mirror.example.com'
-});
-```
-
-### Endpoint status
-
-The `cloud.plotly.com` endpoint is **not yet functional at the v4 release**.
-The button renders and is wired up, but clicking it does not complete an
-upload until the endpoint is deployed. Once it goes live, existing figures
-running v4 with the default config will start supporting uploads without
-any code change on the caller side.
-
-### History
-
-The upload flow was built out across the Plotly.js 3.7 series
-(#7802 / #7852 / #7854), but shipped with `showSendToCloud` defaulting to
-`false`, so unless you set the flag manually you never saw the button.
-v4 (#7909) flips the default so every new figure exposes it by default —
-this is a functional feature reveal, not a new API.
-
 ---
 
 ## MathJax v4 support
@@ -207,33 +170,24 @@ this is a functional feature reveal, not a new API.
 *Implemented in [#7898](https://github.com/plotly/plotly.js/pull/7898).*
 
 Plotly.js now supports **MathJax v3 and v4** for rendering LaTeX in labels,
-titles, annotations, and hover text. Support for **MathJax v2 has been
-dropped** — figures that rely on a v2 bundle will no longer render their math
-expressions.
-
-MathJax v3 and v4 share the same rendering syntax, so Plotly no longer needs
-version-specific code paths internally. Beyond dropping v2, the internal
-`svg_text_utils.js` rewrite makes math rendering somewhat faster.
+titles, and annotations. Support for **MathJax v2 has been dropped**.
 
 ### What to do
 
-- Loading MathJax v2 in the page? Upgrade to v3 or v4. The tex-svg build is
-  the one Plotly integrates with:
-  ```html
-  <!-- v3 (still supported) -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
-  <!-- or v4 (new) -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
-  ```
-- Already on v3? No action required — your math expressions continue to
-  render.
-- On v4 already? No action required either.
+Loading MathJax v2 in the page? Upgrade to v3 or v4. Plotly math rendering
+uses the tex-svg component (`tex-svg.js`):
+```html
+<!-- v3 (still supported) -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<!-- or v4 (new) -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+```
 
-### Call sites unchanged
+Note that the `?config=TeX-AMS-MML_SVG` URL suffix (used with MathJax v2) is
+no longer required starting with MathJax v3. Configuration is specified by linking
+directly to the desired JavaScript file, which is `tex-svg.js` for Plotly.js.
 
-Plotly's public API for math (using `$…$` in text attributes) is unchanged.
-The version negotiation happens inside Plotly at runtime — the correct
-rendering path is chosen based on what MathJax exposes.
+Already on v3? No action required — your math expressions continue to render.
 
 ---
 
@@ -792,37 +746,42 @@ the process.
 A color in the unsupported format will fall back to the attribute's default.
 
 **`rgb()` / `rgba()` strings with 0–1 decimal fractions are no longer
-accepted.**
+rescaled.** In v3, Plotly detected all-fractional `rgb()` components and
+rescaled them from 0–1 to 0–255 before parsing; v4 removed that step and reads
+every component literally on the 0–255 scale, so the same string now renders
+near-black.
 
 ```js
-// Before — tinycolor parsed this as 0–1 fractions
+// Before — v3 rescaled 0–1 fractions to 0–255
 'rgb(0.5, 0.5, 0.5)'  // → rgb(128, 128, 128)
 
-// After — the underlying library reads them on the 0–255 scale and rounds
-// to the nearest integer
+// After — read literally on the 0–255 scale and rounded to the nearest integer
 'rgb(0.5, 0.5, 0.5)'  // → rgb(1, 1, 1)
 ```
 
 Convert any inputs of the form `rgb(0.5, 0.5, 0.5)` to `rgb(128, 128, 128)`
 (or any other supported color string) before passing them to Plotly.
 
-Every numeric component is read literally on the 0–255 scale and rounded —
-there is no 0–1 fraction detection. A string like `rgb(255, 0.0, 0.0)` still
-renders correctly because its `0.0` components round to `0`, but any genuinely
-fractional component rounds to the nearest integer rather than scaling to
-0–255 (e.g. `rgb(200, 0.5, 0.5)` → `rgb(200, 1, 1)`).
+Rescaling only ever applied when *all* of `r`, `g`, `b` were fractional. A
+string like `rgb(255, 0.0, 0.0)` was never rescaled and still renders
+correctly (its `0.0` components round to `0`); a partly-fractional string such
+as `rgb(200, 0.5, 0.5)` now rounds each component to the nearest integer →
+`rgb(200, 1, 1)`.
 
-**Numeric color inputs are now rejected.**
+**Hex strings without a leading `#` are no longer accepted.**
 
 ```js
-// Before — silently accepted, rendered as near-black
-{ marker: { color: 42 } }
+// Before — tinycolor accepted bare hex
+{ marker: { color: 'fff' } }
 
-// After — falls back to the attribute default
+// After — invalid and falls back to the attribute default; add the '#'
+{ marker: { color: '#fff' } }
 ```
 
-If you were relying on numeric color values being coerced, convert them to
-color strings before passing them to Plotly.
+These changes affect *string* colors only. Numeric color arrays used for color
+mapping (e.g. `marker.color: [1, 2, 3, 4]` with a `colorscale`) are unchanged
+and remain valid — those values are mapped through the colorscale, not parsed
+as literal colors.
 
 ### Color computation output changes
 
@@ -846,18 +805,21 @@ different formula.
 
 ### New color formats you can now use
 
-The new library accepts CSS Color 4 syntax that wasn't possible with
-tinycolor. All of these are now valid anywhere Plotly accepts a color string:
+The new library adds CSS Color 4 syntax that tinycolor didn't fully support —
+notably slash-separated alpha and the `hwb()` color space:
 
 ```js
-'#ff0000aa'          // 8-digit hex with alpha
-'#f00a'              // 4-digit short hex with alpha
-'rgb(255 0 0)'       // space-separated rgb
-'rgba(255 0 0 / 0.5)' // slash-alpha rgba
-'hsl(0 100% 50% / 0.5)' // slash-alpha hsl
-'hsla(0, 100%, 50%, 0.5)' // hsla
-'hwb(0, 0%, 0%)'     // hwb (hue-whiteness-blackness)
+'rgba(255 0 0 / 0.5)'     // space-separated rgb with slash alpha
+'hsl(0 100% 50% / 0.5)'   // slash alpha on hsl (v3 accepted the syntax but dropped the alpha)
+'hwb(0, 0%, 0%)'          // hwb (hue-whiteness-blackness)
 ```
+
+The following additional formats were already supported:
+
+- 8-digit hex (`#ff0000aa`)
+- 4-digit short hex (`#f00a`),
+- Space-separated `rgb(255 0 0)`
+- Comma-form `hsla(0, 100%, 50%, 0.5)`.
 
 See
 [test/image/mocks/color_syntax_formats.json](https://github.com/plotly/plotly.js/blob/master/test/image/mocks/color_syntax_formats.json)
@@ -1149,34 +1111,15 @@ These existed only to interoperate with Chart Studio's data-source
 references, which is no longer reachable. If your figures contain any
 `*src` attributes or `hidesources`, delete them — they're now schema-rejected.
 
-### `Plots.graphJson()` signature simplified
-
-*See [#7829](https://github.com/plotly/plotly.js/pull/7829).*
-
-`Plotly.Plots.graphJson()` previously accepted a `mode` argument that was
-Chart Studio–specific. It has been dropped:
-
-```js
-// Before
-const json = Plotly.Plots.graphJson(gd, opts, mode);
-
-// After
-const json = Plotly.Plots.graphJson(gd, opts);
-```
-
-If you were passing the third argument (typically `'keepdata'` or
-`'keepall'`), remove it — that behavior was only meaningful when uploading
-to Chart Studio.
-
 ---
 
 ## Mapbox traces and subplots removed
 
 *Implemented in [#7860](https://github.com/plotly/plotly.js/pull/7860).*
 
-The legacy mapbox-gl-js–based traces and subplot type have been removed. The
-MapLibre-based `map` family that has shadowed them since v2 is now the only
-map implementation. For deeper background on the switch, see [Mapbox to
+The legacy Mapbox–based traces and subplot type have been removed. The
+equivalent MapLibre-based `map` traces (first released in Plotly.js v3) are
+now the only map implementation. For more information, see [Mapbox to
 MapLibre migration](https://plotly.com/python/mapbox-to-maplibre/).
 
 ### Removed
@@ -1193,9 +1136,8 @@ MapLibre migration](https://plotly.com/python/mapbox-to-maplibre/).
 | Modebar buttons `zoomInMapbox`, `zoomOutMapbox`, `resetViewMapbox` | `zoomInMap`, `zoomOutMap`, `resetViewMap` |
 | `scrollZoom` flag value `'mapbox'` (e.g. `scrollZoom: 'mapbox+cartesian'`) | `'map'` |
 
-The schema for `map` mirrors `mapbox` attribute-for-attribute (`domain`,
-`style`, `center`, `zoom`, `bearing`, `pitch`, `bounds`, `layers[...]`), so
-the migration is usually a rename.
+The attributes for `map` traces are identical to those of `mapbox` traces, so
+updating the trace name is all that's required to migrate.
 
 ```js
 // Before
@@ -1221,36 +1163,35 @@ the migration is usually a rename.
             zoom: 2,
         },
     },
-    // mapboxAccessToken removed — MapLibre needs no token for the
-    // built-in styles
+    // mapboxAccessToken no longer required
 }
 ```
 
 ### Built-in style values
 
-Every built-in `style` name that worked on `mapbox` still works on `map`, but
-the tiles backing them differ — visual output **will change** even when no
-other figure changes:
+Every built-in `style` value supported for `mapbox` traces works for `map` traces as well,
+but the tile providers for some styles have changed. In those cases, the visual appearance
+of the map will differ:
 
 | Style name | Old (`mapbox`) | New (`map`) |
 |---|---|---|
-| `basic`, `streets`, `outdoors` | mapbox.com vector tiles (required token) | Carto Voyager |
-| `light` | mapbox.com light | Carto Positron |
-| `dark` | mapbox.com dark | Carto Dark Matter |
-| `satellite`, `satellite-streets` | mapbox.com satellite | ArcGIS World Imagery |
-| `white-bg`, `open-street-map` | unchanged | unchanged |
-| `carto-*`, `carto-*-nolabels` | n/a (already open) | unchanged |
+| `'basic'`, `'streets'`, `'outdoors'` | mapbox.com 'basic' / 'streets' / 'outdoors'  tiles | [Carto](https://github.com/cartodb/basemap-styles/) Voyager |
+| `'light'` | mapbox.com 'light' tiles | [Carto](https://github.com/cartodb/basemap-styles/) Positron |
+| `'dark'` | mapbox.com 'dark' tiles | [Carto](https://github.com/cartodb/basemap-styles/) Dark Matter |
+| `'satellite'`, `satellite-streets` | mapbox.com satellite tiles | [ArcGIS World Imagery](https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer) |
+| `'white-bg'` | solid white background | unchanged |
+| `'open-street-map'` | [OpenStreetMap](https://www.openstreetmap.org) tiles | unchanged |
+| `carto-*`, `carto-*-nolabels` | Corresponding [Carto](https://github.com/cartodb/basemap-styles/) tiles | unchanged |
 
-The three Stamen styles (`stamen-terrain`, `stamen-toner`,
-`stamen-watercolor`) are gone — Stamen tiles now require a Stadia API key.
-Users who need them can supply a custom `style` URL.
+The three Stamen style values (`stamen-terrain`, `stamen-toner`, `stamen-watercolor`)
+are no longer supported, since Stamen tiles require a Stadia API key. It is still possible to use
+Stamen tiles, or any other third-party tiles, by passing the URL of a JSON style definition to `style`.
 
 ### Custom style URLs
 
-Custom MapLibre / Mapbox-style JSON URLs continue to work. The
-`mapbox://styles/mapbox/...` short form is no longer resolved, since it
-requires authenticating to mapbox.com. Substitute the full URL of an
-equivalent open style, or self-host the style JSON.
+Setting `style` to the URL of a MapLibre / Mapbox JSON style definition is still supported.
+Custom Mapbox URLs of the form `mapbox://styles/mapbox/...` are no longer supported, since they
+require authenticating to mapbox.com.
 
 ---
 
@@ -1258,7 +1199,7 @@ equivalent open style, or self-host the style JSON.
 
 *Implemented in [#7861](https://github.com/plotly/plotly.js/pull/7861).*
 
-Plotly.js now requires Node.js v22 or newer. The previous floor was v18, which
+Plotly.js now requires Node.js v22 or newer. The previous minimum was v18, which
 has reached end-of-life.
 
 This only affects you if:
@@ -1270,8 +1211,7 @@ This only affects you if:
 | You install via `yarn` or `pnpm` | Both enforce `engines` strictly (`npm` prints a warning but installs) |
 
 Consumers who only load the pre-built browser bundle (`plotly.min.js` or a
-partial bundle like `plotly-basic.min.js`) are unaffected — the bundle runs in
-browsers, not Node.
+partial bundle like `plotly-basic.min.js`) are unaffected.
 
 If you're on Node 18 or 20, upgrade to 22 LTS. `npm` will print a warning on
 install but won't fail; `yarn` and `pnpm` will refuse to install unless your
