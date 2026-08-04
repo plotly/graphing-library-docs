@@ -58,7 +58,7 @@
 {% if file_settings %}
 <section class="--tutorial-section">
     <header class="--section-header">
-        <a href="#fundamentals" name="fundamentals" id="fundamentals">Fundamentals</a>
+        <span name="fundamentals" id="fundamentals">Fundamentals</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -96,7 +96,7 @@
 {% if chart_type %}
 <section class="--tutorial-section">
     <header class="--section-header">
-        <a href="#basic-charts" id="basic-charts">Basic Charts</a>
+        <span id="basic-charts">Basic Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -135,7 +135,7 @@
 {% if statistical %}
 <section class="--tutorial-section">
     <header class="--section-header">
-        <a href="#statistical-charts" id="statistical-charts">Statistical Charts</a>
+        <span id="statistical-charts">Statistical Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -168,7 +168,7 @@
 {% if scientific %}
 <section class="--tutorial-section" id="scientific-charts">
     <header class="--section-header">
-        <a href="#scientific-charts">Scientific Charts</a>
+        <span>Scientific Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -201,7 +201,7 @@
 {% if financial %}
 <section class="--tutorial-section" id="financial-charts">
     <header class="--section-header">
-        <a href="#financial-charts">Financial Charts</a>
+        <span>Financial Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -234,7 +234,7 @@
 {% if maps %}
 <section class="--tutorial-section" id="maps">
     <header class="--section-header">
-        <a href="#maps">Maps</a>
+        <span>Maps</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -267,7 +267,7 @@
 {% if ai_ml %}
 <section class="--tutorial-section">
     <header class="--section-header">
-        <a href="#ai_ml" name="ai_ml" id="ai_ml">Artificial Intelligence and Machine Learning</a>
+        <span name="ai_ml" id="ai_ml">Artificial Intelligence and Machine Learning</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -301,7 +301,7 @@
 
 {% if bio %}
 <section class="--tutorial-section">
-    <header class="--section-header"><a href="#bio" name="bio" id="bio">Bioinformatics</a>
+    <header class="--section-header"><span name="bio" id="bio">Bioinformatics</span>
         <a href="/{{language}}/bio/" class="langindexlink">More Bioinformatics &raquo;</a>
     </header>
     <section class="--grid">
@@ -321,7 +321,7 @@
 {% if 3d_charts %}
 <section class="--tutorial-section" id="3d-charts">
     <header class="--section-header">
-        <a href="#3d-charts">3D Charts</a>
+        <span>3D Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -354,7 +354,7 @@
 {% if multiple_axes %}
 <section class="--tutorial-section" id="multiple-axes-subplots-and-insets">
     <header class="--section-header">
-        <a href="#subplot-charts" name="subplot-charts" id="subplot-charts">Subplots</a>
+        <span name="subplot-charts" id="subplot-charts">Subplots</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -387,7 +387,7 @@
 {% if chart_events and page.language =="python" %}
 <section class="--tutorial-section" id="chart-events">
     <header class="--section-header">
-        <a href="#jupyter-widgets" id="jupyter-widgets">Jupyter Widgets Interaction</a>
+        <span id="jupyter-widgets">Jupyter Widgets Interaction</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -420,7 +420,7 @@
 {% if chart_events and page.language =="r" %}
 <section class="--tutorial-section" id="custom-interaction">
     <header class="--section-header">
-        <a href="#custom-interaction">Custom Interaction With JavaScript</a>
+        <span>Custom Interaction With JavaScript</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -453,7 +453,7 @@
 {% if chart_events and page.language == 'plotly_js' %}
 <section class="--tutorial-section" id="custom-chart-events">
     <header class="--section-header">
-        <a href="#custom-chart-events">Custom Chart Events</a>
+        <span>Custom Chart Events</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -486,7 +486,7 @@
 {% if controls %}
 <section class="--tutorial-section" id="controls">
     <header class="--section-header">
-        <a href="#controls">Add Custom Controls</a>
+        <span>Add Custom Controls</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -519,7 +519,7 @@
 {% if animations %}
 <section class="--tutorial-section" id="animations">
     <header class="--section-header">
-        <a href="#animations">Animations</a>
+        <span>Animations</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -552,7 +552,7 @@
 {% if financial_analysis %}
 <section class="--tutorial-section" id="financial-analysis">
     <header class="--section-header">
-        <a href="#financial-analysis">Financial Analysis</a>
+        <span>Financial Analysis</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -585,7 +585,7 @@
 {% if advanced_opt %}
 <section class="--tutorial-section no-image" id="advanced-options">
     <header class="--section-header">
-        <a href="#advanced-options">Advanced</a>
+        <span>Advanced</span>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -611,7 +611,7 @@
 {% if style_options %}
 <section class="--tutorial-section no-image" id="style-options">
     <header class="--section-header">
-        <a href="#style-options">Style Options</a>
+        <span>Style Options</span>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -637,7 +637,7 @@
 {% if layout_options %}
 <section class="--tutorial-section no-image" id="layout-options">
     <header class="--section-header">
-        <a href="#layout-options">Layout Options</a>
+        <span>Layout Options</span>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
