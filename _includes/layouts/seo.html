@@ -4,7 +4,7 @@
 {% capture title %}
     {% if page.permalink == '/python/' or page.language == '/julia/' or page.language == '/r/' or page.language == '/ggplot2/' or page.language == '/f_sharp/' or page.language == '/matlab/' or page.language == '/javascript/' %}{{page.name}}
     {% elsif page.name == '404' %} 404 Page Not Found
-    {% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %} Plotly Open Source Graphing Libraries
+    {% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %} Open-Source Graphing Libraries for Python &amp; JavaScript | Plotly
     {% elsif page.name %} {{page.name | capitalize}} in {{language}}{% else %} Plotly Open Source Graphing Libraries{% endif %}
 {% endcapture %}
 <!-- Count number of plots on the page -->
@@ -23,7 +23,7 @@
 {% if page.layout == 'langindex' %}
     {% capture description %}{{page.description}}{% endcapture %}
 {% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %}
-    {% capture description %}"Interactive charts and maps for Python, R, Julia, Javascript, ggplot2, F#, MATLAB®, and Dash."{% endcapture %}
+    {% capture description %}"Access interactive charts and maps for Python, and Javascript, for use with Dash, Streamlit, Hex, Notebooks and LLMs.  Graphing libraries for data analytics."{% endcapture %}
 {% else %}
     {% assign counter = 0 %}
     {% for code_block in code_blocks %}
