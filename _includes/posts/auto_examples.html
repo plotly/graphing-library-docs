@@ -41,8 +41,8 @@
               {% assign d3 = "" %}
             {% endif %}
 
-            {% if example.content contains "remember to load MathJax.js" %}
-              {% assign mathjax = "\n\t&lt;script src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'>&lt;/script&gt;" %}
+            {% if example.content contains "remember to load MathJax" %}
+              {% assign mathjax = "\n\t&lt;script src='https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js'>&lt;/script&gt;" %}
             {% else %}
               {% assign mathjax = "" %}
             {% endif %}
@@ -55,7 +55,7 @@
               {% capture unique_myDiv %}myDiv_{{counter}}{% endcapture %}
               <div style="max-width: 100%; margin: auto" id="{{unique_myDiv}}"></div>
               <script>
-                {{ example.content | replace: 'myDiv', unique_myDiv | replace: "your access token", site.data.mapbox_token['token']}}
+                {{ example.content | replace: 'myDiv', unique_myDiv }}
               </script>
             </div>
           {% endif %}
