@@ -1,0 +1,40 @@
+---
+name: Node and Link Ordering
+language: plotly_js
+suite: sankey
+order: 6
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+  By default (`sort: 'auto'`) the layout reorders nodes within a column, and links within a node, to reduce crossings.
+  Set `node.sort` and `link.sort` to `'input'` to keep the order given in `node.label` and in
+  `link.source` / `link.target` instead. Use `'input'` when the order carries meaning, or when you need a
+  deterministic layout across renders — for animations or side-by-side comparisons.
+
+  This figure pairs sources `A, B, C, D` one-to-one with targets `Z, Y, X, W`, a maximally crossed input. With
+  `'auto'`, the source column is flipped so the flows run horizontally; with `'input'`, every crossing is preserved.
+  `sort` is not honored on diagrams whose links form a cycle, which use a different layout algorithm.
+---
+var data = [{
+  type: 'sankey',
+  node: {
+    label: ['A', 'B', 'C', 'D', 'Z', 'Y', 'X', 'W'],
+    pad: 15,
+    thickness: 20,
+    sort: 'input'
+  },
+  link: {
+    source: [0, 1, 2, 3],
+    target: [4, 5, 6, 7],
+    value: [4, 3, 2, 1],
+    sort: 'input'
+  }
+}];
+
+var layout = {
+  title: {text: "Input Order Preserved (sort: 'input')"},
+  width: 700,
+  height: 450
+};
+
+Plotly.newPlot('myDiv', data, layout);
