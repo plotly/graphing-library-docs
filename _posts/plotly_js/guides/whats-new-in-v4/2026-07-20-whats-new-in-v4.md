@@ -62,7 +62,8 @@ v4](/javascript/guides/migrating-to-v4/).
 
 Plotly.js now ships a `quiver` trace type for visualizing 2D vector fields as
 arrays of arrows. Arrows are placed at `(x, y)` coordinates and drawn with
-direction and magnitude from `(u, v)` components.
+direction and magnitude from `(u, v)` components. See
+[Quiver Plots](/javascript/quiver-plots/) for runnable examples.
 
 ```js
 Plotly.newPlot(gd, [{
@@ -196,7 +197,8 @@ Already on v3? No action required — your math expressions continue to render.
 *Implemented in [#7873](https://github.com/plotly/plotly.js/pull/7873).*
 
 Two new attributes let you override the automatic ordering that v4's d3-sankey
-algorithm applies:
+algorithm applies (see [Node and Link
+Ordering](/javascript/sankey-diagram/#node-and-link-ordering)):
 
 | Attribute | Default | `'input'` value |
 |---|---|---|
@@ -246,7 +248,8 @@ flips the source column to `D, C, B, A` so the primary flows run horizontally;
 
 A new `sankey.direction` attribute controls which way flows run along the
 `orientation` axis, so you can reverse a diagram without manually reversing
-your `link.source` / `link.target` data.
+your `link.source` / `link.target` data (see [Flow
+Direction](/javascript/sankey-diagram/#flow-direction)).
 
 | Attribute | Default | `'reversed'` value |
 |---|---|---|
@@ -294,7 +297,8 @@ geometry mirrors.
 
 *Implemented in [#7371](https://github.com/plotly/plotly.js/pull/7371).*
 
-Geo subplots accept two new attributes for clamping interactive zoom:
+Geo subplots accept two new attributes for clamping interactive zoom (see
+[Limiting Zoom on Outline Maps](/javascript/map-view/#limiting-zoom-on-outline-maps)):
 
 | Attribute | Default | Effect |
 |---|---|---|
@@ -333,7 +337,9 @@ bounds.
 
 Plotly.js now ships its own TypeScript type definitions. `package.json` points
 `"types"` at `lib/index.d.ts`, so the types are picked up automatically — no
-separate `@types/*` install is needed.
+separate `@types/*` install is needed. See
+[Using Plotly.js with TypeScript](/javascript/guides/typescript/) for a
+task-oriented walkthrough.
 
 ### Importing
 
@@ -745,6 +751,17 @@ the process.
 
 A color in the unsupported format will fall back to the attribute's default.
 
+**`hsl()` / `hsla()` strings need percent units on saturation and lightness.**
+A color in the unsupported format will fall back to the attribute's default.
+
+```js
+// Before
+{ marker: { color: 'hsl(0, 100, 40)' } }
+
+// After — add the percent units
+{ marker: { color: 'hsl(0, 100%, 40%)' } }
+```
+
 **`rgb()` / `rgba()` strings with 0–1 decimal fractions are no longer
 rescaled.** In v3, Plotly detected all-fractional `rgb()` components and
 rescaled them from 0–1 to 0–255 before parsing; v4 removed that step and reads
@@ -811,8 +828,11 @@ notably slash-separated alpha and the `hwb()` color space:
 ```js
 'rgba(255 0 0 / 0.5)'     // space-separated rgb with slash alpha
 'hsl(0 100% 50% / 0.5)'   // slash alpha on hsl (v3 accepted the syntax but dropped the alpha)
-'hwb(0, 0%, 0%)'          // hwb (hue-whiteness-blackness)
+'hwb(0 0% 0%)'            // hwb (hue-whiteness-blackness)
 ```
+
+Note that `hwb()` has no comma-separated form in CSS — the legacy syntax exists
+only for `rgb()` and `hsl()`.
 
 The following additional formats were already supported:
 

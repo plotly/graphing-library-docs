@@ -53,7 +53,7 @@ Consumers of the pre-built browser bundle are unaffected.
 ## Removed color inputs
 
 Plotly.js colors now conform thoroughly to the [CSS standard](https://www.w3.org/TR/css-color-4/). As a result
-three color-input formats no longer behave as before. `hsv()` and bare-hex
+the following color-input formats no longer behave as before. `hsv()` and bare-hex
 inputs are now invalid and fall back to the attribute's default; fractional
 `rgb()` is no longer rescaled and now renders near-black instead of the
 intended color:
@@ -61,12 +61,14 @@ intended color:
 | Input | What to do |
 |---|---|
 | `hsv()` / `hsva()` strings | Convert to `hsl()`, `hwb()`, hex, or `rgb()` |
+| `hsl()` / `hsla()` strings without percent units on saturation and lightness (e.g. `'hsl(0, 100, 40)'`, `'hsl(0 100 40)'`) | Add the units (e.g. `'hsl(0, 100%, 40%)'`) |
 | `rgb()` / `rgba()` strings with 0–1 decimal fractions | Convert `'rgb(0.5, 0.5, 0.5)'` to `'rgb(128, 128, 128)'` (or any supported string form) |
 | Hex strings without a leading `#` (e.g. `'fff'`, `'F00'`) | Add the `#` (e.g. `'#fff'`, `'#F00'`) |
 
 Note that these formats only affect *string* colors. Numeric color arrays
 used for color mapping (e.g. `marker.color: [1, 2, 3, 4]` paired with a
-`colorscale`) are unchanged and remain valid.
+`colorscale`) are unchanged and remain valid. For the full list of formats
+Plotly.js accepts, see [Specifying Colors](/javascript/colors/).
 
 Auto-computed contrast colors (heatmap text, `insidetextfont` on
 bars/waterfall, sankey hover on dark BG) may also shift by a few RGB units
@@ -190,8 +192,8 @@ Figures that already supply view attributes render unchanged.
 | Change | Detail |
 |---|---|
 | Marker icons now respect `marker.color` | To maintain the v3 behavior, pass `marker.color: 'black'` |
-| Maki icons updated from from v2.1 to 8.2 | A handful of icon names were removed between v2.1 and v8.2. See the [list](https://labs.mapbox.com/maki-icons/) of available icons. |
-| Legend swatches always render | A bug prevented some legend swatches from rendering for some scattermap traces. The bug has been fixed.  |
+| Maki icons updated from v2.1 to 8.2 | A handful of icon names were removed between v2.1 and v8.2. See the [list](https://labs.mapbox.com/maki-icons/) of available icons. |
+| Legend swatches always draw a circle | Regardless of `marker.symbol`. In v3, symbols whose names overlap the Plotly set (`'square'`, `'star'`, …) drew broken or empty swatch paths; those now render as circles, consistent with every other scattermap trace. |
 
 ---
 
