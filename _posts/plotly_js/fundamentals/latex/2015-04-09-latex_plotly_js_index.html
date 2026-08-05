@@ -11,5 +11,22 @@ redirect_from: javascript-graphing-library/LaTeX/
 thumbnail: thumbnail/venn.jpg
 ---
 
+<p>Plotly.js renders LaTeX in titles, axis labels, annotations, and legend entries when
+<a href="https://www.mathjax.org/" target="_blank">MathJax</a> is loaded on the page. Wrap the expression in
+<code>$</code> delimiters, as in the example below.</p>
+
+<p>Plotly.js v4 supports MathJax v3 and v4, and uses the <code>tex-svg</code> component. Load one of the following
+before plotly.js:</p>
+
+<pre><code class="hljs html">&lt;!-- MathJax v3 --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"&gt;&lt;/script&gt;
+&lt;!-- or MathJax v4 --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"&gt;&lt;/script&gt;</code></pre>
+
+<p>MathJax v2 is no longer supported. If your page loads
+<code>MathJax.js?config=TeX-MML-AM_CHTML</code>, replace it with one of the tags above — the
+<code>?config=</code> query string is not used from MathJax v3 onward, since the component is
+selected by the file you load.</p>
+
 {% assign examples = site.posts | where:"language","plotly_js" | where:"suite","latex" | sort: "order" %}
 {% include posts/auto_examples.html examples=examples %}

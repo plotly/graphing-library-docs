@@ -1,0 +1,41 @@
+---
+name: Auto-Fitting an Outline Map
+language: plotly_js
+suite: map-view
+order: 3
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+  `layout.geo.fitbounds` defaults to `'locations'`, so an outline map frames the locations it plots rather than the
+  whole world. Set `fitbounds: false` to get the pre-v4 world view, or supply your own view attributes — `center`
+  and `projection.scale` always turn auto-fitting off, and `projection.rotation`, `lonaxis.range`, and
+  `lataxis.range` do too except on a scoped subplot with a clipped projection. See
+  [Map View and Zoom](/javascript/map-view/) for the full breakdown.
+
+  When `fitbounds` is active, the modebar's Reset view button returns to the fitted view rather than the world view.
+
+  Note that a location whose territory crosses the ±180° antimeridian — the United States (the Aleutian Islands),
+  Russia, Fiji, New Zealand, and Antarctica — spans most of the globe's longitude, so a figure that includes one is
+  fitted very wide. Set the view explicitly in that case.
+---
+var data = [{
+  type: 'choropleth',
+  locations: ['BRA', 'ARG', 'CHL', 'PER', 'COL', 'BOL'],
+  locationmode: 'ISO-3',
+  z: [6, 5, 4, 3, 2, 1],
+  colorscale: 'Blues',
+  showscale: false
+}];
+
+var layout = {
+  title: {text: 'Fitted to the Plotted Locations'},
+  geo: {
+    projection: {type: 'equirectangular'},
+    showcountries: true,
+    countrycolor: 'rgb(255, 255, 255)'
+  },
+  width: 700,
+  height: 450
+};
+
+Plotly.newPlot('myDiv', data, layout);

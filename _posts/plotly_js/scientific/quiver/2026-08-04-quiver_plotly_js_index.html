@@ -1,0 +1,37 @@
+---
+description: How to make a D3.js-based quiver plot in JavaScript. Quiver plots show a 2D vector field as an array of arrows.
+display_as: scientific
+language: plotly_js
+layout: base
+name: Quiver Plots
+order: 13
+page_type: example_index
+permalink: javascript/quiver-plots/
+thumbnail: thumbnail/quiver-plot.jpg
+---
+
+<p>The <code>quiver</code> trace type, new in Plotly.js v4, visualizes a 2D vector field as an array of arrows. A
+quiver trace takes four arrays of the same length: <code>x</code> and <code>y</code> give the position of each arrow,
+and <code>u</code> and <code>v</code> give the vector components at that position. Arrow direction and length come
+from <code>(u, v)</code>.</p>
+
+<p>Arrow placement and scaling are controlled by:</p>
+
+<ul>
+  <li><code>anchor</code> — which part of the arrow sits at <code>(x, y)</code>: <code>'tail'</code> (the default),
+    <code>'tip'</code>, or <code>'center'</code>.</li>
+  <li><code>sizemode</code> — <code>'scaled'</code> (the default) normalizes arrow lengths against the largest vector
+    and the density of points, so a dense field stays readable; <code>'raw'</code> draws each arrow at its own
+    magnitude.</li>
+  <li><code>sizeref</code> — a multiplier applied on top of <code>sizemode</code>. Values below 1 shorten every
+    arrow, values above 1 lengthen them.</li>
+  <li><code>anglemode</code> — with <code>'data'</code>, angles are measured in data coordinates, so they change when
+    you zoom one axis more than the other; with <code>'paper'</code>, angles are fixed in pixel space.</li>
+</ul>
+
+<p>Arrow lines are styled with <code>marker.line.width</code> and <code>marker.line.dash</code>, and the arrowhead is
+scaled relative to the line width by <code>marker.arrowsize</code>. Quiver traces also support box and lasso
+selection through the standard <code>selected</code> / <code>unselected</code> marker attributes.</p>
+
+{% assign examples = site.posts | where:"language","plotly_js" | where:"suite","quiver" | sort: "order" %}
+{% include posts/auto_examples.html examples=examples %}

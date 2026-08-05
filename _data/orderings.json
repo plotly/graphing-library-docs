@@ -50,7 +50,6 @@
          "scene",
          "geo",
          "map",
-         "mapbox",
          "polar",
          "smith",
 
@@ -63,8 +62,6 @@
          "sliders",
          "selections",
 
-         "hidesources",
-
          "_deprecated",
          "radialaxis",
          "angularaxis",
@@ -75,7 +72,7 @@
     "traces": [
       "scatter", "scattergl",
         "bar", "pie", "heatmap", "heatmapgl","image",
-        "contour", "table",
+        "contour", "quiver", "table",
 
         "box", "violin", "histogram", "histogram2d", "histogram2dcontour",
 
@@ -83,7 +80,7 @@
 
         "scatter3d", "surface", "mesh3d", "cone", "streamtube", "volume", "isosurface",
 
-        "scattergeo", "choropleth", "scattermap", "scattermapbox", "choroplethmap", "choroplethmapbox", "densitymap", "densitymapbox",
+        "scattergeo", "choropleth", "scattermap", "choroplethmap", "densitymap",
 
         "scatterpolar", "scatterpolargl", "barpolar", "scatterternary", "scattersmith", "sunburst", "treemap", "icicle",
 

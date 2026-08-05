@@ -1,10 +1,16 @@
 ---
-name: Display Edit in Chart Studio Modebar Button
+name: Share with Plotly Cloud
 language: plotly_js
 suite: configuration
-order: 7.1
+order: 6
 sitemap: false
 arrangement: horizontal
+markdown_content: |
+  The `sendChartToCloud` modebar button sends the chart to [Plotly Cloud](https://cloud.plotly.com) and opens it in a
+  new tab, where you can copy a sharing link and set the chart's visibility. A Plotly Cloud account is required.
+
+  The button is shown by default. Set `showSendToCloud: false` to hide it, or set `plotlyServerURL` to send charts to
+  a self-hosted or alternate server instead of `cloud.plotly.com`.
 ---
 var data = [{
   values: [19, 26, 55],
@@ -14,13 +20,13 @@ var data = [{
 
 var layout = {
   title: {
-      text: 'Show Edit in Chart Studio Modebar Button'
+      text: 'Share with Plotly Cloud'
   }
 };
 
 var config = {
-  showEditInChartStudio: true,
-  plotlyServerURL: "https://chart-studio.plotly.com"
+  showSendToCloud: true,
+  plotlyServerURL: "https://cloud.plotly.com"
 };
 
 Plotly.newPlot('myDiv', data, layout, config);

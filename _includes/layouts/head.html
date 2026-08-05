@@ -35,7 +35,13 @@
   {% endif %}
 
   <!-- Mathjax -->
+  {% if page.language == "r" or page.language == "ggplot2" %}
+  <!-- MathJax v2, kept for the hardcoded plotly.js 1.58.4 bundle loaded on R/ggplot2 pages below -->
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  {% else %}
+  <!-- MathJax v3 (tex-svg). Plotly.js v4 removed MathJax v2 support; v3 works with v2.x and v3.x bundles too. -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+  {% endif %}
 
   {% if page.language == "plotly_js" %}
   <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>

@@ -1,0 +1,47 @@
+---
+name: Arrow Anchor and Length
+language: plotly_js
+suite: quiver
+order: 2
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+  This example plots the rotational field `(u, v) = (-y, x)` on a grid. `anchor: 'center'` centers each arrow on its
+  grid point instead of starting it there, and `sizeref` scales every arrow by the same factor. With the default
+  `sizemode: 'scaled'`, arrow lengths are normalized against the longest vector in the field, so the grid stays legible
+  however large the underlying values are.
+---
+var x = [];
+var y = [];
+var u = [];
+var v = [];
+
+for (var i = -2; i <= 2; i++) {
+  for (var j = -2; j <= 2; j++) {
+    x.push(i);
+    y.push(j);
+    u.push(-j);
+    v.push(i);
+  }
+}
+
+var data = [{
+  type: 'quiver',
+  x: x,
+  y: y,
+  u: u,
+  v: v,
+  anchor: 'center',
+  sizeref: 0.8,
+  marker: {color: '#636efa'}
+}];
+
+var layout = {
+  title: {text: 'Rotational Field, Arrows Centered on Each Point'},
+  xaxis: {title: {text: 'x'}},
+  yaxis: {title: {text: 'y'}, scaleanchor: 'x'},
+  width: 600,
+  height: 500
+};
+
+Plotly.newPlot('myDiv', data, layout);

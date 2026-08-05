@@ -1,0 +1,32 @@
+---
+name: Auto-Fitting a Tile Map to Data
+language: plotly_js
+suite: map-view
+order: 1
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+  With no `center` or `zoom` given, a `map` subplot frames the trace data on the first render. It re-fits when the data
+  changes — through `Plotly.restyle` of `lon`/`lat`, `Plotly.addTraces`, or `Plotly.deleteTraces` — until the user pans,
+  zooms, rotates, or tilts the map, after which the chosen view is preserved. Data that straddles the antimeridian is
+  framed the short way around, not across the whole globe.
+---
+var data = [{
+  type: 'scattermap',
+  mode: 'markers+text',
+  lon: [-122.4, -73.9, -87.6],
+  lat: [37.8, 40.7, 41.9],
+  text: ['San Francisco', 'New York', 'Chicago'],
+  textposition: 'top right',
+  marker: {size: 12, color: '#d62728'}
+}];
+
+var layout = {
+  map: {style: 'basic'},
+  showlegend: false,
+  width: 700,
+  height: 450,
+  margin: {t: 30, b: 0, l: 0, r: 0}
+};
+
+Plotly.newPlot('myDiv', data, layout);

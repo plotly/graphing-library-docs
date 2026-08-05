@@ -46,6 +46,7 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2015_06_30_prec
     var layout = {
       geo:{
         scope: 'north america',
+        fitbounds: false,
         showland: true,
         landcolor: 'rgb(212,212,212)',
         subunitcolor: 'rgb(255,255,255)',
@@ -61,18 +62,18 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2015_06_30_prec
             long: -100
           }
         },
-      },
-      longaxis: {
-        showgrid: true,
-        gridwidth: 0.5,
-        range: [ -140.0, -55.0 ],
-        dtick: 5
-      },
-      lataxis: {
-        showgrid: true,
-        gridwidth: 0.5,
-        range: [ 20.0, 60.0 ],
-        dtick: 5
+        lonaxis: {
+          showgrid: true,
+          gridwidth: 0.5,
+          range: [ -140.0, -55.0 ],
+          dtick: 5
+        },
+        lataxis: {
+          showgrid: true,
+          gridwidth: 0.5,
+          range: [ 20.0, 60.0 ],
+          dtick: 5
+        }
       },
       title: {text: 'North America Precipitation'},
       width: 600,
