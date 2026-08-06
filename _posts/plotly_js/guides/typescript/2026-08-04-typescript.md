@@ -8,7 +8,7 @@ order: 4
 page_type: u-guide
 permalink: javascript/guides/typescript/
 sitemap: false
-thumbnail: thumbnail/mixed.jpg
+thumbnail: thumbnail/theming-and-templates.png
 ---
 # Using Plotly.js with TypeScript
 

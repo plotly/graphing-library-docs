@@ -8,7 +8,7 @@ order: 1
 page_type: u-guide
 permalink: javascript/guides/whats-new-in-v4/
 sitemap: false
-thumbnail: thumbnail/mixed.jpg
+thumbnail: thumbnail/quiver-plot.jpg
 ---
 # What's New in Plotly.js v4
 
