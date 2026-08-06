@@ -485,6 +485,8 @@ range rather than the long-way-around view. For example, `lon: [131.8855,
 -179]` frames as `[131.8855, 181]` (a ~49° span across the antimeridian)
 instead of the naive `[-179, 131.8855]` (~311° the wrong way).
 
+![naive vs compact auto-fit](/all_static/images/whats-new-in-v4/map_fitbounds.png)
+
 ### `map.bounds` is unaffected
 
 The `map.bounds` layout attribute (which restricts panning) is a separate
