@@ -137,15 +137,19 @@ A larger example showing arrows colored by magnitude:
 [#7854](https://github.com/plotly/plotly.js/pull/7854), and
 [#7909](https://github.com/plotly/plotly.js/pull/7909).*
 
-Plotly.js now offers a modebar button which sends the current chart to [Plotly Cloud](https://cloud.plotly.com) to generate a shareable link. Sharing the chart opens Plotly Cloud in a new tab, where you can copy the sharing link and adjust visibility settings. A Plotly Cloud account is required.
+Plotly.js now offers a modebar button, labelled "Share chart…", which sends the
+current chart to [Plotly Cloud](https://cloud.plotly.com) to generate a shareable
+link. Sharing the chart opens Plotly Cloud in a new tab, where you can copy the
+sharing link and adjust visibility settings. A Plotly Cloud account is required.
 
 The button is enabled by default in v4:
 
-![Share with Plotly Cloud button](/all_static/images/whats-new-in-v4/share_with_plotly_cloud_button.png)
+![The "Share chart…" modebar button](/all_static/images/whats-new-in-v4/share_with_plotly_cloud_button.png)
 
-Clicking the button brings up the share dialog:
+Clicking the button brings up a confirmation dialog, which names the destination
+and offers **Cancel** and **Share**:
 
-![Share with Plotly Cloud dialog](/all_static/images/whats-new-in-v4/share_with_plotly_cloud_dialog.png)
+![The "Share chart" confirmation dialog](/all_static/images/whats-new-in-v4/share_with_plotly_cloud_dialog.png)
 
 ### Config
 
@@ -153,8 +157,8 @@ The button is controlled by two config options:
 
 | Config option | Default | Purpose |
 |---|---|---|
-| `showSendToCloud` | `true` | Whether the "Share with Plotly Cloud" modebar button is rendered. |
-| `plotlyServerURL` | `'cloud.plotly.com'` | The endpoint the button posts to. Override to point at a self-hosted or alternate server. |
+| `showSendToCloud` | `true` | Whether the "Share chart…" modebar button is rendered. |
+| `plotlyServerURL` | `'https://cloud.plotly.com/newchart'` | The endpoint the button posts to. Override to point at a self-hosted or alternate server. |
 
 Hide the button by setting `showSendToCloud: false`:
 

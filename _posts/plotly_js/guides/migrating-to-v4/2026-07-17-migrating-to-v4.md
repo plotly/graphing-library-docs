@@ -101,7 +101,7 @@ Plotly.newPlot(gd, data, layout, {
 });
 ```
 
-The **"Share with Plotly Cloud" button (`sendChartToCloud`) is now on by
+The **"Share chart…" button (`sendChartToCloud`) is now on by
 default**. If you don't want the button visible, it can be turned off as follows:
 
 ```js
