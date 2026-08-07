@@ -1,0 +1,26 @@
+---
+name: Basic Box Plot
+plot_url: https://plot.ly/~PlotBot/33
+arrangement: horizontal
+language: julia
+suite: box
+order: 1
+sitemap: false
+---
+
+using PkG  # just in case
+try using Plotly
+  catch
+      Pkg.add("Plotly")
+      using Plotly
+  end
+
+Plotly.set_credentials_file(Dict("username"=>"user.name","api_key"=>"1234567890"))
+y0 = randn(50)
+y1 = randn(50)+1
+
+
+trace1 = scatter(   y= y0,   mode="box" )
+trace2 = scatter( y=y1, mode="box")
+response = Plotly.plot(trace1) #,opt=[filename: "basic-line", fileopt: "new"]) #not sure what to do with this. 
+display(response) $ this does not show it . 
