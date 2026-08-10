@@ -8,11 +8,12 @@ arrangement: horizontal
 markdown_content: |
   The `sendChartToCloud` modebar button, labelled "Share chart…", sends the chart to
   [Plotly Cloud](https://cloud.plotly.com) and opens it in a new tab, where you can copy a sharing link and set the
-  chart's visibility. Clicking it first brings up a confirmation dialog naming the destination. A Plotly Cloud account
-  is required.
+  chart's visibility. A confirmation dialog is shown before sending the chart.
+  
+  Sharing requires a Plotly Cloud account, which can be created during the sharing process.
 
   The button is shown by default. Set `showSendToCloud: false` to hide it, or set `plotlyServerURL` to send charts to
-  a self-hosted or alternate server instead of the default `https://cloud.plotly.com/newchart`.
+  an alternate URL instead of the default `https://cloud.plotly.com/newchart`.
 ---
 var data = [{
   values: [19, 26, 55],
@@ -27,6 +28,7 @@ var layout = {
 };
 
 var config = {
+  // These config options match the defaults
   showSendToCloud: true,
   plotlyServerURL: "https://cloud.plotly.com/newchart"
 };
