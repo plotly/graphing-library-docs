@@ -11,6 +11,10 @@ _posts/user_guide_python/streaming-template.ipynb
 
 node_modules
 
+.venv/
+venv/
+venv*/
+
 .RData
 .Rhistory
 .sass-cache
