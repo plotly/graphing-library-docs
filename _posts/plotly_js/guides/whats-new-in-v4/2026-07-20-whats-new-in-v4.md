@@ -146,8 +146,7 @@ The button is enabled by default in v4:
 
 ![The "Share chart…" modebar button](/all_static/images/whats-new-in-v4/share_with_plotly_cloud_button.png)
 
-Clicking the button brings up a confirmation dialog, which names the destination
-and offers **Cancel** and **Share**:
+Clicking the button brings up a dialog confirming the sharing destination:
 
 ![The "Share chart" confirmation dialog](/all_static/images/whats-new-in-v4/share_with_plotly_cloud_dialog.png)
 
@@ -158,7 +157,7 @@ The button is controlled by two config options:
 | Config option | Default | Purpose |
 |---|---|---|
 | `showSendToCloud` | `true` | Whether the "Share chart…" modebar button is rendered. |
-| `plotlyServerURL` | `'https://cloud.plotly.com/newchart'` | The endpoint the button posts to. Override to point at a self-hosted or alternate server. |
+| `plotlyServerURL` | `'https://cloud.plotly.com/newchart'` | The endpoint the button posts to. Override to point at an alternate server. |
 
 Hide the button by setting `showSendToCloud: false`:
 
