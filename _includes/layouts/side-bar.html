@@ -95,9 +95,19 @@
 <aside class="--sidebar-container">
     <div class="--sidebar-fixed reference" data-spy="affix" id="where">
         <div class="brand">
-            <a href="{% if page.permalink contains 'python/' %}/python/{% else %}/graphing-libraries/{% endif %}"><img src="/all_static/images/logo-white.svg" style="height: 30px;"></a>
+            <a
+                href="{% if page.permalink contains 'python/' %}https://plotly.com/?source=graphing_libraries&medium=documentation&content=logo_python
+                {% elsif page.permalink contains 'javascript/' %}https://plotly.com/?source=graphing_libraries&medium=documentation&content=logo_javascript
+                {% elsif page.permalink contains 'r/' %}https://plotly.com/?source=graphing_libraries&medium=documentation&content=logo_r
+                {% elsif page.permalink contains 'julia/' %}https://plotly.com/?source=graphing_libraries&medium=documentation&content=logo_julia
+                {% elsif page.permalink contains 'ggplot2/' %}https://plotly.com/?source=graphing_libraries&medium=documentation&content=logo_ggplot2
+                {% elsif page.permalink contains 'matlab/' %}https://plotly.com/?source=graphing_libraries&medium=documentation&content=logo_matlab
+                {% elsif page.permalink contains 'fsharp/' %}https://plotly.com/?source=graphing_libraries&medium=documentation&content=logo_fsharp{% endif %}">
+
+                <img src="/all_static/images/logo-white.svg" style="height: 30px;"></a>
         </div>
-        {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/" or page.permalink contains "julia/" or page.permalink contains "ggplot2/" %}
+        {% if page.permalink contains "javascript/" or page.permalink contains "python/" or page.permalink contains "r/"
+        or page.permalink contains "julia/" or page.permalink contains "ggplot2/" %}
         <button id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
             <input id="modal-input" style="border-radius: 5px; width: 100%;" type="text" placeholder="   Search..."
                 readonly />
@@ -110,7 +120,7 @@
 
         {% else %}
 
-        <details style="color: white;margin-top: 20px;" {% if page.layout == "langindex" %} open {%endif %}>
+        <details style="color: white;margin-top: 20px;" {% if page.layout=="langindex" %} open {%endif %}>
             <summary>Quick Reference</summary>
             <nav class="--sidebar-body watch" id="where">
                 <ul class="--sidebar-list" style="margin-left: 15px;">
@@ -119,7 +129,8 @@
                         <a href="/{{ langue }}/getting-started" class="js-splash--navigation-item">Getting Started</a>
                     </li>
 
-                    {% if page.language == "r" or page.language == "python" or page.language == "plotly_js" or page.language == "ggplot2" or page.language == "matlab"%}
+                    {% if page.language == "r" or page.language == "python" or page.language == "plotly_js" or
+                    page.language == "ggplot2" or page.language == "matlab"%}
                     <li class="--sidebar-item">
                         <a href="/{{ langue }}/is-plotly-free" class="js-splash--navigation-item">Is Plotly Free?</a>
                     </li>
@@ -594,7 +605,7 @@
         <details style="color: white;margin-top: 20px;" open>
             <summary>On This Page</summary>
             <nav class="--sidebar-body watch" id="where">
-            <ul class="--sidebar-list" id="nav_header_insertion_list"></ul>
+                <ul class="--sidebar-list" id="nav_header_insertion_list"></ul>
             </nav>
         </details>
 
