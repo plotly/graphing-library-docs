@@ -2,7 +2,8 @@
 {% capture language %}{% if page.language == 'plotly_js' %}JavaScript{% elsif page.language == 'ggplot2'%}ggplot2{% elsif page.language == 'f_sharp' %}F#{% elsif page.language == 'matlab' %}MATLAB{% else %}{{page.language | capitalize }}{% endif %}{% endcapture %}
 <!-- Create a title -->
 {% capture title %}
-    {% if page.permalink == '/python/' or page.language == '/julia/' or page.language == '/r/' or page.language == '/ggplot2/' or page.language == '/f_sharp/' or page.language == '/matlab/' or page.language == '/javascript/' %}{{page.name}}
+    {% if page.permalink == '/python/' %} Open Source Python Graphing &amp; Data Visualization Library | Plotly
+    {% elsif page.language == '/julia/' or page.language == '/r/' or page.language == '/ggplot2/' or page.language == '/f_sharp/' or page.language == '/matlab/' or page.language == '/javascript/' %}{{page.name}}
     {% elsif page.name == '404' %} 404 Page Not Found
     {% elsif page.permalink == '/javascript/' %} Open Source JavaScript Graphing &amp; Chart Library | Plotly
     {% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %} Open-Source Graphing Libraries for Python &amp; JavaScript | Plotly

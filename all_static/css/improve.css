@@ -314,6 +314,16 @@ aside.\--sidebar-container .\--sidebar-fixed.affix #modal-button {
     text-decoration: underline;
     color: #1266c4 !important; }
 
+/* Per-section intro copy on the language index pages. Lives outside
+   .--section-header, which is a flex row shared with the "More <section> >>"
+   link, so a paragraph inside it would become a third item on that row. */
+.\--section-description {
+  margin: 0px 0px 15px 0px;
+  max-width: 60rem;
+  color: #506784;
+  font-size: 0.95rem;
+  line-height: 1.5rem; }
+
 /*********fix dark sidebar*********/
 body p a {
   color: #606060 !important;
@@ -1002,6 +1012,8 @@ body header.header-main.\--default nav.--nav-meta > ul > li.languages {
   fill: #a0aaba; }
 .dark-mode .--section-header a, .dark-mode .--section-header > span {
   color: #fff !important; }
+.dark-mode .\--section-description {
+  color: #a0aaba; }
 .dark-mode .\--tutorial-section .\--grid-item {
   background: transparent !important; }
 .dark-mode .\--tutorial-section:not(.no-image) .\--grid-item .\--item-meta {

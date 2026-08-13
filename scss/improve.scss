@@ -470,6 +470,17 @@ aside.\--sidebar-container .\--sidebar-fixed.affix #modal-button {
   }
 }
 
+/* Per-section intro copy on the language index pages. Lives outside
+   .--section-header, which is a flex row shared with the "More <section> >>"
+   link, so a paragraph inside it would become a third item on that row. */
+.\--section-description {
+  margin: 0px 0px 15px 0px;
+  max-width: 60rem;
+  color: #506784;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+}
+
 /*********fix dark sidebar*********/
 
 body p a {
@@ -1529,6 +1540,10 @@ body header.header-main.\--default nav.--nav-meta {
   .--section-header a,
   .--section-header > span {
     color: #fff !important;
+  }
+
+  .\--section-description {
+    color: #a0aaba;
   }
 
   .\--tutorial-section .\--grid-item {
