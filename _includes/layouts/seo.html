@@ -25,7 +25,7 @@
 {% if page.layout == 'langindex' %}
     {% capture description %}{{page.description}}{% endcapture %}
 {% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %}
-    {% capture description %}"Access interactive charts and maps for Python, and Javascript, for use with Dash, Streamlit, Hex, Notebooks and LLMs.  Graphing libraries for data analytics."{% endcapture %}
+    {% capture description %}"Access interactive charts and maps for Python and JavaScript, for use with Dash, Notebooks, ChatGPT, Claude, and LLMs. Graphing libraries for data analytics."{% endcapture %}
 {% else %}
     {% assign counter = 0 %}
     {% for code_block in code_blocks %}
