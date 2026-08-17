@@ -58,7 +58,7 @@
 {% if file_settings %}
 <section class="--tutorial-section">
     <header class="--section-header">
-        <a href="#fundamentals" name="fundamentals" id="fundamentals">Fundamentals</a>
+        <span name="fundamentals" id="fundamentals">Fundamentals</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -71,6 +71,9 @@
         <a href="/{{language}}/plotly-fundamentals" class="langindexlink">More Fundamentals &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Explore step-by-step tutorials and code examples for figure structures, updating figures, displaying figures, and framework integrations to master our Python graphing library.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -96,7 +99,7 @@
 {% if chart_type %}
 <section class="--tutorial-section">
     <header class="--section-header">
-        <a href="#basic-charts" id="basic-charts">Basic Charts</a>
+        <span id="basic-charts">Basic Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -109,6 +112,9 @@
         <a href="/{{language}}/basic-charts/" class="langindexlink">More Basic Charts &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Find copy-pasteable code snippets and interactive demos to create standard Python charts, including scatter plots, line graphs, bar charts, pie charts, and bubble charts.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -135,7 +141,7 @@
 {% if statistical %}
 <section class="--tutorial-section">
     <header class="--section-header">
-        <a href="#statistical-charts" id="statistical-charts">Statistical Charts</a>
+        <span id="statistical-charts">Statistical Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -148,6 +154,9 @@
         <a href="/{{language}}/statistical-charts/" class="langindexlink">More Statistical Charts &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Browse code tutorials and live previews for complex data analysis, featuring box plots, histograms, error bars, and 2D density plots.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -168,7 +177,7 @@
 {% if scientific %}
 <section class="--tutorial-section" id="scientific-charts">
     <header class="--section-header">
-        <a href="#scientific-charts">Scientific Charts</a>
+        <span>Scientific Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -181,6 +190,9 @@
         <a href="/{{language}}/scientific-charts/" class="langindexlink">More Scientific Charts &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Access interactive examples and code snippets for domain-specific visualizations. Build heatmaps, contour plots, ternary plots, and log plots.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -201,7 +213,7 @@
 {% if financial %}
 <section class="--tutorial-section" id="financial-charts">
     <header class="--section-header">
-        <a href="#financial-charts">Financial Charts</a>
+        <span>Financial Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -214,6 +226,9 @@
         <a href="/{{language}}/financial-charts/" class="langindexlink">More Financial Charts &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Explore code guides and live examples for financial data, including candlestick charts, OHLC plots, waterfall diagrams, funnel charts, and time series lines to create interactive graphs in Python.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -234,7 +249,7 @@
 {% if maps %}
 <section class="--tutorial-section" id="maps">
     <header class="--section-header">
-        <a href="#maps">Maps</a>
+        <span>Maps</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -247,6 +262,9 @@
         <a href="/{{language}}/maps/" class="langindexlink">More Maps &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Learn how to build interactive geographic visualizations with step-by-step code snippets for Mapbox integration, tile choropleth maps, lines on maps, and bubble maps.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -267,7 +285,7 @@
 {% if ai_ml %}
 <section class="--tutorial-section">
     <header class="--section-header">
-        <a href="#ai_ml" name="ai_ml" id="ai_ml">Artificial Intelligence and Machine Learning</a>
+        <span name="ai_ml" id="ai_ml">Artificial Intelligence and Machine Learning</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -280,6 +298,9 @@
         <a href="/{{language}}/ai-ml/" class="langindexlink">More AI and ML &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Visualize machine learning models with tutorials for ML regression, kNN classification, ROC and PR curves, and PCA visualization.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -301,9 +322,12 @@
 
 {% if bio %}
 <section class="--tutorial-section">
-    <header class="--section-header"><a href="#bio" name="bio" id="bio">Bioinformatics</a>
+    <header class="--section-header"><span name="bio" id="bio">Bioinformatics</span>
         <a href="/{{language}}/bio/" class="langindexlink">More Bioinformatics &raquo;</a>
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Access specialized charts for computational biology, including volcano plots, Manhattan plots, clustergrams, and alignment charts.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
             {%- for page in languagelist -%}
@@ -321,7 +345,7 @@
 {% if 3d_charts %}
 <section class="--tutorial-section" id="3d-charts">
     <header class="--section-header">
-        <a href="#3d-charts">3D Charts</a>
+        <span>3D Charts</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -334,6 +358,9 @@
         <a href="/{{language}}/3d-charts/" class="langindexlink">More 3D Charts &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">View high-performance code examples for 3D axes, 3D scatter plots, 3D surface plots, and 3D subplots to enhance your Python graphs.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -354,7 +381,7 @@
 {% if multiple_axes %}
 <section class="--tutorial-section" id="multiple-axes-subplots-and-insets">
     <header class="--section-header">
-        <a href="#subplot-charts" name="subplot-charts" id="subplot-charts">Subplots</a>
+        <span name="subplot-charts" id="subplot-charts">Subplots</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -367,6 +394,9 @@
         <a href="/{{language}}/subplot-charts/" class="langindexlink">More Subplots &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Find layout tutorials and code examples for combining multi-chart arrangements, map subplots, table subplots, and mixed layouts when plotting graphs in Python.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -387,7 +417,7 @@
 {% if chart_events and page.language =="python" %}
 <section class="--tutorial-section" id="chart-events">
     <header class="--section-header">
-        <a href="#jupyter-widgets" id="jupyter-widgets">Jupyter Widgets Interaction</a>
+        <span id="jupyter-widgets">Jupyter Widgets Interaction</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -400,6 +430,9 @@
         <a href="/{{language}}/chart-events/" class="langindexlink">More Chart Events &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Learn how to connect your Python graph to interactive Jupyter environments using FigureWidget tutorials, interactive data analysis, and custom click events.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -420,7 +453,7 @@
 {% if chart_events and page.language =="r" %}
 <section class="--tutorial-section" id="custom-interaction">
     <header class="--section-header">
-        <a href="#custom-interaction">Custom Interaction With JavaScript</a>
+        <span>Custom Interaction With JavaScript</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -453,7 +486,7 @@
 {% if chart_events and page.language == 'plotly_js' %}
 <section class="--tutorial-section" id="custom-chart-events">
     <header class="--section-header">
-        <a href="#custom-chart-events">Custom Chart Events</a>
+        <span>Custom Chart Events</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -486,7 +519,7 @@
 {% if controls %}
 <section class="--tutorial-section" id="controls">
     <header class="--section-header">
-        <a href="#controls">Add Custom Controls</a>
+        <span>Add Custom Controls</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -499,6 +532,9 @@
         <a href="/{{language}}/controls/" class="langindexlink">More Controls &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Discover code snippets and tutorials for building interactive UI controls directly into your visualizations, including dropdown menus, custom buttons, sliders, and range selectors to upgrade your graph in Python.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -519,7 +555,7 @@
 {% if animations %}
 <section class="--tutorial-section" id="animations">
     <header class="--section-header">
-        <a href="#animations">Animations</a>
+        <span>Animations</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -532,6 +568,9 @@
         <a href="/{{language}}/animations/" class="langindexlink">More Animations &raquo;</a>
         {% endif %}
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Explore code tutorials and interactive demos for animating data points, building time-series sliders, and creating smooth transitions to build a dynamic Python graph.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -552,7 +591,7 @@
 {% if financial_analysis %}
 <section class="--tutorial-section" id="financial-analysis">
     <header class="--section-header">
-        <a href="#financial-analysis">Financial Analysis</a>
+        <span>Financial Analysis</span>
 
         {% assign forloop_idx = 0 %}
         {%- for page in languagelist -%}
@@ -585,8 +624,11 @@
 {% if advanced_opt %}
 <section class="--tutorial-section no-image" id="advanced-options">
     <header class="--section-header">
-        <a href="#advanced-options">Advanced</a>
+        <span>Advanced</span>
     </header>
+    {% if language == "python" %}
+    <p class="--section-description">Take your interactive plots in Python to the next level with advanced Python graphing techniques, including plotting CSV data, generating random walks, peak finding, data smoothing, and rendering LaTeX.</p>
+    {% endif %}
     <section class="--grid">
         <ul class="--grid-list">
 
@@ -611,7 +653,7 @@
 {% if style_options %}
 <section class="--tutorial-section no-image" id="style-options">
     <header class="--section-header">
-        <a href="#style-options">Style Options</a>
+        <span>Style Options</span>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
@@ -637,7 +679,7 @@
 {% if layout_options %}
 <section class="--tutorial-section no-image" id="layout-options">
     <header class="--section-header">
-        <a href="#layout-options">Layout Options</a>
+        <span>Layout Options</span>
     </header>
     <section class="--grid">
         <ul class="--grid-list">
