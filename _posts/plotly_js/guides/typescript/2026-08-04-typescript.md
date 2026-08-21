@@ -13,8 +13,9 @@ thumbnail: thumbnail/theming-and-templates.png
 # Using Plotly.js with TypeScript
 
 Since v4, Plotly.js ships its own TypeScript type definitions. `package.json` points
-`"types"` at `lib/index.d.ts`, so they are picked up automatically — there is no
-separate `@types/*` package to install.
+`"types"` at `lib/index.d.ts`, so they are picked up automatically.
+Most of the types are generated from the plot schema and that information is included
+in the type definitions
 
 ## Importing
 

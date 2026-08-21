@@ -35,6 +35,7 @@ existing code or input needs to be updated.
 - [Overlaying axis `tickmode`](#overlaying-axis-tickmode)
 - [`splom.axis.matches` default](#splomaxismatches-default)
 - [Sankey layout](#sankey-layout)
+- [Hover and click event data](#hover-and-click-event-data)
 - [MathJax v2 dropped](#mathjax-v2-dropped)
 
 ---
@@ -61,18 +62,25 @@ intended color:
 | Input | What to do |
 |---|---|
 | `hsv()` / `hsva()` strings | Convert to `hsl()`, `hwb()`, hex, or `rgb()` |
-| `hsl()` / `hsla()` strings without percent units on saturation and lightness (e.g. `'hsl(0, 100, 40)'`, `'hsl(0 100 40)'`) | Add the units (e.g. `'hsl(0, 100%, 40%)'`) |
+| Comma-form `hsl()` / `hsla()` strings without percent units on saturation and lightness (e.g. `'hsl(0, 100, 40)'`) | Add the units (e.g. `'hsl(0, 100%, 40%)'`). The space-separated form, `'hsl(0 100 40)'`, stays valid without them |
+| Strings that mix comma and space separators (e.g. `'hsl(120, 50% 50%)'`) | Pick one separator (e.g. `'hsl(120, 50%, 50%)'`) |
 | `rgb()` / `rgba()` strings with 0–1 decimal fractions | Convert `'rgb(0.5, 0.5, 0.5)'` to `'rgb(128, 128, 128)'` (or any supported string form) |
 | Hex strings without a leading `#` (e.g. `'fff'`, `'F00'`) | Add the `#` (e.g. `'#fff'`, `'#F00'`) |
+
+One input changes meaning rather than becoming invalid: a fourth argument to
+`rgb()` now sets alpha. v3 ignored it and painted the color opaque, so
+`'rgb(255, 0, 0, 0.5)'` is half transparent in v4. Drop the fourth argument to
+keep the color opaque. The comma form of `hsl()` reads an alpha the same way.
 
 Note that these formats only affect *string* colors. Numeric color arrays
 used for color mapping (e.g. `marker.color: [1, 2, 3, 4]` paired with a
 `colorscale`) are unchanged and remain valid. For the full list of formats
 Plotly.js accepts, see [Specifying Colors](/javascript/colors/).
 
-Auto-computed contrast colors (heatmap text, `insidetextfont` on
-bars/waterfall, sankey hover on dark BG) may also shift by a few RGB units
-around mid-luminance backgrounds.
+Auto-computed contrast colors (heatmap text, `insidetextfont` on bars,
+waterfall, pie, and sunburst traces) are now picked by WCAG contrast ratio
+instead of a brightness formula. Labels on saturated mid-tone fills can switch
+between dark grey and white. Set the font color explicitly to pin it.
 
 ---
 
@@ -223,6 +231,22 @@ specific splom, set `matches: false` on its axes explicitly.
 ## Sankey layout
 
 `@plotly/d3-sankey` was upgraded from 0.7.2 to 0.12.3. Node y-positions and link paths may  change slightly.
+
+---
+
+## Hover and click event data
+
+`plotly_hover` and `plotly_click` payloads now include top-level `xPixel` and
+`yPixel`, the cursor position in pixels from the top-left corner of the graph
+div.
+
+If you use `layout.hoveranywhere` or `layout.clickanywhere`, two behaviors
+changed:
+
+| Change | What to do |
+|---|---|
+| `xvals` / `yvals` hold data values instead of calcdata values. Date axes return date strings, category axes return category labels. Linear and log axes are unchanged. | Remove the code that converted the numeric form back to a date or a category label |
+| With `hoveranywhere`, a `plotly_unhover` event (with an empty `points` array) fires when the cursor leaves the plot area | Nothing, unless a `plotly_unhover` handler assumed the event only follows a hover over a trace |
 
 ---
 

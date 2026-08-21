@@ -30,25 +30,46 @@ colors according to the <a href="https://www.w3.org/TR/css-color-4/" target="_bl
   </tr>
   <tr>
     <td><code>rgb()</code>, <code>rgba()</code></td>
-    <td>Comma- or space-separated, with optional slash alpha</td>
+    <td>Comma- or space-separated, with optional alpha. The two function names are aliases, so
+      <code>rgb()</code> also takes an alpha</td>
     <td><code>'rgb(255, 0, 0)'</code>, <code>'rgb(255 0 0)'</code>, <code>'rgba(255, 0, 0, 0.5)'</code>, <code>'rgba(255 0 0 / 0.5)'</code></td>
   </tr>
   <tr>
     <td><code>hsl()</code>, <code>hsla()</code></td>
-    <td>Percent units required on saturation and lightness</td>
-    <td><code>'hsl(0, 100%, 50%)'</code>, <code>'hsl(0 100% 50% / 0.5)'</code></td>
+    <td>Percent units necessary on saturation and lightness in the comma form, optional in the space form</td>
+    <td><code>'hsl(0, 100%, 50%)'</code>, <code>'hsl(0 100 50)'</code>, <code>'hsl(0 100% 50% / 0.5)'</code></td>
   </tr>
   <tr>
     <td><code>hwb()</code></td>
-    <td>Hue-whiteness-blackness, space-separated</td>
+    <td>Hue-whiteness-blackness, space-separated only</td>
     <td><code>'hwb(0 0% 0%)'</code></td>
   </tr>
   <tr>
+    <td><code>lab()</code>, <code>lch()</code>, <code>oklab()</code>, <code>oklch()</code></td>
+    <td>CIE Lab and Oklab spaces, space-separated</td>
+    <td><code>'lab(50% 40 59.5)'</code>, <code>'lch(50% 70 40)'</code>, <code>'oklab(0.5 0.1 0.1)'</code>, <code>'oklch(0.7 0.15 180)'</code></td>
+  </tr>
+  <tr>
+    <td><code>color()</code></td>
+    <td>Explicit color space. Wide-gamut values are clipped into sRGB before they are drawn</td>
+    <td><code>'color(srgb 1 0 0)'</code>, <code>'color(display-p3 0 1 0)'</code>, <code>'color(rec2020 0 0 1)'</code></td>
+  </tr>
+  <tr>
     <td>Hue</td>
-    <td>Given in degrees, with or without the <code>deg</code> unit</td>
-    <td><code>'hsl(0deg 100% 50%)'</code>, <code>'hsl(0 100% 50%)'</code></td>
+    <td>Given in degrees by default. The <code>deg</code>, <code>turn</code>, <code>rad</code>, and <code>grad</code>
+      units are all accepted</td>
+    <td><code>'hsl(0deg 100% 50%)'</code>, <code>'hsl(0 100% 50%)'</code>, <code>'hsl(0.5turn 60% 40%)'</code></td>
+  </tr>
+  <tr>
+    <td><code>none</code></td>
+    <td>The CSS keyword for a missing component, in any space-separated form</td>
+    <td><code>'hsl(none 60% 40%)'</code></td>
   </tr>
 </table>
+
+<p>Separators cannot be mixed inside one color string. Use commas throughout, as in
+<code>'hsl(120, 50%, 50%)'</code>, or spaces throughout, as in <code>'hsl(120 50% 50%)'</code>. A string such as
+<code>'hsl(120, 50% 50%)'</code> is invalid.</p>
 
 <p>These are all parsed in JavaScript and normalized to <code>rgb()</code> / <code>rgba()</code> before being written
 to the DOM in the browser.</p>

@@ -44,6 +44,7 @@ v4](/javascript/guides/migrating-to-v4/).
 - [Scattermap icon defaults](#scattermap-icon-defaults)
 - [Geo `fitbounds` framing for antimeridian features](#geo-fitbounds-framing-for-antimeridian-features)
 - [Sankey layout algorithm update](#sankey-layout-algorithm-update)
+- [Hover and click event data](#hover-and-click-event-data)
 
 **Removed**
 
@@ -171,7 +172,8 @@ Plotly.newPlot(gd, data, layout, {
 
 ## MathJax v4 support
 
-*Implemented in [#7898](https://github.com/plotly/plotly.js/pull/7898).*
+*Implemented in [#7898](https://github.com/plotly/plotly.js/pull/7898) and
+[#7951](https://github.com/plotly/plotly.js/pull/7951).*
 
 Plotly.js now supports **MathJax v3 and v4** for rendering LaTeX in labels,
 titles, and annotations. Support for **MathJax v2 has been dropped**.
@@ -335,12 +337,12 @@ bounds.
 
 ## TypeScript types
 
-*Implemented in [#7680](https://github.com/plotly/plotly.js/pull/7680) and
-[#7868](https://github.com/plotly/plotly.js/pull/7868).*
+*Implemented in [#7680](https://github.com/plotly/plotly.js/pull/7680),
+[#7868](https://github.com/plotly/plotly.js/pull/7868), and
+[#7974](https://github.com/plotly/plotly.js/pull/7974).*
 
 Plotly.js now ships its own TypeScript type definitions. `package.json` points
-`"types"` at `lib/index.d.ts`, so the types are picked up automatically — no
-separate `@types/*` install is needed. See
+`"types"` at `lib/index.d.ts`, so the types are picked up automatically. See
 [Using Plotly.js with TypeScript](/javascript/guides/typescript/) for a
 task-oriented walkthrough.
 
@@ -586,13 +588,13 @@ different framing modes: auto-fit or explicit view.
 
 ### Projections that don't participate in auto-fit
 
-Three projection types skip auto-fit and render with the schema default view
+Four projection types skip auto-fit and render with the schema default view
 even when `fitbounds` is unset (i.e., defaulted to `'locations'`):
 
 | Projection | Why it skips auto-fit |
 |---|---|
 | `'albers usa'` | A fixed composite projection with predetermined insets for Alaska and Hawaii; it has no `center` / `rotation` concept for fitbounds to target. |
-| `'craig'` and `'satellite'` | The internal scale heuristic that drives `fitbounds` compares data bounds against world bounds in the projected plane, which is unreliable for these projections' non-linear (and, for satellite, perspective-dependent) mapping. Auto-fit would zoom incorrectly, so v4 skips it. |
+| `'craig'`, `'peirce quincuncial'`, and `'satellite'` | The internal scale heuristic that drives `fitbounds` compares data bounds against world bounds in the projected plane, which is unreliable for these projections' non-linear (and, for satellite, perspective-dependent) mapping. Auto-fit would zoom incorrectly, so v4 skips it. |
 
 For these projections `layout.geo.fitbounds` is silently forced to `false` in
 the resolved layout even if you leave it at the default. To fit locations
@@ -734,13 +736,14 @@ Plotly.newPlot(gd, [], {
 
 ## Color library swap
 
-*Implemented in [#7536](https://github.com/plotly/plotly.js/pull/7536).*
+*Implemented in [#7536](https://github.com/plotly/plotly.js/pull/7536) and
+[#7962](https://github.com/plotly/plotly.js/pull/7962).*
 
 In v4, Plotly's internal color processing was switched from
 [tinycolor2](https://github.com/bgrins/TinyColor) to
-[color](https://github.com/Qix-/color). The new library is actively maintained
-and supports modern CSS Color 4 syntax, but a handful of behaviors changed in
-the process.
+[culori](https://culorijs.org). The new library parses colors to the [CSS Color
+4](https://www.w3.org/TR/css-color-4/) specification. A color string that is not
+valid CSS is now rejected, and the attribute falls back to its default.
 
 ### Color string inputs that no longer work
 
@@ -756,16 +759,24 @@ the process.
 
 A color in the unsupported format will fall back to the attribute's default.
 
-**`hsl()` / `hsla()` strings need percent units on saturation and lightness.**
-A color in the unsupported format will fall back to the attribute's default.
+**The comma form of `hsl()` / `hsla()` needs percent units on saturation and
+lightness.** A color in the unsupported format falls back to the attribute's
+default.
 
 ```js
 // Before
 { marker: { color: 'hsl(0, 100, 40)' } }
 
-// After — add the percent units
+// After - add the percent units
 { marker: { color: 'hsl(0, 100%, 40%)' } }
 ```
+
+The modern space-separated form still accepts unitless numbers, because CSS
+Color 4 permits them there: `'hsl(0 100 40)'` is valid in v4.
+
+**Separators cannot be mixed within one color string.** CSS Color 4 accepts
+either all commas or all spaces. A string such as `'hsl(120, 50% 50%)'` was
+valid in v3 and is rejected in v4.
 
 **`rgb()` / `rgba()` strings with 0–1 decimal fractions are no longer
 rescaled.** In v3, Plotly detected all-fractional `rgb()` components and
@@ -800,6 +811,20 @@ as `rgb(200, 0.5, 0.5)` now rounds each component to the nearest integer →
 { marker: { color: '#fff' } }
 ```
 
+**`rgb()` with a fourth argument now sets alpha.** CSS Color 4 makes `rgb()`
+and `rgba()` aliases, so both read an optional alpha. In v3, `rgb()` ignored a
+fourth argument and painted the color opaque.
+
+```js
+// v3 - alpha dropped, the marker is opaque red
+// v4 - alpha honored, the marker is 50% transparent red
+{ marker: { color: 'rgb(255, 0, 0, 0.5)' } }
+```
+
+The same applies to `hsl()`, which now reads the alpha from
+`'hsl(0, 100%, 50%, 0.5)'`. Add the alpha deliberately, or drop it to keep the
+color opaque.
+
 These changes affect *string* colors only. Numeric color arrays used for color
 mapping (e.g. `marker.color: [1, 2, 3, 4]` with a `colorscale`) are unchanged
 and remain valid — those values are mapped through the colorscale, not parsed
@@ -807,37 +832,47 @@ as literal colors.
 
 ### Color computation output changes
 
-A handful of Plotly's derived colors shift by a few RGB units. Visible places
-where output shifts:
+Plotly picks a contrasting color for text and borders drawn on top of a filled
+mark. v3 made that choice from a brightness formula. v4 makes it from the
+[WCAG contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio):
+Plotly measures the fill against both candidate colors and keeps the more
+legible one. On saturated mid-tone fills, the two rules disagree, so a label
+can switch between dark grey and white.
 
-| Where | Example |
+| Where | What changes |
 |---|---|
-| Heatmap auto-contrast text | Cells in the mid-luminance range flip between dark grey and white on colorscales like Viridis or Jet |
-| Auto-generated `insidetextfont` color on bars/waterfall | Same threshold shift around mid-luminance backgrounds |
-| Sankey default hover color (dark BG) | RGB channels shift by 1 unit per channel vs v3 |
+| Heatmap auto-contrast text | Cells in the mid-luminance range flip between dark grey and white on colorscales such as Viridis or Jet |
+| Auto-generated `insidetextfont` color on bar, waterfall, pie, and sunburst traces | The same rule picks the label color, so labels on mid-tone slices and bars can flip |
+| Derived colors, such as lightened or darkened hover fills | Values can differ from v3 by about one RGB unit per channel, from rounding |
 
-Example — the four cells with `z` values 55, 56, and 60 (both occurrences)
-shift their text from white in v3 to dark grey in v4 on a Viridis heatmap,
-because the underlying color library computes cell luminance with a slightly
-different formula.
+Example - on a Viridis heatmap with `z` from 0 to 100, the two cells with
+`z: 60` take white text in v3 and dark grey text in v4. Their fill contrasts
+better with dark grey than with white, which is what the WCAG ratio reports.
 
 | Before (v3) | After (v4) |
 |---|---|
-| ![v3 Viridis heatmap with white text on mid-luminance cells](/all_static/images/whats-new-in-v4/color_heatmap_v3.png) | ![v4 Viridis heatmap with dark text on those cells](/all_static/images/whats-new-in-v4/color_heatmap_v4.png) |
+| ![v3 Viridis heatmap with white text on the two z=60 cells](/all_static/images/whats-new-in-v4/color_heatmap_v3.png) | ![v4 Viridis heatmap with dark text on the two z=60 cells](/all_static/images/whats-new-in-v4/color_heatmap_v4.png) |
 
 ### New color formats you can now use
 
-The new library adds CSS Color 4 syntax that tinycolor didn't fully support —
-notably slash-separated alpha and the `hwb()` color space:
+The new library adds CSS Color 4 syntax that tinycolor did not support:
+slash-separated alpha, three more color spaces, and the `hwb()` notation:
 
 ```js
 'rgba(255 0 0 / 0.5)'     // space-separated rgb with slash alpha
 'hsl(0 100% 50% / 0.5)'   // slash alpha on hsl (v3 accepted the syntax but dropped the alpha)
 'hwb(0 0% 0%)'            // hwb (hue-whiteness-blackness)
+'lab(50% 40 59.5)'        // CIE Lab
+'lch(50% 70 40)'          // CIE LCh
+'oklab(0.5 0.1 0.1)'      // Oklab
+'oklch(0.7 0.15 180)'     // Oklch
+'color(srgb 1 0 0)'       // explicit color space, including display-p3 and rec2020
+'hsl(0.5turn 60% 40%)'    // hue in turns, rads, or grads instead of degrees
+'hsl(none 60% 40%)'       // the `none` keyword for a missing component
 ```
 
-Note that `hwb()` has no comma-separated form in CSS — the legacy syntax exists
-only for `rgb()` and `hsl()`.
+Note that `hwb()` has no comma-separated form in CSS; the legacy comma syntax
+exists only for `rgb()` and `hsl()`.
 
 The following additional formats were already supported:
 
@@ -922,6 +957,7 @@ regions still work:
 | `XAP` | Arunachal Pradesh |
 | `XBT` | Bir Tawil |
 | `XHT` | Halaib Triangle |
+| `XIT` | Ilemi Triangle |
 | `XJK` | Jammu and Kashmir |
 
 These are layered on top of the standard ISO 3166-1 records via
@@ -985,7 +1021,7 @@ that selector will now always match a circle path on map traces.
 
 ## Geo `fitbounds` framing for antimeridian features
 
-*Implemented in [#7891](https://github.com/plotly/plotly.js/pull/7891).*
+*Implemented in [#7891](https://github.com/plotly/plotly.js/pull/7891) and [#7948](https://github.com/plotly/plotly.js/pull/7948).*
 
 `layout.geo.fitbounds: 'locations'` (and `'geojson'`) now correctly frames
 choropleth and scattergeo location traces containing features that cross the
@@ -996,6 +1032,11 @@ bounding-box computation (`@turf/bbox`) reported a bogus whole-globe span
 match. In v4, `computeBbox` uses `d3-geo.geoBounds`' widest-gap longitude
 algorithm on the feature's vertices and returns the compact crossing range
 (with `east > 180°` when the range wraps).
+
+This also covers traces that mix antimeridian-crossing territories with
+ordinary ones (for example Russia alongside European countries). v4 gathers
+every location's coordinates into a single bounding box, so one crossing
+feature no longer widens the frame to the whole globe.
 
 Because v4 also flips the `fitbounds` default from `false` to `'locations'`
 (see [Geo subplots auto-fit by default](#geo-subplots-auto-fit-by-default)),
@@ -1062,6 +1103,70 @@ pixels.
 | Before (v3) | After (v4) |
 |---|---|
 | ![v3 sankey with crossing links](/all_static/images/whats-new-in-v4/sankey_v3.png) | ![v4 sankey with rewritten layout](/all_static/images/whats-new-in-v4/sankey_v4.png) |
+
+---
+
+## Hover and click event data
+
+*Implemented in [#7964](https://github.com/plotly/plotly.js/pull/7964) and
+[#7966](https://github.com/plotly/plotly.js/pull/7966).*
+
+### `xPixel` and `yPixel` on the event payload
+
+`plotly_hover` and `plotly_click` payloads now carry top-level `xPixel` and
+`yPixel` keys. They hold the cursor position in pixels, measured from the
+top-left corner of the graph div. Both keys are present whether or not
+`layout.hoveranywhere` and `layout.clickanywhere` are enabled.
+
+```js
+gd.on('plotly_click', (data) => {
+    // Position a custom tooltip at the cursor
+    tooltip.style.left = `${data.xPixel}px`;
+    tooltip.style.top = `${data.yPixel}px`;
+});
+```
+
+Each entry of the payload's `points` array also has `xPixel` and `yPixel`.
+Those hold the position of the point itself, not the cursor.
+
+### `xvals` and `yvals` now hold data values
+
+`layout.hoveranywhere` and `layout.clickanywhere` make `plotly_hover` and
+`plotly_click` fire over empty plot space. Those events carry an empty `points`
+array plus `xvals` and `yvals` for the cursor position.
+
+In v3, `xvals` and `yvals` held calcdata values. In v4 they hold data values,
+the same form your input data takes:
+
+| Axis type | v3 value | v4 value |
+|---|---|---|
+| `date` | Milliseconds since the epoch, for example `1704067200000` | Date string, for example `'2024-01-01'` |
+| `category` | Category index, for example `2` | Category label, for example `'Wednesday'` |
+| `linear`, `log` | Numeric value | Unchanged |
+
+Handlers that converted the numeric form need updating:
+
+```js
+// Before - xvals[0] was the category index
+gd.on('plotly_click', (data) => {
+    const label = categories[data.xvals[0]];
+});
+
+// After - xvals[0] is the category label
+gd.on('plotly_click', (data) => {
+    const label = data.xvals[0];
+});
+```
+
+Axes with no data-space conversion, such as `geo` and `map` subplots, pass
+their values through unchanged.
+
+### `plotly_unhover` fires when the cursor leaves the plot area
+
+With `layout.hoveranywhere` enabled, v3 emitted no `plotly_unhover` after a
+hover over empty space, so a custom readout stayed on screen after the cursor
+left the plot. v4 emits exactly one `plotly_unhover`, with an empty `points`
+array, when the cursor leaves the plot area.
 
 ---
 
