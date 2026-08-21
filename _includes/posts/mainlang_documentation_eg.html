@@ -11,6 +11,8 @@
     {% if page.layout != "langindex" %}
         {% if page.display_as == "file_settings" %}
             {% assign file_settings = true %}
+        {% elsif page.display_as == "guide" %}
+            {% assign guide = true %}
         {% elsif page.display_as == "chart_type" or page.display_as == "basic" %}
             {% assign chart_type = true %}
         {% elsif page.display_as == "statistical" %}
@@ -78,6 +80,39 @@
 
             {%- for page in languagelist -%}
                 {% if page.display_as == "file_settings" and page.layout != "langindex" and forloop_idx < num_examples  %}
+                    {% assign forloop_idx = forloop_idx | plus:1 %}
+                    {% include layouts/grid-item.html %}
+                {% endif %}
+            {%- endfor -%}
+
+        </ul>
+    </section>
+</section>
+{% endif %}
+
+{% if guide %}
+<section class="--tutorial-section">
+    <header class="--section-header">
+        <a href="#guides" name="guides" id="guides">Guides</a>
+
+        {% assign forloop_idx = 0 %}
+        {%- for page in languagelist -%}
+            {% if page.display_as == "guide" and page.layout != "langindex" %}
+                {% assign forloop_idx = forloop_idx | plus:1 %}
+            {% endif %}
+        {%- endfor -%}
+
+        {% if forloop_idx >= num_examples %}
+        <a href="/{{language}}/guides" class="langindexlink">More Guides &raquo;</a>
+        {% endif %}
+    </header>
+    <section class="--grid">
+        <ul class="--grid-list">
+
+            {% assign forloop_idx = 0 %}
+
+            {%- for page in languagelist -%}
+                {% if page.display_as == "guide" and page.layout != "langindex" and forloop_idx < num_examples  %}
                     {% assign forloop_idx = forloop_idx | plus:1 %}
                     {% include layouts/grid-item.html %}
                 {% endif %}

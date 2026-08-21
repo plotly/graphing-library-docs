@@ -1,0 +1,57 @@
+---
+name: Color Arrows by a Scalar Field
+language: plotly_js
+suite: quiver
+order: 3
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+  Pass `marker.color` an array with one value per arrow, together with the usual colorscale attributes
+  (`marker.colorscale`, `marker.cmin`, `marker.cmax`, `marker.showscale`, `marker.colorbar`), to color each arrow by
+  that value. Here the arrows are colored by their own magnitude. If you enable a colorscale without supplying a
+  `marker.color` array, arrows are colored by vector magnitude automatically. A single (non-array) `marker.color`
+  paints the whole field one color.
+---
+var x = [];
+var y = [];
+var u = [];
+var v = [];
+var speed = [];
+
+// A shear flow: horizontal velocity grows with y, with a small vertical component.
+for (var i = 0; i <= 8; i++) {
+  for (var j = 0; j <= 6; j++) {
+    var ui = 0.2 + 0.25 * j;
+    var vi = 0.4 * Math.sin(i / 2);
+    x.push(i);
+    y.push(j);
+    u.push(ui);
+    v.push(vi);
+    speed.push(Math.sqrt(ui * ui + vi * vi));
+  }
+}
+
+var data = [{
+  type: 'quiver',
+  x: x,
+  y: y,
+  u: u,
+  v: v,
+  marker: {
+    color: speed,
+    colorscale: 'Viridis',
+    showscale: true,
+    colorbar: {title: {text: 'speed'}},
+    line: {width: 2}
+  }
+}];
+
+var layout = {
+  title: {text: 'Shear Flow, Arrows Colored by Speed'},
+  xaxis: {title: {text: 'x'}},
+  yaxis: {title: {text: 'y'}},
+  width: 700,
+  height: 500
+};
+
+Plotly.newPlot('myDiv', data, layout);

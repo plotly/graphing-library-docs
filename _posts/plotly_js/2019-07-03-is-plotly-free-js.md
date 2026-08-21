@@ -16,13 +16,15 @@ language: plotly_js
 #### Can I use Plotly.js without signing up to any service?
 
 &nbsp;  &nbsp; **Yes.** &nbsp; You can use Plotly.js to make, view, and distribute charts and maps without registering for any service,
-obtaining any token, or creating any account. The one exception is that to view tile maps
-which use tiles from the Mapbox service (which is optional, as [you can use other tile servers](/javascript/mapbox-layers)), you will need to have a Mapbox token.
+obtaining any token, or creating any account. The built-in tile map styles use open tile providers and need no token. Some
+third-party tile providers you can [point Plotly.js at](/javascript/tile-map-layers) do require an account with that
+provider — Stamen tiles, for instance, are served by Stadia Maps and need a Stadia API key. Sharing a chart with
+[Plotly Cloud](https://cloud.plotly.com) from the modebar requires a Plotly Cloud account, but nothing else does.
 
 #### Can I use Plotly.js offline, without being connected to the internet?
 
 &nbsp;  &nbsp; **Yes.** &nbsp; You can use Plotly.js to make, view, and distribute  graphics totally offline. The one exception is that to view tile maps
-which use tiles from a cloud-hosted service, such as Open Street Maps or Mapbox, you will need a connection to that service. You can view tile maps totally offline if  you run your own local tile server and [use its tiles](/javascript/mapbox-layers).
+which use tiles from a cloud-hosted service, such as OpenStreetMap, you will need a connection to that service. You can view tile maps totally offline if you run your own local tile server and [use its tiles](/javascript/tile-map-layers).
 
 #### Is Dash free?
 

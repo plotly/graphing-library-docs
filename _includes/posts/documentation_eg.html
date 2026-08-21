@@ -8,6 +8,8 @@
 {%- for page in languagelist -%}
 {% if page.display_as == "file_settings" %}
 {% assign file_settings = true %}
+{% elsif page.display_as == "guide" %}
+{% assign guide = true %}
 {% elsif page.display_as == "chart_type" or page.display_as == "basic" %}
 {% assign chart_type = true %}
 {% elsif page.display_as == "statistical" %}
@@ -104,6 +106,30 @@
         <ul class="--grid-list">
             {%- for page in languagelist -%}
             {% if page.display_as == "file_settings" %}
+
+            {% include layouts/grid-item.html %}
+
+
+            {% endif %}
+            {%- endfor -%}
+        </ul>
+    </section>
+</section>
+{% endif %}
+
+{% if guide %}
+<section class="--tutorial-section">
+    <header class="--section-header">
+
+        {% if show_header %}
+        <a href="#guides" name="guides" id="guides">Guides</a>
+        {% endif %}
+
+    </header>
+    <section class="--grid">
+        <ul class="--grid-list">
+            {%- for page in languagelist -%}
+            {% if page.display_as == "guide" %}
 
             {% include layouts/grid-item.html %}
 

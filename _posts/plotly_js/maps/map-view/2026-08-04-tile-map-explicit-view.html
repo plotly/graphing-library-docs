@@ -1,0 +1,37 @@
+---
+name: Setting an Explicit Tile Map View
+language: plotly_js
+suite: map-view
+order: 2
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+  Passing `map.center` or `map.zoom` opts the subplot out of auto-fitting and opens it on exactly the view you give,
+  even if that view is the default `zoom: 1` centered on `(0, 0)`. Setting `map.fitbounds: false` without a view has
+  the same effect as the pre-v4 default: a world view at `zoom: 1`.
+
+  `map.bounds`, which restricts how far users can pan, is independent of auto-fitting and can be combined with either.
+---
+var data = [{
+  type: 'scattermap',
+  mode: 'markers+text',
+  lon: [-122.4, -73.9, -87.6],
+  lat: [37.8, 40.7, 41.9],
+  text: ['San Francisco', 'New York', 'Chicago'],
+  textposition: 'top right',
+  marker: {size: 12, color: '#d62728'}
+}];
+
+var layout = {
+  map: {
+    style: 'basic',
+    center: {lon: -98, lat: 39},
+    zoom: 2.5
+  },
+  showlegend: false,
+  width: 700,
+  height: 450,
+  margin: {t: 30, b: 0, l: 0, r: 0}
+};
+
+Plotly.newPlot('myDiv', data, layout);

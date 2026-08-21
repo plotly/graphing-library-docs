@@ -1,0 +1,38 @@
+---
+name: Flow Direction
+language: plotly_js
+suite: sankey
+order: 7
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+  `direction` sets which way flows run along the `orientation` axis, so a diagram can be mirrored without reversing
+  your `link.source` and `link.target` data. The default, `'forward'`, orders sources left-to-right when horizontal or top-to-bottom when vertical; `'reversed'` is the opposite.
+  Combined with `orientation` (`'h'` or `'v'`) this gives four layouts: sources on the left, right, top, or bottom.
+  Node labels stay upright in every combination — only the flow geometry is mirrored.
+
+  `direction` mirrors the finished layout: it does not reassign nodes to different columns. To change which column a node is placed in, use [Node Alignment](#node-alignment).
+---
+var data = [{
+  type: 'sankey',
+  orientation: 'h',
+  direction: 'reversed',
+  node: {
+    label: ['Coal', 'Gas', 'Solar', 'Grid', 'Residential', 'Industrial'],
+    pad: 15,
+    thickness: 20
+  },
+  link: {
+    source: [0, 1, 2, 3, 3],
+    target: [3, 3, 3, 4, 5],
+    value: [8, 4, 3, 9, 6]
+  }
+}];
+
+var layout = {
+  title: {text: "Reversed Flow (sources on the right)"},
+  width: 700,
+  height: 450
+};
+
+Plotly.newPlot('myDiv', data, layout);

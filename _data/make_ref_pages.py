@@ -3,13 +3,19 @@ import json
 schema = json.load(open("plotschema.json"))
 
 
-for upperlang in ["Python", "JavaScript", "MATLAB", "R", "Julia", "F#"]:
+# Only Python and JavaScript are regenerated. The MATLAB, R, Julia, and F# reference
+# pages are frozen at whatever schema they were last built from: those languages are no
+# longer maintained, and their pages load pinned older plotly.js bundles (R/ggplot2 on
+# 1.58.4, Julia/MATLAB on 2.35.3 — see _includes/layouts/head.html), so regenerating them
+# from a current schema would document attributes their bundles don't have and drop ones
+# they do. Their existing files under _posts/reference_pages/<lang>/ are left untouched.
+for upperlang in ["Python", "JavaScript"]:
     lang = upperlang.lower()
     lang = "fsharp" if lang == "f#" else lang
     lang = "csharp" if lang == "c#" else lang
     langcode = "plotly_js" if lang == "javascript" else lang
     for attr in [
-        "xaxis", "yaxis", "coloraxis", "scene", "polar", "ternary", "smith", "geo", "mapbox",
+        "xaxis", "yaxis", "coloraxis", "scene", "polar", "ternary", "smith", "geo", "map",
         "sliders", "updatemenus", "annotations", "shapes", "images","selections", "global"
     ]:
         fullattr = "layout" + ("." + attr if attr != "global" else "")

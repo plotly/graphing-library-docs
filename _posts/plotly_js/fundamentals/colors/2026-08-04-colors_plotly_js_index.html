@@ -1,0 +1,87 @@
+---
+description: How to specify colors in JavaScript. The CSS color string formats Plotly.js accepts for every color attribute.
+display_as: file_settings
+language: plotly_js
+layout: base
+name: Specifying Colors
+order: 27
+page_type: example_index
+permalink: javascript/colors/
+thumbnail: thumbnail/colorway.jpg
+---
+
+<p>Every color attribute in Plotly.js — <code>marker.color</code>, <code>line.color</code>,
+<code>fillcolor</code>, <code>paper_bgcolor</code>, and the rest — accepts a CSS color string. Plotly.js v4 parses
+colors according to the <a href="https://www.w3.org/TR/css-color-4/" target="_blank">CSS Color 4</a> specification.</p>
+
+<h4>Accepted formats</h4>
+
+<table>
+  <tr><th>Format</th><th>Notes</th><th>Examples</th></tr>
+  <tr>
+    <td>Named colors</td>
+    <td>Any CSS color keyword</td>
+    <td><code>'red'</code>, <code>'cornflowerblue'</code>, <code>'transparent'</code></td>
+  </tr>
+  <tr>
+    <td>Hex</td>
+    <td>3-, 4-, 6-, or 8-digit, always with a leading <code>#</code></td>
+    <td><code>'#f00'</code>, <code>'#f00a'</code>, <code>'#ff0000'</code>, <code>'#ff0000aa'</code></td>
+  </tr>
+  <tr>
+    <td><code>rgb()</code>, <code>rgba()</code></td>
+    <td>Comma- or space-separated, with optional alpha. The two function names are aliases, so
+      <code>rgb()</code> also takes an alpha</td>
+    <td><code>'rgb(255, 0, 0)'</code>, <code>'rgb(255 0 0)'</code>, <code>'rgba(255, 0, 0, 0.5)'</code>, <code>'rgba(255 0 0 / 0.5)'</code></td>
+  </tr>
+  <tr>
+    <td><code>hsl()</code>, <code>hsla()</code></td>
+    <td>Percent units necessary on saturation and lightness in the comma form, optional in the space form</td>
+    <td><code>'hsl(0, 100%, 50%)'</code>, <code>'hsl(0 100 50)'</code>, <code>'hsl(0 100% 50% / 0.5)'</code></td>
+  </tr>
+  <tr>
+    <td><code>hwb()</code></td>
+    <td>Hue-whiteness-blackness, space-separated only</td>
+    <td><code>'hwb(0 0% 0%)'</code></td>
+  </tr>
+  <tr>
+    <td><code>lab()</code>, <code>lch()</code>, <code>oklab()</code>, <code>oklch()</code></td>
+    <td>CIE Lab and Oklab spaces, space-separated</td>
+    <td><code>'lab(50% 40 59.5)'</code>, <code>'lch(50% 70 40)'</code>, <code>'oklab(0.5 0.1 0.1)'</code>, <code>'oklch(0.7 0.15 180)'</code></td>
+  </tr>
+  <tr>
+    <td><code>color()</code></td>
+    <td>Explicit color space. Wide-gamut values are clipped into sRGB before they are drawn</td>
+    <td><code>'color(srgb 1 0 0)'</code>, <code>'color(display-p3 0 1 0)'</code>, <code>'color(rec2020 0 0 1)'</code></td>
+  </tr>
+  <tr>
+    <td>Hue</td>
+    <td>Given in degrees by default. The <code>deg</code>, <code>turn</code>, <code>rad</code>, and <code>grad</code>
+      units are all accepted</td>
+    <td><code>'hsl(0deg 100% 50%)'</code>, <code>'hsl(0 100% 50%)'</code>, <code>'hsl(0.5turn 60% 40%)'</code></td>
+  </tr>
+  <tr>
+    <td><code>none</code></td>
+    <td>The CSS keyword for a missing component, in any space-separated form</td>
+    <td><code>'hsl(none 60% 40%)'</code></td>
+  </tr>
+</table>
+
+<p>Separators cannot be mixed inside one color string. Use commas throughout, as in
+<code>'hsl(120, 50%, 50%)'</code>, or spaces throughout, as in <code>'hsl(120 50% 50%)'</code>. A string such as
+<code>'hsl(120, 50% 50%)'</code> is invalid.</p>
+
+<p>These are all parsed in JavaScript and normalized to <code>rgb()</code> / <code>rgba()</code> before being written
+to the DOM in the browser.</p>
+
+<p>A color string that Plotly.js cannot parse falls back to the attribute's default, so the figure renders in the wrong
+color rather than failing loudly. If you are upgrading from an earlier version, see
+<a href="/javascript/guides/migrating-to-v4/">Migrating to Plotly.js v4</a> for the formats that are no longer
+accepted.</p>
+
+<p>These rules apply to color <i>strings</i> only. Numeric arrays used for color mapping, such as
+<code>marker.color: [1, 2, 3, 4]</code> paired with a <a href="/javascript/colorscales/">colorscale</a>, are
+unaffected.</p>
+
+{% assign examples = site.posts | where:"language","plotly_js" | where:"suite","colors" | sort: "order" %}
+{% include posts/auto_examples.html examples=examples %}

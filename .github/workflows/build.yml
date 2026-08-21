@@ -33,10 +33,6 @@ jobs:
       - name: Fetch upstream docs
         run: make fetch_upstream_files
 
-      - name: Set up Mapbox token
-        run: |
-          echo "token: ${{ secrets.MAPBOX_TOKEN }}" > _data/mapbox_token.yml
-
       - name: Build site
         run: |
           python front-matter-ci.py _posts
@@ -49,7 +45,6 @@ jobs:
           md5sum all_static/css/main.css | cut -d ' ' -f 1 > _data/cache_bust_css.yml
           bundle exec jekyll build
           cp python/sitemap.xml _site/python/sitemap.xml
-          rm _data/mapbox_token.yml
 
       - name: Create Percy snapshots
         run: |

@@ -1,5 +1,5 @@
 ---
-name: Stamen Terrain Tile
+name: Custom Tile Style
 language: plotly_js
 suite: tile-density-heatmaps
 order: 5
@@ -8,10 +8,24 @@ layout: base
 arrangement: horizontal
 markdown_content: |
 
+  As well as the built-in style names, `layout.map.style` accepts the URL of any
+  [MapLibre style definition](https://maplibre.org/maplibre-style-spec/). The example below points at Carto's Positron
+  style JSON directly.
 
+  Some providers require an API key, which you append to the style URL. The `stamen-terrain`, `stamen-toner`, and
+  `stamen-watercolor` style names are not built in for this reason: Stamen tiles are served by
+  [Stadia Maps](https://stadiamaps.com/), which requires an account. To use them, sign up and add your own key:
+
+  ```
+  map: {style: 'https://tiles.stadiamaps.com/styles/stamen_watercolor.json?api_key=YOUR_STADIA_KEY'}
+  ```
 ---
-var data = [{type: 'densitymapbox', lon: [10, 20, 30], lat: [15, 25, 35], z: [1, 3, 2]}];
+var data = [{type: 'densitymap', lon: [10, 20, 30], lat: [15, 25, 35], z: [1, 3, 2]}];
 
-var layout = {width: 600, height: 400, mapbox: {style: 'https://tiles.stadiamaps.com/styles/stamen_watercolor.json?api_key=YOUR-API-KEY'}};
+var layout = {
+  width: 600,
+  height: 400,
+  map: {style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json'}
+};
 
 Plotly.newPlot('myDiv', data, layout);
