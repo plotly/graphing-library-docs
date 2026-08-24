@@ -395,6 +395,7 @@
  "sortpaths",
 
  "anchor",
+ "arrowref",
  "autocontour",
  "bandwidth",
  "below",
@@ -443,6 +444,8 @@
  "root",
  "leaf",
  "level",
+ "lengthmode",
+ "lengthfactor",
  "lighting",
  "lightposition",
  "locationmode",

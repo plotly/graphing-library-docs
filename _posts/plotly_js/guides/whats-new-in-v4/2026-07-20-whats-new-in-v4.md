@@ -85,9 +85,9 @@ Plotly.newPlot(gd, [{
 | `x`, `y` | numeric arrays | Arrow anchor positions. |
 | `u`, `v` | numeric arrays | Vector components at each `(x, y)`. |
 | `anchor` | `'tail'` (default) / `'tip'` / `'center'` | Which point of the arrow sits at `(x, y)`. |
-| `sizemode` | `'scaled'` (default) / `'raw'` | Normalize arrow lengths against the maximum vector length + point density, or draw them at their raw magnitude. |
-| `sizeref` | number (default `1`) | Multiplier applied on top of `sizemode`. |
-| `anglemode` | `'data'` / `'paper'` | In `'data'`, angles are measured in data coordinates and change with axis zoom or non-uniform scaling; in `'paper'`, angles stay fixed in pixel space. |
+| `lengthmode` | `'scaled'` (default) / `'raw'` | Normalize arrow lengths against the maximum vector length + point density, or draw them at their raw magnitude. |
+| `lengthfactor` | number (default `1`) | Multiplier applied after `lengthmode` scaling. |
+| `arrowref` | `'data'` (default) / `'paper'` | How `u` and `v` are read. In `'data'`, they are data coordinates, so the drawn angle changes with axis zoom or non-uniform scaling. In `'paper'`, they are pixel coordinates, so the angle stays fixed. `'paper'` always scales arrow lengths, and `lengthmode: 'raw'` is ignored. |
 
 ### Styling
 

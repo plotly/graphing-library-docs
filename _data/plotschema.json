@@ -427,7 +427,7 @@
         "requiredOpts": []
       },
       "color": {
-        "description": "A string describing color. Supported formats: - hex (e.g. '#d3d3d3', '#d3d3d3aa') - rgb (e.g. 'rgb(255, 0, 0)', 'rgb(255 0 0)') - rgba (e.g. 'rgba(255, 0, 0, 0.5)', 'rgba(255 0 0 / 0.5)') - hsl (e.g. 'hsl(0, 100%, 50%)') - hsla (e.g. 'hsla(0, 100%, 50%, 0.5)') - hwb (e.g. 'hwb(0, 0%, 0%)') - named colors (full list: http://www.w3.org/TR/css3-color/#svg-color)",
+        "description": "A string describing color. Supported formats: - hex (e.g. '#d3d3d3', '#d3d3d3aa') - rgb/rgba (e.g. 'rgb(255, 0, 0)', 'rgba(255 0 0 / 0.5)') - hsl/hsla (e.g. 'hsl(0, 100%, 50%)', 'hsla(0 100% 50% / 0.5)') - hwb (e.g. 'hwb(0 0% 0%)') - lab/lch/oklab/oklch (e.g. 'oklch(0.7 0.15 180)') - color (e.g. 'color(display-p3 1 0 0)') - named colors (full list: https://www.w3.org/TR/css-color-4/#named-colors)",
         "otherOpts": [
           "dflt",
           "arrayOk"
@@ -2668,7 +2668,7 @@
         "magic_underscores": "fig.update_layout(clickmode=&lt;VALUE&gt;)"
       },
       "clickanywhere": {
-        "description": "If true, `plotly_click` events will fire for any click position within the plot area, not just over traces. When clicking where there is no trace data, the event will have an empty `points` array but will include `xvals` and `yvals` with click coordinates in data space.",
+        "description": "If true, `plotly_click` events will fire for any click position within the plot area, not just over traces. When clicking where there is no trace data, the event will have an empty `points` array but will include `xvals` and `yvals` with click coordinates in data space, and `xPixel` and `yPixel` with click coordinates in pixels, relative to the top-left corner of the graph div.",
         "dflt": false,
         "editType": "none",
         "valType": "boolean",
@@ -3040,7 +3040,7 @@
         "magic_underscores": "fig.update_layout(hoverlabel=dict(...))"
       },
       "hoveranywhere": {
-        "description": "If true, `plotly_hover` events will fire for any cursor position within the plot area, not just over traces. When the cursor is not over a trace, the event will have an empty `points` array but will include `xvals` and `yvals` with cursor coordinates in data space.",
+        "description": "If true, `plotly_hover` events will fire for any cursor position within the plot area, not just over traces. When the cursor is not over a trace, the event will have an empty `points` array but will include `xvals` and `yvals` with cursor coordinates in data space, and `xPixel` and `yPixel` with cursor coordinates in pixels, relative to the top-left corner of the graph div. A `plotly_unhover` event fires when the cursor leaves the plot area.",
         "dflt": false,
         "editType": "none",
         "valType": "boolean",
@@ -30543,7 +30543,7 @@
         },
         "x": {
           "anim": true,
-          "description": "Sets the x coordinates of the arrow locations.",
+          "description": "Sets the x coordinates of the vector arrow locations.",
           "editType": "calc+clearAxisTypes",
           "valType": "data_array",
           "magic_underscores": "fig.update_traces(x=&lt;VALUE&gt;, selector=dict(type='quiver'))"
@@ -30566,7 +30566,7 @@
         },
         "y": {
           "anim": true,
-          "description": "Sets the y coordinates of the arrow locations.",
+          "description": "Sets the y coordinates of the vector arrow locations.",
           "editType": "calc+clearAxisTypes",
           "valType": "data_array",
           "magic_underscores": "fig.update_traces(y=&lt;VALUE&gt;, selector=dict(type='quiver'))"
@@ -30589,14 +30589,14 @@
         },
         "u": {
           "anim": true,
-          "description": "Sets the x components of the arrow vectors.",
+          "description": "Sets the x components of the vector arrows.",
           "editType": "calc",
           "valType": "data_array",
           "magic_underscores": "fig.update_traces(u=&lt;VALUE&gt;, selector=dict(type='quiver'))"
         },
         "v": {
           "anim": true,
-          "description": "Sets the y components of the arrow vectors.",
+          "description": "Sets the y components of the vector arrows.",
           "editType": "calc",
           "valType": "data_array",
           "magic_underscores": "fig.update_traces(v=&lt;VALUE&gt;, selector=dict(type='quiver'))"
@@ -30714,7 +30714,7 @@
         },
         "marker": {
           "arrowsize": {
-            "description": "Sets the size of the arrow head relative to `marker.line.width`. A value of 1 (default) gives a head about 3x as wide as the line.",
+            "description": "Sets the size of the vector arrowhead relative to `marker.line.width`. A value of 1 (default) gives a head about 3x as wide as the line.",
             "dflt": 1,
             "editType": "calc",
             "min": 0.3,
@@ -31488,7 +31488,7 @@
             "editType": "style",
             "role": "object",
             "width": {
-              "description": "Sets the width (in px) of the arrow lines.",
+              "description": "Sets the width (in px) of the vector arrow lines.",
               "dflt": 2,
               "editType": "style",
               "min": 0,
@@ -31707,7 +31707,7 @@
           "magic_underscores": "fig.update_traces(unselected=dict(...), selector=dict(type='quiver'))"
         },
         "anchor": {
-          "description": "Sets the arrows' anchor with respect to their (x,y) positions. Use *tail* to place (x,y) at the base, *tip* to place (x,y) at the head, or *center* to center the arrow on (x,y).",
+          "description": "Sets the vector arrows' anchor with respect to their (x,y) positions. Use *tail* to place (x,y) at the base, *tip* to place (x,y) at the head, or *center* to center the vector arrow on (x,y).",
           "dflt": "tail",
           "editType": "calc",
           "valType": "enumerated",
@@ -31717,6 +31717,17 @@
             "center"
           ],
           "magic_underscores": "fig.update_traces(anchor=&lt;VALUE&gt;, selector=dict(type='quiver'))"
+        },
+        "arrowref": {
+          "description": "Determines how the u/v vector components are interpreted. If *paper*, u/v are interpreted in pixel coordinates and the rendered vector angle does not change regardless of the axis scales. If *data*, u/v are interpreted in data coordinates and the rendered vector angle may change, e.g. if zooming in along a single axis",
+          "dflt": "data",
+          "editType": "calc",
+          "valType": "enumerated",
+          "values": [
+            "paper",
+            "data"
+          ],
+          "magic_underscores": "fig.update_traces(arrowref=&lt;VALUE&gt;, selector=dict(type='quiver'))"
         },
         "hoverlabel": {
           "align": {
@@ -31874,8 +31885,8 @@
           },
           "magic_underscores": "fig.update_traces(hoverlabel=dict(...), selector=dict(type='quiver'))"
         },
-        "sizemode": {
-          "description": "Determines whether arrows are drawn according to their raw lengths, or scaled based on the maximum vector length and point density. Note: When `anglemode` is *data* arrows are alwyas scaled and `sizemode` *raw* is ignored.",
+        "lengthmode": {
+          "description": "Determines whether vector arrows are drawn according to their raw lengths, or scaled based on the maximum vector length and point density. Note: When `arrowref` is *paper* vectors are always scaled and `lengthmode` *raw* is ignored.",
           "dflt": "scaled",
           "editType": "calc",
           "valType": "enumerated",
@@ -31883,32 +31894,21 @@
             "scaled",
             "raw"
           ],
-          "magic_underscores": "fig.update_traces(sizemode=&lt;VALUE&gt;, selector=dict(type='quiver'))"
+          "magic_underscores": "fig.update_traces(lengthmode=&lt;VALUE&gt;, selector=dict(type='quiver'))"
         },
-        "sizeref": {
-          "description": "Adjusts the arrow size scaling. The arrow length is determined by the vector norm multiplied by `sizeref`, optionally normalized when `sizemode` is *scaled* (`sizeref` is applied after scaling).",
+        "lengthfactor": {
+          "description": "Adjusts the drawn length of the vector arrows. The arrow length is determined by the values of u and v, then optionally rescaled when `lengthmode` is *scaled*, then multiplied by `lengthfactor`.",
           "dflt": 1,
           "editType": "calc",
           "min": 0,
           "valType": "number",
-          "magic_underscores": "fig.update_traces(sizeref=&lt;VALUE&gt;, selector=dict(type='quiver'))"
+          "magic_underscores": "fig.update_traces(lengthfactor=&lt;VALUE&gt;, selector=dict(type='quiver'))"
         },
         "uirevision": {
           "description": "Controls persistence of some user-driven changes to the trace: `constraintrange` in `parcoords` traces, as well as some `editable: true` modifications such as `name` and `colorbar.title`. Defaults to `layout.uirevision`. Note that other user-driven trace attribute changes are controlled by `layout` attributes: `trace.visible` is controlled by `layout.legend.uirevision`, `selectedpoints` is controlled by `layout.selectionrevision`, and `colorbar.(x|y)` (accessible with `config: {editable: true}`) is controlled by `layout.editrevision`. Trace changes are tracked by `uid`, which only falls back on trace index if no `uid` is provided. So if your app can add/remove traces before the end of the `data` array, such that the same trace has a different index, you can still preserve user-driven changes if you give each trace a `uid` that stays with it as it moves.",
           "editType": "none",
           "valType": "any",
           "magic_underscores": "fig.update_traces(uirevision=&lt;VALUE&gt;, selector=dict(type='quiver'))"
-        },
-        "anglemode": {
-          "description": "Sets the mode used to determine the angle of the arrow vectors. If *paper*, u/v are interpreted in pixel coordinates and the rendered vector angle does not change regardless of the axes scales. If *data*, u/v are interpreted in data coordinates and the rendered vector angle may change, e.g. if zooming in along a single axis",
-          "dflt": "axis",
-          "editType": "calc",
-          "valType": "enumerated",
-          "values": [
-            "paper",
-            "data"
-          ],
-          "magic_underscores": "fig.update_traces(anglemode=&lt;VALUE&gt;, selector=dict(type='quiver'))"
         },
         "magic_underscores": "fig.update_traces(..., selector=dict(type='quiver'))"
       },
@@ -84743,7 +84743,7 @@
           "magic_underscores": "fig.update_traces(domain=dict(...), selector=dict(type='sankey'))"
         },
         "orientation": {
-          "description": "Sets the orientation of the Sankey diagram.",
+          "description": "Sets the orientation of the Sankey diagram. With `h` (the default), the flow runs horizontally. With `v`, the flow runs vertically. Use `direction` to control which side the sources are placed on.",
           "dflt": "h",
           "editType": "calc",
           "valType": "enumerated",
@@ -85508,6 +85508,17 @@
             "fixed"
           ],
           "magic_underscores": "fig.update_traces(arrangement=&lt;VALUE&gt;, selector=dict(type='sankey'))"
+        },
+        "direction": {
+          "description": "Sets the direction of the flow along the `orientation` axis. With `forward` (the default), sources are on the left (horizontal) or top (vertical). With `reversed`, sources are on the right (horizontal) or bottom (vertical).",
+          "dflt": "forward",
+          "editType": "calc",
+          "valType": "enumerated",
+          "values": [
+            "forward",
+            "reversed"
+          ],
+          "magic_underscores": "fig.update_traces(direction=&lt;VALUE&gt;, selector=dict(type='sankey'))"
         },
         "hoverlabel": {
           "align": {
