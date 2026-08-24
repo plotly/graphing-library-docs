@@ -20,13 +20,15 @@ from <code>(u, v)</code>.</p>
 <ul>
   <li><code>anchor</code> — which part of the arrow sits at <code>(x, y)</code>: <code>'tail'</code> (the default),
     <code>'tip'</code>, or <code>'center'</code>.</li>
-  <li><code>sizemode</code> — <code>'scaled'</code> (the default) normalizes arrow lengths against the largest vector
-    and the density of points, so a dense field stays readable; <code>'raw'</code> draws each arrow at its own
+  <li><code>lengthmode</code> — <code>'scaled'</code> (the default) normalizes arrow lengths against the largest
+    vector and the density of points, so a dense field stays readable; <code>'raw'</code> draws each arrow at its own
     magnitude.</li>
-  <li><code>sizeref</code> — a multiplier applied on top of <code>sizemode</code>. Values below 1 shorten every
-    arrow, values above 1 lengthen them.</li>
-  <li><code>anglemode</code> — with <code>'data'</code>, angles are measured in data coordinates, so they change when
-    you zoom one axis more than the other; with <code>'paper'</code>, angles are fixed in pixel space.</li>
+  <li><code>lengthfactor</code> — a multiplier applied after <code>lengthmode</code> scaling. Values below 1 shorten
+    every arrow, values above 1 lengthen them.</li>
+  <li><code>arrowref</code> — how <code>u</code> and <code>v</code> are read. With <code>'data'</code> (the default)
+    they are data coordinates, so the drawn angle changes when you zoom one axis more than the other. With
+    <code>'paper'</code> they are pixel coordinates, so the angle is fixed. <code>'paper'</code> always scales arrow
+    lengths, and <code>lengthmode: 'raw'</code> is ignored.</li>
 </ul>
 
 <p>Arrow lines are styled with <code>marker.line.width</code> and <code>marker.line.dash</code>, and the arrowhead is

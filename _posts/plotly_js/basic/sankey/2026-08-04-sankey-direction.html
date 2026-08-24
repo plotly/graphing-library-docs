@@ -13,7 +13,7 @@ markdown_content: |
 
   `direction` mirrors the finished layout: it does not reassign nodes to different columns. To change which column a node is placed in, use [Node Alignment](#node-alignment).
 ---
-var data = [{
+const data = [{
   type: 'sankey',
   orientation: 'h',
   direction: 'reversed',
@@ -29,7 +29,7 @@ var data = [{
   }
 }];
 
-var layout = {
+const layout = {
   title: {text: "Reversed Flow (sources on the right)"},
   width: 700,
   height: 450
