@@ -2,9 +2,11 @@
 {% capture language %}{% if page.language == 'plotly_js' %}JavaScript{% elsif page.language == 'ggplot2'%}ggplot2{% elsif page.language == 'f_sharp' %}F#{% elsif page.language == 'matlab' %}MATLAB{% else %}{{page.language | capitalize }}{% endif %}{% endcapture %}
 <!-- Create a title -->
 {% capture title %}
-    {% if page.permalink == '/python/' or page.language == '/julia/' or page.language == '/r/' or page.language == '/ggplot2/' or page.language == '/f_sharp/' or page.language == '/matlab/' or page.language == '/javascript/' %}{{page.name}}
+    {% if page.permalink == '/python/' %} Open Source Python Graphing &amp; Data Visualization Library | Plotly
+    {% elsif page.language == '/julia/' or page.language == '/r/' or page.language == '/ggplot2/' or page.language == '/f_sharp/' or page.language == '/matlab/' or page.language == '/javascript/' %}{{page.name}}
     {% elsif page.name == '404' %} 404 Page Not Found
-    {% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %} Plotly Open Source Graphing Libraries
+    {% elsif page.permalink == '/javascript/' %} Open Source JavaScript Graphing &amp; Chart Library | Plotly
+    {% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %} Open-Source Graphing Libraries for Python &amp; JavaScript | Plotly
     {% elsif page.name %} {{page.name | capitalize}} in {{language}}{% else %} Plotly Open Source Graphing Libraries{% endif %}
 {% endcapture %}
 <!-- Count number of plots on the page -->
@@ -23,7 +25,7 @@
 {% if page.layout == 'langindex' %}
     {% capture description %}{{page.description}}{% endcapture %}
 {% elsif page.permalink == '/api/' or page.permalink == '/graphing-libraries/' %}
-    {% capture description %}"Interactive charts and maps for Python, R, Julia, Javascript, ggplot2, F#, MATLAB®, and Dash."{% endcapture %}
+    {% capture description %}"Access interactive charts and maps for Python and JavaScript, for use with Dash, Notebooks, ChatGPT, Claude, and LLMs. Graphing libraries for data analytics."{% endcapture %}
 {% else %}
     {% assign counter = 0 %}
     {% for code_block in code_blocks %}
@@ -42,26 +44,36 @@
 {% endif %}
 
 
+<!-- Normalize the captured values before they go into attributes.
+     The capture blocks above are multi-line, so they arrive padded with
+     newlines/indentation, and some of them wrap their text in literal double
+     quotes to compensate for the content= attributes having been unquoted.
+     Strip both, then quote the attributes properly below: an unquoted
+     content= truncates the value at its first space, which is why every
+     langindex description used to render as a single word. -->
+{% assign title = title | strip_newlines | strip | replace: '"', '' %}
+{% assign description = description | strip_newlines | strip | replace: '"', '' %}
+
 <!-- SEO Tags - title, meta_description -->
 <title>{{title}}</title>
-<meta name="description" content={{description}}>
+<meta name="description" content="{{description}}">
 
 <!-- Bing tags -->
     <meta name="msvalidate.01" content="D319859A832F9F1D15A7646E2A42150A" />
 <!-- Facebook tags -->
-    <meta property="og:title" content={{title}}/>
+    <meta property="og:title" content="{{title}}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="{% if page.imageurl %}{{page.imageurl}}{% else %}{% if page.thumbnail%}{{site.imgurl}}{{page.thumbnail}}{%else%}https://help.plot.ly/images/twitter-default.png{% endif %}{% endif %}">
-    <meta property="og:description" content={{description}}/>
+    <meta property="og:description" content="{{description}}"/>
     <meta property="og:url" />
     <meta property="fb:admins" content="1123751525"/>
     <meta property="fb:admins" content="22418"/>
 
 <!-- twitter tags -->
     <meta name="twitter:card" content="photo" />
-    <meta name="twitter:title" content={{title}}/>
+    <meta name="twitter:title" content="{{title}}"/>
     <meta name="twitter:url" content="{% if page.permalink %}https://plotly.com/{{page.permalink}}{% endif %}"/>
-    <meta name="twitter:description" content={{description}}/>
+    <meta name="twitter:description" content="{{description}}"/>
     <meta name="twitter:image" content="{% if page.imageurl %}{{page.imageurl}}{% else %}{% if page.thumbnail%}{{site.imgurl}}{{page.thumbnail}}{%else%}https://help.plot.ly/images/twitter-default.png{% endif %}{% endif %}">
     <meta name="twitter:site" content="@plotlygraphs"/>
 
