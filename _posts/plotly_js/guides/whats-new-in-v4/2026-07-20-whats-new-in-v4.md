@@ -882,7 +882,7 @@ The following additional formats were already supported:
 - Comma-form `hsla(0, 100%, 50%, 0.5)`.
 
 See
-[test/image/mocks/color_syntax_formats.json](https://github.com/plotly/plotly.js/blob/master/test/image/mocks/color_syntax_formats.json)
+[test/image/mocks/color\_syntax\_formats.json](https://github.com/plotly/plotly.js/blob/master/test/image/mocks/color_syntax_formats.json)
 for a working example using each format.
 
 #### Browser compatibility
@@ -961,7 +961,7 @@ regions still work:
 | `XJK` | Jammu and Kashmir |
 
 These are layered on top of the standard ISO 3166-1 records via
-[src/lib/custom_country_codes.ts](https://github.com/plotly/plotly.js/blob/master/src/lib/custom_country_codes.ts).
+[src/lib/custom\_country\_codes.ts](https://github.com/plotly/plotly.js/blob/master/src/lib/custom_country_codes.ts).
 Whether a feature for them appears on the rendered map still depends on the
 topojson resolution in use.
 
