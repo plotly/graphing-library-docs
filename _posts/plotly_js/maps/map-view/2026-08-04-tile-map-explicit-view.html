@@ -12,7 +12,7 @@ markdown_content: |
 
   `map.bounds`, which restricts how far users can pan, is independent of auto-fitting and can be combined with either.
 ---
-const data = [{
+var data = [{
   type: 'scattermap',
   mode: 'markers+text',
   lon: [-122.4, -73.9, -87.6],
@@ -22,7 +22,7 @@ const data = [{
   marker: {size: 12, color: '#d62728'}
 }];
 
-const layout = {
+var layout = {
   map: {
     style: 'basic',
     center: {lon: -98, lat: 39},

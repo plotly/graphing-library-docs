@@ -17,7 +17,7 @@ markdown_content: |
   a zoom event, which emits one extra `plotly_relayout`. Listeners that distinguish user zooms from programmatic ones
   should tolerate that single event at startup.
 ---
-const data = [{
+var data = [{
   type: 'scattergeo',
   mode: 'markers+text',
   lon: [2.35, 13.4, 12.5, -3.7],
@@ -27,7 +27,7 @@ const data = [{
   marker: {size: 10, color: '#636efa'}
 }];
 
-const layout = {
+var layout = {
   title: {text: 'Zoom Limited to 0.5x - 4x'},
   geo: {
     scope: 'europe',

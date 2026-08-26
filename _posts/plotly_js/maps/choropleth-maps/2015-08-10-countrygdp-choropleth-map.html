@@ -8,9 +8,9 @@ arrangement: horizontal
 ---
 
 d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_with_codes.csv', (err, rows) => {
-    const unpack = (rows, key) => rows.map((row) => row[key]);
+    var unpack = (rows, key) => rows.map((row) => row[key]);
 
-    const data = [{
+    var data = [{
         type: 'choropleth',
         locations: unpack(rows, 'CODE'),
         z: unpack(rows, 'GDP (BILLIONS)'),
@@ -37,7 +37,7 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_
         }
     }];
 
-    const layout = {
+    var layout = {
         title: {text: '2014 Global GDP<br>Source: <a href="https://www.cia.gov/library/publications/the-world-factbook/fields/2195.html"> CIA World Factbook</a>'},
         geo:{
             showframe: false,

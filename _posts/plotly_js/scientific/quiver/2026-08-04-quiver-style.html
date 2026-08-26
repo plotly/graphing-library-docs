@@ -10,15 +10,15 @@ markdown_content: |
   relative to the line width — the default of `1` draws a head about three times as wide as the shaft. This example
   overlays a measured field (solid) on a modelled one (dashed) so the two can be compared arrow for arrow.
 ---
-const x = [];
-const y = [];
-const uModel = [];
-const vModel = [];
-const uMeasured = [];
-const vMeasured = [];
+var x = [];
+var y = [];
+var uModel = [];
+var vModel = [];
+var uMeasured = [];
+var vMeasured = [];
 
-for (let i = 0; i <= 5; i++) {
-  for (let j = 0; j <= 5; j++) {
+for (var i = 0; i <= 5; i++) {
+  for (var j = 0; j <= 5; j++) {
     x.push(i);
     y.push(j);
     uModel.push(1);
@@ -28,7 +28,7 @@ for (let i = 0; i <= 5; i++) {
   }
 }
 
-const data = [{
+var data = [{
   type: 'quiver',
   name: 'model',
   x: x,
@@ -54,7 +54,7 @@ const data = [{
   }
 }];
 
-const layout = {
+var layout = {
   title: {text: 'Modelled and Measured Fields'},
   xaxis: {title: {text: 'x'}},
   yaxis: {title: {text: 'y'}},

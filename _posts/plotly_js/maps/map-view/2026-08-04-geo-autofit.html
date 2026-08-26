@@ -18,7 +18,7 @@ markdown_content: |
   Russia, Fiji, New Zealand, and Antarctica — spans most of the globe's longitude, so a figure that includes one is
   fitted very wide. Set the view explicitly in that case.
 ---
-const data = [{
+var data = [{
   type: 'choropleth',
   locations: ['BRA', 'ARG', 'CHL', 'PER', 'COL', 'BOL'],
   locationmode: 'ISO-3',
@@ -27,7 +27,7 @@ const data = [{
   showscale: false
 }];
 
-const layout = {
+var layout = {
   title: {text: 'Fitted to the Plotted Locations'},
   geo: {
     projection: {type: 'equirectangular'},

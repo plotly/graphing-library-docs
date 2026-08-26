@@ -12,17 +12,17 @@ markdown_content: |
   `marker.color` array, arrows are colored by vector magnitude automatically. A single (non-array) `marker.color`
   paints the whole field one color.
 ---
-const x = [];
-const y = [];
-const u = [];
-const v = [];
-const speed = [];
+var x = [];
+var y = [];
+var u = [];
+var v = [];
+var speed = [];
 
 // A shear flow: horizontal velocity grows with y, with a small vertical component.
-for (let i = 0; i <= 8; i++) {
-  for (let j = 0; j <= 6; j++) {
-    const ui = 0.2 + 0.25 * j;
-    const vi = 0.4 * Math.sin(i / 2);
+for (var i = 0; i <= 8; i++) {
+  for (var j = 0; j <= 6; j++) {
+    var ui = 0.2 + 0.25 * j;
+    var vi = 0.4 * Math.sin(i / 2);
     x.push(i);
     y.push(j);
     u.push(ui);
@@ -31,7 +31,7 @@ for (let i = 0; i <= 8; i++) {
   }
 }
 
-const data = [{
+var data = [{
   type: 'quiver',
   x: x,
   y: y,
@@ -46,7 +46,7 @@ const data = [{
   }
 }];
 
-const layout = {
+var layout = {
   title: {text: 'Shear Flow, Arrows Colored by Speed'},
   xaxis: {title: {text: 'x'}},
   yaxis: {title: {text: 'y'}},

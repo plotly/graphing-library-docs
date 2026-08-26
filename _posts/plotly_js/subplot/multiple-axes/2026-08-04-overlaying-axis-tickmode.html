@@ -14,14 +14,14 @@ markdown_content: |
   Prior to Plotly.js v4, `'auto'` was the default on overlaying axes. When the base axis is `type: 'category'` or
   `'multicategory'`, `'auto'` is still the default.
 ---
-const trace1 = {
+var trace1 = {
   x: [1, 2, 3],
   y: [40, 50, 60],
   name: 'yaxis data',
   type: 'scatter'
 };
 
-const trace2 = {
+var trace2 = {
   x: [2, 3, 4],
   y: [4, 5, 6],
   name: 'yaxis2 data',
@@ -29,9 +29,9 @@ const trace2 = {
   type: 'scatter'
 };
 
-const data = [trace1, trace2];
+var data = [trace1, trace2];
 
-const layout = {
+var layout = {
   title: {text: 'Independent Ticks on an Overlaying Axis'},
   yaxis: {
     title: {

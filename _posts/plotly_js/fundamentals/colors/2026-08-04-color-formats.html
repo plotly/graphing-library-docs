@@ -8,7 +8,7 @@ arrangement: horizontal
 markdown_content: |
   One bar per accepted color format, each written a different way but all resolving to a valid color.
 ---
-const data = [{
+var data = [{
   type: 'bar',
   x: ['named', 'hex', 'hex + alpha', 'rgb', 'rgb / alpha', 'hsl', 'hwb'],
   y: [1, 1, 1, 1, 1, 1, 1],
@@ -26,7 +26,7 @@ const data = [{
   }
 }];
 
-const layout = {
+var layout = {
   title: {text: 'Accepted Color String Formats'},
   yaxis: {visible: false},
   width: 700,
