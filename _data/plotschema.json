@@ -31729,6 +31729,25 @@
           ],
           "magic_underscores": "fig.update_traces(arrowref=&lt;VALUE&gt;, selector=dict(type='quiver'))"
         },
+        "lengthmode": {
+          "description": "Determines whether vector arrows are drawn according to their raw lengths, or scaled based on the maximum vector length and point density. Note: When `arrowref` is *paper* vectors are always scaled and `lengthmode` *raw* is ignored.",
+          "dflt": "scaled",
+          "editType": "calc",
+          "valType": "enumerated",
+          "values": [
+            "scaled",
+            "raw"
+          ],
+          "magic_underscores": "fig.update_traces(lengthmode=&lt;VALUE&gt;, selector=dict(type='quiver'))"
+        },
+        "lengthfactor": {
+          "description": "Adjusts the drawn length of the vector arrows. The arrow length is determined by the values of u and v, then optionally rescaled when `lengthmode` is *scaled*, then multiplied by `lengthfactor`.",
+          "dflt": 1,
+          "editType": "calc",
+          "min": 0,
+          "valType": "number",
+          "magic_underscores": "fig.update_traces(lengthfactor=&lt;VALUE&gt;, selector=dict(type='quiver'))"
+        },
         "hoverlabel": {
           "align": {
             "arrayOk": true,
@@ -31884,25 +31903,6 @@
             "magic_underscores": "fig.update_traces(hoverlabel_showarrow=&lt;VALUE&gt;, selector=dict(type='quiver'))"
           },
           "magic_underscores": "fig.update_traces(hoverlabel=dict(...), selector=dict(type='quiver'))"
-        },
-        "lengthmode": {
-          "description": "Determines whether vector arrows are drawn according to their raw lengths, or scaled based on the maximum vector length and point density. Note: When `arrowref` is *paper* vectors are always scaled and `lengthmode` *raw* is ignored.",
-          "dflt": "scaled",
-          "editType": "calc",
-          "valType": "enumerated",
-          "values": [
-            "scaled",
-            "raw"
-          ],
-          "magic_underscores": "fig.update_traces(lengthmode=&lt;VALUE&gt;, selector=dict(type='quiver'))"
-        },
-        "lengthfactor": {
-          "description": "Adjusts the drawn length of the vector arrows. The arrow length is determined by the values of u and v, then optionally rescaled when `lengthmode` is *scaled*, then multiplied by `lengthfactor`.",
-          "dflt": 1,
-          "editType": "calc",
-          "min": 0,
-          "valType": "number",
-          "magic_underscores": "fig.update_traces(lengthfactor=&lt;VALUE&gt;, selector=dict(type='quiver'))"
         },
         "uirevision": {
           "description": "Controls persistence of some user-driven changes to the trace: `constraintrange` in `parcoords` traces, as well as some `editable: true` modifications such as `name` and `colorbar.title`. Defaults to `layout.uirevision`. Note that other user-driven trace attribute changes are controlled by `layout` attributes: `trace.visible` is controlled by `layout.legend.uirevision`, `selectedpoints` is controlled by `layout.selectionrevision`, and `colorbar.(x|y)` (accessible with `config: {editable: true}`) is controlled by `layout.editrevision`. Trace changes are tracked by `uid`, which only falls back on trace index if no `uid` is provided. So if your app can add/remove traces before the end of the `data` array, such that the same trace has a different index, you can still preserve user-driven changes if you give each trace a `uid` that stays with it as it moves.",

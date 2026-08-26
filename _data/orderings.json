@@ -396,6 +396,8 @@
 
  "anchor",
  "arrowref",
+ "lengthmode",
+ "lengthfactor",
  "autocontour",
  "bandwidth",
  "below",
@@ -444,8 +446,6 @@
  "root",
  "leaf",
  "level",
- "lengthmode",
- "lengthfactor",
  "lighting",
  "lightposition",
  "locationmode",
