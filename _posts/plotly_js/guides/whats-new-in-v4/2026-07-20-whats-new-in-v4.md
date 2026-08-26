@@ -31,11 +31,11 @@ v4](/javascript/guides/migrating-to-v4/).
 
 **New defaults**
 
-- [Map subplots auto-fit to data](#map-subplots-auto-fit-to-data)
-- [Geo subplots auto-fit by default](#geo-subplots-auto-fit-by-default)
+- [Map subplots auto-fit to data](#map-subplots-autofit-to-data)
+- [Geo subplots auto-fit by default](#geo-subplots-autofit-by-default)
 - [Overlaying axis `tickmode` defaults to `'sync'`](#overlaying-axis-tickmode-defaults-to-sync)
 - [`splom.axis.matches` default flipped to `true`](#splomaxismatches-default-flipped-to-true)
-- [Shape legend marker outlines honor `line.dash`](#shape-legend-marker-outlines-honor-line-dash)
+- [Shape legend marker outlines honor `line.dash`](#shape-legend-marker-outlines-honor-linedash)
 
 **Behavior and library changes**
 
@@ -92,7 +92,7 @@ Plotly.newPlot(gd, [{
 ### Styling
 
 Arrow lines are styled through `marker.line.width` and `marker.line.dash`.
-`marker.arrowsize` scales the arrowhead relative to the line width — a value
+`marker.arrowsize` scales the arrowhead relative to the line width. A value
 of `1` (default) gives a head about 3× the line width.
 
 ### Coloring arrows by a scalar field
@@ -193,7 +193,7 @@ Note that the `?config=TeX-AMS-MML_SVG` URL suffix (used with MathJax v2) is
 no longer required starting with MathJax v3. Configuration is specified by linking
 directly to the desired JavaScript file, which is `tex-svg.js` for Plotly.js.
 
-Already on v3? No action required — your math expressions continue to render.
+Already on v3? No action required. Your math expressions continue to render.
 
 ---
 
@@ -211,7 +211,7 @@ Ordering](/javascript/sankey-diagram/#node-and-link-ordering)):
 | `sankey.link.sort` | `'auto'` | Preserves the order in which links are given in `link.source` / `link.target`, disabling the layout's per-node link ordering. |
 
 Defaults reproduce v3 behavior, so no code change is needed on upgrade. Use
-`'input'` when you want a stable, deterministic ordering across renders —
+`'input'` when you want a stable, deterministic ordering across renders:
 animation, side-by-side comparisons, or figures where the input order carries
 semantic meaning that the layout would otherwise obscure.
 
@@ -231,17 +231,17 @@ Plotly.newPlot(gd, [{
 }]);
 ```
 
-The `sort` attribute is not honored on circular Sankey diagrams — those
+The `sort` attribute is not honored on circular Sankey diagrams. Those
 continue to use `d3-sankey-circular`, which has no equivalent hook.
 
-Same data, same code — only the `sort` value differs:
+Same data and same code, with only the `sort` value changed:
 
 | `sort: 'auto'` (default) | `sort: 'input'` |
 |---|---|
 | ![auto reorders sources to reduce crossings](/all_static/images/whats-new-in-v4/sankey_sort_auto.png) | ![input preserves the given order, crossings and all](/all_static/images/whats-new-in-v4/sankey_sort_input.png) |
 
 In this figure the source nodes are given as `[A, B, C, D]` and paired
-one-to-one with targets `[Z, Y, X, W]` — a maximally-crossed input. `'auto'`
+one-to-one with targets `[Z, Y, X, W]`, a maximally-crossed input. `'auto'`
 flips the source column to `D, C, B, A` so the primary flows run horizontally;
 `'input'` leaves both columns in the given order and preserves every crossing.
 
@@ -289,7 +289,7 @@ Plotly.newPlot(gd, [{
 }]);
 ```
 
-Node labels stay upright and readable in every combination — only the flow
+Node labels stay upright and readable in every combination. Only the flow
 geometry mirrors.
 
 | `direction: 'forward'` (default) | `direction: 'reversed'` |
@@ -322,8 +322,8 @@ Plotly.newPlot(gd, [/* … */], {
 });
 ```
 
-The defaults preserve v3 behavior — figures that don't set these attributes
-are unaffected.
+The defaults preserve v3 behavior, so figures that don't set these
+attributes are unaffected.
 
 One init-time wrinkle: if `projection.scale` falls outside `[minscale,
 maxscale]`, Plotly now dispatches a synthetic zoom event on first plot to
@@ -374,7 +374,7 @@ await newPlot(div, data, layout);
 
 ### What's exported
 
-**Trace data** — `Data` (the union of every trace's typed data object), plus
+**Trace data.** `Data` (the union of every trace's typed data object), plus
 per-trace interfaces like `ScatterData`, `BarData`, `HeatmapData`,
 `ChoroplethData`, etc. Each per-trace interface narrows on `type`, so using
 `Data[]` in your figure lets TypeScript pick the right trace shape from the
@@ -394,7 +394,7 @@ Other exports:
 | Layout | `Layout` (the full layout interface), `LayoutAxis`, `Legend`, `Annotation`, `Shape`, `Slider`, `UpdateMenu`, `Scene`, and the rest of the component interfaces. Pass `Partial<Layout>` to `newPlot` / `react` since most fields are optional. |
 | Config | `Config`, `ToImgopts`, `ToImageButtonOptions`, `DownloadImgopts`, `ModeBarDefaultButtons`, `ModeBarButton`, `Icon`. |
 | Trace/layout enums | String-literal unions like `TraceType`, `AxisType`, `Calendar`, `Dash`, `PatternShape`, `XRef`, `YRef`, `MarkerSymbol`, `HoverInfo`, etc. Use these instead of bare `string` to get narrowing on attribute values. |
-| Shared sub-interfaces | `Font`, `ColorBar`, `HoverLabel`, `Pattern`, `Domain`, `LegendGroupTitle`, `TickFormatStops`, etc. — used wherever the schema reuses the same sub-attribute tree. |
+| Shared sub-interfaces | `Font`, `ColorBar`, `HoverLabel`, `Pattern`, `Domain`, `LegendGroupTitle`, `TickFormatStops`, etc. Used wherever the schema reuses the same sub-attribute tree. |
 | Events | `PlotMouseEvent`, `PlotHoverEvent`, `PlotSelectionEvent`, `PlotRelayoutEvent`, `PlotRestyleEvent`, `LegendClickEvent`, `SliderChangeEvent`, etc., plus `PlotlyEventName` for the union of event names accepted by `on()` / `once()` / `removeListener()`. |
 | Animation & frames | `AnimationOpts`, `Frame`, `Transition`, `TransitionEasing`. |
 | Templates | `Template` interface (and `TemplateFigure`, `ValidateTemplateResult` from the template utilities). |
@@ -404,8 +404,8 @@ Other exports:
 
 **`Data` vs per-trace interfaces.** Prefer the `Data` union for figure
 literals (TypeScript discriminates on `type`); use the per-trace interface
-only when you have a value that is *guaranteed* to be one trace type — e.g. a
-helper that builds a `BarData` to push into a `Data[]`.
+only when you have a value that is *guaranteed* to be one trace type, for
+example a helper that builds a `BarData` to push into a `Data[]`.
 
 **`Layout` is the input shape, not the resolved shape.** It mirrors what you
 pass to `newPlot`. The post-coerce internal shape used inside Plotly's own
@@ -445,22 +445,22 @@ Plotly.newPlot(gd, [{
 Auto-fitting runs on the initial render and again on data-only updates
 (`Plotly.restyle` of `lon`/`lat`, `Plotly.addTraces`, `Plotly.deleteTraces`)
 whenever the user hasn't overridden the view. Once the user pans, zooms,
-rotates, or tilts the map — or explicitly sets `center` / `zoom` / `bearing` /
-`pitch` in the layout — auto-fitting steps aside and preserves the chosen view
+rotates, or tilts the map, or explicitly sets `center` / `zoom` / `bearing` /
+`pitch` in the layout, auto-fitting steps aside and preserves the chosen view
 across further data changes.
 
 ### Disabling auto-fitting
 
 There are two ways to disable auto-fitting:
 
-**Set `map.fitbounds: false`** — disables automatic auto-fitting and instead
-defaults to showing a map with center `(0, 0)` and zoom `1`, as in v3.
+**Set `map.fitbounds: false`.** This turns auto-fitting off. The map opens
+with center `(0, 0)` and zoom `1`, as in v3.
 
 ```js
 { map: { fitbounds: false } }
 ```
 
-**Set `map.center` or `map.zoom` explicitly** — passing any value for
+**Set `map.center` or `map.zoom` explicitly.** Passing any value for
 `map.zoom` or `map.center` (including the defaults of `zoom: 1` or `center: {
 lon: 0, lat: 0 }`) is taken as a signal to follow the user provided values
 rather than choosing zoom and center via auto-fitting.
@@ -503,7 +503,7 @@ the shapes differ:
 |---|---|---|
 | Type | enumerated | enumerated |
 | Values | `false` / `'locations'` | `false` / `'locations'` / `'geojson'` |
-| Default | `'locations'` | `'locations'` (was `false` in v3 — see [Geo subplots auto-fit by default](#geo-subplots-auto-fit-by-default)) |
+| Default | `'locations'` | `'locations'` (was `false` in v3, see [Geo subplots auto-fit by default](#geo-subplots-autofit-by-default)) |
 | Re-fits on data updates | yes, until user overrides view | yes, every render |
 
 Both accept `false` (disable auto-fit) and `'locations'` (fit to trace lon/lat
@@ -517,8 +517,8 @@ geojson feature set rather than just visible locations.
 *Implemented in [#7895](https://github.com/plotly/plotly.js/pull/7895).*
 
 `layout.geo.fitbounds` now defaults to `'locations'` (v3 default: `false`).
-`geo` subplots — used by `scattergeo`, `choropleth`, and any other
-location-based geo trace — now auto-fit their initial view to fit the trace
+`geo` subplots (used by `scattergeo`, `choropleth`, and any other
+location-based geo trace) now auto-fit their initial view to fit the trace
 data, matching the behavior of `map` subplots. Figures that previously
 rendered the full world map (or the scope's default extent) now zoom to just
 the locations they plot.
@@ -542,9 +542,8 @@ Plotly.newPlot(gd, [{
 
 There are two ways to disable auto-fitting:
 
-**Set `layout.geo.fitbounds: false`** — disables automatic auto-fitting and
-instead defaults to showing a map with center `(0, 0)` and scale `1`, as in
-v3.
+**Set `layout.geo.fitbounds: false`.** This turns auto-fitting off. The map
+opens with center `(0, 0)` and scale `1`, as in v3.
 
 ```js
 Plotly.newPlot(gd, [/* ... */], {
@@ -570,8 +569,9 @@ override whatever framing the ranges imply, so we treat setting a range as
 opt-out intent.
 
 Under the v4 default this means figures that supplied their own view
-attributes in v3 continue to render with those attributes — no code change
-needed. Auto-fit only kicks in when none of the relevant attributes are set.
+attributes in v3 continue to render with those attributes, with no code
+change needed. Auto-fit only kicks in when none of the relevant attributes are
+set.
 
 ```js
 Plotly.newPlot(gd, [/* ... */], {
@@ -617,7 +617,7 @@ reset is the fitted view.
 An axis that overlays another axis (`layout.xaxis2.overlaying: 'x'`,
 `layout.yaxis2.overlaying: 'y'`, etc.) now defaults its `tickmode` to `'sync'`
 instead of `'auto'`. The overlay axis draws tick marks and gridlines at the
-same positions as its base axis, computing labels to match — rather than
+same positions as its base axis, computing labels to match, rather than
 picking its own auto-fit tick positions.
 
 In v3 the two axes drew independent auto-tick grids, producing staggered
@@ -711,8 +711,9 @@ Shapes rendered in the legend as filled markers (e.g. `type: 'rect'`,
 `'circle'`, or filled paths with `showlegend: true`) now draw the marker's
 outline using the shape's `line.dash` value. In v3 the marker outline was
 always solid regardless of the shape's dash style, so the swatch didn't match
-the shape on the plot. (Line-only shapes — `type: 'line'` — already drew their
-swatch dashed in v3; only the filled-marker path was hardcoded to solid.)
+the shape on the plot. (Line-only shapes with `type: 'line'` already drew
+their swatch dashed in v3; only the filled-marker path was hardcoded to
+solid.)
 
 ```js
 Plotly.newPlot(gd, [], {
@@ -753,7 +754,7 @@ valid CSS is now rejected, and the attribute falls back to its default.
 // Before
 { marker: { color: 'hsv(200, 80%, 80%)' } }
 
-// After — convert to hsl, hwb, hex, or rgb
+// After: convert to hsl, hwb, hex, or rgb
 { marker: { color: 'hsl(200, 67%, 47%)' } }
 ```
 
@@ -767,7 +768,7 @@ default.
 // Before
 { marker: { color: 'hsl(0, 100, 40)' } }
 
-// After - add the percent units
+// After: add the percent units
 { marker: { color: 'hsl(0, 100%, 40%)' } }
 ```
 
@@ -785,10 +786,10 @@ every component literally on the 0–255 scale, so the same string now renders
 near-black.
 
 ```js
-// Before — v3 rescaled 0–1 fractions to 0–255
+// Before: v3 rescaled 0–1 fractions to 0–255
 'rgb(0.5, 0.5, 0.5)'  // → rgb(128, 128, 128)
 
-// After — read literally on the 0–255 scale and rounded to the nearest integer
+// After: read literally on the 0–255 scale and rounded to the nearest integer
 'rgb(0.5, 0.5, 0.5)'  // → rgb(1, 1, 1)
 ```
 
@@ -804,10 +805,10 @@ as `rgb(200, 0.5, 0.5)` now rounds each component to the nearest integer →
 **Hex strings without a leading `#` are no longer accepted.**
 
 ```js
-// Before — tinycolor accepted bare hex
+// Before: tinycolor accepted bare hex
 { marker: { color: 'fff' } }
 
-// After — invalid and falls back to the attribute default; add the '#'
+// After: invalid and falls back to the attribute default; add the '#'
 { marker: { color: '#fff' } }
 ```
 
@@ -816,8 +817,8 @@ and `rgba()` aliases, so both read an optional alpha. In v3, `rgb()` ignored a
 fourth argument and painted the color opaque.
 
 ```js
-// v3 - alpha dropped, the marker is opaque red
-// v4 - alpha honored, the marker is 50% transparent red
+// v3: alpha dropped, the marker is opaque red
+// v4: alpha honored, the marker is 50% transparent red
 { marker: { color: 'rgb(255, 0, 0, 0.5)' } }
 ```
 
@@ -827,7 +828,7 @@ color opaque.
 
 These changes affect *string* colors only. Numeric color arrays used for color
 mapping (e.g. `marker.color: [1, 2, 3, 4]` with a `colorscale`) are unchanged
-and remain valid — those values are mapped through the colorscale, not parsed
+and remain valid. Those values are mapped through the colorscale, not parsed
 as literal colors.
 
 ### Color computation output changes
@@ -837,17 +838,17 @@ mark. v3 made that choice from a brightness formula. v4 makes it from the
 [WCAG contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio):
 Plotly measures the fill against both candidate colors and keeps the more
 legible one. On saturated mid-tone fills, the two rules disagree, so a label
-can switch between dark grey and white.
+can switch between dark gray and white.
 
 | Where | What changes |
 |---|---|
-| Heatmap auto-contrast text | Cells in the mid-luminance range flip between dark grey and white on colorscales such as Viridis or Jet |
+| Heatmap auto-contrast text | Cells in the mid-luminance range flip between dark gray and white on colorscales such as Viridis or Jet |
 | Auto-generated `insidetextfont` color on bar, waterfall, pie, and sunburst traces | The same rule picks the label color, so labels on mid-tone slices and bars can flip |
 | Derived colors, such as lightened or darkened hover fills | Values can differ from v3 by about one RGB unit per channel, from rounding |
 
-Example - on a Viridis heatmap with `z` from 0 to 100, the two cells with
-`z: 60` take white text in v3 and dark grey text in v4. Their fill contrasts
-better with dark grey than with white, which is what the WCAG ratio reports.
+For example, on a Viridis heatmap with `z` from 0 to 100, the two cells with
+`z: 60` take white text in v3 and dark gray text in v4. Their fill contrasts
+better with dark gray than with white, which is what the WCAG ratio reports.
 
 | Before (v3) | After (v4) |
 |---|---|
@@ -889,7 +890,7 @@ for a working example using each format.
 
 All of these are parsed by Plotly in JavaScript and normalized to legacy
 `rgb(...)` / `rgba(...)` before being written to the DOM, so the browser never
-sees the modern syntax — your figures render the same in any browser that ran
+sees the modern syntax. Your figures render the same in any browser that ran
 v3.
 
 ---
@@ -901,12 +902,12 @@ v3.
 `locationmode: 'country names'` on `choropleth` and `scattergeo` traces is now
 resolved by [country-iso-search](https://github.com/plotly/country-iso-search)
 instead of [country-regex](https://github.com/etpinard/country-regex). The
-attribute name, accepted values list, and ISO-3 output are unchanged — the
+attribute name, accepted values list, and ISO-3 output are unchanged. The
 difference is in *how* a name string is matched to an alpha-3 code.
 
 The old library walked a table of country-specific regular expressions and
 returned the first match. That made it lenient (substring matches worked) but
-ambiguity-prone — strings like `'Republic of'` could resolve to whichever
+ambiguity-prone. Strings like `'Republic of'` could resolve to whichever
 entry's regex hit first. The new library does a sanitized exact lookup against
 a curated alias table, which is stricter about ambiguous input but accepts
 many more legitimate forms.
@@ -915,7 +916,7 @@ many more legitimate forms.
 
 Strings that only matched because of overly broad regex fragments now fall
 back to the unrecognized-name log message and the location is skipped. In
-practice this hits inputs that weren't really country names — partial phrases,
+practice this hits inputs that weren't really country names: partial phrases,
 generic descriptors, or strings containing a country name as a substring of
 something else (e.g. `'Republic of Foo'`, `'Not Iran'`). If you were relying
 on a non-canonical form, switch to the country's name, an alias, or the ISO-3
@@ -942,7 +943,7 @@ number of forms that previously failed now work:
 ```
 
 Matching is case-insensitive. Sanitization also collapses internal whitespace,
-drops `.` `()` `,`, maps `&` → `and`, and turns `-` / `–` / `—` into spaces —
+drops `.` `()` `,`, maps `&` → `and`, and turns `-` / `–` / `—` into spaces,
 so cosmetic punctuation differences in your input data no longer block a
 match.
 
@@ -1025,7 +1026,7 @@ that selector will now always match a circle path on map traces.
 
 `layout.geo.fitbounds: 'locations'` (and `'geojson'`) now correctly frames
 choropleth and scattergeo location traces containing features that cross the
-±180° antimeridian — Russia, Fiji, Antarctica, New Zealand, and the Aleutian
+±180° antimeridian: Russia, Fiji, Antarctica, New Zealand, and the Aleutian
 Islands portion of Alaska. In v3 these were mis-framed because the underlying
 bounding-box computation (`@turf/bbox`) reported a bogus whole-globe span
 (`[-180°, 180°]`) for any such feature, and the fit zoomed the map out to
@@ -1039,10 +1040,10 @@ every location's coordinates into a single bounding box, so one crossing
 feature no longer widens the frame to the whole globe.
 
 Because v4 also flips the `fitbounds` default from `false` to `'locations'`
-(see [Geo subplots auto-fit by default](#geo-subplots-auto-fit-by-default)),
-figures that never set `fitbounds` explicitly now participate in auto-fit too
-— so this antimeridian fix reaches many more figures than it would have as a
-standalone change.
+(see [Geo subplots auto-fit by default](#geo-subplots-autofit-by-default)),
+figures that never set `fitbounds` explicitly now participate in auto-fit
+too, so this antimeridian fix reaches many more figures than it would have as
+a standalone change.
 
 ### Which figures shift
 
@@ -1072,7 +1073,7 @@ Plotly.newPlot(gd, [{
     width: 700,
     height: 500
 });
-// v3: fits to a bogus [-180°, 180°] span — Russia is a small red strip at
+// v3: fits to a bogus [-180°, 180°] span. Russia is a small red strip at
 //     the top of the whole world.
 // v4: fits tightly to Russia's actual longitudinal extent (~19° through
 //     ~190°, unwrapped across the antimeridian).
@@ -1089,9 +1090,10 @@ Plotly.newPlot(gd, [{
 *Implemented in [#7830](https://github.com/plotly/plotly.js/pull/7830).*
 
 `@plotly/d3-sankey` has been upgraded from 0.7.2 to 0.12.3. The schema and API
-surface for `sankey` traces are unchanged — every attribute that worked in v3
-still works in v4 — but the underlying layout algorithm was rewritten upstream
-across these versions, so node and link positions for the same figure shift.
+surface for `sankey` traces are unchanged, and every attribute that worked in
+v3 still works in v4. But the underlying layout algorithm was rewritten
+upstream across these versions, so node and link positions for the same figure
+shift.
 
 The most visible effect is that links tend to be straighter and cross each
 other less: the new relaxation step gives more weight to minimizing link
@@ -1147,12 +1149,12 @@ the same form your input data takes:
 Handlers that converted the numeric form need updating:
 
 ```js
-// Before - xvals[0] was the category index
+// Before: xvals[0] was the category index
 gd.on('plotly_click', (data) => {
     const label = categories[data.xvals[0]];
 });
 
-// After - xvals[0] is the category label
+// After: xvals[0] is the category label
 gd.on('plotly_click', (data) => {
     const label = data.xvals[0];
 });
@@ -1178,7 +1180,7 @@ The legacy "Edit in Chart Studio" link, related config options, and the
 streaming token attribute have been removed. The `sendChartToCloud` modebar
 button (aliased as `sendDataToCloud` in v3, now targeting Plotly Cloud in v4;
 see [Share with Plotly Cloud](#share-with-plotly-cloud)) and its
-`showSendToCloud` config option are retained — only the duplicate
+`showSendToCloud` config option are retained. Only the duplicate
 `editInChartStudio` button and the on-graph "Edit chart" link are gone.
 
 ### Removed config options
@@ -1187,10 +1189,10 @@ see [Share with Plotly Cloud](#share-with-plotly-cloud)) and its
 
 | Removed | What it did | Replacement |
 |---|---|---|
-| `showLink` | Drew an "Edit chart" link at the bottom-right of the plot | None — remove the option |
-| `linkText` | Text for the `showLink` link | None — remove the option |
-| `sendData` | Whether the link uploaded data or just linked to a file | None — remove the option |
-| `showSources` | Hook that drew custom source links next to `showLink` | None — remove the option |
+| `showLink` | Drew an "Edit chart" link at the bottom-right of the plot | None. Remove the option |
+| `linkText` | Text for the `showLink` link | None. Remove the option |
+| `sendData` | Whether the link uploaded data or just linked to a file | None. Remove the option |
+| `showSources` | Hook that drew custom source links next to `showLink` | None. Remove the option |
 | `showEditInChartStudio` | Pencil-icon variant of `sendChartToCloud` | Use `showSendToCloud` |
 
 ```js
@@ -1215,7 +1217,7 @@ that the v3 alias `sendDataToCloud` was **also** removed in v4, so code that
 referred to the button by that name needs to be updated too:
 
 ```js
-// Before (v3 — both worked)
+// Before (v3: both worked)
 { modeBarButtonsToAdd: ['editInChartStudio'] }
 { modeBarButtonsToAdd: ['sendDataToCloud'] }
 
@@ -1229,7 +1231,7 @@ The undocumented `stream` attribute (`stream.token`, `stream.maxpoints`) has
 been removed from every trace type. It was a hook for the Chart Studio
 streaming service, which is no longer reachable. If you have figures
 containing `stream: { token: '...', maxpoints: N }` in their trace objects,
-delete those properties — they're now schema-rejected.
+delete those properties. They're now schema-rejected.
 
 ### Removed data-source (`*src`) attributes
 
@@ -1239,7 +1241,7 @@ Every schema attribute ending in `src` (`xsrc`, `ysrc`, `textsrc`,
 `marker.colorsrc`, ...) has been removed, along with `layout.hidesources`.
 These existed only to interoperate with Chart Studio's data-source
 references, which is no longer reachable. If your figures contain any
-`*src` attributes or `hidesources`, delete them — they're now schema-rejected.
+`*src` attributes or `hidesources`, delete them. They're now schema-rejected.
 
 ---
 
@@ -1260,8 +1262,8 @@ MapLibre migration](https://plotly.com/python/mapbox-to-maplibre/).
 | `choroplethmapbox` trace | `choroplethmap` |
 | `densitymapbox` trace | `densitymap` |
 | `layout.mapbox` subplot (and `mapbox2`, `mapbox3`, …) | `layout.map` (and `map2`, `map3`, …) |
-| `layout.mapbox.accesstoken` | None — MapLibre uses open tile providers |
-| `mapboxAccessToken` config option | None — see above |
+| `layout.mapbox.accesstoken` | None. MapLibre uses open tile providers |
+| `mapboxAccessToken` config option | None. See above |
 | `plotly-mapbox.min.js` partial bundle | `plotly-map.min.js` |
 | Modebar buttons `zoomInMapbox`, `zoomOutMapbox`, `resetViewMapbox` | `zoomInMap`, `zoomOutMap`, `resetViewMap` |
 | `scrollZoom` flag value `'mapbox'` (e.g. `scrollZoom: 'mapbox+cartesian'`) | `'map'` |

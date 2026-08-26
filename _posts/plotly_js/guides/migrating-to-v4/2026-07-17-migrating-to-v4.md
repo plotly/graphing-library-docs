@@ -29,14 +29,14 @@ existing code or input needs to be updated.
 - [Removed Chart Studio APIs](#removed-chart-studio-apis)
 - [Removed mapbox traces and subplots](#removed-mapbox-traces-and-subplots)
 - [Country name lookup](#country-name-lookup)
-- [Auto-fitting on `map` and `geo` subplots](#auto-fitting-on-map-and-geo-subplots)
+- [Auto-fitting on `map` and `geo` subplots](#autofitting-on-map-and-geo-subplots)
 - [Scattermap rendering changes](#scattermap-rendering-changes)
-- [Shape legend `line.dash`](#shape-legend-line-dash)
+- [Shape legend `line.dash`](#shape-legend-linedash)
 - [Overlaying axis `tickmode`](#overlaying-axis-tickmode)
 - [`splom.axis.matches` default](#splomaxismatches-default)
 - [Sankey layout](#sankey-layout)
 - [Hover and click event data](#hover-and-click-event-data)
-- [MathJax v2 dropped](#mathjax-v2-dropped)
+- [MathJax v2 dropped](#mathjax-v2-support-removed)
 
 ---
 
@@ -80,7 +80,7 @@ Plotly.js accepts, see [Specifying Colors](/javascript/colors/).
 Auto-computed contrast colors (heatmap text, `insidetextfont` on bars,
 waterfall, pie, and sunburst traces) are now picked by WCAG contrast ratio
 instead of a brightness formula. Labels on saturated mid-tone fills can switch
-between dark grey and white. Set the font color explicitly to pin it.
+between dark gray and white. Set the font color explicitly to pin it.
 
 ---
 
@@ -90,10 +90,10 @@ Config options removed from `Plotly.newPlot(gd, data, layout, config)`:
 
 | Removed | Replacement |
 |---|---|
-| `showLink`, `linkText`, `sendData`, `showSources` | None — remove them |
+| `showLink`, `linkText`, `sendData`, `showSources` | None. Remove them |
 | `showEditInChartStudio` | `showSendToCloud` |
 
-The `editInChartStudio` modebar button is gone — switch to `showSendToCloud`.
+The `editInChartStudio` modebar button is gone. Switch to `showSendToCloud`.
 
 ```js
 // Before
@@ -130,12 +130,12 @@ to MapLibre migration](https://plotly.com/python/mapbox-to-maplibre/).
 | `choroplethmapbox` | `choroplethmap` |
 | `densitymapbox` | `densitymap` |
 | `layout.mapbox` (and `mapbox2`, `mapbox3`, …) | `layout.map` (and `map2`, `map3`, …) |
-| `layout.mapbox.accesstoken`, `config.mapboxAccessToken` | None — MapLibre uses open tile providers |
+| `layout.mapbox.accesstoken`, `config.mapboxAccessToken` | None. MapLibre uses open tile providers |
 | `plotly-mapbox.min.js` partial bundle | `plotly-map.min.js` |
 | Modebar buttons `zoomInMapbox`, `zoomOutMapbox`, `resetViewMapbox` | `zoomInMap`, `zoomOutMap`, `resetViewMap` |
 | `scrollZoom: 'mapbox'` (e.g. `'mapbox+cartesian'`) | `'map'` |
 
-The attribute shape is unchanged — usually a straight rename works:
+The attribute shape is unchanged, so usually a straight rename works:
 
 ```js
 // Before
@@ -155,8 +155,8 @@ The attribute shape is unchanged — usually a straight rename works:
 
 Built-in style names still work but use different tile providers (Carto,
 ArcGIS, OpenStreetMap), so the visual appearance will change. Stamen styles
-(`stamen-terrain`, `-toner`, `-watercolor`) are no longer built in — they now
-require a Stadia API key. The `mapbox://styles/mapbox/...` short-form URL is
+(`stamen-terrain`, `-toner`, `-watercolor`) are no longer built in, and they
+now require a Stadia API key. The `mapbox://styles/mapbox/...` short-form URL is
 no longer supported.
 
 ---
@@ -205,12 +205,21 @@ Figures that already supply view attributes render unchanged.
 
 ---
 
+## Shape legend `line.dash`
+
+A shape drawn in the legend as a filled marker (`type: 'rect'`, `'circle'`, or a
+filled path with `showlegend: true`) now outlines its swatch with the shape's
+`line.dash` value. v3 drew that outline solid whatever the shape's dash style
+was. No code change is needed: the swatch now matches the shape on the plot.
+
+---
+
 ## Overlaying axis `tickmode`
 
 An axis that overlays another axis (`layout.xaxis2.overlaying: 'x'`,
-`layout.yaxis2.overlaying: 'y'`, etc.) now defaults its `tickmode` to `'sync'`
-— the overlay draws its ticks at the base axis's positions with its own
-range's labels. Set `tickmode: 'auto'` on the overlay to restore v3's
+`layout.yaxis2.overlaying: 'y'`, etc.) now defaults its `tickmode` to
+`'sync'`: the overlay draws its ticks at the base axis's positions with its
+own range's labels. Set `tickmode: 'auto'` on the overlay to restore v3's
 independent-grid behavior:
 
 ```js
