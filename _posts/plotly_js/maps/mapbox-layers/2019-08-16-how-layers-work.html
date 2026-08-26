@@ -14,4 +14,16 @@ markdown_content: |
         <li> `layout.map.layers` is an array that defines more layers that are by default rendered above the traces in `data` (although this can also be controlled via the `below` attribute).</li>
     </ol>
 
+    <h6>Base maps in `layout.map.style`</h6>
+
+    None of the built-in base maps require an account or an access token. The accepted values are:
+    <ol>
+        <li> `"white-bg"` yields an empty white canvas, which makes no external HTTP requests</li>
+        <li> `"open-street-map"` yields raster tiles from [OpenStreetMap](https://www.openstreetmap.org)</li>
+        <li> `"basic"`, `"streets"`, `"outdoors"`, `"light"`, `"dark"`, `"satellite"`, and `"satellite-streets"` yield vector tiles from [Carto](https://github.com/cartodb/basemap-styles/) and [ArcGIS](https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer)</li>
+        <li> `"carto-positron"`, `"carto-darkmatter"`, `"carto-voyager"`, and their `-nolabels` variants yield the corresponding [Carto](https://github.com/cartodb/basemap-styles/) tiles</li>
+        <li> The URL of a [MapLibre style definition](https://maplibre.org/maplibre-style-spec/), for any other provider. Some providers require an API key, which you append to the style URL — Stamen tiles, for example, are served by [Stadia Maps](https://stadiamaps.com/) and need a Stadia account</li>
+        <li> A Map Style object, of the form described in the [MapLibre GL JS documentation](https://maplibre.org/maplibre-style-spec/)</li>
+    </ol>
+
 ---

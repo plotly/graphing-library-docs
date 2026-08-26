@@ -1,0 +1,27 @@
+---
+name: Basic Quiver Plot
+language: plotly_js
+suite: quiver
+order: 1
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+  Each arrow is anchored at an `(x, y)` position and points along the `(u, v)` vector given for that position.
+---
+var data = [{
+  type: 'quiver',
+  x: [0, 1, 2, 0, 1, 2],
+  y: [0, 0, 0, 1, 1, 1],
+  u: [1, 0.5, 0, 0.5, 0, -0.5],
+  v: [0, 0.5, 1, 0.5, 1, 0.5]
+}];
+
+var layout = {
+  title: {text: 'Basic Quiver Plot'},
+  xaxis: {title: {text: 'x'}},
+  yaxis: {title: {text: 'y'}},
+  width: 600,
+  height: 400
+};
+
+Plotly.newPlot('myDiv', data, layout);

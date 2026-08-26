@@ -122,7 +122,7 @@ Plotly.newPlot('myDiv', data);
   - use "real" data to make the examples realistic and useful for users. 
     - avoid using random or dummy data as much as humanly possible! Should only be a last resort. 
   - upload data files to https://github.com/plotly/datasets as importing data rather than pasting a large chunk of data in the tutorial creates a cleaner example. 
-   - use `var config = {mapboxAccessToken: "your access token"};` if your chart requires Mapbox authentication. `"your access token` will replaced by Plotly's private token at build time. In development mode, you will need to create a `_data/mapboxtoken.yml` file and paste Plotly's non-URL restricted Mapbox key into it. This is available in 1Password.
+   - map examples must not require an API key. The `map` traces (`scattermap`, `choroplethmap`, `densitymap`) use open tile providers, and the `mapboxAccessToken` config option was removed in Plotly.js v4. Keep the example's `layout.map.style` set to a built-in style name or to a keyless style URL, so the chart renders for everyone reading the page. If you want to document a provider that does need a key, put that URL in `markdown_content` as a code snippet for the reader to copy and add their own key to — don't put it in the example itself, where a placeholder key means the rendered chart has no tiles and a real key would be committed to a public repo.
        
 ## Make a Pull Request
   - Ready for your changes to be reviewed? Make a pull request!

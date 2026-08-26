@@ -10,6 +10,7 @@ markdown_content: |
   Many Plotly events emit event data when the event is triggered. Event data is information about the data point related to the event (i.e. the point clicked).<br>
   The following events emit event data: [`plotly_click`](), [`plotly_hover`](), [`plotly_unhover`](), [`plotly_selecting`](), and [`plotly_selected`]().
   <br>Event data differs depending on the type of plot the user is interacting with. The event data structure for Cartesian (2D) plots, 3D plots, and maps can be found below, along with examples of each event.
+  <br><br>Since v4, `plotly_click` and `plotly_hover` event data also has top-level `xPixel` and `yPixel` keys. They hold the cursor position in pixels, measured from the top-left corner of the graph div. Each entry of the `points` array has its own `xPixel` and `yPixel`, which give the position of that point.
 ---
 // Cartesian
 {

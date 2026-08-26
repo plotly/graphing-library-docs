@@ -1,3 +1,8 @@
+{% comment %}Python and JavaScript track the current plotly.js schema; the other
+languages' reference pages are frozen on older bundles, so they keep the legacy
+entries. See the note at the top of _data/make_ref_pages.py.{% endcomment %}
+{% assign v4ref = false %}
+{% if langue == "javascript" or langue == "python" %}{% assign v4ref = true %}{% endif %}
 <details style="color: white; margin-top: 20px">
   <summary>Simple Traces</summary>
   <nav class="--sidebar-body watch" id="where">
@@ -22,9 +27,11 @@
         <a href="/{{ langue }}/reference/heatmap">Heatmap</a>
       </li>
 
+{% unless v4ref %}
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/heatmapgl">Heatmap GL</a>
       </li>
+{% endunless %}
 
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/image">Image</a>
@@ -33,6 +40,12 @@
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/contour">Contour</a>
       </li>
+
+{% if v4ref %}
+      <li class="--sidebar-item">
+        <a href="/{{ langue }}/reference/quiver">Quiver</a>
+      </li>
+{% endif %}
 
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/table">Table</a>
@@ -152,25 +165,32 @@
         <a href="/{{ langue }}/reference/scattermap">Scatter Map</a>
       </li>
 
+{% unless v4ref %}
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/scattermapbox">Scatter Mapbox</a>
       </li>
+{% endunless %}
 
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/choroplethmap">Choropleth Map</a>
       </li>
 
+{% unless v4ref %}
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/choroplethmapbox">Choropleth Mapbox</a>
       </li>
+{% endunless %}
 
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/densitymap">Density Map</a>
       </li>
 
+{% unless v4ref %}
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/densitymapbox">Density Mapbox</a>
       </li>
+{% endunless %}
+
     </ul>
   </nav>
 </details>
@@ -295,7 +315,7 @@
         <a href="/{{ langue }}/reference/layout/geo/">Geo</a>
       </li>
       <li class="--sidebar-item">
-        <a href="/{{ langue }}/reference/layout/mapbox/">Mapbox</a>
+        {% if v4ref %}<a href="/{{ langue }}/reference/layout/map/">Map</a>{% else %}<a href="/{{ langue }}/reference/layout/mapbox/">Mapbox</a>{% endif %}
       </li>
       <li class="--sidebar-item">
         <a href="/{{ langue }}/reference/layout/polar/">Polar</a>

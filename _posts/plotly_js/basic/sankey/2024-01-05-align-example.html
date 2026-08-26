@@ -2,14 +2,16 @@
 name: Node Alignment
 language: plotly_js
 suite: sankey
-order: 7
+order: 5
 sitemap: false
 arrangement: horizontal
 markdown_content : |
-  You can set the alignment of nodes using `node.align`. In this example, we align nodes to the "right". `node.align` can also be set to "left", "center", or "justify". The default is "justify" if ``node.align` is not set, and is similar to aligning to the "left", except that nodes without outgoing links are moved to the right of the figure.
+  You can set the alignment of nodes using `node.align`. In this example, we align nodes to the "right". `node.align` can also be set to "left", "center", or "justify". The default is "justify" if `node.align` is not set, and is similar to aligning to the "left", except that nodes without outgoing links are moved to the right of the figure.
+
+  `node.align` only decides which column a node is placed in, for nodes whose position isn't already pinned by the links attached to them. It does not change which end of the diagram the sources sit on — for that, see [Flow Direction](#flow-direction).
 ---
 
-var data = {
+var trace = {
   type: "sankey",
   orientation: "h",
   node: {
@@ -24,7 +26,7 @@ var data = {
   },
 };
 
-var data = [data];
+var data = [trace];
 
 var layout = {
   title: {

@@ -1,0 +1,57 @@
+---
+description: How to control the initial view of maps in JavaScript. Examples of auto-fitting a map to its data, setting an explicit view, and limiting how far users can zoom.
+display_as: maps
+language: plotly_js
+layout: base
+name: Map View and Zoom
+order: 11
+page_type: example_index
+permalink: javascript/map-view/
+thumbnail: thumbnail/county-level-choropleth.jpg
+---
+
+<p>Since Plotly.js v4, both outline-based <code>geo</code> subplots and tile-based <code>map</code> subplots auto-fit
+their initial view to the data they plot. Before v4, both opened on a default world view and you had to supply a view
+yourself to frame your data.</p>
+
+<p>Auto-fitting is controlled by <code>fitbounds</code>:</p>
+
+<ul>
+  <li><code>layout.geo.fitbounds</code> defaults to <code>'locations'</code> and also accepts
+    <code>'geojson'</code> (to frame the whole GeoJSON feature set rather than just the visible locations) and
+    <code>false</code>.</li>
+  <li><code>layout.map.fitbounds</code> defaults to <code>'locations'</code> and accepts <code>false</code>.
+    <code>choroplethmap</code> traces do not participate in auto-fitting, so a subplot containing one opens on the
+    default view.</li>
+</ul>
+
+<p>Supplying your own view attributes turns auto-fitting off for that subplot. On a tile map that means
+<code>map.center</code> or <code>map.zoom</code>. On an outline map, which attributes count depends on the subplot:</p>
+
+<table>
+  <tr><th>Subplot</th><th>Attributes that turn auto-fitting off</th></tr>
+  <tr>
+    <td>Any scope other than <code>'world'</code></td>
+    <td><code>center.lon</code>, <code>center.lat</code>, <code>projection.scale</code></td>
+  </tr>
+  <tr>
+    <td><code>'world'</code> scope, clipped projection (orthographic, conic conformal, stereographic, azimuthal, …)</td>
+    <td>the above, plus <code>projection.rotation.lon</code>, <code>projection.rotation.lat</code>,
+      <code>lonaxis.range</code>, <code>lataxis.range</code></td>
+  </tr>
+  <tr>
+    <td><code>'world'</code> scope, unclipped projection (equirectangular, mercator, robinson, …)</td>
+    <td>the above, plus <code>projection.rotation.lon</code>, <code>lonaxis.range</code>,
+      <code>lataxis.range</code></td>
+  </tr>
+</table>
+
+<p>Note the first row: on a scoped subplot whose projection is clipped, <code>lonaxis.range</code> and
+<code>lataxis.range</code> do <i>not</i> turn auto-fitting off — they still clip the drawing region, but the view is
+centered on the data. Set <code>fitbounds: false</code> to honor the ranges as the view.</p>
+
+<p>Setting <code>fitbounds: false</code> without supplying a view restores the pre-v4 default view. The
+<code>'albers usa'</code>, <code>'craig'</code>, and <code>'satellite'</code> projections never auto-fit.</p>
+
+{% assign examples = site.posts | where:"language","plotly_js" | where:"suite","map-view" | sort: "order" %}
+{% include posts/auto_examples.html examples=examples %}

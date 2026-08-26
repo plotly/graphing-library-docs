@@ -6,7 +6,9 @@ order: 5
 sitemap: false
 arrangement: horizontal
 markdown_content: |
-     This example uses [symbol attribute](https://plotly.com/javascript/reference/scattermap/#scattermap-marker-symbol) to set the marker symbol.
+     This example uses the [symbol attribute](https://plotly.com/javascript/reference/scattermap/#scattermap-marker-symbol) to set the marker symbol.
+     Symbol names come from the [Maki icon set](https://labs.mapbox.com/maki-icons/) (updated to Maki 8 in Plotly.js v4).
+     Since v4, icons are tinted with `marker.color`; earlier versions always drew them in black.
 ---
 var data = [
 	{
@@ -14,7 +16,7 @@ var data = [
 		mode: "markers+text+lines",
 		lon: [-75, -80, -50],
 		lat: [45, 20, -20],
-		marker: { size: 20, symbol: ["bus", "harbor", "airport"] },
+		marker: { size: 20, color: "black", symbol: ["bus", "harbor", "airport"] },
 		text: ["Bus", "Harbor", "Airport"],
 		textposition: "bottom right"
 	}
