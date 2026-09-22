@@ -87,3 +87,5 @@ The `full-json` format returns the figure with every default value filled in, in
 `Plotly.downloadImage` downloads the figure JSON instead, and saves it as `newplot.full.json`:
 
     Plotly.downloadImage(gd, {format: 'full-json', filename: 'newplot'});
+
+The `downloadJson` modebar button gives the reader the same export from the graph itself. See [Add the JSON Download Button](https://plotly.com/javascript/configuration-options/#add-the-json-download-button).

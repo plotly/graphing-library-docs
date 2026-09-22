@@ -43,6 +43,28 @@ const layout: Partial<Layout> = { title: { text: 'Demo' } };
 await newPlot(div, data, layout);
 ```
 
+### Modular entry points
+
+*New in 4.1*
+
+`lib/` holds one entry point per trace, component, partial bundle, and locale. Each
+entry point has its own declaration, which `typesVersions` in `package.json` maps onto
+`plotly.js/lib/<entry>`. A custom bundle therefore typechecks:
+
+```ts
+import * as Plotly from 'plotly.js/lib/core';
+import * as scatter from 'plotly.js/lib/scatter';
+import * as bar from 'plotly.js/lib/bar';
+
+Plotly.register([scatter, bar]);
+```
+
+`plotly.js/lib/core` carries the same type surface as the full package. A trace that you
+never register still typechecks.
+
+The `plotly.js-dist` and `plotly.js-dist-min` packages also ship the type definitions
+from 4.1 onward. Version 4.0 shipped them only in `plotly.js`.
+
 ## Typing trace data
 
 `Data` is the union of every trace's data object, and it discriminates on `type`.
@@ -77,6 +99,10 @@ const layout: Partial<Layout> = {
 
 const config: Partial<Config> = { responsive: true, showSendToCloud: false };
 ```
+
+From 4.1, `Layout` also carries the attributes that traces contribute, such as
+`barmode`, `boxmode`, `violinmode`, and `piecolorway`. Version 4.0 left those out.
+`PolarLayout` carries its own `barmode` and `bargap` for the same reason.
 
 Note that `Layout` and `Data` are *input* shapes. The post-coerce internal shapes
 that Plotly computes from them (often called "FullLayout" and "FullData") are

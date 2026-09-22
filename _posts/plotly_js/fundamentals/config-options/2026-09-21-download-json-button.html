@@ -1,0 +1,29 @@
+---
+name: Add the JSON Download Button
+language: plotly_js
+suite: configuration
+order: 5.75
+sitemap: false
+arrangement: horizontal
+markdown_content: |
+    *New in 4.1*
+
+    The `downloadJson` modebar button saves the figure as a JSON file. The button is opt-in. Add `downloadJson` to the `modeBarButtonsToAdd` config option, or to the `layout.modebar.add` attribute.
+
+    The file holds the data, layout, frames, and config of the figure, with every default value filled in. The button uses the same `full-json` export as [`Plotly.downloadImage`](https://plotly.com/javascript/static-image-export/).
+---
+var data = [{
+  x: ['trees', 'flowers', 'hedges'],
+  y: [90, 130, 40],
+  type: 'bar'
+}];
+
+var layout = {
+  title: {text: 'Download This Figure as JSON'}
+};
+
+var config = {
+  modeBarButtonsToAdd: ['downloadJson']
+};
+
+Plotly.newPlot('myDiv', data, layout, config);
