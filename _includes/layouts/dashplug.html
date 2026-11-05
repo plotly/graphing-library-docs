@@ -1,4 +1,27 @@
 <div class="dash-plug">
-  <p>Plotly is known for its graphing libraries, but it's also a broader ecosystem for building interactive data apps, AI data analysis tools, and deploying and hosting Dash apps. Explore the full set of tools and platforms designed to help turn data into action.
-    <a href="{% if page.permalink contains 'python/' %}https://plotly.com?source=graphing_libraries&medium=documentation&campaign=discover-plotly&content=python{% elsif page.permalink contains 'javascript/' %}https://plotly.com?source=graphing_libraries&medium=documentation&campaign=discover-plotly&content=javascript{% elsif page.permalink contains 'r/' %}https://plotly.com?source=graphing_libraries&medium=documentation&campaign=discover-plotly&content=r{% elsif page.permalink contains 'julia/' %}https://plotly.com?source=graphing_libraries&medium=documentation&campaign=discover-plotly&content=julia{% elsif page.permalink contains 'ggplot2/' %}https://plotly.com?source=graphing_libraries&medium=documentation&campaign=discover-plotly&content=ggplot2{% elsif page.permalink contains 'matlab/' %}https://plotly.com?source=graphing_libraries&medium=documentation&campaign=discover-plotly&content=matlab{% elsif page.permalink contains 'fsharp/' %}https://plotly.com?source=graphing_libraries&medium=documentation&campaign=discover-plotly&content=fsharp{% endif %}">Discover Plotly</a>.</p>
+  {% assign base_url = 'https://plotly.com?source=graphing_libraries&medium=documentation&campaign=discover-plotly' %}
+  {% assign href = base_url %}
+
+  {% if page.permalink contains 'python/' %}
+    {% assign href = base_url | append: '&content=python' %}
+  {% elsif page.permalink contains 'javascript/' %}
+    {% assign href = base_url | append: '&content=javascript' %}
+  {% elsif page.permalink contains 'r/' %}
+    {% assign href = base_url | append: '&content=r' %}
+  {% elsif page.permalink contains 'julia/' %}
+    {% assign href = base_url | append: '&content=julia' %}
+  {% elsif page.permalink contains 'ggplot2/' %}
+    {% assign href = base_url | append: '&content=ggplot2' %}
+  {% elsif page.permalink contains 'matlab/' %}
+    {% assign href = base_url | append: '&content=matlab' %}
+  {% elsif page.permalink contains 'fsharp/' %}
+    {% assign href = base_url | append: '&content=fsharp' %}
+  {% endif %}
+
+  <p>
+    Plotly is known for its graphing libraries, but it's also a broader ecosystem for
+    building interactive data apps, AI data analysis tools, and deploying and hosting Dash apps.
+    Explore the full set of tools and platforms designed to help turn data into action.
+    <a href="{{ href }}">Discover Plotly</a>.
+  </p>
 </div>
