@@ -1,5 +1,30 @@
 <div class="dash-plug">
-  <p>Plotly Studio: Transform any dataset into an interactive data application in minutes with AI. <a href="https://plotly.com/studio?source=graphing_libraries&medium=documentation&campaign=studio_cloud_community&content=sidebar">Try Plotly Studio now.</a>
+  {% assign base_url = 'https://plotly.com?source=graphing_libraries&medium=documentation&campaign=discover-plotly' %}
+  {% assign href = base_url %}
+
+  {% if page.permalink contains 'python/' %}
+    {% assign href = base_url | append: '&content=python' %}
+  {% elsif page.permalink contains 'javascript/' %}
+    {% assign href = base_url | append: '&content=javascript' %}
+  {% elsif page.permalink contains 'julia/' %}
+    {% assign href = base_url | append: '&content=julia' %}
+  {% elsif page.permalink contains 'ggplot2/' %}
+    {% assign href = base_url | append: '&content=ggplot2' %}
+  {% elsif page.permalink contains 'matlab/' %}
+    {% assign href = base_url | append: '&content=matlab' %}
+  {% elsif page.permalink contains 'fsharp/' %}
+    {% assign href = base_url | append: '&content=fsharp' %}
+  {% elsif page.permalink contains 'csharp/' %}
+    {% assign href = base_url | append: '&content=csharp' %}
+  {% comment %} Keep r/ check last since it can match any path ending in 'r/' like 'scatter/' {% endcomment %}
+  {% elsif page.permalink contains 'r/' %}
+    {% assign href = base_url | append: '&content=r' %}
+  {% endif %}
+
+  <p>
+    Plotly is known for its graphing libraries, but it's also a broader ecosystem for
+    building interactive data apps, AI data analysis tools, and deploying and hosting Dash apps.
+    Explore the full set of tools and platforms designed to help turn data into action.
+    <a href="{{ href }}">Discover Plotly</a>.
   </p>
 </div>
-
