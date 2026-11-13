@@ -16,7 +16,7 @@
     {% assign href = base_url | append: '&content=fsharp' %}
   {% elsif page.permalink contains 'csharp/' %}
     {% assign href = base_url | append: '&content=csharp' %}
-  {% comment %} Keep r/ check last since it can match any path ending in 'r/' like 'scatter/ {% endcomment %}
+  {% comment %} Keep r/ check last since it can match any path ending in 'r/' like 'scatter/' {% endcomment %}
   {% elsif page.permalink contains 'r/' %}
     {% assign href = base_url | append: '&content=r' %}
   {% endif %}
